@@ -1,0 +1,823 @@
+li {
+  list-style-type: none;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: 'Copyright Klim Type Foundry';
+  src: url("../public/fonts/TiemposHeadline/TestTiemposHeadline-BlackItalic.eot");
+  src: url("../public/fonts/TiemposHeadline/TestTiemposHeadline-BlackItalic.eot?#iefix") format("embedded-opentype"), url("../public/fonts/TiemposHeadline/TestTiemposHeadline-BlackItalic.woff2") format("woff2"), url("../public/fonts/TiemposHeadline/TestTiemposHeadline-BlackItalic.woff") format("woff"), url("../public/fonts/TiemposHeadline/TestTiemposHeadline-BlackItalic.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Copyright Klim Type Foundry';
+  src: url("../public/fonts/TiemposHeadline/TestTiemposHeadline-Black.eot");
+  src: url("../public/fonts/TiemposHeadline/TestTiemposHeadline-Black.eot?#iefix") format("embedded-opentype"), url("../public/fonts/TiemposHeadline/TestTiemposHeadline-Black.woff2") format("woff2"), url("../public/fonts/TiemposHeadline/TestTiemposHeadline-Black.woff") format("woff"), url("../public/fonts/TiemposHeadline/TestTiemposHeadline-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Copyright Klim Type Foundry';
+  src: url("../public/fonts/TiemposHeadline/TestTiemposHeadline-Light.eot");
+  src: url("../public/fonts/TiemposHeadline/TestTiemposHeadline-Light.eot?#iefix") format("embedded-opentype"), url("../public/fonts/TiemposHeadline/TestTiemposHeadline-Light.woff2") format("woff2"), url("../public/fonts/TiemposHeadline/TestTiemposHeadline-Light.woff") format("woff"), url("../public/fonts/TiemposHeadline/TestTiemposHeadline-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Copyright Klim Type Foundry';
+  src: url("../public/fonts/TiemposHeadline/TestTiemposHeadline-RegularItalic.eot");
+  src: url("../public/fonts/TiemposHeadline/TestTiemposHeadline-RegularItalic.eot?#iefix") format("embedded-opentype"), url("../public/fonts/TiemposHeadline/TestTiemposHeadline-RegularItalic.woff2") format("woff2"), url("../public/fonts/TiemposHeadline/TestTiemposHeadline-RegularItalic.woff") format("woff"), url("../public/fonts/TiemposHeadline/TestTiemposHeadline-RegularItalic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Copyright Klim Type Foundry';
+  src: url("../public/fonts/TiemposHeadline/TestTiemposHeadline-SemiboldItalic.eot");
+  src: url("../public/fonts/TiemposHeadline/TestTiemposHeadline-SemiboldItalic.eot?#iefix") format("embedded-opentype"), url("../public/fonts/TiemposHeadline/TestTiemposHeadline-SemiboldItalic.woff2") format("woff2"), url("../public/fonts/TiemposHeadline/TestTiemposHeadline-SemiboldItalic.woff") format("woff"), url("../public/fonts/TiemposHeadline/TestTiemposHeadline-SemiboldItalic.ttf") format("truetype");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Copyright Klim Type Foundry';
+  src: url("../public/fonts/TiemposHeadline/TestTiemposHeadline-LightItalic.eot");
+  src: url("../public/fonts/TiemposHeadline/TestTiemposHeadline-LightItalic.eot?#iefix") format("embedded-opentype"), url("../public/fonts/TiemposHeadline/TestTiemposHeadline-LightItalic.woff2") format("woff2"), url("../public/fonts/TiemposHeadline/TestTiemposHeadline-LightItalic.woff") format("woff"), url("../public/fonts/TiemposHeadline/TestTiemposHeadline-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Copyright Klim Type Foundry';
+  src: url("../public/fonts/TiemposHeadline/TestTiemposHeadline-BoldItalic.eot");
+  src: url("../public/fonts/TiemposHeadline/TestTiemposHeadline-BoldItalic.eot?#iefix") format("embedded-opentype"), url("../public/fonts/TiemposHeadline/TestTiemposHeadline-BoldItalic.woff2") format("woff2"), url("../public/fonts/TiemposHeadline/TestTiemposHeadline-BoldItalic.woff") format("woff"), url("../public/fonts/TiemposHeadline/TestTiemposHeadline-BoldItalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Copyright Klim Type Foundry';
+  src: url("../public/fonts/TiemposHeadline/TestTiemposHeadline-Regular.eot");
+  src: url("../public/fonts/TiemposHeadline/TestTiemposHeadline-Regular.eot?#iefix") format("embedded-opentype"), url("../public/fonts/TiemposHeadline/TestTiemposHeadline-Regular.woff2") format("woff2"), url("../public/fonts/TiemposHeadline/TestTiemposHeadline-Regular.woff") format("woff"), url("../public/fonts/TiemposHeadline/TestTiemposHeadline-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Copyright Klim Type Foundry';
+  src: url("../public/fonts/TiemposHeadline/TestTiemposHeadline-Bold.eot");
+  src: url("../public/fonts/TiemposHeadline/TestTiemposHeadline-Bold.eot?#iefix") format("embedded-opentype"), url("../public/fonts/TiemposHeadline/TestTiemposHeadline-Bold.woff2") format("woff2"), url("../public/fonts/TiemposHeadline/TestTiemposHeadline-Bold.woff") format("woff"), url("../public/fonts/TiemposHeadline/TestTiemposHeadline-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Copyright Klim Type Foundry';
+  src: url("../public/fonts/TiemposHeadline/TestTiemposHeadline-Medium.eot");
+  src: url("../public/fonts/TiemposHeadline/TestTiemposHeadline-Medium.eot?#iefix") format("embedded-opentype"), url("../public/fonts/TiemposHeadline/TestTiemposHeadline-Medium.woff2") format("woff2"), url("../public/fonts/TiemposHeadline/TestTiemposHeadline-Medium.woff") format("woff"), url("../public/fonts/TiemposHeadline/TestTiemposHeadline-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Copyright Klim Type Foundry';
+  src: url("../public/fonts/TiemposHeadline/TestTiemposHeadline-Semibold.eot");
+  src: url("../public/fonts/TiemposHeadline/TestTiemposHeadline-Semibold.eot?#iefix") format("embedded-opentype"), url("../public/fonts/TiemposHeadline/TestTiemposHeadline-Semibold.woff2") format("woff2"), url("../public/fonts/TiemposHeadline/TestTiemposHeadline-Semibold.woff") format("woff"), url("../public/fonts/TiemposHeadline/TestTiemposHeadline-Semibold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Copyright Klim Type Foundry';
+  src: url("../public/fonts/TiemposHeadline/TestTiemposHeadline-MediumItalic.eot");
+  src: url("../public/fonts/TiemposHeadline/TestTiemposHeadline-MediumItalic.eot?#iefix") format("embedded-opentype"), url("../public/fonts/TiemposHeadline/TestTiemposHeadline-MediumItalic.woff2") format("woff2"), url("../public/fonts/TiemposHeadline/TestTiemposHeadline-MediumItalic.woff") format("woff"), url("../public/fonts/TiemposHeadline/TestTiemposHeadline-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mallory Book';
+  src: url("../public/fonts/mallory/Mallory-Book.eot");
+  src: url("../public/fonts/mallory/Mallory-Book.eot?#iefix") format("embedded-opentype"), url("../public/fonts/mallory/Mallory-Book.woff2") format("woff2"), url("../public/fonts/mallory/Mallory-Book.woff") format("woff"), url("../public/fonts/mallory/Mallory-Book.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mallory';
+  src: url("../public/fonts/mallory/Mallory-Black.eot");
+  src: url("../public/fonts/mallory/Mallory-Black.eot?#iefix") format("embedded-opentype"), url("../public/fonts/mallory/Mallory-Black.woff2") format("woff2"), url("../public/fonts/mallory/Mallory-Black.woff") format("woff"), url("../public/fonts/mallory/Mallory-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mallory Book';
+  src: url("../public/fonts/mallory/Mallory-BookItalic.eot");
+  src: url("../public/fonts/mallory/Mallory-BookItalic.eot?#iefix") format("embedded-opentype"), url("../public/fonts/mallory/Mallory-BookItalic.woff2") format("woff2"), url("../public/fonts/mallory/Mallory-BookItalic.woff") format("woff"), url("../public/fonts/mallory/Mallory-BookItalic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mallory';
+  src: url("../public/fonts/mallory/Mallory-Bold.eot");
+  src: url("../public/fonts/mallory/Mallory-Bold.eot?#iefix") format("embedded-opentype"), url("../public/fonts/mallory/Mallory-Bold.woff2") format("woff2"), url("../public/fonts/mallory/Mallory-Bold.woff") format("woff"), url("../public/fonts/mallory/Mallory-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mallory';
+  src: url("../public/fonts/mallory/Mallory-BlackItalic.eot");
+  src: url("../public/fonts/mallory/Mallory-BlackItalic.eot?#iefix") format("embedded-opentype"), url("../public/fonts/mallory/Mallory-BlackItalic.woff2") format("woff2"), url("../public/fonts/mallory/Mallory-BlackItalic.woff") format("woff"), url("../public/fonts/mallory/Mallory-BlackItalic.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mallory';
+  src: url("../public/fonts/mallory/Mallory-BoldItalic.eot");
+  src: url("../public/fonts/mallory/Mallory-BoldItalic.eot?#iefix") format("embedded-opentype"), url("../public/fonts/mallory/Mallory-BoldItalic.woff2") format("woff2"), url("../public/fonts/mallory/Mallory-BoldItalic.woff") format("woff"), url("../public/fonts/mallory/Mallory-BoldItalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mallory Cmpct XLight';
+  src: url("../public/fonts/mallory/MalloryCompact-XLight.eot");
+  src: url("../public/fonts/mallory/MalloryCompact-XLight.eot?#iefix") format("embedded-opentype"), url("../public/fonts/mallory/MalloryCompact-XLight.woff2") format("woff2"), url("../public/fonts/mallory/MalloryCompact-XLight.woff") format("woff"), url("../public/fonts/mallory/MalloryCompact-XLight.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mallory Cmpct Book';
+  src: url("../public/fonts/mallory/MalloryCompact-Book.eot");
+  src: url("../public/fonts/mallory/MalloryCompact-Book.eot?#iefix") format("embedded-opentype"), url("../public/fonts/mallory/MalloryCompact-Book.woff2") format("woff2"), url("../public/fonts/mallory/MalloryCompact-Book.woff") format("woff"), url("../public/fonts/mallory/MalloryCompact-Book.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mallory Cmpct';
+  src: url("../public/fonts/mallory/MalloryCompact-Black.eot");
+  src: url("../public/fonts/mallory/MalloryCompact-Black.eot?#iefix") format("embedded-opentype"), url("../public/fonts/mallory/MalloryCompact-Black.woff2") format("woff2"), url("../public/fonts/mallory/MalloryCompact-Black.woff") format("woff"), url("../public/fonts/mallory/MalloryCompact-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mallory Cmpct';
+  src: url("../public/fonts/mallory/MalloryCompact-ThinItalic.eot");
+  src: url("../public/fonts/mallory/MalloryCompact-ThinItalic.eot?#iefix") format("embedded-opentype"), url("../public/fonts/mallory/MalloryCompact-ThinItalic.woff2") format("woff2"), url("../public/fonts/mallory/MalloryCompact-ThinItalic.woff") format("woff"), url("../public/fonts/mallory/MalloryCompact-ThinItalic.ttf") format("truetype");
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mallory Cmpct';
+  src: url("../public/fonts/mallory/MalloryCompact-MediumItalic.eot");
+  src: url("../public/fonts/mallory/MalloryCompact-MediumItalic.eot?#iefix") format("embedded-opentype"), url("../public/fonts/mallory/MalloryCompact-MediumItalic.woff2") format("woff2"), url("../public/fonts/mallory/MalloryCompact-MediumItalic.woff") format("woff"), url("../public/fonts/mallory/MalloryCompact-MediumItalic.ttf") format("truetype");
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mallory Cmpct';
+  src: url("../public/fonts/mallory/MalloryCompact-Bold.eot");
+  src: url("../public/fonts/mallory/MalloryCompact-Bold.eot?#iefix") format("embedded-opentype"), url("../public/fonts/mallory/MalloryCompact-Bold.woff2") format("woff2"), url("../public/fonts/mallory/MalloryCompact-Bold.woff") format("woff"), url("../public/fonts/mallory/MalloryCompact-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mallory Cmpct';
+  src: url("../public/fonts/mallory/MalloryCompact-Light.eot");
+  src: url("../public/fonts/mallory/MalloryCompact-Light.eot?#iefix") format("embedded-opentype"), url("../public/fonts/mallory/MalloryCompact-Light.woff2") format("woff2"), url("../public/fonts/mallory/MalloryCompact-Light.woff") format("woff"), url("../public/fonts/mallory/MalloryCompact-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mallory Cmpct';
+  src: url("../public/fonts/mallory/MalloryCompact-Thin.eot");
+  src: url("../public/fonts/mallory/MalloryCompact-Thin.eot?#iefix") format("embedded-opentype"), url("../public/fonts/mallory/MalloryCompact-Thin.woff2") format("woff2"), url("../public/fonts/mallory/MalloryCompact-Thin.woff") format("woff"), url("../public/fonts/mallory/MalloryCompact-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mallory Cmpct';
+  src: url("../public/fonts/mallory/MalloryCompact-Medium.eot");
+  src: url("../public/fonts/mallory/MalloryCompact-Medium.eot?#iefix") format("embedded-opentype"), url("../public/fonts/mallory/MalloryCompact-Medium.woff2") format("woff2"), url("../public/fonts/mallory/MalloryCompact-Medium.woff") format("woff"), url("../public/fonts/mallory/MalloryCompact-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mallory Cmpct XLight';
+  src: url("../public/fonts/mallory/MalloryCompact-XLightItalic.eot");
+  src: url("../public/fonts/mallory/MalloryCompact-XLightItalic.eot?#iefix") format("embedded-opentype"), url("../public/fonts/mallory/MalloryCompact-XLightItalic.woff2") format("woff2"), url("../public/fonts/mallory/MalloryCompact-XLightItalic.woff") format("woff"), url("../public/fonts/mallory/MalloryCompact-XLightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mallory Cmpct';
+  src: url("../public/fonts/mallory/MalloryCompact-LightItalic.eot");
+  src: url("../public/fonts/mallory/MalloryCompact-LightItalic.eot?#iefix") format("embedded-opentype"), url("../public/fonts/mallory/MalloryCompact-LightItalic.woff2") format("woff2"), url("../public/fonts/mallory/MalloryCompact-LightItalic.woff") format("woff"), url("../public/fonts/mallory/MalloryCompact-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mallory Cmpct Book';
+  src: url("../public/fonts/mallory/MalloryCompact-BookItalic.eot");
+  src: url("../public/fonts/mallory/MalloryCompact-BookItalic.eot?#iefix") format("embedded-opentype"), url("../public/fonts/mallory/MalloryCompact-BookItalic.woff2") format("woff2"), url("../public/fonts/mallory/MalloryCompact-BookItalic.woff") format("woff"), url("../public/fonts/mallory/MalloryCompact-BookItalic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mallory Cmpct';
+  src: url("../public/fonts/mallory/MalloryCompact-BlackItalic.eot");
+  src: url("../public/fonts/mallory/MalloryCompact-BlackItalic.eot?#iefix") format("embedded-opentype"), url("../public/fonts/mallory/MalloryCompact-BlackItalic.woff2") format("woff2"), url("../public/fonts/mallory/MalloryCompact-BlackItalic.woff") format("woff"), url("../public/fonts/mallory/MalloryCompact-BlackItalic.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mallory Cmpct';
+  src: url("../public/fonts/mallory/MalloryCompact-BoldItalic.eot");
+  src: url("../public/fonts/mallory/MalloryCompact-BoldItalic.eot?#iefix") format("embedded-opentype"), url("../public/fonts/mallory/MalloryCompact-BoldItalic.woff2") format("woff2"), url("../public/fonts/mallory/MalloryCompact-BoldItalic.woff") format("woff"), url("../public/fonts/mallory/MalloryCompact-BoldItalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mallory Cmpct Ultra';
+  src: url("../public/fonts/mallory/MalloryCompact-UltraItalic.eot");
+  src: url("../public/fonts/mallory/MalloryCompact-UltraItalic.eot?#iefix") format("embedded-opentype"), url("../public/fonts/mallory/MalloryCompact-UltraItalic.woff2") format("woff2"), url("../public/fonts/mallory/MalloryCompact-UltraItalic.woff") format("woff"), url("../public/fonts/mallory/MalloryCompact-UltraItalic.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mallory Cond';
+  src: url("../public/fonts/mallory/MalloryCondensed-BoldItalic.eot");
+  src: url("../public/fonts/mallory/MalloryCondensed-BoldItalic.eot?#iefix") format("embedded-opentype"), url("../public/fonts/mallory/MalloryCondensed-BoldItalic.woff2") format("woff2"), url("../public/fonts/mallory/MalloryCondensed-BoldItalic.woff") format("woff"), url("../public/fonts/mallory/MalloryCondensed-BoldItalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mallory Cond XLight';
+  src: url("../public/fonts/mallory/MalloryCondensed-XLight.eot");
+  src: url("../public/fonts/mallory/MalloryCondensed-XLight.eot?#iefix") format("embedded-opentype"), url("../public/fonts/mallory/MalloryCondensed-XLight.woff2") format("woff2"), url("../public/fonts/mallory/MalloryCondensed-XLight.woff") format("woff"), url("../public/fonts/mallory/MalloryCondensed-XLight.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mallory Cond';
+  src: url("../public/fonts/mallory/MalloryCondensed-Black.eot");
+  src: url("../public/fonts/mallory/MalloryCondensed-Black.eot?#iefix") format("embedded-opentype"), url("../public/fonts/mallory/MalloryCondensed-Black.woff2") format("woff2"), url("../public/fonts/mallory/MalloryCondensed-Black.woff") format("woff"), url("../public/fonts/mallory/MalloryCondensed-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mallory Cond';
+  src: url("../public/fonts/mallory/MalloryCondensed-BlackItalic.eot");
+  src: url("../public/fonts/mallory/MalloryCondensed-BlackItalic.eot?#iefix") format("embedded-opentype"), url("../public/fonts/mallory/MalloryCondensed-BlackItalic.woff2") format("woff2"), url("../public/fonts/mallory/MalloryCondensed-BlackItalic.woff") format("woff"), url("../public/fonts/mallory/MalloryCondensed-BlackItalic.ttf") format("truetype");
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mallory Cond Book';
+  src: url("../public/fonts/mallory/MalloryCondensed-Book.eot");
+  src: url("../public/fonts/mallory/MalloryCondensed-Book.eot?#iefix") format("embedded-opentype"), url("../public/fonts/mallory/MalloryCondensed-Book.woff2") format("woff2"), url("../public/fonts/mallory/MalloryCondensed-Book.woff") format("woff"), url("../public/fonts/mallory/MalloryCondensed-Book.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mallory Cond';
+  src: url("../public/fonts/mallory/MalloryCondensed-Bold.eot");
+  src: url("../public/fonts/mallory/MalloryCondensed-Bold.eot?#iefix") format("embedded-opentype"), url("../public/fonts/mallory/MalloryCondensed-Bold.woff2") format("woff2"), url("../public/fonts/mallory/MalloryCondensed-Bold.woff") format("woff"), url("../public/fonts/mallory/MalloryCondensed-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mallory Cmpct Ultra';
+  src: url("../public/fonts/mallory/MalloryCompact-Ultra.eot");
+  src: url("../public/fonts/mallory/MalloryCompact-Ultra.eot?#iefix") format("embedded-opentype"), url("../public/fonts/mallory/MalloryCompact-Ultra.woff2") format("woff2"), url("../public/fonts/mallory/MalloryCompact-Ultra.woff") format("woff"), url("../public/fonts/mallory/MalloryCompact-Ultra.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mallory Cond XLight';
+  src: url("../public/fonts/mallory/MalloryCondensed-XLightItalic.eot");
+  src: url("../public/fonts/mallory/MalloryCondensed-XLightItalic.eot?#iefix") format("embedded-opentype"), url("../public/fonts/mallory/MalloryCondensed-XLightItalic.woff2") format("woff2"), url("../public/fonts/mallory/MalloryCondensed-XLightItalic.woff") format("woff"), url("../public/fonts/mallory/MalloryCondensed-XLightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Mallory Cond Book';
+  src: url("../public/fonts/mallory/MalloryCondensed-BookItalic.eot");
+  src: url("../public/fonts/mallory/MalloryCondensed-BookItalic.eot?#iefix") format("embedded-opentype"), url("../public/fonts/mallory/MalloryCondensed-BookItalic.woff2") format("woff2"), url("../public/fonts/mallory/MalloryCondensed-BookItalic.woff") format("woff"), url("../public/fonts/mallory/MalloryCondensed-BookItalic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: "Mallory Book", serif;
+  font-weight: 700;
+  color: #0a0a0a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container-wide {
+  width: 100%;
+}
+
+.container-regular {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.lighter-grey-banner {
+  background-color: #ECEFF2;
+}
+
+.dark-grey-banner {
+  background-color: #616667;
+}
+
+.darker-grey-banner {
+  background-color: #4c5151;
+}
+
+.flex-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 15px;
+}
+
+p {
+  font-size: 1rem;
+  font-weight: 300;
+  margin: 15px 0;
+  line-height: 1.4;
+}
+
+.container-template {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.placeholder-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 30px;
+}
+
+.placeholder-links li {
+  margin: 0 15px;
+  list-style-type: none;
+}
+
+.placeholder-links li a {
+  color: #0a0a0a;
+  text-decoration: none;
+}
+
+.placeholder-links li a:hover {
+  color: pink;
+}
+
+.page-title {
+  font-family: 'Copyright Klim Type Foundry', sans-serif;
+  font-size: 38px;
+  font-weight: 800;
+}
+
+footer {
+  width: 100%;
+  height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer h1 {
+  font-size: 38px;
+  font-weight: 500;
+}
+
+header {
+  width: 100%;
+  border-bottom: 1px solid #EDEDED;
+}
+
+header .header-padding {
+  padding: 0 5%;
+}
+
+header .header-top {
+  height: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .header-top .logo-type {
+  font-family: "Copyright Klim Type Foundry", serif;
+  font-size: 2rem;
+  margin: auto 0;
+  margin-right: 30px;
+  color: #17494D;
+}
+
+header .header-top nav {
+  margin: auto 0;
+}
+
+header .header-top nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .header-top nav ul li {
+  margin-right: 20px;
+}
+
+header .header-top nav ul li a {
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #6F797B;
+  letter-spacing: 1px;
+}
+
+header .header-top .phone-number {
+  margin: auto;
+  margin-right: 0;
+}
+
+header .header-top .phone-number p {
+  font-size: 0.9rem;
+  margin: 0;
+  text-align: right;
+  text-transform: uppercase;
+  color: #6F797B;
+  letter-spacing: 1px;
+}
+
+header .header-top .phone-number .number {
+  font-size: 1.8rem;
+  color: #17494D;
+}
+
+header .header-bottom nav {
+  padding-top: 5px;
+  padding-bottom: 15px;
+}
+
+header .header-bottom nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .header-bottom nav ul li {
+  margin-right: 15px;
+}
+
+header .header-bottom nav ul a {
+  font-size: 1rem;
+  color: #6F797B;
+  letter-spacing: 1px;
+}
+
+header .active-link {
+  color: #4E9195 !important;
+}
+
+.breadcrumb-navigation .breadcrumb {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 10px 0;
+}
+
+.breadcrumb-navigation .breadcrumb li {
+  list-style: none;
+  margin: 0 10px;
+}
+
+.breadcrumb-navigation .breadcrumb li a {
+  font-size: 14px;
+  font-weight: 500;
+  color: black;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+.breadcrumb-navigation .breadcrumb li a:after {
+  content: ">" !important;
+  margin-left: 8px;
+  font-size: 10px;
+  line-height: 1;
+  color: black;
+  pointer-events: none;
+}
+
+.breadcrumb-navigation .breadcrumb li a:hover {
+  color: pink;
+}
+
+.breadcrumb-navigation .breadcrumb li p {
+  font-size: 14px;
+  font-weight: 500;
+  color: black;
+  text-decoration: none;
+  text-transform: capitalize;
+  margin: 0;
+  opacity: 0.5;
+}
+
+.home-collection-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 50px;
+}
+
+.home-collection-list li {
+  list-style-type: none;
+  width: 30%;
+  border-radius: 8px;
+  -webkit-box-shadow: 0 3px 20px rgba(0, 0, 0, 0.18);
+          box-shadow: 0 3px 20px rgba(0, 0, 0, 0.18);
+  margin: 0 auto;
+}
+
+.home-collection-list li a {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 25px;
+}
+
+.home-collection-list li a img {
+  width: 100%;
+}
+
+.home-collection-list li a h2 {
+  font-size: 24px;
+  font-weight: 600;
+  font-family: 'Tiempos Headline', serif;
+}
+
+.home-collection-list li a p {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.product-grid {
+  width: 80%;
+  margin: 50px auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+@media (max-width: 820px) {
+  .product-grid {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.product-grid .product-tile {
+  border-radius: 8px;
+  -webkit-box-shadow: 0 3px 30px rgba(0, 0, 0, 0.11);
+          box-shadow: 0 3px 30px rgba(0, 0, 0, 0.11);
+  background-color: white;
+}
+
+.product-grid .product-tile a {
+  width: 100%;
+  padding: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.product-grid .product-tile a img {
+  width: 100%;
+}
+
+.product-grid .product-tile a h3 {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.product-grid .product-tile a p {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.product-page .product-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.product-page .product-info .product-image {
+  width: 65%;
+}
+
+.product-page .product-info .product-info-text {
+  width: 35%;
+  padding-top: 25px;
+  padding-left: 25px;
+}
+
+.product-page .product-info .product-info-text .product-name {
+  font-size: 36px;
+}
+
+.product-page .product-info .product-info-text .product-description {
+  font-size: 20px;
+}
+
+.recommended-products {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 25px;
+}
+
+.recommended-products h3 {
+  font-size: 18px;
+  margin: 0 auto;
+}
+
+.recommended-products .recommended-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 auto;
+}
+
+.recommended-products .recommended-list li {
+  width: 250px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 3px 25px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 3px 25px rgba(0, 0, 0, 0.1);
+  margin: 15px;
+}
+
+.recommended-products .recommended-list li a {
+  width: 100%;
+  padding: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.recommended-products .recommended-list li a img {
+  width: 100%;
+}
+
+.recommended-products .recommended-list li a h4 {
+  font-size: 16px;
+  font-weight: 400;
+}
+/*# sourceMappingURL=app.css.map */

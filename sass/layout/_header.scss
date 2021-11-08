@@ -1,0 +1,70 @@
+header {
+    width: 100%;  
+    border-bottom: 1px solid #EDEDED;
+    .header-padding {
+      padding: 0 5%;
+    }
+    .header-top {
+      height: 70px;
+      display: flex;
+      .logo-type {
+        font-family: $fontHeadings;
+        font-size: 2rem;
+        margin: auto 0;
+        margin-right: 30px;
+        color: $dark-green-1;
+      }
+      nav {
+        margin: auto 0;
+        ul {
+          display: flex;
+          li {
+            margin-right: 20px;
+            a {
+              text-transform: uppercase;
+              font-size: 0.9rem;
+              font-weight: 400;
+              color: #6F797B;
+              letter-spacing: 1px;
+            }
+          }
+        }
+      }
+      .phone-number {
+        margin: auto;
+        margin-right: 0;
+        p {
+          font-size: 0.9rem;
+          margin: 0;
+          text-align: right;
+          text-transform: uppercase;
+          color: #6F797B;
+          letter-spacing: 1px;
+        }
+        .number {
+          font-size: 1.8rem;
+          color: $dark-green-1;
+        }
+      }
+    }
+    .header-bottom {
+      nav {
+        padding-top:5px;
+        padding-bottom: 15px;
+        ul {
+          display: flex;
+          li {
+            margin-right: 15px;
+          }
+          a {
+            font-size:1rem;
+            color:#6F797B;
+            letter-spacing: 1px;
+          }
+        }
+      }
+    }
+    .active-link {
+      color: $dark-green-3!important;
+    }
+  }

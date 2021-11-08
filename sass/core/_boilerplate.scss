@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+body {
+    font-family: $fontText;
+    font-weight: 700;
+    color: $black;
+    display: flex;
+    flex-direction: column;
+}
+
+// Container presets
+.container-wide {
+    width: 100%;
+}
+
+.container-regular {
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+// Colour Container 
+.lighter-grey-banner {
+    background-color: $lighter-grey;
+}
+.dark-grey-banner {
+    background-color: $dark-grey;
+}
+.darker-grey-banner {
+    background-color: $darker-grey;
+}
+
+// Flex Containers
+.flex-row {
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+}
+
+// Text
+p {
+    font-size: 1rem;
+    font-weight: 300;
+    margin: 15px 0;
+    line-height: 1.4;
+}
+
+// Templates
+.container-template {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.placeholder-links {
+    display: flex;
+    margin-top: 30px;
+    li {
+        margin: 0 15px; 
+        list-style-type: none;
+        a {
+            color: $black;
+            text-decoration: none;
+        }
+        a:hover {
+            color: pink;
+        }
+    }
+}
+
+.page-title {
+    font-family: 'Copyright Klim Type Foundry', sans-serif;
+    font-size: 38px;
+    font-weight: 800;
+}

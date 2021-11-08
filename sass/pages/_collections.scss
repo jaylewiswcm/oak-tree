@@ -1,0 +1,32 @@
+.product-grid {
+    width: 80%;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 15px;
+    @media(max-width: 820px) {
+        grid-template-columns: repeat(2,1fr);
+   }
+    .product-tile {
+        border-radius: 8px;
+        box-shadow: 0 3px 30px rgba(0,0,0,0.11);
+        background-color: white;
+       a {
+           width: 100%;
+           padding: 25px;
+           display: flex;
+           flex-direction: column;
+           img {
+               width: 100%;
+           }
+           h3 {
+               font-size: 20px;
+               font-weight: 500;
+           }
+           p {
+               font-size: 16px;
+               font-weight: 300;
+           }
+       }
+    }
+}
