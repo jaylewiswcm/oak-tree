@@ -1,0 +1,719 @@
+
+.orphan-brochure-wrapper {
+    display: flex;
+    .orphan-content {
+        width: 60%;
+        .orphan-heading {
+            font-size: 2.8rem;
+            font-weight:900;
+            font-family: $fontHeadings;
+            color: $dark-green-1;
+            letter-spacing: 1.5px;
+            line-height: 1.5;
+        }
+        .brochure-hero {
+            width: 100%;
+            height: 500px;
+    
+            position: relative;
+        }
+        .brochure-hero-title {
+            padding: 25px 0;
+            h1 {
+                font-size: 2.5rem;
+                font-weight:600;
+            }
+            p {
+                font-size: 1.6rem;
+                font-weight: 400;
+                margin: 10px 0;
+                color: $dark-green-3;
+            }
+        }
+
+        .brochure-usps {
+            width: 100%;
+            display: flex;
+            padding-bottom: 40px;
+            .image-wrapper {
+                width: 60%;
+                margin-top: 50px;
+                position: relative;
+            }
+            .usp-split {
+                padding-right:15px;
+                width: 40%;
+                .orphan-heading {
+                    span {
+                        font-size: 2.8rem;
+                        font-weight:600;
+                    }
+                }
+                ul {
+                    margin-top: 25px;
+                    li {
+                        display: flex;
+                        align-items: center;
+                    .icon {
+                        width: 40px;
+                        height: 40px;
+                        border-radius: 25px;;
+                        background-color: $dark-green-4;
+                        margin-right: 15px;
+                    }
+                    p {
+                        font-size:1.3rem;
+                        font-weight: 500;
+                        color: $dark-green-1;
+                    }
+                    }
+                }
+            }
+        }
+        .customer-quote {
+            width: 100%;
+            background-color: $dark-green-1;
+            padding:25px;
+            margin-top: 25px;
+            .quote-inner {
+                display: flex;
+            }
+            .image-wrapper {
+                width: 500px;
+                height: 240px;
+                margin-right: 25px;
+                position: relative;
+            }
+            .quote {
+                display: flex;
+                flex-direction: column;
+                justify-content:  center;
+                position: relative;
+                p {
+                    font-size: 1.6rem;
+                    font-weight: 300;
+                    font-family: $fontHeadings;
+                    letter-spacing: 1px;
+                    line-height: 1.6;
+                    color:$white;
+                    margin: 0;
+                    position: relative;
+                }
+                .marks {
+                    color: $dark-green-3;
+                    font-size: 3rem;
+                }
+                .quote-mark-right {
+                    margin-left: auto;
+                    margin-right: 25px;
+                }
+                .customer-name {
+                    font-size: 1.2rem;
+                    font-weight: 500;
+                    font-family: $fontText;
+                    color: $dark-green-4;
+                    margin-top: 15px;
+                }
+                .customer-location {
+                    font-size: 1.2rem;
+                    font-weight: 500;
+                    font-family: $fontText;
+                    color: $dark-green-3;
+                }
+                .logo-type {
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+                }
+            }
+        }
+        .new-brochure {
+            padding-top: 25px;
+            margin-bottom: 50px;
+            display: flex;
+            .orphan-heading {
+                margin-bottom: 25px;
+            }
+            .image-wrapper {
+                width: 60%;
+                margin: auto 0;
+                overflow-y: hidden;
+                span {
+                    transform: scale(1.2);
+                }
+                
+            }
+            ul {
+                padding-left:15px;
+                li {
+                    display: flex;
+                    // align-items: center;
+                    margin-bottom: 40px;
+                    .tick {
+                        width: 25px;
+                        height: 25px;
+                        margin-top: 6px;
+                        margin-right: 15px;
+                    }
+                    p {
+                        font-size: 1.3rem;
+                        font-weight: 300;
+                        color: $dark-green-1;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+        .orphan-testimonials {
+            padding:50px 25px;
+            background-color: $accent-blue-5;
+            .testimonial-slider {
+                display: flex;
+                margin-top: 25px;
+                .testimonial {
+                    width: 50%;
+                    height: 400px;
+                    background-color: $grey;
+                    border-radius: 12px;
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    overflow: hidden;
+                    &:first-of-type {
+                        margin-right:30px;
+                    }
+                    .background-image {
+                        width: 100%;
+                        height: 100%;
+                        z-index: 0;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                    }
+                    .overlay {
+                        backdrop-filter: blur(3px);
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                    }
+                    .play-btn {
+                        width: 60px;
+                        height: 60px;
+                        border-radius: 30px;
+                        // border: 2px $white solid;
+                        position: absolute;
+                        top: 40%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        cursor: pointer;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                    }
+                    .testimonial-info {
+                        margin-top: auto;
+                        padding: 15px;
+                        position: relative;
+                        z-index: 2;
+                        p {
+                            margin: 0;
+                            color: $white;
+                        }
+                        .name {
+                            font-size: 1.4rem;
+                            font-weight: 500;
+                            color: $white;
+                        }
+                        .location {
+                            font-size: 1.2rem;
+                            font-weight: 500;
+                            border-bottom: 1px $white solid;
+                            padding-bottom:10px;
+                        }
+                        .date {
+                            font-size: 1rem;
+                            padding-top: 10px;
+                        }
+                    }
+                }
+            }
+            .trustpilot-reviews {
+                h4 {
+                    font-size: 2rem;
+                    text-align: center;
+                    margin-top:30px;
+                }
+                .star-rating {
+                    width: 180px;
+                    height: 40px;
+                    // background-color: $dark-green-1;
+                    margin: 10px auto;
+                }
+                .trustscore {
+                    font-size: 1.1rem;
+                    font-weight:400;
+                    color: $dark-green-3;
+                    text-align: center;
+                    span {
+                        color: $dark-green-1;
+                    }
+                }
+                .review-slider {
+                    width: 100%;
+                    display: flex;
+                    margin-top: 25px;
+                    .review {
+                        background-color: $white;
+                        padding: 25px;
+                        border-radius: 8px;
+                        box-shadow: 0 6px 20px $shadow-1;
+                        margin: 0 auto;
+                        width: 80%;
+                        .review-info {
+                            display: flex;
+                            width: 100%;
+                            p {
+                                margin: 0;
+                            }
+                            .avatar {
+                                 width: 50px;
+                                 height: 50px;
+                                 border-radius: 25px;
+                                background-color: $dark-green-3;
+                                margin-right: 15px;
+                            }
+                            .review-name {
+                                .name {
+                                font-size: 1.2rem;
+                                font-weight: 600;
+                                color: $dark-green-1;
+                                }
+                                .age {
+                                    font-size: 1rem;
+                                    color: $grey
+                                }
+                            }
+                            .review-rating {
+                                margin-left: auto;
+                                width: 130px;
+                                height: 30px;
+                            }
+                        }
+                        .review-content {
+                            margin-top: 15px;
+                            font-size: 1.2rem;
+                            font-weight: 300;
+                            color: $dark-green-1;
+                            line-height: 1.6;
+                        }
+                    }
+                }
+            }
+        }
+        .orphan-reasons {
+            padding: 50px 0;
+            .reason-grid {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+                margin-top: 50px;
+                .reason-item {
+                    background-color: $white;
+                    border-radius: 12px;
+                    background-color: $lightest-grey;
+                    padding: 15px;
+                    position: relative;
+                    padding-bottom:50px;
+                    overflow: hidden;
+                    .icon-heading {
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        height:80px;
+                        margin-bottom: 10px;
+                        .icon {
+                            width: 60px!important;
+                            height: 60px;
+                            margin-right: 15px;
+                            position: relative;
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-start;
+                            img {
+                                width: 100%;
+                            }
+                        }
+                        .reason-title {
+                            font-size: 1.8rem;
+                            font-weight: 600;
+                            font-family: $fontHeadings;
+                            letter-spacing: 1px;
+                            color: $dark-green-1;
+                            margin: 0;
+                        }
+                    }
+                    p {
+                        font-size: 1.1rem;
+                        font-weight: 300;
+                        letter-spacing: 1px;
+                        line-height:1.5;
+                        color: $dark-green-3;
+                        margin: 0;
+                        margin-top: 5px;
+                    }
+                    .number {
+                        font-size: 3rem;
+                        font-weight: 600;
+                        font-family: $fontHeadings;
+                        color: $dark-green-4;
+                        opacity: 0.5;
+                        position: absolute;
+                        bottom: 10px;
+                        right: 10px;
+                    }
+                }
+            }
+        }
+        .orphan-sale {
+            background-color: $accent-red-5;
+            padding: 25px;
+            .sale-and-brochure {
+                width: 100%;
+                display: flex;
+                .orphan-heading {
+                    color: $accent-red-3;
+                    font-size: 2rem;
+                    line-height: 1.1;
+                    span {
+                        color: $accent-red-2;
+                        font-size:5rem;
+                    }
+                }
+                .brochure-image {
+                    border: 1px $accent-red-4 solid;
+                    width: 300px;
+                    height:150px;
+                    margin: 0 auto;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: $accent-red-2;
+                    font-weight: 300;
+                    font-size:1.2rem;
+                }
+            }
+            p {
+                font-size: 1.4rem;
+                font-weight: 500;
+                color: $accent-red-1;
+                margin: 0;
+                margin-top: 10px;
+            }
+            .small-print {
+                font-size: 0.9rem;
+                margin:0;
+            }
+        }
+        .orphan-occupational {
+            display: flex;
+            padding: 50px 0;
+            .image-wrapper {
+                width: 40%;
+                height: 400px;
+                position: relative;
+                display: flex;
+                border-radius: 3px;
+                overflow: hidden;
+            }
+            .content {
+                width: 60%;
+                margin-left:25px;
+                .orphan-heading {
+                    line-height: 1.1;
+                    color: $dark-green-3;
+                    span {
+                        font-size: 2rem;
+                        color: $dark-green-1
+                    }
+                }
+                .secondary-title {
+                    font-size: 1.5rem;
+                    font-weight: 500;
+                    margin: 0;
+                    margin-top: 5px;
+                    color: $dark-green-2;
+                }
+                .content-p {
+                    font-size: 1.1rem;
+                    line-height: 1.8;
+                    color: $dark-green-3;
+                }
+            }
+        }
+        .occupational-banner {
+            background-color: $dark-green-1;
+            padding: 50px 0;
+            .orphan-heading {
+                color: $dark-green-4;
+                font-size: 2.3rem;
+                text-align: center;
+                margin-bottom: 25px;
+            }
+            p {
+                text-align: center;
+                color: $white;
+                font-size: 1.2rem;
+                font-weight: 400;
+                margin: 0;
+            }
+        }
+        .orphan-join-the-family {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 50px 0;
+            .secondary-heading {
+                font-size: 1.5rem;
+                color: $dark-green-3;
+                padding: 0 10%;
+                text-align: center;
+                margin: 0;
+            }
+            .customer-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 30px;
+                width: 100%;
+                height:300px;
+                margin-top: 25px;
+                .customer-item {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    padding: 10px;
+                    position: relative;
+                    border-radius: 2px;
+                    overflow: hidden;
+                    cursor: pointer;
+                    .customer-info {
+                        margin-top: auto;
+                        display: flex;
+                        align-items: center;
+                        width: 100%;
+                        .customer-name {
+                            font-size: 1.1rem;
+                            font-weight:400;
+                            color: $white;
+                            position: relative;
+                            z-index: 5;
+                            margin-right: auto;
+                        }
+                        .info-icon {
+                            position: relative;
+                            z-index: 1;
+                            background-color: rgba(255,255,255,0.4);
+                            width: 40px;
+                            height: 40px;
+                            border-radius: 25px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            color: $white;
+                            font-size: 1.5rem;
+                            margin-left: auto;
+                        }
+                    }
+                    .overlay-bg {
+                        position: absolute;
+                        bottom:0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        background-color: $dark-green-1;
+                        opacity: 0.3;
+                        transform-origin: 0 100%;
+                        transition: transform .5s;
+                        transform: scaleY(0);
+                        z-index: 2;;
+                    }
+                    .overlay {
+                         width: 100%;
+                         height: 100%;
+                         position: absolute;
+                         bottom: 0;
+                         left: 0;
+                        backdrop-filter: blur(5px);
+                        padding: 0;
+                        overflow: hidden;
+                        transition: 0.2s;
+                        z-index: 2;;
+                        transform-origin: 0 100%;
+                        transition: transform .5s;
+                        transform: scaleY(0);
+            
+                        p {
+                            font-size: 1.1rem;
+                            color: $white;
+                            opacity: 0;
+                            transition: ease-in 0.4s;
+                        }
+                    }
+                }
+                .customer-item:hover {
+                    .overlay-bg {
+                        max-height: 100%;
+          
+                        transform: scaleY(1);
+                    }
+                    .overlay {
+                        max-height: 100%;
+                        padding: 25px 15px;
+                        backdrop-filter: blur(5px);
+                        transform: scaleY(1);
+                        p {
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+        .orphan-partners {
+            width: 100%;
+            .partner-grid {
+                width: 100%;
+                height: 150px;
+             
+            }
+        }
+    }
+    .sticky-brochure {
+        width: 40%;
+        height: 100%;
+        max-height: calc(100vh - 88px);
+        padding: 25px;
+        box-shadow: -6px 0 25px $shadow-1;
+        position: sticky;
+        top: 0;
+        overflow: auto;
+        h1{
+            font-size: 2.2rem;
+            font-family: $fontHeadings;
+            font-weight: 900;
+            letter-spacing: 2px;
+            color: $dark-green-1;
+            text-align: center;
+            span {
+                font-size: 2.2rem;
+                font-family: $fontHeadings;
+                font-weight: 900;
+            }
+        }
+        p {
+            font-size: 1.5rem;
+            font-weight:400;
+            color: $dark-green-3;
+            margin: 10px 0;
+            margin-bottom: 5px;
+            text-align: center;
+            padding: 0 10%;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            padding: 0 25px;
+
+            .title-wrapper {
+                width: 100%;
+                display: flex;
+                margin-top: 15px;
+                margin-bottom: 15px;
+                .title {
+                    margin: 0 auto;
+                    display: flex;
+                    align-items:center;
+                    justify-content: center;
+                    &:first-of-type {
+                        margin-left: 0;
+                    }
+                    input[type='radio'] {
+                        margin-right: 10px;
+                        width: 17px;
+                        height: 17px;
+                     }
+                     label {
+                         font-size: 1.2rem;
+                         font-weight:400;
+                         color: $grey;
+                     }
+                }
+            }
+            .input-wrapper {
+                width: 100%;
+                // padding: 5px 15px;
+                margin-bottom: 15px;
+                position: relative;
+                label {
+                    font-size: 1.2rem;
+                    font-weight:400;
+                    color: $grey;
+                    // position: absolute;
+                    // top: 50%;
+                    // left: 15px;;
+                    // transform: translate(0, -50%);
+                    // z-index:1;
+                }
+                // .label-sm {
+                //     // font-size: 0.8rem!important;
+                //     top: 5px;
+                //     transform: translate(0, 0);
+                // }
+                input {
+                    border: 1px $lighter-grey solid;
+                    width: 100%;
+                    height: 100%;
+                    font-size: 1.2rem;
+                    font-family: $fontText;
+                    // position: relative;
+                    padding: 15px 15px;
+                    outline: none;
+                    border-radius: 4px;
+                    
+                }
+                input::placeholder {
+                    font-size: 1.2rem;
+                    font-family: $fontText;
+                    line-height: 1.6;
+                }
+                input:active, input:focus {
+                    border: 1px $accent-blue-3 solid;
+                }
+            }
+            .data-protection-wrapper {
+                margin-bottom: 15px;
+                input {
+                    width: 20px;
+                    height: 20px;
+                }
+                label {
+                    font-size: 0.8rem;
+                    font-weight:300;
+                    color: $grey;
+                    margin-left: 10px;
+                }
+            }
+            input[type='submit'] {
+                background-color: $accent-blue-3;
+                padding: 15px;
+                font-size: 1.1rem;
+                font-weight: 600;
+                text-transform: uppercase;
+                font-family: $fontText;
+                border: none;
+                border-radius: 4px;
+                box-shadow: 0px 2px 12px $shadow-1;
+            }
+        }
+    }
+}

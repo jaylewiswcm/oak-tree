@@ -1,70 +1,91 @@
 header {
     width: 100%;  
-    border-bottom: 1px solid #EDEDED;
-    .header-padding {
-      padding: 0 5%;
-    }
+    // border-bottom: 1px solid #EDEDED;
+    position: relative;
     .header-top {
-      height: 70px;
       display: flex;
-      .logo-type {
-        font-family: $fontHeadings;
-        font-size: 2rem;
-        margin: auto 0;
-        margin-right: 30px;
-        color: $dark-green-1;
-      }
-      nav {
-        margin: auto 0;
-        ul {
-          display: flex;
-          li {
-            margin-right: 20px;
-            a {
-              text-transform: uppercase;
-              font-size: 0.9rem;
-              font-weight: 400;
-              color: #6F797B;
-              letter-spacing: 1px;
-            }
-          }
-        }
-      }
+      align-items: center;
+      padding: 15px 5%;
+      position: relative;
+      z-index: 100;
+      background-color: $white;
       .phone-number {
-        margin: auto;
-        margin-right: 0;
+        margin-left: auto;
+        text-align: right;
         p {
-          font-size: 0.9rem;
           margin: 0;
-          text-align: right;
+          font-size: 0.9rem;
+          font-weight: 600;
+          color: $dark-green-2;
           text-transform: uppercase;
-          color: #6F797B;
-          letter-spacing: 1px;
         }
         .number {
-          font-size: 1.8rem;
+          font-size: 1.6rem;
+          font-weight: 600;
           color: $dark-green-1;
         }
       }
     }
-    .header-bottom {
+    .header-nav {
+      width: 100%;
+      padding: 15px 5%;
+      padding-top: 0;
+      position: relative;
+      z-index: 100;
+      background-color: $white;
       nav {
-        padding-top:5px;
-        padding-bottom: 15px;
         ul {
           display: flex;
           li {
-            margin-right: 15px;
-          }
-          a {
-            font-size:1rem;
-            color:#6F797B;
-            letter-spacing: 1px;
+            margin-right: 25px;
+            a {
+              font-size: 0.9rem;
+              font-weight: 400;
+              text-transform: uppercase;
+              color: $grey;
+            }
+            a:hover {
+              color: $dark-green-3;
+            }
           }
         }
       }
     }
-    .active-link {
-      color: $dark-green-3!important;
+  
+    .header-dropdown {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      max-height: 300px;
+      border-radius: 0 0 25px 25px;
+      z-index: 99;
+      transition: max-height 0.2s;
+      border: 2px red solid;
+      background-color: $white;
+      // height:300px;
+      display: none;
+      &.dropdown {
+      bottom: -300px;
+       height:300px;
+       max-height: 300px;
+     }
+    }
+
+  } 
+
+  .orphan-header {
+    background-color: $dark-green-1;
+    border: none;
+    .header-top { 
+      background-color: $dark-green-1;
+      .phone-number {
+        p {
+          color: $dark-green-4;
+        }
+        .number {
+          color: $white;
+        }
+      }
     }
   }

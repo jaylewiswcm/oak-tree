@@ -19,8 +19,14 @@ body {
 
 .container-regular {
     width: 100%;
-    max-width: 1300px;
+    max-width: 1400px;
     margin: 0 auto;
+    // padding: 0 25px;
+    position: relative;
+}
+.container-p {
+    width: 100%;
+    padding: 0 25px;
 }
 
 // Colour Container 
@@ -77,4 +83,69 @@ p {
     font-family: 'Copyright Klim Type Foundry', sans-serif;
     font-size: 38px;
     font-weight: 800;
+}
+
+.green-3 {
+    color: $dark-green-3;
+}
+.green-4 {
+    color: $dark-green-4;
+}
+
+
+.red-2 {
+    color: $accent-red-2
+}
+
+h1 {
+    font-family: 'Copyright Klim Type Foundry', sans-serif;
+    font-size: 38px;
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: $dark-green-1;
+}
+
+button {
+    padding: 15px 25px;
+    text-transform: uppercase;
+    background-color: $dark-green-3;
+    color: $white;
+    border: none;
+    border-radius: 2px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.18);
+    span {
+        font-size: 1.1rem;
+        font-weight: 500;
+        font-family: $fontText;
+    }
+}
+
+.title-wrapper {
+    padding: 0 15px;
+    p {
+        font-size: 1.2rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: $dark-green-1;
+        margin: 0;
+        text-align: center;
+        margin-bottom: 15px;
+        @media(max-width: 500px) {
+            font-size: 1rem;
+            margin-bottom: 5px;
+        }
+    }
+    h3 {
+        font-size: 2.5rem;
+        font-weight: 600;
+        font-family: $fontHeadings;
+        letter-spacing: 1.5px;
+        color: $dark-green-1;
+        text-align: center;
+        @media(max-width: 500px) {
+            font-size: 2.2rem;
+        }
+    }
 }
