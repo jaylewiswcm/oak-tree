@@ -3,6 +3,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import { Link, animateScroll as scroll } from "react-scroll";
+import ReviewCapsule from '../components/elements/reviews/ReviewCapsule';
 // import Link from 'next/link'
 
 type MyProps = { };
@@ -76,7 +77,7 @@ closeUspOverlay = () => {
             <button className='close' onClick={() => this.closeUspOverlay()}>Close</button>
           </div>
         </div>
-        <div className='index-hero'>
+        <div className='index-hero hero'>
           <div className='hero-image'>
               <Image 
                 src='/images/home/hero.png'
@@ -174,7 +175,7 @@ closeUspOverlay = () => {
             <p>Why Oak Tree</p>
             <h3>The UKs's Leading<br/>Mobility Specialist</h3>  
           </div>  
-          <p className='index-p'>At Oak Tree, we make beautiful products that help people live independently. We believe everyone should be free to live a rich and fulfilling life and this belief affects everything we do. It is reflected in our range of handmade rise and recline chairs, adjustable beds and bath lifts, which have already empowered thousands nationwide to enjoy the independence they deserve.</p>
+          <p className='para-text'>At Oak Tree, we make beautiful products that help people live independently. We believe everyone should be free to live a rich and fulfilling life and this belief affects everything we do. It is reflected in our range of handmade rise and recline chairs, adjustable beds and bath lifts, which have already empowered thousands nationwide to enjoy the independence they deserve.</p>
         </div>
 
         <div className='index-banner'>
@@ -246,8 +247,10 @@ closeUspOverlay = () => {
                 <div className='indicator-inner'></div>
               </div>
               <div className='product-info-modal'>
-                <p className='name'>The Oak</p>
-                <p className='type'>Rise & Recline Chair</p>
+                <a href="/rise-and-recline-chairs/the-oak">
+                  <p className='name'>The Oak</p>
+                  <p className='type'>Rise & Recline Chair</p>
+                </a>
               </div>
             </div>
           </div>
@@ -294,7 +297,8 @@ closeUspOverlay = () => {
         <p>Rate Excellent on Trustpilot</p>
         <h3>Hear What Our<br/>Customers Have to Say</h3>  
       </div>  
-      <div className='review-capsule'>
+      <ReviewCapsule />
+      {/* <div className='review-capsule'>
         <div className='button-wrapper'>
           <button>
             <Image src='/images/icons/button-left.svg' alt='Previous' width='50' height='50' />
@@ -323,7 +327,15 @@ closeUspOverlay = () => {
             <Image src='/images/icons/button-right.svg' alt='Next' width='50' height='50' />
           </button>
         </div>
-      </div>
+        <div className='button-wrapper mobile-btn-wrapper'>
+          <button>
+            <Image src='/images/icons/button-left.svg' alt='Previous' width='50' height='50' />
+          </button>
+          <button>
+            <Image src='/images/icons/button-right.svg' alt='Previous' width='50' height='50' />
+          </button>
+        </div>
+      </div> */}
     </div>
 
     <div className='index-testimonials'>
@@ -331,7 +343,7 @@ closeUspOverlay = () => {
         <p>Our Testimonials</p>
         <h3>Oak Tree Customer Stories</h3>  
       </div> 
-      <p className='index-p'>We believe in the power of individuality. We love that every Oak Tree customer has his or her own story to tell, and we build products to fit many different people. If you’d like to hear the stories of some our customers, take a look at the testimonial videos below.</p>
+      <p className='para-text'>We believe in the power of individuality. We love that every Oak Tree customer has his or her own story to tell, and we build products to fit many different people. If you’d like to hear the stories of some our customers, take a look at the testimonial videos below.</p>
         <div className='testimonial-grid'>
           <div className='testimonial-item'>
             <div className='image-wrapper'>
