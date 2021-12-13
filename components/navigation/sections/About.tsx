@@ -36,6 +36,18 @@ const Chairs = () => {
                             <span>British Made</span>
                         </a>
                     </li>
+                    <li>
+                        <a href="/">
+                            <span className='icon'></span>
+                            <span>Prices Explained</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/">
+                            <span className='icon'></span>
+                            <span>Blog</span>
+                        </a>
+                    </li>
                 </ul> 
             </div>
         </div>

@@ -1,19 +1,20 @@
 import React from 'react'
 import Image from 'next/image';
+import Next from '../../components/elements/buttons/Next';
 
 const theOak = () => {
     return (
         <>
             <div className='hero product-hero'>
                 <div className='hero-image'>
-                <Image 
-                    src='/images/home/hero.png'
-                    alt='Home Hero Living Room'
-                    layout="fill" 
-                    objectFit='cover' 
-                    objectPosition='center'
-                />
-            </div>
+                    <Image 
+                        src='/images/home/hero.png'
+                        alt='Home Hero Living Room'
+                        layout="fill" 
+                        objectFit='cover' 
+                        objectPosition='center'
+                    />
+                </div>
                 <div className='hero-inner'>
                     <div className='title-wrapper'>
                         <p>A touch of elegance</p>
@@ -22,14 +23,14 @@ const theOak = () => {
                     <button className='hero-cta'>Explore Product</button>
                 </div>
             </div>
-            <section>
+            <section className='container-regular'>
                 <div className='title-wrapper'>
                     <p>The Oak</p>
                     <h3>Unparalleled<br/>Comfort and Support</h3>  
                 </div> 
                 <p className='para-text'>The chairs in this range each feature three luxuriously filled back cushions, which provide unparalleled comfort and support. In addition, with their scroll arms and piped wings, these recliners are perfectly suited to those looking to add a touch of elegance to their home.</p> 
             </section>
-            <section className='section-info'>
+            <section className='section-info container-regular'>
                 <div className='content-info'>
                     <h4>Choose your Material</h4>
                     <p>We pride ourselves on our comprehensive range of fabrics and leather. With such a wide selection, there will be something you love whatever your taste. Our consultant can help you choose something that will perfectly complement your interior style, meaning your chair will look as good as it feels.</p>
@@ -45,7 +46,7 @@ const theOak = () => {
                     />
                 </div>
             </section>
-            <section className='section-info'>
+            <section className='section-info container-regular'>
                 <div className='content-imagery'>
                     <Image 
                         src='/images/products/chairs/oak/section-2.png'
@@ -61,7 +62,7 @@ const theOak = () => {
                     <button className='learn-more'>Learn More</button>
                 </div>
             </section>
-            <section className='section-info'>
+            <section className='section-info container-regular'>
                 <div className='content-info'>
                     <h4>Choose your Motor</h4>
                     <p>The motor in your chair will determine exactly how it rises and reclines. We offer a number of motors, each of which suits a particular requirement. If you have limited space, for instance, or if you like to sleep on a chair that reclines completely, you’ll need a special motor.</p>
@@ -77,7 +78,7 @@ const theOak = () => {
                     />
                 </div>
             </section>
-            <section className='accessories'>
+            <section className='accessories container-regular'>
                 <h4>Choose your Accessories</h4>
                 <div className='option-table'>
                     <div className='option-row'>
@@ -172,7 +173,7 @@ const theOak = () => {
                     </div>
                 </div>
             </section>
-            <section className='product-cta'>
+            <section className='product-cta container-regular'>
                 <div className='cta-wrapper'>
                     <h5>Experience<br /><span className='dark-green-3'>The Oak Collection</span></h5>
                     <div className='button-wrapper'>
@@ -189,8 +190,12 @@ const theOak = () => {
                            height='478'
                     />
                 </div>
+                <div className='button-wrapper mobile-button-wrapper'>
+                        <button>Request a Brochure</button>
+                        <button className='white-bg'>Book a Home Visit</button>
+                    </div>
             </section>
-            <section className='recommended-products'>
+            <section className='recommended-products container-regular'>
                 <h6>Explore Our Collections</h6>
                 <div className='recommended-flex'> 
                     <div className='product-item accent-blue-2'>
@@ -232,6 +237,9 @@ const theOak = () => {
                             <p className='product-cta'>Explore Chair</p>
                         </div>
                     </div>
+                </div>
+                <div className='button-wrapper'>
+                    <Next id='' classname='' img='no-bg-dark'/>
                 </div>
             </section>
         </>

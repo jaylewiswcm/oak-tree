@@ -3,8 +3,10 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import { Link, animateScroll as scroll } from "react-scroll";
+// Component
+import IndexCollections from '../components/pages/index/collections/IndexCollections';
+import OTExperience from '../components/pages/index/experience/OTExperience';
 import ReviewCapsule from '../components/elements/reviews/ReviewCapsule';
-// import Link from 'next/link'
 
 type MyProps = { };
 type MyState = { requestClassName: string, uspOverlay:string };
@@ -63,7 +65,7 @@ closeUspOverlay = () => {
 
   render() {
     return (
-      <div className="container-regular">
+      <>
         <div className={`usp-overlay ${this.state.uspOverlay} `}>
           <Image 
             src='/images/overlays/british-made-overlay.svg'
@@ -106,87 +108,30 @@ closeUspOverlay = () => {
               <div className='arrow'></div>
           </Link>
         </div>
-        <div className='index-collections' id='index-collections'>
-          <div className='title-wrapper'>
-            <p>What we do</p>
-            <h3>Our Collections</h3>  
-          </div>  
-          <div className='collection-grid'>
-            <div className='collection-item'>
-                <Image 
-                    src='/images/home/category-chair.png'
-                    alt='Chair Collection'
-                    layout="fill" 
-                    objectFit='cover' 
-                    objectPosition='center'
-                />
-                <div className='item-overlay'></div>
-                <div className='collection-info'>
-                  <p>Rise & Recline</p>
-                  <h3>Chairs</h3>
-                  <div className='acting-button'>
-                    <span className='bg-overlay'></span>
-                    <p>Explore Collections</p>
-                  </div>
-                </div>
-            </div>
-            <div className='collection-item'>
-                <Image 
-                    src='/images/home/category-bed.png'
-                    alt='Chair Collection'
-                    layout="fill" 
-                    objectFit='cover' 
-                    objectPosition='center'
-                />
-                <div className='item-overlay'></div>
-                <div className='collection-info'>
-                  <p>Adjustable</p>
-                  <h3>Beds</h3>
-                  <div className='acting-button'>
-                    <span className='bg-overlay'></span>
-                    <p>Explore Collections</p>
-                  </div>
-                </div>
-            </div>
-            <div className='collection-item'>
-                <Image 
-                    src='/images/home/category-bathlift.png'
-                    alt='Chair Collection'
-                    layout="fill" 
-                    objectFit='cover' 
-                    objectPosition='center'
-                />
-                <div className='item-overlay'></div>
-                <div className='collection-info'>
-                  <p>Oak Tree</p>
-                  <h3>Bath Lifts</h3>
-                  <div className='acting-button'>
-                    <span className='bg-overlay'></span>
-                    <p>Explore Collections</p>
-                  </div>
-                </div>
-            </div>
-          </div>
-        </div> 
-
-
+         <div className="container-regular">
+        <IndexCollections />
         <div className='index-intro'>
-          <div className='title-wrapper'>
-            <p>Why Oak Tree</p>
-            <h3>The UKs's Leading<br/>Mobility Specialist</h3>  
-          </div>  
+            <p className='subheading'>Why Oak Tree</p>
+            <h3 className='heading'>The UKs's Leading<br/>Mobility Specialist</h3>   
           <p className='para-text'>At Oak Tree, we make beautiful products that help people live independently. We believe everyone should be free to live a rich and fulfilling life and this belief affects everything we do. It is reflected in our range of handmade rise and recline chairs, adjustable beds and bath lifts, which have already empowered thousands nationwide to enjoy the independence they deserve.</p>
         </div>
 
         <div className='index-banner'>
-          <div className='banner-wrapper'></div>
+          <div className='banner-wrapper sale-banner'>
+            <p className='subheading'>Limited Time Only</p>
+            <h3 className='heading'>Half Price Sale</h3>   
+          </div>
+          <div className='banner-wrapper trade-in-banner'>
+            <p className='subheading'>Minimum £200</p>
+            <h3 className='heading'>Trade-in Deal</h3>   
+          </div>
         </div>
 
-        <div className='index-usps'>
-          <div className='title-wrapper'>
-            <p>Why Oak Tree</p>
-            <h3>The Oak Tree Experience</h3>  
-          </div>  
+        <OTExperience />
+
+        {/* <div className='index-usps'>
+            <p className='subheading'>Why Oak Tree</p>
+            <h3 className='heading'>The Oak Tree Experience</h3>  
           <div className='usp-grid'>
             <div className="usp-item">
               <div className='image-wrapper'></div>
@@ -231,7 +176,7 @@ closeUspOverlay = () => {
               />
             </button>
           </div>
-        </div>
+        </div> */}
 
         <div className='index-enviroments'>
           <div className='col-1 col'>
@@ -293,10 +238,8 @@ closeUspOverlay = () => {
         </div>
 
     <div className='index-reviews'>
-      <div className='title-wrapper'>
-        <p>Rate Excellent on Trustpilot</p>
-        <h3>Hear What Our<br/>Customers Have to Say</h3>  
-      </div>  
+        <p className='subheading'>Rate Excellent on Trustpilot</p>
+        <h3 className='heading'>Hear What Our<br/>Customers Have to Say</h3>  
       <ReviewCapsule />
       {/* <div className='review-capsule'>
         <div className='button-wrapper'>
@@ -338,11 +281,83 @@ closeUspOverlay = () => {
       </div> */}
     </div>
 
-    <div className='index-testimonials'>
-      <div className='title-wrapper'>
-        <p>Our Testimonials</p>
-        <h3>Oak Tree Customer Stories</h3>  
-      </div> 
+      <div className='index-testimonials'>
+        <p className='subheading'>Our Testimonials</p>
+        <h3 className='heading'>Oak Tree Customer Stories</h3>  
+        <div className='cx-story-grid'>
+          <div className='cx-item'>
+            <div className='overlay'></div>
+            <Image src='/images/testimonials/cx-1.png' alt='Mr Andrews'
+                  layout="fill"  
+                    objectFit='cover' 
+                    objectPosition='center'
+              />
+            <div className='item-bottom'>
+              <div className='cx-info'>
+                <p className='cx-name'>Mr Andrews</p>
+                <p  className='product'>The Oak Chair</p>
+              </div>
+              <div className='play-btn'>
+              <Image src='/images/icons/play-white.svg' alt='play button' width='60' height='60'/>
+              </div>
+            </div>
+          </div>
+          <div className='cx-item'>
+            <div className='overlay'></div>
+            <Image src='/images/testimonials/cx-2.png' alt='Mrs Atkins'
+                  layout="fill"  
+                  objectFit='cover' 
+                  objectPosition='center'
+              />
+            <div className='item-bottom'>
+              <div className='cx-info'>
+                <p className='cx-name'>Mrs Atkins</p>
+                <p  className='product'>The Oak Chair</p>
+              </div>
+              <div className='play-btn'>
+              <Image src='/images/icons/play-white.svg' alt='play button' width='60' height='60'/>
+              </div>
+            </div>
+          </div>
+          <div className='cx-item'>
+            <div className='overlay'></div>
+            <Image src='/images/testimonials/cx-3.png' alt='Mr Parks'
+                  layout="fill"  
+                  objectFit='cover' 
+                  objectPosition='center'
+              />
+            <div className='item-bottom'>
+              <div className='cx-info'>
+                <p className='cx-name'>Mr Parks</p>
+                <p  className='product'>The Riviera Bath Lift</p>
+              </div>
+              <div className='play-btn'>
+              <Image src='/images/icons/play-white.svg' alt='play button' width='60' height='60'/>
+              </div>
+            </div>
+          </div>
+          <div className='cx-item'>
+            <div className='overlay'></div>
+            <Image src='/images/testimonials/cx-4.png' alt='Mr Groger'
+                  layout="fill"  
+                  objectFit='cover' 
+                  objectPosition='center'
+              />
+            <div className='item-bottom'>
+              <div className='cx-info'>
+                <p className='cx-name'>Mr Groger</p>
+                <p  className='product'>The Oak Chair</p>
+              </div>
+              <div className='play-btn'>
+              <Image src='/images/icons/play-white.svg' alt='play button' width='60' height='60'/>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    {/* <div className='index-testimonials'>
+        <p className='subheading'>Our Testimonials</p>
+        <h3 className='heading'>Oak Tree Customer Stories</h3>  
       <p className='para-text'>We believe in the power of individuality. We love that every Oak Tree customer has his or her own story to tell, and we build products to fit many different people. If you’d like to hear the stories of some our customers, take a look at the testimonial videos below.</p>
         <div className='testimonial-grid'>
           <div className='testimonial-item'>
@@ -425,8 +440,9 @@ closeUspOverlay = () => {
             </button>
           </div>
         </div>
-    </div>
+    </div> */}
       </div>
+      </>
   )
 }
 }
