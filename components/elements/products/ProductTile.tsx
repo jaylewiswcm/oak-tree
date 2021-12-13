@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link';
 
 interface ComponentProps {
     product : {
@@ -23,11 +24,13 @@ interface ComponentProps {
 const ProductTile = ({product, collection} : ComponentProps) => {
     return (
         <li key={product.id} className="product-tile"> 
-            <a href={`/${collection.handle}/${product.handle}`}>
-                <img src={product.images[0].src} alt={product.title} />
-                <h3>{product.title} Collection</h3>
-                <p>{product.description}</p>
-            </a>
+            <Link href={`/${collection.handle}/${product.handle}`}>
+                <a>
+                    {/* <img src={product.images[0].src} alt={product.title} /> */}
+                    <h3>{product.title} Collection</h3>
+                    <p>{product.description}</p>
+                </a>
+             </Link>   
       </li>
     )
 }

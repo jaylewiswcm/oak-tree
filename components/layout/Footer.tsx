@@ -1,4 +1,6 @@
 import React from 'react'
+import Link from 'next/link';
+// Components
 import Logo from '../assets/Logo';
 
 const Footer = () => {
@@ -80,14 +82,14 @@ const Footer = () => {
                     </ul>
                     <div className='mobile-social'>
                         <div className='social-icon'>
-                            <a href="">
-                            
-                            </a>
+                            <Link href='/'>
+                            <a></a>
+                            </Link>
                         </div>
                         <div className='social-icon'>
-                            <a href="">
-                            
-                            </a>
+                            <Link href='/'>
+                                <a></a>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -102,8 +104,12 @@ const Footer = () => {
                     <div className="container-regular">
                         <p>© Copyright 2021 Oak Tree Mobility Ltd. Terms & Conditions. Read our Cookie policy</p>
                         <div className="link-wrapper">
-                            <a href="">Modern Slavery Statement</a>
-                            <a href="">Privacy and Cookies Policy</a>
+                            <Link href='/'>
+                                <a>Modern Slavery Statement</a>
+                            </Link>
+                            <Link href='/'>
+                                <a>Privacy and Cookies Policy</a>
+                            </Link>
                         </div>
                         <p>Oak Tree Mobility Limited. Registered Office: 2nd Floor, St James Court, 9/12 St James Parade, Bristol, BS1 3LH, United Kingdom.</p>
                         <p>Registered Number: 06829860. Registered in England and Wales </p>

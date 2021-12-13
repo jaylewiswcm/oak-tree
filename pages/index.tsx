@@ -2,7 +2,8 @@ import React from 'react';
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
-import { Link, animateScroll as scroll } from "react-scroll";
+import {  animateScroll as scroll } from "react-scroll";
+import Link from 'next/link'
 // Component
 import IndexCollections from '../components/pages/index/collections/IndexCollections';
 import OTExperience from '../components/pages/index/experience/OTExperience';
@@ -98,7 +99,7 @@ closeUspOverlay = () => {
               <span>Request your brochure</span>
             </button>
           </div>
-          <Link 
+          {/* <Link 
             className='scroll-down' 
             to='index-collections'
             spy={true}
@@ -106,13 +107,13 @@ closeUspOverlay = () => {
             offset={-50}
             duration={500}>
               <div className='arrow'></div>
-          </Link>
+          </Link> */}
         </div>
          <div className="container-regular">
         <IndexCollections />
         <div className='index-intro'>
             <p className='subheading'>Why Oak Tree</p>
-            <h3 className='heading'>The UKs's Leading<br/>Mobility Specialist</h3>   
+            <h3 className='heading'>The UKs&apos;s Leading<br/>Mobility Specialist</h3>   
           <p className='para-text'>At Oak Tree, we make beautiful products that help people live independently. We believe everyone should be free to live a rich and fulfilling life and this belief affects everything we do. It is reflected in our range of handmade rise and recline chairs, adjustable beds and bath lifts, which have already empowered thousands nationwide to enjoy the independence they deserve.</p>
         </div>
 
@@ -192,10 +193,12 @@ closeUspOverlay = () => {
                 <div className='indicator-inner'></div>
               </div>
               <div className='product-info-modal'>
-                <a href="/rise-and-recline-chairs/the-oak">
-                  <p className='name'>The Oak</p>
-                  <p className='type'>Rise & Recline Chair</p>
-                </a>
+                <Link href="/rise-and-recline-chairs/the-oak">
+                  <a >
+                    <p className='name'>The Oak</p>
+                    <p className='type'>Rise & Recline Chair</p>
+                  </a>
+                </Link>
               </div>
             </div>
           </div>

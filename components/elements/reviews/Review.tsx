@@ -19,6 +19,7 @@ const Review = () => {
             <div className='review-bottom'>
                 <Image 
                     src='/trustpilot/trustpilot-logo.svg'
+                    alt='Trust pilot logo'
                     width='105'
                     height='34'
                 />

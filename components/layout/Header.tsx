@@ -84,7 +84,7 @@ const Header = () => {
                         </li>
                         <li className='nav-li' onMouseOver={() => expandMenu('bath-lifts')} onMouseOut={() => setMenuType('')}>
                             <Link href="/bath-lifts" >
-                                <a href="/bath-lifts" className='nav-a'>
+                                <a  className='nav-a'>
                                     <span className='btn-bg'></span>
                                     <span className='btn-text'>Bath Lifts</span>
                                 </a>

@@ -109,7 +109,9 @@ const index = () => {
                     <p className='subheading green-2'>What our customers think</p>
                     <h2 className='heading'>Rated Excellent</h2> 
                     <ReviewCapsule />
-                    <a href="/" className='read-more-reviews'>Read More of Our Reviews</a>
+                    <Link href="/">
+                        <a className='read-more-reviews'>Read More of Our Reviews</a>
+                    </Link>
                 </div>
                 <div className='collection-banner bg-green-5'>
                     <h2 className="heading green-1">A chair that is truly yours</h2>
