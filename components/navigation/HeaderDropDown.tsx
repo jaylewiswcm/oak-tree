@@ -13,10 +13,7 @@ const HeaderDropDown = ({dropdown, type}:ComponentProps) => {
         if(type !== '' && dropdown !== false) {
             resetMenuType(type)
         }
-        console.log(`The type is ${type}`)
-        console.log(`Component Type is ${menuType}`)
-        console.log(dropdown);
-    }, [type, dropdown, menuType])
+    }, [type, dropdown])
 
     return (
             <div className={`header-dropdown ${type && type + '-dd'}`} onMouseOut={() => resetMenuType('')}>
