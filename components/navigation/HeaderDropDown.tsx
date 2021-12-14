@@ -2,21 +2,25 @@ import React, { useState, useEffect } from 'react'
 import Link from 'next/link';
 
 interface ComponentProps {
+    dropdown: boolean,
     type: string 
 }
 
-const HeaderDropDown = ({type}:ComponentProps) => {
+const HeaderDropDown = ({dropdown, type}:ComponentProps) => {
     const [menuType, resetMenuType] = useState('');
 
     useEffect(() => {
-        if(type !== '') {
+        if(type !== '' && dropdown !== false) {
             resetMenuType(type)
         }
-    }, [type])
+        console.log(`The type is ${type}`)
+        console.log(`Component Type is ${menuType}`)
+        console.log(dropdown);
+    }, [type, dropdown, menuType])
 
     return (
-            <div className='header-dropdown'>
-                <div className={`dd-inner-wrapper ${type === 'about' ? 'isVisible' : ''}`}>
+            <div className={`header-dropdown ${type && type + '-dd'}`} onMouseOut={() => resetMenuType('')}>
+                <div className={`dd-inner-wrapper  ${menuType === 'about' ? 'isVisible' : ''}`}>
                     <nav className='dd-nav'>
                         <p className='list-heading'>About</p>
                             <ul className={`dd-nav-list grid-nav-list`}>
@@ -121,7 +125,7 @@ const HeaderDropDown = ({type}:ComponentProps) => {
                                     </nav>
                                 <div className='dd-menu-image'></div>
                 </div>
-                <div className={`dd-inner-wrapper ${menuType === 'beds' && 'isVisible'}`}>
+                <div className={`dd-inner-wrapper ${menuType === 'beds' ? 'isVisible' : ''}`}>
                                 <nav className='dd-nav'>
                                     <p className='list-heading'>Beds</p>
                                     <ul className={`dd-nav-list`}>
@@ -226,7 +230,7 @@ const HeaderDropDown = ({type}:ComponentProps) => {
                                             <li><a href="/"><span className='link-text'>Blog</span></a></li>
                                         </ul>
                                     </nav>
-                            </div>
+                            </div> 
                             <div className={`dd-inner-wrapper ${menuType === 'chairs' && 'isVisible'}`}>
                                 <nav className='dd-nav'>
                                     <p className='list-heading'>Chairs</p>

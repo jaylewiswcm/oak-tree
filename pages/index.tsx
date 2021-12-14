@@ -93,7 +93,7 @@ closeUspOverlay = () => {
           <div className='index-hero-intro' id='index-intro' ref={this.introText}>
             <p className='mobile-subheading'>Oak Tree Mobility</p>
             <h1>Rise, Recline, Relax</h1>
-            <h2>With Oak Tree Mobility</h2>
+            <h2>With Oak Tree Mobility Chairs, Beds and Bath Lifts</h2>
             <button className={this.state.requestClassName}>
               <span className='btb-bg white-bg'></span>
               <span>Request your brochure</span>

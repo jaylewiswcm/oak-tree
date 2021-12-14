@@ -33,7 +33,7 @@ const Header = () => {
         setMenuType(type);
     }
     const hideMenu = () => {
-        setMenuType('');
+        // setMenuType('');
         setDropdown(false)
     }
     return (  
@@ -46,7 +46,7 @@ const Header = () => {
                 </Link>
                 <nav className='header-nav'>
                     <ul className='nav-list'>
-                        <li className='nav-li'>
+                        <li className='nav-li' onMouseOver={() => expandMenu('')} onMouseOut={() => hideMenu()}>
                             <Link href='/'>
                                 <a className='nav-a'>
                                     <span className='btn-bg'></span>
@@ -54,42 +54,44 @@ const Header = () => {
                                 </a>
                             </Link>
                         </li>
-                        <li className='nav-li' onMouseOver={() => expandMenu('about')} onMouseOut={() => setMenuType('')}>
+                        <li className='nav-li' onMouseOver={() => expandMenu('about')} onMouseOut={() => hideMenu()}>
                             <Link href="/about">
                                 <a  className='nav-a'>
                                     <span className='btn-bg'></span>
                                     <span className='btn-text'>About</span>
                                 </a>
                             </Link>
-                            {menuType === 'about' && <HeaderDropDown type={menuType}/>}
+                            {/* <HeaderDropDown type={menuType}/> */}
+                            {menuType === 'about' && <HeaderDropDown dropdown={dropdown} type={menuType}/>}
                         </li> 
-                        <li  className='nav-li' onMouseOver={() => expandMenu('chairs')} onMouseOut={() => setMenuType('')}>
+                        <li  className='nav-li' onMouseOver={() => expandMenu('chairs')} onMouseOut={() => hideMenu()}>
                             <Link href="/rise-and-recline-chairs" >
                                 <a className='nav-a'>
                                     <span className='btn-bg'></span>
                                     <span className='btn-text'>Chairs</span>
                                 </a>
                             </Link>
-                            {menuType === 'chairs' && <HeaderDropDown type={menuType}/>}
+                            {menuType === 'chairs' && <HeaderDropDown dropdown={dropdown} type={menuType}/>}
                             {/* { menuType === 'chairs' && <HeaderDropDown type={menuType}/>} */}
                         </li>
-                        <li className='nav-li' onMouseOver={() => expandMenu('beds')} onMouseOut={() => setMenuType('')}>
+                        <li className='nav-li' onMouseOver={() => expandMenu('beds')} onMouseOut={() => hideMenu()}>
                             <Link href="/adjustable-beds" >
                                 <a className='nav-a'>
                                     <span className='btn-bg'></span>
                                     <span className='btn-text'>Beds</span>
                                 </a>
                             </Link>
-                            { menuType === 'beds' && <HeaderDropDown type={menuType}/>}
+                            {/* <HeaderDropDown type={menuType}/> */}
+                            { menuType === 'beds' && <HeaderDropDown dropdown={dropdown} type={menuType}/>}
                         </li>
-                        <li className='nav-li' onMouseOver={() => expandMenu('bath-lifts')} onMouseOut={() => setMenuType('')}>
+                        <li className='nav-li' onMouseOver={() => expandMenu('bath-lifts')} onMouseOut={() => hideMenu()}>
                             <Link href="/bath-lifts" >
                                 <a  className='nav-a'>
                                     <span className='btn-bg'></span>
                                     <span className='btn-text'>Bath Lifts</span>
                                 </a>
                             </Link>
-                            { menuType === 'bath-lifts' && <HeaderDropDown type={menuType}/>}
+                            { menuType === 'bath-lifts' && <HeaderDropDown dropdown={dropdown} type={menuType}/>}
                         </li>
                     </ul>
                 </nav>
@@ -122,7 +124,7 @@ const Header = () => {
                         <HeaderDropDown dropdown={dropdownClass} type={menuType}  /> 
                     </nav> 
                 </div> */}
-                  <div className='dropdown-bg'></div>
+                  <div className={`dropdown-bg ${menuType && menuType + 'dd-bg'}`}></div>
             </div>
           
         </header>
