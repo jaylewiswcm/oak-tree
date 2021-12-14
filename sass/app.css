@@ -66,7 +66,7 @@
   padding: 10px;
   font-size: 1.1rem;
   font-weight: 400;
-  font-family: "FONTSPRING DEMO - Averta", serif;
+  font-family: "Averta", serif;
   color: #004D49;
   margin-top: 10px;
 }
@@ -74,28 +74,28 @@
 .brochure-form form input::-webkit-input-placeholder {
   font-size: 1.1rem;
   font-weight: 400;
-  font-family: "FONTSPRING DEMO - Averta", serif;
+  font-family: "Averta", serif;
   color: #344646;
 }
 
 .brochure-form form input:-ms-input-placeholder {
   font-size: 1.1rem;
   font-weight: 400;
-  font-family: "FONTSPRING DEMO - Averta", serif;
+  font-family: "Averta", serif;
   color: #344646;
 }
 
 .brochure-form form input::-ms-input-placeholder {
   font-size: 1.1rem;
   font-weight: 400;
-  font-family: "FONTSPRING DEMO - Averta", serif;
+  font-family: "Averta", serif;
   color: #344646;
 }
 
 .brochure-form form input::placeholder {
   font-size: 1.1rem;
   font-weight: 400;
-  font-family: "FONTSPRING DEMO - Averta", serif;
+  font-family: "Averta", serif;
   color: #344646;
 }
 
@@ -105,7 +105,7 @@
   padding: 15px;
   font-size: 1.1rem;
   font-weight: 600;
-  font-family: "FONTSPRING DEMO - Averta", serif;
+  font-family: "Averta", serif;
   color: #fff;
   text-transform: uppercase;
   background-color: #AD3665;
@@ -406,59 +406,138 @@ a {
 }
 
 @font-face {
-  font-family: 'FONTSPRING DEMO - Averta';
-  src: url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaBlackRegular.woff");
-  src: url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaBlackRegular.woff2") format("woff2");
+  font-family: 'Averta';
+  src: url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaBoldItalic.eot");
+  src: url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaBoldItalic.eot?#iefix") format("embedded-opentype"), url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaBoldItalic.woff2") format("woff2"), url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaBoldItalic.woff") format("woff"), url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaBoldItalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Averta';
+  src: url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaBoldRegular.eot");
+  src: url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaBoldRegular.eot?#iefix") format("embedded-opentype"), url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaBoldRegular.woff2") format("woff2"), url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaBoldRegular.woff") format("woff"), url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaBoldRegular.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Averta';
+  src: url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaBlackItalic.eot");
+  src: url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaBlackItalic.eot?#iefix") format("embedded-opentype"), url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaBlackItalic.woff2") format("woff2"), url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaBlackItalic.woff") format("woff"), url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaBlackItalic.ttf") format("truetype");
   font-weight: 900;
-  font-style: normal;
+  font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
-  font-family: 'FONTSPRING DEMO - Averta';
-  src: url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaBoldRegular.woff");
-  src: url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaBoldRegular.woff2") format("woff2");
-  font-weight: bold;
-  font-style: normal;
+  font-family: 'Averta';
+  src: url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaSemiboldItalic.eot");
+  src: url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaSemiboldItalic.eot?#iefix") format("embedded-opentype"), url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaSemiboldItalic.woff2") format("woff2"), url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaSemiboldItalic.woff") format("woff"), url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaSemiboldItalic.ttf") format("truetype");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
 }
 
 @font-face {
-  font-family: 'FONTSPRING DEMO - Averta';
-  src: url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaRegular.woff");
-  src: url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaRegular.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'FONTSPRING DEMO - Averta';
-  src: url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaExtraboldRegular.woff");
-  src: url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaExtraboldRegular.woff2") format("woff2");
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'FONTSPRING DEMO - Averta';
-  src: url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaLightRegular.woff");
-  src: url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaLightRegular.woff2") format("woff2");
+  font-family: 'Averta';
+  src: url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaLightRegular.eot");
+  src: url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaLightRegular.eot?#iefix") format("embedded-opentype"), url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaLightRegular.woff2") format("woff2"), url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaLightRegular.woff") format("woff"), url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaLightRegular.ttf") format("truetype");
   font-weight: 300;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
-  font-family: 'FONTSPRING DEMO - Averta';
-  src: url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaExtrathinRegular.woff");
-  src: url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaExtrathinRegular.woff2") format("woff2");
-  font-weight: 100;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'FONTSPRING DEMO - Averta';
-  src: url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaSemiboldRegular.woff");
-  src: url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaSemiboldRegular.woff2") format("woff2");
+  font-family: 'Averta';
+  src: url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaSemiboldRegular.eot");
+  src: url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaSemiboldRegular.eot?#iefix") format("embedded-opentype"), url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaSemiboldRegular.woff2") format("woff2"), url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaSemiboldRegular.woff") format("woff"), url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaSemiboldRegular.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Averta';
+  src: url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaExtraboldRegular.eot");
+  src: url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaExtraboldRegular.eot?#iefix") format("embedded-opentype"), url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaExtraboldRegular.woff2") format("woff2"), url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaExtraboldRegular.woff") format("woff"), url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaExtraboldRegular.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Averta';
+  src: url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaExtraboldItalic.eot");
+  src: url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaExtraboldItalic.eot?#iefix") format("embedded-opentype"), url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaExtraboldItalic.woff2") format("woff2"), url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaExtraboldItalic.woff") format("woff"), url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaExtraboldItalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Averta';
+  src: url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaBlackRegular.eot");
+  src: url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaBlackRegular.eot?#iefix") format("embedded-opentype"), url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaBlackRegular.woff2") format("woff2"), url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaBlackRegular.woff") format("woff"), url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaBlackRegular.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Averta';
+  src: url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaRegular.eot");
+  src: url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaRegular.eot?#iefix") format("embedded-opentype"), url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaRegular.woff2") format("woff2"), url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaRegular.woff") format("woff"), url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaRegular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Averta';
+  src: url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaItalic.eot");
+  src: url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaItalic.eot?#iefix") format("embedded-opentype"), url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaItalic.woff2") format("woff2"), url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaItalic.woff") format("woff"), url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaItalic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Averta';
+  src: url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaThinItalic.eot");
+  src: url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaThinItalic.eot?#iefix") format("embedded-opentype"), url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaThinItalic.woff2") format("woff2"), url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaThinItalic.woff") format("woff"), url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaThinItalic.ttf") format("truetype");
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Averta Extrathin';
+  src: url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaExtrathinItalic.eot");
+  src: url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaExtrathinItalic.eot?#iefix") format("embedded-opentype"), url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaExtrathinItalic.woff2") format("woff2"), url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaExtrathinItalic.woff") format("woff"), url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaExtrathinItalic.ttf") format("truetype");
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Averta';
+  src: url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaThinRegular.eot");
+  src: url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaThinRegular.eot?#iefix") format("embedded-opentype"), url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaThinRegular.woff2") format("woff2"), url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaThinRegular.woff") format("woff"), url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaThinRegular.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Averta Extrathin';
+  src: url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaExtrathinRegular.eot");
+  src: url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaExtrathinRegular.eot?#iefix") format("embedded-opentype"), url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaExtrathinRegular.woff2") format("woff2"), url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaExtrathinRegular.woff") format("woff"), url("../public/fonts/Averta/FONTSPRINGDEMO-AvertaExtrathinRegular.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
 }
 
 * {
@@ -470,7 +549,7 @@ a {
 }
 
 body {
-  font-family: "FONTSPRING DEMO - Averta", serif;
+  font-family: "Averta", serif;
   font-weight: 700;
   color: #0a0a0a;
   display: -webkit-box;
@@ -572,7 +651,7 @@ h6 {
 p {
   font-size: 1rem;
   font-weight: 300;
-  font-family: "FONTSPRING DEMO - Averta", serif;
+  font-family: "Averta", serif;
   color: #344646;
   letter-spacing: 0.5px;
   line-height: 1.6;
@@ -759,7 +838,7 @@ button {
   padding: 15px 25px;
   text-transform: uppercase;
   background-color: #058466;
-  font-family: "FONTSPRING DEMO - Averta", serif;
+  font-family: "Averta", serif;
   color: #fff;
   border: none;
   border-radius: 2px;
@@ -770,7 +849,7 @@ button {
 button span {
   font-size: 1.1rem;
   font-weight: 500;
-  font-family: "FONTSPRING DEMO - Averta", serif;
+  font-family: "Averta", serif;
 }
 
 .title-wrapper {
@@ -1082,7 +1161,7 @@ footer .email-signup form input[type=text] {
   text-align: center;
   font-size: 1.2rem;
   font-weight: 300;
-  font-family: "FONTSPRING DEMO - Averta", serif;
+  font-family: "Averta", serif;
   color: #fff;
   border-radius: 8px;
   width: 100%;
@@ -1232,7 +1311,7 @@ footer .mobile-footer-navigation button {
   color: #004D49;
   font-size: 1.2rem;
   font-weight: 500;
-  font-family: "FONTSPRING DEMO - Averta", serif;
+  font-family: "Averta", serif;
   -webkit-box-shadow: none;
           box-shadow: none;
   letter-spacing: 0.5px;
@@ -1736,7 +1815,7 @@ header.hide-navbar .header-inner {
 .index-hero .index-hero-intro h2 {
   font-size: 1.4rem;
   font-weight: 500;
-  font-family: "FONTSPRING DEMO - Averta", serif;
+  font-family: "Averta", serif;
   text-transform: uppercase;
   text-align: center;
   letter-spacing: 0.5px;
