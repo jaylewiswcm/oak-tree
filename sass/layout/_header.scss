@@ -588,9 +588,10 @@ header {
   }
 
   header.hide-navbar {
-    max-height: 0;
+    // max-height: 0;
     overflow: hidden;
-    transition: max-height 0.2s;
+    transition: transform 0.2s;
+    transform: translateY(-80px);
     .header-inner {
       opacity: 0;
       transition: opacity 0.3s;

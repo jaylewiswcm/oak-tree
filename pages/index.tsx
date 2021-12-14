@@ -113,7 +113,7 @@ closeUspOverlay = () => {
         <IndexCollections />
         <div className='index-intro'>
             <p className='subheading'>Why Oak Tree</p>
-            <h3 className='heading'>The UKs&apos;s Leading<br/>Mobility Specialist</h3>   
+            <h3 className='heading'>The UK&apos;s Leading Mobility Specialist</h3>   
           <p className='para-text'>At Oak Tree, we make beautiful products that help people live independently. We believe everyone should be free to live a rich and fulfilling life and this belief affects everything we do. It is reflected in our range of handmade rise and recline chairs, adjustable beds and bath lifts, which have already empowered thousands nationwide to enjoy the independence they deserve.</p>
         </div>
 

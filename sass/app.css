@@ -1888,10 +1888,13 @@ header.header-shadow {
 }
 
 header.hide-navbar {
-  max-height: 0;
   overflow: hidden;
-  -webkit-transition: max-height 0.2s;
-  transition: max-height 0.2s;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
+  -webkit-transform: translateY(-80px);
+          transform: translateY(-80px);
 }
 
 header.hide-navbar .header-inner {
