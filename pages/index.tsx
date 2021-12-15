@@ -8,6 +8,7 @@ import Link from 'next/link'
 import IndexCollections from '../components/pages/index/collections/IndexCollections';
 import OTExperience from '../components/pages/index/experience/OTExperience';
 import ReviewCapsule from '../components/elements/reviews/ReviewCapsule';
+import Testimonials from '../components/elements/testimonials/Testimonials'
 
 type MyProps = { };
 type MyState = { requestClassName: string, uspOverlay:string };
@@ -88,6 +89,7 @@ closeUspOverlay = () => {
                 layout="fill" 
                 objectFit='cover' 
                 objectPosition='center'
+                priority
               />
           </div>
           <div className='index-hero-intro' id='index-intro' ref={this.introText}>
@@ -283,8 +285,8 @@ closeUspOverlay = () => {
         </div>
       </div> */}
     </div>
-
-      <div className='index-testimonials'>
+      <Testimonials location="index"/>
+      {/* <div className='index-testimonials'>
         <p className='subheading'>Our Testimonials</p>
         <h3 className='heading'>Oak Tree Customer Stories</h3>  
         <div className='cx-story-grid'>
@@ -357,7 +359,9 @@ closeUspOverlay = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
+
+    
     {/* <div className='index-testimonials'>
         <p className='subheading'>Our Testimonials</p>
         <h3 className='heading'>Oak Tree Customer Stories</h3>  

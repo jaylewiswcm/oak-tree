@@ -1,0 +1,37 @@
+[{
+    "name" : "Mr Andrews",
+    "location": "Solihul",
+    "product": "The Oak Chair",
+    "img" : {
+        "src" : "/images/testimonials/cx-1.png",
+        "alt" : "Mr Andrews"
+    }
+},
+{
+    "name" : "Mrs Atkins",
+    "location": "Herefordshire",
+    "product": "The Oak Chair",
+    "img" : {
+        "src" : "/images/testimonials/cx-2.png",
+        "alt" : "Mrs Antkins"
+    }
+},
+{
+    "name" : "Mr Parks",
+    "location": "Cornwall",
+    "product": "The Riviera",
+    "img" : {
+        "src" : "/images/testimonials/cx-3.png",
+        "alt" : "Mr Parks"
+    }
+},
+{
+    "name" : "Mr Groger",
+    "location": "London",
+    "product": "The Oak Chair",
+    "img" : {
+        "src" : "/images/testimonials/cx-4.png",
+        "alt" : "Mrs Groger"
+    }
+}
+]

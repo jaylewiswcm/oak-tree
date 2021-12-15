@@ -1,0 +1,35 @@
+[{
+    "uspId" : "gb",
+    "heading" : "Great Britian",
+    "subheading" : "Handmade in",
+    "img" : {
+        "src" : "/images/usps/british-made.svg",
+        "alt" : "British Made",
+        "width" : "70",
+        "height" : "64"
+    },
+    "content" : "At Oak Tree, we believe in Britain. We are proud that all our chairs, beds and bath lifts are designed and manufactured in Great Britain."
+},{
+    "uspId" : "tp",
+    "heading" : "Rated Five Star",
+    "subheading" : "Satisfaction",
+    "img" : {
+        "src" : "/trustpilot/trustpilot-logo.svg",
+        "alt" : "Trustpilot",
+        "width" : "140",
+        "height" : "80"
+    },
+    "content" : "Our vision for a different kind of mobility company means we have a five-star customer satisfaction rating from our customers."
+},{
+    "uspId" : "ot",
+    "heading" : "Approved",
+    "subheading" : "Occupational Therapist",
+    "img" : {
+        "src" : "/images/usps/ot-logo.svg",
+        "alt" : "Occupational Therapist",
+        "width" : "140",
+        "height" : "70"
+    },
+    "content" : "All our products are occupational therapist approved by an experienced medical expert, offering you complete peace of mind."
+}
+]

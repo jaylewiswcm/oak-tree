@@ -1,6 +1,9 @@
 import React , {useState}  from 'react'
 import Image from 'next/image';
 import ExpInfo from './info/ExpInfo';
+import ExpItem from './ExpItem';
+// data 
+import usps from '../../../../data/home/usps.json';
 
 const OTExperience = () => {
     const [itemToFocus, setItemToFocus] = useState('');
@@ -40,11 +43,24 @@ const OTExperience = () => {
                       objectFit='cover'
                       objectPosition='center'
                   />}
-            
                   <div className='overlay-bg'></div>
               </div>
               <div className='exp-grid'>
-                <div className={`exp-item gb-item ${itemToFocus === 'gb' && 'item-hover'} ${chosenItem === 'gb' && 'item-focused'}`}>
+                { usps.map(usp => 
+                    <ExpItem 
+                    key={usp.heading}
+                      subHeading={usp.subheading}
+                      heading={usp.heading}
+                      itemId={usp.uspId}
+                      img={usp.img} 
+                      content={usp.content} 
+                      learnMore={() => setChosenItem(usp.uspId)}
+                      showLess={() => setChosenItem('')}
+                      selected={chosenItem === usp.uspId && true}
+                    />
+                  ) }
+              
+                {/* <div className={`exp-item gb-item ${itemToFocus === 'gb' && 'item-hover'} ${chosenItem === 'gb' && 'item-focused'}`}>
                   <div className='icon-wrapper'>
                     <Image 
                       src='/images/usps/british-made.svg'
@@ -55,8 +71,8 @@ const OTExperience = () => {
                     />
                   </div>
                   <p className='exp-sub'>Handmade in</p>
-                  <p className='exp-head'>Great Britian</p>
-                  { chosenItem === 'gb' ? <button className='acting-btn' onClick={() => setChosenItem('')} onMouseOver={() => setItemToFocus('gb')} onMouseOut={() => setItemToFocus('')}>Show Less</button>: <button className='acting-btn' onClick={() => setChosenItem('gb')} onMouseOver={() => setItemToFocus('gb')} onMouseOut={() => setItemToFocus('')}>Learn More</button> }
+                  <p className='exp-head'>Great Brian</p>
+                  { chosenItem === 'gb' ? <button className='acting-btn' onClick={() => setChosenItem('')} onMouseOver={() => setItemToFocus('gb')} onMouseOut={() => setItemToFocus('')}>Show Less</button>: <button className='acting-btn' onClick={() => setChosenItem('gb')} onMouseOver={() => setItemToFocus('gb')} onMouseOut={() => setItitemToFocus('')}>Learn More</button> }
                   
                 </div>
                 <div className={`exp-item tp-item ${itemToFocus === 'tp' && 'item-hover'} ${chosenItem === 'tp' && 'item-focused'}`}>
@@ -72,9 +88,9 @@ const OTExperience = () => {
                   <p className='exp-sub'>Satisfaction</p>
                   <p className='exp-head'>Rated Five Star</p>
                   { chosenItem === 'tp' ? <button className='acting-btn' onClick={() => setChosenItem('')} onMouseOver={() => setItemToFocus('tp')} onMouseOut={() => setItemToFocus('')}>Show Less</button> : <button className='acting-btn' onClick={() => setChosenItem('tp')} onMouseOver={() => setItemToFocus('tp')} onMouseOut={() => setItemToFocus('')}>Learn More</button> }
-                </div>
-                <ExpInfo item={chosenItem}/>
-                <div className={`exp-item ot-item ${itemToFocus === 'ot' && 'item-hover'} ${chosenItem === 'ot' && 'item-focused'}`}>
+                </div> */}
+                {/* <ExpInfo item={chosenItem}/> */}
+                {/* <div className={`exp-item ot-item ${itemToFocus === 'ot' && 'item-hover'} ${chosenItem === 'ot' && 'item-focused'}`}>
                   <div className='icon-wrapper'>
                     <Image 
                         src='/images/usps/ot-logo.svg'
@@ -87,7 +103,7 @@ const OTExperience = () => {
                   <p className='exp-sub'>Occupational Therapist</p>
                   <p className='exp-head'>Approved </p>
                   { chosenItem === 'ot' ? <button className='acting-btn' onClick={() => setChosenItem('')} onMouseOver={() => setItemToFocus('ot')}  onMouseOut={() => setItemToFocus('')}>Show Less</button>: <button className='acting-btn' onClick={() => setChosenItem('ot')} onMouseOver={() => setItemToFocus('ot')}  onMouseOut={() => setItemToFocus('')}>Learn More</button>}
-                </div>
+                </div> */}
            
               </div>
             </div>

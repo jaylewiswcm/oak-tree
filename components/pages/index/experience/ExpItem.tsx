@@ -2,32 +2,58 @@ import React from 'react'
 import Image from 'next/image';
 
 interface ComponentProps {
-    hover: boolean,
-    focused: boolean,
     itemId: string
-    subHead: string,
-    head: string,
-    imgSrc: string,
-    imgAlt: string,
-    imgWidth: string,
-    imgHeight: string
+    subHeading: string,
+    heading: string,
+    img: {
+      src: string,
+      alt: string,
+      width: string,
+      height: string
+    },
+    content: string,
+    learnMore: React.MouseEventHandler<HTMLButtonElement>,
+    showLess: React.MouseEventHandler<HTMLButtonElement>,
+    selected: boolean,
 }
 
-const ExpItem = ({focused, hover, itemId, subHead, head, imgSrc, imgAlt, imgWidth, imgHeight}:ComponentProps) => {
-    return (
-        <div className={`exp-item  ${itemId}-item ${hover === true ? 'item-hover' : focused === true ? 'item-focused' : ''}`}>
-        <div className='icon-wrapper'>
-          <Image 
-            src={imgSrc}
-            alt={imgAlt}
-            layout='intrinsic'
-            width={imgWidth}
-            height={imgHeight}
-          />
+const ExpItem = ({itemId, subHeading, heading, img, content , learnMore, showLess, selected}:ComponentProps) => {
+  const {src, alt, width, height} = img  
+  return (
+        <div className={`exp-item  ${itemId}-item ${selected && 'item-selected'}`}>
+          <div className='exp-item-inner'>
+            <div className={`icon-wrapper ${itemId}-icon`}>
+              <Image 
+                src={src}
+                alt={alt}
+                layout='intrinsic'
+                width={width}
+                height={height}
+              />
+            </div>
+            <p className='exp-sub'>{subHeading}</p>
+            <p className='exp-head'>{heading}</p>
+            <button className='acting-btn' onClick={learnMore}>Learn More</button>
+          </div>
+        <div className='exp-info '> 
+          <div className='info-top'>
+            <div className='info-title'>
+              <p className='exp-sub'>{subHeading}</p>
+              <p className='exp-head'>{heading}</p>
+            </div>
+            <div className={`icon-wrapper ${itemId}-icon`}>
+              <Image 
+                src={src}
+                alt={alt}
+                layout='intrinsic'
+                width={width}
+                height={height}
+              />
+            </div>
+          </div>
+          <p className='exp-content'>{content}</p>
+          <button className='acting-btn' onClick={showLess}>Show Less</button>
         </div>
-        <p className='exp-sub'>{subHead}</p>
-        <p className='exp-head'>{head}</p>
-        {/* <button className='acting-btn' onClick={() => setChosenItem('gb')} onMouseOver={() => setItemToFocus('gb')} onMouseOut={() => setItemToFocus('')}>Learn More</button> */}
       </div>
     )
 }
