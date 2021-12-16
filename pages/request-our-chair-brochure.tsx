@@ -111,8 +111,8 @@ const requestOurChairBrochure = () => {
                             <p className='subheading green-2'>Our Testimonials</p>
                             <h3 className='heading green-1'>Hear what our<br />customers have to say</h3>
                             <div className='orphan-testimonials'>
-                                <Testimonial name='Mr Groger' index='1' location='Bristol' date='21st September 2021'/>
-                                <Testimonial name='Mr Atkins' index='2' location='London' date='29th September 2021'/>
+                                {/* <Testimonial name='Mr Groger' index='1' location='Bristol' date='21st September 2021'/>
+                                <Testimonial name='Mr Atkins' index='2' location='London' date='29th September 2021'/> */}
                             </div>
                     </section>
                     <section className='orphan-section'>
