@@ -21,40 +21,39 @@ const Footer = () => {
                 <div className="footer-navigation">
                     <ul>
                         <li><p className="list-header">About Oak Tree</p></li>
-                        <li><a>About Oak Tree Mobility</a></li>
-                        <li><a>Meet Our Occupational Therapist</a></li>
-                        <li><a>Testimonials and Reviews</a></li>
-                        <li><a>Delivery and Installation</a></li>
-                        <li><a>British Made</a></li>
+                        <li><Link href='/about'><a>About Oak Tree Mobility</a></Link></li>
+                        <li><Link href='/occupational-therapist'><a>Meet Our Occupational Therapist</a></Link></li>
+                        <li><Link href='/testimonials-and-reviews'><a>Testimonials and Reviews</a></Link></li>
+                        <li><Link href='/delivery-and-installation'><a>Delivery and Installation</a></Link></li>
+                        <li><Link href='/british-made'><a>British Made</a></Link></li>
                     </ul>
                     <ul>
                         <li><p className="list-header">Prices Explained</p></li>
-                        <li><a>Price Guide for Chairs</a></li>
-                        <li><a>Price Guide for Beds</a></li>
-                        <li><a>Trade In</a></li>
-                        <li><a>VAT Exempt Eligibilty</a></li>
+                        <li> <Link href='/prices-explained'><a>Prices Explained</a></Link></li>
+                        <li><Link href='/trade-in'><a>Trade In</a></Link></li>
+                        <li><Link href='/vat-exempt'><a>VAT Exempt Eligibilty</a></Link></li>
                     </ul>
                     <ul>
                         <li><p className="list-header">Chairs</p></li>
-                        <li><a>Recliner Chairs</a></li>
-                        <li><a>Riser Recliner Chairs</a></li>
-                        <li><a>Armchairs</a></li>
-                        <li><a>All Chairs</a></li>
+                        <li><Link href='/rise-and-recline-chairs'><a>Recliner Chairs</a></Link></li>
+                        <li> <Link href='/rise-and-recline-chairs'><a>Riser Recliner Chairs</a></Link></li>
+                        <li> <Link href='/rise-and-recline-chairs'><a>Armchairs</a></Link></li>
+                        <li> <Link href='/rise-and-recline-chairs'><a>All Chairs</a></Link></li>
                     </ul>
                     <ul>
                         <li><p className="list-header">Beds</p></li>
-                        <li><a>Adjustable Beds</a></li>
-                        <li><a>Headboards</a></li>
-                        <li><a>All Beds</a></li>
+                        <li><Link href='/adjustable-beds'><a>Adjustable Beds</a></Link></li>
+                        <li><Link href='/adjustable-beds'><a>Headboards</a></Link></li>
+                        <li><Link href='/adjustable-beds'><a>All Beds</a></Link></li>
                     </ul>
                     <ul>
                         <li><p className="list-header">Bath Lifts</p></li>
-                        <li><a>Bath Lift Range</a></li>
-                        <li><a>The Riveira Plus</a></li>
-                        <li><a>Oak Tree Bath Lifts</a></li>
+                        <li><Link href='/bath-lifts'><a>Bath Lift Range</a></Link></li>
+                        <li><Link href='/bath-lifts'><a>The Riveira Plus</a></Link></li>
+                        <li><Link href='/bath-lifts'><a>Oak Tree Bath Lifts</a></Link></li>
                     </ul>
                 </div>
-                <div className='mobile-footer-navigation'>
+                {/* <div className='mobile-footer-navigation'>
                     <div className='mobile-logo'>
                         <Logo colour='original' />
                     </div>
@@ -92,7 +91,7 @@ const Footer = () => {
                             </Link>
                         </div>
                     </div>
-                </div>
+                </div> */}
                 <div className="footer-footnote">
                     <div className="logo">
                         <Logo colour='original' />

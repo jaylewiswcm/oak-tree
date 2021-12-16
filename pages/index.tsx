@@ -4,6 +4,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import {  animateScroll as scroll } from "react-scroll";
 import Link from 'next/link'
+import { NextSeo } from 'next-seo';
 // Component
 import IndexCollections from '../components/pages/index/collections/IndexCollections';
 import OTExperience from '../components/pages/index/experience/OTExperience';
@@ -17,10 +18,7 @@ class Home extends React.Component<MyProps, MyState> {
   constructor(props: any) {
     super(props);
     this.state = { requestClassName: 'original',  uspOverlay: '' }
-    
-    // Don't call this.setState() here!
-    // this.state = { counter: 0 };
-    // this.handleClick = this.handleClick.bind(this);
+
   }
   
   private introText = React.createRef<HTMLDivElement>()
@@ -68,6 +66,10 @@ closeUspOverlay = () => {
   render() {
     return (
       <>
+      <NextSeo 
+            title="Oak Tree Mobility | Your Comfort is Our Strength"
+            description="Oak Tree Mobility is the UK's leading mobility specialist helping people live independently. Handmade by skilled craftsmen to order in the UK ..."
+      />
         <div className={`usp-overlay ${this.state.uspOverlay} `}>
           <Image 
             src='/images/overlays/british-made-overlay.svg'

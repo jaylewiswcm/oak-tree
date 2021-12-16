@@ -32,6 +32,7 @@ interface ComponentProps {
             <div className='location'>
                 <Image 
                     src="/images/icons/location-pin.svg"
+                    alt="location pin"
                     layout="intrinsic"
                     width="15"
                     height="15"
