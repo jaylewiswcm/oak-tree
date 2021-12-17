@@ -23,6 +23,7 @@ header {
           align-items: center;
           .nav-li {
             position: relative;
+            cursor: pointer;
             .nav-a {
               padding: 10px 20px;
               border-radius: 5px;
@@ -84,6 +85,13 @@ header {
                color: #004D49
               }
             }
+            .header-dropdown {
+              .dd-inner-wrapper {
+                opacity: 1;
+                max-height: 450px;
+                max-width: 100%;
+              }
+            }
             // .dd-inner-wrapper {
             //   max-height: initial!important;
             //   max-width:initial!important;;
@@ -118,14 +126,10 @@ header {
     .header-dropdown {
       position: absolute;
       top:40px;
-      left:50%;
-      transform: translateX(-30%);
-      // padding-top: 40px;
       width: 100%;
       display: table;
       align-items: center;
       justify-content: center;
-      // border:1px red solid; 
       z-index: 10;
       padding-top: 30px;
       .dd-inner {
@@ -142,19 +146,23 @@ header {
         display: flex;
         max-height: 0;
         max-width:0;
+        width: 850px;
         overflow: hidden;
         opacity: 0;
         transition: 0.3s opacity ease-out;
+        transition: 0.2s;
+        padding: 25px;
         background-color: $white;
         border-radius: 8px;
         box-shadow: 0 3px 24px rgba(0,0,0,0.12);
       }
       .dd-menu-image {
-        width: 500px;
+        width: 380px;
         height: 250px;
         background-color: rgba(0,0,0,0.1);
         margin-left: 25px;
         border-radius: 12px;;
+        margin-left: auto;
       }
       .dd-nav {
         // width: 100%;
@@ -172,7 +180,7 @@ header {
           flex-direction: column;
           opacity: 1;
           transition: 0.3s opacity ease-in;
-          width: 160px;
+          width: 180px;
           &:first-of-type {
             margin-right: 25px;
           }
@@ -251,8 +259,21 @@ header {
       // }
   
     }
-   .beds-dd, .bath-lifts-dd {
-     transform: translateX(-40%);
+    .about-dd {
+      left:50%;
+      transform: translateX(-20%);
+    }
+    .chairs-dd {
+      left:50%;
+      transform: translateX(-31.18%);
+    }
+   .beds-dd { 
+      left:50%;
+      transform: translateX(-42.7%);
+   }
+   .bath-lifts-dd {
+    left:50%;
+    transform: translateX(-52.12%);
    }
     
   .dropdown-bg {

@@ -113,7 +113,7 @@ const requestOurChairBrochure = () => {
                             <div className='orphan-testimonials'>
                                 {/* <Testimonial name='Mr Groger' index='1' location='Bristol' date='21st September 2021'/>
                                 <Testimonial name='Mr Atkins' index='2' location='London' date='29th September 2021'/> */}
-                            </div>
+                            </div>o
                     </section>
                     <section className='orphan-section'>
                             <p className='subheading green-2'>TrustScore 4.6 | 1,252 reviews</p>

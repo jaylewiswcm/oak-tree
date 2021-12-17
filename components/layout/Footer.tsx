@@ -11,7 +11,7 @@ const Footer = () => {
         <footer>
             <div className='container-regular'>
                 <div className="email-signup">
-                    <h6>For Exclusive Offers</h6>
+                    <p className='footer-title'>For Exclusive Offers</p>
                     <p>Sign up to our newsletter</p>
                     <form action="">
                         <input type="text" placeholder='Enter your Email Address'/>

@@ -11,6 +11,7 @@ export const DotButton = ({ selected, onClick }:ComponentProps) => (
     <button
         className={`dot ${selected ? 'active-dot' : ""}`}
         onClick={onClick}
+        aria-label='Carousel Navigation Dot'
     />
 );
 
@@ -19,6 +20,7 @@ export const PrevButton = ({ enabled, onClick }: ComponentProps) => (
         className={`control-btn review-capsule-btns`}
         onClick={onClick}
         disabled={!enabled}
+        aria-label='Previous'
         >
         <Image 
             src={`/buttons/prev-white-bg.svg`}
@@ -35,6 +37,7 @@ export const NextButton = ({ enabled, onClick }: ComponentProps) => (
         className={`control-btn review-capsule-btns`}
         onClick={onClick}
         disabled={!enabled}
+        aria-label='Next'
         >
         <Image 
             src={`/buttons/next-white-bg.svg`}

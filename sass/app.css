@@ -1109,15 +1109,16 @@ footer .email-signup {
   }
 }
 
-footer .email-signup h6 {
+footer .email-signup .footer-title {
   font-size: 2.5rem;
   font-weight: 600;
   font-family: "Copyright Klim Type Foundry", serif;
   color: #fff;
+  margin: 0;
 }
 
 @media (max-width: 500px) {
-  footer .email-signup h6 {
+  footer .email-signup .footer-title {
     font-size: 2rem;
   }
 }
@@ -1429,6 +1430,7 @@ header .header-inner .header-nav .nav-list {
 
 header .header-inner .header-nav .nav-list .nav-li {
   position: relative;
+  cursor: pointer;
 }
 
 header .header-inner .header-nav .nav-list .nav-li .nav-a {
@@ -1481,6 +1483,12 @@ header .header-inner .header-nav .nav-list .nav-li:hover .nav-a .btn-text {
   color: #004D49;
 }
 
+header .header-inner .header-nav .nav-list .nav-li:hover .header-dropdown .dd-inner-wrapper {
+  opacity: 1;
+  max-height: 450px;
+  max-width: 100%;
+}
+
 header .header-inner .header-cta {
   padding: 18px 35px;
   background-color: #004D49;
@@ -1512,9 +1520,6 @@ header .header-inner .header-cta:hover {
 header .header-dropdown {
   position: absolute;
   top: 40px;
-  left: 50%;
-  -webkit-transform: translateX(-30%);
-          transform: translateX(-30%);
   width: 100%;
   display: table;
   -webkit-box-align: center;
@@ -1544,10 +1549,14 @@ header .header-dropdown .dd-inner-wrapper {
   display: flex;
   max-height: 0;
   max-width: 0;
+  width: 850px;
   overflow: hidden;
   opacity: 0;
   -webkit-transition: 0.3s opacity ease-out;
   transition: 0.3s opacity ease-out;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  padding: 25px;
   background-color: #fff;
   border-radius: 8px;
   -webkit-box-shadow: 0 3px 24px rgba(0, 0, 0, 0.12);
@@ -1555,11 +1564,12 @@ header .header-dropdown .dd-inner-wrapper {
 }
 
 header .header-dropdown .dd-menu-image {
-  width: 500px;
+  width: 380px;
   height: 250px;
   background-color: rgba(0, 0, 0, 0.1);
   margin-left: 25px;
   border-radius: 12px;
+  margin-left: auto;
 }
 
 header .header-dropdown .dd-nav .list-heading {
@@ -1582,7 +1592,7 @@ header .header-dropdown .dd-nav .dd-nav-list {
   opacity: 1;
   -webkit-transition: 0.3s opacity ease-in;
   transition: 0.3s opacity ease-in;
-  width: 160px;
+  width: 180px;
 }
 
 header .header-dropdown .dd-nav .dd-nav-list:first-of-type {
@@ -1659,9 +1669,28 @@ header .header-dropdown .isVisible {
   padding: 25px;
 }
 
-header .beds-dd, header .bath-lifts-dd {
-  -webkit-transform: translateX(-40%);
-          transform: translateX(-40%);
+header .about-dd {
+  left: 50%;
+  -webkit-transform: translateX(-20%);
+          transform: translateX(-20%);
+}
+
+header .chairs-dd {
+  left: 50%;
+  -webkit-transform: translateX(-31.18%);
+          transform: translateX(-31.18%);
+}
+
+header .beds-dd {
+  left: 50%;
+  -webkit-transform: translateX(-42.7%);
+          transform: translateX(-42.7%);
+}
+
+header .bath-lifts-dd {
+  left: 50%;
+  -webkit-transform: translateX(-52.12%);
+          transform: translateX(-52.12%);
 }
 
 header .dropdown-bg {
