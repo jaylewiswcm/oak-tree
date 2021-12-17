@@ -9,14 +9,14 @@ interface ComponentProps {
         src: string,
         alt: string
     },
-    onClick: React.MouseEventHandler<HTMLDivElement>,
+    onClick: React.MouseEventHandler<HTMLDivElement> | undefined,
     selectedClass: string
 }
 
  const Testimonial = ({name, location, product, img, onClick, selectedClass}: ComponentProps) => {
      const {src, alt} = img
     return (
-        <div className={`cx-item ${selectedClass}`} onClick={onClick}>
+        <div className={`testimonial-container ${selectedClass}`} onClick={onClick}>
         <div className='overlay'></div>
         <Image 
             src={src} 

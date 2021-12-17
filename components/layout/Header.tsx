@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import Logo from '../assets/Logo';
 import Link from 'next/link'; 
+import Image from 'next/image';
 // Components
 import HeaderDD from '../navigation/DropDownBg';
 import HeaderDropDown from '../navigation/HeaderDropDown';
@@ -40,7 +41,7 @@ const Header = () => {
     }
     return (  
         <header className={`${shadow} ${hideNavbar === true && 'hide-navbar'}`}>
-             <div className="container-regular header-inner">
+             <div className="container-regular header-inner" id="desktop-header">
                  <Link  href='/'>
                     <a className='header-logo'>
                         <Logo colour='original'/>
@@ -107,7 +108,21 @@ const Header = () => {
                      <span className='btn-text'>Request Your Brochure</span>
                  </button>
             </div>
-          
+            <div className='header-inner' id="mobile-header">
+                <Link  href='/'>
+                    <a className='header-logo'>
+                        <Logo colour='original'/>
+                    </a>
+                </Link>
+                <button className='burger-menu'>
+                    <Image 
+                        src='/images/icons/burger-menu.svg'
+                        alt='Menu'  
+                        width='40'
+                        height='40'  
+                    />
+                </button>
+            </div>
         </header>
     )
 }

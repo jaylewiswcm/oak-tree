@@ -37,7 +37,6 @@ const Testimonials = ({location}:  ComponentProps) => {
                     onClick={() => selectTestimonial(item.name)}
                     selectedClass={selected && selectedItem === item.name ? 'selected-item' : selected && selectedItem !== item.name ? 'not-selected-item': 'item-can-hover'}
                 />
-                
                 )}
           {/* <div className='cx-item'>
             <div className='overlay'></div>

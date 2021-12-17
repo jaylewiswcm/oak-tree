@@ -7,10 +7,10 @@ type: string
 
 const DropDownBg = ({type} : ComponentProps) => {
     return (
-        <div className={`header-dropdown`}>
+        <div className={`header-dropdown ${type}-dd`}>
         
         {type === 'about' && 
-        <div className='dd-inner-wrapper about-dd'>
+        <div className='dd-inner-wrapper'>
             <nav className='dd-nav'>
                 <p className='list-heading'>About</p>
                     <ul className={`dd-nav-list grid-nav-list`}>
@@ -49,7 +49,7 @@ const DropDownBg = ({type} : ComponentProps) => {
         </div>
         }
         {type === 'chairs' && 
-        <div className='dd-inner-wrapper chairs-dd'>
+        <div className='dd-inner-wrapper'>
                         <nav className='dd-nav'>
                             <p className='list-heading'>Chairs</p>
                             <ul className={`dd-nav-list`}>
@@ -114,7 +114,7 @@ const DropDownBg = ({type} : ComponentProps) => {
         </div>
         }
         {type === 'beds' && 
-        <div className='dd-inner-wrapper beds-dd'>
+        <div className='dd-inner-wrapper'>
                         <nav className='dd-nav'>
                             <p className='list-heading'>Beds</p>
                             <ul className={`dd-nav-list`}>
@@ -184,7 +184,7 @@ const DropDownBg = ({type} : ComponentProps) => {
                     </div>
         }
         {type === 'bath-lifts' && 
-                    <div className='dd-inner-wrapper bath-lifts-dd'>
+                    <div className='dd-inner-wrapper'>
                         <nav className='dd-nav'>
                             <p className='list-heading'>Bath Lifts</p>
                             <ul className={`dd-nav-list`}>

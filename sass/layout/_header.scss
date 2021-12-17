@@ -9,6 +9,23 @@ header {
     transition: max-height 0.2s, 0.4s transform;
     // transition: 0.4s transform, 0.2s max-height;
     max-height: 80px;
+
+    #desktop-header{
+      @media(max-width: 990px) {
+        display: none;
+      }
+    }  
+    #mobile-header {
+      @media(min-width: 991px) {
+        display: none;
+      }
+    }   
+    .burger-menu{ 
+      padding: 0;
+      margin-left: auto;
+      background: none;
+      box-shadow: none;
+    }
     .header-inner {
       display: flex;
       align-items: center;
@@ -18,6 +35,9 @@ header {
       .header-nav {
         margin: 0 15px;
         position: relative;
+        @media(max-width: 990px) {
+          display: none;
+        }
         .nav-list {
           display: flex;
           align-items: center;
@@ -86,10 +106,12 @@ header {
               }
             }
             .header-dropdown {
+              padding-top: 30px;
               .dd-inner-wrapper {
                 opacity: 1;
                 max-height: 450px;
                 max-width: 100%;
+                padding: 25px;
               }
             }
             // .dd-inner-wrapper {
@@ -109,7 +131,6 @@ header {
         margin-left: auto;
         box-shadow: none;
         transition: 100ms box-shadow ease-in, transform 250ms, background-color 250ms;
-        
         .btn-text {
           font-size: 1rem;
           font-weight: 600;
@@ -131,7 +152,7 @@ header {
       align-items: center;
       justify-content: center;
       z-index: 10;
-      padding-top: 30px;
+      padding-top: 0;
       .dd-inner {
         // background-color: $white;
         box-shadow: 0 3px 24px rgba(0, 77, 73, 0.21);
@@ -152,6 +173,7 @@ header {
         transition: 0.3s opacity ease-out;
         transition: 0.2s;
         padding: 25px;
+        padding: 0;
         background-color: $white;
         border-radius: 8px;
         box-shadow: 0 3px 24px rgba(0,0,0,0.12);
