@@ -221,7 +221,7 @@ closeUspOverlay = () => {
         </div>
       </div> */}
       <div className='ot-intro'>
-        <h4>The UK's Leading Mobility Specialists</h4>
+        <h4>The UKs Leading Mobility Specialists</h4>
         <p className='intro-p'>At Oak Tree, we make beautiful products that help people live independently. We believe everyone should be free to live a rich and fulfilling life and this belief affects everything we do.</p>
         <button className='main-cta'>
           <p>Request Your Free Brochure</p>
