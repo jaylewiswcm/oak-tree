@@ -396,6 +396,37 @@ closeUspOverlay = () => {
           </div>
         </div>
       </div>
+      <div className='home-stories'>
+        <p className='section-heading'>Customer Stories</p>
+        <div>
+          <Testimonials location='index' />
+        </div>
+      </div>
+      <div className='home-last-cats'>
+      <p className='section-heading'>Explore our collections</p>
+        <div className='cat-item'>
+          <div className='img-wrap'>
+            <Image 
+              src='/images/home/category-chairs.png'
+              alt='Rise and Recline Chairs'
+              layout='fill'
+              objectFit='cover'
+              objectPosition='center'
+            />
+          </div> 
+          <p className='cat-title'>Rise and Recline Chairs</p> 
+          <p className='acting-link'>View Chairs <Image src='/images/icons/arrows/small-green-arrow.svg' alt='arrow' width='15' height='10'/></p>
+        </div>
+        <div className='slider-dots'>
+          <div className='dot active'></div>
+          <div className='dot'></div>
+          <div className='dot'></div>
+        </div>
+      </div>
+
+      <div className='acting-footer'>
+        <p>Oak Tree Mobility</p>
+      </div>
       {/* <div className='grid-col-2'>
         <div className='horizontal-banner'>
           <p className='sub-heading'>Limited Time Only</p>

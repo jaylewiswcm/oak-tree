@@ -24,8 +24,6 @@ const Testimonials = ({location}:  ComponentProps) => {
     
     return (
         <div className={`${location}-testimonials`}>
-        <p className='subheading'>Our Testimonials</p>
-        <h3 className='heading'>Oak Tree Customer Stories</h3>  
         <div className='cx-story-grid'>
             { testimonials.map(item => 
                 <Testimonial 
