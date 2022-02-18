@@ -40,88 +40,69 @@ const Header = () => {
         setDropdown(false)
     }
     return (  
-        <header className={`${shadow} ${hideNavbar === true && 'hide-navbar'}`}>
-             <div className="container-regular header-inner" id="desktop-header">
-                 <Link  href='/'>
-                    <a className='header-logo'>
-                        <Logo colour='original'/>
-                    </a>
-                </Link>
-                <nav className='header-nav'>
-                    <ul className='nav-list'>
-                        <li className='nav-li' onMouseOver={() => expandMenu('')} onMouseOut={() => hideMenu()}>
-                            <Link href='/'>
-                                <a className='nav-a'>
-                                    <span className='btn-bg'></span>
-                                    <span className='btn-text'>Home</span>
-                                </a>
-                            </Link>
-                        </li>
-                        <li className='nav-li' onMouseOver={() => expandMenu('about')} onMouseOut={() => hideMenu()}>
-                            <Link href="/about">
-                                <a  className='nav-a'>
-                                    <span className='btn-bg'></span>
-                                    <span className='btn-text'>About</span>
-                                </a>
-                            </Link>
-                            <HeaderDD type={menuType}  />
-                            {/* <HeaderDropDown type={menuType}/> */}
-                            {/* {menuType === 'about' && <HeaderDropDown dropdown={dropdown} type={menuType}/>} */}
-                        </li> 
-                        <li  className='nav-li' onMouseOver={() => expandMenu('chairs')} onMouseOut={() => hideMenu()}>
-                            <Link href="/rise-and-recline-chairs" >
-                                <a className='nav-a'>
-                                    <span className='btn-bg'></span>
-                                    <span className='btn-text'>Chairs</span>
-                                </a>
-                            </Link>
-                            <HeaderDD type={menuType}  />
-                            {/* {menuType === 'chairs' && <HeaderDropDown dropdown={dropdown} type={menuType}/>} */}
-                            {/* { menuType === 'chairs' && <HeaderDropDown type={menuType}/>} */}
-                        </li>
-                        <li className='nav-li' onMouseOver={() => expandMenu('beds')} onMouseOut={() => hideMenu()}>
-                            <Link href="/adjustable-beds" >
-                                <a className='nav-a'>
-                                    <span className='btn-bg'></span>
-                                    <span className='btn-text'>Beds</span>
-                                </a>
-                            </Link>
-                            <HeaderDD type={menuType}  />
-                            {/* <HeaderDropDown type={menuType}/> */}
-                            {/* { menuType === 'beds' && <HeaderDropDown dropdown={dropdown} type={menuType}/>} */}
-                        </li>
-                        <li className='nav-li' onMouseOver={() => expandMenu('bath-lifts')} onMouseOut={() => hideMenu()}>
-                            <Link href="/bath-lifts" >
-                                <a  className='nav-a'>
-                                    <span className='btn-bg'></span>
-                                    <span className='btn-text'>Bath Lifts</span>
-                                </a>
-                            </Link>
-                            <HeaderDD type={menuType}  />
-                            {/* { menuType === 'bath-lifts' && <HeaderDropDown dropdown={dropdown} type={menuType}/>} */}
-                        </li>
+        <header>
+            <div className='top-header con-reg'>
+                <div className='mobile-menu-btn'>
+                    <button className='icon-btn'>
+                        <Image
+                            src='/buttons/menu-open.svg'
+                            alt='Open Menu'
+                            width='40'
+                            height='30'
+                        />
+                    </button>
+                </div>
+                <div className="header-logo">
+                    <div className="logo">
+                        <Image 
+                            src='/logo/logo.svg'
+                            alt='Oak Tree Mobility'
+                            width='240'
+                            height='60'
+                        />
+                    </div>
+                </div>
+                <nav className='main-nav'>
+                    <ul>
+                        <li><Link href='/'><a>Home</a></Link></li>
+                        <li><Link href='/about'><a>About</a></Link></li>
+                        <li><Link href='/chairs'><a>Chairs</a></Link></li>
+                        <li><Link href='/adjustable-beds'><a>Beds</a></Link></li>
+                        <li><Link href='/bath-lifts'><a>Bath Lifts</a></Link></li>
+                        <li><Link href='/express-delivery'><a>Express Delivery</a></Link></li>
                     </ul>
                 </nav>
-           
-                 <button className='header-cta'>
-                     <span className='btn-bg'></span>
-                     <span className='btn-text'>Request Your Brochure</span>
-                 </button>
+                <div className='header-cta'>
+                    <button className='cta main-cta'>
+                        <p>Request Free Brochure</p>
+                    </button>
+                </div>  
             </div>
-            <div className='header-inner' id="mobile-header">
-                <Link  href='/'>
-                    <a className='header-logo'>
-                        <Logo colour='original'/>
-                    </a>
-                </Link>
-                <button className='burger-menu'>
-                    <Image 
-                        src='/images/icons/burger-menu.svg'
-                        alt='Menu'  
-                        width='40'
-                        height='40'  
-                    />
-                </button>
+            <div className='top-cta-banner hide'>
+                <div className='inner-wrapper con-reg flex-row-end'>
+                    <div className='mobile-logo'>
+                        <div className='logo-mid'>
+                            <Image 
+                                src='/logo/logo-white.svg'
+                                alt='Oak Tree Mobility'
+                                width='185'
+                                height='38'
+                            />
+                        </div>
+                        <div className='logo-mob'> 
+                            <Image 
+                                src='/logo/logo-mobile.svg'
+                                alt='Oak Tree Mobility'
+                                width='88'
+                                height='39'
+                            />
+                        </div>
+                      
+                    </div>
+                    <p className='desktop-call-cta'>Call us free on:</p>
+                    <a className='desktop-call-cta' href="tel:0800908679">0800 908 679</a>
+                    <a className='mobile-call-cta' href="tel:0800908679">Call Us Today</a>
+                </div>              
             </div>
         </header>
     )

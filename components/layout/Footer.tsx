@@ -9,7 +9,7 @@ const Footer = () => {
     }
     return (
         <footer>
-            <div className='container-regular'>
+            {/* <div className='container-regular'>
                 <div className="email-signup">
                     <p className='footer-title'>For Exclusive Offers</p>
                     <p>Sign up to our newsletter</p>
@@ -53,45 +53,7 @@ const Footer = () => {
                         <li><Link href='/bath-lifts'><a>Oak Tree Bath Lifts</a></Link></li>
                     </ul>
                 </div>
-                {/* <div className='mobile-footer-navigation'>
-                    <div className='mobile-logo'>
-                        <Logo colour='original' />
-                    </div>
-                    <button onClick={() => toggleFooterNav()}>About Oak Tree</button>
-                    <ul >
-                        <li><a>About Oak Tree Mobility</a></li>
-                        <li><a>Meet Our Occupational Therapist</a></li>
-                        <li><a>Testimonials and Reviews</a></li>
-                        <li><a>Delivery and Installation</a></li>
-                        <li><a>British Made</a></li>
-                    </ul>
-                    <button>Our Products</button>
-                    <ul>
-                        <li><a>Price Guide for Chairs</a></li>
-                        <li><a>Price Guide for Beds</a></li>
-                        <li><a>Trade In</a></li>
-                        <li><a>VAT Exempt Eligibilty</a></li>
-                    </ul>
-                    <button>Prices Explained</button>
-                    <ul>
-                        <li><a>Price Guide for Chairs</a></li>
-                        <li><a>Price Guide for Beds</a></li>
-                        <li><a>Trade In</a></li>
-                        <li><a>VAT Exempt Eligibilty</a></li>
-                    </ul>
-                    <div className='mobile-social'>
-                        <div className='social-icon'>
-                            <Link href='/'>
-                            <a></a>
-                            </Link>
-                        </div>
-                        <div className='social-icon'>
-                            <Link href='/'>
-                                <a></a>
-                            </Link>
-                        </div>
-                    </div>
-                </div> */}
+               
                 <div className="footer-footnote">
                     <div className="logo">
                         <Logo colour='original' />
@@ -113,7 +75,7 @@ const Footer = () => {
                         <p>Oak Tree Mobility Limited. Registered Office: 2nd Floor, St James Court, 9/12 St James Parade, Bristol, BS1 3LH, United Kingdom.</p>
                         <p>Registered Number: 06829860. Registered in England and Wales </p>
                     </div>
-                </div>
+                </div> */}
         </footer>
     )
 }

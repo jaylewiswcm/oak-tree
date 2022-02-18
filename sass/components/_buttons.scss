@@ -1,13 +1,36 @@
-.control-btn {
-    background: none;
+button,.button {
+    background:none;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 25px;
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: $fontText;
+    letter-spacing: 0.5px;
+    height:fit-content;
+    width: fit-content;
+}
+
+.main-cta {
+    background-color: $oaktree-green;
+    color: $white;
+    min-width:232px;
+}
+.main-button {
+    background-color: $oaktree-green;
+    color: $white;
+}
+
+.icon-btn {
     padding: 0;
-    box-shadow: none;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50px;
-    height: 50px;
-    border-radius: 50px;
-    cursor: pointer;
+}
+a.button {
+    display: block;
+    text-align: center;
+    padding: 15px 20px;
+}
+
+.learn-more-btn {
+    padding: 10px 25px;
+    font-weight: 600;
 }
