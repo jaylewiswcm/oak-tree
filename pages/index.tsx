@@ -90,7 +90,7 @@ closeUspOverlay = () => {
           <button className='cta main-cta'>Request Your Free Brochure</button>
         </div>
       </div> */}
-      <div className='sec-title center'>Our Categories</div>
+      <div className='section-heading main-heading'>Our Categories</div>
       <div className='home-cat'>
         <div className='cat-item'>
           <div className='img-wrap'>

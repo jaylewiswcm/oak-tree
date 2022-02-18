@@ -771,7 +771,7 @@ h2 {
 
 .hero-fs .hero-content {
   padding: 0 15px;
-  padding-top: 20px;
+  padding-top: 25px;
   padding-bottom: 30px;
 }
 
@@ -783,13 +783,13 @@ h2 {
 }
 
 .hero-fs .hero-content h2, .hero-fs .hero-content a {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: 400;
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
 .hero-fs .hero-content .main-cta {
-  margin-top: 20px;
+  margin-top: 40px;
 }
 
 .hero-fs .hero-content .main-cta p {
@@ -1437,6 +1437,12 @@ header .top-header .main-nav ul li a {
   margin-bottom: 4px;
 }
 
+.main-heading {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-top: 25px;
+}
+
 .home-cat {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1446,6 +1452,7 @@ header .top-header .main-nav ul li a {
       -ms-flex-direction: column;
           flex-direction: column;
   padding: 0 15px;
+  margin-top: 25px;
 }
 
 .home-cat .cat-item {
@@ -1457,7 +1464,7 @@ header .top-header .main-nav ul li a {
   position: relative;
   width: 100%;
   height: 370px;
-  border-radius: 2px;
+  border-radius: 4px;
   overflow: hidden;
 }
 
@@ -1476,6 +1483,7 @@ header .top-header .main-nav ul li a {
   font-size: 23px;
   font-weight: 600;
   color: #177B43;
+  color: #212923;
   margin-right: 15px;
 }
 
@@ -1529,7 +1537,7 @@ header .top-header .main-nav ul li a {
 
 .ot-intro {
   width: 100%;
-  padding: 50px 15px;
+  padding: 60px 15px;
   background-color: #E5F5ED;
 }
 
@@ -1543,7 +1551,7 @@ header .top-header .main-nav ul li a {
 }
 
 .ot-intro .intro-p {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 300;
   color: #212923;
   text-align: left;
@@ -1595,12 +1603,12 @@ header .top-header .main-nav ul li a {
 }
 
 .banner-flex-2 .horizontal-banner .banner-content .sub-heading {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 500;
   color: #212923;
   text-align: center;
   line-height: 1.4;
-  margin-bottom: 4px;
+  margin-bottom: 2px;
 }
 
 .banner-flex-2 .horizontal-banner .banner-content .heading {
@@ -1625,7 +1633,7 @@ header .top-header .main-nav ul li a {
   background-color: #F4D06F;
   color: #212923;
   margin: 0 auto;
-  margin-top: 25px;
+  margin-top: 30px;
 }
 
 .as-seen-on {
@@ -1687,7 +1695,7 @@ header .top-header .main-nav ul li a {
 }
 
 .ot-difference-selection .selection {
-  padding: 10px 15px;
+  padding: 15px 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1737,11 +1745,11 @@ header .top-header .main-nav ul li a {
 
 .home-reviews .review-carousel {
   width: 100%;
+  margin-top: 30px;
 }
 
 .home-reviews .review-carousel .review {
   border-radius: 11px;
-  margin-top: 25px;
   -webkit-box-shadow: 0 4px 20px rgba(23, 123, 67, 0.11);
           box-shadow: 0 4px 20px rgba(23, 123, 67, 0.11);
 }
