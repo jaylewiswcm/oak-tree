@@ -36,31 +36,32 @@ const Header = () => {
         setMenuType(type);
     }
     const hideMenu = () => {
-        // setMenuType('');
         setDropdown(false)
     }
     return (  
         <header>
             <div className='top-header con-reg'>
-                <div className='mobile-menu-btn'>
-                    <button className='icon-btn'>
-                        <Image
-                            src='/buttons/menu-open.svg'
-                            alt='Open Menu'
-                            width='40'
-                            height='30'
-                        />
-                    </button>
-                </div>
                 <div className="header-logo">
-                    <div className="logo">
+                    <Link  href="/">
+                        <a className="logo">
                         <Image 
                             src='/logo/logo.svg'
                             alt='Oak Tree Mobility'
                             width='240'
                             height='60'
                         />
-                    </div>
+                         </a>
+                    </Link>
+                    <Link  href="/"> 
+                        <a className="mobile-logo">
+                        <Image 
+                            src='/logo/logo-mobile.svg'
+                            alt='Oak Tree Mobility'
+                            width='100'
+                            height='37'
+                        />
+                        </a>
+                    </Link>
                 </div>
                 <nav className='main-nav'>
                     <ul>
@@ -76,7 +77,17 @@ const Header = () => {
                     <button className='cta main-cta'>
                         <p>Request Free Brochure</p>
                     </button>
-                </div>  
+                </div> 
+                <div className='mobile-menu-btn'>
+                    <button className='icon-btn'>
+                        <Image
+                            src='/buttons/menu-open.svg'
+                            alt='Open Menu'
+                            width='40'
+                            height='30'
+                        />
+                    </button>
+                </div> 
             </div>
             <div className='top-cta-banner hide'>
                 <div className='inner-wrapper con-reg flex-row-end'>

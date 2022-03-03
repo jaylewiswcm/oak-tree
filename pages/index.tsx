@@ -115,6 +115,7 @@ closeUspOverlay = () => {
               </div>
             </a>
           </Link>
+          <p className='cat-desc'>Our Rise and Recline Chairs are Luxurious and well-made allowing supreme comfort at the touch of a button</p>
           <div className='tag-flex'>
             <CategoryTag tagName='British Made' imgSrc='/images/icons/british-made/british-made-green.svg' imgAlt='British Made' imgWidth='25' imgHeight='25'/>
             <CategoryTag tagName='Supports Joints' imgSrc='/images/icons/health/supports-joints.svg' imgAlt='Supports Joints' imgWidth='25' imgHeight='25'/>
@@ -143,6 +144,7 @@ closeUspOverlay = () => {
               </div>
             </a>
           </Link>
+          <p className='cat-desc'>Our Adjustable Beds are sophistication and comfort, choose from our wide collection of adjustable beds.</p>
           <div className='tag-flex'>
             <CategoryTag tagName='British Made' imgSrc='/images/icons/british-made/british-made-green.svg' imgAlt='British Made' imgWidth='25' imgHeight='25'/>
             <CategoryTag tagName='Improves Sleep' imgSrc='/images/icons/health/improves-sleep.svg' imgAlt='Improves Sleep' imgWidth='25' imgHeight='25'/>
@@ -171,55 +173,13 @@ closeUspOverlay = () => {
               </div>
             </a>
           </Link>
+          <p className='cat-desc'>Rediscover the joys and health benefits of a nice warm bath with our amazing bath lift.</p>
           <div className='tag-flex'>
             <CategoryTag tagName='British Made' imgSrc='/images/icons/british-made/british-made-green.svg' imgAlt='British Made' imgWidth='25' imgHeight='25'/>
           </div>
         </div>
       </div>
-      {/* <div className='con-reg home-categories'>
-        <div className='category'>
-          <div className='image-wrapper'>
-            <Image 
-              src='/images/home/category-chairs.png'
-              alt='Rise and Recline Chairs'
-              layout='fill'
-              objectFit='cover'
-              objectPosition='center'
-            />
-          </div>
-          <h3>Rise and Recline Chairs</h3>
-          <p className='cat-desc'>Luxurious and well-made allowing supreme comfort at the touch of a button</p>
-          <Link href="/chairs"><a className='button main-button'>View Collection</a></Link>
-        </div>
-        <div className='category'>
-          <div className='image-wrapper'>
-            <Image 
-              src='/images/home/category-beds.png'
-              alt='Adjustable Beds'
-              layout='fill'
-              objectFit='cover'
-              objectPosition='center'
-            />
-          </div>
-          <h3>Adjustable Beds</h3>
-          <p className='cat-desc'>Sophistication and comfort, choose from our wide collection of adjustable beds.</p>
-          <Link href="/adjustable-beds"><a className='button main-button'>View Collection</a></Link>
-        </div>
-        <div className='category'>
-          <div className='image-wrapper'>
-            <Image 
-              src='/images/home/category-bathlifts.png'
-              alt='Bath Lifts'
-              layout='fill'
-              objectFit='cover'
-              objectPosition='center'
-            />
-          </div>
-          <h3>Bath Lifts</h3>
-          <p className='cat-desc'>Rediscover the joys and health benefits of a nice warm bath with our amazing bath lift.</p>
-          <Link href="/bath-lifts"><a className='button main-button'>View Collection</a></Link>
-        </div>
-      </div> */}
+
       <div className='ot-intro'>
         <h4>The UKs Leading Mobility Specialists</h4>
         <p className='intro-p'>At Oak Tree, we make beautiful products that help people live independently. We believe everyone should be free to live a rich and fulfilling life and this belief affects everything we do.</p>
@@ -227,22 +187,6 @@ closeUspOverlay = () => {
           <p>Request Your Free Brochure</p>
         </button>
       </div>
-      {/* <div className='home-ot-intro con-reg flex-col-center'>
-        <div className='logo'>
-          <Image 
-            src='/logo/logo.svg'
-            alt='Oak Tree Mobility'
-            width='300'
-            height='62'
-          />
-        </div>
-        <h4>The UK's Leading Mobility Specialists</h4>
-        <p>At Oak Tree, we make beautiful products that help people live independently. We believe everyone should be free to live a rich and fulfilling life and this belief affects everything we do.</p>
-        <div className='cta-wrapper'>
-          <button className='main-cta'>Request Your Free Brochure</button>
-          <Link href='#'><a>What makes us different?</a></Link>
-        </div>
-      </div> */}
 
       <div className='banner-flex-2'>
         <div className='horizontal-banner'>
@@ -427,20 +371,6 @@ closeUspOverlay = () => {
       <div className='acting-footer'>
         <p>Oak Tree Mobility</p>
       </div>
-      {/* <div className='grid-col-2'>
-        <div className='horizontal-banner'>
-          <p className='sub-heading'>Limited Time Only</p>
-          <h5>Buy one get one half price</h5>
-          <p className='banner-p'>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna</p>
-          <button className=''></button>
-        </div>
-        <div className='horizontal-banner'>
-          <p className='sub-heading'>Limited Time Only</p>
-          <h5>Buy one get one half price</h5>
-          <p className='banner-p'>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna</p>
-          <button className=''></button>
-        </div>
-      </div> */}
       </>
   )
 }

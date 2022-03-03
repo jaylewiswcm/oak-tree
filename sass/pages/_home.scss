@@ -1,6 +1,7 @@
 .section-heading {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     font-weight: 500;
+    font-family: $fontHeadings;
     text-align: center;
 }
 .section-subheading {
@@ -11,9 +12,10 @@
     margin-bottom:4px;
 }
 .main-heading {
-    font-size: 1.6rem;
+    font-size: 2rem;
     font-weight: 600;
     margin-top: 25px;
+    font-family: $fontHeadings;
 }
 .home-cat {
     display: flex;
@@ -45,6 +47,12 @@
             .icon-wrapper {
                padding-top:7px;
             }
+        }
+        .cat-desc {
+            font-size: 1rem;
+            font-weight: 300;
+            line-height: 1.5;
+            margin-bottom: 10px;
         }
         .tag-flex {
             display: flex;

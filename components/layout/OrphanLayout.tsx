@@ -12,7 +12,6 @@ interface ComponentProps  {
         <>
             <Header /> 
             { children }
-       
         </>
     )
 }

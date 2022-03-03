@@ -54,3 +54,13 @@ a{
     overflow: hidden;
     cursor: pointer;
   }
+  p {
+      font-size: 1rem;
+      font-weight: 400;
+      color: $black;
+      span {
+        font-size: inherit;
+        font-weight: inherit;
+        color: inherit;   
+      }
+  }

@@ -8,461 +8,249 @@
         width: 60%;
         @media(max-width: 950px) {
             width: 100%;
-        }
+        }       
+        .section-heading {
+            font-size: 2rem;
+            font-weight: 500;
+            font-family: $fontHeadings;
+        } 
         .orphan-hero {
+            position: relative;
             width: 100%;
             height: 400px;
-            position: relative;
         }
-        .orphan-intro {
-            background-color: $dark-green-1;
-            padding: 25px;
-            margin-bottom: 25px;
-            .heading {
-                @media(max-width: 650px) {
-                    br{content:' ';}
-                    br:after{content:' ';}
-                }
-     
+        .orphan-header {
+            padding: 15px;
+            .section-heading  {
+                font-size: 2rem;
+                text-align: left;
             }
+            .section-subheading {
+                font-size: 1.4rem;
+                text-align: left;
+                margin-top:5px;
+            }
+        }
+        .chair-showcase {
+            width: 100%;
+            height: 200px;
+            position: relative
         }
         .orphan-section {
-            padding: 25px 15px;
-        }
-        .seconndary-hero {
-            width: 100%;
-            height: 250px;
-            background-color: rgba(0,0,0,0.10);
-            margin: 50px 0;
-            border-radius: 4px;
-            overflow: hidden;
-        }
-        .usp-grid {
-            display: grid;
-            grid-template-columns: repeat(2,1fr);
-            width: 90%;
-            margin: 0 auto;
-            @media(max-width: 600px) and (min-width: 561px){
-                width: 100%;
+            padding: 15px;
+            .section-heading {
+                font-size: 2.1rem;
+                margin-top: 25px;
             }
-            @media(max-width: 560px) {
-                display: flex;
-                flex-direction: column;
-                width: 100%;
-                max-width: 260px;
-                margin-bottom: 25px;
+            .section-subheading {
+                font-size: 1.3rem;
+                margin-top: 5px;
+                line-height: 1.4;
             }
-            li {
-                padding: 15px;
-                display: flex;
-                align-items: center;
-                p {
-                    font-size: 1.2rem;
-                    font-weight: 500;
-                    color: $dark-green-1;
+            .health-grid {
+                display: grid;
+                grid-template-columns: repeat(2 , 1fr);
+                margin: 40px 0;
+                .health-item {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    border-bottom: 1px $lighter-grey solid;
+                    padding: 20px;
+                     text-align: center;
+                    &:nth-of-type(odd) {
+                        border-right: 1px $lighter-grey solid;
+                    }
+                    &:nth-of-type(5) {
+                        border-bottom: none;
+                    }
+                    &:nth-of-type(6) {
+                        border-bottom: none;
+                    }
+                    p {
+                        font-size: 1.1rem;
+                    }
                 }
             }
         }
-        .quote-container {
+        .orphan-quote { 
+            padding: 40px 25px;
+            .quote {
+                font-size: 1.8rem;
+                font-weight: 500;
+                font-family: $fontHeadings;
+                color: $dark-green-1;
+                margin-bottom: 15px;
+            }
+            .quote-author, .quote-location {
+                font-size: 1.4rem;
+                font-weight: 500;
+            }
+            .quote-author {
+                margin-bottom: 2px;
+            }
+        }
+  
+        .brochure-reason {
             display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
             padding: 15px;
-            margin: 25px 0;
-            .button-wrapper {
+            margin-bottom: 15px;
+            &:last-of-type {
+                margin-bottom: 0;;
+            }
+            .number {
+                font-size: 1.4rem;
+                font-weight: 600;
+                background-color: $light-green-1;
+                color: $oaktree-green;
+                border-radius: 50%;
+                width: 45px;
+                height:45px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                @media(max-width: 500px) {
-                    display: none;
-                }
+                padding-left:5px;
             }
-            .quote-carousel {
-                width: 90%;
-                padding: 0 15px;
-                @media(max-width: 500px) {
+            p {
+                font-size: 1.2rem;
+                line-height: 1.4;
+                margin-top: 15px;
+            }
+        }
+        .testimonial-carousel {
+            padding: 25px 0;
+            .testimonial-item {
+                width: 100%;
+                height: 500px;
+                position: relative;
+                border-radius: 16px;
+                overflow: hidden;
+                display: flex;
+                padding: 15px;
+                .image-wrapper {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
                     width: 100%;
+                    height: 100%;
                 }
-                .quote {
+                .bg-gradient {
+                    background: rgb(255,255,255);
+                    background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(39,51,45,1) 100%);
+                    position: absolute;
+                    top:0;
+                    left:0 ;
+                    width: 100%;
+                    height: 100%;
+                }
+                .cx-details {
                     position: relative;
-                    .content {
-                        font-size: 1.8rem;
-                        font-weight: 300;
-                        font-family: $fontHeadings;
+                    z-index: 5;;
+                    margin-top: auto;
+                    p {
                         color: $white;
-                        letter-spacing: 1px;
-                        text-align: center;
-                        text-transform: capitalize;
-                        margin-bottom: 15px;
-                    }
-                    .name, .place {
                         font-size: 1.2rem;
-                        font-weight: 300;
-                        text-align: center;
                     }
-                    .quote-mark {
-                        width: 30px;
-                        height: 30px;
-                        position: absolute;
-                    }
-                    .mark-open {
-                        top: 0;
-                        left: -40px;
-                        @media(max-width: 500px) {
-                            left: -25px;
-                        }
-                    }
-                    .mark-close {
-                        bottom: 40px;
-                        right: 30px;
-                        @media(max-width: 500px) {
-                            right: -15px;
-                        }
+                    .cx-name {
+                        margin-bottom:5px;
+                        font-size: 1.5rem;
                     }
                 }
             }
         }
-        .icon-wrapper {
-            width: 25px;
-            height: 25px;
-            margin-right: 15px;
-            position: relative;
+        .trustpilot-logo {
+            margin-top: 25px;
+            width: 100%;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
-        }
-        .inner-flex {
-            display: flex;
-            padding: 0 15px;
-            ul {
-                padding-top: 25px;
-                padding-right: 25px;
-                width: 50%;
-                li {
-                    display: flex;
-                    padding: 25px 0;
-                    .icon-wrapper{
-                        padding-top: 5px;
-                    }
-                    p {
-                        font-size: 1.2rem;
-                        font-weight: 400;
-                        color: $dark-green-2;
-                    }
-                }
-            }
-            .image-wrapper {
-                width: 50%;
-                height: 100%;
-                background: none;
+            padding-bottom: 50px;
+            p {
+                font-size: 2.5rem;
+                font-weight: 600;
+                
+                padding: 10px 0;
+                padding-top: 0px;
             }
         }
-        .orphan-testimonials {
-             display: flex;
-             margin: 50px 0;
-             .testimonial-item {
-                 @media(max-width: 750px) {
-                    height: 350px;
-                 }
-                 &:first-of-type {
-                    margin-right: 25px;
-                    @media(max-width: 560px) {
-                        margin-right: 0;
-                     }
-                 }
-                 &:last-of-type {
-                    display: flex;
-                    @media(max-width: 560px) {
-                        display: none;
-                     }
-                 }
-             }
-        }
-        .review-capsule {
-            .review-carousel {
-                width: 100%;
-                height: 100%;
-                padding: 0 25px;
-            }
-        }
-        .reasons-grid {
-            display: grid;
-            grid-template-columns: repeat(2,1fr);
-            gap: 15px;
-            padding-top: 50px;
-            @media(max-width: 650px) {
-                display: flex;
-                // flex-direction: column;
-                width: 180%;
-            }
-            .reason {
-                width: 100%;
-                @media(max-width: 650px) {
-                    display: none;
-                    background-color: $white;
-                    box-shadow: 0 3px 21px rgba(0,0,0, 0.11);
-                    padding: 15px;
-                    border-radius: 13px;
-                    width: 10000%;
-                    max-width: 350px;
-                    &:first-of-type{
-                        display: initial;
+        .tp-carousel {
+            width: 100%;
+            .tp-review {
+                .tp-head {                    
+                    .tp-rating {
+                        margin-bottom: 10px;
                     }
-                    &:nth-of-type(2) {
-                        display: initial;
-                    }
-                }
-                .top {
-                    width: 100%;
-                    display: flex;
-                    align-items: center;
-                    padding: 15px;
-                    height: 90px;
-                    // padding-bottom: 0;
-                    .reason-number {
-                        font-size: 2.5rem;
+                    .tp-headline {
+                        font-size: 1.5rem;
                         font-weight: 500;
                         font-family: $fontHeadings;
                         color: $dark-green-1;
-                        opacity: 0.3;
-                        margin-right: 15px;
-                    }
-                    .reason-title {
-                        font-size: 1.8rem;
-                        font-weight: 600;
-                        font-family: $fontHeadings;
-                        color: $dark-green-2;
-                        letter-spacing: 1px;
                         line-height: 1.3;
                     }
                 }
-                .reason-content {
-                    padding: 15px;
-                    padding-top: 0;
+                .tp-content {
+                    padding: 10px 0;
                     p {
-                        font-size: 1rem;
-                        font-weight: 300;
-                        color: $grey;;
+                        font-size: 1.2rem;
+                        font-weight: 400;
+                        line-height: 1.5;
+                        opacity: 0.8;
                     }
                 }
-            }
-            .reasons-imagery {
-                width: 100%;
-                height: 100%;
-                background-color: rgba(0,0,0,0.10);
-                border-radius: 8px;
-            }
-        }
-        .reasons-button-wrapper {
-            width: 100%;
-            display: flex;
-            justify-content: flex-end;
-            padding-top: 25px;
-            @media(min-width:651px) {
-                display: none;
-            }
-            button {
-                margin: 0 15px;
-            }
-        }
-        .sale-banner {
-            padding: 25px;
-            margin: 25px 0;
-            .heading, .subheading {
-                text-align: left;
-            }
-            .sale-content {
-                margin-top: 25px;
-                font-size: 1.2rem;
-                font-weight: 500;
-            }
-            .small-print {
-                // margin-top: 15px;
-                font-size: 0.8rem;
-                font-weight: 300;   
-            }
-        }
-        .flex-row {
-            @media(max-width:650px) {
-                flex-direction: column;
-            }
-        }
-        .op-recommended {
-            padding: 50px 25px;
-            margin: 50px 0;
-        }
-        .op-content {
-            width: 60%;
-            padding-right: 25px;
-            @media(max-width:650px) {
-                width: 100%;
-            }
-            .heading, .subheading {
-                text-align: left;
-                @media(max-width:650px) {
-                    text-align: center;
-                }
-            }
-            .content {
-                margin-top: 25px;
-                font-size: 1.2rem;
-                @media(max-width:650px) {
-                    text-align: center;
-                }
-            }
-        }
-        .op-image{
-            // width: 50%;
-            // height: 100%;
-            position: relative;
-            border-radius: 4px;
-            overflow: hidden;
-            @media(max-width:650px) {
-                width: 100%;
-                margin-top: 25px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                display: none;
-            }
-        }
-        .mobile-op-image{
-            display: none; 
-            @media(max-width:650px ) {
-                width: 100%;
-                margin-top: 25px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-        }
-        .customer-grid {
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                gap: 30px;
-                width: 100%;
-                height:300px;
-                margin-top: 50px;
-                @media(max-width: 1100px) and (min-width: 951px) {
-                    grid-template-columns: repeat(2, 1fr);
-                    gap: 15px;
-                    height: 250px;
-                }
-                @media(max-width: 680px) {
-                    grid-template-columns: repeat(2, 1fr);
-                    gap: 15px;
-                    height: 250px;
-                }
-                .customer-item {
-                    width: 100%;
-                    height: 100%;
+                .tp-footer {
                     display: flex;
-                    padding: 10px;
-                    position: relative;
-                    border-radius: 2px;
-                    overflow: hidden;
-                    cursor: pointer;
-                    @media(max-width: 1100px) and (min-width: 951px) {
-                        &:last-of-type {
-                            display: none;
-                        }
+                    padding-top: 15px;
+                    p {
+                        font-size: 1.1rem;
+                        font-weight: 500;
                     }
-                    @media(max-width: 680px) {
-                        &:last-of-type {
-                            display: none;
-                        }
-                    }
-                    .customer-info {
-                        margin-top: auto;
-                        display: flex;
-                        align-items: center;
-                        width: 100%;
-                        .customer-name {
-                            font-size: 1.1rem;
-                            font-weight:400;
-                            color: $white;
-                            position: relative;
-                            z-index: 5;
-                            margin-right: auto;
-                        }
-                        .info-icon {
-                            position: relative;
-                            z-index: 1;
-                            background-color: rgba(255,255,255,0.4);
-                            width: 40px;
-                            height: 40px;
-                            border-radius: 25px;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            color: $white;
-                            font-size: 1.5rem;
-                            margin-left: auto;
-                        }
-                    }
-                    .overlay-bg {
-                        position: absolute;
-                        bottom:0;
-                        left: 0;
-                        width: 100%;
-                        height: 100%;
-                        background-color: $dark-green-1;
-                        opacity: 0.3;
-                        transform-origin: 0 100%;
-                        transition: transform .5s;
-                        transform: scaleY(0);
-                        z-index: 2;;
-                    }
-                    .overlay {
-                         width: 100%;
-                         height: 100%;
-                         position: absolute;
-                         bottom: 0;
-                         left: 0;
-                        backdrop-filter: blur(5px);
-                        padding: 0;
-                        overflow: hidden;
-                        transition: 0.2s;
-                        z-index: 2;;
-                        transform-origin: 0 100%;
-                        transition: transform .5s;
-                        transform: scaleY(0);
-            
-                        p {
-                            font-size: 1.1rem;
-                            color: $white;
-                            opacity: 0;
-                            transition: ease-in 0.4s;
-                        }
+                    .tp-author{
+                        margin-right: auto;
                     }
                 }
-                .customer-item:hover {
-                    .overlay-bg {
-                        max-height: 100%;
-          
-                        transform: scaleY(1);
-                    }
-                    .overlay {
-                        max-height: 100%;
-                        padding: 25px 15px;
-                        backdrop-filter: blur(5px);
-                        transform: scaleY(1);
-                        p {
-                            opacity: 1;
-                        }
-                    }
-                }
-            }
-        .orphan-partners {
-            width: 100%;
-            .heading {
-                text-align: left;
-            }
-            .partner-grid {
-                width: 100%;
-                height: 150px;
             }
         }
+        .reason-grid {
+            display: flex;
+            flex-direction: column;
+            margin-top: 25px;
+            .reason {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 25px 0;
+                .reason-title {
+                    display: flex;
+                    padding: 10px 0;
+                    .number {
+                        font-size: 1.5rem;
+                        font-weight: 600;
+                        color: $dark-green-1;
+                        margin-right: 10px;
+                    }
+                    .title {
+                        font-size: 1.5rem;
+                        font-weight: 500;
+                    }
+                }
+                .reason-content {
+                    font-size: 1.2rem;
+                    font-weight: 300;
+                    line-height: 1.4;
+                    text-align: center;
+                    opacity: 0.8;
+                }
+            }
+        }
+ 
     }
-    
     .sticky-brochure {
         width: 40%;
         height: 100vh;

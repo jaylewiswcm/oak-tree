@@ -12,7 +12,276 @@ import SideForm from '../components/forms/SideForm';
 const requestOurChairBrochure = () => {
     return (
         <div className="orphan-brochure-wrapper container-regular">
-            <div className="orphan-content">
+            <div className='orphan-content'>
+                <div className='orphan-hero'>
+                    <Image 
+                        src='/images/orphan/chair/chair-hero.png'
+                        alt='Chair hero'
+                        layout='fill'
+                        objectFit='cover'
+                        objectPosition='fill'
+                    />
+                </div>
+                <div className='orphan-header'>
+                    <h1 className='section-heading'>Transform Your Life with an Oak Tree Mobility Chair</h1>
+                    <p className='section-subheading'>Get your new Autumn 2022 brochure today!</p>
+                </div>
+                <div className='image-wrapper chair-showcase'>
+                        <Image 
+                            src='/images/orphan/chair/chair-hero.png'
+                            alt='Chair hero'
+                            layout='fill'
+                            objectFit='cover'
+                            objectPosition='fill'
+                        />
+                    </div>
+                <div className='orphan-section'> 
+                    <h2 className='section-heading'>Rise, Recline, Relax</h2>
+                    <p className='section-subheading'>With and Oak Tree Rise and Recline Chair</p>
+                    <div className='health-grid'>
+                        <div className='health-item'>
+                            <div className='icon-wrapper'>
+                                <Image 
+                                    src='/images/icons/health/relaxes-muscles.svg'
+                                    alt='Relaxes Muscles'
+                                    width='70'
+                                    height='70'
+                                />
+                            </div>
+                            <p className='health-title'>Relieves Back Pain</p>
+                        </div>
+                        <div className='health-item'>
+                            <div className='icon-wrapper'>
+                                <Image 
+                                src='/images/icons/health/hip-and-knees.svg'
+                                alt='Support Hip & Knees'
+                                width='70'
+                                height='70'
+                                />
+                            </div>
+                            <p className='health-title'>Support Hip & Knees</p>
+                        </div>
+                        <div className='health-item'>
+                            <div className='icon-wrapper'>
+                                <Image 
+                                    src='/images/icons/health/aids-breathing.svg'
+                                    alt='Aids Breathing'
+                                    width='70'
+                                    height='70'
+                                />
+                            </div>
+                            <p className='health-title'>Aids Breathing</p>
+                        </div>
+                        <div className='health-item'>
+                            <div className='icon-wrapper'>
+                                <Image 
+                                        src='/images/icons/health/circulation.svg'
+                                        alt='Improves Circulation'
+                                        width='70'
+                                        height='70'
+                                />
+                            </div>
+                            <p className='health-title'>Improves Circulation</p>
+                        </div>
+                        <div className='health-item'>
+                            <div className='icon-wrapper'>
+                                <Image 
+                                    src='/images/icons/health/improves-sleep.svg'
+                                    alt='Improves Sleep'
+                                    width='70'
+                                    height='70'
+                                />
+                            </div>
+                            <p className='health-title'>Improves Sleep</p>
+                        </div>
+                        <div className='health-item'>
+                            <div className='icon-wrapper'>
+                                <Image 
+                                    src='/images/icons/health/relaxes-muscles.svg'
+                                    alt='Relaxes Muscles'
+                                    width='70'
+                                    height='70'
+                                />
+                            </div>
+                            <p className='health-title'>Relaxes Muscles</p>
+                        </div>
+                    </div>
+                </div>
+                <div className='orphan-quote bg-light-green'>
+                    <p className='quote'>"When my chair came, it was absolutely wonderful to sit in. For the first time of ages, I felt really comfortable."</p>
+                    <p className='quote-author'>Mrs Atkins</p>
+                    <p className='quote-location'>Bristol</p>
+                </div>  
+                <div className='orphan-section'>
+                    <h3 className='section-heading'>Our New Autumn 2022 Brochure</h3>
+                    <div className='image-wrapper brochure-image-wrapper'>
+                        <Image 
+                            src='/images/brochure/small-brochure.png'
+                            alt='Oak Tree Brochure'
+                            width='100'
+                            height='50'
+                        />
+                    </div>
+                    <div className='brochure-reason'>
+                        <div className='number'>1.</div>
+                        <p>Browse our luxury styles, with <span className='oaktree-green'>over 1000 fabrics and leather</span></p>
+                    </div>
+                    <div className='brochure-reason'>
+                        <div className='number'>2.</div>
+                        <p> <span className='oaktree-green'>Personalise your chair</span> with superb accessories such as heat and massage</p>
+                    </div>
+                    <div className='brochure-reason'>
+                        <div className='number'>3.</div>
+                        <p>Discover more about <span className='oaktree-green'>our clever motors</span> and how they can help you</p>
+                    </div>
+                </div>
+                <div className='orphan-section'>
+                    <h4 className='section-heading'>Heare what our customers have to say</h4>
+                    <div className='testimonial-carousel'>
+                        <div className='testimonial-item'>
+                            <div className='image-wrapper'>
+                                <Image 
+                                    src='/images/testimonials/cx-1.png'
+                                    alt='testimonial'
+                                    layout='fill'
+                                    objectFit='cover'
+                                    objectPosition='center'
+                                />
+                            </div>
+                            <div className='bg-gradient'></div>
+                            <div className='cx-details'>
+                                <p className='cx-name'>Mr Andrews</p>
+                                <p className='cx-product'>The Oak Chair</p>
+                                <p className='cx-location'>London</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <div className='orphan-section'>
+                <div className='trustpilot-logo'>
+                    <div className='tp-logo-wrapper'>
+                        <Image 
+                            src='/trustpilot/trustpilot-logo-slim.svg'
+                            alt='Trustpilot'
+                            width='170'
+                            height='41'
+                        />
+                    </div>
+                    <p>Rated Excellent</p>
+                    <div className='tp-stars'>
+                        <Image
+                            src='/trustpilot/stars-4_5.svg'
+                            alt='Rated 4.5 stars'
+                            width='176'
+                            height='32'
+                        />
+                    </div>
+                </div>
+                <div className="tp-carousel">
+                    <div className="tp-review">
+                        <div className='tp-head'>
+                            <div className='tp-rating'>
+                                <Image 
+                                    src='/trustpilot/review-stars-5.svg'
+                                    alt='Rating 5 star'
+                                    width='118'
+                                    height='19'
+                                />
+                            </div>
+                            <p className='tp-headline'>We were very pleased with the visit</p>
+                        </div>
+                        <div className='tp-content'>
+                            <p>We were very pleased with the visit from your representative Mr Lee Wainwright, who came to see us recently. We needed to replace some inherited orthopaedic furniture with new chairs, and Lee’s visit was extremely helpful. He arrived promptly, and impressed us with his very professional manner throughout the evening. </p>
+                        </div>
+                        <div className="tp-footer">
+                            <p className='tp-author'>John Davies</p>
+                            <p className='tp-date'>3 hours ago</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="orphan-section">
+                <h5 className='section-heading'>5 Reasons to choose an Oak Tree Rise and Recliner</h5>    
+                <div className='reason-grid'>
+                    <div className="reason">
+                        <div className='icon-wrapper'>
+                            <Image
+                                src='/images/icons/reasons/british-made.svg'
+                                alt='British Made'
+                                width='80'
+                                height='80'
+                            />
+                        </div>
+                        <div className='reason-title'>
+                            <p className='number'>1.</p>
+                            <p className='title'>British Made</p>
+                        </div>
+                        <p className='reason-content'>Our furniture is proudly handmade in Great Britain by skilled craftspeople, using only the finest materials.</p>
+                    </div>
+                    <div className="reason">
+                        <div className='icon-wrapper'>
+                            <Image
+                                src='/images/icons/reasons/high-leg-lift.svg'
+                                alt='High Leg Lift'
+                                width='80'
+                                height='80'
+                            />
+                        </div>
+                        <div className='reason-title'>
+                            <p className='number'>2.</p>
+                            <p className='title'>Our Unique High Leg Lift</p>
+                        </div>
+                        <p className='reason-content'>If you suffer from poo circulation and swollen ankles, our patented high leg lift will make the difference.</p>
+                    </div>
+                    <div className="reason">
+                        <div className='icon-wrapper'>
+                            <Image
+                                src='/images/icons/reasons/made-to-fit.svg'
+                                alt='Made to Fit'
+                                width='80'
+                                height='80'
+                            />
+                        </div>
+                        <div className='reason-title'>
+                            <p className='number'>3.</p>
+                            <p className='title'>Made to Fit</p>
+                        </div>
+                        <p className='reason-content'>Our chairs are made to fit your exact specifications, so they suit your size, material and comfort preferences perfectly.</p>
+                    </div>
+                    <div className="reason">
+                        <div className='icon-wrapper'>
+                            <Image
+                                src='/images/icons/reasons/delivery.svg'
+                                alt='Delivery'
+                                width='80'
+                                height='80'
+                            />
+                        </div>
+                        <div className='reason-title'>
+                            <p className='number'>4.</p>
+                            <p className='title'>Free Delivery</p>
+                        </div>
+                        <p className='reason-content'>Free delivery & installation is included with all orders. A two person, white glove delivery service will set up your chair.</p>
+                    </div>
+                    <div className="reason">
+                        <div className='icon-wrapper'>
+                            <Image
+                                src='/images/icons/reasons/bhf.svg'
+                                alt='British Heart Foundation'
+                                width='80'
+                                height='80'
+                            />
+                        </div>
+                        <div className='reason-title'>
+                            <p className='number'>5.</p>
+                            <p className='title'>Save £200</p>
+                        </div>
+                        <p className='reason-content'>If you trade-in your old furniture, we’ll donate it to the British Heart Foundation and give you £200 off your new product.</p>
+                    </div>
+                </div>
+            </div>  
+            </div>
+            {/* <div className="orphan-content">
                     <div className="orphan-hero">
                         <Image src='/images/orphan/chair/chair-hero.png' alt='Chair Living Room' layout="fill" objectFit='cover' objectPosition='center' />
                     </div>
@@ -111,9 +380,8 @@ const requestOurChairBrochure = () => {
                             <p className='subheading green-2'>Our Testimonials</p>
                             <h3 className='heading green-1'>Hear what our<br />customers have to say</h3>
                             <div className='orphan-testimonials'>
-                                {/* <Testimonial name='Mr Groger' index='1' location='Bristol' date='21st September 2021'/>
-                                <Testimonial name='Mr Atkins' index='2' location='London' date='29th September 2021'/> */}
-                            </div>o
+                            
+                            </div>
                     </section>
                     <section className='orphan-section'>
                             <p className='subheading green-2'>TrustScore 4.6 | 1,252 reviews</p>
@@ -240,7 +508,7 @@ const requestOurChairBrochure = () => {
                         <h3 className='heading green-1'>Our Partners</h3>
                         <div className='partner-grid'></div>
                     </section> 
-            </div>
+            </div> */}
 
             <SideForm classname='sticky-brochure' />
             {/* <div className='sticky-brochure'>
