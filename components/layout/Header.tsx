@@ -2,9 +2,6 @@ import React, {useState, useEffect} from 'react'
 import Logo from '../assets/Logo';
 import Link from 'next/link'; 
 import Image from 'next/image';
-// Components
-import HeaderDD from '../navigation/DropDownBg';
-import HeaderDropDown from '../navigation/HeaderDropDown';
 
 const Header = () => {
     const [dropdown, setDropdown] = useState(false);
@@ -40,15 +37,15 @@ const Header = () => {
     }
     return (  
         <header>
-            <div className='top-header con-reg'>
+            <div className='header-inner con-reg'>
                 <div className="header-logo">
                     <Link  href="/">
                         <a className="logo">
                         <Image 
                             src='/logo/logo.svg'
                             alt='Oak Tree Mobility'
-                            width='240'
-                            height='60'
+                            width='215.42'
+                            height='44.89'
                         />
                          </a>
                     </Link>
@@ -63,6 +60,14 @@ const Header = () => {
                         </a>
                     </Link>
                 </div>
+                <div className='header-bhf'>
+                    <Image 
+                          src='/bhf/supporting-bhf.svg'
+                          alt='Oak Tree Mobility'
+                          width='117.07'
+                          height='49.84'
+                    />
+                </div>
                 <nav className='main-nav'>
                     <ul>
                         <li><Link href='/'><a>Home</a></Link></li>
@@ -73,10 +78,9 @@ const Header = () => {
                         <li><Link href='/express-delivery'><a>Express Delivery</a></Link></li>
                     </ul>
                 </nav>
-                <div className='header-cta'>
-                    <button className='cta main-cta'>
-                        <p>Request Free Brochure</p>
-                    </button>
+                <div className='header-phone-number'>
+                   <p className='number-support'>Questions? Call us <b>free</b> today:</p>
+                   <p className='number'>0800 094 999</p>
                 </div> 
                 <div className='mobile-menu-btn'>
                     <button className='icon-btn'>

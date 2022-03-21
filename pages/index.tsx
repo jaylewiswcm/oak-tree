@@ -2,15 +2,12 @@ import React from 'react';
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
-import {  animateScroll as scroll } from "react-scroll";
 import Link from 'next/link'
 import { NextSeo } from 'next-seo';
 // Component
-import IndexCollections from '../components/pages/index/collections/IndexCollections';
-import OTExperience from '../components/pages/index/experience/OTExperience';
-import ReviewCapsule from '../components/elements/reviews/ReviewCapsule';
-import Testimonials from '../components/elements/testimonials/Testimonials'
-import CategoryTag from '../components/elements/product-tags/CategoryTag';
+import Testimonials from '../components/sections/Testimonials/Testimonials'
+import FooterCollections from '../components/sections/FooterCollections';
+import Reviews from '../components/sections/reviews/Reviews';
 
 type MyProps = { };
 type MyState = { requestClassName: string, uspOverlay:string };
@@ -71,306 +68,149 @@ closeUspOverlay = () => {
             title="Oak Tree Mobility | Your Comfort is Our Strength"
             description="Oak Tree Mobility is the UK's leading mobility specialist helping people live independently. Handmade by skilled craftsmen to order in the UK ..."
       />
-
-      <div className='hero-fs'>
-      <div className='hero-image'></div>
-      <div className='hero-content'>
-          <h1>Your Comfort is Our Strength</h1>
-          <h2>Find your new <Link href='/chairs'><a>Rise and Recline Chair</a></Link>, <Link href='/adjustable-beds'><a>Adjustable Bed</a></Link> or <Link href='/bath-lifts'><a>Bath Lifts</a></Link></h2>
-          <button className='main-cta'>
-            <p>Request Free Brochure</p>
-           </button>
-      </div>
-      </div>
-      {/* <div className='fullscreen-hero con-reg'>
-        <div className='hero-image'></div>
-        <div className='hero-content-center'>
-          <h1>Your Comfort is Our Strength</h1>
-          <h2>Find your new <a href='/chairs'>Rise and Recline Chair</a>, <a href='/adjustable-beds'>Adjustable Bed</a> or <a href='/bath-lifts'>Bath Lifts</a></h2>
-          <button className='cta main-cta'>Request Your Free Brochure</button>
-        </div>
-      </div> */}
-      <div className='section-heading main-heading'>Our Categories</div>
-      <div className='home-cat'>
-        <div className='cat-item'>
-          <div className='img-wrap'>
-           <Image 
-              src='/images/home/category-chairs.png'
-              alt='Rise and Recline Chairs'
-              layout='fill'
-              objectFit='cover'
-              objectPosition='center'
-            />
-          </div>
-          <Link href='/'>
-            <a className='cat-link'>
-              <h3>Explore Chairs</h3>
-              <div className='icon-wrapper'>
-                <Image 
-                  src='/images/vectors/cat-link-arrow.svg'
-                  alt='Link arrow'
-                  width='27'
-                  height='16'
-                />
-              </div>
-            </a>
-          </Link>
-          <p className='cat-desc'>Our Rise and Recline Chairs are Luxurious and well-made allowing supreme comfort at the touch of a button</p>
-          <div className='tag-flex'>
-            <CategoryTag tagName='British Made' imgSrc='/images/icons/british-made/british-made-green.svg' imgAlt='British Made' imgWidth='25' imgHeight='25'/>
-            <CategoryTag tagName='Supports Joints' imgSrc='/images/icons/health/supports-joints.svg' imgAlt='Supports Joints' imgWidth='25' imgHeight='25'/>
-          </div>
-        </div>
-        <div className='cat-item'>
-          <div className='img-wrap'>
-           <Image 
-              src='/images/home/category-beds.png'
-              alt='Adjustable Beds'
-              layout='fill'
-              objectFit='cover'
-              objectPosition='center'
-            />
-          </div>
-          <Link href='/'>
-            <a className='cat-link'>
-              <h3>Explore Beds</h3>
-              <div className='icon-wrapper'>
-                <Image 
-                  src='/images/vectors/cat-link-arrow.svg'
-                  alt='Link arrow'
-                  width='27'
-                  height='16'
-                />
-              </div>
-            </a>
-          </Link>
-          <p className='cat-desc'>Our Adjustable Beds are sophistication and comfort, choose from our wide collection of adjustable beds.</p>
-          <div className='tag-flex'>
-            <CategoryTag tagName='British Made' imgSrc='/images/icons/british-made/british-made-green.svg' imgAlt='British Made' imgWidth='25' imgHeight='25'/>
-            <CategoryTag tagName='Improves Sleep' imgSrc='/images/icons/health/improves-sleep.svg' imgAlt='Improves Sleep' imgWidth='25' imgHeight='25'/>
-          </div>
-        </div>
-        <div className='cat-item'>
-          <div className='img-wrap'>
-           <Image 
-              src='/images/home/category-bathlifts.png'
-              alt='Bath Lifts'
-              layout='fill'
-              objectFit='cover'
-              objectPosition='center'
-            />
-          </div>
-          <Link href='/'>
-            <a className='cat-link'>
-              <h3>Explore Bath Lifts</h3>
-              <div className='icon-wrapper'>
-                <Image 
-                  src='/images/vectors/cat-link-arrow.svg'
-                  alt='Link arrow'
-                  width='27'
-                  height='16'
-                />
-              </div>
-            </a>
-          </Link>
-          <p className='cat-desc'>Rediscover the joys and health benefits of a nice warm bath with our amazing bath lift.</p>
-          <div className='tag-flex'>
-            <CategoryTag tagName='British Made' imgSrc='/images/icons/british-made/british-made-green.svg' imgAlt='British Made' imgWidth='25' imgHeight='25'/>
-          </div>
-        </div>
-      </div>
-
-      <div className='ot-intro'>
-        <h4>The UKs Leading Mobility Specialists</h4>
-        <p className='intro-p'>At Oak Tree, we make beautiful products that help people live independently. We believe everyone should be free to live a rich and fulfilling life and this belief affects everything we do.</p>
-        <button className='main-cta'>
-          <p>Request Your Free Brochure</p>
-        </button>
-      </div>
-
-      <div className='banner-flex-2'>
-        <div className='horizontal-banner'>
-          <div className='img-wrap'></div>
-          <div className='banner-content'>
-            <p className='sub-heading dark-green-1'>Limited Time Only</p>
-            <h5 className='heading'>Buy one get one half price</h5>
-            <p className='banner-p'>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore</p>
-            <button className='learn-more-btn'>
-              <p>Learn More</p>
+      <Head>
+        <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
+      </Head>
+      <div className='home-intro con-reg'>
+        <div className='intro-content'>
+          <h1>The Uk’s Leading Mobility Specialists</h1>
+          <p className='subheading'>At Oak Tree, we make beautiful products that help people live independently.</p>
+          <div className="button-wrapper">
+            <button className='bg-green'>
+              <span className='bg-hover'></span>
+              <p>Request a Free Brochure</p>
+            </button>
+            <button className='outline-green'>
+              <span className='bg-hover'></span>
+              <p>What Makes us Different?</p>
             </button>
           </div>
         </div>
-        <div className='horizontal-banner'>
-          <div className='img-wrap'></div>
-          <div className='banner-content'>
-            <p className='sub-heading bhf-red'>Supporting<br />The British Heart Foundation</p>
-            <h5 className='heading'>Minimum £200 Trade in Offer </h5>
-            <p className='banner-p'>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore</p>
-            <button className='learn-more-btn bg-bhf-red'>
-              <p>Learn More</p>
-            </button>
-          </div>
+        <div className='intro-image'>
+          <video  autoPlay loop muted>
+            <source src="videos/oaktree-ad-cut.mp4"
+            type="video/mp4"/>
+          </video>
         </div>
       </div>
-
-      <div className='as-seen-on'>
-        <p className='section-heading'>As seen on</p>
-        <div className='item-slider'>
-          <div className='item'>
+      <div className='green-strip'>
+        <div className='inner-wrapper con-reg'>
+        <div className="trustpilot-widget" data-locale="en-GB" data-template-id="53aa8807dec7e10d38f59f32" data-businessunit-id="56607bac0000ff00058643ac" data-style-height="100px" data-style-width="180px" data-theme="dark" data-font-family="Source Sans Pro" data-text-color="#ffffff">
+          <a href="https://uk.trustpilot.com/review/www.oaktreemobility.co.uk" target="_blank" rel="noopener">Trustpilot</a>
+        </div>
+        <div className='seen-on-tv-icon'>
+          <Image 
+            src='/icons/seen-on-tv.svg'
+            alt='Seen on tv'
+            width='152.26'
+            height='101.39'
+          />
+        </div>
+        </div>
+      </div>
+      <div className='home-collections con-reg'>
+        <h2 className='heading'>Oak Tree Catalogue</h2>
+        <div className='collections'>
+          <Link href='/'>
+            <a className='collection-item'>
+              <div className='image-wrapper'>
+                <Image 
+                  src='/images/collections/collection-chairs.png'
+                  alt='Rise and Recline Chairs'
+                  layout='fill'
+                  objectFit='cover'
+                  objectPosition='center'
+                />
+              </div>
+              <h3 className='collection-title'>Rise and Recline Chairs</h3>
+              <p className='desc'>Luxurious and well made allowing comfort at the touch of a button.</p>
+              <div className='acting-btn'>
+                <div className='hover-bg'></div>
+                <p>View Chairs</p>
+             </div>
+            </a>
+          </Link>
+          <Link href='/'>
+            <a className='collection-item'>
+              <div className='image-wrapper'>
+                <Image 
+                  src='/images/collections/collection-beds.png'
+                  alt='Adjustable Beds'
+                  layout='fill'
+                  objectFit='cover'
+                  objectPosition='center'
+                />
+              </div>
+              <h3 className='collection-title'>Adjustable Beds</h3>
+              <p className='desc'>The ultimate in sophistication and comfort, offering a wide collection.</p>
+              <div className='acting-btn'>
+                <div className='hover-bg'></div>
+                <p>View Beds</p>
+             </div>
+            </a>
+          </Link>
+          <Link href='/'>
+            <a className='collection-item'>
+              <div className='image-wrapper'>
+                <Image 
+                  src='/images/collections/collection-bathlifts.png'
+                  alt='Bath Lifts'
+                  layout='fill'
+                  objectFit='cover'
+                  objectPosition='center'
+                />
+              </div>
+              <h3 className='collection-title'>Bath Lifts</h3>
+              <p className='desc'>Rediscover the joys and health benefits of a nice warm bath with our bath lift.</p>
+              <div className='acting-btn'>
+                <div className='hover-bg'></div>
+                <p>View Bath Lifts</p>
+             </div>
+            </a>
+          </Link>
+        </div>
+      </div>
+      <div className='banners con-reg'>
+        <div className='banner-vertical'>
+          <p className='subheading'>Limited Time Only</p>
+          <p className='heading'>Buy one get one half price</p>
+          <button>Learn More</button>
+        </div>
+        <div className='banner-vertical'>
+          <p className='subheading'>Supporting the British Heart Foundation</p>
+          <p className='heading'>Minimum £200 Trade in Offer </p>
+          <button className='bg-yellow3'>Learn More</button>
+        </div>
+      </div>
+      <div className='occupational-therapist-wrapper con-reg'>
+        <div className='image-wrapper'>
+          <Image
+            src='/occupational-therapist/sam-shann-1.png'
+            alt='Sam Shann'
+            layout='fill'
+            objectFit='cover'
+            objectPosition='top'
+          />
+        </div>
+        <div className='content'>
+          <p className='subheading'>Meet Samantha Shann</p>
+          <p className='heading'>Our Occupational Therapist</p>
+          <p className='info'>All of our products are approved by Samantha Shann, occupational therapist and co-founder of UK Therapy Services Ltd. She fully tests and evaluates everything we offer, ensuring it satisfies the high standards of an independent health professional.</p>
+          <div className='bottom'>
+            <p>In Partnership with</p>
             <Image 
-              src='/images/as-seen-on/telegraph.svg'
-              alt='The Telegraph'
-              width='290'
-              height='104'
+              src='/occupational-therapist/ukts-logo.png'
+              alt='UK Therapy Services'
+              width='264'
+              height='42'
             />
           </div>
         </div>
-        <div className='slider-dots'>
-          <div className='dot'></div>
-          <div className='dot'></div>
-          <div className='dot active'></div>
-          <div className='dot'></div>
-        </div>
       </div>
+      <Reviews />
+      <Testimonials />
+      <FooterCollections />
 
-      <div className='ot-difference-selection'>
-      <p className='section-heading'>The Oak Tree Difference</p>
-        <Link href='/'>
-          <a className='selection'>
-            <div className='icon-wrapper'>
-              <Image 
-                src='/images/icons/british-made/british-made.svg'
-                alt='British Made'
-                width='99'
-                height='81'
-              />
-            </div>
-            <div className='selection-content'>
-              <p className='selection-title'>British Made</p>
-              <p className='acting-link'>Find out more <Image src='/images/icons/arrows/small-green-arrow.svg' alt='arrow' width='15' height='10'/></p>
-            </div>
-          </a>
-        </Link>
-        <Link href='/'>
-          <a className='selection light-grey-bg'>
-            <div className='icon-wrapper'>
-              <Image 
-                src='/trustpilot/trustpilot-logo-grey-bg.svg'
-                alt='Trustpilot logo'
-                width='99'
-                height='81'
-              />
-            </div>
-            <div className='selection-content'>
-              <p className='selection-title'>Five Star Rated</p>
-              <p className='acting-link'>Find out more <Image src='/images/icons/arrows/small-green-arrow.svg' alt='arrow' width='15' height='10'/></p>
-            </div>
-          </a>
-        </Link>
-        <Link href='/'>
-          <a className='selection'>
-            <div className='icon-wrapper'>
-              <Image 
-                src='/images/occupational-therapist/ot-logo-icon.svg'
-                alt='Occupational Therapist - UK Therapy Services'
-                width='99'
-                height='81'
-              />
-            </div>
-            <div className='selection-content'>
-              <p className='selection-title'>Occupational Therapist</p>
-              <p className='acting-link'>Find out more <Image src='/images/icons/arrows/small-green-arrow.svg' alt='arrow' width='15' height='10'/></p>
-            </div>
-          </a>
-        </Link>
-        <Link href='/'>
-          <a className='selection light-grey-bg'>
-            <div className='icon-wrapper'>
-              <Image 
-                src='/images/icons/express-delivery-grey-bg.svg'
-                alt='Express Delivery'
-                width='99'
-                height='81'
-              />
-            </div>
-            <div className='selection-content'>
-              <p className='selection-title'>Express Delivery</p>
-              <p className='acting-link'>Find out more <Image src='/images/icons/arrows/small-green-arrow.svg' alt='arrow' width='15' height='10'/></p>
-            </div>
-          </a>
-        </Link>
-      </div>
-
-      <div className='home-reviews'>
-        <p className='section-subheading'>Rated Excellent on Trustpilot</p>
-        <p className='section-heading'>Hear what our customers<br />have to say</p>
-        <div className='review-carousel'>
-          <div className='review'>
-            <div className='review-header'>
-              <div className='review-avatar'>
-                <p>DH</p>
-              </div>
-              <div className='review-details'>
-                <p className='review-name'>Doris Holland</p>
-                <p className='review-loc'>London</p>
-              </div>
-              <div className='review-stars'>
-                <Image 
-                  src='/trustpilot/stars-4_5.svg'
-                  alt='4.5 stars'
-                  width='80'
-                  height='15'
-                />
-              </div>
-            </div>
-            <div className='review-content'>
-              <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
-            </div>
-            <div className='review-footer'>
-              <div className='review-date'>2 Days ago</div>
-              <div className='review-logo'>
-                <Image 
-                  src='/trustpilot/trustpilot-logo.svg'
-                  alt='Trustpilot'
-                  width='103'
-                  height='25'
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className='home-stories'>
-        <p className='section-heading'>Customer Stories</p>
-        <div>
-          <Testimonials location='index' />
-        </div>
-      </div>
-      <div className='home-last-cats'>
-      <p className='section-heading'>Explore our collections</p>
-        <div className='cat-item'>
-          <div className='img-wrap'>
-            <Image 
-              src='/images/home/category-chairs.png'
-              alt='Rise and Recline Chairs'
-              layout='fill'
-              objectFit='cover'
-              objectPosition='center'
-            />
-          </div> 
-          <p className='cat-title'>Rise and Recline Chairs</p> 
-          <p className='acting-link'>View Chairs <Image src='/images/icons/arrows/small-green-arrow.svg' alt='arrow' width='15' height='10'/></p>
-        </div>
-        <div className='slider-dots'>
-          <div className='dot active'></div>
-          <div className='dot'></div>
-          <div className='dot'></div>
-        </div>
-      </div>
-
-      <div className='acting-footer'>
-        <p>Oak Tree Mobility</p>
-      </div>
       </>
   )
 }

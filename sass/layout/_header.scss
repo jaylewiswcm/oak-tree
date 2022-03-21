@@ -1,75 +1,15 @@
 header {
   width: 100%;
-  position: sticky;
-  top: 0;
-  left:0;
+  // position: sticky;
+  // top: 0;
+  // left:0;
   z-index: 999;
   background-color: $white;
-  .top-cta-banner {
-    width: 100%;
-    background-color: $dark-green-1;
-    .inner-wrapper {
-      padding: 8px 15px;
-      align-items: center;
-      @media(min-width:  1080px) {
-        align-items: flex-end;
-      }
-      p {
-        font-size: 1rem;
-        font-weight: 400;
-        letter-spacing: 0.5px;
-        color: $white;
-        padding-right: 10px;
-      }
-      a {
-        font-size: 1.3rem;
-        font-weight: 400;
-        letter-spacing: 1px;
-        color: $white;
-      } 
-      .desktop-call-cta {
-        display: none;
-        @media(min-width: 550px) {
-          display: block;
-        }
-      }
-      .mobile-call-cta {
-        display: block;
-        background-color: #F2FFFC;
-        color: $dark-green-1;
-        padding: 10px 25px;
-        font-size: 1.1rem;
-        font-weight: 600;
-        letter-spacing: 1px;
-        border-radius: 25px;
-        @media(min-width: 550px) {
-          display: none;
-        }
-      }
-      .mobile-logo {
-        display: flex;
-        margin-right: auto;
-        @media(min-width: 750px) {
-         display: none;
-        }
-        .logo-mid {
-          display: none; 
-          @media(min-width: 500px) {
-            display: block;
-          }
-        }
-        .logo-mob {
-          display: block;
-          @media(min-width: 500px) {
-            display: none;
-          }
-        }
-      }
-    }
-  }
-  .top-header {
+  .header-inner {
     display: flex;
+    align-items: center;
     padding: 20px 15px;
+    border-bottom: 1px solid $lighter-grey;
     @media(min-width: 630px) and (min-width: 1079px) {
       padding: 20px 25px;
     }
@@ -88,27 +28,11 @@ header {
     .header-logo,.header-cta {
       display: flex;
     }
-    .header-cta {
-      margin-left: auto;
-      .main-cta {
-        padding: 10px 15px;
-        min-width: 0;
-        p { 
-          font-size: 0.9rem;
-        }
-      }
-    }
-    .main-cta {
-        margin: auto;
-        margin-right: 0;
-        display: none;
-        @media(min-width: 750px) {
-          display: block;
-         }
-    }
+ 
     .logo { 
       display: none;
       width: 220px;
+      margin-right: 20px;
       @media(min-width: 750px) {
         display: block;
        }
@@ -124,10 +48,8 @@ header {
       flex-direction: column;
       justify-content: center;
       margin: auto;
-      margin-left: 25px; 
       height: 40px;
       display: none;
-      border-left: 1px #C7C7C7 solid;
       @media(min-width: 1080px) {
        display: flex;
       }
@@ -135,18 +57,38 @@ header {
         display: flex;
         justify-content: center;
         li {
-          padding: 0 15px;
-          @media(min-width: 1080px)  and (max-width: 1159px){
-            padding: 0 15px;
-          }
-          @media(min-width: 1160px) {
-            padding: 0 20px;
-          }
+          padding: 0 13px;
           a {
-            font-size: 1.1rem;
-            font-weight: 400;
+            font-size: 1.6rem;
+            font-weight: 500;
+            color: $black;
           }
         }
+      }
+    }
+    .header-phone-number {
+      display: none;
+      flex-direction: column;
+      align-items: flex-end;
+      @media(min-width: 1080px) {
+        display: flex;
+       }
+      .number-support {
+        font-size: 1.7rem;
+        font-weight: 500;
+        color: $black;
+        text-align: left;
+        b {
+          color: $oaktree-green;
+          font-weight: 500;
+        }
+      }
+      .number {
+        font-size: 2.9rem;
+        font-weight: 600;
+        color: $dark-green-1;
+        text-align: left;
+        letter-spacing: 0.5px;
       }
     }
     .orphan-number-d {

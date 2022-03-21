@@ -1,37 +1,37 @@
 [{
     "name" : "Mr Andrews",
     "location": "Solihul",
-    "product": "The Oak Chair",
-    "img" : {
-        "src" : "/images/testimonials/cx-1.png",
-        "alt" : "Mr Andrews"
-    }
+    "product": {
+        "name": "The Oak Chair",
+        "url": "/the-oak"
+    },
+    "thumbnail" : "/images/testimonials/mr-andrews-tile.png"
 },
 {
     "name" : "Mrs Atkins",
     "location": "Herefordshire",
-    "product": "The Oak Chair",
-    "img" : {
-        "src" : "/images/testimonials/cx-2.png",
-        "alt" : "Mrs Antkins"
-    }
+    "product": {
+        "name": "The Oak Chair",
+        "url": "/the-oak"
+    },
+    "thumbnail" : "/images/testimonials/mrs-atkins-tile.png"
 },
 {
     "name" : "Mr Parks",
     "location": "Cornwall",
-    "product": "The Riviera",
-    "img" : {
-        "src" : "/images/testimonials/cx-3.png",
-        "alt" : "Mr Parks"
-    }
+    "product": {
+        "name": "The Riviera Plus",
+        "url": "/the-riviera-plus"
+    },
+    "thumbnail" : "/images/testimonials/mr-parks-tile.png"
 },
 {
     "name" : "Mr Groger",
     "location": "London",
-    "product": "The Oak Chair",
-    "img" : {
-        "src" : "/images/testimonials/cx-4.png",
-        "alt" : "Mrs Groger"
-    }
+    "product": {
+        "name": "The Oak Chair",
+        "url": "/the-oak"
+    },
+    "thumbnail" : "/images/testimonials/mr-groger-tile.png"
 }
 ]

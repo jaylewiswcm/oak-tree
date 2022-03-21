@@ -1,8 +1,7 @@
 import React from 'react'
+// Components
 import Header from "./Header";
 import Footer from "./Footer";
-import StickyFooter from "../elements/sticky/StickyFooter";
-
 
 interface ComponentProps  {
     children: any
@@ -14,7 +13,6 @@ interface ComponentProps  {
           <div className='main'>
               <Header />
               { children }
-              <StickyFooter />
               <Footer />
           </div>
         </>

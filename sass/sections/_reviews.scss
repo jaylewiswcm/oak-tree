@@ -1,0 +1,150 @@
+.reviews {
+    background-color: $blue-1;
+    padding:  50px 0;
+    margin: 50px 0;
+    display: flex;
+    flex-direction: column;
+    .subheading {
+        font-size: 2.2rem;
+        font-weight: 400;
+        text-align: center;
+    }
+    .statement {
+        font-size: 3.4rem;
+        font-weight:600;
+        font-family: $fontHeadings;
+        text-align: center;
+    }
+    .trustscore {
+        font-size:2rem;
+        font-weight: 300;
+        text-align: center;
+        margin-top: 3px;
+    }
+    .slider-pagination-dots.swiper-pagination-horizontal {
+        margin: 0 auto;
+        margin-top: 30px;
+        width: fit-content;
+        display: none;
+        .swiper-pagination-bullet-active {
+            background-color: $oaktree-green;
+        }
+    }
+    .trustpilot-logo {
+        margin: 0 auto;
+   }
+   .review-carousel {
+       padding: 50px 25px;
+       position: relative;
+       .hider {
+        position: absolute;
+        bottom:-45px;
+        width: 100px;
+        height: 50px;
+  
+        z-index: 5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @media(min-width: 700px){
+            top:0;
+            width: 100px;
+            height: 100%;
+        }
+        button {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: $white;
+            box-shadow: 0 1px 8px rgba(4,82,70, 0.13);
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.2s;
+        }
+        .swiper-button-disabled {
+            opacity: 0;
+        }
+       }
+       .left-hider {
+        left: 0;
+        background: rgb(246,248,255);
+        background: linear-gradient(90deg, rgba(246,248,255,1) 0%, rgba(246,248,255,0.9262298669467787) 47%, rgba(246,248,255,0) 100%);
+        button {
+            transform: rotate(180deg);
+        }
+    }
+       .right-hider {
+        right: 0;
+        background: rgb(246,248,255);
+        background: linear-gradient(270deg, rgba(246,248,255,1) 0%, rgba(246,248,255,0.9262298669467787) 47%, rgba(246,248,255,0) 100%);
+
+       }
+       .review {
+            width: 100%;
+            margin: 0 auto;
+           background-color: $white;
+           box-shadow: 0 3px 20px rgba(4,82,70,0.08);
+           border-radius: 8px;
+           padding: 25px;
+           border-radius: 18px;;
+           cursor: grab;
+           @media(min-width: 700px) and (max-width: 999px){
+            width: 80%;
+           }
+           @media(min-width:1000px) {
+            max-width: 600px;
+            width: 100%;
+           }
+           .review-header {
+               display: flex;
+               align-items: center;
+               .avatar {
+                   width: 60px;
+                   height: 60px;
+                   border-radius: 50%;
+                   background-color: $blue-1;
+               }
+               .details {
+                   margin-left: 15px;
+                   height: fit-content;
+                   .name {
+                       font-size: 1.9rem;
+                       font-weight: 500;
+                   }
+                   .location {
+                       font-size: 1.6rem;
+                       font-weight: 400;
+                   }
+               }
+               .rating {
+                   margin-left: auto;
+               }
+           }
+           .review-content {
+               padding: 15px 0;
+               p {
+                   font-size: 1.8rem;
+                   font-weight: 400;
+                   line-height: 1.6;
+                   color: #474A4A;
+               }
+           }
+           .review-footer {
+               display: flex;
+               width: 100%;
+               .date {
+                   font-size: 1.6rem;
+                   font-weight: 500;
+               }
+               .logo {
+                   margin-left: auto;
+               }
+           }
+       }
+       .review:active {
+        cursor: grabbing;
+    }
+   }
+} 
