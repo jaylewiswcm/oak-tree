@@ -5,7 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { NextSeo } from 'next-seo';
 // Component
-import Testimonials from '../components/sections/testimonials/Testimonials'
+import Testimonials from '../components/sections/testimonials/Testimonials';
 import FooterCollections from '../components/sections/FooterCollections';
 import Reviews from '../components/sections/reviews/Reviews';
 
