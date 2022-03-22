@@ -11,31 +11,33 @@ const Footer = () => {
     }
     return (
         <footer>
-            <div className='con-reg'>
-            <div className='email-signup-banner'>
-                <div className='content-and-form'>
-                    <div className='content'>
-                        <h6>For Exclusive Offers</h6>
-                        <p>Sign up to our newsletter</p>
+            <div className='con-reg email-signup-container'>
+                <div className='email-signup-banner'>
+                    <div className='content-and-form'>
+                        <div className='content'>
+                            <h6>For Exclusive Offers</h6>
+                            <p>Sign up to our newsletter</p>
+                        </div>
+                        <div className='form-wrapper'>
+                            <form action="">
+                                <div className="input-wrapper">
+                                    <input type="text" placeholder='Enter Email Address'/>
+                                    <input type="submit" value='Subscribe'/>
+                                </div>
+                            </form>
+                        </div>
                     </div>
-                    <div className='form-wrapper'>
-                        <form action="">
-                            <div className="input-wrapper">
-                                <input type="text" placeholder='Enter Email Address'/>
-                                <input type="submit" value=''/>
-                            </div>
-                        </form>
-                    </div>
+                    <div className='graphic'>
+                            <Image
+                                src='/graphics/email-signup.svg'
+                                alt='Email Newsletter Sign Up'
+                                width='253.26'
+                                height='197.82'
+                            />
+                        </div>
                 </div>
-                <div className='graphic'>
-                        <Image
-                            src='/graphics/email-signup.svg'
-                            alt='Email Newsletter Sign Up'
-                            width='253.26'
-                            height='197.82'
-                        />
-                    </div>
             </div>
+            <div className='con-reg'>
             <div className='footer-navigation'>
                 <nav>                    
                     <div className='nav-section'>

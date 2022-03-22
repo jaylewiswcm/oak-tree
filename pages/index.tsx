@@ -5,7 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { NextSeo } from 'next-seo';
 // Component
-import Testimonials from '../components/sections/Testimonials/Testimonials'
+import Testimonials from '../components/sections/testimonials/Testimonials'
 import FooterCollections from '../components/sections/FooterCollections';
 import Reviews from '../components/sections/reviews/Reviews';
 
@@ -71,6 +71,61 @@ closeUspOverlay = () => {
       <Head>
         <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
       </Head>
+      <div className='mobile-usp-banner'>
+        <div className='bhf-banner'>
+            <div className='logo-wrapper'>
+              <Image 
+                src='/bhf/bhf-white.svg'
+                alt='The British Heart Foundation'
+                layout='responsive'
+                width={108.13}
+                height={29.7}
+              />
+            </div>
+            <div className='support-text'>
+              <p>Proudly Working</p>
+              <p>In Partnership</p>
+            </div>
+        </div>
+        <div className='usps'>
+          <div className='usp'>
+            <div className='icon'>
+              <Image 
+                  src='/icons/home-usp-british-made.svg'
+                  alt='British Made'
+                  layout='responsive'
+                  width={32}
+                  height={32}
+              />
+            </div>
+            <p>British Made</p>
+          </div>
+          <div className='usp'>
+            <div className='icon'>
+              <Image 
+                  src='/icons/home-usp-trustpilot.svg'
+                  alt='4.5 Star Rated'
+                  layout='responsive'
+                  width={32}
+                  height={32}
+              />
+            </div>
+            <p>4.5 Star Rated</p>
+          </div>
+          <div className='usp'>
+            <div className='icon'>
+              <Image 
+                  src='/icons/home-usp-trade-in.svg'
+                  alt='Trade In'
+                  layout='responsive'
+                  width={32}
+                  height={32}
+              />
+            </div>
+            <p>£250 Trade-in</p>
+          </div>
+        </div>
+      </div>
       <div className='home-intro con-reg'>
         <div className='intro-content'>
           <h1>The Uk’s Leading Mobility Specialists</h1>
@@ -96,7 +151,7 @@ closeUspOverlay = () => {
       <div className='green-strip'>
         <div className='inner-wrapper con-reg'>
         <div className="trustpilot-widget" data-locale="en-GB" data-template-id="53aa8807dec7e10d38f59f32" data-businessunit-id="56607bac0000ff00058643ac" data-style-height="100px" data-style-width="180px" data-theme="dark" data-font-family="Source Sans Pro" data-text-color="#ffffff">
-          <a href="https://uk.trustpilot.com/review/www.oaktreemobility.co.uk" target="_blank" rel="noopener">Trustpilot</a>
+          <a href="https://uk.trustpilot.com/review/www.oaktreemobility.co.uk" target="_blank" rel="noreferrer" >Trustpilot</a>
         </div>
         <div className='seen-on-tv-icon'>
           <Image 
@@ -106,6 +161,44 @@ closeUspOverlay = () => {
             height='101.39'
           />
         </div>
+        </div>
+      </div>
+      <div className='mobile-usps'>
+        <div className='usp'>
+          <div className='tick-wrapper'>
+            <Image 
+              src='/icons/green-tick.svg'
+              alt='Green Tick 1'
+              layout='responsive'
+              width={30}
+              height={30}
+            />
+          </div>
+          <p>Handmade by skilled craftsmen to order in the UK</p>
+        </div>
+        <div className='usp'>
+          <div className='tick-wrapper'>
+            <Image 
+              src='/icons/green-tick.svg'
+              alt='Green Tick 2'
+              layout='responsive'
+              width={30}
+              height={30}
+            />
+          </div>
+          <p>A minimum £250 off when you trade in your old furniture</p>
+        </div>
+        <div className='usp'>
+          <div className='tick-wrapper'>
+            <Image 
+              src='/icons/green-tick.svg'
+              alt='Green Tick 3'
+              layout='responsive'
+              width={30}
+              height={30}
+            />
+          </div>
+          <p>Huge choice of fabris & leather to match your style</p>
         </div>
       </div>
       <div className='home-collections con-reg'>
@@ -187,9 +280,9 @@ closeUspOverlay = () => {
           <Image
             src='/occupational-therapist/sam-shann-1.png'
             alt='Sam Shann'
-            layout='fill'
-            objectFit='cover'
-            objectPosition='top'
+            layout='responsive'
+            width={592.6}
+            height={442}
           />
         </div>
         <div className='content'>
@@ -207,8 +300,8 @@ closeUspOverlay = () => {
           </div>
         </div>
       </div>
-      <Reviews />
-      <Testimonials />
+      <Reviews orphan={false} />
+      <Testimonials pageType='normal' />
       <FooterCollections />
 
       </>

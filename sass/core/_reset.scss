@@ -15,11 +15,11 @@ a{
       font-size: 1.6rem;
       font-weight: 400;
       color: $black;
-      span {
-        font-size: inherit;
-        font-weight: inherit;
-        color: inherit;   
-      }
+  }
+  span {
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;   
   }
 
   em, b {

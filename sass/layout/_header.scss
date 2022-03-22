@@ -30,19 +30,26 @@ header {
     }
  
     .logo { 
-      display: none;
-      width: 220px;
+      display: block;
+      width: 180px;
       margin-right: 20px;
-      @media(min-width: 750px) {
-        display: block;
+      @media(min-width: 400px) {
+        width: 220px;
        }
     }
     .mobile-logo {
-      display: flex;
+      display: none;
       @media(min-width: 750px) {
         display: none;
       }
     }
+    .header-bhf {
+      display: none;
+      @media(min-width:850px) {
+        display: initial;
+      }
+    }
+
     .main-nav {
       display: flex;
       flex-direction: column;
@@ -91,23 +98,23 @@ header {
         letter-spacing: 0.5px;
       }
     }
-    .orphan-number-d {
-      display: none;
-      @media(min-width: 750px) {
-        display: block;
-      }
-    }
-    .orphan-number-m {
-      display: block;
-      margin-left: auto;
+    .mobile-call-btn {
       background-color: $oaktree-green;
       color: $white;
-      padding: 15px 25px;
-      border-radius: 8px;
-      font-size: 1.1rem;
+      font-size: 1.8rem;
       font-weight: 500;
+      border-radius: 6px;
+      margin-left: auto;
+      padding: 12px 25px;
       @media(min-width: 750px) {
         display: none;
+      }
+    }
+    .orphan-header-number {
+      display: none;
+      margin-left: auto;
+      @media(min-width: 750px) {
+        display: flex;
       }
     }
   }

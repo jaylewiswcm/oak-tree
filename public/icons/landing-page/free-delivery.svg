@@ -1,13 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="37.832" height="48.514" viewBox="0 0 37.832 48.514">
-  <g id="Group_1461" data-name="Group 1461" transform="translate(-24.13 -4787.279)">
-    <path id="Path_896" data-name="Path 896" d="M.014-.006,19.147,9.857l-.079,19.8L.253,19.845Z" transform="translate(24.12 4806.134)" fill="#4a2c21"/>
-    <path id="Path_897" data-name="Path 897" d="M1.9,10.294,20.623.448,20.632,20.2,1.854,30.017Z" transform="translate(41.33 4805.775)" fill="#26150f"/>
-    <path id="Path_898" data-name="Path 898" d="M6.866,5.923,27.27,0,20.652,20.089,0,26.209Z" transform="matrix(0.719, 0.695, -0.695, 0.719, 42.337, 4787.279)" fill="#593b30"/>
-    <path id="Path_899" data-name="Path 899" d="M-.091-11.63,5.326-14.5,5.3-6.522l-5.348,2.6Z" transform="translate(50.369 4823.997)" fill="rgba(247,247,255,0.79)"/>
-    <path id="Path_900" data-name="Path 900" d="M-.483-11.425l5.5-2.837L24.279-4.545,18.865-1.672Z" transform="translate(31.416 4814.045)" fill="#f7f7ff"/>
-    <path id="Path_910" data-name="Path 910" d="M0,0,6.836,3.5" transform="matrix(1, -0.017, 0.017, 1, 33.044, 4826.602)" fill="#f7f7ff"/>
-    <path id="Path_910_-_Outline" data-name="Path 910 - Outline" d="M6.836,4.4,0,.9.462,0,7.3,3.5Z" transform="matrix(1, -0.017, 0.017, 1, 32.805, 4826.156)" fill="#f7f7ff"/>
-    <path id="Path_911" data-name="Path 911" d="M0,0,3.317,1.7" transform="matrix(1, -0.017, 0.017, 1, 36.646, 4824.428)" fill="#f7f7ff"/>
-    <path id="Path_911_-_Outline" data-name="Path 911 - Outline" d="M3.317,2.6,0,.9.462,0,3.779,1.7Z" transform="matrix(1, -0.017, 0.017, 1, 36.408, 4823.979)" fill="#f7f7ff"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100">
+  <g id="Group_1688" data-name="Group 1688" transform="translate(-11720 -15998)">
+    <rect id="Rectangle_3159" data-name="Rectangle 3159" width="100" height="100" transform="translate(11720 15998)" fill="none"/>
+    <g id="Group_1681" data-name="Group 1681" transform="translate(11716.87 11215.979)">
+      <path id="Path_896" data-name="Path 896" d="M.014-.006l31,15.982-.128,32.081L.4,32.16Z" transform="translate(24.122 4817.828)" fill="#4a2c21"/>
+      <path id="Path_897" data-name="Path 897" d="M1.935,16.4,32.266.448l.014,32L1.854,48.361Z" transform="translate(53.15 4817.526)" fill="#26150f"/>
+      <path id="Path_898" data-name="Path 898" d="M11.126,9.6,44.187,0,33.464,32.551,0,42.468Z" transform="matrix(0.719, 0.695, -0.695, 0.719, 53.631, 4787.279)" fill="#593b30"/>
+      <path id="Path_899" data-name="Path 899" d="M-.091-9.847,8.686-14.5,8.645-1.57-.02,2.649Z" transform="translate(66.59 4837.778)" fill="rgba(247,247,255,0.79)"/>
+      <path id="Path_900" data-name="Path 900" d="M-.483-9.664l8.909-4.6L39.641,1.484,30.869,6.139Z" transform="translate(35.637 4821.803)" fill="#f7f7ff"/>
+      <path id="Path_910" data-name="Path 910" d="M0,0,11.077,5.669" transform="matrix(1, -0.017, 0.017, 1, 38.574, 4850.998)" fill="#f7f7ff"/>
+      <path id="Path_910_-_Outline" data-name="Path 910 - Outline" d="M11.077,7.134,0,1.464.749,0,11.827,5.669Z" transform="matrix(1, -0.017, 0.017, 1, 38.187, 4850.274)" fill="#f7f7ff"/>
+      <path id="Path_911" data-name="Path 911" d="M0,0,5.374,2.75" transform="matrix(1, -0.017, 0.017, 1, 44.411, 4847.474)" fill="#f7f7ff"/>
+      <path id="Path_911_-_Outline" data-name="Path 911 - Outline" d="M5.374,4.215,0,1.465.749,0,6.123,2.75Z" transform="matrix(1, -0.017, 0.017, 1, 44.025, 4846.747)" fill="#f7f7ff"/>
+    </g>
   </g>
 </svg>
