@@ -1,4 +1,7 @@
 .mobile-usp-banner {
+    @media(min-width: 400px) {
+        display: none;
+    }
     .bhf-banner {
         width: 100%;
         background-color: $bhf-red;

@@ -1406,6 +1406,12 @@ header .header-inner .orphan-header-number {
   opacity: 0.5;
 }
 
+@media (min-width: 400px) {
+  .mobile-usp-banner {
+    display: none;
+  }
+}
+
 .mobile-usp-banner .bhf-banner {
   width: 100%;
   background-color: #EF0C2D;
