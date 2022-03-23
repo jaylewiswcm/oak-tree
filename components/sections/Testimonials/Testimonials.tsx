@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react'
-import Image from 'next/image';
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
