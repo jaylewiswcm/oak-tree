@@ -55,7 +55,7 @@
         flex-direction: column;
         padding-top: 40px;
         @media(min-width: 500px) and (max-width: 899px) {
-            padding:50px;
+            padding:50px 30px;
         }
         @media(min-width: 900px) {
             width: 40%;
@@ -185,17 +185,17 @@
         width: 100%;
         align-items: center;
         justify-content: center;
-    
         @media(min-width:400px) {
             margin-bottom: 50px;
         }
         @media(min-width: 500px) and (max-width: 899px) {
-            padding: 0 50px;
+            padding: 0 30px;
         }
         @media(min-width: 900px) {
             display: flex;
             width: 60%; 
-            margin-bottom: 50px;
+            // margin-bottom: 50px;
+            padding: 50px 25px;
         }
         video {
             border-radius: 6px;
@@ -258,9 +258,14 @@
 }
 .home-collections {
     margin-bottom: 0px;
-    margin-top: 0px;
-    @media(min-width: 400px) {
+    
+    @media(min-width: 400px) and (max-width: 899px){
         margin-bottom: 30px;
+        margin-top: 50px;
+        padding: 0 45px;
+    }
+    @media(min-width: 899px) {
+        padding: 0 30px;
         margin-top: 50px;
     }
     .heading {
@@ -273,6 +278,10 @@
         display: flex;
         margin-top: 30px;
         flex-direction: column;
+        // @media(min-width: 600px) and (max-width: 799px) {
+        //     flex-direction: row;
+        //     flex-wrap: wrap;
+        // }
         @media(min-width: 800px) {
             flex-direction: row;
         }
@@ -280,6 +289,13 @@
             display: flex;
             flex-direction: column;
             margin-bottom: 25px;
+            // @media(min-width: 600px) and (max-width: 799px) {
+            //     width: calc(50% - 15px);
+            //     margin-bottom: 30px;
+            //     &:first-of-type {
+            //         margin-right: 30px;
+            //     }
+            // }
             @media(min-width: 800px) {
                 width: calc(100% - 30px);
                 margin-right: 30px;
@@ -347,7 +363,11 @@
 .banners {
     display: flex;
     flex-direction: column;
-    @media(min-width: 800px) {
+    @media(min-width: 500px) and (max-width: 899px){
+        padding: 0 45px;
+        margin: 30px 0;
+    }
+    @media(min-width: 900px) {
         flex-direction: row;
     }
     .banner-vertical {
@@ -361,7 +381,11 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        @media(min-width: 800px ){ 
+
+        @media(min-width: 500px) and (max-width: 899px){
+         margin-bottom: 45px;
+        }
+        @media(min-width: 900px ){ 
             margin: 30px 0;
             margin-right: 30px;
             height: 500px;
@@ -394,6 +418,9 @@
 .occupational-therapist-wrapper { 
     display: flex;
     flex-direction: column;
+    @media(min-width: 500px) and (max-width: 899px) {
+        padding: 0 45px;
+    }
     @media(min-width: 800px) {
         flex-direction: row;
     }
