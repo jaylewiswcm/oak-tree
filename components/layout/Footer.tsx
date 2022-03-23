@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import Link from 'next/link';
 import Image from 'next/image';
 // Components
@@ -6,8 +6,12 @@ import Logo from '../assets/Logo';
 
 
 const Footer = () => {
-    const toggleFooterNav = () => {
+    const listContainer = useRef([]);
+    console.log(listContainer.current);
 
+    const toggleFooterNavList = (e: any) => {
+        const sibling = e.target.nextElementSibling;
+        sibling.classList.toggle('ul-open')
     }
     return (
         <footer>
@@ -41,44 +45,54 @@ const Footer = () => {
             <div className='footer-navigation'>
                 <nav>                    
                     <div className='nav-section'>
-                        <ul>
-                            <li className='list-header'>About</li>
-                            <li><Link href='/about'><a>About Oak Tree Mobility</a></Link></li>
-                            <li><Link href='/occupational-therapist'><a>Our Occupational Therapist</a></Link></li>
-                            <li><Link href='/british-made'><a>British Made</a></Link></li>
-                            <li><Link href='/trade-in'><a>Trade In</a></Link></li>
-                            <li><Link href='/price-guide'><a>Price Guide</a></Link></li>
-                            <li><Link href='/testimonials-and-reviews'><a>Testimonials and Reviews</a></Link></li>
-                            <li><Link href=''><a></a></Link></li>
-                        </ul>
-                        <ul>
-                            <li className='list-header'>Customer Support</li>
-                            <li><Link href='/delivery-and-installation'><a>Delivery and Installation</a></Link></li>
-                            <li><Link href='/vat-exemption'><a>VAT Exempt Eligibility</a></Link></li>
-                        </ul>
+                        <div className='ul-wrapper'>
+                            <div className='list-header' onClick={(e) => toggleFooterNavList(e)}>About<span className='arrow-wrapper'><Image src='/vectors/down-arrow-black.svg' alt='open-arrow' width={18} height={11}/></span></div>
+                            <ul>
+                                <li className='list-link'><Link href='/about'><a>About Oak Tree Mobility</a></Link></li>
+                                <li className='list-link'><Link href='/occupational-therapist'><a>Our Occupational Therapist</a></Link></li>
+                                <li className='list-link'><Link href='/british-made'><a>British Made</a></Link></li>
+                                <li className='list-link'><Link href='/trade-in'><a>Trade In</a></Link></li>
+                                <li className='list-link'><Link href='/price-guide'><a>Price Guide</a></Link></li>
+                                <li className='list-link'><Link href='/testimonials-and-reviews'><a>Testimonials and Reviews</a></Link></li>
+                                <li className='list-link'><Link href=''><a></a></Link></li>
+                            </ul>
+                        </div>
+                        <div className='ul-wrapper'>
+                            <div className='list-header'onClick={(e) => toggleFooterNavList(e)}>Customer Support<span className='arrow-wrapper'><Image src='/vectors/down-arrow-black.svg' alt='open-arrow' width={18} height={11}/></span></div>
+                            <ul>
+                                <li className='list-link'><Link href='/delivery-and-installation'><a>Delivery and Installation</a></Link></li>
+                                <li className='list-link'><Link href='/vat-exemption'><a>VAT Exempt Eligibility</a></Link></li>
+                            </ul>   
+                        </div>
                     </div>
                     <div className='nav-section'>
-                        <ul>
-                            <li className='list-header'>Chairs</li>
-                            <li><Link href='/recliner-chairs'><a>Recliner Chairs</a></Link></li>
-                            <li><Link href='/riser-recliner-chairs'><a>Riser Recliner Chairs</a></Link></li>
-                            <li><Link href='/armchairs'><a>Armchairs</a></Link></li>
-                            <li><Link href='/chairs'><a>All Chairs</a></Link></li>
-                        </ul>
-                        <ul>
-                            <li className='list-header'>Beds</li>
-                            <li><Link href='/adjustable-beds'><a>Adjustable Beds</a></Link></li>
-                            <li><Link href='/headboards'><a>Headboards</a></Link></li>
-                            <li><Link href='/beds'><a>All Beds</a></Link></li>
-                        </ul>
+                        <div className='ul-wrapper'>
+                            <div className='list-header'  onClick={(e) => toggleFooterNavList(e)}>Chairs<span className='arrow-wrapper'><Image src='/vectors/down-arrow-black.svg' alt='open-arrow' width={18} height={11}/></span></div>
+                            <ul>                           
+                                <li className='list-link'><Link href='/recliner-chairs'><a>Recliner Chairs</a></Link></li>
+                                <li className='list-link'><Link href='/riser-recliner-chairs'><a>Riser Recliner Chairs</a></Link></li>
+                                <li className='list-link'><Link href='/armchairs'><a>Armchairs</a></Link></li>
+                                <li className='list-link'><Link href='/chairs'><a>All Chairs</a></Link></li>
+                            </ul>
+                        </div>
+                        <div className='ul-wrapper'>
+                            <div className='list-header'  onClick={(e) => toggleFooterNavList(e)}>Beds<span className='arrow-wrapper'><Image src='/vectors/down-arrow-black.svg' alt='open-arrow' width={18} height={11}/></span></div>
+                            <ul>
+                                <li className='list-link'><Link href='/adjustable-beds'><a>Adjustable Beds</a></Link></li>
+                                <li className='list-link'><Link href='/headboards'><a>Headboards</a></Link></li>
+                                <li className='list-link'><Link href='/beds'><a>All Beds</a></Link></li>
+                            </ul>
+                        </div>
                     </div>
                     <div className='nav-section'>
-                        <ul>
-                            <li className='list-header'>Bath Lifts</li>
-                            <li><Link href='/bath-lifts'><a>Bath Lift Range</a></Link></li>
-                            <li><Link href='/the-riviera-plus'><a>The Riviera Plus</a></Link></li>
-                            <li><Link href='/oak-tree-bath-lifts'><a>Oak Tree Bath Lifts</a></Link></li>
-                        </ul>
+                        <div className='ul-wrapper'>
+                            <div className='list-header'  onClick={(e) => toggleFooterNavList(e)}>Bath Lifts<span className='arrow-wrapper'><Image src='/vectors/down-arrow-black.svg' alt='open-arrow' width={18} height={11}/></span></div>
+                            <ul>  
+                                <li className='list-link'><Link href='/bath-lifts'><a>Bath Lift Range</a></Link></li>
+                                <li className='list-link'><Link href='/the-riviera-plus'><a>The Riviera Plus</a></Link></li>
+                                <li className='list-link'><Link href='/oak-tree-bath-lifts'><a>Oak Tree Bath Lifts</a></Link></li>
+                            </ul>
+                        </div>
                         <ul className='connect mobile-social'>
                             <li className='list-header'>Connect</li>
                             <li><a href='www.facebook.com' className='facebook-blue social-link'><span className='icon'><Image src='/icons/socials/facebook.svg' alt='Facebook' width='25' height='25'/></span>Facebook</a></li>
@@ -88,8 +102,8 @@ const Footer = () => {
                     <div className='nav-section desktop-social'>
                         <ul className='connect'>
                             <li className='list-header'>Connect</li>
-                            <li><a href='www.facebook.com' className='facebook-blue social-link'><span className='icon'><Image src='/icons/socials/facebook.svg' alt='Facebook' width='25' height='25'/></span>Facebook</a></li>
-                            <li><a href='www.youtube.com' className='youtube-red social-link'><span className='icon'><Image src='/icons/socials/youtube.svg' alt='Youtube' width='25' height='25'/></span>YouTube</a></li>
+                            <li className='list-link'><a href='www.facebook.com' className='facebook-blue social-link'><span className='icon'><Image src='/icons/socials/facebook.svg' alt='Facebook' width='25' height='25'/></span>Facebook</a></li>
+                            <li className='list-link'><a href='www.youtube.com' className='youtube-red social-link'><span className='icon'><Image src='/icons/socials/youtube.svg' alt='Youtube' width='25' height='25'/></span>YouTube</a></li>
                         </ul>
                     </div>
                 </nav>

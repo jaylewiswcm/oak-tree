@@ -1,5 +1,5 @@
 .mobile-usp-banner {
-    @media(min-width: 400px) {
+    @media(min-width: 600px) {
         display: none;
     }
     .bhf-banner {
@@ -46,13 +46,23 @@
 }
 .home-intro {
     display: flex;
+    flex-direction: column;
+    @media(min-width:900px) {
+        flex-direction: row;
+    }
     .intro-content {
         display: flex;
         flex-direction: column;
         padding-top: 40px;
-        @media(min-width: 400px) {
+        @media(min-width: 500px) and (max-width: 899px) {
+            padding:50px;
+        }
+        @media(min-width: 900px) {
             width: 40%;
+            padding: 0 15px;
+            padding-right: 25px;
             padding-top: 60px;
+            
         }
         h1 {
             font-size: 3.5rem;
@@ -60,7 +70,7 @@
             font-family: $fontHeadings;
             color: $dark-green-1;
             text-align: center;
-            @media(min-width: 400px) {
+            @media(min-width: 600px) {
                 font-size: 4.6rem;
                 text-align: left;
             }
@@ -70,7 +80,10 @@
             line-height: 1.6;
             margin-top: 20px;
             text-align: center;
-            @media(min-width: 400px) {
+            @media(min-width: 400px) and (max-width: 899px) {
+                max-width: 550px;
+            }
+            @media(min-width: 600px) {
                 text-align: left;
                 font-size: 2.1rem;
             }
@@ -79,17 +92,36 @@
             display: flex;
             flex-direction: column;
             margin-top: 40px;
-            margin-bottom: 50px;
-            @media(min-width: 400px) {
-                max-width:315px;    
+            margin-bottom:10px;
+            // @media(min-width: 530px) and (max-width: 714px){
+            //     max-width: 335px;
+            //     margin: 0 auto;
+            //     margin-top: 40px;
+            //     margin-bottom:10px;
+            // }
+            @media(min-width: 715px) and (max-width: 899px) {
+                flex-direction: row;
             }
+            // @media(min-width: 400px) {
+            //     max-width:400px;
+            //     margin: 0 auto; 
+            //     width: 100%;
+            //     margin-top: 40px;
+            //     margin-bottom: 30px;   
+            // }
             button {
-                // padding: 15px 50px;
                 border-radius: 2px;
                 margin-bottom: 25px;
-                width: 100%;
                 position: relative;
-                border-radius: 4px;
+                border-radius: 6px;
+                padding: 17px 30px;
+                width: 100%;
+                @media(min-width: 600px) {
+                    width: unset;
+                }
+                @media(min-width: 715px) and (max-width: 899px) {
+                    margin-right: 25px;
+                }
                 .bg-hover {
                     position: absolute;
                     bottom:0;
@@ -104,6 +136,9 @@
                     font-size: 1.8rem;
                     font-weight: 500;
                     position: relative;
+                    @media(min-width: 600px) {
+                        font-size: 1.6rem;
+                    }
                 }
             }
             .bg-green {
@@ -147,12 +182,23 @@
         }
     }
     .intro-image {
-        width: 60%;
-        display: none;
+        width: 100%;
         align-items: center;
         justify-content: center;
-        @media(min-width: 400px) {
+    
+        @media(min-width:400px) {
+            margin-bottom: 50px;
+        }
+        @media(min-width: 500px) and (max-width: 899px) {
+            padding: 0 50px;
+        }
+        @media(min-width: 900px) {
             display: flex;
+            width: 60%; 
+            margin-bottom: 50px;
+        }
+        video {
+            border-radius: 6px;
         }
     }
 }
@@ -160,12 +206,25 @@
     width: 100%;
     background-color: $dark-green-1;
     padding: 25px; 
+    display: none;
+    @media(min-width: 400px) {
+        display: flex;
+    }
     .inner-wrapper {
         display: flex;
         align-items: flex-start;
         height: 100%;
         .seen-on-tv-icon {
+            display: none;
+            width: 140px;
             margin-left: 70px;
+            @media(min-width: 400px) {
+                display: initial;
+            }
+            @media(min-width: 400px) and (max-width: 600px) {
+                margin-left: auto;
+            }
+            
         }
     }
 }
@@ -198,8 +257,8 @@
     }
 }
 .home-collections {
-    margin-bottom: 30px;
-    margin-top: 00px;
+    margin-bottom: 0px;
+    margin-top: 0px;
     @media(min-width: 400px) {
         margin-bottom: 30px;
         margin-top: 50px;
@@ -214,14 +273,14 @@
         display: flex;
         margin-top: 30px;
         flex-direction: column;
-        @media(min-width: 400px) {
+        @media(min-width: 800px) {
             flex-direction: row;
         }
         .collection-item {    
             display: flex;
             flex-direction: column;
             margin-bottom: 25px;
-            @media(min-width: 400px) {
+            @media(min-width: 800px) {
                 width: calc(100% - 30px);
                 margin-right: 30px;
                 margin-bottom: 0;
@@ -288,20 +347,25 @@
 .banners {
     display: flex;
     flex-direction: column;
-    @media(min-width: 400px) {
+    @media(min-width: 800px) {
         flex-direction: row;
     }
     .banner-vertical {
         width: 100%;
-        height: 500px;
-        margin: 30px 0;
-        margin-right: 30px;
+        height: 350px;
+        margin:0 ;
+        margin-bottom:15px;
         background-color: $lightest-grey;
         padding: 25px;
         padding-top: 80px;
         display: flex;
         flex-direction: column;
         align-items: center;
+        @media(min-width: 800px ){ 
+            margin: 30px 0;
+            margin-right: 30px;
+            height: 500px;
+        }
         &:last-of-type {
             margin-right: 0;
         }
@@ -330,12 +394,12 @@
 .occupational-therapist-wrapper { 
     display: flex;
     flex-direction: column;
-    @media(min-width: 400px) {
+    @media(min-width: 800px) {
         flex-direction: row;
     }
     .image-wrapper {
         width: 100%;
-        @media(min-width: 400px) {
+        @media(min-width: 800px) {
             width: 50%;
         }
     }
@@ -344,8 +408,9 @@
         height: 100%;
         background-color: $dark-green-1;
         text-align: center;
+        
         padding-top: 30px;
-        @media(min-width: 400px) {
+        @media(min-width: 800px) {
             width: 50%;
             padding-top: 50px;
         }
@@ -353,12 +418,14 @@
             font-size: 2rem;
             font-weight: 400;
             color: $yellow-3;
+            padding: 0 15px;
         }
         .heading {
             font-size: 3rem;
             font-weight: 500;
             font-family: $fontHeadings;
             color: $white;
+            padding: 0 15px;
         }
         .info {
             font-size: 1.8rem;
@@ -367,7 +434,7 @@
             color: $white;
             padding: 25px;
             @media(min-width: 400px) {
-                padding: 25px 50px;
+                padding: 25px 25px;
             }
         }
         .bottom {
@@ -387,7 +454,7 @@
     }
     .reviews {
         @media(max-width: 400px) {
-            padding: 50px 15px;
+            // padding: 50px 15px;
         }
     }
 }

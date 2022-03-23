@@ -142,7 +142,7 @@ closeUspOverlay = () => {
           </div>
         </div>
         <div className='intro-image'>
-          <video  autoPlay loop muted>
+          <video width="100%" autoPlay loop muted>
             <source src="videos/oaktree-ad-cut.mp4"
             type="video/mp4"/>
           </video>
@@ -157,8 +157,9 @@ closeUspOverlay = () => {
           <Image 
             src='/icons/seen-on-tv.svg'
             alt='Seen on tv'
-            width='152.26'
-            height='101.39'
+            layout='responsive'
+            width={152.26}
+            height={101.39}
           />
         </div>
         </div>
