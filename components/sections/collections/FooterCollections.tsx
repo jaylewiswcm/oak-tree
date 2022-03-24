@@ -7,7 +7,7 @@ const FooterCollections = () => {
     <div className='footer-collections con-reg'>
     <h6>Our Collections</h6>
     <div className='collections-grid'>
-      <Link href=''><a className='collection-item'>
+      <Link href='/chairs'><a className='collection-item'>
         <Image 
           src='/images/collections/collection-chairs.png'
           alt='Rise and Recline Chairs'
@@ -19,7 +19,7 @@ const FooterCollections = () => {
           <p>Rise and Recline Chairs</p>
         </div>
         </a></Link>
-      <Link href=''><a className='collection-item'>
+      <Link href='/adjustable-beds'><a className='collection-item'>
         <Image 
           src='/images/collections/collection-beds.png'
           alt='Adjustable Beds'
@@ -31,7 +31,7 @@ const FooterCollections = () => {
           <p>Adjustable Beds</p>
         </div>
         </a></Link>
-      <Link href=''><a className='collection-item'>
+      <Link href='/bath-lifts'><a className='collection-item'>
         <Image 
           src='/images/collections/collection-bathlifts.png'
           alt='Bath Lifts'

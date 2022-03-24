@@ -1,5 +1,6 @@
 import React from 'react'
 import { NextSeo } from 'next-seo';
+import { PageUnderConstruction } from '../components/PageUnderConstruction';
 const tradeIn = () => {
     return (
         <>
@@ -7,7 +8,7 @@ const tradeIn = () => {
                 title="Offers | Oak Tree Mobility"
                 description="Offers. Find out more."
             />
-                  <h1>Offers</h1>
+                     <PageUnderConstruction pageTitle='Our Offers'/>
         </>
     )
 }

@@ -1,3 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="14.604" height="8.717" viewBox="0 0 14.604 8.717">
-  <path id="Path_1347" data-name="Path 1347" d="M-13098.688,23834.492l-7.3-7.3,1.414-1.414,5.887,5.889,5.889-5.889,1.414,1.414Z" transform="translate(13105.989 -23825.775)" fill="#211f1f"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="23.744" height="13.988" viewBox="0 0 23.744 13.988">
+  <g id="Group_1703" data-name="Group 1703" transform="translate(-328 1)">
+    <path id="Path_933_-_Outline" data-name="Path 933 - Outline" d="M20061.758,10759.81H20045v-3h16.758Z" transform="translate(-21442.395 6578.593) rotate(-45)" fill="#343434"/>
+    <path id="Path_934_-_Outline" data-name="Path 934 - Outline" d="M20061.783,10759.81H20045v-3h16.783Z" transform="translate(-6237.621 -21781.168) rotate(45)" fill="#343434"/>
+  </g>
 </svg>

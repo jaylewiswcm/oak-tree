@@ -6,7 +6,7 @@
         overflow: hidden;
         width: 100%;
         height: 400px;
-        cursor: grab;
+        cursor: pointer;
         &:last-of-type{
             margin-right: 0;
         }
@@ -49,9 +49,9 @@
             }
         }
     }
-    .testimonial-tile:active {
-        cursor: grabbing;
-    }
+    // .testimonial-tile:active {
+    //     cursor: grabbing;
+    // }
 }
     .carousel-pagination {
         width: 100%;
@@ -71,3 +71,43 @@
             background-color: $dark-green-1;
         }
     }
+
+    .video-carousel {
+        width:100%;
+        height: 100%;
+        position: relative;
+        .carousel-navigation {
+            position: absolute;
+            height: 100%;
+            top:0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding:15px;
+            button {
+                width: 50px;
+                height: 50px;
+                background-color: $white;
+                border-radius: 50%;
+            }
+        }
+        .carousel-navigation.nav-prev {
+            left: -80px;
+        }
+        .carousel-navigation.nav-next {
+            right: -80px;
+        }
+        .video-container {
+            width:100%;
+            height: 100%;
+            div {
+                width: 100%;
+                height: 100%;
+            }
+            iframe {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+  

@@ -32,16 +32,23 @@ header {
       display: flex;
     }
  
-    .logo { 
-      display: block;
-      width: 180px;
-      margin-right: 20px;
+    .header-logo {
+      width: 60%;
       @media(min-width: 400px) {
-        width: 220px;
+        width: unset;
+      }
+    }
+    .logo {  
+      margin-right: 20px;
+      width: 100%;
+      @media(min-width: 400px) {
+        width: 210px;
+        
        }
     }
     .mobile-logo {
       display: none;
+      width: 60%;
       @media(min-width: 750px) {
         display: none;
       }

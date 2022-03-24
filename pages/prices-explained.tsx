@@ -1,5 +1,7 @@
 import React from 'react'
 import { NextSeo } from 'next-seo';
+import { PageUnderConstruction } from '../components/PageUnderConstruction';
+
 const pricesExplained = () => {
     return (
         <>
@@ -7,7 +9,7 @@ const pricesExplained = () => {
                 title="Prices Explained | Oak Tree Mobility"
                 description="Take a look at the Oak Tree Mobility price guide and find out more about the range of mobility products available to suit your budget"
             />
-                  <h1>Prices Explained</h1>
+               <PageUnderConstruction pageTitle='Prices Explained'/>
         </>
     )
 }

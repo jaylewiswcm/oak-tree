@@ -16,6 +16,37 @@ body {
 .hide {
     display: none!important;
 }
+.page-construction {
+    display: flex;
+    flex-direction: column;
+    padding: 100px;
+    align-items: center;
+    justify-content: center;
+    h1 {
+        font-size:4rem;
+        font-weight: 600;
+        color: $dark-green-1;
+        text-transform: capitalize;
+    }
+    p {
+        font-size: 2.2rem;
+        margin-top: 15px;
+    }
+    ul {
+        display: flex;
+        margin-top: 30px;
+        li {
+            margin: 0 30px;
+            a {
+                font-size: 2rem;
+                font-weight: 400;
+                text-decoration: underline;
+                text-underline-offset: 3px;
+                color: $oaktree-green;
+            }
+        }
+    }
+}
 
 
 

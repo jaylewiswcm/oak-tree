@@ -5,8 +5,9 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { NextSeo } from 'next-seo';
 // Component
-// import Testimonials from '../components/sections/testimonials/Testimonials';
-import FooterCollections from '../components/sections/FooterCollections';
+import HomeCollections from '../components/sections/collections/HomeCollections';
+import Testimonials from '../components/sections/testimonials/Testimonials';
+import FooterCollections from '../components/sections/collections/FooterCollections';
 import Reviews from '../components/sections/reviews/Reviews';
 
 type MyProps = { };
@@ -204,65 +205,7 @@ closeUspOverlay = () => {
       </div>
       <div className='home-collections con-reg'>
         <h2 className='heading'>Oak Tree Catalogue</h2>
-        <div className='collections'>
-          <Link href='/'>
-            <a className='collection-item'>
-              <div className='image-wrapper'>
-                <Image 
-                  src='/images/collections/collection-chairs.png'
-                  alt='Rise and Recline Chairs'
-                  layout='fill'
-                  objectFit='cover'
-                  objectPosition='center'
-                />
-              </div>
-              <h3 className='collection-title'>Rise and Recline Chairs</h3>
-              <p className='desc'>Luxurious and well made allowing comfort at the touch of a button.</p>
-              <div className='acting-btn'>
-                <div className='hover-bg'></div>
-                <p>View Chairs</p>
-             </div>
-            </a>
-          </Link>
-          <Link href='/'>
-            <a className='collection-item'>
-              <div className='image-wrapper'>
-                <Image 
-                  src='/images/collections/collection-beds.png'
-                  alt='Adjustable Beds'
-                  layout='fill'
-                  objectFit='cover'
-                  objectPosition='center'
-                />
-              </div>
-              <h3 className='collection-title'>Adjustable Beds</h3>
-              <p className='desc'>The ultimate in sophistication and comfort, offering a wide collection.</p>
-              <div className='acting-btn'>
-                <div className='hover-bg'></div>
-                <p>View Beds</p>
-             </div>
-            </a>
-          </Link>
-          <Link href='/'>
-            <a className='collection-item'>
-              <div className='image-wrapper'>
-                <Image 
-                  src='/images/collections/collection-bathlifts.png'
-                  alt='Bath Lifts'
-                  layout='fill'
-                  objectFit='cover'
-                  objectPosition='center'
-                />
-              </div>
-              <h3 className='collection-title'>Bath Lifts</h3>
-              <p className='desc'>Rediscover the joys and health benefits of a nice warm bath with our bath lift.</p>
-              <div className='acting-btn'>
-                <div className='hover-bg'></div>
-                <p>View Bath Lifts</p>
-             </div>
-            </a>
-          </Link>
-        </div>
+        <HomeCollections />
       </div>
       <div className='banners con-reg'>
         <div className='banner-vertical'>
@@ -277,13 +220,13 @@ closeUspOverlay = () => {
         </div>
       </div>
       <div className='occupational-therapist-wrapper con-reg'>
-        <div className='image-wrapper'>
+        <div className='image-wrapper desktop-image'>
           <Image
             src='/occupational-therapist/sam-shann-1.png'
             alt='Sam Shann'
-            layout='responsive'
-            width={592.6}
-            height={442}
+            layout='fill'
+            objectFit='cover'
+            objectPosition='left top'
           />
         </div>
         <div className='content'>
@@ -302,7 +245,7 @@ closeUspOverlay = () => {
         </div>
       </div>
       <Reviews orphan={false} />
-      {/* <Testimonials pageType='normal' /> */}
+      <Testimonials pageType='normal' />
       <FooterCollections />
 
       </>
