@@ -19,16 +19,6 @@ const Header = () => {
                         />
                          </a>
                     </Link>
-                    <Link  href="/"> 
-                        <a className="mobile-logo">
-                        <Image 
-                            src='/logo/logo-mobile.svg'
-                            alt='Oak Tree Mobility'
-                            width='100'
-                            height='37'
-                        />
-                        </a>
-                    </Link>
                 </div>
                 <div className='header-bhf'>
                     <Image 

@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Reviews from '../components/sections/reviews/Reviews';
 import OtFamily from '../components/sections/customers/OtFamily';
 import OrphanBrochureForm from '../components/forms/OrphanBrochureForm';
+import Testimonials from '../components/sections/testimonials/Testimonials';
 // import Testimonials from '../components/sections/testimonials/Testimonials';
 
 
@@ -204,9 +205,9 @@ const requestOurChairBrochure = () => {
                         <Image 
                             src='/brochures/brochure-mockup.png'
                             alt='Chair Brochure'
-                            layout='fill'
-                            objectFit='cover'
-                            objectPosition='center'
+                            layout='responsive'
+                            width={334}
+                            height={401}
                         />
                     </div>
                 </div>
@@ -214,7 +215,7 @@ const requestOurChairBrochure = () => {
             <div className='testimonials orphan-con-reg orphan-padding'>
                 <h4>Hear what our customers have to say</h4>
                 <p className='subheading'>We believe in the power of individuality. We love that every Oak Tree customer has his or her own story to tell, and we build products to fit many different people. If you’d like to hear the stories of our customers, take a look at the testimonial videos.</p>
-                {/* <Testimonials pageType='orhpan'/> */}
+                <Testimonials pageType='orphan'/>
             </div>
             <div className='reviews-wrapper'>
                 <Reviews orphan={true} />

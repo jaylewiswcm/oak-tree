@@ -29,8 +29,12 @@ body.show-modal {
     z-index: 9999;
     .modal-inner {
         background-color: $white;
-        width:80%;
-        height: 500px;
         border-radius: 6px;
+        width:90%;
+        height:50%;
+        @media(min-width:600px) {
+            width:80%;
+            height: 500px;
+        }
     }
 }

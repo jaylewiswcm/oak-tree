@@ -19,9 +19,12 @@ body {
 .page-construction {
     display: flex;
     flex-direction: column;
-    padding: 100px;
+    padding: 25px;
     align-items: center;
     justify-content: center;
+    @media(min-width: 600px) {
+        padding: 100px;
+    }
     h1 {
         font-size:4rem;
         font-weight: 600;
@@ -30,13 +33,27 @@ body {
     }
     p {
         font-size: 2.2rem;
-        margin-top: 15px;
+        margin-top: 5px;
+        text-align: center;
+        @media(min-width: 600px) {
+            margin-top: 15px;
+        }
     }
     ul {
         display: flex;
+        flex-direction: column;
         margin-top: 30px;
+        align-items: center;
+        justify-content: center;
+        @media(min-width: 600px) {
+            flex-direction: row;
+            
+        }
         li {
-            margin: 0 30px;
+            margin: 15px 0;
+            @media(min-width: 600px) {
+                margin: 0 30px;
+            }
             a {
                 font-size: 2rem;
                 font-weight: 400;
@@ -152,6 +169,9 @@ body {
 }
 .dark-green-1 {
     color: $dark-green-1!important;
+}
+.blue-1{
+    color: $blue-1!important;
 }
 .bg-dark-green-1 {
     background-color: $dark-green-1!important;

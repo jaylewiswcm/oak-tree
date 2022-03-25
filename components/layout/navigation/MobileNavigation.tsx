@@ -35,6 +35,7 @@ const MobileNavigation = ({isOpen, toggleMobileMenu} : ComponentProps) => {
             { link: '/vat-exempt', text: 'VAT Exempt Eligibilty' },
         ]},
         { subMenuHeader: 'Chairs', submenu: [
+            {link: '/chairs', text: 'All Chairs' },
             {link: '/chairs/the-oak', text: 'The Oak' },
             {link: '/chairs/the-maple', text: 'The Maple' },
             {link: '/chairs/the-cedar', text: 'The Cedar' },
@@ -42,12 +43,14 @@ const MobileNavigation = ({isOpen, toggleMobileMenu} : ComponentProps) => {
             {link: '/chairs/the-tulip', text: 'The Tulip' },
         ]},
         { subMenuHeader: 'Beds', submenu: [
+            {link: '/adjustable-beds', text: 'All Beds' },
             {link: '/adjustable-beds/the-lilac', text: 'The Lilac' },
             {link: '/adjustable-beds/the-hazel', text: 'The Hazel' },
             {link: '/adjustable-beds/the-hesper', text: 'The Hesper' },
             {link: '/adjustable-beds/the-oysterwood', text: 'The Oysterwood' },
         ]},
         { subMenuHeader: 'Bath Lifts', submenu: [
+            {link: '/bath-lifts', text: 'Bath Lifts' },
             {link: '/bath-lifts/the-lilac', text: 'Oak Tree Bath Lifts' },
             {link: '/bath-lifts/the-riviera-plus', text: 'The Riviera Plus' },
             {link: '/bath-lifts/home-visit', text: 'Home Visit Bath Lifts' },

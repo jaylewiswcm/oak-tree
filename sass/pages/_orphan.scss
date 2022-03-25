@@ -40,7 +40,7 @@
                 @media(min-width: 375px) {
                      text-align: left;
                 }
-                @media(min-width:400px ) and (max-width: 800px) {
+                @media(min-width:452px ) and (max-width: 800px) {
                     width: 145px;
                 }
             }
@@ -52,7 +52,7 @@
             }
         }
     }
-    .orphan-con-reg {
+    .orphan-con-reg { 
         @media(min-width: 1000px) {
             max-width: 840px;
             margin-left: auto
@@ -150,7 +150,8 @@
                     .required {
                         color: $red-2;
                     }
-                    input[type=text], input[type=tel], input[type=email] {
+
+                    input[type=text], input[type=tel], input[type=email], select {
                         border: 1px $lighter-grey solid;
                         padding: 15px;
                         font-size: 1.6rem;
@@ -160,12 +161,30 @@
                         outline-style: none;
 
                     }
-                    input[type=text]:focus, input[type=tel]:focus, input[type=email]:focus {
+                    input[type=text]:focus, input[type=tel]:focus, input[type=email]:focus, select:focus {
                         border: 1px $blue-1 solid;
                         box-shadow: 0 0 21px rgba(58, 132, 192,0.18);
                     }
-                    input[type=text]:focus + label, input[type=tel]:focus, input[type=email]:focus  + label {
+                    input[type=text]:focus + label, input[type=tel]:focus + label, input[type=email]:focus  + label, select:focus + label {
                         color:$blue-1 ;
+                    }
+                    .error-p {
+                        font-size:1.6rem;
+                        font-weight: 300;
+                        color: $red-2;
+                        margin-bottom:-5px;
+                        margin-top: 5px;
+                    }                    
+                }
+                .select-wrapper {
+                    flex-direction: row-reverse;
+                    justify-content:  flex-end;
+                    align-items: center;
+                    label {
+                        margin-right: 15px;
+                    }
+                    select {
+                        width: calc(100% - 160px);
                     }
                 }
                 .input-wrapper.errors {
@@ -284,7 +303,7 @@
         }
         .health-benefits {
             display: flex;
-            flex-direction: column-reverse;
+            flex-direction: column;
             align-items: center;
             padding-top: 10px;
             text-align: center;
@@ -364,7 +383,7 @@
                 }
             }
             .image-wrapper {
-                width: calc(100% + 50px);
+                // width: calc(100% + 50px);
                 height: 300px;
                 position: relative;
                 margin-bottom: 30px;
@@ -508,13 +527,16 @@
             }
             .brochure-wrapper {
                 width: 100%;
-                height: 400px;
                 position: relative;
-                padding:  50px 0;
+                // padding:  50px 0;
                 margin: 0 auto;
                 margin-top: 50px;
-                @media(min-width: 500px) {
-                    width: 60%;
+                @media(min-width: 500px) and (max-width:599px) {
+                width: 60%;
+                }
+                @media(min-width: 600px) and (max-width: 1049px) {
+                    width: 40%;
+                    margin-top:0px;
                 }
                 @media(min-width: 1050px) {
                     width: 50%;
@@ -692,7 +714,7 @@
                     font-weight: 500;
                     color: $blue-1;
                     margin-bottom: 5px;
-                    padding: 0 50%;
+                    // padding: 0 50%;
                     @media(min-width: 450px ) {
                         padding: 0;
                     }
@@ -775,7 +797,7 @@
                     }
                 }
                 .mark-right {
-                    bottom:-50px;
+                    bottom:-80px;
                     right: 0;
                     @media(min-width: 350px)and (max-width: 530px) {
                         bottom:-80px;

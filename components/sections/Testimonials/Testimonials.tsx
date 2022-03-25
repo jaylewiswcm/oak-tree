@@ -4,6 +4,7 @@ import CarouselNormal from './carousel/CarouselNormal';
 import CarouselLandingPage from './carousel/CarouselLandingPage';
 import VideoPopup from '../testimonials/video/VideoPopup';
 
+
 interface ComponentProps {
   pageType: string
 }
@@ -21,8 +22,7 @@ const Testimonials = ({pageType} : ComponentProps) => {
   
   });
   const [show, setShow] = useState(false);
-
-
+ 
   return (
     <div className='testimonials con-reg'>
         { pageType && pageType === 'normal' && <CarouselNormal setSelectedCx={setSelectedCx}  setShow={setShow} /> } 
