@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from 'react'
 // Components
+import VideoPopup from './video/VideoPopup';
 import CarouselNormal from './carousel/CarouselNormal';
 import CarouselLandingPage from './carousel/CarouselLandingPage';
-import VideoPopup from '../testimonials/video/VideoPopup';
 
 
 interface ComponentProps {
