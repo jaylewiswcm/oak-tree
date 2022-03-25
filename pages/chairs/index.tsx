@@ -47,7 +47,7 @@ const index = () => {
               <h2 className='heading'>Our Chairs</h2>
               <div className='collections-grid'>
                   {chairs.map(product => 
-                    <div className='collection-item'>
+                    <div className='collection-item' key={product.name}>
                         <div className='image-wrapper'>
                             <Image 
                                 src={product!.collectionImage}
