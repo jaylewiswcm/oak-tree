@@ -3,13 +3,53 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: $dark-green-1;
+  
     z-index: 9999;
-    box-shadow: 0 0 24px rgba(0, 0, 0, 0.30);
+
     transition: 0.2s bottom ease-in-out;
-    .inner-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media(min-width: 800px) {
+        background-color: $dark-green-1;
+        box-shadow: 0 0 24px rgba(0, 0, 0, 0.30);
+        display: initial;
+    }
+    .mobile-button {
         display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $red-2;
+        margin-bottom: 25px;
+        padding: 25px;
+        width: 90%;
+        @media(min-width: 500px) {
+            padding: 15px;
+            width: 80%;
+        }
+        @media(min-width: 800px) {
+            display: none;
+        }
+        .icon-wrapper {
+            width: 65px;
+            margin-right: 15px;
+            display: none;
+            @media(min-width: 500px) {
+                display: initial;
+            }
+        }
+        p {
+            font-size: 2rem;
+            font-weight: 500;
+            color: $white;
+        }
+    }
+    .inner-wrapper {
         position: relative;
+        display: none;
+        @media(min-width: 800px) {
+            display: flex;
+        }
         .phone-wrapper {
             display: flex;
             align-items: center;

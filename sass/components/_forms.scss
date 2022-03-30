@@ -230,6 +230,11 @@
     }
 
     .pop-up-form-wrapper {
+        overflow: hidden;
+        height: 100%;
+        form {
+            padding-bottom: 150px;
+        }
         .form-top {
             background-color: $dark-green-1;
             padding: 25px;

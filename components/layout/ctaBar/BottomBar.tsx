@@ -13,7 +13,18 @@ export const BottomBar = ({className}: ComponentProps) => {
   return (
     <div className={className}>
         {show &&  <Modal classNames='form-modal' setShow={setFormToShow}><PopupBrochureRequestForm /></Modal>}
-
+        <button className='mobile-button' onClick={() => setFormToShow(true)}>
+                    <span className='icon-wrapper'>
+                        <Image 
+                            src='/icons/brochure/brochure-icon.svg'
+                            alt='Brochure'
+                            layout='responsive'
+                            width={84}
+                            height={70}
+                        />
+                    </span>
+                    <p>Request Your FREE Brochure</p>
+                </button>
         <div className='inner-wrapper con-reg'>
             <div className='phone-wrapper'>
                 <p>Call us free on:</p>
