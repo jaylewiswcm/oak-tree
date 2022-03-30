@@ -20,7 +20,7 @@ export const SelectInput = ({className, error, id, name, value, onChange,htmlFor
         <div className='input-label'>
         <select name={name} id={id} value={value} onChange={onChange}>
             <option value="" disabled selected>Please select an option</option>
-            {options.map(option => <option value={option}>{option}</option>)}
+            {options.map((option, index) => <option key={index} value={option}>{option}</option>)}
         </select>
         <label htmlFor={htmlFor}>{label}<span className={required ? 'required' : 'hide'}>*</span></label>
         </div>
