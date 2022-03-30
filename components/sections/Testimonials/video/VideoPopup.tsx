@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 // Components
 import Video from './Video';
 import VideoCarousel from './VideoCarousel';
+import Modal from '../../../modal/Modal'
 
 interface ComponentProps {
     selectedCx: {
@@ -19,20 +20,15 @@ interface ComponentProps {
 }
 
 const VideoPopup = ({selectedCx, show, setShow}:ComponentProps ) => {
-    useEffect(() => {
-        const dd = document.body;
-        if(show) {
-            dd.classList.add('show-modal');
-        } else {
-            dd.classList.remove('show-modal');
-        }
-    })
+
   return (
-    <div className='modal'>
-        <div className='modal-inner'>
-            <VideoCarousel  videoId={selectedCx.videoId} setShow={setShow} show={show}/>
-        </div>
-    </div>
+    // <div className={show ? 'modal show-modal' : 'modal'}>
+    //     <div className='modal-inner'>
+            <Modal  classNames='' show={show}>
+                <VideoCarousel  videoId={selectedCx.videoId} setShow={setShow} show={show}/>
+            </Modal>
+    //     </div>
+    // </div>
   )
 }
 

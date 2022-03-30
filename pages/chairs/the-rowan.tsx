@@ -1,12 +1,13 @@
 import React from 'react'
 import Image from 'next/image';
-
+import { PageUnderConstruction } from '../../components/PageUnderConstruction';
 const theRowan = () => {
     return (
         <>
-        <h1>The Oak Chair</h1>
-      </>
+            <PageUnderConstruction pageTitle='The Rowan'/>
+        </>
     )
 }
+
 
 export default theRowan;

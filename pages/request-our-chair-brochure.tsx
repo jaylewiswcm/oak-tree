@@ -6,7 +6,6 @@ import Reviews from '../components/sections/reviews/Reviews';
 import OtFamily from '../components/sections/customers/OtFamily';
 import OrphanBrochureForm from '../components/forms/OrphanBrochureForm';
 import Testimonials from '../components/sections/Testimonials/Testimonials';
-// import Testimonials from '../components/sections/testimonials/Testimonials';
 
 
 const requestOurChairBrochure = () => {

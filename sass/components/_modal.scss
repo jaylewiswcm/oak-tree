@@ -1,8 +1,6 @@
-body.show-modal {
+
+body.freeze {
     overflow: hidden;
-    .modal {
-        display: flex;
-    }
 }
 .exit-modal {
     position: absolute;
@@ -26,15 +24,25 @@ body.show-modal {
     display: none;
     align-items: center;
     justify-content: center;
-    z-index: 9999;
+    z-index: 99999;
     .modal-inner {
         background-color: $white;
         border-radius: 6px;
         width:90%;
         height:50%;
+        position: relative;
         @media(min-width:600px) {
             width:80%;
             height: 500px;
         }
     }
+    .form-modal {
+        max-width: 700px;
+        height: 85%;
+        // overflow: auto;
+    }
+}
+.modal.show-modal {
+    overflow: hidden;
+    display: flex;
 }

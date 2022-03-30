@@ -1,10 +1,10 @@
 import React from 'react'
 import Image from 'next/image';
-
+import { PageUnderConstruction } from '../../components/PageUnderConstruction';
 const theCedar = () => {
     return (
         <>
-          <h1>The Oak Chair</h1>
+            <PageUnderConstruction pageTitle='The Cedar'/>
         </>
     )
 }

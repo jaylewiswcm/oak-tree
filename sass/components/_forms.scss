@@ -1,126 +1,245 @@
-.brochure-form {
-    padding: 25px;
-    .heading {
-        font-weight: 900;
-        font-size: 1.7rem;
-        text-align: left;
-        span {
-            font-weight: 900;
-            font-size: 1.7rem; 
-        }
-    }
-    .info-and-image {
-        overflow: auto;
-        .info {
-            font-size: 1.2rem;
-            margin-top: 10px;
-        }
-        .image-wrapper {
-            width: 193px;
-            height: 100px;
-            margin-bottom: 5px;
-            float: right;
-        }
-    }
-  
-    form {
-        text-align: left;
-        margin-top: 25px;
 
-        .label, label {
-            font-size: 1rem;
-            font-weight: 600;
-            color: $dark-green-1
-        }
-        input[type=text], input[type=street], input[type=zip], input[type=tell], input[type=email] {
-            border: 1px solid $dark-green-5;
-            padding: 10px;
-            // box-shadow: 0 0 13px rgba(23,73,77,0.05);
-            font-size: 1.1rem;
-            font-weight: 400;
-            font-family: $fontText;
-            color: $dark-green-1;
-            margin-top: 10px;
-        }
-        input::placeholder {
-            font-size: 1.1rem;
-            font-weight: 400;
-            font-family: $fontText;
-            color: $grey
-        }
-        input[type=submit] {
-            width: 100%;
-            margin: 0 auto;
-            padding: 15px;
-            font-size: 1.1rem;
-            font-weight:600;
-            font-family: $fontText;
-            color: $white;
-            text-transform: uppercase;
-            background-color: #AD3665;
-            border: none;
-            border-radius: 4px;
-            box-shadow: 0 4px 16px rgba(173, 54, 101, 0.29);
-            cursor: pointer;
-            margin-top: 25px;
-            text-align: center;
-        }
-        .title-input-wrapper {
-            margin:15px 0;
-            display: flex;
-            .title {
-                display: flex;
-                align-items: center;
-                margin-right: 15px;
-                cursor: pointer;
-                input[type=radio] {
-                    width: 15px;
-                    height: 15px;
-                    border-radius: 2px;
-                    margin-right: 10px;
+    .generic-form {
+        padding: 25px;
+        overflow-y: auto;
+        overflow:auto;
+        height: calc(100vh - 100px);
+        position: relative;
+        .form-section {
+            margin-bottom: 15px;
+            .section-heading {
+                font-size: 1.6rem;
+                font-weight: 500;
+                color: $dark-green-2;
+                margin-bottom: 15px;
+            }
+            .radio-wrapper {
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+                gap:15px;
+                @media(min-width: 1150px) {
+                    grid-template-columns: repeat(4,1fr);
+                }
+                .radio {
+                    border: 1px $lighter-grey solid;
+                    padding: 15px;
+                    font-size: 1.6rem;
+                    font-weight: 400;
+                    font-family: $fontText;
+                    border-radius: 6px;
+                    position: relative;
+                    display: flex;
+                    align-items: center;
                     cursor: pointer;
+                    label {
+                        position: absolute;
+                        top:0;
+                        left:0;
+                        width: 100%;
+                        height: 100%;
+                        opacity: 0;
+                    }
+                    p {
+                        margin-left: 10px;
+                    }
+                }
+                .radio:hover {
+                    border: 1px $blue-3 solid;
+                    box-shadow: 0 0 21px rgba(58, 132, 192,0.18);
+                }
+        
+            }
+            .input-wrapper {
+                display: flex;
+                flex-direction: column-reverse;
+                margin-bottom: 15px;
+                margin-left: 25px;
+                .label, label {
+                    font-size: 1.6rem;
+                    font-weight: 400;
+                    color: $black;
+                    margin-bottom: 8px;
+                    color: $dark-green-1;
+                }
+                .required {
+                    color: $red-2;
+                }
+
+                input[type=text], input[type=tel], input[type=email], select {
+                    border: 1px $lighter-grey solid;
+                    padding: 15px;
+                    font-size: 1.6rem;
+                    font-weight: 400;
+                    font-family: $fontText;
+                    border-radius: 6px;
+                    outline-style: none;
+
+                }
+                input[type=text]:focus, input[type=tel]:focus, input[type=email]:focus, select:focus {
+                    border: 1px $blue-3 solid;
+                    box-shadow: 0 0 21px rgba(58, 132, 192,0.18);
+                }
+                input[type=text]:focus + label, input[type=tel]:focus + label, input[type=email]:focus  + label, select:focus + label {
+                    color:$blue-3;
+                }
+                .error-p {
+                    font-size:1.6rem;
+                    font-weight: 300;
+                    color: $red-2;
+                    margin-bottom:-5px;
+                    margin-top: 8px;
+                }                    
+            }
+            .select-wrapper {
+         
+               
+                .input-label {
+                    display: flex;
+                    flex-direction: row-reverse;
+                    justify-content:  flex-end;
+                    align-items: center;
                 }
                 label {
-                    font-size: 1.1rem;
-                    font-weight: 400;
-                    color: $grey;
-                    cursor: pointer;
-                }
-            }
-        }
-        .form-row {
-            display: flex;
-            width: 100%;
-            align-items: center;
-            justify-content: center;
-            .input-wrapper {
-                width: 50%;
-                margin: 0 auto;
-                margin-bottom: 15px;
-                &:first-of-type {
                     margin-right: 15px;
                 }
-                input {
-                    width: 100%;;
+                select {
+                    width: calc(100% - 160px);
+                    text-transform: capitalize;
+                }
+                option {
+                    text-transform: capitalize;
+                }
+                .error-p {
+                    margin-left: 160px;
                 }
             }
-            .address-wrapper {
-                width: 70%!important;
+            .input-wrapper.errors {
+                label,.label {
+                    color: $red-3;
+                }
+                input,select {
+                    border: 1px $red-3 solid;
+                }
+                input:focus, select:focus {
+                    border: 1px $red-3 solid;
+                    box-shadow:  0 0 18px rgba(180, 62, 59, 0.35);
+                }
+                input:focus  + label, select:focus + label {
+                    color:$red-3;
+                }
+            }
+ 
+        }
+        .action-wrapper {
+            padding-top: 25px;
+            padding-bottom: 25px;
+            display: flex;
+            input[type=submit] {
+                border: none;
+                background-color: $oaktree-green;
+                color: $white;
+                padding: 20px 40px;
+                font-size: 1.8rem;
+                font-weight: 500;
+                border-radius: 5px;
+                box-shadow: 0 0 24px rgba(75, 176, 107, 0.56);
+                margin-left: auto;
+                transition: 0.1s;
+            }
+            input[type=submit]:active {
+                background-color: $green-5;
+                color: $oaktree-green;
+                box-shadow: none;
             }
         }
-        .data-protection {
+        .form-button-wrapper {
             display: flex;
-            input {
-                width: 25px;
-                height: 25px;
-                margin-right: 15px;
+            justify-content: space-between;
+            padding: 15px 0;
+            .action-wrapper {
+                display: none;
             }
-            label {
-                font-size: 0.9rem;
-                font-weight: 300;
-                color: $grey;
-                letter-spacing: 0.5px;
+            .form-buttons{
+                font-size: 1.6rem;
+                background-color: $oaktree-green;
+                color: $white;
+            }
+            .form-prev.swiper-button-disabled {
+                background-color: $light-green-1;
+                color: $oaktree-green;
+                cursor:not-allowed;
+            }
+            input[type=submit] {
+                border: none;
+                background-color: $oaktree-green;
+                color: $white;
+                padding: 15px 25px;
+                font-size: 1.6rem;
+                font-weight: 500;
+                border-radius: 5px;
+                box-shadow: 0 0 24px rgba(75, 176, 107, 0.56);
+                margin-left: auto;
+                transition: 0.1s;
+            }
+            input[type=submit]:active {
+                background-color: $green-5;
+                color: $oaktree-green;
+                box-shadow: none;
+            }
+        }
+        .progress-bar {
+            bottom: 0;
+            position: relative;
+            background-color: $lighter-grey;
+            margin-top: 15px;
+            .swiper-pagination-progressbar-fill {
+                background-color: $oaktree-green;
+            }
+        }
+        .step-counter {
+            width: 100%;
+            text-align: center;
+            padding-top: 10px;
+            p {
+                color: $oaktree-green;
+                font-size: 1.6rem;
+                font-weight: 400;
+            }   
+        }
+    }
+    .generic-form::-webkit-scrollbar {
+        width: 8px;
+    }
+     
+    .generic-form::-webkit-scrollbar-track {
+        background-color: $lighter-grey;
+    }
+     
+    .generic-form::-webkit-scrollbar-thumb {
+      background-color: $dark-green-2;
+    }
+
+    .collection-form {
+        height:100%;
+        max-height: 100%;
+        .form-section {
+            .input-wrapper {
+                margin-left: 0;
             }
         }
     }
-}
+
+    .pop-up-form-wrapper {
+        .form-top {
+            background-color: $dark-green-1;
+            padding: 25px;
+            h6 {
+                color: $white;
+                font-size: 2.6rem;
+            }
+            .supporting-text {
+                color: $white;
+                font-size: 1.8rem;
+            }
+        }
+    }

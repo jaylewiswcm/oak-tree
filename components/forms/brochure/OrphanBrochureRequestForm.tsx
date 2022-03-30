@@ -14,7 +14,6 @@ const BrochureRequestForm = ({productType}: ComponentProps) => {
         'postal-code': '',
         'tel': '',
         'email': '',
-
     },
 )
 const [formErrors, setFormErrors] = useState([
@@ -70,14 +69,14 @@ const [formErrors, setFormErrors] = useState([
 ])
 
 const RequestBrochure = (event:any) => {
-event.preventDefault() 
+    event.preventDefault() 
     let field: keyof typeof formData; 
     let index = 0;
 
     let updatedErrors = [...formErrors];
 
     for(field in formData) {
-        let error ={
+        let error = {
                 'field': field, 
                 'errors': { 
                     "error": false, 
@@ -93,7 +92,7 @@ event.preventDefault()
                     "type": 'This field cant be left empty' 
                 }};
         }
-        // 
+        
         updatedErrors[index] = error;   
         setFormErrors(updatedErrors);
 
@@ -123,10 +122,10 @@ const onChange = (e:React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTML
 }
 
   return (
-    <form onSubmit={RequestBrochure}>
+    <form onSubmit={RequestBrochure} className='generic-form'>
     <div className='form-section'>
         <p className="section-heading">Personal Information</p>
-        <div className='input-wrapper select-wrapper'>
+        <div className={formErrors[0].errors.error ? 'input-wrapper select-wrapper errors' : 'input-wrapper select-wrapper'}>
             {/* <div className='radio-wrapper'>
                 <div className='radio'>
                     <input type="radio" id="Mrs" name="title" value="Mrs"  />
@@ -158,12 +157,12 @@ const onChange = (e:React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTML
             </select>
             <label htmlFor='title'>What is your title? <span className='required'>*</span></label>
         </div>
-        <div className='input-wrapper'>
+        <div className={formErrors[1].errors.error ? 'input-wrapper errors' : 'input-wrapper'}>
             {formErrors.map(field => <>{field.field === 'fname' && field.errors.error && <p className='error-p'>{field.errors.type}</p>}</>)}
             <input type="text" id="fname" name="fname" placeholder='Enter your first name' autoComplete="given-name" value={formData.fname} onChange={(e) => onChange(e)} />
             <label htmlFor="fname">First name <span className='required'>*</span></label>
         </div>
-        <div className='input-wrapper'>
+        <div className={formErrors[2].errors.error ? 'input-wrapper errors' : 'input-wrapper'}>
             {formErrors.map(field => <>{field.field === 'lname' && field.errors.error && <p className='error-p'>{field.errors.type}</p>}</>)}
             <input type="text" id="lname" name="lname" placeholder='Enter your last name' autoComplete="family-name" value={formData.lname} onChange={(e) => onChange(e)} />
             <label htmlFor="lname">Last name <span className='required'>*</span></label>
@@ -171,12 +170,12 @@ const onChange = (e:React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTML
     </div>
     <div className="form-section">
         <p className="section-heading">Your Address</p>
-        <div className="input-wrapper">
+        <div className={formErrors[3].errors.error ? 'input-wrapper errors' : 'input-wrapper'}>
             {formErrors.map(field => <>{field.field === 'street-address' && field.errors.error && <p className='error-p'>{field.errors.type}</p>}</>)}
             <input type="text" id="street-address" name="street-address" autoComplete="home address-line1" placeholder='Enter your street address' value={formData['street-address']} onChange={(e) => onChange(e)}  />
             <label htmlFor="street-address">Street Address <span className='required'>*</span></label>
         </div>
-        <div className="input-wrapper">
+        <div className={formErrors[4].errors.error ? 'input-wrapper errors' : 'input-wrapper'}>
             {formErrors.map(field => <>{field.field === 'postal-code' && field.errors.error && <p className='error-p'>{field.errors.type}</p>}</>)}
             <InputMask 
                 type="text"
@@ -196,7 +195,7 @@ const onChange = (e:React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTML
     </div>
     <div className="form-section">
         <p className="section-heading">Contact Information</p>
-        <div className="input-wrapper">
+        <div className={formErrors[5].errors.error ? 'input-wrapper errors' : 'input-wrapper'}>
             {formErrors.map(field => <>{field.field === 'tel' && field.errors.error && <p className='error-p'>{field.errors.type}</p>}</>)}  
             <InputMask 
                 id="tel"
@@ -212,7 +211,7 @@ const onChange = (e:React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTML
             {/* <input type="tel" id="tel" name="tel" autoComplete="tel" placeholder='Enter your telephone number' value={formData.tel} onChange={(e) => onChange(e)} /> */}
             <label htmlFor="tel">Phone Number <span className='required'>*</span></label>
         </div>
-        <div className="input-wrapper">
+        <div className={formErrors[6].errors.error ? 'input-wrapper errors' : 'input-wrapper'}>
             {formErrors.map(field => <>{field.field === 'email' && field.errors.error && <p className='error-p'>{field.errors.type}</p>}</>)}
             <input type="email" id="email" name="email" autoComplete="email" placeholder='Enter your email address' value={formData.email} onChange={(e) => onChange(e)} />
             <label htmlFor="email">Email Address <span className='required'>*</span></label>

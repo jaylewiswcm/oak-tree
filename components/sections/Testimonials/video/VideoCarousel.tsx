@@ -49,9 +49,6 @@ interface ComponentProps {
 
   return (
     <div className='video-carousel'>
-        <div className='exit-modal'>
-            <button className='exit-btn' onClick={() => setShow(false) }>Close</button>
-        </div>
         {/* <div className='carousel-navigation nav-prev'>
             <button className='prev' onClick={() => changeVideoId('prev')}></button>
         </div> */}

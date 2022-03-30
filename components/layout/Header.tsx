@@ -16,6 +16,21 @@ const Header = () => {
 
     return (  
         <header>
+            {/* <div className='top-header'>
+                <div className='inner-wrapper con-reg'>
+                    <div className='header-bhf'>
+                        <Image 
+                            src='/bhf/bhf-logo.svg'
+                            alt='Oak Tree Mobility'
+                            layout='responsive'
+                            width='106'
+                            height='29'
+                        />
+                    </div>
+                    <p>Questions? Call us FREE today on:</p>
+                    <Link href='tel:0800094999'><a className='number'>0800 094 999</a></Link>
+                </div>
+            </div> */}
             <div className='header-inner con-reg'>
                 <div className="header-logo">
                     <Link href="/">
@@ -30,14 +45,14 @@ const Header = () => {
                          </a>
                     </Link>
                 </div>
-                <div className='header-bhf'>
+                {/* <div className='header-bhf'>
                     <Image 
                           src='/bhf/supporting-bhf.svg'
                           alt='Oak Tree Mobility'
                           width='117.07'
                           height='49.84'
                     />
-                </div>
+                </div> */}
                 <nav className='main-nav'>
                     <ul>
                         <li><Link href='/'><a>Home</a></Link></li>
@@ -48,8 +63,11 @@ const Header = () => {
                         <li><Link href='/express-delivery'><a>Express Delivery</a></Link></li>
                     </ul>
                 </nav>
+                {/* <div className='contact-us'>
+                    <button className='main-cta'><p>Contact us</p></button>
+                </div> */}
                 <div className='header-phone-number'>
-                   <p className='number-support'>Questions? Call us <b>free</b> today:</p>
+                   <p className='number-support'>Questions? Call us <b>free</b>:</p>
                    <p className='number'>0800 094 999</p>
                 </div> 
                 <div className='mobile-menu-btn'>

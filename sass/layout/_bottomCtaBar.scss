@@ -1,0 +1,59 @@
+.bottom-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: $dark-green-1;
+    z-index: 9999;
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.30);
+    transition: 0.2s bottom ease-in-out;
+    .inner-wrapper {
+        display: flex;
+        position: relative;
+        .phone-wrapper {
+            display: flex;
+            align-items: center;
+            padding: 15px;
+            p {
+                font-size: 1.8rem;
+                font-weight: 400;
+                color: $white;
+                margin-right: 15px;
+            }
+            .number {
+                font-size: 3rem;
+                font-weight: 500;
+                color: $white;
+            }
+        }
+        .brochure-cta {
+            margin-left: auto;
+            position: absolute;
+            right:15px;
+            bottom: 0;
+            .bottom-cta {
+                background-color: $oaktree-green;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 8px 8px 0px 0px;
+                box-shadow: 0 0 21px rgba(0, 0, 0, 0.40);
+                padding:15px 30px;
+                .icon-wrapper {
+                    width: 80px;
+                    margin-right: 15px;
+                }
+                p {
+                    font-size: 2rem;
+                    font-weight: 500;
+                    color: $white;
+                    text-align: left;
+                }
+            }
+        }
+    }
+}
+
+.hide-bar {
+    bottom: -100px;
+}
