@@ -34,12 +34,12 @@ export const Review = ({review}:ComponentProps) => {
     <div className='review-footer'>
         <p className='date'>{review.date}</p> 
         <div className='logo'>
-        <Image
-            src='/trustpilot/trustpilot-logo.svg'
-            alt='Trustpilot'
-            width='107.31'
-            height='26.35'
-        />
+            <Image
+                src='/trustpilot/trustpilot-logo.svg'
+                alt='Trustpilot'
+                width='107.31'
+                height='26.35'
+            />
         </div>
     </div>
 </div> 

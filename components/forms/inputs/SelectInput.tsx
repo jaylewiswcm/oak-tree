@@ -11,18 +11,19 @@ interface ComponentProps {
     label: string
     required: boolean
     options: Array<string>
+    placeholder: string
 }
 
-export const SelectInput = ({className, error, id, name, value, onChange,htmlFor,label,required, options}:ComponentProps) => {
+export const SelectInput = ({className, error, id, name, value, onChange,htmlFor,label,required, options, placeholder}:ComponentProps) => {
   return (
     <div className={className}>
         <p className='error-p'>{error}</p>
-        <div className='input-label'>
+        <div className='input-and-label'>
         <select name={name} id={id} value={value} onChange={onChange}>
-            <option value="" disabled selected>Please select an option</option>
+            <option value="" disabled selected>{placeholder}</option>
             {options.map((option, index) => <option key={index} value={option}>{option}</option>)}
         </select>
-        <label htmlFor={htmlFor}>{label}<span className={required ? 'required' : 'hide'}>*</span></label>
+        <label htmlFor={htmlFor}>{label} <span className={required ? 'required' : 'hide'}>*</span></label>
         </div>
     </div>
   )

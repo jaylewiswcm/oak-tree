@@ -14,7 +14,7 @@ interface ComponentProps {
 export const TelInput = ({className, error, id, value, onChange,htmlFor,required ,placeholder}:ComponentProps) => {
   return (
     <div className={className}>
-    <p>{error}</p>
+    <p className='error-p'>{error}</p>
         <InputMask 
             id={id}
             name="tel"

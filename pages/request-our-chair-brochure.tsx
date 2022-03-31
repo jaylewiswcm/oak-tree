@@ -354,6 +354,7 @@ const requestOurChairBrochure = () => {
                 <div className='orphan-con-reg'>
                     <p className='subheading'>Limited Time Only</p>
                     <h6>Half Price Sale</h6>
+                    <p>Get your FREE copy of our very latest brochure and enjoy our special offers…</p>
                 </div>
             </div>
             <div className='occupational-therapist orphan-con-reg orphan-padding'>

@@ -93,8 +93,13 @@
        }
        .swiper {
            padding: 25px 15px;
+           .swiper-slide {
+            height: auto;
+          }
        }
        .review {
+           display: flex;
+           flex-direction: column;
             width: 100%;
             margin: 0 auto;
            background-color: $white;
@@ -103,6 +108,7 @@
            padding: 25px;
            border-radius: 18px;;
            cursor: grab;
+           height: 100%;
            @media(min-width: 700px) and (max-width: 999px){
             width: 80%;
            }
@@ -157,6 +163,7 @@
            }
            .review-content {
                padding: 15px 0;
+               margin-bottom: auto;
                p {
                    font-size: 1.6rem;
                    font-weight: 400;

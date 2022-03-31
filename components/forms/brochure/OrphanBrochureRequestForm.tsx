@@ -1,14 +1,20 @@
 import React, { useState } from 'react'
-import InputMask from 'react-input-mask';
+import { useRouter } from 'next/router';
+// Input components
+import {SelectInput} from '../inputs/SelectInput';
+import {TextInput} from '../inputs/TextInput';
+import {EmailInput} from '../inputs/EmailInput';
+import {TelInput} from '../inputs/TelInput';
+import {PostCodeInput} from '../inputs/PostCodeInput';
 
 interface ComponentProps {
     productType : string
 }
 
 const BrochureRequestForm = ({productType}: ComponentProps) => {
+    const router = useRouter()
     const [formData, setFormData] = useState({
         "title": '',
-        'fname': '',
         'lname': '',
         'street-address': '',
         'postal-code': '',
@@ -19,13 +25,6 @@ const BrochureRequestForm = ({productType}: ComponentProps) => {
 const [formErrors, setFormErrors] = useState([
     {
         "field" : "title",
-        "errors": {
-            "error" : false,
-            "type" : ''
-        }
-    },   
-    {
-        "field" : "fName",
         "errors": {
             "error" : false,
             "type" : ''
@@ -70,11 +69,10 @@ const [formErrors, setFormErrors] = useState([
 
 const RequestBrochure = (event:any) => {
     event.preventDefault() 
-    let field: keyof typeof formData; 
-    let index = 0;
-
+    let isError: boolean = false;
     let updatedErrors = [...formErrors];
-
+    let index = 0;
+    let field: keyof typeof formData; 
     for(field in formData) {
         let error = {
                 'field': field, 
@@ -83,21 +81,25 @@ const RequestBrochure = (event:any) => {
                     "type": '' 
                 }
         };
+        
         // Empty field validation
         if(formData[field] === '') {
             error = {
                 'field': field, 
                 'errors': { 
                     "error": true, 
-                    "type": 'This field cant be left empty' 
+                    "type": "Please don't leave field blank"
                 }};
+                isError = true;
         }
         
         updatedErrors[index] = error;   
         setFormErrors(updatedErrors);
-
         index++;
     }
+    if(isError === false) {
+        router.push('/thank-you-for-your-request');
+    } 
 }
 
 const onChange = (e:React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLSelectElement>
@@ -122,101 +124,80 @@ const onChange = (e:React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTML
 }
 
   return (
-    <form onSubmit={RequestBrochure} className='generic-form'>
-    <div className='form-section'>
-        <p className="section-heading">Personal Information</p>
-        <div className={formErrors[0].errors.error ? 'input-wrapper select-wrapper errors' : 'input-wrapper select-wrapper'}>
-            {/* <div className='radio-wrapper'>
-                <div className='radio'>
-                    <input type="radio" id="Mrs" name="title" value="Mrs"  />
-                    <label htmlFor="Mrs">Mrs</label>
-                    <p>Mrs</p>
+    <form onSubmit={RequestBrochure} className='generic-form orphan-form'>
+        <div className='tight-form-wrapper'>
+            <SelectInput 
+                     className={formErrors[0].errors.error ? 'input-wrapper select-wrapper errors' : 'input-wrapper select-wrapper'}
+                     error={formErrors[0].errors.type}
+                     id="title"
+                     name="title"
+                     value={formData.title} 
+                     onChange={(e:any) => onChange(e)} 
+                     htmlFor="title"
+                     label='Your title'
+                     placeholder='Title'
+                     required={true}
+                     options={['mrs','mr','ms','miss']}
+            />
+                <TextInput 
+                    className={formErrors[1].errors.error ? 'input-wrapper errors' : 'input-wrapper'}
+                    error={formErrors[1].errors.type}
+                    id="lname"
+                    name="lname"
+                    autoComplete="family-name"
+                    placeholder='Enter your last name'
+                    value={formData.lname} 
+                    onChange={(e:any) => onChange(e)} 
+                    htmlFor="lname"
+                    label='Last name'
+                    required={true}
+                />
+            </div>
+            <div className='tight-form-wrapper'>
+                <PostCodeInput 
+                    className={formErrors[2].errors.error ? 'input-wrapper post-code-wrapper errors' : 'input-wrapper post-code-wrapper'}
+                    error={formErrors[2].errors.type}
+                    id="postal-code"
+                    placeholder='Enter your postal code'
+                    value={formData['postal-code']} 
+                    onChange={(e:any) => onChange(e)} 
+                    htmlFor="postal-code'"
+                    required={true}
+                />
+                <TextInput 
+                    className={formErrors[3].errors.error ? 'input-wrapper errors' : 'input-wrapper'}
+                    error={formErrors[3].errors.type}
+                    id="street-address"
+                    name="street-address"
+                    autoComplete="home address-line1"
+                    placeholder='Enter your last name'
+                    value={formData['street-address']} 
+                    onChange={(e:any) => onChange(e)} 
+                    htmlFor="street-address"
+                    label='Street Address'
+                    required={true}
+                />
                 </div>
-                <div className='radio'>
-                    <input type="radio" id="Mr" name="title" value="Mr" />
-                    <label htmlFor="Mr">Mr</label>
-                    <p>Mr</p>
-                </div>
-                <div className='radio'>
-                    <input type="radio" id="Ms" name="title" value="Ms"/>
-                    <label htmlFor="Ms">Ms</label>
-                    <p>Ms</p>
-                </div>
-                <div className='radio'>
-                    <input type="radio" id="Miss" name="title" value="Miss" />
-                    <label htmlFor="Miss">Miss</label>
-                    <p>Miss</p>
-                </div>
-            </div> */}
-            <select name="title" id="title" value={formData.title} onChange={(e) => onChange(e)}>
-                <option value="" disabled selected>Please select an option</option>
-                <option value="mrs">Mrs</option>
-                <option value="mr">Mr</option>
-                <option value="ms">Ms</option>
-                <option value="miss">Miss</option>
-            </select>
-            <label htmlFor='title'>What is your title? <span className='required'>*</span></label>
-        </div>
-        <div className={formErrors[1].errors.error ? 'input-wrapper errors' : 'input-wrapper'}>
-            {formErrors.map(field => <>{field.field === 'fname' && field.errors.error && <p className='error-p'>{field.errors.type}</p>}</>)}
-            <input type="text" id="fname" name="fname" placeholder='Enter your first name' autoComplete="given-name" value={formData.fname} onChange={(e) => onChange(e)} />
-            <label htmlFor="fname">First name <span className='required'>*</span></label>
-        </div>
-        <div className={formErrors[2].errors.error ? 'input-wrapper errors' : 'input-wrapper'}>
-            {formErrors.map(field => <>{field.field === 'lname' && field.errors.error && <p className='error-p'>{field.errors.type}</p>}</>)}
-            <input type="text" id="lname" name="lname" placeholder='Enter your last name' autoComplete="family-name" value={formData.lname} onChange={(e) => onChange(e)} />
-            <label htmlFor="lname">Last name <span className='required'>*</span></label>
-        </div>
-    </div>
-    <div className="form-section">
-        <p className="section-heading">Your Address</p>
-        <div className={formErrors[3].errors.error ? 'input-wrapper errors' : 'input-wrapper'}>
-            {formErrors.map(field => <>{field.field === 'street-address' && field.errors.error && <p className='error-p'>{field.errors.type}</p>}</>)}
-            <input type="text" id="street-address" name="street-address" autoComplete="home address-line1" placeholder='Enter your street address' value={formData['street-address']} onChange={(e) => onChange(e)}  />
-            <label htmlFor="street-address">Street Address <span className='required'>*</span></label>
-        </div>
-        <div className={formErrors[4].errors.error ? 'input-wrapper errors' : 'input-wrapper'}>
-            {formErrors.map(field => <>{field.field === 'postal-code' && field.errors.error && <p className='error-p'>{field.errors.type}</p>}</>)}
-            <InputMask 
-                type="text"
-                id="postal-code"
-                name="postal-code"
-                autoComplete="home postal-code"
-                placeholder='Enter your postal code'
-                value={formData['postal-code']}
-                onChange={(e) => onChange(e)} 
-                mask='**** ***' 
-                >
-                    
-            </InputMask>
-            {/* <input type="text" id="postal-code" name="postal-code" autoComplete="home postal-code" placeholder='Enter your postal code' value={formData['postal-code']} onChange={(e) => onChange(e)} /> */}
-            <label htmlFor="postal-code">Postal Code <span className='required'>*</span></label>
-        </div>
-    </div>
-    <div className="form-section">
-        <p className="section-heading">Contact Information</p>
-        <div className={formErrors[5].errors.error ? 'input-wrapper errors' : 'input-wrapper'}>
-            {formErrors.map(field => <>{field.field === 'tel' && field.errors.error && <p className='error-p'>{field.errors.type}</p>}</>)}  
-            <InputMask 
-                id="tel"
-                name="tel"
-                autoComplete="tel"
-                type="tel"
-                placeholder='Enter your telephone number'
-                mask='99999 999999' 
-                value={formData.tel} 
-                onChange={(e) => onChange(e)}>
-                    
-            </InputMask>
-            {/* <input type="tel" id="tel" name="tel" autoComplete="tel" placeholder='Enter your telephone number' value={formData.tel} onChange={(e) => onChange(e)} /> */}
-            <label htmlFor="tel">Phone Number <span className='required'>*</span></label>
-        </div>
-        <div className={formErrors[6].errors.error ? 'input-wrapper errors' : 'input-wrapper'}>
-            {formErrors.map(field => <>{field.field === 'email' && field.errors.error && <p className='error-p'>{field.errors.type}</p>}</>)}
-            <input type="email" id="email" name="email" autoComplete="email" placeholder='Enter your email address' value={formData.email} onChange={(e) => onChange(e)} />
-            <label htmlFor="email">Email Address <span className='required'>*</span></label>
-        </div>
-    </div>
+                <TelInput 
+                    className={formErrors[4].errors.error ? 'input-wrapper errors' : 'input-wrapper'}
+                    error={formErrors[4].errors.type}
+                    id="tel"
+                    placeholder='Enter your telephone number'
+                    value={formData['tel']} 
+                    onChange={(e:any) => onChange(e)} 
+                    htmlFor="tel"
+                    required={true}
+                />
+                <EmailInput 
+                    className={formErrors[5].errors.error ? 'input-wrapper errors' : 'input-wrapper'}
+                    error={formErrors[5].errors.type}
+                    id="email"
+                    placeholder='Enter your email address'
+                    value={formData['email']} 
+                    onChange={(e:any) => onChange(e)} 
+                    htmlFor="email"
+                    required={true}
+                />
     <div className='form-section action-wrapper'>
         <input type="submit" value='Request Your Free Brochure' />
     </div>

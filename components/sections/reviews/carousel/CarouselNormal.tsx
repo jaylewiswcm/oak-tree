@@ -22,6 +22,7 @@ import { Navigation, Pagination, Autoplay } from "swiper";
             nextEl: '.slide-next',
             prevEl: '.slide-prev',
         }}
+        loop={true}
         allowTouchMove={true}
         pagination={{
         clickable: true,
@@ -31,7 +32,7 @@ import { Navigation, Pagination, Autoplay } from "swiper";
         breakpoints={{
             1000: {
                 slidesPerView: 2,
-                spaceBetween:15
+                spaceBetween:50
             },
             800: {
                 slidesPerView:1

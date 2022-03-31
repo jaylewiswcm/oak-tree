@@ -14,7 +14,7 @@ interface ComponentProps {
 export const EmailInput = ({className, error, id, value, onChange,htmlFor,required,placeholder}:ComponentProps) => {
   return (
     <div className={className}>
-    <p>{error}</p>
+    <p className='error-p'>{error}</p>
     <input type="email" id={id} name="email" autoComplete="email" placeholder={placeholder} value={value} onChange={onChange} />
     <label htmlFor={htmlFor}>Email Address <span className={required ? 'required' : 'required hide'}>*</span></label>
 </div>

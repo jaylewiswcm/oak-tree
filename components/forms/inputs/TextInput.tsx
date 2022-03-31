@@ -19,7 +19,7 @@ export const TextInput = ({className, error, id, name, autoComplete, placeholder
                   <div className={className}>
                     <p className='error-p'>{error}</p>
                     <input type="text" id={id} name={name} autoComplete={autoComplete} placeholder={placeholder} value={value} onChange={onChange}  />
-                    <label htmlFor={htmlFor}>{label}<span className={required ? 'required' : 'hide'}>*</span></label>
+                    <label htmlFor={htmlFor}>{label} <span className={required ? 'required' : 'hide'}>*</span></label>
                 </div>
   )
 }

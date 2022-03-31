@@ -12,18 +12,18 @@ interface ComponentProps {
 }
 
 export const PostCodeInput = ({className, error, id, value, onChange,htmlFor,required,placeholder}:ComponentProps) => {
-  return (
+  return ( 
     <div className={className}>
-    <p>{error}</p>
+    <p className='error-p'>{error}</p>
             <InputMask 
-                type="text"
                 id={id}
                 name="postal-code"
                 autoComplete="home postal-code"
+                type="text"
                 placeholder={placeholder}
+                mask='' 
                 value={value}
                 onChange={onChange} 
-                mask='**** ***' 
                 >
             </InputMask>
             <label htmlFor={htmlFor}>Postal Code <span className={required ? 'required' : 'required hide'}>*</span></label>

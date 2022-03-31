@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 import Image from 'next/image';
 import Modal from '../../modal/Modal';
-import PopupBrochureRequestForm from '../../forms/brochure/PopupBrochureRequestForm';
+import PopupBrochureRequestForm from '../../forms/PopupBrochureRequestForm';
 
 interface ComponentProps {
     className: string
@@ -12,7 +12,7 @@ export const BottomBar = ({className}: ComponentProps) => {
   const [show, setFormToShow] = useState(false)
   return (
     <div className={className}>
-        {show &&  <Modal classNames='form-modal' setShow={setFormToShow}><PopupBrochureRequestForm /></Modal>}
+        {show &&  <Modal classNames='form-modal' setShow={setFormToShow}><PopupBrochureRequestForm setShow={setFormToShow} /></Modal>}
         <button className='mobile-button' onClick={() => setFormToShow(true)}>
                     <span className='icon-wrapper'>
                         <Image 

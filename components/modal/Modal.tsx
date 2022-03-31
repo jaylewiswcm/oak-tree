@@ -15,9 +15,9 @@ const Modal = ({children, classNames, setShow}: ComponentProps) => {
   return (
     <div className='modal show-modal'>
         <div className={`modal-inner ${classNames}`}>
-        <div className='exit-modal'>
+        {/* <div className='exit-modal'>
             <button className='exit-btn' onClick={() => setShow(false) }>Close</button>
-        </div>
+        </div> */}
         { children }
         </div>
     </div>
