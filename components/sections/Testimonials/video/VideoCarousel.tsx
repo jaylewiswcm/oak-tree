@@ -49,6 +49,7 @@ interface ComponentProps {
 
   return (
     <div className='video-carousel'>
+        <button className='close-modal' onClick={() => setShow(false)}>Close</button>
         {/* <div className='carousel-navigation nav-prev'>
             <button className='prev' onClick={() => changeVideoId('prev')}></button>
         </div> */}

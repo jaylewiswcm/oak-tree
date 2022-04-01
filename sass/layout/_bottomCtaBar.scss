@@ -3,13 +3,14 @@
     bottom: 0;
     left: 0;
     width: 100%;
-  
     z-index: 9999;
-
     transition: 0.2s bottom ease-in-out;
     display: flex;
     align-items: center;
     justify-content: center;
+
+    display: none;
+
     @media(min-width: 800px) {
         background-color: $dark-green-1;
         box-shadow: 0 0 24px rgba(0, 0, 0, 0.30);
@@ -95,5 +96,5 @@
 }
 
 .hide-bar {
-    bottom: -100px;
+    bottom: -150px;
 }

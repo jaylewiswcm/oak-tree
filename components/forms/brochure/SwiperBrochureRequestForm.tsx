@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import InputMask from 'react-input-mask';
-import { Swiper, SwiperSlide } from "swiper/react";
 import { useRouter } from 'next/router';
+import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/free-mode";

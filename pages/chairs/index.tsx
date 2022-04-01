@@ -55,7 +55,8 @@ const index = () => {
               <h2 className='heading' id='collection-top-chair'>Our Chairs</h2>
               <div className='collections-grid con-reg'>
                   {chairs.map(product => 
-                    <div className='collection-item' key={product.name}>
+                  <Link href={product!.url}>
+                    <a className='collection-item' key={product.name}>
                         <div className='image-wrapper'>
                             <Image 
                                 src={product!.collectionImage}
@@ -68,8 +69,9 @@ const index = () => {
                         <p className='subheading'>{product!.subheading}</p>
                         <h2>{product!.name}</h2>
                         <p className='desc'>{product!.desc}</p>
-                        <Link href={product!.url}><a className='main-cta'><p>View Chair</p></a></Link>
-                    </div>
+                       <div className='main-cta'><p>View Chair</p></div>
+                    </a>
+                    </Link>
                     )}
               </div>
               <Reviews orphan={false}/>
