@@ -54,9 +54,9 @@ const index = () => {
               </div>    
               <h2 className='heading' id='collection-top-chair'>Our Chairs</h2>
               <div className='collections-grid con-reg'>
-                  {chairs.map(product => 
-                  <Link href={product!.url}>
-                    <a className='collection-item' key={product.name}>
+                  {chairs.map((product, index) => 
+                  <Link href={product!.url} key={index}>
+                    <a className='collection-item'>
                         <div className='image-wrapper'>
                             <Image 
                                 src={product!.collectionImage}
