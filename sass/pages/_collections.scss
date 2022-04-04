@@ -5,6 +5,38 @@
         margin: 15px 0; 
         color: $dark-green-1;
     }
+
+    .intro {
+        max-width: 800px;
+        margin: 0 auto;
+        margin-top: 50px;
+        margin-bottom: 50px;
+
+        @media(min-width: 600px){
+            margin-top: 70px;
+        }
+        .heading {
+            text-align: left;
+            margin : 15px;
+            
+            @media(min-width: 600px){
+                text-align: center;
+                font-size: 3.6rem;
+                margin-bottom: 10px;
+            }
+        }
+        .statement {
+            padding: 0 15px;
+            line-height: 1.6;
+            @media(min-width: 600px){
+                text-align: center;
+                font-size: 1.8rem;
+            }
+        }
+    }
+    // .subheading {
+    //     padding: 0 15px;
+    // }
     .hero-split {
         display: flex;
         flex-direction: row;
@@ -430,4 +462,150 @@
             }
         }
     }
+}
+
+
+.collection-details {
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    @media(max-width: 550px) {
+        padding: 0;
+    }
+    .detail {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 30px;
+        @media(min-width: 850px) {
+            flex-direction: row;
+            margin-bottom: 50px;
+            &:nth-of-type(2) {
+                flex-direction: row-reverse;
+            }
+        }
+        &:last-of-type {
+            margin-bottom: 0;
+         }
+    }
+    .image-wrapper {
+        width: 100%;
+        margin-bottom: 25px;
+        @media(min-width: 700px) {
+            width: 50%;
+        }
+        @media(min-width: 850px) {
+            margin-bottom: 0
+        }
+    }
+    .content {
+        padding: 0 15px;
+        display: flex;
+        flex-direction: column;
+        // align-items: center;
+        justify-content: center;
+        @media(min-width:650px ) {
+            width: 80%;
+        }
+        @media(min-width: 850px) and (max-width: 1049px) {
+            width: 50%;
+            padding: 0 30px;
+        }
+        @media(min-width: 1050px) {
+            width: 50%;
+            padding: 0 50px;
+        }
+        h3{
+            font-size: 3.4rem;
+            font-weight: 600;
+            font-family: $fontText;
+            color: $dark-green-1;
+            margin-bottom: 15px;
+            @media(min-width: 700px) {
+                font-size: 3.6rem;
+            }
+        }
+        p { 
+            font-size: 1.7rem;
+            line-height: 1.6;
+            @media(min-width: 1050px) {
+                font-size: 1.8rem;
+                line-height: 1.7;
+            }
+        }
+    }
+
+}
+
+.bath-lift-testimonial {
+    margin-bottom: 50px;
+    h6 {
+        text-align: center;
+        width: 100%;
+    }
+    .inner-wrapper {
+        display: flex;
+        flex-direction: column;
+        margin-top: 25px;
+        @media(min-width: 800px) {
+            flex-direction: row;
+        }
+        .video-wrapper{ 
+            width: 100%;
+            height: 200px;
+            @media(min-width: 480px) and (max-width: 799px) {
+                height: 300px;
+            }
+            @media(min-width: 800px) {
+                height: 400px;
+                width: 60%;
+            }
+            div {
+                height: 100%;
+            }
+        }
+        .customer-details  {
+            width: 100%;
+            @media(min-width: 800px) {
+              padding: 30px;
+              width: 40%;
+            }
+            .name {
+                font-size: 2.6rem;
+                font-weight: 500;
+                color: $dark-green-1;
+                margin-top: 15px;
+                @media(min-width: 900px) {
+                    font-size: 3rem;
+                }
+            }
+            .location {
+                font-size: 1.8rem;
+                font-weight: 500;
+                color: $dark-green-2;
+                margin-top: 0px;
+                @media(min-width: 900px) {
+                    font-size: 2.2rem;
+                }
+            }
+            .statement {
+                font-size: 1.6rem;
+                font-weight: 400; 
+                margin-top: 8px;
+                margin-bottom: 25px;
+                line-height: 1.5;
+                @media(min-width: 900px) {
+                    font-size: 1.8rem;
+                    line-height: 1.7;
+                }
+            }
+            a {
+                margin-top: 30px;
+                font-size: 1.8rem;
+                color: $oaktree-green;
+                text-decoration: underline;
+                text-underline-offset: 3px;
+                text-decoration-thickness: 2px;
+            }
+        }
+    } 
 }

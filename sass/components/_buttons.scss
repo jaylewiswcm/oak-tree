@@ -19,6 +19,14 @@ button,.button {
         color: $white!important;
     }
 }
+.blue-cta {
+    background-color: $blue-3;
+    color: $white;
+    min-width:232px;
+    p {
+        color: $white!important;
+    }
+}
 .main-button {
     background-color: $oaktree-green;
     color: $white;

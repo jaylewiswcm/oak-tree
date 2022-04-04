@@ -25,6 +25,16 @@ button, .button {
   color: #fff !important;
 }
 
+.blue-cta {
+  background-color: #0086C5;
+  color: #fff;
+  min-width: 232px;
+}
+
+.blue-cta p {
+  color: #fff !important;
+}
+
 .main-button {
   background-color: #00AD74;
   color: #fff;
@@ -3152,6 +3162,44 @@ body.mobile-navbar .mobile-navigation {
   color: #17494D;
 }
 
+.product-collections .intro {
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+@media (min-width: 600px) {
+  .product-collections .intro {
+    margin-top: 70px;
+  }
+}
+
+.product-collections .intro .heading {
+  text-align: left;
+  margin: 15px;
+}
+
+@media (min-width: 600px) {
+  .product-collections .intro .heading {
+    text-align: center;
+    font-size: 3.6rem;
+    margin-bottom: 10px;
+  }
+}
+
+.product-collections .intro .statement {
+  padding: 0 15px;
+  line-height: 1.6;
+}
+
+@media (min-width: 600px) {
+  .product-collections .intro .statement {
+    text-align: center;
+    font-size: 1.8rem;
+  }
+}
+
 .product-collections .hero-split {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3764,6 +3812,243 @@ body.mobile-navbar .mobile-navigation {
   text-decoration-thickness: 2px;
   margin-top: 25px;
   color: #17494D;
+}
+
+.collection-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 100px;
+}
+
+@media (max-width: 550px) {
+  .collection-details {
+    padding: 0;
+  }
+}
+
+.collection-details .detail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 30px;
+}
+
+@media (min-width: 850px) {
+  .collection-details .detail {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-bottom: 50px;
+  }
+  .collection-details .detail:nth-of-type(2) {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+}
+
+.collection-details .detail:last-of-type {
+  margin-bottom: 0;
+}
+
+.collection-details .image-wrapper {
+  width: 100%;
+  margin-bottom: 25px;
+}
+
+@media (min-width: 700px) {
+  .collection-details .image-wrapper {
+    width: 50%;
+  }
+}
+
+@media (min-width: 850px) {
+  .collection-details .image-wrapper {
+    margin-bottom: 0;
+  }
+}
+
+.collection-details .content {
+  padding: 0 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (min-width: 650px) {
+  .collection-details .content {
+    width: 80%;
+  }
+}
+
+@media (min-width: 850px) and (max-width: 1049px) {
+  .collection-details .content {
+    width: 50%;
+    padding: 0 30px;
+  }
+}
+
+@media (min-width: 1050px) {
+  .collection-details .content {
+    width: 50%;
+    padding: 0 50px;
+  }
+}
+
+.collection-details .content h3 {
+  font-size: 3.4rem;
+  font-weight: 600;
+  font-family: "Euclid Circular A", "Helvetica", sans-serif;
+  color: #17494D;
+  margin-bottom: 15px;
+}
+
+@media (min-width: 700px) {
+  .collection-details .content h3 {
+    font-size: 3.6rem;
+  }
+}
+
+.collection-details .content p {
+  font-size: 1.7rem;
+  line-height: 1.6;
+}
+
+@media (min-width: 1050px) {
+  .collection-details .content p {
+    font-size: 1.8rem;
+    line-height: 1.7;
+  }
+}
+
+.bath-lift-testimonial {
+  margin-bottom: 50px;
+}
+
+.bath-lift-testimonial h6 {
+  text-align: center;
+  width: 100%;
+}
+
+.bath-lift-testimonial .inner-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 25px;
+}
+
+@media (min-width: 800px) {
+  .bath-lift-testimonial .inner-wrapper {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.bath-lift-testimonial .inner-wrapper .video-wrapper {
+  width: 100%;
+  height: 200px;
+}
+
+@media (min-width: 480px) and (max-width: 799px) {
+  .bath-lift-testimonial .inner-wrapper .video-wrapper {
+    height: 300px;
+  }
+}
+
+@media (min-width: 800px) {
+  .bath-lift-testimonial .inner-wrapper .video-wrapper {
+    height: 400px;
+    width: 60%;
+  }
+}
+
+.bath-lift-testimonial .inner-wrapper .video-wrapper div {
+  height: 100%;
+}
+
+.bath-lift-testimonial .inner-wrapper .customer-details {
+  width: 100%;
+}
+
+@media (min-width: 800px) {
+  .bath-lift-testimonial .inner-wrapper .customer-details {
+    padding: 30px;
+    width: 40%;
+  }
+}
+
+.bath-lift-testimonial .inner-wrapper .customer-details .name {
+  font-size: 2.6rem;
+  font-weight: 500;
+  color: #17494D;
+  margin-top: 15px;
+}
+
+@media (min-width: 900px) {
+  .bath-lift-testimonial .inner-wrapper .customer-details .name {
+    font-size: 3rem;
+  }
+}
+
+.bath-lift-testimonial .inner-wrapper .customer-details .location {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #456D70;
+  margin-top: 0px;
+}
+
+@media (min-width: 900px) {
+  .bath-lift-testimonial .inner-wrapper .customer-details .location {
+    font-size: 2.2rem;
+  }
+}
+
+.bath-lift-testimonial .inner-wrapper .customer-details .statement {
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin-top: 8px;
+  margin-bottom: 25px;
+  line-height: 1.5;
+}
+
+@media (min-width: 900px) {
+  .bath-lift-testimonial .inner-wrapper .customer-details .statement {
+    font-size: 1.8rem;
+    line-height: 1.7;
+  }
+}
+
+.bath-lift-testimonial .inner-wrapper .customer-details a {
+  margin-top: 30px;
+  font-size: 1.8rem;
+  color: #00AD74;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 2px;
 }
 
 .product-wrapper {

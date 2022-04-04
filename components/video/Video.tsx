@@ -9,8 +9,8 @@ interface ComponentProps {
 export const Video = ({videoId, placeholder}: ComponentProps) => {
 
     const opts: Options = {
-            height: '300',
-            width: '640',
+            height: '100%',
+            width: '100%',
             playerVars: {
                 autoplay: 0,
                 iv_load_policy: 3,
