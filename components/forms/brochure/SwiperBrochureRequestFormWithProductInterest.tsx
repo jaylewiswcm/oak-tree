@@ -246,7 +246,7 @@ const validateFormSectionBeforeChangingSlide = (event:React.MouseEvent<HTMLButto
                      label='What is your title?'
                      placeholder='Select title'
                      required={true}
-                     options={['mrs','mr','ms','miss']}
+                     options={[{"name": 'Mrs', "value": 'mrs'},{"name": 'Mr', "value": 'mr'},{"name": 'Ms', "value": 'ms'},{"name": 'Miss', "value": 'Miss'}]}
                 />
                 <TextInput 
                     className={formErrors[2].errors.error ? 'input-wrapper errors' : 'input-wrapper'}

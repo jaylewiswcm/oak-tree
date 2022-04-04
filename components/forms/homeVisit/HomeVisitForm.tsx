@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
-import InputMask from 'react-input-mask';
-import { useRouter } from 'next/router';
 import { Swiper, SwiperSlide } from "swiper/react";
+import { useRouter } from 'next/router'
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/free-mode";
@@ -17,19 +16,16 @@ import { SelectInput } from '../inputs/SelectInput';
 import { TelInput } from '../inputs/TelInput';
 import { EmailInput } from '../inputs/EmailInput';
 import { PostCodeInput } from '../inputs/PostCodeInput';
+import { ProductInterest } from '../inputs/ProductInterest';
 
-interface ComponentProps {
-    productType : string
-}
-
-const CollectionBrochureRequestForm = ({productType}: ComponentProps) => {
+const HomeVisitForm = () => {
     const router = useRouter()
     const [slideIndex, setSlideIndex] = useState(0);
     const [readyToSubmit, setReadyToSubmit] = useState(false);
      const [formData, setFormData] = useState([
         {
+            "product_interest" : '',
             "title": '',
-            'fname': '',
             'lname': '',
         },
         {
@@ -44,14 +40,14 @@ const CollectionBrochureRequestForm = ({productType}: ComponentProps) => {
 
 const [formErrors, setFormErrors] = useState([
     {
-        "field" : "title",
-        "errors": {
+        "field": "product_interest",
+        "errors" : {
             "error" : false,
-            "type" : ''
+            "type": ''
         }
-    },   
+    },    
     {
-        "field" : "fName",
+        "field" : "title",
         "errors": {
             "error" : false,
             "type" : ''
@@ -127,7 +123,7 @@ const RequestBrochure = (event:React.FormEvent<HTMLFormElement>) => {
         index++;
     }
     if(isError === false) {
-        router.push('/thank-you-for-your-request')
+        router.push('/thank-you-for-your-request')    
     } 
 }
 
@@ -136,7 +132,6 @@ const onChange = (e:React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTML
     let newData:Array<any> = [...formData];
     console.log(newData[index])
     newData[index][name] = e.target.value;
-
     setFormData(newData);
 }
 const validateFormSectionBeforeChangingSlide = (event:React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
@@ -154,7 +149,10 @@ const validateFormSectionBeforeChangingSlide = (event:React.MouseEvent<HTMLButto
                 index = 3;
                 break;
         case 2: 
-                index = 5
+                index = 5;
+                break;
+        case 2: 
+                index = 7;
                 break;
         default: 
             index = 0;
@@ -208,36 +206,59 @@ const validateFormSectionBeforeChangingSlide = (event:React.MouseEvent<HTMLButto
           modules={[Pagination, Navigation]}
           className="mySwiper"
           >
-
+              {/* <SwiperSlide className='no-swipe'>
+              <div className='form-section'>
+                <p className="section-heading">Personal Information</p>
+                <ProductInterest 
+                    className={formErrors[0].errors.error ? 'input-wrapper product-interest-wrapper errors' : 'input-wrapper product-interest-wrapper'}
+                    error={formErrors[0].errors.type}
+                    onChange={(e:any) => onChange(e,0)} 
+                    productChecked={formData[0].product_interest}
+                />
+            </div>
+              </SwiperSlide> */}
             <SwiperSlide className='no-swipe'>
                 <div className='form-section'>
                 <p className="section-heading">Personal Information</p>
                 <SelectInput 
                      className={formErrors[0].errors.error ? 'input-wrapper select-wrapper errors' : 'input-wrapper select-wrapper'}
                      error={formErrors[0].errors.type}
+                     id="product_interest"
+                     name="product_interest"
+                     value={formData[0].product_interest} 
+                     onChange={(e:any) => onChange(e,0)} 
+                     htmlFor="product_interest"
+                     label='What product are you interested in?'
+                     placeholder='Select product'
+                     required={true}
+                     options={[{"name": 'Chairs', "value": 'chairs'}, {"name": 'Beds', "value": 'beds'},{"name": 'Bath Lifts', "value": 'bath_lifts'}]}
+                />
+                <SelectInput 
+                     className={formErrors[1].errors.error ? 'input-wrapper select-wrapper errors' : 'input-wrapper select-wrapper'}
+                     error={formErrors[1].errors.type}
                      id="title"
                      name="title"
                      value={formData[0].title} 
                      onChange={(e:any) => onChange(e,0)} 
                      htmlFor="title"
                      label='What is your title?'
-                     placeholder='Select Title'
+                     placeholder='Select title'
                      required={true}
                      options={[{"name": 'Mrs', "value": 'mrs'},{"name": 'Mr', "value": 'mr'},{"name": 'Ms', "value": 'ms'},{"name": 'Miss', "value": 'Miss'}]}
                 />
-                <TextInput 
-                    className={formErrors[1].errors.error ? 'input-wrapper errors' : 'input-wrapper'}
-                    error={formErrors[1].errors.type}
+                {/* <TextInput 
+                    className={formErrors[2].errors.error ? 'input-wrapper errors' : 'input-wrapper'}
+                    error={formErrors[2].errors.type}
                     id="fname"
                     name="fname"
                     autoComplete="given-name"
                     placeholder='Enter your first name'
-                    value={formData[0].fname} 
-                    onChange={(e:any) => onChange(e,0)} 
+                    value={formData[1].fname} 
+                    onChange={(e:any) => onChange(e,1)} 
                     htmlFor="fname"
                     label='First name'
                     required={true}
-                />
+                /> */}
                 <TextInput 
                     className={formErrors[2].errors.error ? 'input-wrapper errors' : 'input-wrapper'}
                     error={formErrors[2].errors.type}
@@ -254,7 +275,7 @@ const validateFormSectionBeforeChangingSlide = (event:React.MouseEvent<HTMLButto
                 </div>
             </SwiperSlide>
             <SwiperSlide className='no-swipe' >
-            <div  className="form-section">
+            <div className="form-section">
                 <p className="section-heading">Your Address</p>
                 <TextInput 
                     className={formErrors[3].errors.error ? 'input-wrapper errors' : 'input-wrapper'}
@@ -262,46 +283,23 @@ const validateFormSectionBeforeChangingSlide = (event:React.MouseEvent<HTMLButto
                     id="street-address"
                     name="street-address"
                     autoComplete="home address-line1"
-                    placeholder='Enter your street address'
+                    placeholder='Enter your last name'
                     value={formData[1]['street-address']} 
                     onChange={(e:any) => onChange(e,1)} 
                     htmlFor="street-address"
                     label='Street Address'
                     required={true}
                 />
-                  {/* <PostCodeInput 
+                <PostCodeInput 
                     className={formErrors[4].errors.error ? 'input-wrapper errors' : 'input-wrapper'}
                     error={formErrors[4].errors.type}
                     id="postal-code"
-                    placeholder='Enter your post code'
-                    value={formData[2]['postal-code']} 
-                    onChange={(e:any) => onChange(e,2)} 
-                    htmlFor="postal-code'"
-                    required={true}
-                /> */}
-                <TextInput 
-                    className={formErrors[4].errors.error ? 'input-wrapper errors' : 'input-wrapper'}
-                    error={formErrors[4].errors.type}
-                    id="postal-code"
-                    name="postal-code"
-                    autoComplete="home postal-code"
-                    placeholder='Enter your Postal Code'
-                    value={formData[2]['postal-code']} 
+                    placeholder='Enter your postal code'
+                    value={formData[1]['postal-code']} 
                     onChange={(e:any) => onChange(e,1)} 
-                    htmlFor="postal-code"
-                    label='Postal Code'
+                    htmlFor="postal-code'"
                     required={true}
                 />
-                     {/* <PostCodeInput 
-                    className={formErrors[4].errors.error ? 'input-wrapper errors' : 'input-wrapper'}
-                    error={formErrors[4].errors.type}
-                    id="postal-code"
-                    placeholder='Enter your post code'
-                    value={formData[2]['postal-code']} 
-                    onChange={(e:any) => onChange(e,2)} 
-                    htmlFor="postal-code'"
-                    required={true}
-                /> */}
             </div>
             </SwiperSlide>
             <SwiperSlide className='no-swipe'>
@@ -334,7 +332,7 @@ const validateFormSectionBeforeChangingSlide = (event:React.MouseEvent<HTMLButto
             <div className='form-section action-wrapper'>
                 <input type="submit" value='Request Your Free Brochure' />
             </div>
-            {readyToSubmit ? <input type="submit" value='Request Brochure' /> : <SwiperNext func={(e: any) => validateFormSectionBeforeChangingSlide(e)} classNames='form-next form-buttons' />}  
+            {readyToSubmit ? <input type="submit" value='Request Home Visit' /> : <SwiperNext func={(e: any) => validateFormSectionBeforeChangingSlide(e)} classNames='form-next form-buttons' />}  
             </div>
             <div className='progress-bar'></div>
             <div className='step-counter'><p>Step {slideIndex + 1} / 3</p></div>
@@ -344,4 +342,4 @@ const validateFormSectionBeforeChangingSlide = (event:React.MouseEvent<HTMLButto
 }
 
 
-export default CollectionBrochureRequestForm;
+export default HomeVisitForm;

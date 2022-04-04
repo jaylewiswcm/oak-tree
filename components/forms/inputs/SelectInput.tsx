@@ -10,18 +10,18 @@ interface ComponentProps {
     htmlFor: string
     label: string
     required: boolean
-    options: Array<string>
+    options: Array<{"name" : string, "value": string}>
     placeholder: string
 }
 
 export const SelectInput = ({className, error, id, name, value, onChange,htmlFor,label,required, options, placeholder}:ComponentProps) => {
-  return (
+  return ( 
     <div className={className}>
         <p className='error-p'>{error}</p>
         <div className='input-and-label'>
         <select name={name} id={id} value={value} onChange={onChange}>
             <option value="" disabled selected>{placeholder}</option>
-            {options.map((option, index) => <option key={index} value={option}>{option}</option>)}
+            {options.map((option, index) => <option key={index} value={option.value}>{option.name}</option>)}
         </select>
         <label htmlFor={htmlFor}>{label} <span className={required ? 'required' : 'hide'}>*</span></label>
         </div>

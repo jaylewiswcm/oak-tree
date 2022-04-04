@@ -137,7 +137,7 @@ const onChange = (e:React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTML
                      label='Your title'
                      placeholder='Title'
                      required={true}
-                     options={['mrs','mr','ms','miss']}
+                     options={[{"name": 'Mrs', "value": 'mrs'},{"name": 'Mr', "value": 'mr'},{"name": 'Ms', "value": 'ms'},{"name": 'Miss', "value": 'Miss'}]}
             />
                 <TextInput 
                     className={formErrors[1].errors.error ? 'input-wrapper errors' : 'input-wrapper'}
