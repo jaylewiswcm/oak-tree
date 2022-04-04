@@ -1,4 +1,4 @@
-import React, {useState } from 'react'
+import React, { useState } from 'react'
 import Link from 'next/link';
 import Image from 'next/image';
 // Components
@@ -10,7 +10,7 @@ import AccessoriesChair from '../../components/tableOfContents/AccessoriesChair'
 import Reviews from '../../components/tableOfContents/Reviews';
 import RecommendedProducts from '../../components/sections/recommendedProducts/RecommendedProducts';
 
-const theOak = () => {
+const TheOak = () => {
     const [isOpen, setAccordianOpen] = useState('');
 
 
@@ -120,4 +120,4 @@ const theOak = () => {
     )
 }
 
-export default theOak;
+export default TheOak;
