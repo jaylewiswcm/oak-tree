@@ -129,7 +129,7 @@ closeUspOverlay = () => {
       </div>
       <div className='home-intro con-reg'>
         <div className='intro-content'>
-          <h1>The Uk’s Leading Mobility Specialists</h1>
+          <h1>Britian's Leading Mobility Specialists</h1>
           <p className='subheading'>At Oak Tree, we make beautiful products that help people live independently.</p>
           <div className="button-wrapper">
             <button className='bg-green'>
@@ -140,13 +140,15 @@ closeUspOverlay = () => {
           </div>
         </div>
         <div className='intro-image'>
-          <video width="100%" autoPlay loop muted>
-            <source src="videos/oaktree-ad-cut.mp4"
+          <video height="100%" autoPlay loop muted>
+            <source src="videos/advert-hero.mp4"
             type="video/mp4"/>
+            {/* <source src="videos/oaktree-ad-cut.mp4"
+            type="video/mp4"/> */}
           </video>
         </div>
       </div>
-      <div className='green-strip'>
+      <div className='green-strip hide'>
         <div className='inner-wrapper con-reg'>
         <div className="trustpilot-widget" data-locale="en-GB" data-template-id="53aa8807dec7e10d38f59f32" data-businessunit-id="56607bac0000ff00058643ac" data-style-height="100px" data-style-width="180px" data-theme="dark" data-font-family="Source Sans Pro" data-text-color="#ffffff">
           <a href="https://uk.trustpilot.com/review/www.oaktreemobility.co.uk" target="_blank" rel="noreferrer" >Trustpilot</a>

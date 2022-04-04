@@ -8,12 +8,12 @@ interface ComponentProps {
 
 const MotorChair = ({isOpen, openAccordian}:ComponentProps) => {
   return (
-    <div className={isOpen === 'size' ? "toc open" : "toc"}>
-    <button className='toc-btn' onClick={() => openAccordian('size')}>
-          <p>Size</p> 
+    <div className={isOpen === 'motor' ? "toc open" : "toc"}>
+    <button className='toc-btn' onClick={() => openAccordian('motor')}>
+          <p>Motor</p> 
             <span className='icon-wrapper'>
               <Image 
-                src={`/buttons/${isOpen === 'size' ? 'minus' :'plus'}-black.svg`}
+                src={`/buttons/${isOpen === 'motor' ? 'minus' :'plus'}-black.svg`}
                 alt='Plus'
                 layout='responsive'
                 width={15}
@@ -22,12 +22,12 @@ const MotorChair = ({isOpen, openAccordian}:ComponentProps) => {
         </button>
         <div className='product-content'>
             <div className='content'>
-                <p className='subheading oaktree-green'>Step Two</p>
-                <h5 className='heading'>Choose Your Size</h5>
+                <p className='subheading oaktree-green'>Step Three</p>
+                <h5 className='heading'>Choose Your Motor</h5>
                 <div className='flex-row'>
-                    <div className="image-wrapper size-image"></div>
-                    <p className='desc'>One of the most important choices you will make when buying your chair is its size. During your home consultation, you can try out one of our chairs and see how it feels. Then we will take your exact measurements and help you choose a chair that will fit you perfectly and offer supreme comfort.</p>
-                </div>
+                <div className="image-wrapper size-image"></div>
+                <p className='desc'>The motor in your chair will determine exactly how it rises and reclines. We offer a number of motors, each of which suits a particular requirement. If you have limited space, for instance, or if you like to sleep on a chair that reclines completely, you’ll need a special motor.</p>
+            </div>
             </div>
         </div>
 </div>

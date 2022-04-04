@@ -23,7 +23,6 @@ const CarouselNormal = ({setSelectedCx, setShow}: ComponentProps) => {
     <Swiper
     slidesPerView={1}
     spaceBetween={30}
-    freeMode={true}
     breakpoints={{
         1235: {
           slidesPerView: 4,
@@ -46,7 +45,7 @@ const CarouselNormal = ({setSelectedCx, setShow}: ComponentProps) => {
       clickable: true,
       el:'#testimonial-pagination'
     }}
-    modules={[FreeMode, Pagination]}
+    modules={[Pagination]}
     className="mySwiper"> 
     {testimonials.map((cx) => 
         <SwiperSlide key={cx.name}>

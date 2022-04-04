@@ -342,7 +342,12 @@
             transition: all 0.3s;
             display: flex;
             flex-direction: column;
+            @media(min-width: 600px) {
+                height: 100%;
+                max-height: 100%;
+            }
             .content {
+                margin-bottom: 25px;
                 .subheading {
                     text-align: center;
                     font-size: 1.9rem;
@@ -479,13 +484,16 @@
                     }
                     .border-right {
                         justify-content: flex-end;
-                        background: rgb(255,255,255);
-                        background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.4598433123249299) 48%, rgba(255,255,255,1) 100%);
-                
+
+                            background: rgb(255,255,255);
+                            background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.4598433123249299) 48%, rgba(255,255,255,1) 100%);
+
                     }
                     .border-left {
-                        background: rgb(255,255,255);
-                        background: linear-gradient(270deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.4598433123249299) 48%, rgba(255,255,255,1) 100%);
+                        
+                            background: rgb(255,255,255);
+                            background: linear-gradient(270deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.4598433123249299) 48%, rgba(255,255,255,1) 100%);
+
                     }
                 }
              
@@ -780,6 +788,7 @@
     }
     .product-grid {
         display: flex;
+   
         .product {
             width: 100%;
             border: 1px $lighter-grey solid;
@@ -787,6 +796,12 @@
             align-items: center;
             justify-content: center;
             position: relative;
+            &:last-of-type {
+                display: none;
+                @media(min-width: 700px) {
+                    display: flex;
+                }
+            }
             .image-wrapper {
                 width: 90%;
             }

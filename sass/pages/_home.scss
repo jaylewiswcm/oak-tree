@@ -47,22 +47,32 @@
 .home-intro {
     display: flex;
     flex-direction: column;
+    position: relative;
+    width: 100%;
+    height: 580px;
+    // padding: 0;
+    // max-width: 1400px;
     @media(min-width:900px) {
         flex-direction: row;
     }
     .intro-content {
         display: flex;
         flex-direction: column;
+        width: 100%;
+        // align-items: center;
+        justify-content: center;
         padding-top: 40px;
+        position: relative;
+        z-index: 2;
+        margin: 0 auto;
         @media(min-width: 500px) and (max-width: 899px) {
             padding:50px 30px;
         }
         @media(min-width: 900px) {
-            width: 40%;
+            width: 50%;
             padding: 0 15px;
             padding-right: 25px;
-            padding-top: 60px;
-            
+            padding-top: 30px;    
         }
         h1 {
             font-size: 3.5rem;
@@ -70,21 +80,23 @@
             color: $dark-green-1;
             text-align: center;
             @media(min-width: 600px) {
-                font-size: 4.6rem;
+                font-size: 5.3rem;
                 text-align: left;
             }
         }
         .subheading {
             font-size: 2rem;
             line-height: 1.6;
-            margin-top: 20px;
+            // margin-top: 20px;
             text-align: center;
+            max-width: 550px;
             @media(min-width: 400px) and (max-width: 899px) {
                 max-width: 550px;
             }
             @media(min-width: 600px) {
                 text-align: left;
-                font-size: 2.1rem;
+                font-size: 2.4rem;
+                margin-top: 10px;
             }
         }
         .button-wrapper {
@@ -105,6 +117,9 @@
                 border-radius: 6px;
                 padding: 17px 0px;
                 width: 100%;
+                transition: 0.2s;
+                border: none;
+                max-width: 350px;
                 @media(min-width: 350px) {
                     padding: 17px 30px;
                 }
@@ -125,7 +140,7 @@
                     transform: rotate(180deg);
                 }
                 p {
-                    font-size: 1.8rem;
+                    font-size: 1.9rem;
                     font-weight: 500;
                     position: relative;
                     @media(min-width: 600px) and (max-width: 750px)  {
@@ -135,7 +150,7 @@
             }
             .bg-green {
                 background-color: $oaktree-green;
-                border: 2px  $oaktree-green solid;
+                border-radius: 4px;
                 p {
                     color: $white;
                     font-weight: 500;
@@ -145,34 +160,47 @@
                 }
             }
             .bg-green:hover {
-                p {
-                    color: $oaktree-green;
-                }
-                .bg-hover {
-                    max-height: 100%;
-                }
+                background-color: #1CB985;
+                box-shadow: 0 6px 21px rgba(0, 173,116, 0.3);
+                // p {
+                //     color: $oaktree-green;
+                // }
+                // .bg-hover {
+                //     max-height: 100%;
+                // }
             }
 
         }
     }
     .intro-image {
         width: 100%;
+        height: 350px;
+        padding: 0;
+        display: flex;
         align-items: center;
         justify-content: center;
-        @media(min-width:400px) {
-            margin-bottom: 50px;
-        }
-        @media(min-width: 500px) and (max-width: 899px) {
-            padding: 0 30px;
-        }
+        overflow: hidden;
+        // @media(min-width:400px) {
+        //     margin-bottom: 50px;
+        // }
+        // @media(min-width: 500px) and (max-width: 899px) {
+        //     padding: 0 30px;
+        // }
         @media(min-width: 900px) {
             display: flex;
-            width: 60%; 
-            // margin-bottom: 50px;
-            padding: 50px 25px;
+            width: 50%;
+            height: 100%;
+            // margin-bottom: 50px         
         }
         video {
-            border-radius: 6px;
+            // border-radius: 6px;
+            width:150%;
+            height: unset;
+            @media(min-width: 900px) {  
+
+                width: unset;
+                height: 150%;
+            }
         }
     }
 }
@@ -266,10 +294,15 @@
                 width: calc(50% - 15px);
                 margin-right: 30px;
                 margin-bottom: 50px;
-                &:nth-of-type(2) {
+                // &:nth-of-type(2) {
+                //     margin-right: 0;
+                // }
+                &:first-of-type {
+                    width: 100%;
                     margin-right: 0;
                 }
                 &:last-of-type {
+                    margin-right: 0;
                     margin-bottom: 0;
                 }
             }

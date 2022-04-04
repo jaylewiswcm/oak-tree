@@ -95,7 +95,7 @@ const RequestBrochure = (event:React.FormEvent<HTMLFormElement>) => {
     const sectionData = formData[formData.length - 1];
     let isError: boolean = false;
     let updatedErrors = [...formErrors];
-    let index = 6;
+    let index = 5;
     let field: keyof typeof sectionData; 
     for(field in sectionData) {
         console.log(field);

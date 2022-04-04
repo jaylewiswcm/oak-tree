@@ -1,7 +1,5 @@
-import React, {useRef} from 'react'
+import React from 'react'
 import YouTube from "react-youtube";
-import ReactPlayer from 'react-player';
-import Image from 'next/image';
 
 interface ComponentProps {
     videoId: string
