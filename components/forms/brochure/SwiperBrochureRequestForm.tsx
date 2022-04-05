@@ -16,7 +16,6 @@ import { TextInput } from '../inputs/TextInput';
 import { SelectInput } from '../inputs/SelectInput';
 import { TelInput } from '../inputs/TelInput';
 import { EmailInput } from '../inputs/EmailInput';
-import { PostCodeInput } from '../inputs/PostCodeInput';
 
 interface ComponentProps {
     productType : string
@@ -269,16 +268,7 @@ const validateFormSectionBeforeChangingSlide = (event:React.MouseEvent<HTMLButto
                     label='Street Address'
                     required={true}
                 />
-                  {/* <PostCodeInput 
-                    className={formErrors[4].errors.error ? 'input-wrapper errors' : 'input-wrapper'}
-                    error={formErrors[4].errors.type}
-                    id="postal-code"
-                    placeholder='Enter your post code'
-                    value={formData[2]['postal-code']} 
-                    onChange={(e:any) => onChange(e,2)} 
-                    htmlFor="postal-code'"
-                    required={true}
-                /> */}
+    
                 <TextInput 
                     className={formErrors[4].errors.error ? 'input-wrapper errors' : 'input-wrapper'}
                     error={formErrors[4].errors.type}
@@ -292,16 +282,6 @@ const validateFormSectionBeforeChangingSlide = (event:React.MouseEvent<HTMLButto
                     label='Postal Code'
                     required={true}
                 />
-                     {/* <PostCodeInput 
-                    className={formErrors[4].errors.error ? 'input-wrapper errors' : 'input-wrapper'}
-                    error={formErrors[4].errors.type}
-                    id="postal-code"
-                    placeholder='Enter your post code'
-                    value={formData[2]['postal-code']} 
-                    onChange={(e:any) => onChange(e,2)} 
-                    htmlFor="postal-code'"
-                    required={true}
-                /> */}
             </div>
             </SwiperSlide>
             <SwiperSlide className='no-swipe'>

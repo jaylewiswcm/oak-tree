@@ -6,9 +6,7 @@ import Logo from '../assets/Logo';
 
 
 const Footer = () => {
-    const listContainer = useRef([]);
-    console.log(listContainer.current);
-
+    
     const toggleFooterNavList = (e: any) => {
         const sibling = e.target.nextElementSibling;
         sibling.classList.toggle('ul-open')
@@ -54,7 +52,6 @@ const Footer = () => {
                                 <li className='list-link'><Link href='/trade-in'><a>Trade In</a></Link></li>
                                 <li className='list-link'><Link href='/price-guide'><a>Price Guide</a></Link></li>
                                 <li className='list-link'><Link href='/testimonials-and-reviews'><a>Testimonials and Reviews</a></Link></li>
-                                <li className='list-link'><Link href=''><a></a></Link></li>
                             </ul>
                         </div>
                         <div className='ul-wrapper'>

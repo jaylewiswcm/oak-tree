@@ -11,7 +11,7 @@ interface ComponentProps {
 export const BottomBar = ({className}: ComponentProps) => {
   const [show, setFormToShow] = useState(false)
   return (
-    <div className={className}>
+    <div className={className}> 
         {show &&  <Modal classNames='form-modal' setShow={setFormToShow}><PopupBrochureRequestForm setShow={setFormToShow} /></Modal>}
         <button className='mobile-button' onClick={() => setFormToShow(true)}>
                     <span className='icon-wrapper'>

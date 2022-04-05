@@ -48,14 +48,14 @@ const TheOak = () => {
                         <p className='mobile-text'>Request a Brochure</p>
                         <p className='desktop-text'>Request Your Free Brochure</p>
                     </button>
-                    <Link href='' ><a className='learn-more'>
+                    <Link href='#product-information' ><a className='learn-more'>
                         <p className='mobile-text'>Learn More</p>
                         <p className='desktop-text'>Learn more about the Oak</p>
                         </a></Link>
                 </div>
             </div>
     </div>
-            <div className='product-details'>
+            <div className='product-details' id='product-information'>
                 <h3 className='heading'>Unparralleled Comfort and Support</h3>
                 <p className='desc mobile'>The chairs in this range each feature three luxuriously filled back cushions, which provide unparalleled comfort and support.</p>
                 <ul className='mobile'>

@@ -1,8 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image';
 import Link from 'next/link'
 import { NextSeo } from 'next-seo';
-
 // Components
 import chairs from '../../data/products/chairs.json';
 import Reviews from '../../components/sections/reviews/Reviews';
@@ -11,8 +10,11 @@ import Resources from '../../components/sections/resources/Resources';
 import CollectionBrochureRequestForm from '../../components/forms/brochure/SwiperBrochureRequestForm';
 import { CollectionUsps } from '../../components/sections/usps/CollectionUsps';
 import OurProcess from '../../components/sections/process/OurProcess';
+import Modal from '../../components/modal/Modal';
+import PopupBrochureRequestForm from '../../components/forms/PopupBrochureRequestForm';
 
-const index = () => {
+const Index = () => {
+    const [show, setFormToShow] = useState(false)
     return (
         <>
             <NextSeo  
@@ -35,9 +37,10 @@ const index = () => {
                     <p className='subheading'>Oak Tree</p>
                     <h1>Rise and Recline Chairs</h1>
                     <p className='intro-statement'>Combining amazing comfort and exceptional looks, the Oak is our most popular collection.</p>
-                    <button className='main-cta brochure-request-btn'>
+                    <button className='main-cta brochure-request-btn' onClick={() => setFormToShow(true)}>
                         <p>Request a Brochure</p>
                     </button>
+                    {show &&  <Modal classNames='form-modal' setShow={setFormToShow}><PopupBrochureRequestForm setShow={setFormToShow} /></Modal>}
                     <Link href='#collection-top-chair'>
                         <a className='main-cta cta-link'>
                             <p>Explore our Chairs</p>
@@ -85,4 +88,4 @@ const index = () => {
     )
 }
 
-export default index;
+export default Index;

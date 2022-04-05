@@ -36,10 +36,24 @@ body.freeze {
             height: 500px;
         }
     }
-    .form-modal { 
-        width: 500px;
-        height: 650px;
+    .form-modal {  
         border-radius: 6px;
+        width: 90%;
+        height: 90vh; 
+        @media(min-width: 800px) {
+            width: 500px;
+            height: 650px;
+        }
+        .pop-up-form-wrapper {
+            @media(max-width: 800px) {
+                overflow: auto;
+            }
+            form {
+                @media(max-width: 800px) {
+                    overflow: unset;
+                }
+            }
+        }
     }
 }
 .modal.show-modal {

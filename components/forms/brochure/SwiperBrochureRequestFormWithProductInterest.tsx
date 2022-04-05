@@ -15,7 +15,6 @@ import { TextInput } from '../inputs/TextInput';
 import { SelectInput } from '../inputs/SelectInput';
 import { TelInput } from '../inputs/TelInput';
 import { EmailInput } from '../inputs/EmailInput';
-import { PostCodeInput } from '../inputs/PostCodeInput';
 import { ProductInterest } from '../inputs/ProductInterest';
 
 interface ComponentProps  {
@@ -292,14 +291,17 @@ const validateFormSectionBeforeChangingSlide = (event:React.MouseEvent<HTMLButto
                     label='Street Address'
                     required={true}
                 />
-                <PostCodeInput 
+                <TextInput 
                     className={formErrors[5].errors.error ? 'input-wrapper errors' : 'input-wrapper'}
                     error={formErrors[5].errors.type}
                     id="postal-code"
-                    placeholder='Enter your postal code'
+                    name="postal-code"
+                    autoComplete="home postal-code"
+                    placeholder='Enter your Postal Code'
                     value={formData[2]['postal-code']} 
                     onChange={(e:any) => onChange(e,2)} 
-                    htmlFor="postal-code'"
+                    htmlFor="postal-code"
+                    label='Postal Code'
                     required={true}
                 />
             </div>

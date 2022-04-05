@@ -9,11 +9,6 @@ interface ComponentProps {
 
 
 const Video = ({videoId, show}: ComponentProps) => { 
-  // useEffect(() => {
-  //   if(show === false ) {
-      
-  //   }
-  // },[])
   const opts = {
     playerVars: {
       autoplay: 1,

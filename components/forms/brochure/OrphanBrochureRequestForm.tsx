@@ -5,7 +5,6 @@ import {SelectInput} from '../inputs/SelectInput';
 import {TextInput} from '../inputs/TextInput';
 import {EmailInput} from '../inputs/EmailInput';
 import {TelInput} from '../inputs/TelInput';
-import {PostCodeInput} from '../inputs/PostCodeInput';
 
 interface ComponentProps {
     productType : string
@@ -154,14 +153,17 @@ const onChange = (e:React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTML
                 />
             </div>
             <div className='tight-form-wrapper'>
-                <PostCodeInput 
-                    className={formErrors[2].errors.error ? 'input-wrapper post-code-wrapper errors' : 'input-wrapper post-code-wrapper'}
+                        <TextInput 
+                    className={formErrors[2].errors.error ? 'input-wrapper errors' : 'input-wrapper'}
                     error={formErrors[2].errors.type}
                     id="postal-code"
-                    placeholder='Enter your postal code'
+                    name="postal-code"
+                    autoComplete="home postal-code"
+                    placeholder='Enter your Postal Code'
                     value={formData['postal-code']} 
                     onChange={(e:any) => onChange(e)} 
-                    htmlFor="postal-code'"
+                    htmlFor="postal-code"
+                    label='Postal Code'
                     required={true}
                 />
                 <TextInput 
