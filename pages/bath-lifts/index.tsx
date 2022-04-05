@@ -22,7 +22,7 @@ const index = () => {
                   <div className='hero-left'>
                 <div className='hero-image'>
                     <Image 
-                        src='/images/heros/chair-collection-hero.png'
+                        src='/images/products/bath-lifts/bath-lift-collection-hero.png'
                         alt='Our Rise and Recline Chairs'
                         layout='fill'
                         objectFit='cover'
