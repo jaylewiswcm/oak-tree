@@ -31,7 +31,7 @@ header {
   .header-inner {
     display: flex;
     align-items: center;
-    padding: 20px 25px;
+    padding: 15px 25px;
     height: 100%;
     max-width: 1350px;
     // height: 90px;
@@ -71,7 +71,7 @@ header {
       margin-right: 20px;
       width: 100%;
       @media(min-width: 400px) {
-        width: 210px;
+        width: 190px;
         
        }
     }
@@ -94,8 +94,8 @@ header {
       justify-content: center;
       // margin: auto;
       // margin-left: 15px;
-      margin-right: auto;
-      margin: 0 auto;
+      margin: 0;
+      margin-right: auto; 
       height: 40px;
       display: none;
       @media(min-width: 1080px) {
@@ -106,12 +106,14 @@ header {
         justify-content: center;
         li {
           padding: 0 20px;
+          padding: 0 17px;
           a {
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             font-weight: 500;
             // letter-spacing: 0.5px;
             color: $black;
             color: $dark-green-1;
+            color: $dark-grey;
             // color: #435D60;
             @media(min-width: 1080px) and (max-width: 1150px) {
               font-size: 1.6rem;

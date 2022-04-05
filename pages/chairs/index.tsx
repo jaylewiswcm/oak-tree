@@ -56,7 +56,7 @@ const Index = () => {
                    <CollectionBrochureRequestForm productType='chair'/>
                 </div>
               </div>    
-              <h2 className='heading' id='collection-top-chair'>Our Chairs</h2>
+              <h2 className='heading' id='collection-top-chair'>A Chair That is Truly Yours</h2>
               <div className='collections-grid con-reg'>
                   {chairs.map((product, index) => 
                   <Link href={product!.url} key={index}>
