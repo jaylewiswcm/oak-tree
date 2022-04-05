@@ -36,7 +36,7 @@ const Index = () => {
                 <div className="hero-intro">
                     <p className='subheading'>Oak Tree</p>
                     <h1>Rise and Recline Chairs</h1>
-                    <p className='intro-statement'>Combining amazing comfort and exceptional looks, the Oak is our most popular collection.</p>
+                    <p className='intro-statement'>Transform Your Life with an Oak Tree Mobility Chair</p>
                     <button className='main-cta brochure-request-btn' onClick={() => setFormToShow(true)}>
                         <p>Request a Brochure</p>
                     </button>
