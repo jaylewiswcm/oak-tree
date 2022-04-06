@@ -8,7 +8,7 @@ interface ComponentProps  {
 
 
  const OrphanLayout = ({ children }:ComponentProps) => {
-    const [hideClass, setHideClass] = useState('bottom-bar hide-bar')
+    const [hideClass, setHideClass] = useState('bottom-bar hide-bar orphan-bottom-bar')
  
     useEffect(() => {
         window.addEventListener("scroll", handleScroll);

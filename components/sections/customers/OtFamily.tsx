@@ -43,42 +43,42 @@ const OtFamily = () => {
              <div className='cx-item'>
                         <div className="image-wrapper">
                             <Image 
-                                src='/images/landing-pages/customers-chair/grace-baker.png'
-                                alt='Grace Baker'
+                                src='/images/landing-pages/customers-chair/MrsC.png'
+                                alt='Mrs C'
                                 layout='fill'
                                 objectFit='cover'
                                 objectPosition='center'
                             />
                         </div>
-                        <p>Grace Baker loved her home demo of our rise and recline chair!</p>
+                        <p>Perfect chair for me. The comfort and health benefits are too good to not have</p>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className='cx-item'>
                         <div className="image-wrapper">
                             <Image 
-                                src='/images/landing-pages/customers-chair/mrs-hughes.png'
-                                alt='Mrs Hughes'
+                                src='/images/landing-pages/customers-chair/mrE.png'
+                                alt='Mr E'
                                 layout='fill'
                                 objectFit='cover'
                                 objectPosition='center'
                             />
                         </div>
-                        <p>A very happy Mrs Hughes, who is seen here putting her feet up</p>
+                        <p>Just what I need as I suffer with Odema, So comfy and easy to get in and out of</p>
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className='cx-item'>
                         <div className="image-wrapper">
                             <Image 
-                                src='/images/landing-pages/customers-chair/mrs-swift.png'
-                                alt='Mrs Swift'
+                                src='/images/landing-pages/customers-chair/barabaraG.png'
+                                alt='Barabara G'
                                 layout='fill'
                                 objectFit='cover'
-                                objectPosition='center'
+                                objectPosition='top'
                             />
                         </div>
-                        <p>Mrs Swift found our demo chair a bit too comfortable!</p>
+                        <p>The dream chair, makes me so comfy in my living room</p>
                     </div>
                 </SwiperSlide>
 

@@ -22,6 +22,7 @@ import { Navigation, Pagination, Autoplay } from "swiper";
         nextEl: '.slide-next',
         prevEl: '.slide-prev',
     }}
+    loop={true}
     allowTouchMove={true}
     pagination={{
     clickable: true,
