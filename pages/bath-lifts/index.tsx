@@ -135,7 +135,7 @@ const index = () => {
                     </div>
                 </div>
                 <OurProcess />
-                <Resources />
+                <Resources pageType='chairs'/>
           </div>
           <FooterCollections />
         </div>

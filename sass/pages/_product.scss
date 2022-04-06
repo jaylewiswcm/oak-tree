@@ -331,7 +331,7 @@
                 margin-left: auto;
                 width: 16px;
                 height: 16px;
-
+                transition: 0.3s;
             }
         }
         .product-content {
@@ -692,10 +692,17 @@
     } 
     .toc.open {
         padding-bottom: 15px;
+        .toc-btn {
+            .icon-wrapper {
+                transform: rotate(45deg);          
+            }
+        }
+
         .product-content {
             max-height: 900px;
             height: 100%;
         }
+        
     }
 }
 

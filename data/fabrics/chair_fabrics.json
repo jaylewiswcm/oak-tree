@@ -1,0 +1,57 @@
+[
+    {
+        "name": "Plain Champagne",
+        "src" : "/images/fabric/chairs/plain-champagne.png",
+        "type" : "Fabric"
+    },
+    {
+        "name": "Boucle Claret",
+        "src" : "/images/fabric/chairs/boucle-claret.png",
+        "type" : "Fabric"
+    },
+    {
+        "name": "Boucle Bottle",
+        "src" : "/images/fabric/chairs/boucle-bottle.png",
+        "type" : "Fabric"
+    },
+    {
+        "name": "Boucle Bluebell",
+        "src" : "/images/fabric/chairs/boucle-bluebell.png",
+        "type" : "Fabric"
+    },
+    {
+        "name": "Mocca Leather",
+        "src" : "/images/fabric/chairs/mocca-leather.png",
+        "type" : "Leather"
+    },
+    {
+        "name": "Cottonseed Leather",
+        "src" : "/images/fabric/chairs/cottonseed-leather.png",
+        "type" : "Leather"
+    },
+    {
+        "name": "Floral Green",
+        "src" : "/images/fabric/chairs/floral-green.png",
+        "type" : "Fabric"
+    },
+    {
+        "name": "Floral Champagne",
+        "src" : "/images/fabric/chairs/floral-champagne.png",
+        "type" : "Fabric"
+    },
+    {
+        "name": "Floral Wheat",
+        "src" : "/images/fabric/chairs/floral-wheat.png",
+        "type" : "Fabric"
+    },
+    {
+        "name": "Diamond Honey",
+        "src" : "/images/fabric/chairs/diamond-honey.png",
+        "type" : "Fabric"
+    },
+    {
+        "name": "Patchwork Oyster",
+        "src" : "/images/fabric/chairs/patchwork-oyster.png",
+        "type" : "Fabric"
+    }
+]

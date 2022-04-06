@@ -6,7 +6,7 @@ import HomeVisitForm from '../../components/forms/homeVisit/HomeVisitForm';
 import MaterialChair from '../../components/tableOfContents/MaterialChair';
 import MotorChair from '../../components/tableOfContents/MotorChair';
 import SizeChair from '../../components/tableOfContents/SizeChair';
-import AccessoriesChair from '../../components/tableOfContents/AccessoriesChair';
+import Accessories from '../../components/tableOfContents/Accessories';
 import Reviews from '../../components/tableOfContents/Reviews';
 import RecommendedProducts from '../../components/sections/recommendedProducts/RecommendedProducts';
 
@@ -90,7 +90,7 @@ const TheOak = () => {
                 <MaterialChair isOpen={isOpen} openAccordian={() => openAccordian('material')}/>
                 <SizeChair isOpen={isOpen} openAccordian={() => openAccordian('size')}/>
                 <MotorChair isOpen={isOpen} openAccordian={() => openAccordian('motor')}/>
-                <AccessoriesChair  isOpen={isOpen} openAccordian={() => openAccordian('accessories')}/>
+                <Accessories  isOpen={isOpen} openAccordian={() => openAccordian('accessories')} type='chair'/>
                 <Reviews isOpen={isOpen} openAccordian={() => openAccordian('reviews')}/>
             </div>
             <div className='request-wrapper'>

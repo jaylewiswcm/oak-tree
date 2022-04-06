@@ -6,11 +6,16 @@ import "swiper/css";
 // import swiper modules
 import { Navigation } from "swiper";
 // Data
-import chair_accessories from '../../../data/products/chair_accessories.json';
+import chair_accessories from '../../../data/accessories/chair_accessories.json'
+import bed_accessories from '../../../data/accessories/bed_accessories.json'
 // Components 
 import {Accessory} from './Accessory';
 
-export const Accessories = () => {
+interface ComponentProps {
+    type: string
+}
+
+export const Accessories = ({type}: ComponentProps ) => {
     const [slideChange, setSlideChange] = useState(false)
   return (
     <div className='accessories-carousel'>
@@ -29,11 +34,15 @@ export const Accessories = () => {
         modules={[Navigation]}
         className="mySwiper"
         >
-            {chair_accessories.map((item, index) => 
+        { type === 'chair' ? chair_accessories.map((item, index) => 
                 <SwiperSlide key={index}>
                      <Accessory item={item} slideChange={slideChange} />
                 </SwiperSlide>
-              )}
+              ) : bed_accessories.map((item, index) => 
+              <SwiperSlide key={index}>
+                   <Accessory item={item} slideChange={slideChange} />
+              </SwiperSlide>
+            )}
         </Swiper>
        <div className="button-wrapper">
                                     <button className='acc-prev carousel-button'>

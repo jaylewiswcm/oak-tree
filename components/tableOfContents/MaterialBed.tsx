@@ -7,7 +7,7 @@ interface ComponentProps {
     openAccordian: any
 }
 
-const MaterialChair = ({isOpen, openAccordian}:ComponentProps) => {
+const MaterialBed = ({isOpen, openAccordian}:ComponentProps) => {
   return (
     <div className={isOpen === 'material' ? "toc open" : "toc"}>
         <button className='toc-btn' onClick={() => openAccordian('material')}>
@@ -27,10 +27,10 @@ const MaterialChair = ({isOpen, openAccordian}:ComponentProps) => {
                 <h5 className='heading'>Choose Your Material</h5>
                 <p className='desc'>At Oak Tree, we pride ourselves on our comprehensive range of fabrics and leather. With such a wide selection, there will be something you love whatever your taste.</p>
             </div>
-            <Fabrics product="chair"/>
+            <Fabrics product="bed"/>
         </div>
     </div>
   )
 }
 
-export default MaterialChair;
+export default MaterialBed;

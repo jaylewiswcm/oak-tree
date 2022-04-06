@@ -4666,6 +4666,8 @@ body.mobile-navbar .mobile-navigation {
   margin-left: auto;
   width: 16px;
   height: 16px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .table-of-contents .toc .product-content {
@@ -5198,6 +5200,11 @@ body.mobile-navbar .mobile-navigation {
 
 .table-of-contents .toc.open {
   padding-bottom: 15px;
+}
+
+.table-of-contents .toc.open .toc-btn .icon-wrapper {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 .table-of-contents .toc.open .product-content {

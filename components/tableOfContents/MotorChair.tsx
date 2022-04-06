@@ -13,7 +13,7 @@ const MotorChair = ({isOpen, openAccordian}:ComponentProps) => {
           <p>Motor</p> 
             <span className='icon-wrapper'>
               <Image 
-                src={`/buttons/${isOpen === 'motor' ? 'minus' :'plus'}-black.svg`}
+             src='/buttons/plus-black.svg'
                 alt='Plus'
                 layout='responsive'
                 width={15}

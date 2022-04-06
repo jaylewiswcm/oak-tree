@@ -1,0 +1,72 @@
+[
+    {
+
+        "type" : "chairs",
+        "resources" : [
+            {
+                "heading" : "UK Therapy Services Talk Chairs",
+                "subheading" : "Our Occupational Therapist",
+                "videoId": "wlRVdd9s174",
+                "placeholder" : ""
+            },
+            {
+                "heading" : "How We Make Your Chair",
+                "subheading" : "British Made",
+                "videoId": "u9-WpUGw0NM",
+                "placeholder" : ""
+            },
+            {
+                "heading" : "Unique High Leg Lift",
+                "subheading" : "The Oak Tree Touch",
+                "videoId": "vlsfU4fdZmk",
+                "placeholder" : ""
+            }
+        ]
+    } ,
+    {
+
+        "type" : "beds",
+        "resources" : [  
+    {
+        "heading" : "UK Therapy Services Talk Beds",
+        "subheading" : "Our Occupational Therapist",
+        "videoId": "oi_n7knzghs",
+        "placeholder" : ""
+    },
+    {
+        "heading" : "How We Make Your Bed",
+        "subheading" : "British Made",
+        "videoId": "731h3uxBtKA",
+        "placeholder" : ""
+    },
+    {
+        "heading" : "Unique High Leg Lift",
+        "subheading" : "Bed Hand Control",
+        "videoId": "X3rvIblAXMc",
+        "placeholder" : ""
+    }]
+    },
+    {
+
+        "type" : "bathlifts",
+        "resources" : [  
+    {
+        "heading" : "The Oak Tree Vision",
+        "subheading" : "Your Comfort is our strength",
+        "videoId": "oi_n7knzghs",
+        "placeholder" : ""
+    },
+    {
+        "heading" : "How We Make Your Bath lift",
+        "subheading" : "British Made",
+        "videoId": "rIr46QkfmIE",
+        "placeholder" : ""
+    },
+    {
+        "heading" : "Frequently Asked Questions",
+        "subheading" : "Bed Hand Control",
+        "videoId": "X3rvIblAXMc",
+        "placeholder" : ""
+    }]
+    }
+]

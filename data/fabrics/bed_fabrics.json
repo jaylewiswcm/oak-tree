@@ -1,0 +1,37 @@
+[
+    {
+        "name": "Beige",
+        "src" : "/images/fabric/beds/beige.png",
+        "type" : "Fabric"
+    },
+    {
+        "name": "Black Leather",
+        "src" : "/images/fabric/beds/black-leather.png",
+        "type" : "Leather"
+    },
+    {
+        "name": "Brown Leather",
+        "src" : "/images/fabric/beds/brown-leather.png",
+        "type" : "Leather"
+    },
+    {
+        "name": "Gold Damask",
+        "src" : "/images/fabric/beds/gold-damask.png",
+        "type" : "Fabric"
+    },
+    {
+        "name": "Natural",
+        "src" : "/images/fabric/beds/natural.png",
+        "type" : "Leather"
+    },
+    {
+        "name": "Silver Damask",
+        "src" : "/images/fabric/beds/silver-damask.png",
+        "type" : "Leather"
+    },
+    {
+        "name": "Silvery Grey",
+        "src" : "/images/fabric/beds/silver-grey.png",
+        "type" : "Fabric"
+    }
+]
