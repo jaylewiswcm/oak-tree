@@ -73,7 +73,7 @@ const Index = () => {
                         <p className='subheading'>{product!.subheading}</p>
                         <h2>{product!.name}</h2>
                         <p className='desc'>{product!.desc}</p>
-                       <div className='main-cta'><p>View Chair</p></div>
+                       <div className='main-cta'><p>View Bed</p></div>
                     </a>
                     </Link>
                     )}
