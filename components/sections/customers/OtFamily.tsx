@@ -43,7 +43,7 @@ const OtFamily = () => {
              <div className='cx-item'>
                         <div className="image-wrapper">
                             <Image 
-                                src='/images/landing-pages/customers-chair/MrsC.png'
+                                src='/images/landing-pages/customers-chair/cx-1-mrs-c.png'
                                 alt='Mrs C'
                                 layout='fill'
                                 objectFit='cover'
@@ -57,7 +57,7 @@ const OtFamily = () => {
                     <div className='cx-item'>
                         <div className="image-wrapper">
                             <Image 
-                                src='/images/landing-pages/customers-chair/mrE.png'
+                                src='/images/landing-pages/customers-chair/cx-2-mr-e.png'
                                 alt='Mr E'
                                 layout='fill'
                                 objectFit='cover'
@@ -71,7 +71,7 @@ const OtFamily = () => {
                     <div className='cx-item'>
                         <div className="image-wrapper">
                             <Image 
-                                src='/images/landing-pages/customers-chair/barabaraG.png'
+                                src='/images/landing-pages/customers-chair/cx-3-mrs-g.png'
                                 alt='Barabara G'
                                 layout='fill'
                                 objectFit='cover'
