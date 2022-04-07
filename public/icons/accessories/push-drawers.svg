@@ -1,0 +1,16 @@
+<svg id="visuals_lilac-collection-page_Lilac_con_set_Push_Drawers.svg" data-name="visuals/lilac-collection-page/Lilac con set/Push Drawers.svg" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #eceff2;
+      }
+
+      .cls-2 {
+        fill: #606265;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <circle class="cls-1" cx="18" cy="18" r="18"/>
+  <path class="cls-2" d="M2028.01,304.839h0.96a0.714,0.714,0,0,0,.65-0.778v-8.614a0.621,0.621,0,0,0-.02-0.138c-0.01-.03,0-0.06-0.01-0.088l-1.94-7.829a0.669,0.669,0,0,0-.62-0.558h-18.8a0.669,0.669,0,0,0-.62.558l-1.95,7.829v0.088a0.621,0.621,0,0,0-.02.138v8.614a0.721,0.721,0,0,0,.64.778h0.97m1.46-16.437h17.84l1.55,6.261h-20.94Zm-1.78,7.829h21.4v7.046h-21.4v-7.046Zm1.73,8.608h17.94m-11.24-7.829h3.89v1.568h-3.89V297.01Z" transform="translate(-1999.62 -278.844)"/>
+</svg>

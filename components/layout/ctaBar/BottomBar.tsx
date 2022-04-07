@@ -23,7 +23,7 @@ export const BottomBar = ({className}: ComponentProps) => {
                             height={70}
                         />
                     </span>
-                    <p>Request Your FREE Brochure</p>
+                    <p>Request a Brochure</p>
                 </button>
         <div className='inner-wrapper con-reg'>
             <div className='phone-wrapper'>

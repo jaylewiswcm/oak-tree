@@ -1,5 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image';
+import Head from 'next/head';
+// data 
+import mattress from '../../data/mattress/mattress.json'
 
 interface ComponentProps {
     isOpen: string
@@ -7,7 +10,13 @@ interface ComponentProps {
 }
 
 const Mattress = ({isOpen, openAccordian}:ComponentProps) => {
+    const [mattressIndex, setMattressIndex] = useState(0);
   return (
+      <>
+      <Head>
+          { mattress.map((i, index) => <link rel="preload" as="image" key={index} href={i.src}></link>) }
+     
+      </Head>
     <div className={isOpen === 'mattress' ? "toc open" : "toc"}>
     <button className='toc-btn' onClick={() => openAccordian('mattress')}>
           <p>Mattress</p> 
@@ -24,13 +33,48 @@ const Mattress = ({isOpen, openAccordian}:ComponentProps) => {
             <div className='content'>
                 <p className='subheading oaktree-green'>Step Two</p>
                 <h5 className='heading'>Choose Your Mattress</h5>
-                <div className='flex-row'>
-                    <div className="image-wrapper size-image"></div>
-                    <p className='desc'>One of the most important choices you will make when buying your chair is its size. During your home consultation, you can try out one of our chairs and see how it feels. Then we will take your exact measurements and help you choose a chair that will fit you perfectly and offer supreme comfort.</p>
+                <div className='mattress-wrapper'>
+                    <div className='inner-wrapper'>
+                        
+                        <div className='mattress'>
+                            <div className='image-wrapper'>
+                                <Image 
+                                    src={mattress[mattressIndex].src}
+                                    alt={mattress[mattressIndex].name}
+                                    layout='responsive'
+                                    width={508}
+                                    height={266}
+                                />
+                                <span className='inside-image'>
+                                    <Image
+                                        src={`${mattress[mattressIndex].insideImage}`}
+                                        alt={`inside ${mattress[mattressIndex].name}`}
+                                        layout='responsive'
+                                        width={100}
+                                        height={100}
+                                    />
+                                </span>
+                            </div>
+                            <div className='content-wrapper'>
+                                <p className='name'>{mattress[mattressIndex].name}<br/>Mattress</p>
+                                <p className='desc'>{mattress[mattressIndex].desc}</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div className='button-wrapper'>
+                        <div className='bar'>
+                            <div className={`selected-bg index-${mattressIndex}`}></div>
+                            <button onClick={() => setMattressIndex(0)} className={mattressIndex === 0 ? 'selected' : '' }><span>Pocket </span>Sprung</button>
+                            <button onClick={() => setMattressIndex(1)} className={mattressIndex === 1 ? 'selected' : '' }><span>Memory </span>Foam</button>
+                            <button onClick={() => setMattressIndex(2)} className={mattressIndex === 2 ? 'selected' : '' }>Latex</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 </div>
+</>
   )
 }
 

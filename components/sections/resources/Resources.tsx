@@ -14,7 +14,7 @@ const Resources = ({pageType}: ComponentProps) => {
     <h6>Resources</h6>
       <div className='resource-grid'>
         {resources.map(item => 
-            <>{item.type === pageType && item.resources.map(x => <Resource resource={x}/>)}</>
+            <>{item.type === pageType && item.resources.map((x, index) => <Resource resource={x} key={index}/>)}</>
           )}
       </div>
 </div>

@@ -1,36 +1,38 @@
-[{
-    "name" : "Heat and Massage",
-    "image" : "/images/products/chairs/accessories/remote-control.png",
-    "icon" : "/icons/accessories/heat-massage.svg",
-    "desc" : "Upgrade to pure luxury with built in heat and massage. Chairs with these optional features will keep you warm while giving you a gentle massage to help you relax."
-},
-{
-    "name" : "Head Cover",
-    "image" : "/images/products/chairs/accessories/head-cover.png",
-    "icon" : "/icons/accessories/head-cover.svg",
-    "desc" : "The top of the backrest is subjected to heavier wear than other areas of the chair. Protect your investment with a washable head cover that can be easily replaced when it wears out."
-},
-{
-    "name" : "Arm Caps",
-    "image" : "/images/products/chairs/accessories/arm-caps.png",
-    "icon" : "/icons/accessories/arm-caps.svg",
-    "desc" : "The chair arms are one of the places that take the most wear. A pair of arm caps will help keep this area protected and keep your chair looking even better for longer."
-},
-{
-    "name" : "Head Cushions",
-    "image" : "/images/products/chairs/accessories/head-cushions.png",
-    "icon" : "/icons/accessories/head-cushions.svg",
-    "desc" : "Get even more comfort with a specially designed head cushion that works in perfect harmony with your chair. Simply clip it in place and sit back in pure comfort."
-},
-{
-    "name" : "Reading Light",
-    "image" : "/images/products/chairs/accessories/reading-light.png",
-    "icon" : "/icons/accessories/reading-light.svg",
-    "desc" : "Rediscover the joys of reading with an illuminating light that can be adjusted to any angle you require."
-},
-{
-    "name" : "Castors",
-    "image" : "/images/products/chairs/accessories/castors.png",
-    "icon" : "/icons/accessories/castors.svg",
-    "desc" : "Castors can be added to your chair, making it easier to move and making the surrounding area easier to clean. Every chair can have castors added at no additional cost."
-}]
+[
+    {
+        "name" : "Push Drawers",
+        "image" : "/images/products/beds/accessories/push-drawers.png",
+        "icon" : "/icons/accessories/push-drawers.svg",
+        "desc" : "For ease of use with our unique drawer divan system, simply apply a small amount of pressure to the front of the drawer and it will automatically open for you."
+    },
+    {
+        "name" : "Castors",
+        "image" : "/images/products/beds/accessories/castors.png",
+        "icon" : "/icons/accessories/castors.svg",
+        "desc" : "Castors can be added to your bed, making it easier to move and making the surrounding area easier to clean. Every bed can have castors added at no additional cost."
+    },
+    {
+        "name" : "Massage System",
+        "image" : "/images/products/beds/accessories/remote.png",
+        "icon" : "/icons/accessories/massage-system.svg",
+        "desc" : "This system allows either a therapeutic full body massage or it can concentrate on one of ten specific areas of your body. The system is designed to aid aches and pains."
+    },
+    {
+        "name" : "Linen",
+        "image" : "/images/products/beds/accessories/linen.png",
+        "icon" : "/icons/accessories/linen.svg",
+        "desc" : "Handmade in the UK from the finest materials, our fitted sheets and duvet sets are available in a host of colours and styles."
+    },
+    {
+        "name" : "Mattress Protectors",
+        "image" : "/images/products/beds/accessories/protection.png",
+        "icon" : "/icons/accessories/head-cover.svg",
+        "desc" : "Preserve the life of your mattress and choose from our collection of mattress protectors here. With waterproof mattress protectors and a range of sizes available"
+    },
+    {
+        "name" : "Grab Rails",
+        "image" : "/images/products/beds/accessories/grab-rails.png",
+        "icon" : "/icons/accessories/grab-rails.svg",
+        "desc" : "Preserve the life of your mattress and choose from our collection of mattress protectors here. With waterproof mattress protectors and a range of sizes available"
+    }
+]

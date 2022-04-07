@@ -1,0 +1,18 @@
+[{
+    "name": "Pocket Sprung",
+    "desc" : "The pocket sprung mattress has been manufactured with comfort and support in mind, with its individually pocketed springs designed to contour on an adjustable bed.",
+    "src" : "/images/products/beds/mattress/pocket-sprung.png",
+    "insideImage" : "/images/products/beds/mattress/pocket-sprung-inside.webp"
+},
+{
+    "name": "Memory Foam",
+    "desc" : "The memory mattress combines both reflex foam and memory foam, so providing pressure release and enabling the correct posture to be maintained during sleep.",
+    "src" : "/images/products/beds/mattress/memory-foam.png",
+    "insideImage" : "/images/products/beds/mattress/memory-foam-inside.webp"
+},
+{
+    "name": "Latex",
+    "desc" : "This latex mattress consists of 60% latex, making it especially durable and breathable. If you prefer a cooler, firmer mattress, this would be a great choice.",
+    "src" : "/images/products/beds/mattress/latex.png",
+    "insideImage" : "/images/products/beds/mattress/latex-inside.webp"
+}]

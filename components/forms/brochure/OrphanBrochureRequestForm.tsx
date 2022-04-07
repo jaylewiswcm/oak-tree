@@ -159,7 +159,7 @@ const onChange = (e:React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTML
                     id="postal-code"
                     name="postal-code"
                     autoComplete="home postal-code"
-                    placeholder='Enter your Postal Code'
+                    placeholder='Enter your postal code'
                     value={formData['postal-code']} 
                     onChange={(e:any) => onChange(e)} 
                     htmlFor="postal-code"
@@ -172,7 +172,7 @@ const onChange = (e:React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTML
                     id="street-address"
                     name="street-address"
                     autoComplete="home address-line1"
-                    placeholder='Enter your last name'
+                    placeholder='Enter your street address'
                     value={formData['street-address']} 
                     onChange={(e:any) => onChange(e)} 
                     htmlFor="street-address"

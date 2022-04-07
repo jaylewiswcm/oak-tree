@@ -114,7 +114,7 @@ const TheOak = () => {
                     </div>
                 </div>
             </div>
-            <RecommendedProducts />
+            <RecommendedProducts product='chair'/>
         </div>
         </>
     )

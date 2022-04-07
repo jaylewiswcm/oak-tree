@@ -18,12 +18,15 @@
         align-items: center;
         justify-content: center;
         background-color: $red-2;
+        // background-color: $blue-3;
+        box-shadow: 0 3px 21px rgba(0,134,197,0.3);
         margin-bottom: 25px;
-        padding: 25px;
-        // width: 90%;
+        padding: 20px 0px;
+        width: 90%;
         max-width:500px;
+        border-radius: 50px;
         @media(min-width: 500px) {
-            padding: 15px;
+            padding: 20px;
 
         }
         @media(min-width: 800px) {
@@ -33,7 +36,7 @@
             width: 50px;
             margin-right: 15px;
             display: none;
-            @media(min-width: 500px) {
+            @media(min-width: 400px) {
                 display: initial;
             }
         }
@@ -41,6 +44,9 @@
             font-size: 2rem;
             font-weight: 500;
             color: $white;
+            @media(min-width: 600px) {
+                font-size: 2rem;
+            } 
         }
     }
     .inner-wrapper {
@@ -72,6 +78,7 @@
             bottom: 0;
             .bottom-cta {
                 background-color: $oaktree-green;
+                // background-color: $red-2;
                 display: flex;
                 align-items: center;
                 justify-content: center;

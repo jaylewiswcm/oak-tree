@@ -4,7 +4,7 @@ interface ComponentProps {
     item: {
         name : string
         image: string
-        icon: string
+        icon?: string
         desc: string
     }
     slideChange: boolean
@@ -32,15 +32,17 @@ export const Accessory = ({item, slideChange}:ComponentProps) => {
                         />
                     </div>
                     <div className='flex-row'>
-                        <div className='icon-wrapper'>
-                            <Image 
-                                src={icon}
-                                alt={`${name} icon`}
-                                layout='responsive'
-                                width={35}
-                                height={35}
-                            />
-                        </div>
+                        { icon &&  
+                               <div className='icon-wrapper'>
+                               <Image 
+                                   src={icon}
+                                   alt={`${name} icon`}
+                                   layout='responsive'
+                                   width={35}
+                                   height={35}
+                               />
+                           </div>
+                           }
                         <p>{name}</p>
                     </div>
                     <div className='desc'><p>{desc}</p></div>

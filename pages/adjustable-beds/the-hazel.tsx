@@ -8,7 +8,7 @@ import MaterialBed from '../../components/tableOfContents/MaterialBed';
 import Reviews from '../../components/tableOfContents/Reviews';
 import RecommendedProducts from '../../components/sections/recommendedProducts/RecommendedProducts';
 import Mattress from '../../components/tableOfContents/Mattress';
-import Headboard from '../../components/tableOfContents/Headboard';
+import Headboards from '../../components/tableOfContents/Headboards';
 import Accessories from '../../components/tableOfContents/Accessories';
 
 const TheHazel = () => {
@@ -95,7 +95,7 @@ const TheHazel = () => {
                 <h4 className='toc-heading'>Our Process</h4>
                 <MaterialBed isOpen={isOpen} openAccordian={() => openAccordian('material')}/>
                 <Mattress isOpen={isOpen} openAccordian={() => openAccordian('mattress')}/>
-                <Headboard isOpen={isOpen} openAccordian={() => openAccordian('headboard')}/>
+                <Headboards isOpen={isOpen} openAccordian={() => openAccordian('headboard')}/>
                 <Accessories isOpen={isOpen} openAccordian={() => openAccordian('accessories')} type='bed'/>
                 <Reviews isOpen={isOpen} openAccordian={() => openAccordian('reviews')}/>
             </div>
@@ -120,7 +120,7 @@ const TheHazel = () => {
                     </div>
                 </div>
             </div>
-            <RecommendedProducts />
+            <RecommendedProducts product='beds' />
         </div>
         </>
     )
