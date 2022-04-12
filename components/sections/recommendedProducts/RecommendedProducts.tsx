@@ -8,7 +8,7 @@ interface ComponentProps {
 
 const RecommendedProducts = ({product}: ComponentProps) => {
   return (
-    <div className='other-products'>
+    <div className='other-products con-reg'>
     <h6>Our other chairs</h6>
     {product === 'chairs' && 
     <div className='product-grid'>
@@ -16,7 +16,7 @@ const RecommendedProducts = ({product}: ComponentProps) => {
         <a className='product'>
             <div className='image-wrapper'>
             <Image
-                src='/images/products/chairs/maple/maple-product-1.png'
+                src='/images/products/chairs/maple/maple-cutout.png'
                 alt='The Maple'
                 layout='responsive'
                 width={303}
@@ -42,7 +42,7 @@ const RecommendedProducts = ({product}: ComponentProps) => {
         <a  className='product'>
         <div className='image-wrapper'>
             <Image
-                src='/images/products/chairs/tulip/tulip-product-1.png'
+                src='/images/products/chairs/tulip/tulip-cutout.png'
                 alt='The Tulip'
                 layout='responsive'
                 width={303}
@@ -68,7 +68,7 @@ const RecommendedProducts = ({product}: ComponentProps) => {
         <a className='product'>
             <div className='image-wrapper'>
             <Image
-                src='/images/products/chairs/rowan/rowan-product-1.png'
+                src='/images/products/chairs/rowan/rowan-cutout.png'
                 alt='The Rowan'
                 layout='responsive'
                 width={303}

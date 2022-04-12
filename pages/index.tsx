@@ -136,7 +136,6 @@ closeUspOverlay = () => {
               <span className='bg-hover'></span>
               <p>Request a Free Brochure</p>
             </button>
-           
           </div>
         </div>
         <div className='intro-image'>

@@ -25,8 +25,8 @@ const TheOak = () => {
     }
     return (
         <>
-        <div className='product-wrapper con-reg'>
-        <div className='product-hero-wrapper '>
+        <div className='product-wrapper'>
+        <div className='product-hero-wrapper con-reg'>
             <div className='product-hero-carousel'>
                 <div className='image-wrapper'>
                     <Image
@@ -55,7 +55,7 @@ const TheOak = () => {
                 </div>
             </div>
     </div>
-            <div className='product-details' id='product-information'>
+            <div className='product-details con-reg' id='product-information'>
                 <h3 className='heading'>Unparralleled Comfort and Support</h3>
                 <p className='desc mobile'>The chairs in this range each feature three luxuriously filled back cushions, which provide unparalleled comfort and support.</p>
                 <ul className='mobile'>
@@ -65,7 +65,7 @@ const TheOak = () => {
                 </ul>
                 <p className='desc desktop'>The chairs in this range each feature three luxuriously filled back cushions, which provide unparalleled comfort and support. In addition, with their scroll arms and piped wings, these recliners are perfectly suited to those looking to add a touch of elegance to their home. With the simple-to-use handheld control panel, sitting and standing will be a breeze too.</p>
             </div>
-            <div className="product-images">
+            <div className="product-images con-reg">
                 <div className='image-wrapper'>
                     <Image
                         src='/images/products/chairs/oak/oak-product-2.png'
@@ -93,7 +93,7 @@ const TheOak = () => {
                 <Accessories  isOpen={isOpen} openAccordian={() => openAccordian('accessories')} type='chair'/>
                 <Reviews isOpen={isOpen} openAccordian={() => openAccordian('reviews')}/>
             </div>
-            <div className='request-wrapper'>
+            <div className='request-wrapper con-reg'>
                 <h6 className='heading'>Book a Home Visit</h6>
                 <p className='content'>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore.</p>
                 <div className='image-and-form'>
@@ -114,7 +114,7 @@ const TheOak = () => {
                     </div>
                 </div>
             </div>
-            <RecommendedProducts product='chair'/>
+            <RecommendedProducts product='chairs'/>
         </div>
         </>
     )

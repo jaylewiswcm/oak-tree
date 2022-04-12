@@ -33,7 +33,7 @@ header {
     align-items: center;
     padding: 15px 25px;
     height: 100%;
-    max-width: 1350px;
+    // max-width: 1350px;
     // height: 90px;
     // border-bottom: 1px solid $lighter-grey;
     // @media(min-width: 400px) and (max-width: 499px) {
@@ -94,7 +94,7 @@ header {
       justify-content: center;
       // margin: auto;
       // margin-left: 15px;
-      margin: 0;
+      margin: 0 auto;
       margin-right: auto; 
       height: 40px;
       display: none;
@@ -108,12 +108,12 @@ header {
           padding: 0 20px;
           padding: 0 17px;
           a {
-            font-size: 1.6rem;
-            font-weight: 500;
-            // letter-spacing: 0.5px;
+            font-size: 1.7rem;
+            font-weight: 400;
+            letter-spacing: 0.5px;
             color: $black;
             color: $dark-green-1;
-            color: $dark-grey;
+            // color: $dark-grey;
             // color: #435D60;
             @media(min-width: 1080px) and (max-width: 1150px) {
               font-size: 1.6rem;

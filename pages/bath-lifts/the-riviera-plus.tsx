@@ -4,6 +4,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 // Components 
 import HomeVisitForm from '../../components/forms/homeVisit/HomeVisitForm';
+import BathLiftSteps from '../../components/sections/how-it-works/BathLiftSteps';
+
 const TheRivieraPlus = () => {
     const [stageIndex, setStageIndex] = useState(0);
     return (
@@ -32,7 +34,7 @@ const TheRivieraPlus = () => {
                  <h2 className='category'>Bath Lift</h2>
                  <p className='desc'>Our Riviera Plus offers the best way to enjoy the therapeutic benefits of a hot bath again</p>
                 <div className='button-wrapper'>
-                    <button className='main-cta blue-cta'>
+                    <button className='blue-cta'>
                         <p className='mobile-text'>Request a Brochure</p>
                         <p className='desktop-text'>Request Your Free Brochure</p>
                     </button>
@@ -121,27 +123,84 @@ const TheRivieraPlus = () => {
                </div>
            </div>
            <div className='con-reg'>
-               <div className='feature-cards hide'>
-                   <div className='feature'>
-                       <div className='image-wrapper'>
-                           {/* <Image 
-                                src=''
-                                alt=''
-                                layout='responsive'
-                                width={}
-                                height={}
-                           /> */}
-                       </div>
-                       <div className='info'>
-                            <h4>Two Button<br/>Remote Control</h4>
-                            <p>The fully waterproof and floating remote control is a standard feature on the Riviera Plus Bath Lift. Two simple buttons allow you to descend and rise gently in complete safety.</p>
-                       </div>
-                   </div>
-               </div>
-            <div className='table-of-contents'>
-                <h4 className='toc-heading'>Our Process</h4>
-       
-            </div>
+           <div className='collection-details con-reg bathlift-details'>
+                  <div className='detail'>
+                      <div className="image-wrapper">
+                          <Image 
+                            src='/images/products/bath-lifts/the-riviera/tech-2.png'
+                            alt='The Best Technology'
+                            layout='responsive'
+                            width={593}
+                            height={355}
+                          />
+                      </div>
+                      <div className='content'>
+                          <h3>Two Button <br/>Remote Control</h3>
+                          <p>The fully waterproof and floating remote control is a standard feature on the Riviera Plus Bath Lift. Two simple buttons allow you to descend and rise gently in complete safety.</p>
+                      </div>
+                  </div>
+                  <div className='detail'>
+                      <div className="image-wrapper">
+                          <Image 
+                            src='/images/products/bath-lifts/the-riviera/tech-3.png'
+                            alt='Remote Control'
+                            layout='responsive'
+                            width={593}
+                            height={355}
+                          />
+                      </div>
+                      <div className='content'>
+                          <h3>Comfort Slider <br/>Levelling Belt</h3>
+                          <p>The unique levelling belt with a built in ‘comfort slider’ to maintain balance is extremely strong and made from superior seat belt material.</p>
+                      </div>
+                  </div>
+                  <div className='detail'>
+                      <div className="image-wrapper">
+                          <Image 
+                            src='/images/products/bath-lifts/the-riviera/tech-4.png'
+                            alt='Customer Service'
+                            layout='responsive'
+                            width={593}
+                            height={355}
+                          />
+                      </div>
+                      <div className='content'>
+                            <h3>State Of The Art <br/>Lithium Battery</h3>
+                            <p>Our bath lift uses state of the art lithium battery technology to provide a reliable and safe way to keep the motor powered. It also makes installation easier than ever.</p>
+                      </div>
+                  </div>
+              </div>
+              <div className='how-it-works bathlift'>
+                  <h4>How It Works</h4>
+                  <BathLiftSteps />
+                  <div className='slider hide'>
+                      <div className='step'>
+                          <div className='bg'></div>
+                          <div className='content'>
+                              <p className='step-num'>Step One</p>
+                              <p className='title'>Sit on the Bath Belt</p>
+                              <ul>
+                                    <li>When the saddleband is taut across the top of the bath, simply sit on the saddleband on the comfort slider.</li>
+                                    <li>No need to worry about tightening the saddleband.</li>
+                                    <li>Once the saddleband is at the top of the bath, the unit will take over and automatically tighten for you, making it ready to sit on.</li>
+                              </ul>
+                              <div className='slider-nav'>
+                                <button className='prev'>Previous</button>
+                                <button className='next'>Next</button>
+                            </div>
+                          </div>
+                          <div className='image-wrapper'> 
+                            <Image 
+                                    src='/images/products/bath-lifts/the-riviera/step-1.png'
+                                    alt='Sit on the bath belt'
+                                    layout='responsive'
+                                    width={587}
+                                    height={327}
+                            />
+                        </div>
+                      </div>
+                  </div>
+              </div>
             <div className='request-wrapper'>
                 <h6 className='heading'>Book a Home Visit</h6>
                 <p className='content'>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore.</p>

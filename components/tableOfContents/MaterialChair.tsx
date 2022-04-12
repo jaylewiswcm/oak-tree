@@ -9,7 +9,7 @@ interface ComponentProps {
 
 const MaterialChair = ({isOpen, openAccordian}:ComponentProps) => {
   return (
-    <div className={isOpen === 'material' ? "toc open" : "toc"}>
+    <div className={isOpen === 'material' ? "toc open con-reg" : "toc con-reg"}>
         <button className='toc-btn' onClick={() => openAccordian('material')}>
         <p>Material</p> 
             <span className='icon-wrapper'>

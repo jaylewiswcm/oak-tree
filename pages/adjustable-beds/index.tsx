@@ -55,7 +55,8 @@ const Index = () => {
                     </div>
                    <CollectionBrochureRequestForm productType='chair'/>
                 </div>
-              </div>    
+              </div>   
+              <p className='sub-heading'>Adjustable Beds</p>  
               <h2 className='heading' id='collection-top-chair'>The Perfect Nights Sleep</h2>
               <div className='collections-grid con-reg'>
                   {beds.map((product, index) => 

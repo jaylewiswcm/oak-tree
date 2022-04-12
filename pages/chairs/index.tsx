@@ -66,8 +66,8 @@ const Index = () => {
                                 src={product!.collectionImage}
                                 alt={product!.name + 'Collections'}
                                 layout='responsive'
-                                width={580}
-                                height={325.07}
+                                width={1000}
+                                height={671}
                             />
                         </div>
                         <p className='subheading'>{product!.subheading}</p>

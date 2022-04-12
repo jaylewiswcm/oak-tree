@@ -2,8 +2,24 @@
     .heading {
         font-size: 3rem;
         text-align: center;
-        margin: 15px 0; 
+        margin-bottom: 15px; 
         color: $dark-green-1;
+        @media(min-width: 1000px) {
+            font-size: 4rem;
+            margin-bottom: 35px;
+        }
+    }
+    .sub-heading {
+        font-size: 2.2rem;
+        font-weight: 500;
+        margin: 0 auto;
+        margin-bottom: 12px;
+        text-align: center;
+        color: $dark-green-1;  
+        
+        text-transform: uppercase;
+        text-align: center;
+        letter-spacing: .8px;
     }
 
     .intro {
