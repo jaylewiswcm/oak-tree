@@ -8,7 +8,7 @@ interface ComponentProps {
 
 const MotorChair = ({isOpen, openAccordian}:ComponentProps) => {
   return (
-    <div className={isOpen === 'motor' ? "toc open" : "toc"}>
+    <div className={isOpen === 'motor' ? "toc open con-reg" : "toc con-reg"}>
     <button className='toc-btn' onClick={() => openAccordian('motor')}>
           <p>Motor</p> 
             <span className='icon-wrapper'>
@@ -20,7 +20,8 @@ const MotorChair = ({isOpen, openAccordian}:ComponentProps) => {
                 height={15} />
             </span>
         </button>
-        <div className='product-content motor-container'>
+        <div className='product-content'>
+          <div className='motor-container'>
             <div className='content con-reg'>
                 <p className='subheading oaktree-green'>Step Three</p>
                 <h5 className='heading'>Choose Your Motor</h5>
@@ -229,6 +230,7 @@ const MotorChair = ({isOpen, openAccordian}:ComponentProps) => {
 
                   </div>
                 </div>
+            </div>
             </div>
         </div>
 </div>

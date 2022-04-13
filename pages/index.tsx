@@ -127,16 +127,29 @@ closeUspOverlay = () => {
           </div>
         </div>
       </div>
-      <div className='home-intro con-reg'>
+      <div className='home-intro'>
         <div className='intro-content'>
-          <h1>Britian's Leading Mobility Specialists</h1>
+          <div className='hero-bg'>
+            <Image 
+              src='/graphics/home-hero.png'
+              alt='Home Hero'
+              layout='fill'
+              objectFit='cover'
+              objectPosition='left'
+            />
+          </div>
+          <div className='title-wrapper'>
+            <h1>Britian's Leading Mobility Specialists</h1>
+            <p className='subheading'>At Oak Tree, we make beautiful products that help people live independently.</p>
+          </div>
+          {/* <h1>Britian's Leading Mobility Specialists</h1>
           <p className='subheading'>At Oak Tree, we make beautiful products that help people live independently.</p>
           <div className="button-wrapper">
             <button className='bg-green'>
               <span className='bg-hover'></span>
               <p>Request a Free Brochure</p>
             </button>
-          </div>
+          </div> */}
         </div>
         <div className='intro-image'>
           <video height="100%" autoPlay loop muted>
@@ -217,7 +230,7 @@ closeUspOverlay = () => {
           <button className='bg-yellow3'>Learn More</button>
         </div>
       </div>
-      <div className='occupational-therapist-wrapper con-reg'>
+      <div className='occupational-therapist-wrapper con-reg hide'>
         <div className='image-wrapper desktop-image'>
           <Image
             src='/occupational-therapist/sam-shann-1.png'
@@ -242,10 +255,26 @@ closeUspOverlay = () => {
           </div>
         </div>
       </div>
+      <div className='oc-thera con-reg'>
+        <div className='image-wrapper'>
+          <Image 
+            src='/occupational-therapist/sam-shann-1.png'
+            alt='Sam Shann'
+            layout='fill'
+            objectFit='cover'
+            objectPosition='left top'
+          />
+        </div>
+        <div className='content'>
+          <p className='subheading'>Meet Samantha Shann</p>
+          <p className='heading'>Our Occupational Therapist</p>
+          <p className='info'>All of our products are approved by Samantha Shann, occupational therapist and co-founder of UK Therapy Services Ltd. She fully tests and evaluates everything we offer, ensuring it satisfies the high standards of an independent health professional.</p>
+          <Link href='/occupational-therapist'><a>Find out more</a></Link>
+        </div>
+      </div>
       <Reviews orphan={false} />
       <Testimonials pageType='normal' />
       <FooterCollections />
-
       </>
   )
 }

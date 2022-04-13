@@ -34,6 +34,12 @@ const Index = () => {
                     />
                 </div>
                 <div className="hero-intro">
+                <div className="intro-border"></div>
+                    <p className='subheading'>Oak Tree</p>
+                    <h1>Adjustable Beds</h1>
+                    <p className='intro-statement'>Transform Your Life with an Oak Tree Mobility Bed</p>
+                </div>
+                {/* <div className="hero-intro">
                     <p className='subheading'>Oak Tree</p>
                     <h1>Adjustable Beds</h1>
                     <p className='intro-statement'>Transform Your Life with an Oak Tree Mobility Bed</p>
@@ -46,7 +52,7 @@ const Index = () => {
                             <p>Explore our Beds</p>
                         </a>
                     </Link>
-                </div>
+                </div> */}
                 </div>
                 <div className='hero-form'>
                     <div className='form-top'>
@@ -56,8 +62,8 @@ const Index = () => {
                    <CollectionBrochureRequestForm productType='chair'/>
                 </div>
               </div>   
-              <p className='sub-heading'>Adjustable Beds</p>  
-              <h2 className='heading' id='collection-top-chair'>The Perfect Nights Sleep</h2>
+              <p className='sub-heading' id='collection-top-chair'>Adjustable Beds</p>  
+              <h2 className='heading' >The Perfect Nights Sleep</h2>
               <div className='collections-grid con-reg'>
                   {beds.map((product, index) => 
                   <Link href={product!.url} key={index}>
@@ -71,8 +77,15 @@ const Index = () => {
                                 height={325.07}
                             />
                         </div>
-                        <p className='subheading'>{product!.subheading}</p>
-                        <h2>{product!.name}</h2>
+                        <div className='col-name-wrapper'>
+                            <div className='name-wrapper'>
+                                <p className='subheading'>{product!.subheading}</p>
+                                <h2>{product!.name}</h2>
+                            </div>
+                            <span className='icon-wrapper'>
+                                <Image src={product.icon} alt={product.name} layout='responsive' width={40} height={40}/>
+                            </span>
+                        </div>
                         <p className='desc'>{product!.desc}</p>
                        <div className='main-cta'><p>View Bed</p></div>
                     </a>

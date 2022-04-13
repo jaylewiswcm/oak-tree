@@ -15,6 +15,7 @@ const MobileNavigation = ({isOpen, toggleMobileMenu} : ComponentProps) => {
             setSubMenuOpen(999)
         }
     },[isOpen])
+    
     const openDropDownSubMenu = (index: number) => {
         if(subMenuOpen !== index) {
             setSubMenuOpen(index);

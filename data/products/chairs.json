@@ -3,33 +3,38 @@
     "collectionImage" : "/images/products/chairs/oak/oak-collection.png",
     "subheading" : "A Touch of Elegance",
     "desc": "All the hallmarks of a traditional chair - a button back cushion, full wings, and elegant wooden knuckles.",
-    "url" : "/chairs/the-oak"
+    "url" : "/chairs/the-oak",
+    "icon": "/icons/products/icon-oak.svg"
 },
 {
     "name" : "The Tulip",
     "collectionImage" : "/images/products/chairs/tulip/tulip-collection.png",
     "subheading" : "Stylish and Modern",
     "desc": "A sleek, streamlined styling, these chairs are the very definition of modern sophistication and elegance.",
-    "url" : "/chairs/the-tulip"
+    "url" : "/chairs/the-tulip",
+    "icon": "/icons/products/icon-tulip.svg"
 },
 {
     "name" : "The Rowan",
     "collectionImage" : "/images/products/chairs/rowan/rowan-collection.png",
     "subheading" : "Sleek and Sumptous",
     "desc": "A perfect balance of comfort and style, you’ll be hard pushed to find better than these rise and recline chairs.",
-    "url" : "/chairs/the-rowan"
+    "url" : "/chairs/the-rowan",
+    "icon": "/icons/products/icon-rowan.svg"
 },
 {
     "name" : "The Cedar",
     "collectionImage" : "/images/products/chairs/cedar/cedar-collection.png",
     "subheading" : "Distinguished and Charming",
     "desc": "With its combination of luxury materials and visual lightness, this chair offers an  aesthetic that fits well with most interior.",
-    "url" : "/chairs/the-cedar"
+    "url" : "/chairs/the-cedar",
+    "icon": "/icons/products/icon-cedar.svg"
 },
 {
     "name" : "The Maple",
     "collectionImage" : "/images/products/chairs/maple/maple-collection.png",
     "subheading" : "Truly Superior Comfort",
     "desc": "If you’re looking for the perfect balance of comfort and style, you’ll be hard pushed to find better.",
-    "url" : "/chairs/the-maple"
+    "url" : "/chairs/the-maple",
+    "icon": "/icons/products/icon-maple.svg"
 }]

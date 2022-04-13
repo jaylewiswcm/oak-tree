@@ -101,12 +101,13 @@ header {
       @media(min-width: 1080px) {
        display: flex;
       }
-      ul {
+      .main-ul {
         display: flex;
         justify-content: center;
         li {
           padding: 0 20px;
           padding: 0 17px;
+          position: relative;
           a {
             font-size: 1.7rem;
             font-weight: 400;

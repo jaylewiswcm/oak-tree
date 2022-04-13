@@ -1,4 +1,5 @@
 .product-collections {
+ 
     .heading {
         font-size: 3rem;
         text-align: center;
@@ -10,10 +11,10 @@
         }
     }
     .sub-heading {
-        font-size: 2.2rem;
+        font-size: 2rem;
         font-weight: 500;
         margin: 0 auto;
-        margin-bottom: 12px;
+        margin-bottom: 5px;
         text-align: center;
         color: $dark-green-1;  
         
@@ -56,18 +57,21 @@
     .hero-split {
         display: flex;
         flex-direction: row;
-        margin-bottom:50px;
-        @media(max-width: 900px) {
-            padding: 0;
+        margin-bottom:25px;
+        padding: 0;
+        @media(min-width: 900px) {
+            margin-bottom:50px;
         }
         .hero-left {
             width: 100%;
+            position: relative;
             @media(min-width: 900px) {
                 width: 60%;
             }
             .hero-image {
                 width: 100%;
-                height:400px;
+                height: 300px;
+                // height:400px;
                 overflow: hidden;
                 position: relative;
                 @media(min-width: 425px) and (min-width: 799px){
@@ -78,10 +82,33 @@
                     width: 100%;
                     margin: 0;
                 }
+                @media(min-width: 900px) {
+                    height: 100%;
+                }
             }
             .hero-intro {
-                padding: 25px 15px;
-
+                padding: 40px 15px;
+                background-color: $white;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: 25px;
+                width: 90%;
+                text-align: center;
+                border-radius: 2px;
+                display: none;
+                @media(min-width: 900px) {
+                    display: initial;
+                }
+                .intro-border{ 
+                    position: absolute;
+                    top: 8px;
+                    left: 8px;
+                    width: calc(100% - 16px);
+                    height: calc(100% - 16px);
+                    border: 3px $dark-green-1 solid;
+                    border-radius: 2px;
+                }
                 .subheading {
                     font-size: 1.8rem;
                     font-weight: 500;
@@ -102,10 +129,11 @@
                 }
                 .intro-statement {
                     font-size: 1.8rem;
-                    font-weight: 400;
-                    margin-top: 5px;
+                    font-weight: 500;
+                    margin-top: 0px;
                     line-height: 1.5;
                     max-width: 600px;
+                    color: $dark-green-1;
                     @media(min-width: 900px) {
                         font-size:2rem;
                         line-height: 1.6;
@@ -196,13 +224,27 @@
                 width: 100%;
                 margin-bottom: 10px;                
             }
+            .col-name-wrapper {
+                display: flex;
+                align-items: center;
+                margin-top: 15px;
+                .name-wrapper {
+                    display: flex;
+                    flex-direction: column;
+                }
+                .icon-wrapper {
+                    width: 50px;
+                    height: 50px;
+                    margin-left: auto;
+                }
+            }
             .subheading {
                 font-size: 1.7rem;
                 font-weight: 500;
                 color: $oaktree-green;
                 margin-bottom: 5px;
-                margin-top: 15px;
-         
+                // margin-top: 15px;
+                
             }
             h2 {
                 font-size: 2.6rem;

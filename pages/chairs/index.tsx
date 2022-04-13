@@ -34,10 +34,12 @@ const Index = () => {
                     />
                 </div>
                 <div className="hero-intro">
+                <div className="intro-border"></div>
                     <p className='subheading'>Oak Tree</p>
                     <h1>Rise and Recline Chairs</h1>
                     <p className='intro-statement'>Transform Your Life with an Oak Tree Mobility Chair</p>
-                    <button className='main-cta brochure-request-btn' onClick={() => setFormToShow(true)}>
+                    
+                    {/* <button className='main-cta brochure-request-btn' onClick={() => setFormToShow(true)}>
                         <p>Request a Brochure</p>
                     </button>
                     {show &&  <Modal classNames='form-modal' setShow={setFormToShow}><PopupBrochureRequestForm setShow={setFormToShow} /></Modal>}
@@ -45,9 +47,9 @@ const Index = () => {
                         <a className='main-cta cta-link'>
                             <p>Explore our Chairs</p>
                         </a>
-                    </Link>
+                    </Link> */}
                 </div>
-                </div>
+                </div> 
                 <div className='hero-form'>
                     <div className='form-top'>
                         <h2>Request Your <span className='yellow-3'>Free</span> Brochure</h2>
@@ -56,7 +58,8 @@ const Index = () => {
                    <CollectionBrochureRequestForm productType='chair'/>
                 </div>
               </div>    
-              <h2 className='heading' id='collection-top-chair'>A Chair That is Truly Yours</h2>
+              <p className='sub-heading' id='collection-top-chair'>Rise and Recline Chairs</p>  
+              <h2 className='heading' >A Chair That is Truly Yours</h2>
               <div className='collections-grid con-reg'>
                   {chairs.map((product, index) => 
                   <Link href={product!.url} key={index}>
@@ -70,8 +73,16 @@ const Index = () => {
                                 height={671}
                             />
                         </div>
-                        <p className='subheading'>{product!.subheading}</p>
-                        <h2>{product!.name}</h2>
+                        <div className='col-name-wrapper'>
+                            <div className='name-wrapper'>
+                                <p className='subheading'>{product!.subheading}</p>
+                                <h2>{product!.name}</h2>
+                            </div>
+                            <span className='icon-wrapper'>
+                                <Image src={product.icon} alt={product.name} layout='responsive' width={40} height={40}/>
+                            </span>
+                        </div>
+               
                         <p className='desc'>{product!.desc}</p>
                        <div className='main-cta'><p>View Chair</p></div>
                     </a>
