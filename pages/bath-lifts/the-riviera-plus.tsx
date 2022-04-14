@@ -31,7 +31,7 @@ const TheRivieraPlus = () => {
             <div className='product-intro'>
                 <p className='subheading blue-3'>Enjoy a Nice Hot Bath Again</p>
                  <h1 className='name'>The Riviera Plus</h1>
-                 <h2 className='category'>Bath Lift</h2>
+                 <h2 className='category  blue-3'>Bath Lift</h2>
                  <p className='desc'>Our Riviera Plus offers the best way to enjoy the therapeutic benefits of a hot bath again</p>
                 <div className='button-wrapper'>
                     <button className='blue-cta'>
@@ -47,9 +47,18 @@ const TheRivieraPlus = () => {
     </div>
            <div className='info-and-images'>
                <div className='image-grid'>
+               <div className='image-wrapper'>
+                        <Image 
+                            src='/images/products/bath-lifts/the-riviera/bath-lift-4.png'
+                            alt='The riviera plus shot 5'
+                            layout='responsive'
+                            width={353}
+                            height={277}
+                       />
+                   </div>
                    <div className='image-wrapper'>
                        <Image 
-                            src='/images/products/bath-lifts/the-riviera/riviera-product-2.png'
+                            src='/images/products/bath-lifts/the-riviera/bath-lift-1.png'
                             alt='The riviera plus shot 2'
                             layout='responsive'
                             width={353}
@@ -58,31 +67,23 @@ const TheRivieraPlus = () => {
                    </div>
                    <div className='image-wrapper'>
                         <Image 
-                            src='/images/products/bath-lifts/the-riviera/riviera-product-3.png'
+                            src='/images/products/bath-lifts/the-riviera/bath-lift-2.png'
                             alt='The riviera plus shot 3'
                             layout='responsive'
                             width={353}
                             height={277}
                        />
                    </div>
-                   <div className='image-wrapper'>
+                   {/* <div className='image-wrapper'>
                         <Image 
-                            src='/images/products/bath-lifts/the-riviera/riviera-product-4.png'
+                            src='/images/products/bath-lifts/the-riviera/bath-lift-3.png'
                             alt='The riviera plus shot 4'
                             layout='responsive'
                             width={353}
                             height={277}
                        />
-                   </div>
-                   <div className='image-wrapper'>
-                        <Image 
-                            src='/images/products/bath-lifts/the-riviera/riviera-product-5.png'
-                            alt='The riviera plus shot 5'
-                            layout='responsive'
-                            width={353}
-                            height={277}
-                       />
-                   </div>
+                   </div> */}
+         
                </div>
                 <div className='info'>
                     <h2>Experience the revolutionary new bath lift</h2>
@@ -98,11 +99,12 @@ const TheRivieraPlus = () => {
            <div className='product-stages'>
             <div className='con-reg flex-row'>
                    <div className='info'>
-                   <div className='button-wrapper'>
-                   <button onClick={() => setStageIndex(0)} className={stageIndex === 0 ? 'selected' : ''}>Getting in</button>
-                   <button onClick={() => setStageIndex(1)} className={stageIndex === 1 ? 'selected' : ''}>Soaking</button>
-                   <div className={`selected-line index-${stageIndex}`}></div>
-               </div>
+                    <div className='button-wrapper'>
+                        <button onClick={() => setStageIndex(0)} className={stageIndex === 0 ? 'selected' : ''}>Getting in</button>
+                        <button onClick={() => setStageIndex(1)} className={stageIndex === 1 ? 'selected' : ''}>Soaking</button>
+                        <div className={`selected-bg index-${stageIndex}`}></div>
+                    </div>
+                    <div>
                        <h3>Safe and Reliable</h3>
                        <p className='subheading'>Packed with features that make it safe, meaning you can rely on it bath after bath.</p>
                        <ul>
@@ -111,18 +113,19 @@ const TheRivieraPlus = () => {
                             <li>The belt attaches easily to the floor, meaning it’s simple to remove for guests who might not want to use the bath lift.</li>
                        </ul>
                    </div>
+                   </div>
                    <div className='image-wrapper'>
                        <Image 
                             src='/images/products/bath-lifts/the-riviera/riviera-product-6.png'
                             alt='The riviera getting in'
                             layout='responsive'
-                            width='681'
-                            height='482'
+                            width='440'
+                            height='435'
                        />
                    </div>
                </div>
            </div>
-           <div className='con-reg'>
+
            <div className='collection-details con-reg bathlift-details'>
                   <div className='detail'>
                       <div className="image-wrapper">
@@ -170,38 +173,51 @@ const TheRivieraPlus = () => {
                       </div>
                   </div>
               </div>
-              <div className='how-it-works bathlift'>
-                  <h4>How It Works</h4>
-                  <BathLiftSteps />
-                  <div className='slider hide'>
-                      <div className='step'>
-                          <div className='bg'></div>
-                          <div className='content'>
-                              <p className='step-num'>Step One</p>
-                              <p className='title'>Sit on the Bath Belt</p>
-                              <ul>
-                                    <li>When the saddleband is taut across the top of the bath, simply sit on the saddleband on the comfort slider.</li>
-                                    <li>No need to worry about tightening the saddleband.</li>
-                                    <li>Once the saddleband is at the top of the bath, the unit will take over and automatically tighten for you, making it ready to sit on.</li>
-                              </ul>
-                              <div className='slider-nav'>
-                                <button className='prev'>Previous</button>
-                                <button className='next'>Next</button>
+              <div className='how-it-works con-reg bathlift'>
+                <div className='image-wrapper'>
+                    <Image 
+                        src='/images/products/bath-lifts/the-riviera/step-1.png'
+                        alt='Sit on bath lift'
+                        layout='fill'
+                        objectFit='cover'
+                        objectPosition='center'
+                    />    
+                </div>     
+                <div className='content'>
+                    <h4>Easy steps to use the Bath Lift</h4>
+                    <ul>
+                        <li>
+                            <span className="num">1</span>
+                            <div className='step'>
+                                <p className='step-head'>Sit on the Bath Belt</p>
+                                <p className='step-p'>When the saddleband is taut across the top of the bath, simply sit on the saddleband on the comfort slider.</p>
                             </div>
-                          </div>
-                          <div className='image-wrapper'> 
-                            <Image 
-                                    src='/images/products/bath-lifts/the-riviera/step-1.png'
-                                    alt='Sit on the bath belt'
-                                    layout='responsive'
-                                    width={587}
-                                    height={327}
-                            />
-                        </div>
-                      </div>
-                  </div>
+                        </li>
+                        <li>
+                            <span className="num">2</span>
+                            <div className='step'>
+                                <p className='step-head'>Lower Yourself Into the Bath</p>
+                                <p className='step-p'>Press the down button on the unit or remote control. The saddleband will begin gently lowering you into the bath.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span className="num">3</span>
+                            <div className='step'>
+                                <p className='step-head'>Relax and Enjoy A Proper Soak</p>
+                                <p className='step-p'>Once at the bottom of your bath, relax and bathe as normal. This is what the Oak Tree Riviera Plus was invented for.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <span className="num">4</span>
+                            <div className='step'>
+                                <p className='step-head'>Raise Yourself Out of the Bath</p>
+                                <p className='step-p'>Once at the bottom of your bath, relax and bathe as normal. This is what the Oak Tree Riviera Plus was invented for.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>               
               </div>
-            <div className='request-wrapper'>
+            <div className='request-wrapper con-reg'>
                 <h6 className='heading'>Book a Home Visit</h6>
                 <p className='content'>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore.</p>
                 <div className='image-and-form'>
@@ -223,7 +239,7 @@ const TheRivieraPlus = () => {
                 </div>
             </div>
             </div>
-        </div>
+    
         </>
     )
 }

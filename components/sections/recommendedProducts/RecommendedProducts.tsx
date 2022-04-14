@@ -99,7 +99,7 @@ const RecommendedProducts = ({product}: ComponentProps) => {
             <div className='image-wrapper'>
             <Image
                 src='/images/products/beds/birch/birch-product.jpeg'
-                alt='The Maple'
+                alt='The Birch'
                 layout='responsive'
                 width={303}
                 height={330}
@@ -125,15 +125,15 @@ const RecommendedProducts = ({product}: ComponentProps) => {
         <div className='image-wrapper'>
             <Image
                 src='/images/products/beds/hesper/hesper-product.jpeg'
-                alt='The Tulip'
+                alt='The Hesper'
                 layout='responsive'
                 width={303}
                 height={330}
             />
             </div>
             <div className='hover-bg'>
-                <p className='name'>The Tulip</p>
-                <p className='view'>View Chair</p>
+                <p className='name'>The Hesper</p>
+                <p className='view'>View Bed</p>
                 <div className='acting-btn'>
                     <Image 
                         src='/buttons/arrow-yellow.svg'
@@ -159,7 +159,7 @@ const RecommendedProducts = ({product}: ComponentProps) => {
             </div>
             <div className='hover-bg'>
                 <p className='name'>The Poplar</p>
-                <p className='view'>View Chair</p>
+                <p className='view'>View Bed</p>
                 <div className='acting-btn'>
                     <Image 
                         src='/buttons/arrow-yellow.svg'
