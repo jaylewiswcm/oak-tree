@@ -1,13 +1,12 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { NextSeo } from 'next-seo';
 import Image from 'next/image';
 import Link from 'next/link';
 // Components 
 import HomeVisitForm from '../../components/forms/homeVisit/HomeVisitForm';
 import BathLiftSteps from '../../components/sections/how-it-works/BathLiftSteps';
-
+import BathLiftStages from '../../components/sections/stages/BathLiftStages';
 const TheRivieraPlus = () => {
-    const [stageIndex, setStageIndex] = useState(0);
     return (
         <>
             <NextSeo  
@@ -52,38 +51,28 @@ const TheRivieraPlus = () => {
                             src='/images/products/bath-lifts/the-riviera/bath-lift-4.png'
                             alt='The riviera plus shot 5'
                             layout='responsive'
-                            width={353}
-                            height={277}
+                            width={2000}
+                            height={1136}
                        />
                    </div>
                    <div className='image-wrapper'>
                        <Image 
-                            src='/images/products/bath-lifts/the-riviera/bath-lift-1.png'
+                            src='/images/products/bath-lifts/the-riviera/bath-lift-2.png'
                             alt='The riviera plus shot 2'
                             layout='responsive'
-                            width={353}
-                            height={277}
+                            width={1000}
+                            height={666}
                        />
                    </div>
                    <div className='image-wrapper'>
                         <Image 
-                            src='/images/products/bath-lifts/the-riviera/bath-lift-2.png'
+                            src='/images/products/bath-lifts/the-riviera/bath-lift-3.png'
                             alt='The riviera plus shot 3'
                             layout='responsive'
-                            width={353}
-                            height={277}
+                            width={1500}
+                            height={1000}
                        />
                    </div>
-                   {/* <div className='image-wrapper'>
-                        <Image 
-                            src='/images/products/bath-lifts/the-riviera/bath-lift-3.png'
-                            alt='The riviera plus shot 4'
-                            layout='responsive'
-                            width={353}
-                            height={277}
-                       />
-                   </div> */}
-         
                </div>
                 <div className='info'>
                     <h2>Experience the revolutionary new bath lift</h2>
@@ -96,36 +85,8 @@ const TheRivieraPlus = () => {
                 </div>
            </div>
            </div>
-           <div className='product-stages'>
-            <div className='con-reg flex-row'>
-                   <div className='info'>
-                    <div className='button-wrapper'>
-                        <button onClick={() => setStageIndex(0)} className={stageIndex === 0 ? 'selected' : ''}>Getting in</button>
-                        <button onClick={() => setStageIndex(1)} className={stageIndex === 1 ? 'selected' : ''}>Soaking</button>
-                        <div className={`selected-bg index-${stageIndex}`}></div>
-                    </div>
-                    <div>
-                       <h3>Safe and Reliable</h3>
-                       <p className='subheading'>Packed with features that make it safe, meaning you can rely on it bath after bath.</p>
-                       <ul>
-                            <li>A wall-mounted system means you can continue to use your bath like normal.</li>
-                            <li>The bath lift always stays taut, making it safe and easy to use.</li>
-                            <li>The belt attaches easily to the floor, meaning it’s simple to remove for guests who might not want to use the bath lift.</li>
-                       </ul>
-                   </div>
-                   </div>
-                   <div className='image-wrapper'>
-                       <Image 
-                            src='/images/products/bath-lifts/the-riviera/riviera-product-6.png'
-                            alt='The riviera getting in'
-                            layout='responsive'
-                            width='440'
-                            height='435'
-                       />
-                   </div>
-               </div>
-           </div>
-
+           <BathLiftStages />
+      
            <div className='collection-details con-reg bathlift-details'>
                   <div className='detail'>
                       <div className="image-wrapper">
@@ -219,7 +180,7 @@ const TheRivieraPlus = () => {
               </div>
             <div className='request-wrapper con-reg'>
                 <h6 className='heading'>Book a Home Visit</h6>
-                <p className='content'>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore.</p>
+                <p className='content'>Our consultant will be able to advise exactly which product is best for you and your home.</p>
                 <div className='image-and-form'>
                     <div className='image-wrapper'>
                         <Image 

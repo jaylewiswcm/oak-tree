@@ -17,7 +17,7 @@ const Mattress = ({isOpen, openAccordian}:ComponentProps) => {
           { mattress.map((i, index) => <link rel="preload" as="image" key={index} href={i.src}></link>) }
      
       </Head>
-    <div className={isOpen === 'mattress' ? "toc open" : "toc"}>
+    <div className={isOpen === 'mattress' ? "toc open con-reg" : "toc con-reg"}>
     <button className='toc-btn' onClick={() => openAccordian('mattress')}>
           <p>Mattress</p> 
             <span className='icon-wrapper'>

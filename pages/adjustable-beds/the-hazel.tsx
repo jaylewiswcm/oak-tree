@@ -29,8 +29,8 @@ const TheHazel = () => {
                 title="The Hazel | Oak Tree Mobility"
                 description="Here at Oak Tree Mobility we offer a two-man white-glove delivery and installation service included in the price of all our chairs and beds. Find out more."
             />
-        <div className='product-wrapper con-reg'>
-        <div className='product-hero-wrapper '>
+        <div className='product-wrapper'>
+        <div className='product-hero-wrapper con-reg'>
             <div className='product-hero-carousel'>
                 <div className='image-wrapper'>
                     <Image
@@ -61,7 +61,7 @@ const TheHazel = () => {
                 </div>
             </div>
     </div>
-            <div className='product-details' id='product-information'>
+            <div className='product-details con-reg' id='product-information'>
                 <h3 className='heading'>Long-lasting style and comfort</h3>
                 <p className='desc mobile'>Hidden away inside is a state-of-the-art motor that allows complete control of the mattress with a simple handheld control. If you’re struggling to get into and out of bed, the smart actions of the Hazel might very well be life changing.</p>
                 <ul className='mobile'>
@@ -71,7 +71,7 @@ const TheHazel = () => {
                 </ul>
                 <p className='desc desktop'>The gently curved lines lend an airy feel and bestow upon the bed a refined elegance. Hidden away inside is a state-of-the-art motor that allows complete control of the mattress with a simple handheld control. If you’re struggling to get into and out of bed, the smart actions of the Hazel might very well be life changing.</p>
             </div>
-            <div className="product-images">
+            <div className="product-images con-reg">
                 <div className='image-wrapper'>
                     <Image
                         src='/images/products/beds/hazel/hazel-product-1.png'
@@ -95,11 +95,11 @@ const TheHazel = () => {
                 <h4 className='toc-heading'>Our Process</h4>
                 <MaterialBed isOpen={isOpen} openAccordian={() => openAccordian('material')}/>
                 <Mattress isOpen={isOpen} openAccordian={() => openAccordian('mattress')}/>
-                <Headboards isOpen={isOpen} openAccordian={() => openAccordian('headboard')}/>
+                <Headboards isOpen={isOpen} openAccordian={() => openAccordian('headboards')}/>
                 <Accessories isOpen={isOpen} openAccordian={() => openAccordian('accessories')} type='bed'/>
                 <Reviews isOpen={isOpen} openAccordian={() => openAccordian('reviews')}/>
             </div>
-            <div className='request-wrapper'>
+            <div className='request-wrapper con-reg'>
                 <h6 className='heading'>Book a Home Visit</h6>
                 <p className='content'>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore.</p>
                 <div className='image-and-form'>

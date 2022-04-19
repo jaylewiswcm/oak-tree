@@ -31,7 +31,7 @@ const index = () => {
                 </div>
                 <div className="hero-intro">
                 <div className="intro-border"></div>
-                    <p className='subheading'>Oak Tree</p>
+                    <p className='subheading blue-3'>Oak Tree</p>
                     <h1>Bath Lifts</h1>
                     <p className='intro-statement'>Enjoy sitting at the the bottom of the bath and bathing as normal</p>
                 </div>
@@ -66,7 +66,7 @@ const index = () => {
                     
                         <div className='col-name-wrapper'>
                             <div className='name-wrapper'>
-                                <p className='subheading'>Enjoy a Nice Hot Bath Again</p>
+                                <p className='subheading blue-3'>Enjoy a Nice Hot Bath Again</p>
                                 <h2>The Riviera Plus</h2>
                             </div>
                             <span className='icon-wrapper'>
@@ -129,17 +129,17 @@ const index = () => {
                 <div className='bath-lift-testimonial con-reg'>
                     <h6>Our Customers View</h6>
                     <div className='inner-wrapper'>
-                        <Video videoId='YpIhtPvr76M' placeholder=''/>
+                        <Video videoId='YpIhtPvr76M' title='Mr Parks Bath Lift Testimonial'/>
                         <div className='customer-details'>
                             <p className='name'>Mr Parks</p>
                             <p className='location'>Cornwall</p>
                             <p className='statement'>After suffering a mini stroke which affected his balance, Richard Parks hadn't had a bath in years. Now, thanks to his Oak Tree Mobility bath lift, he can enjoy a relaxing bath once again.</p>
-                            <Link href='/bath-lifts/the-riviera-plus'><a>View The Riviera Plus</a></Link>
+                            <Link href='/bath-lifts/the-riviera-plus'><a className='blue-3'>View The Riviera Plus</a></Link>
                         </div>
                     </div>
                 </div>
                 <OurProcess />
-                <Resources pageType='chairs'/>
+                <Resources pageType='bathlifts'/>
           </div>
           <FooterCollections />
         </div>

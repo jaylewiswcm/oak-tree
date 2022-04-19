@@ -10,8 +10,8 @@ interface ComponentProps {
 const Headboards = ({isOpen, openAccordian }:ComponentProps) => {
   return (
     <div className={isOpen === 'headboards' ? "toc open" : "toc"}>
-    <button className='toc-btn' onClick={() => openAccordian('accessories')}>
-          <p>Accessories</p> 
+    <button className='toc-btn' onClick={() => openAccordian('headboards')}>
+          <p>Headboards</p> 
             <span className='icon-wrapper'>
               <Image 
               src='/buttons/plus-black.svg'

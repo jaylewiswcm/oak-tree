@@ -9,7 +9,7 @@ interface ComponentProps {
 
 const Reviews = ({isOpen, openAccordian}:ComponentProps) => {
   return (
-    <div className={isOpen === 'reviews' ? "toc open con-reg" : "toc con-reg"}>
+    <div className={isOpen === 'reviews' ? "toc open" : "toc"}>
     <button className='toc-btn' onClick={() => openAccordian('reviews')}>
           <p>Reviews</p> 
             <span className='icon-wrapper'>
