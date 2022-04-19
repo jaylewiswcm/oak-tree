@@ -113,6 +113,12 @@ body.mobile-navbar {
             width: 100%;
             max-width: 350px;
         }
+        button:hover {
+            color: $white;
+            p {
+                color: $white;
+            }
+        }
     }
 }
 .hide-mobile-navigation {

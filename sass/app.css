@@ -2303,6 +2303,14 @@ body.mobile-navbar .mobile-navigation {
   max-width: 350px;
 }
 
+.mobile-navigation .button-wrapper button:hover {
+  color: #fff;
+}
+
+.mobile-navigation .button-wrapper button:hover p {
+  color: #fff;
+}
+
 .hide-mobile-navigation {
   left: -100%;
 }
