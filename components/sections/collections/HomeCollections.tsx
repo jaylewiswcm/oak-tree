@@ -13,7 +13,7 @@ import "swiper/css/autoplay";
 const HomeCollections = () => {
   return (
 <div className='collections'>
-    <Link href='/'>
+    <Link href='/chairs'>
             <a className='collection-item'>
               <div className='image-wrapper'>
                 <Image 
@@ -31,7 +31,7 @@ const HomeCollections = () => {
              </div>
             </a>
           </Link>
-        <Link href='/'>
+        <Link href='/adjustable-beds'>
             <a className='collection-item'>
               <div className='image-wrapper'>
                 <Image 
@@ -49,7 +49,7 @@ const HomeCollections = () => {
              </div>
             </a>
           </Link>
-          <Link href='/'>
+          <Link href='/bath-lifts'>
             <a className='collection-item'>
               <div className='image-wrapper'>
                 <Image 

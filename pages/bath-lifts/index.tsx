@@ -15,7 +15,7 @@ const index = () => {
         <div>
             <NextSeo  
                 title="Bath Lifts | Oak Tree Mobility"
-                description="Here at Oak Tree Mobility we offer a two-man white-glove delivery and installation service included in the price of all our chairs and beds. Find out more."
+                description="An Oak Tree bath lift gently lowers you in and out of the bath, helping you enjoy a relaxing and therapeutic soak again. Take a look at our bath lifts."
             />
              <div className='product-collections'>
               <div className='hero-split con-reg'>

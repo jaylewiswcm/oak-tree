@@ -3,7 +3,7 @@ import React, {useState, useEffect} from 'react'
 import CarouselNormal from './carousel/CarouselNormal';
 import CarouselLandingPage from './carousel/CarouselLandingPage';
 import Modal from '../../modal/Modal'
-import VideoCarousel from './video/VideoCarousel';
+import VideoCarousel from '../../modal/video/VideoCarousel';
 
 interface ComponentProps {
   pageType: string

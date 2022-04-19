@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Link from 'next/link';
 import Image from 'next/image';
+import { NextSeo } from 'next-seo';
 // Components
 import HomeVisitForm from '../../components/forms/homeVisit/HomeVisitForm';
 import MaterialChair from '../../components/tableOfContents/MaterialChair';
@@ -25,6 +26,10 @@ const TheOak = () => {
     }
     return (
         <>
+             <NextSeo  
+                title="The Oak Rise and Recline Chair| Oak Tree Mobility"
+                description="Choose a stylish & comfortable rise and recline chair & settee from our Oak Collection, representing the very best of classic British design."
+            />
         <div className='product-wrapper'>
         <div className='product-hero-wrapper con-reg'>
             <div className='product-hero-carousel'>
@@ -95,7 +100,7 @@ const TheOak = () => {
             </div>
             <div className='request-wrapper con-reg'>
                 <h6 className='heading'>Book a Home Visit</h6>
-                <p className='content'>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore.</p>
+                <p className='content'>Our consultant will be able to advise exactly which product is best for you and your home.</p>
                 <div className='image-and-form'>
                     <div className='image-wrapper'>
                         <Image 

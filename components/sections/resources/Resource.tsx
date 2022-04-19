@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image';
 import Link from 'next/link';
 // components
 import { Video } from '../../video/Video';
+import Modal from '../../modal/Modal';
+import VideoCarousel from '../../modal/video/VideoCarousel';
 
 interface ComponentProps {
     resource: {
@@ -14,6 +16,7 @@ interface ComponentProps {
     }
 }
 export const Resource = ({resource}:ComponentProps) => {
+  const [popUpVideo, setPopUpVideo] = useState(false)
     const { heading, subheading, contentSrc, video, url } = resource;
 
     if(video) {
@@ -22,7 +25,8 @@ export const Resource = ({resource}:ComponentProps) => {
           <Video videoId={contentSrc}  title={heading}/> 
           <p className='subheading'>{subheading}</p>
           <p className='heading'>{heading}</p>
-          <p className='link'>Watch Video</p>
+          <p className='link' onClick={() => setPopUpVideo(true)}>Watch Video</p> 
+          {popUpVideo &&  <Modal classNames='' setShow={setPopUpVideo}><VideoCarousel  videoId={contentSrc} setShow={setPopUpVideo} show={popUpVideo}/> </Modal>}
        </div>
       )
     } else {

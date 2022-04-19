@@ -8,7 +8,7 @@ interface ComponentProps {
 
 const MotorChair = ({isOpen, openAccordian}:ComponentProps) => {
   return (
-    <div className={isOpen === 'motor' ? "toc open" : "toc"}>
+    <div className={isOpen === 'motor' ? "toc open motor-toc" : "toc motor-toc"}>
     <button className='toc-btn' onClick={() => openAccordian('motor')}>
           <p>Motor</p> 
             <span className='icon-wrapper'>

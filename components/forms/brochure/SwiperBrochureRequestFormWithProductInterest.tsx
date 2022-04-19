@@ -284,7 +284,7 @@ const validateFormSectionBeforeChangingSlide = (event:React.MouseEvent<HTMLButto
                     id="street-address"
                     name="street-address"
                     autoComplete="home address-line1"
-                    placeholder='Enter your last name'
+                    placeholder='Enter your street address'
                     value={formData[2]['street-address']} 
                     onChange={(e:any) => onChange(e,2)} 
                     htmlFor="street-address"

@@ -11,7 +11,7 @@ const TheRivieraPlus = () => {
         <>
             <NextSeo  
                 title="The Riviera Plus | Oak Tree Mobility"
-                description="Here at Oak Tree Mobility we offer a two-man white-glove delivery and installation service included in the price of all our chairs and beds. Find out more."
+                description="The therapeutic benefits of a long soak in the tub are numerous. Now, with the Oak Tree Riviera, you can relax and enjoy a comfortable bath again. See more."
             />
         <div className='product-wrapper'>
             <div className='con-reg'>
