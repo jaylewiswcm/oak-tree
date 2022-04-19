@@ -25,12 +25,12 @@ body.mobile-navbar {
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 20px 15px;
+        padding: 15px 15px;
         border-bottom: 1px $lighter-grey solid;
         .logo-wrapper {
             width: 60%;
             @media(min-width: 500px){ 
-                width: 280px;
+                width: 190px;
             }
         }
         .mobile-menu-btn {
@@ -51,6 +51,7 @@ body.mobile-navbar {
             border-bottom: 1px $lighter-grey solid;
             color: $dark-green-1;
             font-weight: 500;
+            cursor: pointer;
             @media(min-width: 500px){ 
              font-size: 2rem;
              padding: 20px 25px;
@@ -210,6 +211,9 @@ transform: translateY(12px) translateX(-8.4375px) translateX(50%) rotate(45deg);
         }
         li {
             padding: 10px 0!important;
+            width: 100%;
+            transition: 0.2s;
+            cursor: pointer;
             a {
                 display: flex;
                 align-items: center;
@@ -232,15 +236,19 @@ transform: translateY(12px) translateX(-8.4375px) translateX(50%) rotate(45deg);
                 margin-left: 65px;
             }
         }
+        .menu-title:hover {
+            background: none;
+        }
+        li:hover {
+            background-color: $dark-green-6;
+            a {
+                color: $dark-green-1!important;
+            }
+        }
         .no-icon {
-            padding: 5px 0!important;;
+            padding: 5px 15px!important;
         }
-            a:hover {
-                text-decoration: underline;
-                text-underline-offset: 2px;
-                text-decoration-thickness: 2px;
-                color: $dark-grey!important;
-        }
+          
     }
 }
 

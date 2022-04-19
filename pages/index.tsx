@@ -158,6 +158,12 @@ closeUspOverlay = () => {
             {/* <source src="videos/oaktree-ad-cut.mp4"
             type="video/mp4"/> */}
           </video>
+          <span className='mobile-image'>
+            <span className='as-seen-on-tv'>
+              <Image src='/icons/as-seen-on-tv/as-seen-on-tv.svg' alt='as seen on tv' layout='responsive' width={110} height={73}/> 
+            </span>
+            <Image src='/images/heros/home-mobile-hero.png' alt='Oak Tree Advert' layout='responsive' width={1262} height={751}/>
+          </span>
         </div>
       </div>
       <div className='green-strip hide'>

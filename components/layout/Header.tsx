@@ -60,10 +60,10 @@ const Header = () => {
                 <nav className='main-nav'>
                     <ul className='main-ul'>
                         <li><Link href='/'><a onMouseLeave={() => setMenuType('')} >Home</a></Link></li>
-                        <li onMouseOver={() => setMenuType('about')} onMouseLeave={() => setMenuType('')}><Link href='/about'><a>About</a></Link> {menuType === 'about' && <DropDown type={menuType} keyId={0}  closeMenu={() => setMenuType('')}/>}</li>
-                        <li onMouseOver={() => setMenuType('chairs')} onMouseLeave={() => setMenuType('')}><Link href='/chairs'><a>Chairs</a></Link> {menuType === 'chairs' && <DropDown type={menuType} keyId={1}  closeMenu={() => setMenuType('')}/>}</li>
-                        <li onMouseOver={() => setMenuType('beds')} onMouseLeave={() => setMenuType('')}><Link href='/adjustable-beds'><a>Beds</a></Link> {menuType === 'beds' && <DropDown type={menuType} keyId={2}  closeMenu={() => setMenuType('')}/>}</li>
-                        <li onMouseOver={() => setMenuType('bath-lifts')} onMouseLeave={() => setMenuType('')}><Link href='/bath-lifts'><a>Bath Lifts</a></Link> {menuType === 'bath-lifts' && <DropDown type={menuType} keyId={3}  closeMenu={() => setMenuType('')}/>}</li>
+                        <li onMouseOver={() => setMenuType('about')} onMouseLeave={() => setMenuType('')}><Link href='/about'><a onClick={() => setMenuType('')}>About</a></Link> {menuType === 'about' && <DropDown type={menuType} keyId={0}  closeMenu={() => setMenuType('')}/>}</li>
+                        <li onMouseOver={() => setMenuType('chairs')} onMouseLeave={() => setMenuType('')}><Link href='/chairs'><a onClick={() => setMenuType('')}>Chairs</a></Link> {menuType === 'chairs' && <DropDown type={menuType} keyId={1}  closeMenu={() => setMenuType('')}/>}</li>
+                        <li onMouseOver={() => setMenuType('beds')} onMouseLeave={() => setMenuType('')}><Link href='/adjustable-beds'><a onClick={() => setMenuType('')}>Beds</a></Link> {menuType === 'beds' && <DropDown type={menuType} keyId={2}  closeMenu={() => setMenuType('')}/>}</li>
+                        <li onMouseOver={() => setMenuType('bath-lifts')} onMouseLeave={() => setMenuType('')}><Link href='/bath-lifts'><a onClick={() => setMenuType('')}>Bath Lifts</a></Link> {menuType === 'bath-lifts' && <DropDown type={menuType} keyId={3}  closeMenu={() => setMenuType('')}/>}</li>
                         <li><Link href='/express-delivery'><a onMouseLeave={() => setMenuType('')}>Express Delivery</a></Link></li>
                     </ul>
                 </nav>
