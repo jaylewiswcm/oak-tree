@@ -5114,6 +5114,7 @@ body.mobile-navbar .mobile-navigation {
   margin-bottom: 40px;
   -webkit-box-shadow: 0 0 20px rgba(0, 134, 197, 0.1);
           box-shadow: 0 0 20px rgba(0, 134, 197, 0.1);
+  margin-top: 30px;
 }
 
 @media (min-width: 600px) {
@@ -5224,6 +5225,13 @@ body.mobile-navbar .mobile-navigation {
 
 .product-stages .flex-row .info {
   max-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
 }
 
 @media (min-width: 420px) {
@@ -5320,7 +5328,7 @@ body.mobile-navbar .mobile-navigation {
 
 @media (min-width: 893px) and (max-width: 955px) {
   .product-stages .flex-row .info .list-wrapper {
-    height: 260px;
+    height: 320px;
   }
 }
 
@@ -5426,7 +5434,7 @@ body.mobile-navbar .mobile-navigation {
   padding: 0;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 650px) {
   .how-it-works.bathlift {
     padding: 0 30px;
   }
@@ -5533,16 +5541,27 @@ body.mobile-navbar .mobile-navigation {
   border-radius: 50%;
   margin-right: 15px;
   margin-bottom: 15px;
+  margin: 15px auto;
+}
+
+@media (min-width: 500px) {
+  .how-it-works.bathlift .content ul li .num {
+    marign: 0;
+    margin-right: 15px;
+    margin-bottom: 15px;
+  }
 }
 
 .how-it-works.bathlift .content ul li .step {
   margin-bottom: 40px;
+  text-align: center;
 }
 
 @media (min-width: 500px) {
   .how-it-works.bathlift .content ul li .step {
     width: calc(100% - 55px);
     margin-bottom: 0;
+    text-align: left;
   }
 }
 
@@ -8918,6 +8937,7 @@ body.mobile-navbar .mobile-navigation {
   line-height: 1.4;
   text-align: left;
   margin: 5px 0;
+  padding: 0;
 }
 
 .resources .resource-grid .resource .link {
@@ -8926,7 +8946,13 @@ body.mobile-navbar .mobile-navigation {
   text-decoration: underline;
   text-underline-offset: 3px;
   text-decoration-thickness: 2px;
-  margin-top: 25px;
+  margin-top: 15px;
   color: #17494D;
+}
+
+@media (min-width: 650px) {
+  .resources .resource-grid .resource .link {
+    margin-top: 25px;
+  }
 }
 /*# sourceMappingURL=app.css.map */

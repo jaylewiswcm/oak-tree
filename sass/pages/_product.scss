@@ -425,6 +425,7 @@
         margin: 0 auto;
         margin-bottom:40px;
         box-shadow: 0 0 20px rgba(0, 134, 197, 0.1);
+        margin-top:30px;
         @media(min-width: 600px ) {
             width: fit-content;
         }
@@ -498,6 +499,8 @@
             }
         .info {
             max-width: 100%;
+            display: flex;
+            flex-direction: column-reverse;
             @media(min-width: 420px) {
                 padding: 0 30px;
             }               
@@ -551,7 +554,7 @@
                     height:303px;
                 }
                 @media(min-width: 893px) and (max-width: 955px) {
-                    height:260px;
+                    height:320px;
                 }
                 @media(min-width: 956px) {
                     height:230px;
@@ -633,7 +636,7 @@
 .how-it-works.bathlift {
     margin-top: 30px;
     padding: 0;
-    @media(min-width: 500px) {
+    @media(min-width: 650px) {
         padding: 0 30px;
     }
     @media(min-width: 750px) {
@@ -676,6 +679,7 @@
             li {
                 display: flex;
                 flex-direction: column;
+
                 @media(min-width: 500px) {
                  flex-direction: row;
                   margin-bottom: 50px;
@@ -693,12 +697,20 @@
                     border-radius: 50%;
                     margin-right: 15px;
                     margin-bottom: 15px;
+                    margin: 15px auto;
+                    @media(min-width: 500px) {
+                        marign:0 ;
+                        margin-right: 15px;
+                        margin-bottom: 15px;
+                    }
                 }
                 .step {
                     margin-bottom: 40px;
+                    text-align: center;
                     @media(min-width: 500px) {
                         width: calc(100% - 55px);
                         margin-bottom: 0;
+                        text-align:left;
                        }
                     .step-head {
                         font-size: 2.3rem;

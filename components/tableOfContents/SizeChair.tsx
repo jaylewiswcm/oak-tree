@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useRef} from 'react'
 import Image from 'next/image';
 
 interface ComponentProps {
@@ -7,9 +7,14 @@ interface ComponentProps {
 }
 
 const SizeChair = ({isOpen, openAccordian}:ComponentProps) => {
+  const tocElement = useRef<HTMLDivElement>(null)
+  const openAndJumpToAccordian = (type:string) => {
+      openAccordian(type);
+      setTimeout(() => {tocElement.current!.scrollIntoView()}, 400); 
+  }
   return (
-    <div className={isOpen === 'size' ? "toc open con-reg" : "toc con-reg"}>
-    <button className='toc-btn' onClick={() => openAccordian('size')}>
+    <div className={isOpen === 'size' ? "toc open con-reg" : "toc con-reg"} ref={tocElement}>
+    <button className='toc-btn' onClick={() => openAndJumpToAccordian('size')}>
           <p>Size</p> 
             <span className='icon-wrapper'>
               <Image 

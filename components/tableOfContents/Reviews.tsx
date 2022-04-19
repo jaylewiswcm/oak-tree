@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useRef} from 'react'
 import Image from 'next/image';
 import ProductReviews from '../sections/reviews/ProductReviews';
 
@@ -8,9 +8,14 @@ interface ComponentProps {
 }
 
 const Reviews = ({isOpen, openAccordian}:ComponentProps) => {
+  const tocElement = useRef<HTMLDivElement>(null)
+  const openAndJumpToAccordian = (type:string) => {
+      openAccordian(type);
+      setTimeout(() => {tocElement.current!.scrollIntoView()}, 400); 
+  }
   return (
-    <div className={isOpen === 'reviews' ? "toc open" : "toc"}>
-    <button className='toc-btn' onClick={() => openAccordian('reviews')}>
+    <div className={isOpen === 'reviews' ? "toc open" : "toc"} ref={tocElement}>
+    <button className='toc-btn' onClick={() => openAndJumpToAccordian('reviews')}>
           <p>Reviews</p> 
             <span className='icon-wrapper'>
               <Image 

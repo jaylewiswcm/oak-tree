@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import Image from 'next/image';
 import Head from 'next/head';
 // data 
@@ -11,14 +11,19 @@ interface ComponentProps {
 
 const Mattress = ({isOpen, openAccordian}:ComponentProps) => {
     const [mattressIndex, setMattressIndex] = useState(0);
+    const tocElement = useRef<HTMLDivElement>(null)
+    const openAndJumpToAccordian = (type:string) => {
+        openAccordian(type);
+        setTimeout(() => {tocElement.current!.scrollIntoView()}, 400); 
+    }
   return (
       <>
       <Head>
           { mattress.map((i, index) => <link rel="preload" as="image" key={index} href={i.src}></link>) }
      
       </Head>
-    <div className={isOpen === 'mattress' ? "toc open con-reg" : "toc con-reg"}>
-    <button className='toc-btn' onClick={() => openAccordian('mattress')}>
+    <div className={isOpen === 'mattress' ? "toc open con-reg" : "toc con-reg"} ref={tocElement}>
+    <button className='toc-btn' onClick={() => openAndJumpToAccordian('mattress')}>
           <p>Mattress</p> 
             <span className='icon-wrapper'>
               <Image 
