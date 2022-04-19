@@ -12,11 +12,9 @@ const Resources = ({pageType}: ComponentProps) => {
   return (
     <div className='resources con-reg'>
     <h6>Resources</h6>
-      <div className='resource-grid'>
-        {resources.map(item => 
-            <>{item.type === pageType && item.resources.map((x, index) => <Resource resource={x} key={index}/>)}</>
+        {resources.map((item, index) => 
+            <div className='resource-grid' key={index}>{item.type === pageType && item.resources.map((x, index) => <Resource resource={x} key={index}/>)}</div>
           )}
-      </div>
 </div>
   )
 }

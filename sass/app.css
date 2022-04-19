@@ -2158,6 +2158,12 @@ body.mobile-navbar .mobile-navigation {
   left: 0;
 }
 
+@media (min-width: 1080px) {
+  body.mobile-navbar .mobile-navigation {
+    left: -100%;
+  }
+}
+
 .mobile-navigation {
   position: fixed;
   top: 0;
@@ -2286,10 +2292,12 @@ body.mobile-navbar .mobile-navigation {
 .mobile-navigation .button-wrapper .phone-number .number {
   font-size: 2.8rem;
   font-weight: 600;
+  color: #00AD74;
 }
 
 .mobile-navigation .button-wrapper button {
   width: 100%;
+  max-width: 350px;
 }
 
 .hide-mobile-navigation {
@@ -5316,7 +5324,7 @@ body.mobile-navbar .mobile-navigation {
 
 @media (min-width: 632px) and (max-width: 749px) {
   .product-stages .flex-row .info .list-wrapper {
-    height: 200px;
+    height: 258px;
   }
 }
 
