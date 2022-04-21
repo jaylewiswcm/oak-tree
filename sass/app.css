@@ -3922,7 +3922,6 @@ body.mobile-navbar .mobile-navigation {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 0 15px;
   margin-bottom: 0px;
   margin-top: 25px;
 }
@@ -4016,14 +4015,29 @@ body.mobile-navbar .mobile-navigation {
   font-size: 1.8rem;
 }
 
+.product-collections .usps-wrapper .title {
+  text-align: center;
+  font-family: "Euclid Circular A", "Helvetica", sans-serif;
+  font-size: 2.7rem;
+  font-weight: 600;
+  color: #17494D;
+  padding: 0 15px;
+}
+
 .product-collections .usp-grid {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 25px;
   margin-bottom: 50px;
   padding: 0;
 }
@@ -4036,11 +4050,7 @@ body.mobile-navbar .mobile-navigation {
 
 @media (min-width: 800px) {
   .product-collections .usp-grid {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (1fr)[3];
-        grid-template-columns: repeat(3, 1fr);
-    margin-bottom: 50px;
+    margin-top: 0;
   }
 }
 
@@ -4055,56 +4065,32 @@ body.mobile-navbar .mobile-navigation {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 0 auto;
   text-align: center;
-  padding: 50px 15px;
+  padding: 30px 15px;
+  max-width: 530px;
   border-radius: 6px;
-}
-
-@media (min-width: 500px) and (max-width: 799px) {
-  .product-collections .usp-grid .usp-item {
-    padding: 50px 15px;
-  }
 }
 
 @media (min-width: 800px) {
   .product-collections .usp-grid .usp-item {
-    padding: 50px 25px;
-    border-bottom: none;
+    max-width: 380px;
+    padding: 40px 15px;
   }
-}
-
-.product-collections .usp-grid .usp-item:nth-of-type(odd) {
-  background-color: #F6F8FF;
-}
-
-.product-collections .usp-grid .usp-item:nth-of-type(odd) .usp-title {
-  color: #012169;
 }
 
 .product-collections .usp-grid .usp-item .icon-wrapper {
   width: 60%;
-  width: 200px;
-}
-
-@media (min-width: 800px) {
-  .product-collections .usp-grid .usp-item .icon-wrapper {
-    width: 160px;
-    margin-bottom: 15px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .product-collections .usp-grid .usp-item .icon-wrapper {
-    width: 200px;
-  }
+  width: 90px;
 }
 
 .product-collections .usp-grid .usp-item .usp-title {
-  font-size: 2.6rem;
+  font-size: 2.3rem;
   font-weight: 600;
   font-family: "Euclid Circular A", "Helvetica", sans-serif;
   color: #17494D;
   margin-bottom: 10px;
+  margin-top: 15px;
   line-height: 1.4;
 }
 
@@ -4121,7 +4107,7 @@ body.mobile-navbar .mobile-navigation {
 }
 
 .product-collections .usp-grid .usp-item .usp-desc {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 400;
   line-height: 1.4;
   overflow: hidden;
@@ -4135,16 +4121,9 @@ body.mobile-navbar .mobile-navigation {
   font-weight: 500;
 }
 
-@media (min-width: 600px) and (max-width: 1150px) {
+@media (min-width: 450px) and (max-width: 799px) {
   .product-collections .usp-grid .usp-item .usp-desc {
     font-size: 1.8rem;
-  }
-}
-
-@media (min-width: 1150px) {
-  .product-collections .usp-grid .usp-item .usp-desc {
-    font-size: 1.8rem;
-    line-height: 1.5;
   }
 }
 
@@ -4158,14 +4137,13 @@ body.mobile-navbar .mobile-navigation {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border-bottom: 2px #0086C5 solid;
   border-radius: 0;
   padding: 2px 5px;
   margin-top: 10px;
-  border: 2px #0086C5 solid;
   padding: 10px 20px;
   border-radius: 4px;
-  margin-top: 30px;
+  margin-top: 15px;
+  display: none;
 }
 
 .product-collections .usp-grid .usp-item .learn-more .arrow {
@@ -4179,6 +4157,9 @@ body.mobile-navbar .mobile-navigation {
   letter-spacing: 0;
   color: #0086C5;
   text-align: center;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 2px;
 }
 
 .product-collections .usp-grid .usp-item.show-desc .usp-desc {
