@@ -75,8 +75,10 @@ footer {
             }
             .form-wrapper {
                 margin-top: 25px;
+            
                 @media(min-width:1250px) {
                     margin: 0 auto;
+                    margin-right: 50px;
                 }
                 form {
                     .input-wrapper{
