@@ -2,13 +2,13 @@ import React from 'react'
 import Image from 'next/image';
 const OurProcess = () => {
   return (
-    <div className='our-process bg-dark-green-1'>
+    <div className='our-process '>
     <h4 className='heading'>Our Process</h4>
     <div className='process-grid con-reg'>
         <div className="item">
             <div className='icon-wrapper'>
               <Image 
-                  src='/icons/collection-process/brochure.svg'
+                  src='/icons/collection-process/brochure-new.svg'
                   alt='Request a Brochure'
                   layout='responsive'
                   width={130}
@@ -21,7 +21,7 @@ const OurProcess = () => {
         <div className="item">
             <div className='icon-wrapper'>
               <Image 
-                  src='/icons/collection-process/consultation.svg'
+                  src='/icons/collection-process/consultation-new.svg'
                   alt='Consulation'
                   layout='responsive'
                   width={130}
@@ -34,7 +34,7 @@ const OurProcess = () => {
         <div className="item">
             <div className='icon-wrapper'>
               <Image 
-                  src='/icons/collection-process/customisation.svg'
+                  src='/icons/collection-process/customisation-new.svg'
                   alt='Customation'
                   layout='responsive'
                   width={130}
@@ -47,7 +47,7 @@ const OurProcess = () => {
         <div className="item">
             <div className='icon-wrapper'>
               <Image 
-                  src='/icons/collection-process/delivery.svg'
+                  src='/icons/collection-process/delivery-new.svg'
                   alt='Delivery and Installation'
                   layout='responsive'
                   width={130}

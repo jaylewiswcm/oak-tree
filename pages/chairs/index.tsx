@@ -89,8 +89,8 @@ const Index = () => {
                     </Link>
                     )}
               </div>
-              <Reviews orphan={false}/>
                 <CollectionUsps />
+                <Reviews orphan={false}/>
                 <OurProcess />
                 <Resources pageType='chairs' />
           </div>
