@@ -101,7 +101,7 @@ const RequestBrochure = (event:React.FormEvent<HTMLFormElement>) => {
     let index = 6;
     let field: keyof typeof sectionData; 
     for(field in sectionData) {
-        console.log(field);
+
         let error = {
                 'field': field, 
                 'errors': { 
@@ -133,7 +133,7 @@ const RequestBrochure = (event:React.FormEvent<HTMLFormElement>) => {
 const onChange = (e:React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTMLSelectElement>, index: number) => {
     const name = e.target.name;
     let newData:Array<any> = [...formData];
-    console.log(newData[index])
+
     newData[index][name] = e.target.value;
 
     setFormData(newData);

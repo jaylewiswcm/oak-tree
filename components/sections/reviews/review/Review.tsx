@@ -14,7 +14,7 @@ interface ComponentProps {
 
 export const Review = ({review}:ComponentProps) => {
   return (
-    <div className='review'>
+    <div className='review'> 
     <div className="review-header">
         <div className='avatar'>{review.avatar}</div>
         <div className='details'>

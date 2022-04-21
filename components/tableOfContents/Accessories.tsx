@@ -15,7 +15,7 @@ const AccessoriesChair = ({isOpen, openAccordian, type }:ComponentProps) => {
       setTimeout(() => {tocElement.current!.scrollIntoView()}, 400); 
   }
   return (
-    <div className={isOpen === 'accessories' ? "toc open" : "toc"} ref={tocElement}>
+    <div className={isOpen === 'accessories' ? "toc open con-reg" : "toc  con-reg"} ref={tocElement}>
     <button className='toc-btn' onClick={() => openAndJumpToAccordian('accessories')}>
           <p>Accessories</p> 
             <span className='icon-wrapper'>

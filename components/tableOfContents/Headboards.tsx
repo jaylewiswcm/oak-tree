@@ -14,7 +14,7 @@ const Headboards = ({isOpen, openAccordian }:ComponentProps) => {
       setTimeout(() => {tocElement.current!.scrollIntoView()}, 400); 
   }
   return (
-    <div className={isOpen === 'headboards' ? "toc open" : "toc"} ref={tocElement}>
+    <div className={isOpen === 'headboards' ? "toc open  con-reg" : "toc  con-reg"} ref={tocElement}>
     <button className='toc-btn' onClick={() => openAndJumpToAccordian('headboards')}>
           <p>Headboards</p> 
             <span className='icon-wrapper'>

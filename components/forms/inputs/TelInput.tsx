@@ -15,16 +15,17 @@ export const TelInput = ({className, error, id, value, onChange,htmlFor,required
   return (
     <div className={className}>
     <p className='error-p'>{error}</p>
-        <InputMask 
-            id={id}
-            name="tel"
-            autoComplete="tel"
-            type="tel"
-            placeholder={placeholder}
-            mask='99999 999999' 
-            value={value} 
-            onChange={onChange}>
-        </InputMask>
+      <input 
+         id={id}
+         name="tel"
+         autoComplete="tel"
+         type="tel"
+         placeholder={placeholder}
+         value={value} 
+         onChange={onChange} />
+        {/* <InputMask 
+         
+        </InputMask> */}
         <label htmlFor={htmlFor}>Phone Number <span className={required ? 'required' : 'required hide'}>*</span></label>
     </div>
   )

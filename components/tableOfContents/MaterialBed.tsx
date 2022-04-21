@@ -14,7 +14,7 @@ const MaterialBed = ({isOpen, openAccordian}:ComponentProps) => {
         setTimeout(() => {tocElement.current!.scrollIntoView()}, 400); 
     }
   return (
-    <div className={isOpen === 'material' ? "toc open" : "toc"} ref={tocElement}>
+    <div className={isOpen === 'material' ? "toc open  con-reg" : "toc  con-reg"} ref={tocElement}>
         <button className='toc-btn' onClick={() => openAndJumpToAccordian('material')}>
         <p>Material</p> 
             <span className='icon-wrapper'>

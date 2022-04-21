@@ -4257,7 +4257,8 @@ body.mobile-navbar .mobile-navigation {
 
 .product-collections .our-process .process-grid .item h5 {
   font-size: 2.4rem;
-  font-weight: 500;
+  font-size: 2.2rem;
+  font-weight: 600;
   font-family: "Euclid Circular A", "Helvetica", sans-serif;
   line-height: 1.3;
   color: #17494D;
@@ -4266,6 +4267,7 @@ body.mobile-navbar .mobile-navigation {
 
 .product-collections .our-process .process-grid .item h5 .number {
   color: #E0AD16;
+  margin-right: 0px;
 }
 
 .product-collections .our-process .process-grid .item p {
@@ -4407,12 +4409,28 @@ body.mobile-navbar .mobile-navigation {
 }
 
 .bath-lift-testimonial {
-  margin-bottom: 50px;
+  margin-bottom: 60px;
 }
 
 .bath-lift-testimonial h6 {
+  font-weight: 600;
+  font-family: "Euclid Circular A", "Helvetica", sans-serif;
+  color: #17494D;
   text-align: center;
   width: 100%;
+  font-size: 2.6rem;
+}
+
+@media (min-width: 400px) and (max-width: 699px) {
+  .bath-lift-testimonial h6 {
+    font-size: 2.8rem;
+  }
+}
+
+@media (min-width: 700px) {
+  .bath-lift-testimonial h6 {
+    font-size: 3rem;
+  }
 }
 
 .bath-lift-testimonial .inner-wrapper {
@@ -4449,7 +4467,7 @@ body.mobile-navbar .mobile-navigation {
 @media (min-width: 800px) {
   .bath-lift-testimonial .inner-wrapper .video-wrapper {
     height: 400px;
-    width: 60%;
+    width: 55%;
   }
 }
 
@@ -4463,8 +4481,8 @@ body.mobile-navbar .mobile-navigation {
 
 @media (min-width: 800px) {
   .bath-lift-testimonial .inner-wrapper .customer-details {
-    padding: 30px;
-    width: 40%;
+    padding: 30px 50px;
+    width: 45%;
   }
 }
 

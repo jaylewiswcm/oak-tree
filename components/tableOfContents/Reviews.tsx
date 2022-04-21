@@ -14,7 +14,7 @@ const Reviews = ({isOpen, openAccordian}:ComponentProps) => {
       setTimeout(() => {tocElement.current!.scrollIntoView()}, 400); 
   }
   return (
-    <div className={isOpen === 'reviews' ? "toc open" : "toc"} ref={tocElement}>
+    <div className={isOpen === 'reviews' ? "toc open con-reg" : "toc  con-reg"} ref={tocElement}>
     <button className='toc-btn' onClick={() => openAndJumpToAccordian('reviews')}>
           <p>Reviews</p> 
             <span className='icon-wrapper'>
