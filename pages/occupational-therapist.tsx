@@ -5,6 +5,13 @@ import Link from 'next/link';
 // components
 import Modal from '../components/modal/Modal';
 import VideoCarousel from '../components/modal/video/VideoCarousel';
+// images 
+import heroImage from '../public/occupational-therapist/sam-shann-hero.png'
+import samShann1 from '../public/occupational-therapist/sam-shann-3.png'
+import samShann2 from '../public/occupational-therapist/sam-shann-4.png'
+import samShannCircle from '../public/occupational-therapist/sam-shann-circle-2.png'
+import samShannVideo from '../public/occupational-therapist/sam-shann-video.png'
+import samShannVideoMobile from '../public/occupational-therapist/sam-shann-video-mobile.png'
 
 const OccupationalTherapist = () => {
     const [modal, setVideoModal] = useState(false)
@@ -18,12 +25,14 @@ const OccupationalTherapist = () => {
                 <div className='occ-hero con-reg'>
                     <div className='image-wrapper'>
                         <Image 
-                            src='/occupational-therapist/sam-shann-hero.png'
+                            src={heroImage}
                             alt='Sam Shann our Occupational Therapist'
                             layout='responsive'
                             width='1186'
                             height='570'
                             quality='100'
+                            priority
+                            placeholder='blur'
                         />
                     </div>
                     <div className='hero-intro'>
@@ -37,12 +46,13 @@ const OccupationalTherapist = () => {
                     <div className="section">
                         <div className='image-wrapper'>
                             <Image 
-                                src='/occupational-therapist/sam-shann-3.png'
+                                src={samShann1}
                                 alt='Sam Shann with our chair'
                                 layout='responsive'
                                 width='568'
                                 height='442'
-                                quality='100'   
+                                quality='100'
+                                placeholder='blur'   
                             />
                         </div>
                         <div className='section-content'>
@@ -53,12 +63,13 @@ const OccupationalTherapist = () => {
                     <div className="section">
                         <div className='image-wrapper'>
                             <Image 
-                                src='/occupational-therapist/sam-shann-4.png'
+                                src={samShann2}
                                 alt='Sam Shann with customer'
                                 layout='responsive'
                                 width='568'
                                 height='442'
                                 quality='100'   
+                                placeholder='blur'
                             />
                         </div>
                         <div className='section-content'>
@@ -71,12 +82,13 @@ const OccupationalTherapist = () => {
                     <div className='inner-wrapper con-reg'>
                         <div className='image-wrapper'>
                             <Image
-                                src='/occupational-therapist/sam-shann-circle-2.png'
+                                src={samShannCircle}
                                 alt='Sam Shann face shot'
                                 layout='responsive'
                                 width='250'
                                 height='250'
                                 quality='100' 
+                                placeholder='blur'
                             />
                         </div>
                         <div className='quote'>
@@ -99,14 +111,26 @@ const OccupationalTherapist = () => {
                     </div> 
                 </div>
                 <div className='occ-video con-reg'>
-                    <div className='image-wrapper'>
+                    <div className='image-wrapper desktop-image'>
                             <Image
-                                src='/occupational-therapist/sam-shann-video.png'
+                                src={samShannVideo}
                                 alt='Samantha Shann Demonstrating the recline chair'
                                 layout='responsive'
                                 width='1200'
                                 height='590'
                                 quality='100' 
+                                placeholder='blur'
+                            />
+                    </div>
+                    <div className='image-wrapper mobile-image'>
+                            <Image
+                                src={samShannVideoMobile}
+                                alt='Samantha Shann Demonstrating the recline chair'
+                                layout='fill'
+                                objectFit='cover'
+                                objectPosition='center'
+                                quality='100' 
+                                placeholder='blur'
                             />
                     </div>
                     <div className='video-overlay-content'>
