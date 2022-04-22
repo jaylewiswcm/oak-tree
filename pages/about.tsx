@@ -36,7 +36,7 @@ const About = () => {
                         quality='100'                     
                     />
                 </div>
-                <div className='hero-content'>
+                <div className='video-overlay-content'>
                     <h1>Watch the Oak Tree story</h1>
                     <button onClick={() => setVideoModal(true)}>
                         <span className='icon-wrapper'>

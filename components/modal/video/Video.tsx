@@ -22,7 +22,6 @@ const Video = ({videoId, show}: ComponentProps) => {
  const _onReady = (event:any) =>{
     // access to player in all event handlers via event.target
     event.target.pauseVideo();
-    console.log(event.target);
   }
       return (
         <YouTube videoId={videoId} opts={opts} onReady={_onReady}/>

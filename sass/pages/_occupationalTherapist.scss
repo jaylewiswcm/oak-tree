@@ -1,0 +1,137 @@
+.occ-hero {
+    padding-top: 25px;
+    position: relative;
+    .image-wrapper {
+        width: 100%;
+    }
+    .hero-intro {
+        position: absolute;
+        top:75px;
+        left:75px;
+        max-width: 535px;
+        .subheading {
+            font-size: 2.2rem;
+            font-weight: 500;
+            color: $oaktree-green;
+            margin-bottom: 2px;
+        }
+        .heading {
+            font-size: 3.8rem;
+            color: $dark-green-1;
+        }
+        .intro-p {
+            font-size: 1.8rem;
+            font-weight: 400;
+            line-height: 1.6;
+            margin-top: 15px;
+        }
+        .main-cta {
+            background-color: $oaktree-green;
+            padding: 12px 35px;
+            display: block;
+            margin-top: 20px;
+            width: fit-content;
+            min-width: 0;
+            text-align: center;
+            font-size: 1.8rem;
+            font-weight: 400;
+            border-radius: 2px;
+        }
+    }
+}
+.occ-sections {
+    margin-top:50px;
+    .section {
+        display: flex;
+        margin-bottom: 50px;
+        &:nth-of-type(2) {
+            flex-direction: row-reverse;
+            margin-bottom: 0;
+            .section-content {
+                padding-left: 0;
+                padding-right: 50px;
+            }
+        }
+        .image-wrapper {
+            width: 45%;
+        }
+        .section-content {
+            width: 55%;
+            padding-left: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            h2 {
+                font-family: $fontText;
+                font-size: 3.6rem;
+                font-weight: 600;
+                color: $dark-green-1;
+                line-height: 1.4;
+                text-transform: capitalize;
+            }
+             p {
+                font-size: 1.8rem;
+                margin-top: 15px;
+                line-height: 1.6;
+             }
+        }
+    }
+}
+.occ-quote-banner {
+    background-image: url(/vectors/wave-bg-horizontal.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin: 50px 0;
+    .inner-wrapper {
+        display: flex;
+        padding: 30px;
+        .image-wrapper {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+        }
+        
+        .quote {
+            width: 65%;
+            margin-left: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            .main-quote {
+                font-size: 2.4rem;
+                font-weight: 400;
+                color: $white;
+                text-align: center;
+                line-height: 1.4;
+            }
+            .author {
+                font-size: 2.2rem;
+                font-weight: 400;
+                color: $yellow-3;
+                text-align: center;
+                margin-top: 15px;
+            }
+        }
+    }
+}
+
+.occ-partner {
+    margin: 0 auto;
+    width: fit-content;
+    p {
+        text-align: center;
+        font-size: 1.8rem;
+        font-weight: 400;
+        margin-bottom: 5px;
+    }
+    .logo-wrapper {
+        width: 250px;
+    }
+}
+
+.occ-video {
+    margin: 50px auto;
+    position: relative;
+}

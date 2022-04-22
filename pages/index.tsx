@@ -10,6 +10,9 @@ import HomeCollections from '../components/sections/collections/HomeCollections'
 import FooterCollections from '../components/sections/collections/FooterCollections';
 import Reviews from '../components/sections/reviews/Reviews';
 
+// images 
+import homeHeroGraphic from '../public/graphics/home-hero.png'
+
 type MyProps = { };
 type MyState = { requestClassName: string, uspOverlay:string };
 
@@ -81,6 +84,7 @@ closeUspOverlay = () => {
                 layout='responsive'
                 width={108.13}
                 height={29.7}
+                quality="100"
               />
             </div>
             <div className='support-text'>
@@ -131,11 +135,12 @@ closeUspOverlay = () => {
         <div className='intro-content'>
           <div className='hero-bg'>
             <Image 
-              src='/graphics/home-hero.png'
+              src={homeHeroGraphic}
               alt='Home Hero'
               layout='fill'
               objectFit='cover'
               objectPosition='left'
+              placeholder='blur'        
             />
           </div>
           <div className='title-wrapper'>
