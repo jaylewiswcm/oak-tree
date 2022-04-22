@@ -77,5 +77,31 @@
         "video": false,
         "url" : "/faqs"
     }]
+    },
+    {
+
+        "type" : "about",
+        "resources" : [  
+            {
+                "heading" : "UK Therapy Services Talk Chairs",
+                "subheading" : "Our Occupational Therapist",
+                "contentSrc": "/images/resources/sam-shann.png",
+                "video": false,
+                "url" : "/occupational-therapist"
+            },
+            {
+                "heading" : "How We Make Our Products",
+                "subheading" : "British Made",
+                "contentSrc": "/images/resources/british-made.png",
+                "video": false,
+                "url" : "/british-made"
+            },
+            {
+                "heading" : "£200 Trade In Offer",
+                "subheading" : "Supporting the British Heart Foundation",
+                "contentSrc": "/images/resources/trade-in.png",
+                "video": false,
+                "url" : "/trade-in"
+            }]
     }
 ]

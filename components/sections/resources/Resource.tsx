@@ -34,7 +34,7 @@ export const Resource = ({resource}:ComponentProps) => {
       <Link href={url}>
         <a className='resource'>
           
-            <span className='img-wrapper'><Image src={contentSrc} alt={heading} layout='fill' objectFit='cover' objectPosition='center'/></span>
+            <span className='img-wrapper'><Image src={contentSrc} alt={heading} layout='fill' objectFit='cover' objectPosition='center' quality={100} /></span>
             <p className='subheading'>{subheading}</p>
             <p className='heading'>{heading}</p>
             <p className='link'>Learn More</p>

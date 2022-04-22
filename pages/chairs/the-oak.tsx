@@ -10,10 +10,13 @@ import SizeChair from '../../components/tableOfContents/SizeChair';
 import Accessories from '../../components/tableOfContents/Accessories';
 import Reviews from '../../components/tableOfContents/Reviews';
 import RecommendedProducts from '../../components/sections/recommendedProducts/RecommendedProducts';
+import Modal from '../../components/modal/Modal';
+import PopupBrochureRequestForm from '../../components/forms/PopupBrochureRequestForm';
 
 const TheOak = () => {
     const [isOpen, setAccordianOpen] = useState('');
-
+    const [show, setFormToShow] = useState(false);
+    
 
     const openAccordian = (type:string) => {
         if(isOpen === type ) {
@@ -30,6 +33,7 @@ const TheOak = () => {
                 title="The Oak Rise and Recline Chair| Oak Tree Mobility"
                 description="Choose a stylish & comfortable rise and recline chair & settee from our Oak Collection, representing the very best of classic British design."
             />
+            {show &&  <Modal classNames='form-modal' setShow={setFormToShow}><PopupBrochureRequestForm setShow={setFormToShow} /></Modal>}
         <div className='product-wrapper'>
         <div className='product-hero-wrapper con-reg'>
             <div className='product-hero-carousel'>
@@ -49,7 +53,7 @@ const TheOak = () => {
                  <h2 className='category'>Rise and Recliner Chair</h2>
                  <p className='desc'>Combining amazing comfort and exceptional looks, the Oak is our most popular collection</p>
                 <div className='button-wrapper'>
-                    <button className='main-cta'>
+                    <button className='main-cta' onClick={() => setFormToShow(true)}>
                         <p className='mobile-text'>Request a Brochure</p>
                         <p className='desktop-text'>Request Your Free Brochure</p>
                     </button>

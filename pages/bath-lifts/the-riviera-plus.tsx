@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { NextSeo } from 'next-seo';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -6,13 +6,17 @@ import Link from 'next/link';
 import HomeVisitForm from '../../components/forms/homeVisit/HomeVisitForm';
 import BathLiftSteps from '../../components/sections/how-it-works/BathLiftSteps';
 import BathLiftStages from '../../components/sections/stages/BathLiftStages';
+import Modal from '../../components/modal/Modal';
+import PopupBrochureRequestForm from '../../components/forms/PopupBrochureRequestForm';
 const TheRivieraPlus = () => {
+    const [show, setFormToShow] = useState(false);
     return (
         <>
             <NextSeo  
                 title="The Riviera Plus | Oak Tree Mobility"
                 description="The therapeutic benefits of a long soak in the tub are numerous. Now, with the Oak Tree Riviera, you can relax and enjoy a comfortable bath again. See more."
             />
+             {show &&  <Modal classNames='form-modal' setShow={setFormToShow}><PopupBrochureRequestForm setShow={setFormToShow} /></Modal>}
         <div className='product-wrapper'>
             <div className='con-reg'>
         <div className='product-hero-wrapper '>
@@ -33,7 +37,7 @@ const TheRivieraPlus = () => {
                  <h2 className='category  blue-3'>Bath Lift</h2>
                  <p className='desc'>Our Riviera Plus offers the best way to enjoy the therapeutic benefits of a hot bath again</p>
                 <div className='button-wrapper'>
-                    <button className='blue-cta'>
+                    <button className='blue-cta'  onClick={() => setFormToShow(true)}>
                         <p className='mobile-text'>Request a Brochure</p>
                         <p className='desktop-text'>Request Your Free Brochure</p>
                     </button>

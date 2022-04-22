@@ -55,6 +55,8 @@ footer {
                     color: $white;
                     text-align: center;
                     width: 100%;
+                    line-height: 1.2;
+                    margin-bottom:5px;
                     @media(min-width: 400px) and (max-width: 599px) {
                         font-size: 4.3rem;
                     }

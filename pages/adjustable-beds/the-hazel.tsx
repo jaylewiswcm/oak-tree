@@ -10,9 +10,12 @@ import RecommendedProducts from '../../components/sections/recommendedProducts/R
 import Mattress from '../../components/tableOfContents/Mattress';
 import Headboards from '../../components/tableOfContents/Headboards';
 import Accessories from '../../components/tableOfContents/Accessories';
+import Modal from '../../components/modal/Modal';
+import PopupBrochureRequestForm from '../../components/forms/PopupBrochureRequestForm';
 
 const TheHazel = () => {
     const [isOpen, setAccordianOpen] = useState('');
+    const [show, setFormToShow] = useState(false);
 
     const openAccordian = (type:string) => {
         if(isOpen === type ) {
@@ -29,6 +32,7 @@ const TheHazel = () => {
                 title="The Hazel | Oak Tree Mobility"
                 description="The Hazel adjustable bed strikes a fine balance between traditional and contemporary, making it fit in well with most interior styles. Find out more."
             />
+            {show &&  <Modal classNames='form-modal' setShow={setFormToShow}><PopupBrochureRequestForm setShow={setFormToShow} /></Modal>}
         <div className='product-wrapper'>
         <div className='product-hero-wrapper con-reg'>
             <div className='product-hero-carousel'>
@@ -48,7 +52,7 @@ const TheHazel = () => {
                  <h2 className='category'>Adjustable Bed</h2>
                  <p className='desc'>The Hazel bed strikes a fine balance between traditional and contemporary, making it fit in well with most interior styles.</p>
                 <div className='button-wrapper'>
-                    <button className='main-cta'>
+                    <button className='main-cta' onClick={() => setFormToShow(true)}>
                         <p className='mobile-text'>Request a Brochure</p>
                         <p className='desktop-text'>Request Your Free Brochure</p>
                     </button>

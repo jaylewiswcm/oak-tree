@@ -1479,6 +1479,8 @@ footer .email-signup-banner .content-and-form .content h6 {
   color: #fff;
   text-align: center;
   width: 100%;
+  line-height: 1.2;
+  margin-bottom: 5px;
 }
 
 @media (min-width: 400px) and (max-width: 599px) {
@@ -8304,6 +8306,188 @@ body.mobile-navbar .mobile-navigation {
 .orphan-brochure-wrapper .content .our-partners .logo-grid .partner-logo {
   margin-bottom: 15px;
   min-width: 150px;
+}
+
+.about-hero {
+  padding-top: 25px;
+  position: relative;
+}
+
+.about-hero .image-wrapper {
+  width: 100%;
+  max-height: 500px;
+  overflow: hidden;
+}
+
+.about-hero .hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.about-hero .hero-content h1 {
+  font-size: 3.8rem;
+  font-weight: 500;
+  font-family: "Euclid Circular A", "Helvetica", sans-serif;
+  color: #fff;
+}
+
+.about-hero .hero-content button {
+  padding: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.about-hero .hero-content button .icon-wrapper {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0;
+  padding-left: 4px;
+  padding-top: 2px;
+  margin-right: 10px;
+  position: relative;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.about-hero .hero-content button .icon-wrapper .hover-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  margin-top: 3px;
+  margin-left: 2px;
+  opacity: 0;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.about-hero .hero-content button p {
+  font-size: 2rem;
+  font-weight: 400;
+  color: #fff;
+}
+
+.about-hero .hero-content:hover button .icon-wrapper .hover-play {
+  opacity: 1;
+}
+
+.about-sections {
+  margin-top: 80px;
+}
+
+.about-sections .section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 50px;
+}
+
+.about-sections .section .image-wrapper {
+  width: 50%;
+}
+
+.about-sections .section .section-content {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0 50px;
+}
+
+.about-sections .section .section-content .subheading {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #00AD74;
+  margin-bottom: 3px;
+}
+
+.about-sections .section .section-content .heading {
+  font-size: 2.8rem;
+  font-weight: 600;
+  font-family: "Euclid Circular A", "Helvetica", sans-serif;
+  color: #17494D;
+  margin-bottom: 15px;
+}
+
+.about-sections .section .section-content .content-p {
+  font-size: 1.8rem;
+  line-height: 1.6;
+}
+
+.about-sections .section .section-content a {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #00AD74;
+  text-decoration: underline;
+  text-underline-offset: 5px;
+  text-decoration-thickness: 2px;
+  margin-top: 20px;
+}
+
+.tagline-banner {
+  background-color: #17494D;
+  background-image: url(/vectors/wave-bg-horizontal.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 50px;
+}
+
+.tagline-banner .inner-wrapper {
+  padding: 50px 0;
+  text-align: center;
+}
+
+.tagline-banner .inner-wrapper .subheading {
+  font-size: 2.6rem;
+  font-weight: 500;
+  font-family: "Sentient-Variable", serif;
+  color: #fff;
+  margin-bottom: 0px;
+}
+
+.tagline-banner .inner-wrapper .heading {
+  font-size: 4.5rem;
+  color: #fff;
 }
 
 .footer-collections {
