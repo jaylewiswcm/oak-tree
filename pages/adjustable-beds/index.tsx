@@ -12,6 +12,8 @@ import { CollectionUsps } from '../../components/sections/usps/CollectionUsps';
 import OurProcess from '../../components/sections/process/OurProcess';
 import Modal from '../../components/modal/Modal';
 import PopupBrochureRequestForm from '../../components/forms/PopupBrochureRequestForm';
+// images 
+import heroImage from '../../public/images/heros/bed-collection-hero.png';
 
 const Index = () => {
     const [show, setFormToShow] = useState(false)
@@ -26,11 +28,14 @@ const Index = () => {
                   <div className='hero-left'>
                 <div className='hero-image'>
                     <Image 
-                        src='/images/heros/bed-collection-hero.png'
+                        src={heroImage}
                         alt='Our Adjustable Beds'
                         layout='fill'
                         objectFit='cover'
                         objectPosition='center'
+                        quality={100}
+                        placeholder='blur'
+                        priority
                     />
                 </div>
                 <div className="hero-intro">
@@ -39,20 +44,6 @@ const Index = () => {
                     <h1>Adjustable Beds</h1>
                     <p className='intro-statement'>Transform Your Life with an Oak Tree Mobility Bed</p>
                 </div>
-                {/* <div className="hero-intro">
-                    <p className='subheading'>Oak Tree</p>
-                    <h1>Adjustable Beds</h1>
-                    <p className='intro-statement'>Transform Your Life with an Oak Tree Mobility Bed</p>
-                    <button className='main-cta brochure-request-btn' onClick={() => setFormToShow(true)}>
-                        <p>Request a Brochure</p>
-                    </button>
-                    {show &&  <Modal classNames='form-modal' setShow={setFormToShow}><PopupBrochureRequestForm setShow={setFormToShow} /></Modal>}
-                    <Link href='#collection-top-chair'>
-                        <a className='main-cta cta-link'>
-                            <p>Explore our Beds</p>
-                        </a>
-                    </Link>
-                </div> */}
                 </div>
                 <div className='hero-form'>
                     <div className='form-top'>
@@ -75,6 +66,7 @@ const Index = () => {
                                 layout='responsive'
                                 width={580}
                                 height={325.07}
+                                quality={100}
                             />
                         </div>
                         <div className='col-name-wrapper'>

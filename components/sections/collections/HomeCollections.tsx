@@ -10,6 +10,11 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "swiper/css/autoplay";
 
+// images
+import chairCollection from '../../../public/images/collections/collection-chairs.png'
+import bedCollection from '../../../public/images/collections/collection-beds.png'
+import bathLiftCollection from '../../../public/images/collections/collection-bathlifts.png'
+
 const HomeCollections = () => {
   return (
 <div className='collections'>
@@ -17,11 +22,12 @@ const HomeCollections = () => {
             <a className='collection-item'>
               <div className='image-wrapper'>
                 <Image 
-                  src='/images/collections/collection-chairs.png'
+                  src={chairCollection}
                   alt='Rise and Recline Chairs'
                   layout='fill'
                   objectFit='cover'
                   objectPosition='center'
+                  quality='100'
                 />
               </div>
               <h3 className='collection-title'>Rise and Recline Chairs</h3>
@@ -35,11 +41,12 @@ const HomeCollections = () => {
             <a className='collection-item'>
               <div className='image-wrapper'>
                 <Image 
-                  src='/images/collections/collection-beds.png'
+                  src={bedCollection}
                   alt='Adjustable Beds'
                   layout='fill'
                   objectFit='cover'
                   objectPosition='center'
+                  quality='100'
                 />
               </div>
               <h3 className='collection-title'>Adjustable Beds</h3>
@@ -53,11 +60,12 @@ const HomeCollections = () => {
             <a className='collection-item'>
               <div className='image-wrapper'>
                 <Image 
-                  src='/images/collections/collection-bathlifts.png'
+                  src={bathLiftCollection}
                   alt='Bath Lifts'
                   layout='fill'
                   objectFit='cover'
                   objectPosition='center'
+                  quality='100'
                 />
               </div>
               <h3 className='collection-title'>Bath Lifts</h3>

@@ -1,6 +1,10 @@
 import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+// images
+import chairCollection from '../../../public/images/collections/collection-chairs.png'
+import bedCollection from '../../../public/images/collections/collection-beds.png'
+import bathLiftCollection from '../../../public/images/collections/collection-bathlifts.png'
 
 const FooterCollections = () => {
   return (
@@ -9,11 +13,13 @@ const FooterCollections = () => {
     <div className='collections-grid'>
       <Link href='/chairs'><a className='collection-item'>
         <Image 
-          src='/images/collections/collection-chairs.png'
+          src={chairCollection}
           alt='Rise and Recline Chairs'
           layout='fill'
           objectFit='cover'
           objectPosition='left'
+          placeholder='blur'
+          quality={100}
         />
         <div className='overlay'>
           <p>Rise and Recline Chairs</p>
@@ -21,11 +27,13 @@ const FooterCollections = () => {
         </a></Link>
       <Link href='/adjustable-beds'><a className='collection-item'>
         <Image 
-          src='/images/collections/collection-beds.png'
+          src={bedCollection}
           alt='Adjustable Beds'
           layout='fill'
           objectFit='cover'
           objectPosition='left'
+          placeholder='blur'
+          quality={100}
         />
         <div className='overlay'>
           <p>Adjustable Beds</p>
@@ -33,11 +41,13 @@ const FooterCollections = () => {
         </a></Link>
       <Link href='/bath-lifts'><a className='collection-item'>
         <Image 
-          src='/images/collections/collection-bathlifts.png'
+          src={bathLiftCollection}
           alt='Bath Lifts'
           layout='fill'
           objectFit='cover'
           objectPosition='center'
+          placeholder='blur'
+          quality={100}
         />
         <div className='overlay'>
           <p>Bath Lifts</p>

@@ -3278,13 +3278,11 @@ body.mobile-navbar .mobile-navigation {
   .home-collections {
     margin-bottom: 30px;
     margin-top: 30px;
-    padding: 0 30px;
   }
 }
 
 @media (min-width: 899px) {
   .home-collections {
-    padding: 0 15px;
     margin-top: 50px;
   }
 }
@@ -3688,6 +3686,27 @@ body.mobile-navbar .mobile-navigation {
     margin: 0;
     margin-right: 30px;
     border-radius: 0;
+  }
+}
+
+.oc-thera .desktop-image {
+  display: none;
+}
+
+@media (min-width: 900px) {
+  .oc-thera .desktop-image {
+    display: initial;
+  }
+}
+
+.oc-thera .mobile-image {
+  width: 200px;
+  height: 200px;
+}
+
+@media (min-width: 900px) {
+  .oc-thera .mobile-image {
+    display: none;
   }
 }
 
@@ -4142,7 +4161,7 @@ body.mobile-navbar .mobile-navigation {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  border-radius: 4px;
+  border-radius: 3px;
 }
 
 .product-collections .collections-grid .collection-item .main-cta p {
@@ -4622,9 +4641,10 @@ body.mobile-navbar .mobile-navigation {
 
 .bath-lift-testimonial .inner-wrapper .customer-details .name {
   font-size: 2.6rem;
-  font-weight: 500;
+  font-weight: 600;
   color: #17494D;
   margin-top: 15px;
+  line-height: 1.1;
 }
 
 @media (min-width: 900px) {
@@ -4636,7 +4656,7 @@ body.mobile-navbar .mobile-navigation {
 .bath-lift-testimonial .inner-wrapper .customer-details .location {
   font-size: 1.8rem;
   font-weight: 500;
-  color: #456D70;
+  color: #0086C5;
   margin-top: 0px;
 }
 
@@ -9532,6 +9552,7 @@ body.mobile-navbar .mobile-navigation {
   text-decoration-thickness: 2px;
   margin-top: 15px;
   color: #17494D;
+  cursor: pointer;
 }
 
 @media (min-width: 650px) {

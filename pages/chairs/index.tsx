@@ -12,7 +12,8 @@ import { CollectionUsps } from '../../components/sections/usps/CollectionUsps';
 import OurProcess from '../../components/sections/process/OurProcess';
 import Modal from '../../components/modal/Modal';
 import PopupBrochureRequestForm from '../../components/forms/PopupBrochureRequestForm';
-
+// images 
+import heroImage from '../../public/images/heros/chair-collection-hero.png'
 const Index = () => {
     const [show, setFormToShow] = useState(false)
     return (
@@ -26,11 +27,14 @@ const Index = () => {
                   <div className='hero-left'>
                 <div className='hero-image'>
                     <Image 
-                        src='/images/heros/chair-collection-hero.png'
+                        src={heroImage}
                         alt='Our Rise and Recline Chairs'
                         layout='fill'
                         objectFit='cover'
                         objectPosition='center'
+                        quality={100}
+                        placeholder='blur'
+                        priority
                     />
                 </div>
                 <div className="hero-intro">
@@ -71,6 +75,7 @@ const Index = () => {
                                 layout='responsive'
                                 width={1000}
                                 height={671}
+                                quality={100}
                             />
                         </div>
                         <div className='col-name-wrapper'>

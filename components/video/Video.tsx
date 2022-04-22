@@ -4,9 +4,10 @@ import YouTube from "react-youtube";
 interface ComponentProps {
     videoId: string
     title: string
+    placeholder: string
 }
 
-export const Video = ({videoId,title}: ComponentProps) => {
+export const Video = ({videoId,title,placeholder}: ComponentProps) => {
 
     const opts: Options = {
             height: '100%',
@@ -31,7 +32,7 @@ export const Video = ({videoId,title}: ComponentProps) => {
             width="100%"
             height="100%"
             src={`https://www.youtube.com/embed/${videoId}&autoplay=1&modestbranding=1&mute=1`}
-            srcDoc={`<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto;background-color: white;}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}.play-btn{display:flex;align-items:center;justify-content:center;width:60px;height:60px;border-radius:50%;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);margin:0;transition:0.2s}a:hover .play-fill{opacity:1;}a:hover{box-shadow: 0 3px 22px rgba(0,0,0,0.18)}.play-outline{position:absolute;top:50%;left:50%;transform:translate(-40%,-55%);width:35%;}.play-fill{position:absolute;top:50%;left:50%;transform:translate(-40%,-55%);width:35%;opacity:0;transition:0.2s}</style><a href=https://www.youtube.com/embed/${videoId}?autoplay=1&modestbranding=1&mute=1><img src=https://img.youtube.com/vi/${videoId}/hqdefault.jpg alt=${title}><span class='play-btn'><img class='play-outline' src='/buttons/play-btn-outline.svg' alt='Play button'/><img  class='play-fill' src='/buttons/play-btn-fill.svg' alt='Play button'/></span></a>`}
+            srcDoc={`<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto;background-color: white;}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}.play-btn{display:flex;align-items:center;justify-content:center;width:60px;height:60px;border-radius:50%;position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);margin:0;transition:0.2s}a:hover .play-fill{opacity:1;}a:hover{box-shadow: 0 3px 22px rgba(0,0,0,0.18)}.play-outline{position:absolute;top:50%;left:50%;transform:translate(-40%,-55%);width:35%;}.play-fill{position:absolute;top:50%;left:50%;transform:translate(-40%,-55%);width:35%;opacity:0;transition:0.2s}</style><a href=https://www.youtube.com/embed/${videoId}?autoplay=1&modestbranding=1&mute=1><img src=${placeholder} alt=${title} style='width:auto;height:100%;'><span class='play-btn'><img class='play-outline' src='/buttons/play-btn-outline.svg' alt='Play button'/><img  class='play-fill' src='/buttons/play-btn-fill.svg' alt='Play button'/></span></a>`}
             frameBorder="0"
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen

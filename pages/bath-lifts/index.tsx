@@ -9,6 +9,11 @@ import Reviews from '../../components/sections/reviews/Reviews';
 import Resources from '../../components/sections/resources/Resources';
 import FooterCollections from '../../components/sections/collections/FooterCollections';
 import { Video } from '../../components/video/Video';
+// images 
+import heroImage from '../../public/images/products/bath-lifts/bath-lift-collection-hero.png'
+import tech1 from '../../public/images/products/bath-lifts/the-riviera/tech-1.png'
+import tech2 from '../../public/images/products/bath-lifts/the-riviera/tech-2.png'
+import tech3 from '../../public/images/products/bath-lifts/the-riviera/tech-3.png'
 
 const index = () => {
     return (
@@ -22,11 +27,13 @@ const index = () => {
                   <div className='hero-left'>
                 <div className='hero-image'>
                     <Image 
-                        src='/images/products/bath-lifts/bath-lift-collection-hero.png'
+                        src={heroImage}
                         alt='Our Rise and Recline Chairs'
                         layout='fill'
                         objectFit='cover'
-                        objectPosition='center'
+                        objectPosition='right center'
+                        quality={100}
+                        placeholder='blur'
                     />
                 </div>
                 <div className="hero-intro">
@@ -61,6 +68,7 @@ const index = () => {
                                 layout='responsive'
                                 width={580}
                                 height={325.07}
+                                quality='100'
                             />
                         </div>
                     
@@ -82,11 +90,13 @@ const index = () => {
                   <div className='detail'>
                       <div className="image-wrapper">
                           <Image 
-                            src='/images/products/bath-lifts/the-riviera/tech-1.png'
+                            src={tech1}
                             alt='The Best Technology'
                             layout='responsive'
                             width={593}
                             height={355}
+                            quality='100'
+                            placeholder='blur'
                           />
                       </div>
                       <div className='content'>
@@ -97,11 +107,13 @@ const index = () => {
                   <div className='detail'>
                       <div className="image-wrapper">
                           <Image 
-                            src='/images/products/bath-lifts/the-riviera/tech-2.png'
+                            src={tech2}
                             alt='Remote Control'
                             layout='responsive'
                             width={593}
                             height={355}
+                            quality='100'
+                            placeholder='blur'
                           />
                       </div>
                       <div className='content'>
@@ -112,11 +124,13 @@ const index = () => {
                   <div className='detail'>
                       <div className="image-wrapper">
                           <Image 
-                            src='/images/lifestyle/customer-service.png'
+                            src={tech3}
                             alt='Customer Service'
                             layout='responsive'
                             width={593}
                             height={355}
+                            quality='100'
+                            placeholder='blur'
                           />
                       </div>
                       <div className='content'>
@@ -129,7 +143,7 @@ const index = () => {
                 <div className='bath-lift-testimonial con-reg'>
                     <h6>Our Customers View</h6>
                     <div className='inner-wrapper'>
-                        <Video videoId='YpIhtPvr76M' title='Mr Parks Bath Lift Testimonial'/>
+                        <Video videoId='YpIhtPvr76M' title='Mr Parks Bath Lift Testimonial' placeholder=''/>
                         <div className='customer-details'>
                             <p className='name'>Mr Parks</p>
                             <p className='location'>Cornwall</p>

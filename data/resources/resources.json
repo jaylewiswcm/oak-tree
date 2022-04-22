@@ -7,6 +7,7 @@
                 "heading" : "UK Therapy Services Talk Chairs",
                 "subheading" : "Our Occupational Therapist",
                 "contentSrc": "wlRVdd9s174",
+                "placeholder": "/images/resources/occupational-therapist.png",
                 "video": true,
                 "url" : ""
             },
@@ -14,6 +15,7 @@
                 "heading" : "How We Make Your Chair",
                 "subheading" : "British Made",
                 "contentSrc": "u9-WpUGw0NM",
+                "placeholder": "/images/resources/british-made-chair.png",
                 "video": true,
                 "url" : ""
             },
@@ -21,6 +23,7 @@
                 "heading" : "Unique High Leg Lift",
                 "subheading" : "The Oak Tree Touch",
                 "contentSrc": "vlsfU4fdZmk",
+                "placeholder": "/images/resources/high-leg-lift.png",
                 "video": true,
                 "url" : ""
             }
@@ -34,6 +37,7 @@
         "heading" : "UK Therapy Services Talk Beds",
         "subheading" : "Our Occupational Therapist",
         "contentSrc": "oi_n7knzghs",
+        "placeholder": "/images/resources/occupational-therapist.png",
         "video": true,
         "url" : ""
     },
@@ -41,13 +45,15 @@
         "heading" : "How We Make Your Bed",
         "subheading" : "British Made",
         "contentSrc": "731h3uxBtKA",
+        "placeholder": "/images/resources/british-made-bed.png",
         "video": true,
         "url" : ""
     },
     {
-        "heading" : "Unique High Leg Lift",
-        "subheading" : "Bed Hand Control",
+        "heading" : "Bed Hand Control",
+        "subheading" : "Remote Control",
         "contentSrc": "X3rvIblAXMc",
+        "placeholder": "/images/resources/bed-hand-control.png",
         "video": true,
         "url" : ""
     }]
@@ -59,7 +65,8 @@
     {
         "heading" : "The Oak Tree Vision",
         "subheading" : "Your Comfort is our strength",
-        "contentSrc": "/images/resources/oak-tree-vision-bath-lift.png",
+        "contentSrc": "",
+        "placeholder": "/images/resources/oak-tree-vision-bath-lift.png",
         "video": false,
         "url": "/about"
     },
@@ -67,13 +74,15 @@
         "heading" : "How We Make Your Bath lift",
         "subheading" : "British Made",
         "contentSrc": "rIr46QkfmIE",
+        "placeholder": "/images/resources/british-made-bath-lift.png",
         "video": true,
         "url" : ""
     },
     {
         "heading" : "Frequently Asked Questions",
-        "subheading" : "Bed Hand Control",
-        "contentSrc": "/images/resources/faqs.jpeg",
+        "subheading" : "Have questions?",
+        "contentSrc": "",
+        "placeholder":  "/images/resources/faqs.jpeg",
         "video": false,
         "url" : "/faqs"
     }]
@@ -85,21 +94,24 @@
             {
                 "heading" : "UK Therapy Services Talk Chairs",
                 "subheading" : "Our Occupational Therapist",
-                "contentSrc": "/images/resources/sam-shann.png",
+                "contentSrc": "",
+                "placeholder": "/images/resources/sam-shann.png",
                 "video": false,
                 "url" : "/occupational-therapist"
             },
             {
                 "heading" : "How We Make Our Products",
                 "subheading" : "British Made",
-                "contentSrc": "/images/resources/british-made.png",
+                "contentSrc": "",
+                "placeholder": "/images/resources/british-made.png",
                 "video": false,
                 "url" : "/british-made"
             },
             {
                 "heading" : "£200 Trade In Offer",
                 "subheading" : "Supporting the British Heart Foundation",
-                "contentSrc": "/images/resources/trade-in.png",
+                "contentSrc": "",
+                "placeholder": "/images/resources/trade-in.png",
                 "video": false,
                 "url" : "/trade-in"
             }]

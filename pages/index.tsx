@@ -9,7 +9,7 @@ import Testimonials from '../components/sections/Testimonials/Testimonials';
 import HomeCollections from '../components/sections/collections/HomeCollections';
 import FooterCollections from '../components/sections/collections/FooterCollections';
 import Reviews from '../components/sections/reviews/Reviews';
-
+import OccupationalTherapistSection from '../components/sections/occupationalTherapist/OccupationalTherapistSection';
 // images 
 import homeHeroGraphic from '../public/graphics/home-hero.png'
 
@@ -241,48 +241,10 @@ closeUspOverlay = () => {
           <button className='bg-yellow3'>Learn More</button>
         </div>
       </div>
-      <div className='occupational-therapist-wrapper con-reg hide'>
-        <div className='image-wrapper desktop-image'>
-          <Image
-            src='/occupational-therapist/sam-shann-1.png'
-            alt='Sam Shann'
-            layout='fill'
-            objectFit='cover'
-            objectPosition='left top'
-          />
-        </div>
-        <div className='content'>
-          <p className='subheading'>Meet Samantha Shann</p>
-          <p className='heading'>Our Occupational Therapist</p>
-          <p className='info'>All of our products are approved by Samantha Shann, occupational therapist and co-founder of UK Therapy Services Ltd. She fully tests and evaluates everything we offer, ensuring it satisfies the high standards of an independent health professional.</p>
-          <div className='bottom'>
-            <p>In Partnership with</p>
-            <Image 
-              src='/occupational-therapist/ukts-logo.png'
-              alt='UK Therapy Services'
-              width='264'
-              height='42'
-            />
-          </div>
-        </div>
-      </div>
-      <div className='oc-thera con-reg'>
-        <div className='image-wrapper'>
-          <Image 
-            src='/occupational-therapist/sam-shann-1.png'
-            alt='Sam Shann'
-            layout='fill'
-            objectFit='cover'
-            objectPosition='left top'
-          />
-        </div>
-        <div className='content'>
-          <p className='subheading'>Meet Samantha Shann</p>
-          <p className='heading'>Our Occupational Therapist</p>
-          <p className='info'>All of our products are approved by Samantha Shann, occupational therapist and co-founder of UK Therapy Services Ltd. She fully tests and evaluates everything we offer, ensuring it satisfies the high standards of an independent health professional.</p>
-          <Link href='/occupational-therapist'><a>Find out more</a></Link>
-        </div>
-      </div>
+      
+      <OccupationalTherapistSection />
+
+
       <Reviews orphan={false} />
       <Testimonials pageType='normal' />
       <FooterCollections />

@@ -27,6 +27,7 @@ export const TestimonialTile = ({cx, setSelectedCx, setShow}: ComponentProps) =>
             layout='fill'
             objectFit='cover'
             objectPosition='center'
+            quality='100'
           />
           <div className='tile-overlay'>
             <div className='flex-row'>

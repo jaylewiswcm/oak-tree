@@ -313,10 +313,10 @@
     @media(min-width: 400px) and (max-width: 899px){
         margin-bottom: 30px;
         margin-top: 30px;
-        padding: 0 30px;
+        // padding: 0 30px;
     }
     @media(min-width: 899px) {
-        padding: 0 15px;
+        // padding: 0 15px;
         margin-top: 50px;
     }
     .heading {
@@ -498,6 +498,7 @@
             height: unset;
         }
     }
+
     .content {
         width: 100%;
         height: 100%;
@@ -587,6 +588,19 @@
             margin: 0;
             margin-right: 30px;
             border-radius:0;
+        }
+    }
+    .desktop-image {
+        display: none;
+        @media(min-width: 900px) {
+            display: initial;
+        }
+    }
+    .mobile-image {
+        width: 200px;
+        height: 200px;
+        @media(min-width: 900px) {
+            display: none;
         }
     }
     .content {
