@@ -523,6 +523,8 @@ body.freeze {
   height: 100%;
   position: relative;
   padding: 25px;
+  background-color: #fff;
+  border-radius: 5px;
 }
 
 @media (min-width: 650px) {
