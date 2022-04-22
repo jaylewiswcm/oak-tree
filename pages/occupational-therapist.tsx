@@ -6,7 +6,7 @@ import Link from 'next/link';
 import Modal from '../components/modal/Modal';
 import VideoCarousel from '../components/modal/video/VideoCarousel';
 
-const occupationalTherapist = () => {
+const OccupationalTherapist = () => {
     const [modal, setVideoModal] = useState(false)
     return (
         <>
@@ -135,6 +135,6 @@ const occupationalTherapist = () => {
         </>
     )
 }
-export default occupationalTherapist
+export default OccupationalTherapist
 
 
