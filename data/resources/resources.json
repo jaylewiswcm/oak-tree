@@ -95,7 +95,7 @@
                 "heading" : "UK Therapy Services Talk Chairs",
                 "subheading" : "Our Occupational Therapist",
                 "contentSrc": "",
-                "placeholder": "/images/resources/sam-shann.png",
+                "placeholder": "/images/resources/occupational-therapist.png",
                 "video": false,
                 "url" : "/occupational-therapist"
             },
@@ -103,7 +103,7 @@
                 "heading" : "How We Make Our Products",
                 "subheading" : "British Made",
                 "contentSrc": "",
-                "placeholder": "/images/resources/british-made.png",
+                "placeholder": "/images/resources/british-made-chair.png",
                 "video": false,
                 "url" : "/british-made"
             },

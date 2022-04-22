@@ -1,5 +1,4 @@
 .resources {
-    // padding: 25px 15px;
     padding-top: 25px;
     margin-bottom: 50px;
     h6 {
@@ -41,17 +40,19 @@
                 display: flex;
             }
             .subheading {
-                font-size: 1.8rem;
+                font-size: 1.7rem;
                 font-weight: 500;
                 color: $oaktree-green;
                 margin-top: 15px;
+                letter-spacing: 0.2px;
+                margin-bottom:2px;
             }
             .heading {
                 font-size: 2.4rem;
                 font-weight: 500;
                 line-height: 1.4;
                 text-align: left;
-                margin: 5px 0;
+                margin: 0 0;
                 padding:0;
             }
             .link {

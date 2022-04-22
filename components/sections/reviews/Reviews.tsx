@@ -11,6 +11,14 @@ const Reviews = ({orphan} : ComponentProps) => {
   return (
     <div className='con-reg reviews-container'>
         <div className='reviews'>
+        <div className='star-logo'>
+            <Image 
+                src='/trustpilot/logo-star.svg'
+                alt='Trustpilot logo star'
+                width='35'
+                height='32'
+            />
+        </div>
             <p className='oaktree-green subheading'>Rated Excellent on Trustpilot</p>
             <p className='statement'>Hear what our customers have to say</p>
             <p className='trustscore'>TrustScore 4.5 | 1000 reviews </p>
@@ -39,14 +47,14 @@ const Reviews = ({orphan} : ComponentProps) => {
      
      <div className='slider-pagination-dots'></div>
             </div>
-            <div className='trustpilot-logo'>
+            {/* <div className='trustpilot-logo'>
                 <Image
                     src='/trustpilot/trustpilot-logo.svg'
                     alt='Trustpilot'
                     width='132.97'
                     height='32'
                 />
-            </div>
+            </div> */}
         </div>
     </div>
   )

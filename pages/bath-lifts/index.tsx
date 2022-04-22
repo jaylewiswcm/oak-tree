@@ -143,7 +143,7 @@ const index = () => {
                 <div className='bath-lift-testimonial con-reg'>
                     <h6>Our Customers View</h6>
                     <div className='inner-wrapper'>
-                        <Video videoId='YpIhtPvr76M' title='Mr Parks Bath Lift Testimonial' placeholder=''/>
+                        <Video videoId='YpIhtPvr76M' title='Mr Parks Bath Lift Testimonial' placeholder='/images/testimonials/mr-parks-placeholder.png'/>
                         <div className='customer-details'>
                             <p className='name'>Mr Parks</p>
                             <p className='location'>Cornwall</p>

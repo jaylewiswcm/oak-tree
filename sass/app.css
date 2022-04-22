@@ -9156,6 +9156,7 @@ body.mobile-navbar .mobile-navigation {
 .reviews {
   background-color: #F6F8FF;
   padding: 50px 0;
+  padding-bottom: 0;
   margin: 50px 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -9164,6 +9165,32 @@ body.mobile-navbar .mobile-navigation {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  position: relative;
+}
+
+.reviews .star-logo {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 60px;
+  height: 60px;
+  background-color: #000035;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50%;
+}
+
+.reviews .star-logo span {
+  width: 100%;
 }
 
 .reviews .subheading {
@@ -9529,10 +9556,12 @@ body.mobile-navbar .mobile-navigation {
 }
 
 .resources .resource-grid .resource .subheading {
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   font-weight: 500;
   color: #00AD74;
   margin-top: 15px;
+  letter-spacing: 0.2px;
+  margin-bottom: 2px;
 }
 
 .resources .resource-grid .resource .heading {
@@ -9540,7 +9569,7 @@ body.mobile-navbar .mobile-navigation {
   font-weight: 500;
   line-height: 1.4;
   text-align: left;
-  margin: 5px 0;
+  margin: 0 0;
   padding: 0;
 }
 

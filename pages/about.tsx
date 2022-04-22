@@ -4,8 +4,9 @@ import Image from 'next/image'
 import Link from 'next/link';
 import Resources from '../components/sections/resources/Resources';
 import Modal from '../components/modal/Modal';
-
 import VideoCarousel from '../components/modal/video/VideoCarousel';
+// images 
+import heroImage from '../public/images/heros/about-hero.png';
 const About = () => {
     const [modal, setVideoModal] = useState(false)
     return (
@@ -18,12 +19,14 @@ const About = () => {
             <div className='con-reg about-hero'>
                 <div className='image-wrapper desktop-image'>
                     <Image 
-                        src='/images/heros/about-hero.png'
+                        src={heroImage}
                         alt='About Oak Tree - watch the story'
                         layout='responsive'
                         width={1200}
                         height={597}
                         quality='100'
+                        placeholder='blur'
+                        priority
                     />
                 </div>
                 <div className='mobile-image-wrapper'>
