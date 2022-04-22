@@ -14,7 +14,7 @@ const Video = ({videoId, show}: ComponentProps) => {
       height: '485',
       width: '860',
       playerVars: {
-        autoplay: 0,
+        autoplay: 1,
         iv_load_policy: 3,
         modestbranding: 1
       },

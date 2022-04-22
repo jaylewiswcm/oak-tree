@@ -3,7 +3,9 @@ import { NextSeo } from 'next-seo';
 import Image from 'next/image'
 import Link from 'next/link';
 import Resources from '../components/sections/resources/Resources';
+import Modal from '../components/modal/Modal';
 
+import VideoCarousel from '../components/modal/video/VideoCarousel';
 const about = () => {
     const [modal, setVideoModal] = useState(false)
     return (
@@ -12,8 +14,9 @@ const about = () => {
                 title="About Us | Oak Tree Mobility"
                 description="Here at Oak Tree Mobility we specialise in a range of handmade mobility furniture and equipment to help improve your independence. Find out more today"
             />
+            {modal && <Modal  classNames='' setShow={setVideoModal}><VideoCarousel videoId='Ot1KJHw1uto' show={modal} setShow={setVideoModal}></VideoCarousel></Modal>}
             <div className='con-reg about-hero'>
-                <div className='image-wrapper'>
+                <div className='image-wrapper desktop-image'>
                     <Image 
                         src='/images/heros/about-hero.png'
                         alt='About Oak Tree - watch the story'
@@ -21,6 +24,16 @@ const about = () => {
                         width={1200}
                         height={597}
                         quality='100'
+                    />
+                </div>
+                <div className='mobile-image-wrapper'>
+                <Image 
+                        src='/images/heros/about-hero.png'
+                        alt='About Oak Tree - watch the story'
+                        layout='fill'
+                        objectFit='cover'
+                        objectPosition='-300px'   
+                        quality='100'                     
                     />
                 </div>
                 <div className='hero-content'>

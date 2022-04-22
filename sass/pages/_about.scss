@@ -1,31 +1,72 @@
 .about-hero {
-    padding-top: 25px;
+    padding: 0;
     position: relative;
+    overflow: hidden;
+    @media(min-width: 900px) {
+        padding: 25px 30px;
+        padding-bottom:0;
+    }
     .image-wrapper {
-        width: 100%;
-        max-height: 500px;
+        width: 160%;
+        transform: translateX(-5px);
         overflow: hidden;
+        @media(min-width: 900px) {
+            max-height: 500px;
+            width: 100%;
+            transform: none;
+        }
+    }
+    .desktop-image {
+        display: none;
+        @media(min-width: 650px) {
+            display: initial;
+        }
+    }
+    .mobile-image-wrapper {
+        width: 100%;
+        height: 80vh;
+        @media(min-width: 650px) {
+            display: none;
+        }
     }
     .hero-content{ 
+        
+        height: fit-content;
+        width:fit-content;
+        padding: 15px;
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
-        height: fit-content;
-        width:fit-content;
+        transform: translate(-50%, -80%);
+        padding: 0 15px;
+        @media(min-width: 420px) {
+
+            transform: translate(-50%, -50%);
+            padding: 0 15px;
+        }
         h1 {
             font-size: 3.8rem;
             font-weight: 500;
             font-family: $fontText;
             color: $white;
+            text-align: center;
+            @media(min-width: 420px) {
+                color: $white;
+                font-size: 3.8rem;
+            }
         }
         button {
-            padding: 25px;
+            padding: 0px;
             display: flex;
             align-items: center;
             justify-content: center;
             width: fit-content;
             margin: 0 auto;
+            margin-top: 15px;
+            @media(min-width: 420px) {
+                padding: 25px;
+      
+            }
             .icon-wrapper {
                 width: 50px;
                 height: 50px;
@@ -37,9 +78,14 @@
                 padding: 0;
                 padding-left:4px;
                 padding-top: 2px;
-                margin-right: 10px;
+                margin-right: 15px;
                 position: relative;
                 transition: 0.2s;
+
+                @media(min-width: 420px) {
+                    border: none;
+                    margin-right: 10px;
+                }
                 .hover-play {
                     position: absolute;
                     top: 50%;
@@ -47,14 +93,25 @@
                     transform: translate(-50%, -50%);
                     margin-top:3px;
                     margin-left:2px;
-                    opacity: 0;
+                    opacity: 1;
                     transition: 0.2s;
+                    @media(min-width: 450px) {
+                        opacity: 0;
+                    }
                 }
             }
             p { 
-                font-size: 2rem;
-                font-weight: 400;
+                font-size: 2.2rem;
+                font-weight: 500;
                 color: $white;
+                // text-decoration: underline;
+                text-underline-offset: 3px;
+                @media(min-width: 420px) {
+                    color: $white;
+                    font-size: 2rem;
+                    font-weight: 400;
+                    text-decoration: none;
+                }
             }
         }
     }
@@ -72,20 +129,42 @@
     }
 }
 .about-sections {
-    margin-top: 80px;
+    margin-top: 30px;
+    @media(min-width: 420px) {
+        margin-top: 80px;
+    }
     .section {
         display: flex;
-        margin-bottom: 50px;
+        flex-direction: column;
+        margin-bottom: 25px;
+        @media (min-width: 900px) {
+            flex-direction: row;
+            margin-bottom: 50px;
+        }
         .image-wrapper {
-            width: 50%;
+            width: 100%;
+
+            @media(min-width: 650px ) and (max-width: 899px) {
+                width: 60%;
+            }
+            @media (min-width: 900px) {
+                width: 50%;
+            }
         }
         .section-content {
-            width: 50%;
             display: flex;
             flex-direction: column;
            justify-content: center;
-           padding: 0 50px;
-            
+           padding: 25px 0px;
+           width: 100%;
+           @media(min-width: 650px ) and (max-width: 899px) {
+            width: 70%;
+            }
+           @media (min-width: 900px) {
+               width: 50%;
+               padding: 0 50px;
+           }
+           
             .subheading {
                 font-size: 1.8rem;
                 font-weight: 500;
@@ -124,19 +203,24 @@
     background-position: center;
     margin-bottom: 50px;
     .inner-wrapper {
-        padding: 50px 0;
+        padding: 50px 15px;
         text-align: center;
         .subheading {
-            font-size: 2.6rem;
+            font-size: 2.4rem;
             font-weight: 500;
             font-family: $fontHeadings;
             color: $white;
             margin-bottom: 0px;
-            
+            @media(min-width: 520px) {
+                font-size: 2.6rem;
+            }
         }
         .heading {
-            font-size: 4.5rem;
+            font-size: 3.8rem;
             color: $white;
+            @media(min-width: 520px) {
+                font-size: 4.5rem;
+            }
         }
     }
 }
