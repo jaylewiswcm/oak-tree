@@ -148,7 +148,6 @@ body.freeze {
 }
 
 .modal .modal-inner {
-  background-color: #fff;
   border-radius: 6px;
   width: 90%;
   max-width: 900px;
@@ -8494,7 +8493,7 @@ body.mobile-navbar .mobile-navigation {
   margin-top: 30px;
 }
 
-@media (min-width: 420px) {
+@media (min-width: 900px) {
   .about-sections {
     margin-top: 80px;
   }
@@ -8875,16 +8874,23 @@ body.mobile-navbar .mobile-navigation {
   background-color: #fff;
   font-size: 1.6rem;
   font-weight: 600;
-  padding: 10px 20px;
+  padding: 5px 20px;
   z-index: 99;
   -webkit-transition: 0.2s;
   transition: 0.2s;
-}
-
-@media (min-width: 650px) {
-  .video-carousel .close-modal {
-    padding: 15px 20px;
-  }
+  line-height: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 40px;
+  width: 80px;
+  padding: 0;
 }
 
 @media (min-width: 1100px) {

@@ -28,11 +28,11 @@ const About = () => {
                 </div>
                 <div className='mobile-image-wrapper'>
                 <Image 
-                        src='/images/heros/about-hero.png'
+                        src='/images/heros/about-hero-mobile.png'
                         alt='About Oak Tree - watch the story'
                         layout='fill'
                         objectFit='cover'
-                        objectPosition='-300px'   
+                        objectPosition='center'   
                         quality='100'                     
                     />
                 </div>
