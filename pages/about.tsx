@@ -6,7 +6,7 @@ import Resources from '../components/sections/resources/Resources';
 import Modal from '../components/modal/Modal';
 
 import VideoCarousel from '../components/modal/video/VideoCarousel';
-const about = () => {
+const About = () => {
     const [modal, setVideoModal] = useState(false)
     return (
         <>
@@ -124,4 +124,4 @@ const about = () => {
         </>
     )
 }
-export default about
+export default About
