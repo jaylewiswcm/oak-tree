@@ -7,6 +7,9 @@ import Modal from '../components/modal/Modal';
 import VideoCarousel from '../components/modal/video/VideoCarousel';
 // images 
 import heroImage from '../public/images/heros/about-hero.png';
+import companyPhoto1 from '../public/images/about-us/company-photo-1.png';
+import howWeStarted from '../public/images/about-us/how-we-started.png';
+import ourCustomers from '../public/images/about-us/customer.png';
 const About = () => {
     const [modal, setVideoModal] = useState(false)
     return (
@@ -36,7 +39,7 @@ const About = () => {
                         layout='fill'
                         objectFit='cover'
                         objectPosition='center'   
-                        quality='100'                     
+                        quality='100'                 
                     />
                 </div>
                 <div className='video-overlay-content'>
@@ -66,11 +69,13 @@ const About = () => {
                 <div className='section'>
                     <div className="image-wrapper">
                         <Image 
-                            src='/images/about-us/company-photo-1.png' 
+                            src={companyPhoto1}
                             alt='Oak Tree company'
                             layout='responsive'
                             width={581}
                             height={417}
+                            quality='100' 
+                            placeholder='blur'
                         />
                     </div>
                     <div className='section-content'>
@@ -83,11 +88,13 @@ const About = () => {
                 <div className='section'>
                     <div className="image-wrapper">
                         <Image 
-                            src='/images/about-us/how-we-started.png' 
+                            src={howWeStarted}
                             alt='Rick and Tom - Where we started'
                             layout='responsive'
                             width={581}
                             height={417}
+                            quality='100' 
+                            placeholder='blur'
                         />
                     </div>
                     <div className='section-content'>
@@ -100,11 +107,13 @@ const About = () => {
                 <div className='section'>
                     <div className="image-wrapper">
                         <Image 
-                            src='/images/about-us/customer.png' 
+                            src={ourCustomers} 
                             alt='Our focus, the customer'
                             layout='responsive'
                             width={581}
                             height={417}
+                            quality='100' 
+                            placeholder='blur'
                         />
                     </div>
                     <div className='section-content'>
