@@ -825,6 +825,85 @@ body.freeze {
   color: #fff;
 }
 
+.british-made-overlay {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  padding: 15px 40px;
+  padding-bottom: 17px;
+  background-color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-shadow: 0 2px 20px rgba(0, 0, 0, 0.18);
+          box-shadow: 0 2px 20px rgba(0, 0, 0, 0.18);
+  border-radius: 2px;
+  z-index: 999;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.british-made-overlay .icon-wrapper {
+  width: 120px;
+}
+
+.british-made-overlay p {
+  font-size: 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  line-height: 1.4;
+  margin-top: 5px;
+  text-align: center;
+}
+
+.british-made-overlay .close-button {
+  position: absolute;
+  top: -50px;
+  right: 0;
+  background-color: #fff;
+  -webkit-box-shadow: 0 2px 17px rgba(0, 0, 0, 0.11);
+          box-shadow: 0 2px 17px rgba(0, 0, 0, 0.11);
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  opacity: 0;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.british-made-overlay .close-button .cross {
+  width: 50%;
+}
+
+.british-made-overlay:hover .close-button {
+  opacity: 1;
+}
+
+.british-made-overlay.increased-bottom-margin {
+  bottom: 150px;
+}
+
 li {
   list-style-type: none;
   font-size: 1.6rem;

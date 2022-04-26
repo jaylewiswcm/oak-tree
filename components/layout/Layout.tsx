@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import Header from "./Header";
 import Footer from "./Footer";
 import { BottomBar } from './ctaBar/BottomBar';
+import {BritishMade} from '../overlay/BritishMade';
 
 interface ComponentProps  {
     children: any
@@ -10,6 +11,8 @@ interface ComponentProps  {
 
  const Layout = ({ children }:ComponentProps) => {
     const [hideClass, setHideClass] = useState('bottom-bar hide-bar')
+    const [overlayClass, setOverlayClass] = useState('british-made-overlay')
+    const [overlay, hideOverlay] = useState(true);
  
 
     useEffect(() => {
@@ -22,9 +25,11 @@ interface ComponentProps  {
     const handleScroll = () => {
       const position = window.pageYOffset;
         if(position < 80) {
-            setHideClass('bottom-bar hide-bar')
+            setHideClass('bottom-bar hide-bar');
+            setOverlayClass('british-made-overlay')
         } else {
             setHideClass('bottom-bar')
+            setOverlayClass('british-made-overlay increased-bottom-margin')
         }
     };
 
@@ -35,6 +40,7 @@ interface ComponentProps  {
               <Header />
               { children }
               <BottomBar className={hideClass}/>
+              {overlay && <BritishMade className={overlayClass} hideOverlay={hideOverlay} />}
               <Footer />
           </div>
         </>
