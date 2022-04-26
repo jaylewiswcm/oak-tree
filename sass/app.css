@@ -9865,6 +9865,117 @@ body.mobile-navbar .mobile-navigation {
   font-size: inherit;
 }
 
+.legal-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+@media (min-width: 1000px) {
+  .legal-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.legal-container .content {
+  width: 100%;
+  padding-right: 50px;
+}
+
+@media (min-width: 1000px) {
+  .legal-container .content {
+    width: 70%;
+  }
+}
+
+.legal-container .content h1, .legal-container .content h2 {
+  font-size: 2.8rem;
+  font-weight: 500;
+  font-family: "Euclid Circular A", "Helvetica", sans-serif;
+  color: #17494D;
+}
+
+@media (min-width: 650px) {
+  .legal-container .content h1, .legal-container .content h2 {
+    font-size: 3rem;
+  }
+}
+
+.legal-container .content h2 {
+  margin-top: 30px;
+}
+
+.legal-container .content p {
+  margin-top: 20px;
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+@media (min-width: 650px) {
+  .legal-container .content p {
+    font-size: 1.8rem;
+    margin-top: 30px;
+  }
+}
+
+.legal-container .contact-wrapper {
+  width: 100%;
+  border-top: 1px #E3E3E3 solid;
+  padding-top: 50px;
+  margin-top: 50px;
+}
+
+@media (min-width: 1000px) {
+  .legal-container .contact-wrapper {
+    width: 30%;
+    border-left: 1px #E3E3E3 solid;
+    border-top: none;
+    margin-top: 0px;
+    padding-left: 50px;
+  }
+}
+
+.legal-container .contact-wrapper .icon-wrapper {
+  width: 80px;
+  margin: 0 auto;
+  margin-bottom: 5px;
+}
+
+.legal-container .contact-wrapper h3 {
+  font-size: 2.8rem;
+  font-weight: 600;
+  font-family: "Euclid Circular A", "Helvetica", sans-serif;
+  color: #17494D;
+  text-align: center;
+  line-height: 1.4;
+}
+
+.legal-container .contact-wrapper p {
+  font-size: 1.8rem;
+  font-weight: 300;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.legal-container .contact-wrapper p:last-of-type {
+  margin-top: 2px;
+}
+
+.legal-container .contact-wrapper p a {
+  font-size: inherit;
+  color: #00AD74;
+}
+
 .footer-collections {
   padding-bottom: 15px;
 }

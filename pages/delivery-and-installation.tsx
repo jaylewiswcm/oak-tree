@@ -109,7 +109,7 @@ const deliveryAndInstallation = () => {
             <div className='returns-banner'>
                 <div className="con-reg">
                     <h4>Want to return a product?</h4>
-                    <p>We hope you’re happy with every purchase you make with Oak Tree Mobility, but if this isn’t the case we hope to make the returns process as simple as possible. Check our <Link href=''><a>returns policy here</a></Link> for details.</p>
+                    <p>We hope you’re happy with every purchase you make with Oak Tree Mobility, but if this isn’t the case we hope to make the returns process as simple as possible. Check our <Link href='/returns-policy'><a>returns policy here</a></Link> for details.</p>
                 </div>
             </div>
             <Resources pageType='delivery'/>
