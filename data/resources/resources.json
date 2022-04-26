@@ -115,5 +115,35 @@
                 "video": false,
                 "url" : "/trade-in"
             }]
+    },
+    {
+
+        "type" : "delivery",
+        "resources" : [ 
+            {
+                "heading" : "£200 Trade In Offer",
+                "subheading" : "Supporting the British Heart Foundation",
+                "contentSrc": "",
+                "placeholder": "/images/resources/trade-in.png",
+                "video": false,
+                "url" : "/trade-in"
+            }, 
+            {
+                "heading" : "VAT Exemption Eligibilty",
+                "subheading" : "Are you eligible?",
+                "contentSrc": "",
+                "placeholder": "/images/resources/vat-exempt.png",
+                "video": false,
+                "url" : "/vat-exemption"
+            },
+            {
+                "heading" : "How We Make Our Products",
+                "subheading" : "British Made",
+                "contentSrc": "",
+                "placeholder": "/images/resources/british-made-chair.png",
+                "video": false,
+                "url" : "/british-made"
+            }
+         ]
     }
 ]

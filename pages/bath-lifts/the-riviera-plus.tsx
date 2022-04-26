@@ -41,10 +41,10 @@ const TheRivieraPlus = () => {
                         <p className='mobile-text'>Request a Brochure</p>
                         <p className='desktop-text'>Request Your Free Brochure</p>
                     </button>
-                    <Link href='#product-information' ><a className='learn-more'>
+                    {/* <Link href='#product-information' ><a className='learn-more'>
                         <p className='mobile-text'>Learn More</p>
                         <p className='desktop-text'>Learn more about the Oak</p>
-                        </a></Link>
+                        </a></Link> */}
                 </div>
             </div>
     </div>

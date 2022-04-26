@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import Image from 'next/image';
 import Link from 'next/link'
 import { NextSeo } from 'next-seo';
+import { motion } from 'framer-motion';
+import { useIsMedium } from '../../utils/hooks';
 // Components
 import chairs from '../../data/products/chairs.json';
 import Reviews from '../../components/sections/reviews/Reviews';
@@ -16,8 +18,9 @@ import PopupBrochureRequestForm from '../../components/forms/PopupBrochureReques
 import heroImage from '../../public/images/heros/chair-collection-hero.png'
 const Index = () => {
     const [show, setFormToShow] = useState(false)
+    const isMedium = useIsMedium()
     return (
-        <>
+        <motion.div exit={{opacity:0}} >
             <NextSeo  
                 title="Rise and Recline Chairs | Oak Tree Mobility"
                 description="Here at Oak Tree Mobility we offer a two-man white-glove delivery and installation service included in the price of all our chairs and beds. Find out more."
@@ -31,7 +34,7 @@ const Index = () => {
                         alt='Our Rise and Recline Chairs'
                         layout='fill'
                         objectFit='cover'
-                        objectPosition='center'
+                        objectPosition={isMedium ? '-150px' : 'center 0'}
                         quality={100}
                         placeholder='blur'
                         priority
@@ -59,6 +62,35 @@ const Index = () => {
                         <h2>Request Your <span className='yellow-3'>Free</span> Brochure</h2>
                         <p>Get our new brochure delivered to your door!</p>
                     </div>
+                    <div className='brochure-form-usps'>
+      <ul>
+        <li>
+          <span className='tick'><Image src='/vectors/green-tick.svg' alt='green tick' width={20} height={20}/></span>
+          <p>See our full collections</p>
+        </li>
+        <li>
+          <span className='tick'><Image src='/vectors/green-tick.svg' alt='green tick' width={20} height={20}/></span>
+          <p>Brand new products</p>
+        </li>
+        <li>
+          <span className='tick'><Image src='/vectors/green-tick.svg' alt='green tick' width={20} height={20}/></span>
+          <p>Useful help & advice</p>
+        </li>
+        <li>
+          <span className='tick'><Image src='/vectors/green-tick.svg' alt='green tick' width={20} height={20}/></span>
+          <p>Completely FREE!</p>
+        </li>
+      </ul>
+      <div className='brochure-image'>
+        <Image 
+          src='/images/landing-pages/brochure.jpeg'
+          alt='Brochure'
+          layout='responsive'
+          width={218}
+          height={130}
+        />
+      </div>
+    </div>
                    <CollectionBrochureRequestForm productType='chair'/>
                 </div>
               </div>    
@@ -89,7 +121,7 @@ const Index = () => {
                         </div>
                
                         <p className='desc'>{product!.desc}</p>
-                       <div className='main-cta'><p>View Chair</p></div>
+                       <div className='main-cta'><p>View Collection</p></div>
                     </a>
                     </Link>
                     )}
@@ -100,7 +132,7 @@ const Index = () => {
                 <Resources pageType='chairs' />
           </div>
           <FooterCollections />
-        </>
+        </motion.div>
     )
 }
 

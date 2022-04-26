@@ -13,6 +13,7 @@ import RecommendedProducts from '../../components/sections/recommendedProducts/R
 import Modal from '../../components/modal/Modal';
 import PopupBrochureRequestForm from '../../components/forms/PopupBrochureRequestForm';
 
+
 const TheOak = () => {
     const [isOpen, setAccordianOpen] = useState('');
     const [show, setFormToShow] = useState(false);
@@ -57,10 +58,10 @@ const TheOak = () => {
                         <p className='mobile-text'>Request a Brochure</p>
                         <p className='desktop-text'>Request Your Free Brochure</p>
                     </button>
-                    <Link href='#product-information' ><a className='learn-more'>
+                    {/* <Link href='#product-information' ><a className='learn-more'>
                         <p className='mobile-text'>Learn More</p>
                         <p className='desktop-text'>Learn more about the Oak</p>
-                        </a></Link>
+                        </a></Link> */}
                 </div>
             </div>
     </div>
@@ -100,7 +101,7 @@ const TheOak = () => {
                 <SizeChair isOpen={isOpen} openAccordian={() => openAccordian('size')}/>
                 <MotorChair isOpen={isOpen} openAccordian={() => openAccordian('motor')}/>
                 <Accessories  isOpen={isOpen} openAccordian={() => openAccordian('accessories')} type='chair'/>
-                <Reviews isOpen={isOpen} openAccordian={() => openAccordian('reviews')}/>
+                <Reviews product='chair' isOpen={isOpen} openAccordian={() => openAccordian('reviews')}/>
             </div>
             <div className='request-wrapper con-reg'>
                 <h6 className='heading'>Book a Home Visit</h6>

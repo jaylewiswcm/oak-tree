@@ -90,13 +90,19 @@
                 padding: 40px 15px;
                 background-color: $white;
                 position: absolute;
+                top: 50%;
                 left: 50%;
-                transform: translateX(-50%);
-                bottom: 25px;
+                transform: translate(-50%, -50%);
+                // left: 50%;
+                // transform: translateX(-50%);
+                // bottom: 25px;
                 width: 90%;
                 text-align: center;
                 border-radius: 2px;
                 display: none;
+        
+
+
                 @media(min-width: 900px) {
                     display: initial;
                 }
@@ -200,6 +206,36 @@
                     letter-spacing: 0.5px;
                 }
             }
+            .brochure-form-usps {
+                ul {
+                    li {
+                        &:nth-of-type(3),  &:nth-of-type(4) {
+                            display: none;
+                            @media(min-width: 950px) {
+                                display: flex;
+                            }
+                        }
+                        p {
+                            font-size: 1.6rem;
+                            @media(min-width:1000px) {
+                                font-size: 1.8rem;
+                            }
+                        }
+                       
+                        // &:last-of-type {
+                        //     display: none;
+                        //     @media(min-width: 950px) {
+                        //         display: flex;
+                        //     }
+                        // }
+                    }
+                }
+            }
+            // .brochure-image {
+            //     width: 200px;
+            //     margin-left: auto;
+            //     margin-top: 15px;
+            // }
         }
     }
 
@@ -268,6 +304,37 @@
                 border-radius: 3px;
                 p {
                     font-size: 1.8rem;
+                }
+            }
+        }
+    }
+    .single-grid {
+        display: flex;
+        flex-direction: row;
+        margin-top: 50px;
+        .collection-item {
+            display: flex;
+            flex-direction: column;
+            @media(min-width: 850px) {
+                flex-direction: row-reverse;
+            }
+            .image-wrapper {
+                width: 100%;
+                @media(min-width: 850px) {
+                    width: 50%;
+                }
+            }
+            .col-content-wrapper {
+                padding-right: 50px;
+                width: 100%;
+                @media(min-width: 850px) {
+                    width: 50%;
+                }
+                h2 {
+                    font-size: 2.6rem;
+                    @media(min-width: 850px) {
+                        font-size: 3rem;
+                    }
                 }
             }
         }
@@ -562,7 +629,7 @@
 
 }
 
-.bath-lift-testimonial {
+.product-testimonial {
     margin-bottom: 60px;
     h6 {
         font-weight: 600;

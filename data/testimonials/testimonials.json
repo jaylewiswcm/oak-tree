@@ -3,39 +3,43 @@
     "location": "Solihul",
     "product": {
         "name": "The Oak Chair",
-        "url": "/the-oak"
+        "url": "/chairs/the-oak"
     },
     "thumbnail" : "/images/testimonials/mr-andrews-tile.png",
-    "videoId" : "DYHM9trlcBo"
+    "videoId" : "DYHM9trlcBo",
+    "desc": "Mr Andrew’s rise and recline chair has helped him to sit and stand with ease again."
 },
 {
     "name" : "Mrs Atkins",
     "location": "Herefordshire",
     "product": {
         "name": "The Oak Chair",
-        "url": "/the-oak"
+        "url": "/chairs/the-oak"
     },
     "thumbnail" : "/images/testimonials/mrs-atkins-tile.png",
-    "videoId" : "-gVfWLxoJNM"
+    "videoId" : "-gVfWLxoJNM",
+    "desc" : "Mrs Atkins enjoys knitting in her rise and recline chair, which has also helped her sleep better at night."
 },
 {
     "name" : "Mr Parks",
     "location": "Cornwall",
     "product": {
         "name": "The Riviera Plus",
-        "url": "/the-riviera-plus"
+        "url": "/bath-lifts/the-riviera-plus"
     },
     "thumbnail" : "/images/testimonials/mr-parks-tile.png",
-    "videoId" : "YpIhtPvr76M"
+    "videoId" : "YpIhtPvr76M",
+    "desc": "After suffering a mini stroke which affected his balance, Richard Parks hadn't had a bath in years."
 },
 {
     "name" : "Mr Groger",
     "location": "London",
     "product": {
         "name": "The Oak Chair",
-        "url": "/the-oak"
+        "url": "/chairs/the-oak"
     },
     "thumbnail" : "/images/testimonials/mr-groger-tile.png",
-    "videoId" : "EMtZchM25AU"
+    "videoId" : "EMtZchM25AU",
+    "desc" : "Mr Groger uses his Oak Tree rise and recline chair to help relieve pain in his legs."
 }
 ]

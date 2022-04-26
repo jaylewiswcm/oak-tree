@@ -32,6 +32,12 @@
                     align-items: flex-start;
                     select {
                         width: 100%;
+                        -webkit-appearance: none;
+                        -moz-appearance: none;
+                        appearance: none;
+                    }
+                    option {
+                         font-size: 1.8rem;
                     }
                 }
                 .error-p {
@@ -44,6 +50,7 @@
             flex-direction: column-reverse;
             margin-bottom: 15px;
             padding-right:5px;
+            position: relative;
             // margin-left: 25px;
             .label, label {
                 font-size: 1.6rem;
@@ -86,6 +93,9 @@
                 margin-bottom:-5px;
                 margin-top: 8px;
                 display: none;
+                position: absolute;
+                bottom: -22px;
+                right:5px;
             }                    
         }
         .select-wrapper {
@@ -101,9 +111,16 @@
             select {
                 width: calc(100% - 162px);
                 text-transform: capitalize;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                background-image: url(/vectors/select-arrow.svg);
+                background-repeat: no-repeat;
+                background-position: right 5px  center ;
             }
             option {
                 text-transform: capitalize;
+                font-size: 1.8rem;
             }
             .error-p {
                 margin-left: 160px;

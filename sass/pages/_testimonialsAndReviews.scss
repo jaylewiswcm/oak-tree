@@ -1,0 +1,242 @@
+.t-and-r-hero {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 15px;
+    @media(min-width: 650px) {
+        padding: 50px 30px;
+    }
+    @media(min-width:1000px) {
+        flex-direction: row;
+    }
+    .hero-content {
+        padding: 25px 0;
+        width: 100%;
+        @media(min-width: 650px) and (max-width: 999px) {
+            width: 70%;
+            padding: 100px 0;
+        }
+        @media(min-width: 1000px) {
+            width: 45%;
+            padding: 100px 0;
+        }
+        .subheading {
+            font-size: 2rem;
+            font-weight: 500;
+            color: $oaktree-green;
+        }
+        .heading {
+            font-size: 3.2rem;
+            font-family: $fontText;
+            margin-top:3px;
+            color: $dark-green-1;
+            @media(min-width: 650px) and (max-width: 999px) {
+                font-size: 4rem;
+            }
+            @media(min-width: 1000px) {
+                font-size: 3.6rem;
+            }
+        }
+        a {
+            padding: 15px 30px;
+            display: block;
+            width: fit-content;
+            font-size: 1.6rem;
+            font-weight: 500;
+            margin-top: 25px;
+            border-radius: 2px;
+            text-transform: capitalize;
+            @media(min-width: 650px) {
+                font-size: 1.8rem;
+            }
+        }
+    }
+    .testimonial-holder {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin : 0 auto;
+        margin-top:25px;
+        @media(min-width:800px) and (max-width: 999px){
+            width: 80%;
+            margin-top:0;
+        }
+        @media(min-width:1000px) {
+            margin : 0;
+            width: 55%;
+        }
+        .testimonial {
+            border-radius: 6px;
+            box-shadow: 0 5px 21px rgba(0,0,0,0.13);
+            display: flex;
+            overflow: hidden;
+            width: 100%;
+            height:350px;
+            @media(min-width: 650px) {
+             width: 100%;
+             height: auto;
+            }
+            .image-wrapper {
+                position: relative; 
+                width: 100%;
+                @media(min-width: 650px) {
+                    width: 40%;
+                }
+                .cx-name {
+                    position: absolute;
+                    bottom: 0;
+                    left:0;
+                    padding: 15px;
+                    padding-top:50px;
+                    width: 100%;
+                    background: rgb(23,73,77);
+                    background: linear-gradient(180deg, rgba(23,73,77,0) 0%, rgba(23,73,77,0.528470763305322) 48%, rgba(23,73,77,1) 100%); 
+                    .name {
+                        font-size: 2.4rem;
+                        font-weight: 500;
+                        color: $white;
+                        @media(min-width:650px) {
+                            font-size: 2rem;
+                        }
+                    }
+                    .loc {
+                        font-size: 1.8rem;
+                        font-weight: 400;
+                        color: $white;
+                        @media(min-width:650px) {
+                            font-size: 1.6rem;
+                        }
+                    }
+                    .watch-button {
+                        border: 2px $white solid;
+                        font-size: 1.6rem;
+                        font-weight: 400;
+                        z-index: 3;
+                        color: $white;
+                        border-radius: 2px;
+                        padding: 10px 15px;
+                        margin-top: 15px;
+                       
+                        @media(min-width:380px) {
+                            position: absolute;
+                            right: 15px;
+                            bottom: 15px;
+                            margin:0;
+                            font-size: 1.8rem;
+                        }
+                        @media(min-width: 650px)  {
+                            display: none;
+                        }
+                    }
+                }
+            }    
+            .review {
+                width: 60%;
+                padding: 30px;
+                display: none;
+                @media(min-width: 650px) {
+                    display: initial;
+                }
+                .qoute-mark {
+                 width:30px;
+                 
+                }
+                .mark-left {
+                    margin-bottom:10px;
+                }
+                .mark-right {
+                    margin-top:5px;
+                    margin-left:auto;
+                }
+                .quote {
+                    font-size: 1.8rem;
+                    line-height: 1.5;
+                }
+                .product {
+                    display: flex;
+                    border: 1px $lighter-grey solid;
+                    border-radius: 4px;
+                    margin-top:20px;
+                    .product-image {
+                        position: relative;
+                        width: 50%;
+                    }
+                    .product-name {
+                        padding: 15px 20px;
+                        p {
+                            font-size:2rem;
+                            font-weight: 500;
+                        }
+                        a {
+                            font-size: 1.6rem;
+                            text-decoration: underline;
+                            text-underline-offset: 2px;
+                            color: $oaktree-green;
+                        }
+                    }
+                }
+                .story-link {
+                    font-size: 1.8rem;
+                    font-weight: 400;
+                    color: $oaktree-green;
+                    margin-top: 15px;
+                }
+            }
+        }
+    }
+}
+
+.tp-strip {
+    padding: 20px 0px;
+    margin: 50px 0;
+    margin-bottom: 80px;
+    .tp-logo {
+        width:220px;
+    }
+}
+
+.t-and-r-customer-stories {
+    margin-bottom: 50px;
+    .subheading {
+        font-size: 2.2rem;
+        font-weight: 500;
+        color: $oaktree-green;
+        text-align: center;
+    }
+    .heading {
+        font-size: 3.3rem;
+        text-align: center;
+    }
+    .stories {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 25px;
+        margin-bottom: 40px;
+        .cx {
+            .name {
+                font-size: 2.4rem;
+                font-weight: 500;
+                color: $dark-green-1;
+                padding-top: 15px;
+            }
+            .product {
+                font-size: 1.9rem;
+                color: $oaktree-green;
+                margin-top:2px;
+            }
+            .content-p {
+                font-size: 1.8rem;
+                margin-top: 12px;
+                line-height: 1.5;
+            }
+             button {
+                 padding:0;
+                 font-size: 1.8rem;
+                 font-weight: 500;
+                 margin-top: 20px;
+                 text-decoration: underline;
+                 text-underline-offset: 3px;
+             }
+        }
+    }
+}

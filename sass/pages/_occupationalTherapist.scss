@@ -40,7 +40,7 @@
             @media(min-width: 700px) and (max-width: 869px) {
                 font-size: 3.8rem;
             }
-            @media(min-width:870px) and (max-width: 1049px) {
+            @media(min-width:870px)  {
                 font-size: 3.6rem;
             }
         }
@@ -59,6 +59,9 @@
             }
             @media(min-width:870px) and (max-width: 1049px) {
                 font-size: 1.6rem;
+            }
+            @media(min-width: 1050px) {
+                font-size: 1.8rem;
             }
         }
         .main-cta {
@@ -106,7 +109,7 @@
                 width: 55%;
             }
             @media(min-width: 950px) {
-                width: 45%;
+                width: 50%;
             }
         }
         .section-content {
@@ -119,7 +122,7 @@
                 width: 70%;
             }
             @media(min-width: 950px) {
-                width: 55%;
+                width: 50%;
                 padding-left: 50px;
                 padding-top:0;
             }

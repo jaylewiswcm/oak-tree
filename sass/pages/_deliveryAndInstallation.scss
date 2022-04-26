@@ -1,0 +1,127 @@
+.wave-banner {
+    background-image: url(/vectors/wave-bg-horizontal.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .heading {
+        font-family: $fontText;
+        font-weight: 500;
+        color: $white;
+        text-align: center;
+    }
+}
+.delivery-intro {
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    h2 { 
+        font-family: $fontText;
+        font-size: 3.2rem;
+        font-weight:600;
+        color: $dark-green-1;
+        text-align: center;
+    }
+    p {
+        font-size: 1.9rem;
+        text-align: center;
+        max-width: 700px;
+        margin: 0 auto;
+        margin-top: 8px;
+        line-height: 1.5;
+    }
+}
+.delivery-grid {
+    display: flex;
+    justify-content: space-between;
+    margin: 100px 0;
+    .del-item {
+        width: 32%;
+        display: flex;
+        flex-direction: column;
+        .icon-wrapper {
+            width:75px;
+            margin: 0 auto;
+        }
+        .item-header {
+            font-size: 2.2rem;
+            font-weight: 500;
+            color: $dark-green-1;
+            text-align: center;
+        } 
+        .item-p {
+            font-size: 1.8rem;
+            font-weight: 400;
+            text-align: center;
+            line-height: 1.4;
+            margin-top: 10px;
+        }
+    }
+}
+.installation {
+    margin-bottom: 50px;
+    .heading {
+        font-family: $fontText;
+        font-size: 3.2rem;
+        font-weight:600;
+        color: $dark-green-1;
+        text-align: center;
+    }
+    .flex-row {
+        margin-top: 50px;
+        .image-wrapper {
+            width: 50%;
+            margin-right: 50px;
+        }
+        .installation-items {
+            width: 50%;
+            .item {
+                margin-bottom: 70px;
+                .icon-wrapper {
+                    width:75px;
+                }
+                .item-header {
+                    font-size: 2.2rem;
+                    font-weight: 500;
+                    color: $dark-green-1;
+                    margin-top:5px;
+                } 
+                .item-p {
+                    font-size: 1.8rem;
+                    font-weight: 400;
+                    line-height: 1.4;
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+}
+.returns-banner {
+    background-color: $dark-green-5;
+    padding: 30px;
+    text-align: center;
+    margin-bottom: 50px;
+    h4 {
+        font-size: 3.2rem;
+        font-weight: 600;
+        font-family: $fontText;
+        color: $dark-green-1;
+    }
+    p {
+        font-size: 1.9rem;
+        font-weight: 400;
+        line-height: 1.5;
+        max-width: 700px;
+        margin: 0 auto;
+        margin-top:10px;
+        a {
+            color: $oaktree-green;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+            font-size: inherit;
+        }
+    }
+}

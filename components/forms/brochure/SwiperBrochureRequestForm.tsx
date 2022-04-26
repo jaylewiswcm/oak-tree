@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import InputMask from 'react-input-mask';
 import { useRouter } from 'next/router';
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -93,12 +93,16 @@ const [formErrors, setFormErrors] = useState([
     },   
 ])
 
+useEffect(() => {
+    console.log(formErrors);
+},[formErrors])
+
 const RequestBrochure = (event:React.FormEvent<HTMLFormElement>) => {
     event.preventDefault() 
     const sectionData = formData[formData.length - 1];
     let isError: boolean = false;
     let updatedErrors = [...formErrors];
-    let index = 6;
+    let index = 5;
     let field: keyof typeof sectionData; 
     for(field in sectionData) {
 
@@ -112,6 +116,7 @@ const RequestBrochure = (event:React.FormEvent<HTMLFormElement>) => {
         
         // Empty field validation
         if(sectionData[field] === '') {
+            console.log(`Field: ${field}, index: ${index}`)
             error = {
                 'field': field, 
                 'errors': { 
@@ -140,10 +145,11 @@ const onChange = (e:React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTML
 }
 const validateFormSectionBeforeChangingSlide = (event:React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     event.preventDefault();
-    
-    // Add Section Validation
+    // Get the form section based on slideIndex
     const sectionData = formData[slideIndex];
+    // Define type for new field variable
     let field: keyof typeof sectionData; 
+    // Assign Index variable appropriately
     let index: number = 0;
     switch(slideIndex) {
         case 0: 
@@ -161,8 +167,10 @@ const validateFormSectionBeforeChangingSlide = (event:React.MouseEvent<HTMLButto
 
     }
     let isError: boolean = false;
+    // Create new error array with existing form error state
     let updatedErrors = [...formErrors];
     for(field in sectionData) {
+        // Reset errors
         let error = {
                 'field': field, 
                 'errors': { 

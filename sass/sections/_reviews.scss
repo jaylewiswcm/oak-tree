@@ -1,11 +1,15 @@
 .reviews {
     background-color: $blue-4;
     padding:  50px 0;
-    padding-bottom:0;
+    padding-bottom:50px;
     margin: 50px 0;
     display: flex;
     flex-direction: column;
     position: relative;
+    @media(min-width: 700px){
+        padding:  50px 0;
+        padding-bottom:0;
+    }
     .star-logo {
         position: absolute;
         top: -30px;
@@ -66,7 +70,8 @@
        }
        .hider {
         position: absolute;
-        bottom:-45px;
+        // bottom:-45px;
+        bottom: -25px;
         width: 100px;
         height: 50px;
   
@@ -97,17 +102,22 @@
        }
        .left-hider {
         left: 0;
-        background: rgb(246,248,255);
-        background: linear-gradient(90deg, rgba(246,248,255,1) 0%, rgba(246,248,255,0.9262298669467787) 47%, rgba(246,248,255,0) 100%);
+        background: none;
+        @media(min-width: 700px) {
+            background: rgb(246,248,255);
+            background: linear-gradient(90deg, rgba(246,248,255,1) 0%, rgba(246,248,255,0.9262298669467787) 47%, rgba(246,248,255,0) 100%);
+        }
         button {
             transform: rotate(180deg);
         }
         }
        .right-hider {
         right: 0;
-        background: rgb(246,248,255);
-        background: linear-gradient(270deg, rgba(246,248,255,1) 0%, rgba(246,248,255,0.9262298669467787) 47%, rgba(246,248,255,0) 100%);
-
+        background: none;
+        @media(min-width: 700px) {
+            background: rgb(246,248,255);
+            background: linear-gradient(270deg, rgba(246,248,255,1) 0%, rgba(246,248,255,0.9262298669467787) 47%, rgba(246,248,255,0) 100%);
+        }
        }
        .swiper {
            padding: 25px 15px;

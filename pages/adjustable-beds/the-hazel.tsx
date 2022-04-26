@@ -56,12 +56,12 @@ const TheHazel = () => {
                         <p className='mobile-text'>Request a Brochure</p>
                         <p className='desktop-text'>Request Your Free Brochure</p>
                     </button>
-                    <Link href='#product-information' >
+                    {/* <Link href='#product-information' >
                         <a className='learn-more'>
                             <p className='mobile-text'>Learn More</p>
                             <p className='desktop-text'>Learn more about the Hazel</p>
                         </a>
-                    </Link>
+                    </Link> */}
                 </div>
             </div>
     </div>
@@ -101,7 +101,7 @@ const TheHazel = () => {
                 <Mattress isOpen={isOpen} openAccordian={() => openAccordian('mattress')}/>
                 <Headboards isOpen={isOpen} openAccordian={() => openAccordian('headboards')}/>
                 <Accessories isOpen={isOpen} openAccordian={() => openAccordian('accessories')} type='bed'/>
-                <Reviews isOpen={isOpen} openAccordian={() => openAccordian('reviews')}/>
+                <Reviews product='bed' isOpen={isOpen} openAccordian={() => openAccordian('reviews')}/>
             </div>
             <div className='request-wrapper con-reg'>
                 <h6 className='heading'>Book a Home Visit</h6>

@@ -50,6 +50,35 @@ const Index = () => {
                         <h2>Request Your <span className='yellow-3'>Free</span> Brochure</h2>
                         <p>Get our new brochure delivered to your door!</p>
                     </div>
+                    <div className='brochure-form-usps'>
+      <ul>
+        <li>
+          <span className='tick'><Image src='/vectors/green-tick.svg' alt='green tick' width={20} height={20}/></span>
+          <p>See our full collections</p>
+        </li>
+        <li>
+          <span className='tick'><Image src='/vectors/green-tick.svg' alt='green tick' width={20} height={20}/></span>
+          <p>Brand new products</p>
+        </li>
+        <li>
+          <span className='tick'><Image src='/vectors/green-tick.svg' alt='green tick' width={20} height={20}/></span>
+          <p>Useful help & advice</p>
+        </li>
+        <li>
+          <span className='tick'><Image src='/vectors/green-tick.svg' alt='green tick' width={20} height={20}/></span>
+          <p>Completely FREE!</p>
+        </li>
+      </ul>
+      <div className='brochure-image'>
+        <Image 
+          src='/images/landing-pages/brochure.jpeg'
+          alt='Brochure'
+          layout='responsive'
+          width={218}
+          height={130}
+        />
+      </div>
+    </div>
                    <CollectionBrochureRequestForm productType='chair'/>
                 </div>
               </div>   
@@ -79,7 +108,7 @@ const Index = () => {
                             </span>
                         </div>
                         <p className='desc'>{product!.desc}</p>
-                       <div className='main-cta'><p>View Bed</p></div>
+                       <div className='main-cta'><p>View Collection</p></div>
                     </a>
                     </Link>
                     )}

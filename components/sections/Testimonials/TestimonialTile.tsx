@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image';
+import {motion } from 'framer-motion';
 
 interface ComponentProps {
     cx: {
@@ -19,8 +20,15 @@ interface ComponentProps {
 }
 
 export const TestimonialTile = ({cx, setSelectedCx, setShow}: ComponentProps) => {
+  const easing =[.6, -.05, .01, .99]
+
+  const fadeInFromAbove = {
+    visible: { x:0, opacity: 1, transition: { duration: 1.2, ease: easing } },
+    hidden: {  x:-800, opacity: 0 }
+  }
+
   return (
-    <div className='testimonial-tile' onClick={() => {setSelectedCx(cx); setShow(true);}}>
+    <motion.div variants={fadeInFromAbove} className='testimonial-tile' onClick={() => {setSelectedCx(cx); setShow(true);}}>
           <Image 
             src={cx.thumbnail}
             alt={cx.name}
@@ -46,6 +54,6 @@ export const TestimonialTile = ({cx, setSelectedCx, setShow}: ComponentProps) =>
             </div>
             </div> 
           </div>
-        </div>
+        </motion.div>
   )
 }

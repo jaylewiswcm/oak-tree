@@ -4,6 +4,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import { NextSeo } from 'next-seo';
+import { motion } from 'framer-motion';
 // Component
 import Testimonials from '../components/sections/Testimonials/Testimonials';
 import HomeCollections from '../components/sections/collections/HomeCollections';
@@ -32,7 +33,6 @@ class Home extends React.Component<MyProps, MyState> {
   componentWillUnmount() {
     window.removeEventListener('scroll', this.listenScrollEvent);
   }
-
 
   isElementInViewport (el: any) {
     var rect = el.getBoundingClientRect();
@@ -67,7 +67,7 @@ closeUspOverlay = () => {
 
   render() {
     return (
-      <>
+      <div >
       <NextSeo 
             title="Oak Tree Mobility | Your Comfort is Our Strength"
             description="Oak Tree Mobility is the UK's leading mobility specialist helping people live independently. Handmade by skilled craftsmen to order in the UK ..."
@@ -147,21 +147,11 @@ closeUspOverlay = () => {
             <h1>Britian's Leading Mobility Specialists</h1>
             <p className='subheading'>At Oak Tree, we make beautiful products that help people live independently.</p>
           </div>
-          {/* <h1>Britian's Leading Mobility Specialists</h1>
-          <p className='subheading'>At Oak Tree, we make beautiful products that help people live independently.</p>
-          <div className="button-wrapper">
-            <button className='bg-green'>
-              <span className='bg-hover'></span>
-              <p>Request a Free Brochure</p>
-            </button>
-          </div> */}
         </div>
         <div className='intro-image'>
           <video height="100%" autoPlay loop muted>
             <source src="videos/advert-hero.mp4"
             type="video/mp4"/>
-            {/* <source src="videos/oaktree-ad-cut.mp4"
-            type="video/mp4"/> */}
           </video>
           <span className='mobile-image'>
             <span className='as-seen-on-tv'>
@@ -173,9 +163,9 @@ closeUspOverlay = () => {
       </div>
       <div className='green-strip hide'>
         <div className='inner-wrapper con-reg'>
-        <div className="trustpilot-widget" data-locale="en-GB" data-template-id="53aa8807dec7e10d38f59f32" data-businessunit-id="56607bac0000ff00058643ac" data-style-height="100px" data-style-width="180px" data-theme="dark" data-font-family="Source Sans Pro" data-text-color="#ffffff">
+        {/* <div className="trustpilot-widget" data-locale="en-GB" data-template-id="53aa8807dec7e10d38f59f32" data-businessunit-id="56607bac0000ff00058643ac" data-style-height="100px" data-style-width="180px" data-theme="dark" data-font-family="Source Sans Pro" data-text-color="#ffffff">
           <a href="https://uk.trustpilot.com/review/www.oaktreemobility.co.uk" target="_blank" rel="noreferrer" >Trustpilot</a>
-        </div>
+        </div> */}
         <div className='seen-on-tv-icon'>
           <Image 
             src='/icons/seen-on-tv.svg'
@@ -241,14 +231,11 @@ closeUspOverlay = () => {
           <button className='bg-yellow3'>Learn More</button>
         </div>
       </div>
-      
       <OccupationalTherapistSection />
-
-
       <Reviews orphan={false} />
       <Testimonials pageType='normal' />
       <FooterCollections />
-      </>
+      </div>
   )
 }
 }
