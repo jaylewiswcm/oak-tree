@@ -50,8 +50,8 @@ const TandRTestimonials = () => {
     }}
     modules={[Pagination]}
     className="mySwiper">
-        {testimonials.map(cx => 
-            <SwiperSlide>
+        {testimonials.map((cx, index) => 
+            <SwiperSlide key={index}>
                 <div className='cx'>
                     <div className='image-wrapper'>
                         <Image 
