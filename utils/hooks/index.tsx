@@ -18,7 +18,7 @@ export function useMediaQuery(query: string) {
     return matches;
   }
 
-export const useIsSmall = () => useMediaQuery('(min-width: 480px)');
+export const useIsSmall = () => useMediaQuery('(min-width: 650px)');
 export const useIsMedium = () => useMediaQuery('(min-width: 900px)');
 
 

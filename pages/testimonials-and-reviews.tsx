@@ -2,15 +2,27 @@ import React, { useState } from 'react'
 import { NextSeo } from 'next-seo';
 import Link from 'next/link';
 import Image from 'next/image'
+// Hooks 
+import { useIsSmall } from '../utils/hooks';
+// Components
 import Reviews from '../components/sections/reviews/Reviews';
 import TandRTestimonials from '../components/sections/Testimonials/TandRTestimonials';
 import FooterCollections from '../components/sections/collections/FooterCollections';
 import Modal from '../components/modal/Modal';
 import VideoCarousel from '../components/modal/video/VideoCarousel';
+import CarouselTandR from '../components/sections/Testimonials/carousel/CarouselTandR';
+// Images
+import leftLogo from '../public/trustpilot/trustpilot-logo-black-w-stars.svg'
+import centerLogo from '../public/trustpilot/trustpilot-logo-black-w-stars-centered.svg'
+
+
 
 const TestimonialsAndReviews = () => {
     const [show, setShow] = useState(false);
     const [videoId, setVideoId] = useState('');
+    
+    const isSmall = useIsSmall();
+
     return (
         <>
             <NextSeo  
@@ -23,9 +35,20 @@ const TestimonialsAndReviews = () => {
                     <p className='subheading'>Rated Excellent on Trustpilot</p>
                     <h1 className='heading'>Trusted by thousands of customers across the country</h1>
                     <Link href='#'><a className='main-cta'>View our customer stories</a></Link>
+                    <div className='tp-logo'>
+                        <Image 
+                            src={isSmall ? leftLogo : centerLogo}
+                            alt='Trustpilot logo'
+                            layout='responsive'
+                            width='218'
+                            height='88'
+                        />
+                    </div>
                 </div>
                 <div className='testimonial-holder'>
-                    <div className='testimonial'>
+                    <CarouselTandR setShow={setShow} setVideoId={setVideoId}/>
+                    <div className='carousel-pagination ' id='hero-pagination'></div>
+                    {/* <div className='testimonial'>
                         <div className='image-wrapper'>
                             <Image
                                 src='/images/testimonials/mrs-atkins-tile.png'
@@ -68,6 +91,7 @@ const TestimonialsAndReviews = () => {
                                         layout='fill'
                                         objectFit='cover'
                                         objectPosition='center'
+                                        quality={100}
                                     />
                                 </div> 
                                 <div className='product-name'>
@@ -77,10 +101,10 @@ const TestimonialsAndReviews = () => {
                             </div> 
                             <Link href='/'><a className='story-link'>Read Story</a></Link>   
                         </div>
-                    </div>
+                    </div> */}
                 </div>
             </div>
-            <div className='bg-dark-green-1 tp-strip'>
+            {/* <div className='bg-dark-green-1 tp-strip'>
                 <div className='con-reg'>
                     <div className='tp-logo'>
                         <Image 
@@ -92,7 +116,7 @@ const TestimonialsAndReviews = () => {
                         />
                     </div>
                 </div>
-            </div>
+            </div> */}
             <div className='tp-reviews'>
                 <Reviews orphan={false} />
             </div>

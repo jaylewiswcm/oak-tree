@@ -1,6 +1,7 @@
 
     .generic-form {
         padding: 25px;
+        padding-top:15px;
         overflow-y: auto;
         overflow:auto;
         height: calc(100vh - 100px);
@@ -123,7 +124,7 @@
                 font-size: 1.8rem;
             }
             .error-p {
-                margin-left: 160px;
+                // margin-left: 160px;
             }
         }
         .product-interest-wrapper {
@@ -193,6 +194,7 @@
             display: flex;
             justify-content: space-between;
             padding: 15px 0;
+            padding-top: 20px;
             .action-wrapper {
                 display: none;
             }

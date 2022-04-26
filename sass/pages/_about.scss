@@ -42,7 +42,16 @@
         margin-bottom: 25px;
         @media (min-width: 900px) {
             flex-direction: row;
-            margin-bottom: 50px;
+            margin-bottom: 80px;
+        }
+        &:nth-of-type(2) {
+            flex-direction: column;
+            @media (min-width: 900px) {
+                flex-direction: row-reverse;
+            }
+            // .section-content {
+            //     padding-left: 0;
+            // }
         }
         .image-wrapper {
             width: 100%;
@@ -66,8 +75,7 @@
            @media (min-width: 900px) {
                width: 50%;
                padding: 0 50px;
-           }
-           
+           }           
             .subheading {
                 font-size: 1.8rem;
                 font-weight: 500;

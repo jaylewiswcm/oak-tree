@@ -17,7 +17,7 @@ import testimonials from '../../../data/testimonials/testimonials.json';
 const TandRTestimonials = () => {
     const [show, setShow] = useState(false);
     const [videoId, setVideoId] = useState('');
-  return (
+  return ( 
     <div className='t-and-r-customer-stories con-reg'>
       {show && <Modal classNames='' setShow={setShow}><VideoCarousel setShow={setShow} show={show} videoId={videoId}></VideoCarousel></Modal>}
     <p className='subheading'>Hear It From Them</p> 
