@@ -851,6 +851,15 @@ body.freeze {
   z-index: 999;
   -webkit-transition: 0.2s;
   transition: 0.2s;
+  display: none;
+}
+
+@media (min-width: 850px) {
+  .british-made-overlay {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .british-made-overlay .icon-wrapper {
