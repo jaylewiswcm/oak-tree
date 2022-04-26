@@ -36,27 +36,41 @@
 }
 .delivery-grid {
     display: flex;
-    justify-content: space-between;
-    margin: 100px 0;
+    margin: 50px auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @media(min-width: 1000px) {
+        flex-direction: row;
+        align-items: unset;
+        justify-content: space-between;
+        margin: 100px auto;
+    }
     .del-item {
-        width: 32%;
+        max-width: 600px;
         display: flex;
         flex-direction: column;
+        margin-bottom: 50px;
+        @media(min-width: 1000px) {
+            width: 32%;
+            margin-bottom: 0;
+        }
         .icon-wrapper {
             width:75px;
             margin: 0 auto;
         }
         .item-header {
-            font-size: 2.2rem;
+            font-size: 2.4rem;
             font-weight: 500;
             color: $dark-green-1;
             text-align: center;
+            margin-top:15px;
         } 
         .item-p {
-            font-size: 1.8rem;
+            font-size: 1.7rem;
             font-weight: 400;
             text-align: center;
-            line-height: 1.4;
+            line-height: 1.5;
             margin-top: 10px;
         }
     }
@@ -72,14 +86,45 @@
     }
     .flex-row {
         margin-top: 50px;
+        flex-direction: column;
+        @media(min-width: 1000px) {
+            flex-direction: row;
+        }
         .image-wrapper {
-            width: 50%;
+            width: 100%;
+            max-height: 400px;
             margin-right: 50px;
+            overflow: hidden;
+            @media(min-width: 1000px) {
+                width: 50%;
+                max-height: 100%;
+            }
         }
         .installation-items {
-            width: 50%;
+            width: 100%;
+            @media(min-width: 800px) and (max-width: 999px) {
+                display: flex;
+            }
+            @media(min-width: 1000px) {
+                width: 50%;
+            }
             .item {
+                margin-top:40px;;
                 margin-bottom: 70px;
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+                @media(min-width: 800px) and (max-width: 999px) {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+                    margin: 50px 25px;
+                }
+                    @media(min-width: 1000px) {
+                        margin-top:0;
+                    }
                 .icon-wrapper {
                     width:75px;
                 }
@@ -94,6 +139,7 @@
                     font-weight: 400;
                     line-height: 1.4;
                     margin-top: 10px;
+                    max-width: 600px;
                 }
             }
         }
@@ -101,7 +147,7 @@
 }
 .returns-banner {
     background-color: $dark-green-5;
-    padding: 30px;
+    padding: 45px 30px;
     text-align: center;
     margin-bottom: 50px;
     h4 {

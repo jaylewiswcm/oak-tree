@@ -16,6 +16,7 @@ const Menu = ({ type, keyId , closeMenu}: ComponentProps) => {
             { title: "About Us", icon : "", url: '/about' },
             { title: "Our Occupational Therapist", icon : "", url: '/occupational-therapist' },
             { title: "Testimonials and Reviews", icon : "", url: '/testimonials-and-reviews' },
+            { title: "Delivery and Installation", icon : "", url: '/delivery-and-installation' },
           ],
         },
         {
