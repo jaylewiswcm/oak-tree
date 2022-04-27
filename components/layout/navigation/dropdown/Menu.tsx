@@ -17,6 +17,7 @@ const Menu = ({ type, keyId , closeMenu}: ComponentProps) => {
             { title: "Our Occupational Therapist", icon : "", url: '/occupational-therapist' },
             { title: "Testimonials and Reviews", icon : "", url: '/testimonials-and-reviews' },
             { title: "Delivery and Installation", icon : "", url: '/delivery-and-installation' },
+            { title: "VAT Exempt Eligibility", icon : "", url: '/vat-exempt-eligibility' },
           ],
         },
         {

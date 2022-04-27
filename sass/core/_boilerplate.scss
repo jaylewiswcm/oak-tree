@@ -170,6 +170,9 @@ body {
     text-align: center;
 }
 /*       Colors         */
+.white {
+    color: $white;
+}
 .oaktree-green {
     color: $oaktree-green!important;
 }
@@ -185,14 +188,22 @@ body {
 .yellow-3 {
     color: $yellow-3!important;
 }
+.bhf-red {
+    color:$bhf-red!important;
+}
+
+.facebook-blue {
+    color:#1A77F2!important;
+}
+.youtube-red {
+    color:#FF0000!important;
+}
+// background colours
 .bg-dark-green-1 {
     background-color: $dark-green-1!important;
 }
 .bg-light-green {
     background-color: $light-green-1!important;
-}
-.bhf-red {
-    color:$bhf-red!important;
 }
 .bg-bhf-red {
     background-color: $bhf-red!important;
@@ -208,11 +219,62 @@ body {
 .bg-blue-3 {
     background-color: $blue-3!important;
 }
-.facebook-blue {
-    color:#1A77F2!important;
+// background-images
+.wave-bg-horizontal {
+    background-image: url(/vectors/wave-bg-horizontal.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 50px 0;
 }
-.youtube-red {
-    color:#FF0000!important;
+// positioning
+.align-center {
+    text-align: center;
+    margin: 0 auto;
+}
+// font weights
+.weight-300 {
+    font-weight: 300;
+}
+.weight-400 {
+    font-weight: 400;
+}
+.weight-500 {
+    font-weight: 500;
+}
+.weight-600 {
+    font-weight: 600;
+}
+.weight-700 {
+    font-weight: 700;
+}
+// text decoration 
+.underline {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 2px;
+}
+// Banners
+.wave-banner {
+    background-image: url(/vectors/wave-bg-horizontal.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .heading {
+        // font-family: $fontText;
+        font-weight: 500;
+        color: $white;
+        text-align: center;
+        font-size: 3rem;
+        @media(min-width: 750px) {
+            font-size: 3.6rem
+        }
+        
+    }
 }
 
 .video-overlay-content { 

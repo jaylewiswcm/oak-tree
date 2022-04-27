@@ -33,7 +33,7 @@ const MobileNavigation = ({isOpen, toggleMobileMenu} : ComponentProps) => {
             { link: '/price-guide', text: 'Price Guide' },
             { link: '/testimonials-and-reviews', text: 'Testimonials And Reviews' },
             { link: '/delivery-and-installation', text: 'Delivery and Installation' },
-            { link: '/vat-exempt', text: 'VAT Exempt Eligibilty' },
+            { link: '/vat-exempt-eligibility', text: 'VAT Exempt Eligibilty' },
         ]},
         { subMenuHeader: 'Chairs', submenu: [
             {link: '/chairs', text: 'All Chairs' },
