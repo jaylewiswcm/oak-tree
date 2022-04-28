@@ -18,6 +18,8 @@ const Menu = ({ type, keyId , closeMenu}: ComponentProps) => {
             { title: "Testimonials and Reviews", icon : "", url: '/testimonials-and-reviews' },
             { title: "Delivery and Installation", icon : "", url: '/delivery-and-installation' },
             { title: "VAT Exempt Eligibility", icon : "", url: '/vat-exempt-eligibility' },
+            { title: "Chair Price Guide", icon : "", url: '/price-guide-chair' },
+            { title: "Bed Price Guide", icon : "", url: '/price-guide-bed' },
           ],
         },
         {

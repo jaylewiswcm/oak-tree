@@ -22,19 +22,21 @@ import Image from 'next/image';
                     <p>If you wish to cancel your order before we’ve dispatched it, please call us to request cancellation. We try to dispatch things very quickly so if you need to cancel your order please do so as soon as possible. Please note once we have dispatched an item to you, the item cannot be cancelled our returns process comes into effect, including any appropriate charges.</p>
                 </div>
                 <div className='contact-wrapper'>
-                    <div className='icon-wrapper'>
-                        <Image 
-                            src='/icons/delivery/icon-phone-message.svg'
-                            alt='Contact us icon'
-                            layout='responsive'
-                            width='75'
-                            height='75'
-                        />
+                    <div className='sticky-wrapper'>
+                        <div className='icon-wrapper'>
+                            <Image 
+                                src='/icons/delivery/icon-phone-message.svg'
+                                alt='Contact us icon'
+                                layout='responsive'
+                                width='75'
+                                height='75'
+                            />
+                        </div>
+                        <h3>Can't find what you're looking for?</h3>
+                        <p>Give us a call on <a href='tel:0800094999'>0800 094 999</a> to speak to customer services</p>
+                        <p>Monday - Friday 9am-7pm</p>
+                        <p>Sunday 9am-5pm</p>
                     </div>
-                    <h3>Can't find what you're looking for?</h3>
-                    <p>Give us a call on <a href='tel:0800094999'>0800 094 999</a> to speak to customer services</p>
-                    <p>Monday - Friday 9am-7pm</p>
-                    <p>Sunday 9am-5pm</p>
                 </div>
             </div>
       </>

@@ -39,20 +39,22 @@ const VatExemptEligibility = () => {
                     <p>For a full list, or to find out more, give us a call and speak to one of our advisors.</p>
                 </div>
                 <div className='contact-wrapper'>
-                    <div className='icon-wrapper'>
-                        <Image 
-                            src='/icons/delivery/icon-phone-message.svg'
-                            alt='Contact us icon'
-                            layout='responsive'
-                            width='75'
-                            height='75'
-                        />
+                    <div className='sticky-wrapper'>
+                        <div className='icon-wrapper'>
+                            <Image 
+                                src='/icons/delivery/icon-phone-message.svg'
+                                alt='Contact us icon'
+                                layout='responsive'
+                                width='75'
+                                height='75'
+                            />
+                        </div>
+                        <h4>Want to find out more? Speak to our advisors</h4>
+                        <p>Give us a call on <a href='tel:0800094999'>0800 094 999</a> to speak to customer services</p>
+                        <p>Monday - Friday 9am-7pm</p>
+                        <p>Sunday 9am-5pm</p>
                     </div>
-                    <h4>Want to find out more? Speak to our advisors</h4>
-                    <p>Give us a call on <a href='tel:0800094999'>0800 094 999</a> to speak to customer services</p>
-                    <p>Monday - Friday 9am-7pm</p>
-                    <p>Sunday 9am-5pm</p>
-                </div>
+                    </div>
             </div>
     </>
   )

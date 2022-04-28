@@ -292,11 +292,11 @@ footer {
             flex-direction: column;
             align-items: center;
             padding: 30px 25px;
-            @media(min-width: 700px)  {
+            @media(min-width: 888px)  {
                 flex-direction: row;
             }
             p {
-                @media(min-width: 700px)  {
+                @media(min-width: 888px)  {
                 border-right: 1px $black solid;
                 padding-right: 20px;
                 }
@@ -306,7 +306,7 @@ footer {
                 font-weight:300;
                 color: $black;
                 margin-bottom: 15px;
-                @media(min-width: 700px)  {
+                @media(min-width: 888px)  {
                     margin-right:20px;
                     margin-bottom: 0;
                     font-size: 1.4rem;

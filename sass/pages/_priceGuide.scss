@@ -1,0 +1,210 @@
+.price-guide-intro {
+    text-align: center;
+    margin: 50px auto;
+    margin-bottom: 0;
+    h2{
+        font-size:3.5rem;
+        font-weight: 600;
+        font-family: $fontText;
+        color: $dark-green-1;
+        text-transform: capitalize
+    }
+    p {
+        font-size: 2rem;
+        font-weight: 400;
+        line-height: 1.6;
+        max-width: 800px;
+        margin: 0 auto;
+        margin-top: 5px;
+    }
+}
+
+.price-guide-section {
+    display: flex;
+    padding-top:50px;
+    padding-bottom: 50px;
+    flex-direction: column;
+    @media(min-width: 1000px) {
+        flex-direction: row;
+    }
+    .image-wrapper {
+        max-width:500px;
+        width: 100%;
+        @media(min-width: 1000px) {
+         width: 50%;
+         max-width:100%;
+        }
+    }
+    .section-content {
+        max-width:700px;
+        width: 100%;
+        padding:30px 0 ;
+        display: flex;
+        flex-direction: column;
+        // align-items: center;
+        justify-content: center;
+        @media(min-width: 1000px) {
+            width: 50%;
+            padding: 0 50px;
+           }
+        h3 {
+            font-size: 3rem;
+            font-weight: 600;
+            font-family: $fontText;
+            color: $dark-green-1;
+            @media(min-width: 650px) {
+                font-size: 3.3rem;
+            }
+        }
+        p {
+            font-size: 1.8rem;
+            font-weight: 400;
+            line-height: 1.6;
+            margin-top: 10px;
+            @media(min-width: 650px) {
+                font-size: 2rem;
+            }
+        }
+        ul {
+            li {
+                display: flex;
+                align-items: center;
+                margin: 15px 0;
+                .tick-wrapper{
+                    width: 20px;
+                    height: 20px;
+                    margin-right: 15px;
+                }
+                p {
+                    margin:0;
+                }
+            }
+        }
+    }
+}
+
+.price-guide-section.row-reverse {
+    flex-direction: column;        
+    @media(min-width:1000px) {
+        flex-direction: row-reverse;        
+    } 
+}
+
+.price-guide-section-center {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    @media(min-width: 750px) {
+        text-align: center;
+    }
+    h4{
+        font-size:3.6rem;
+        font-weight: 600;
+        font-family: $fontText;
+        color: $dark-green-1;
+        text-transform: capitalize;
+    }
+    p {
+        font-size: 1.8rem;
+        font-weight: 300;
+        line-height: 1.6;
+        max-width: 750px;
+        margin: 0 auto;
+        margin-top: 15px;
+    }
+}
+
+.price-guide-banner {
+    padding: 70px 0;
+    h5 {
+        font-family: $fontText;
+        font-size: 3rem;
+        font-weight: 500;
+        color: $dark-green-1;
+        
+        max-width: 800px;
+        margin: 0 auto;
+        @media(min-width: 750px) {
+            font-size: 3.2rem;
+            font-weight: 600;
+            text-align: center;
+        }
+    } 
+
+}
+
+.price-guide-questions {
+    margin: 50px auto;
+    h6 {
+        font-size: 2.8rem;
+        font-weight: 500;
+        color: $dark-green-1;
+        font-family: $fontText;
+        text-align: center;
+    }
+    .questions-table {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        margin-top: 25px;
+        max-width: 800px;
+        .question {
+            border-top: 1px $lighter-grey solid;
+            border-bottom: 1px $lighter-grey solid;
+            transition: max-height 0.35s cubic-bezier(0, 1, 0, 1);
+            overflow: hidden;
+            &:nth-of-type(2) {
+                border-top: 0;
+            }
+            .top {
+                display: flex;
+                align-items: center;
+                padding: 25px 10px;
+                cursor: pointer;
+                @media(min-width: 450px) {
+                    padding: 25px;
+                }
+                p {
+                    font-size:1.9rem;
+                    font-weight: 500;
+                    color: $dark-green-1;
+                    width: calc(100% - 35px);
+                    margin-right:15px;
+                    @media(min-width: 400px) {
+                        font-size: 2.1rem;
+                    }
+                }
+                .icon-wrapper {
+                    width: 20px;
+                    margin-left: auto;
+                }
+            }
+            .answer {
+                padding: 0 25px;
+                padding-bottom: 10px;
+                max-height: 0;
+                padding: 0;
+                padding: 0 10px;
+                transition: max-height 0.2s ease;
+                overflow: hidden;
+                display: flex;
+                flex-direction: column;
+                @media(min-width: 450px) {
+                    padding: 0 25px;
+                }
+                p {
+                    font-size: 1.8rem;
+                    font-weight: 300;
+                    line-height: 1.6;
+                    margin-bottom: 15px;
+                    padding-bottom: 10px;
+                }
+            }
+            .answer.open {
+                transition: max-height 0.2s ease;
+                height: 100%;
+                max-height: 1000px;
+            }
+        }
+      
+    }
+}

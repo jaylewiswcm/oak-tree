@@ -145,5 +145,35 @@
                 "url" : "/british-made"
             }
          ]
+    },
+    {
+
+        "type" : "british-made",
+        "resources" : [ 
+            {
+                "heading" : "UK Therapy Services Talk Chairs",
+                "subheading" : "Our Occupational Therapist",
+                "contentSrc": "",
+                "placeholder": "/images/resources/occupational-therapist.png",
+                "video": false,
+                "url" : "/occupational-therapist"
+            },
+            {
+                "heading" : "£200 Trade In Offer",
+                "subheading" : "Supporting the British Heart Foundation",
+                "contentSrc": "",
+                "placeholder": "/images/resources/trade-in.png",
+                "video": false,
+                "url" : "/trade-in"
+            }, 
+            {
+                "heading" : "VAT Exemption Eligibilty",
+                "subheading" : "Are you eligible?",
+                "contentSrc": "",
+                "placeholder": "/images/resources/vat-exempt.png",
+                "video": false,
+                "url" : "/vat-exemption"
+            }
+        ]
     }
 ]

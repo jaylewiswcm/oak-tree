@@ -50,7 +50,8 @@ const Footer = () => {
                                 <li className='list-link'><Link href='/occupational-therapist'><a>Our Occupational Therapist</a></Link></li>
                                 <li className='list-link'><Link href='/british-made'><a>British Made</a></Link></li>
                                 <li className='list-link'><Link href='/trade-in'><a>Trade In</a></Link></li>
-                                <li className='list-link'><Link href='/price-guide'><a>Price Guide</a></Link></li>
+                                <li className='list-link'><Link href='/price-guide-chairs'><a>Price Guide Chairs</a></Link></li>
+                                <li className='list-link'><Link href='/price-guide-beds'><a>Price Guide Beds</a></Link></li>
                                 <li className='list-link'><Link href='/testimonials-and-reviews'><a>Testimonials and Reviews</a></Link></li>
                             </ul>
                         </div>
@@ -58,7 +59,7 @@ const Footer = () => {
                             <div className='list-header'onClick={(e) => toggleFooterNavList(e)}>Customer Support<span className='arrow-wrapper'><Image src='/vectors/down-arrow-black.svg' alt='open-arrow' width={18} height={11}/></span></div>
                             <ul>
                                 <li className='list-link'><Link href='/delivery-and-installation'><a>Delivery and Installation</a></Link></li>
-                                <li className='list-link'><Link href='/vat-exemption'><a>VAT Exempt Eligibility</a></Link></li>
+                                <li className='list-link'><Link href='/vat-exempt-eligibility'><a>VAT Exempt Eligibility</a></Link></li>
                             </ul>   
                         </div>
                     </div>
@@ -120,8 +121,9 @@ const Footer = () => {
                 <div className='footnote-inner con-reg'>
                     <p>© Copyright 2022 Oak Tree Mobility Ltd.</p>
                     <Link href="/terms-and-conditions"><a>Terms and Conditions</a></Link>
-                    <Link href="/privacy"><a>Privacy</a></Link>
+                    <Link href="/privacy-policy"><a>Privacy</a></Link>
                     <Link href="/cookie-policy"><a>Cookie Policy</a></Link>
+                    <Link href="/modern-slavery-statement"><a>Modern Slavery Statement</a></Link>
                 </div>
             </div>
         </footer>
