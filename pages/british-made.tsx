@@ -73,7 +73,7 @@ const BritishMade = () => {
                     />
                 </div>
             </div>
-            <div className='british-made-intro con-reg'>
+            <div className='page-intro british-made-intro con-reg'>
                 <h2>Proudly British Made</h2>
                 <p>At Oak Tree Mobility, we celebrate British manufacturing. All our rise and recline chairs and settees are made in Britain, and we are immensely proud of that fact. As far as we are concerned, the ‘British Made’ stamp stands for quality, reliability, and trust – all qualities that are hugely important to us.</p>
             </div>

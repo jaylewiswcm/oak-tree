@@ -1,0 +1,142 @@
+.trade-in-intro{
+    h2, p {
+        text-align: left;
+        @media(min-width: 550px) {
+            text-align: center;
+        }
+    }
+        br {
+            display: none;
+            @media(min-width: 560px) {
+                display: block;
+            }
+        }
+}
+.trade-in-sections {
+    display: flex;
+    flex-direction: column;
+    margin: 0px auto;
+    margin-bottom: 50px;
+    @media(min-width: 950px){
+        margin: 50px auto;
+    }
+    .section {
+        display: flex;
+        margin-top: 50px;
+        
+        flex-direction: column;
+        &:nth-of-type(even) {
+            @media(min-width: 950px){
+                flex-direction: row-reverse;
+            }
+        }
+        @media(min-width: 950px){
+            flex-direction: row;
+            margin: 50px 0;
+        }
+        .image-wrapper {
+            width: 100%;
+            max-width: 500px;
+            @media(min-width: 950px){
+                width: 50%;
+            }
+        }
+        .section-content {
+            width: 100%;
+            max-width: 700px;
+            padding: 25px 0px;
+            display: flex;
+            flex-direction: column;
+            @media(min-width: 950px){
+                width: 50%;
+                text-align: center;
+                justify-content: center;
+                padding: 0 50px;
+            }
+            .icon-wrapper {
+                width: 90px;
+                @media(min-width: 950px){
+                    margin: 0 auto;
+                }
+            }
+            h3 {
+                font-size: 2.8rem;
+                font-weight: 600;
+                font-family: $fontText;
+                color: $dark-green-1;
+                line-height: 1.5;
+                margin-top:5px;
+       
+            }
+            p {
+                font-size: 1.7rem;
+                font-weight: 400;
+                line-height: 1.6;
+                margin-top: 10px;
+    
+            }
+        }
+    }
+}
+
+.trade-in-bhf-logo {
+    width: fit-content;
+    margin: 0 auto;
+    p   {
+        font-size: 1.7rem;
+        font-weight: 500;
+        margin-bottom: 8px;
+        text-align: center;
+    }
+    .logo-wrapper {
+        width: 200px;
+    }
+}
+
+.how-you-can-help {
+    margin: 50px auto;
+    margin-bottom:25px;
+    @media(min-width: 950px) {
+        margin: 50px auto;
+    }
+    h5 {
+        font-size: 3rem;
+        font-weight: 500;
+        font-family: $fontText;
+        text-align: center;
+    }
+    .section-grid {
+        display: grid;
+        // grid-template-columns: repeat(2,1fr);
+        // gap: 30px;
+        display: flex;
+
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+        padding-bottom: 50px;
+        @media(min-width: 950px){
+            grid-template-columns: repeat(3,1fr);
+        }
+        .section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            width: 350px;
+            margin-top:70px;
+            .icon-wrapper{ 
+                width: 90px;
+            }
+            p {
+                font-size: 1.7rem;
+                font-weight: 400;
+                line-height: 1.6;
+                margin-top: 15px;
+                span {
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}

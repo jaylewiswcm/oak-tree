@@ -4,9 +4,9 @@
     right: 25px;
     // width: 240px;
     // height: 190px;
-    padding: 15px 40px;
-    padding-bottom: 17px;
-    background-color: $white;
+    // padding: 15px 40px;
+    // padding-bottom: 17px;
+    // background-color: $white;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -15,12 +15,26 @@
     border-radius: 2px;
     z-index: 999;
     transition: 0.2s;
-    display: none;
+    display: none; 
+    width: 170px;
+    height: 170px;
+
+    border-radius: 50%;
     @media(min-width: 850px) {
-        display: flex;
+        display: flex; 
+    }
+    .usp-overlay-swiper {
+        width: 100%;
+        border-radius: 50%;
+    }
+
+    a {
+        width: 100%;
+        border-radius: 50%;
     }
     .icon-wrapper {
-        width: 120px;
+        width: 100%;
+        border-radius: 50%;
     }
     p {
         font-size: 2rem;
@@ -33,7 +47,7 @@
     }
     .close-button {
         position: absolute;
-        top: -50px;
+        top: -30px;
         right: 0;
         background-color: $white;
         box-shadow: 0 2px 17px rgba(0,0,0,0.11);
@@ -59,5 +73,5 @@
 }
 
 .british-made-overlay.increased-bottom-margin {
-    bottom:150px;
+    bottom:130px;
 }

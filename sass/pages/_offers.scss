@@ -1,0 +1,150 @@
+.offers-hero-banner {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .heading {
+        // font-family: $fontText;
+        font-weight: 500;
+        color: $white;
+        text-align: center;
+        font-size: 3rem;
+        @media(min-width: 750px) {
+            font-size: 3.6rem
+        }
+    }
+}
+.offers-section {
+    .offer {
+        display: flex;
+        margin: 70px auto;
+        flex-direction: column;
+        &:nth-of-type(2) {
+            @media(min-width: 900px) {
+                flex-direction: row-reverse;
+            }
+        }
+        @media(min-width: 900px) {
+            flex-direction: row;
+        }
+        .image-wrapper{
+            max-width: 500px;
+            width: 100%;
+            @media(min-width: 900px) {
+                width: 50%;
+                max-width: 100%;
+            }
+        }
+        .content {
+            max-width: 500px;
+            width: 100%;
+            padding:25px 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            @media(min-width: 900px) {
+                width: 50%;
+                text-align: center;
+                padding: 0 50px;
+                max-width: 100%;
+            }
+            h2 {
+                font-size: 3.2rem;
+                font-weight: 600;
+                font-family: $fontText;
+                color: $dark-green-1;
+            }
+            p {
+                font-size: 1.8rem;
+                font-weight: 400;
+                line-height: 1.6;
+                margin-top: 15px;
+            }
+            a {
+                font-size: 1.8rem;
+                font-weight: 500;
+                color: $oaktree-green;
+                border: 1px $oaktree-green solid;
+                padding: 15px 30px;
+                margin-top: 25px;
+                display: block;
+                width: fit-content;
+                text-align: center;
+                @media(min-width: 900px) {
+                    margin: 0 auto;
+                    margin-top: 25px;
+                }
+            }
+        }
+    }
+}
+
+.request-brochure-banner {
+    background-color: $lighter-grey;
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+    border-radius: 3px;
+    @media(min-width: 500px) {
+        padding: 50px;
+        
+    }
+    @media(min-width: 800px) {
+        flex-direction: row;
+        margin-bottom: 150px;
+    }
+    .content {
+        width: 100%;
+        text-align: center;
+        @media(min-width: 800px) {
+            width: 50%;
+            text-align: left;
+        }
+        h3 {
+            font-family: $fontText;
+            font-size: 3rem;
+            font-weight: 600;
+            color: $dark-green-1;
+        }
+        p {
+            font-size: 1.8rem;
+            font-weight:300;
+            margin-top: 10px;
+            line-height: 1.6;
+        }
+        button {
+            border-radius: 2px;
+            margin-top: 15px;
+            padding: 12px 30px;
+            p {
+                margin: 0;
+                font-weight: 400;
+            }
+        }
+    }
+    .brochure-wrapper {
+        
+        position: relative;
+        width: 100%;
+        display: flex;
+        padding: 50px 0;
+        @media(min-width: 800px) {
+            width: 50%;
+            padding: 0;
+        }
+        .image-wrapper{
+            box-shadow: 0 5px 21px rgba(0,0,0,0.2);
+
+            max-width: 250px;
+            margin: 0 auto;
+            @media(min-width: 800px) {
+                width: 250px;
+                position: absolute;
+                top: -15px;
+                left: 50%;
+                transform: translateX(-50%);
+            } 
+        }
+    }
+}

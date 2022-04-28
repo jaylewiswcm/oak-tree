@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import Header from "./Header";
 import Footer from "./Footer";
 import { BottomBar } from './ctaBar/BottomBar';
-import {BritishMade} from '../overlay/BritishMade';
+import {UspOverlay} from '../overlay/UspOverlay';
 
 interface ComponentProps  {
     children: any
@@ -40,7 +40,7 @@ interface ComponentProps  {
               <Header />
               { children }
               <BottomBar className={hideClass}/>
-              {overlay && <BritishMade className={overlayClass} hideOverlay={hideOverlay} />}
+              {overlay && <UspOverlay className={overlayClass} hideOverlay={hideOverlay} />}
               <Footer />
           </div>
         </>

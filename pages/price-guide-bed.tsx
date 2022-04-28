@@ -16,7 +16,7 @@ const PriceGuideBed = () => {
                 <h1 className='heading'>Price Guide for Beds</h1>    
             </div>    
         </div>      
-         <div className='price-guide-intro con-reg'>
+         <div className='page-intro con-reg'>
              <h2>Our Beds Are Made For You.</h2>
              <p>People often ask us why there aren’t any prices on our website or why we can’t provide immediate quotes online or over the phone. The answer is simple: <span className='oaktree-green'>our beds are made for you</span></p>
          </div>

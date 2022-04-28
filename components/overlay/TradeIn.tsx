@@ -2,13 +2,13 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link';
 
-export const BritishMade = () => {
+export const TradeIn = () => {
   return (
-        <Link href='/british-made'>
+        <Link href='/trade-in'>
             <a>
                 <div className='icon-wrapper'>
                     <Image
-                        src='/graphics/british-made-badge.svg'
+                        src='/graphics/trade-in-badge.svg'
                         alt='British Made'
                         layout='responsive'
                         width='150'

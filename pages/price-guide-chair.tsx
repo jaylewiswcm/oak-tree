@@ -16,7 +16,7 @@ const PriceGuideChair = () => {
                 <h1 className='heading'>Price Guide for Chairs</h1>    
             </div>    
         </div>      
-         <div className='price-guide-intro con-reg'>
+         <div className='page-intro con-reg'>
              <h2>Our Chairs Are Made For You.</h2>
              <p>People often ask us why there aren’t any prices on our website or why we can’t provide immediate quotes online or over the phone. The answer is simple: <span className='oaktree-green'>our chairs are made for you</span></p>
          </div>

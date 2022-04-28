@@ -1,23 +1,4 @@
-.delivery-intro {
-    padding-top: 50px;
-    display: flex;
-    flex-direction: column;
-    h2 { 
-        font-family: $fontText;
-        font-size: 3.2rem;
-        font-weight:600;
-        color: $dark-green-1;
-        text-align: center;
-    }
-    p {
-        font-size: 1.9rem;
-        text-align: center;
-        max-width: 700px;
-        margin: 0 auto;
-        margin-top: 8px;
-        line-height: 1.5;
-    }
-}
+
 .delivery-grid {
     display: flex;
     margin: 50px auto;

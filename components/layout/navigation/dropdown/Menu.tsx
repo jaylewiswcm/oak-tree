@@ -20,6 +20,7 @@ const Menu = ({ type, keyId , closeMenu}: ComponentProps) => {
             { title: "VAT Exempt Eligibility", icon : "", url: '/vat-exempt-eligibility' },
             { title: "Chair Price Guide", icon : "", url: '/price-guide-chair' },
             { title: "Bed Price Guide", icon : "", url: '/price-guide-bed' },
+            { title: "British Made", icon : "", url: '/british-made' },
           ],
         },
         {

@@ -17,7 +17,7 @@ const deliveryAndInstallation = () => {
                     <h1 className='heading'>Delivery and Installation</h1>
                 </div>
             </div>
-            <div className='delivery-intro con-reg'>
+            <div className='page-intro con-reg'>
                 <h2>Delivery</h2>
                 <p>Once your chair or bed has been built and quality checked, our customer service team will contact you to arrange a convenient delivery date for your furniture to be delivered. </p>
             </div>
