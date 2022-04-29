@@ -10944,6 +10944,7 @@ body.mobile-navbar .mobile-navigation {
 @media (min-width: 950px) {
   .trade-in-sections .section .image-wrapper {
     width: 50%;
+    max-width: 100%;
   }
 }
 
