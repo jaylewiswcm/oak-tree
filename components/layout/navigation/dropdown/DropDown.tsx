@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Link from 'next/link';
 import Image from 'next/image'
 // Components 
@@ -7,15 +7,17 @@ import Menu from './Menu';
 interface ComponentProps {
   keyId: number
   type: string
-  closeMenu: any
+  toggleVisibility: any
+  isVisible: boolean
+  setVisible: any
+  setHover: any
 }
 
-const DropDown = ({keyId, type, closeMenu}:ComponentProps) => {
-
+const DropDown = ({keyId, type, toggleVisibility, isVisible,setVisible, setHover} :ComponentProps) => {
+  console.log(isVisible);
   return (
-  <div className='dd-menu-wrapper'>
-    <div className='header-arrow'></div>
-    <Menu type={type} keyId={keyId} closeMenu={closeMenu}/>
+  <div className={`dd-menu-wrapper ${isVisible ? 'is-visible' : ''}`}>
+      <Menu type={type} keyId={keyId} toggleVisibility={toggleVisibility} setVisible={setVisible} setHover={setHover} />
    </div>
   )
 }

@@ -170,6 +170,7 @@ body.mobile-navbar {
 .header-arrow {
     position: absolute;
     top: 2px;
+    top: -16px;
     left: 50%;
     // margin: 0 0 0 -6px;
     width: 12px;
@@ -189,34 +190,126 @@ transform: translateY(12px) translateX(-8.4375px) translateX(50%) rotate(45deg);
     position: absolute; 
     left: 50%;
     transform: translateX(-50%);
-    padding-top:20px;
+    // top:82px;
+    top: 51px;
     z-index: 1000;
+    max-width: 1250px;
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+
+    padding: 0;
+    height: 100%;
+    max-height: 0;
+
 }
+.dd-menu-wrapper.is-visible {
+    padding: 50px 25px;
+    overflow: visible;
+    max-height: 9999px;
+    transition: 0.3s;
+    .dd-menu {
+        .dd-inner {
+           opacity: 1;
+           transition: 0.3s opacity;
+        }
+    }
+}
+
 .dd-menu {
-    background-color: $white;
-    padding: 25px 30px;
-    border-radius: 9px;
-    min-width: 300px;
-    box-shadow: 0 2px 21px rgba(37,72,76,0.29);
-    transition: 0.2s;
-    position: relative;
     opacity: 0;
+    width: fit-content;
+    position: absolute;
+    top:0px;
+    margin-left: 190px;
+    // left:10%;
+    padding-top: 30px;
+
+    transition: 0.3s ease;
+    .dd-inner {
+        background-color: $white;
+        padding: 25px 10px;
+        border-radius: 9px;
+        min-width: 300px;
+        box-shadow: 0 2px 21px rgba(37,72,76,0.29);
+        transition: 0.3s opacity;
+        position: relative;
+        opacity: 0;
+        border: 1px red solid;
+    }
+    .menu-inner {
+        display: flex;
+        .menus {
+            width: fit-content;
+            &:nth-of-type(even) {
+                margin-left: 25px;
+            }
+            .menu-title {
+                font-size: 1.6rem;
+                font-weight: 500;
+                color: $dark-green-2;
+                letter-spacing: 0.2px;
+                padding: 0 15px;
+                margin-bottom: 5px;
+            }
+            ul {
+                li {
+                    padding: 15px 15px;
+                    border-radius: 4px;
+                    transition: 0.1s;
+                    a {
+                        .icon {
+                            width: 40px;
+                            height: 40px;
+                            border-radius: 50%;
+                            margin-right: 15px;
+                            background-color: $light-green-2;   
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            span {
+                                width:90%!important;
+                            }
+
+                        }
+                        .link-content {
+                            .link-title {
+                                font-size: 1.8rem;
+                                font-weight: 500;
+                                color: $dark-green-1;
+                            }
+                            .link-desc {
+                                font-size: 1.6rem;
+                                font-weight: 300;
+                                color: $dark-green-3;
+                                white-space: nowrap;
+                                margin-top: 3px;
+                            }
+                        }
+                    }
+                }
+                li:hover {
+                    background-color: $light-green-2;
+                }
+            }
+        }
+    }
     .dd-ul {    
-        
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
         .menu-title {
-            margin-bottom:10px;
+            margin-bottom:0px;
+            padding: 0 15px;
             p {
-                font-size: 2.1rem;
+                font-size: 1.8rem;
                 font-weight: 500;
                 color: $dark-green-1;
             }
         }
         li {
-            padding: 10px 0!important;
+            padding: 12px 15px!important;
             width: 100%;
             transition: 0.2s;
             cursor: pointer;
@@ -246,7 +339,7 @@ transform: translateY(12px) translateX(-8.4375px) translateX(50%) rotate(45deg);
             background: none;
         }
         li:hover {
-            background-color: $dark-green-6;
+            background-color: $light-green-2;
             a {
                 color: $dark-green-1!important;
             }
@@ -260,17 +353,24 @@ transform: translateY(12px) translateX(-8.4375px) translateX(50%) rotate(45deg);
 
 .dd-menu.about-dd {
     // transform: translateX(-50%) translateX(-153px);
+    // .header-arrow {
+    //     left:137px;
+    // }
     opacity: 1;
+    left: -155px;
 }
 .dd-menu.chairs-dd {
     // transform: translateX(-50%) translateX(-80px);
+    left: -60px;
     opacity: 1;
 }
 .dd-menu.beds-dd {
     // transform: translateX(-50%) translateX(0);
     opacity: 1;
+    left:35px;
 }
 .dd-menu.bath-lifts-dd {
     // transform: translateX(-50%) translateX(95px);
     opacity: 1;
+    left:130px;
 }
