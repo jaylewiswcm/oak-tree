@@ -2818,7 +2818,6 @@ body.mobile-navbar .mobile-navigation {
   transition: 0.3s opacity;
   position: relative;
   opacity: 0;
-  border: 1px red solid;
 }
 
 .dd-menu .menu-inner {
