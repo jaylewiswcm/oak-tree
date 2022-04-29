@@ -14,7 +14,6 @@ interface ComponentProps {
 }
 
 const DropDown = ({keyId, type, toggleVisibility, isVisible,setVisible, setHover} :ComponentProps) => {
-  console.log(isVisible);
   return (
   <div className={`dd-menu-wrapper ${isVisible ? 'is-visible' : ''}`}>
       <Menu type={type} keyId={keyId} toggleVisibility={toggleVisibility} setVisible={setVisible} setHover={setHover} />

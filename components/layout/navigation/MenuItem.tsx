@@ -31,7 +31,6 @@ export const MenuItem = ({setMenuType, item, isHover, setHover,setVisible}: Comp
         setHover(0);
         setVisible(false);
     }
-
   return (
     <>
       <li onMouseOver={() => { expand === true ? onHover(): null}} onMouseLeave={() => onLeave()} className={`${isHover === 0 ? '' : isHover === id ? 'is-hovered' : 'not-hovered'}`}>

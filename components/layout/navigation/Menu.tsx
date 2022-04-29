@@ -8,8 +8,6 @@ export const Menu = () => {
     const [isVisible, setVisible] = useState(false)
     const [menuType, setMenuType] = useState('');
     const [isHover, setHover] = useState(0)
-
-    console.log(isVisible)
   return (
     <nav className='main-nav'>
         <ul className='main-ul'>
@@ -64,6 +62,6 @@ const menuConfig = [
         menuName: 'Express Delivery',
         menuType:'express-delivery',
         expand: false,
-        url: '/'
+        url: '/express-delivery'
     },
 ]
