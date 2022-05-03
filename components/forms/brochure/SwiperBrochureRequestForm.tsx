@@ -27,7 +27,7 @@ const CollectionBrochureRequestForm = ({productType}: ComponentProps) => {
     const [readyToSubmit, setReadyToSubmit] = useState(false);
      const [formData, setFormData] = useState([
         {
-            "title": '',
+            // "title": '',
             'fname': '',
             'lname': '',
         },
@@ -42,13 +42,13 @@ const CollectionBrochureRequestForm = ({productType}: ComponentProps) => {
      ])
 
 const [formErrors, setFormErrors] = useState([
-    {
-        "field" : "title",
-        "errors": {
-            "error" : false,
-            "type" : ''
-        }
-    },   
+    // {
+    //     "field" : "title",
+    //     "errors": {
+    //         "error" : false,
+    //         "type" : ''
+    //     }
+    // },   
     {
         "field" : "fName",
         "errors": {
@@ -102,7 +102,7 @@ const RequestBrochure = (event:React.FormEvent<HTMLFormElement>) => {
     const sectionData = formData[formData.length - 1];
     let isError: boolean = false;
     let updatedErrors = [...formErrors];
-    let index = 5;
+    let index = 4;
     let field: keyof typeof sectionData; 
     for(field in sectionData) {
 
@@ -156,10 +156,10 @@ const validateFormSectionBeforeChangingSlide = (event:React.MouseEvent<HTMLButto
                 index = 0;
                 break;
         case 1: 
-                index = 3;
+                index = 2;
                 break;
         case 2: 
-                index = 5
+                index = 4
                 break;
         default: 
             index = 0;
@@ -219,7 +219,7 @@ const validateFormSectionBeforeChangingSlide = (event:React.MouseEvent<HTMLButto
             <SwiperSlide className='no-swipe'>
                 <div className='form-section'>
                 <p className="section-heading">Personal Information</p>
-                <SelectInput 
+                {/* <SelectInput 
                      className={formErrors[0].errors.error ? 'input-wrapper select-wrapper errors' : 'input-wrapper select-wrapper'}
                      error={formErrors[0].errors.type}
                      id="title"
@@ -231,10 +231,10 @@ const validateFormSectionBeforeChangingSlide = (event:React.MouseEvent<HTMLButto
                      placeholder='Select Title'
                      required={true}
                      options={[{"name": 'Mrs', "value": 'mrs'},{"name": 'Mr', "value": 'mr'},{"name": 'Ms', "value": 'ms'},{"name": 'Miss', "value": 'Miss'}]}
-                />
+                /> */}
                 <TextInput 
-                    className={formErrors[1].errors.error ? 'input-wrapper errors' : 'input-wrapper'}
-                    error={formErrors[1].errors.type}
+                    className={formErrors[0].errors.error ? 'input-wrapper errors' : 'input-wrapper'}
+                    error={formErrors[0].errors.type}
                     id="fname"
                     name="fname"
                     autoComplete="given-name"
@@ -246,8 +246,8 @@ const validateFormSectionBeforeChangingSlide = (event:React.MouseEvent<HTMLButto
                     required={true}
                 />
                 <TextInput 
-                    className={formErrors[2].errors.error ? 'input-wrapper errors' : 'input-wrapper'}
-                    error={formErrors[2].errors.type}
+                    className={formErrors[1].errors.error ? 'input-wrapper errors' : 'input-wrapper'}
+                    error={formErrors[1].errors.type}
                     id="lname"
                     name="lname"
                     autoComplete="family-name"
@@ -264,8 +264,8 @@ const validateFormSectionBeforeChangingSlide = (event:React.MouseEvent<HTMLButto
             <div  className="form-section">
                 <p className="section-heading">Your Address</p>
                 <TextInput 
-                    className={formErrors[3].errors.error ? 'input-wrapper errors' : 'input-wrapper'}
-                    error={formErrors[3].errors.type}
+                    className={formErrors[2].errors.error ? 'input-wrapper errors' : 'input-wrapper'}
+                    error={formErrors[2].errors.type}
                     id="street-address"
                     name="street-address"
                     autoComplete="home address-line1"
@@ -278,8 +278,8 @@ const validateFormSectionBeforeChangingSlide = (event:React.MouseEvent<HTMLButto
                 />
     
                 <TextInput 
-                    className={formErrors[4].errors.error ? 'input-wrapper errors' : 'input-wrapper'}
-                    error={formErrors[4].errors.type}
+                    className={formErrors[3].errors.error ? 'input-wrapper errors' : 'input-wrapper'}
+                    error={formErrors[3].errors.type}
                     id="postal-code"
                     name="postal-code"
                     autoComplete="home postal-code"
@@ -296,8 +296,8 @@ const validateFormSectionBeforeChangingSlide = (event:React.MouseEvent<HTMLButto
             <div className="form-section">
                 <p className="section-heading">Contact Information</p>
                 <TelInput 
-                    className={formErrors[5].errors.error ? 'input-wrapper errors' : 'input-wrapper'}
-                    error={formErrors[5].errors.type}
+                    className={formErrors[4].errors.error ? 'input-wrapper errors' : 'input-wrapper'}
+                    error={formErrors[4].errors.type}
                     id="tel"
                     placeholder='Enter your telephone number'
                     value={formData[2]['tel']} 
@@ -306,8 +306,8 @@ const validateFormSectionBeforeChangingSlide = (event:React.MouseEvent<HTMLButto
                     required={true}
                 />
                 <EmailInput 
-                    className={formErrors[6].errors.error ? 'input-wrapper errors' : 'input-wrapper'}
-                    error={formErrors[6].errors.type}
+                    className={formErrors[5].errors.error ? 'input-wrapper errors' : 'input-wrapper'}
+                    error={formErrors[5].errors.type}
                     id="email"
                     placeholder='Enter your email address'
                     value={formData[2]['email']} 
