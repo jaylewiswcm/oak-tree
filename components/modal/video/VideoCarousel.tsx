@@ -17,15 +17,17 @@ interface ComponentProps {
     },[videoId])
     
   return (
-    <div className='video-carousel'>
-        <button className='close-modal' onClick={() => setShow(false)}>Close</button>
-        {/* <div className='carousel-navigation nav-prev'>
-            <button className='prev' onClick={() => changeVideoId('prev')}></button>
-        </div> */}
-           <div className='video-container'><Video videoId={currentVideoId} show={show}/></div>
-        {/* <div className='carousel-navigation nav-next'>
-            <button className='next'  onClick={() => changeVideoId('next')}></button>
-        </div> */}
+     
+        <div className='video-carousel'>
+             <div className='background-close' onClick={() => setShow(false)}></div>
+            <button className='close-modal' onClick={() => setShow(false)}>Close</button>
+            {/* <div className='carousel-navigation nav-prev'>
+                <button className='prev' onClick={() => changeVideoId('prev')}></button>
+            </div> */}
+            <div className='video-container'><Video videoId={currentVideoId} show={show}/></div>
+            {/* <div className='carousel-navigation nav-next'>
+                <button className='next'  onClick={() => changeVideoId('next')}></button>
+            </div> */}
     </div>
   )
 }

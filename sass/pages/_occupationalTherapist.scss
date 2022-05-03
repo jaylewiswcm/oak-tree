@@ -79,13 +79,14 @@
     }
 }
 .occ-sections {
-    margin-top:50px;
+    margin:100px auto;
+    margin-bottom: 50px;
     .section {
         display: flex;
         flex-direction: column;
         margin-bottom: 30px;
         @media(min-width: 750px) {
-            margin-bottom: 50px;
+            margin-bottom: 80px;
         }
         @media(min-width: 950px) {
             flex-direction: row;
@@ -207,6 +208,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            position: relative;
             @media(min-width: 800px) {
                 width: 65%;
                 margin-left: auto;
@@ -232,13 +234,37 @@
                     font-size: 2.2rem;
                 }
             }
+            .quote-mark{
+                font-family: $fontHeadings;
+                width:30px;
+                margin-right: 15px;
+            }
+            .mark-left {
+                margin-bottom: 10px;
+            }
+            .mark-right {
+                margin-left: auto;
+                margin-top: 10px;
+            }
+            // .quote-mark {
+            //     position: absolute;
+            //     width:35px;
+            // }
+            // .mark-left {
+            //     top: 0;
+            //     left: 0;
+            // }
+            // .mark-right {
+            //     bottom: 60px;
+            //     right:0;
+            // }
         }
     }
 }
 
 .occ-partner {
     margin: 0 auto;
-    
+    margin-top: 40px;
     max-width: 250px;;
     p {
         text-align: center;
@@ -255,12 +281,12 @@
 }
 
 .occ-video {
-    margin: 50px auto;
+    // margin: 50px auto;
     position: relative;
-    padding:0;
-    @media(min-width: 700px) {
-    padding: 0 30px;
-    }
+    // padding:0;
+    // @media(min-width: 700px) {
+    // padding: 0 30px;
+    // }
     .desktop-image {
         display: none;
         @media(min-width: 700px) {

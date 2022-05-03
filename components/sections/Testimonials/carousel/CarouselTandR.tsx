@@ -29,7 +29,9 @@ const CarouselTandR = ({setShow, setVideoId}: ComponentProps) => {
       el:'#hero-pagination'
     }}
     loop
-    autoplay
+    autoplay={{
+        delay: 6000
+    }}
     allowTouchMove={false}
     modules={[Pagination, Autoplay]}
     className="hero-carousel"> 
