@@ -1845,40 +1845,8 @@ footer .email-signup-banner {
       -ms-flex-pack: center;
           justify-content: center;
   background-color: #17494D;
-  padding: 50px 20px;
-}
-
-@media (min-width: 400px) {
-  footer .email-signup-banner {
-    border-radius: 3px;
-    padding: 50px;
-  }
-}
-
-@media (min-width: 910px) and (max-width: 1249px) {
-  footer .email-signup-banner {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    padding: 30px 50px;
-  }
-}
-
-@media (min-width: 1250px) {
-  footer .email-signup-banner {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    padding: 30px 50px;
-  }
+  padding: 30px 60px;
+  border-radius: 6px;
 }
 
 footer .email-signup-banner .content-and-form {
@@ -1905,20 +1873,6 @@ footer .email-signup-banner .content-and-form {
   }
 }
 
-@media (min-width: 1250px) {
-  footer .email-signup-banner .content-and-form {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    width: 100%;
-    margin-right: 0;
-  }
-}
-
 footer .email-signup-banner .content-and-form .content {
   margin-right: auto;
   text-align: center;
@@ -1940,15 +1894,9 @@ footer .email-signup-banner .content-and-form .content h6 {
   margin-bottom: 5px;
 }
 
-@media (min-width: 400px) and (max-width: 599px) {
-  footer .email-signup-banner .content-and-form .content h6 {
-    font-size: 4.3rem;
-  }
-}
-
 @media (min-width: 600px) {
   footer .email-signup-banner .content-and-form .content h6 {
-    font-size: 5rem;
+    font-size: 4.3rem;
     text-align: left;
   }
 }
@@ -1961,19 +1909,18 @@ footer .email-signup-banner .content-and-form .content p {
 
 @media (min-width: 400px) {
   footer .email-signup-banner .content-and-form .content p {
-    font-size: 2.8rem;
-    margin-top: -5px;
+    font-size: 2.4rem;
+    margin-bottom: 2px;
   }
 }
 
 footer .email-signup-banner .content-and-form .form-wrapper {
-  margin-top: 25px;
+  margin-top: 10px;
 }
 
 @media (min-width: 1250px) {
   footer .email-signup-banner .content-and-form .form-wrapper {
-    margin: 0 auto;
-    margin-right: 50px;
+    margin-right: auto;
   }
 }
 
@@ -1990,47 +1937,38 @@ footer .email-signup-banner .content-and-form .form-wrapper form .input-wrapper 
           flex-direction: column;
 }
 
-@media (min-width: 600px) {
-  footer .email-signup-banner .content-and-form .form-wrapper form .input-wrapper {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-}
-
 footer .email-signup-banner .content-and-form .form-wrapper form .input-wrapper input[type=text] {
   padding: 15px 20px;
-  background-color: #fff;
+  background-color: #2B676C;
   border: none;
   font-size: 2rem;
-  color: #212923;
+  color: #fff;
   width: 300px;
   border-radius: 5px;
   text-align: center;
+  border-radius: 4px;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 910px) {
   footer .email-signup-banner .content-and-form .form-wrapper form .input-wrapper input[type=text] {
-    border-radius: 2px 0 0 2px;
     text-align: left;
   }
 }
 
 footer .email-signup-banner .content-and-form .form-wrapper form .input-wrapper input[type=text]::-webkit-input-placeholder {
-  opacity: 0.8;
+  color: #fff;
 }
 
 footer .email-signup-banner .content-and-form .form-wrapper form .input-wrapper input[type=text]:-ms-input-placeholder {
-  opacity: 0.8;
+  color: #fff;
 }
 
 footer .email-signup-banner .content-and-form .form-wrapper form .input-wrapper input[type=text]::-ms-input-placeholder {
-  opacity: 0.8;
+  color: #fff;
 }
 
 footer .email-signup-banner .content-and-form .form-wrapper form .input-wrapper input[type=text]::placeholder {
-  opacity: 0.8;
+  color: #fff;
 }
 
 footer .email-signup-banner .content-and-form .form-wrapper form .input-wrapper input[type=submit] {
@@ -2042,25 +1980,18 @@ footer .email-signup-banner .content-and-form .form-wrapper form .input-wrapper 
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  font-size: 1.9rem;
+  font-size: 1.8rem;
   font-weight: 500;
   margin: 0 auto;
-  margin-top: 25px;
+  margin-top: 15px;
   padding: 15px 30px;
   color: #17494D;
   border-radius: 5px;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 910px) {
   footer .email-signup-banner .content-and-form .form-wrapper form .input-wrapper input[type=submit] {
-    border-radius: 0 2px 2px 0;
-    color: rgba(0, 0, 0, 0);
-    margin-top: 0;
-    padding: 0;
-    width: 70px;
-    background-image: url("/vectors/dark-green-arrow-btn.svg");
-    background-repeat: no-repeat;
-    background-position: center;
+    margin-left: 0;
   }
 }
 

@@ -11,21 +11,22 @@ footer {
         align-items: center;
         justify-content: center;
         background-color: $dark-green-1;
-        padding:50px 20px;
-        @media(min-width: 400px) {
-            border-radius: 3px;
-            padding:50px;
-        }
-        @media(min-width: 910px) and (max-width: 1249px){
-            flex-direction: row;
-            justify-content: flex-start;
-            padding: 30px 50px;
-        }
-        @media(min-width:1250px) {
-            flex-direction: row;
-            justify-content: center;
-            padding: 30px 50px;
-        }
+        padding:30px 60px;
+        border-radius: 6px;
+        // @media(min-width: 400px) {
+        //     border-radius: 3px;
+        //     padding:50px;
+        // }
+        // @media(min-width: 910px) and (max-width: 1249px){
+        //     flex-direction: row;
+        //     justify-content: flex-start;
+        //     padding: 30px 50px;
+        // }
+        // @media(min-width:1250px) {
+        //     flex-direction: row;
+        //     justify-content: center;
+        //     padding: 30px 50px;
+        // }
         .content-and-form {
             display: flex;
             align-items: center;
@@ -37,12 +38,12 @@ footer {
                 align-items: flex-start;
                 margin-bottom: 0;
             }
-            @media(min-width:1250px) {
-                flex-direction: row;
-                align-items: center;
-                width: 100%;
-                margin-right: 0;
-            }
+            // @media(min-width:1250px) {
+            //     flex-direction: row;
+            //     align-items: center;
+            //     width: 100%;
+            //     margin-right: 0;
+            // }
             .content {
                 margin-right: auto;
                 text-align: center;
@@ -57,11 +58,11 @@ footer {
                     width: 100%;
                     line-height: 1.2;
                     margin-bottom:5px;
-                    @media(min-width: 400px) and (max-width: 599px) {
-                        font-size: 4.3rem;
-                    }
+                    // @media(min-width: 400px) and (max-width: 599px) {
+                    //     font-size: 4.3rem;
+                    // }
                     @media(min-width: 600px) {
-                        font-size: 5rem;
+                        font-size: 4.3rem;
                         text-align: left;
                     }
                 }
@@ -70,65 +71,70 @@ footer {
                     font-weight: 400;
                     color: $white;
                     @media(min-width: 400px) {
-                        font-size: 2.8rem;
-                        margin-top: -5px;
+                        font-size: 2.4rem;
+                        // margin-top: -5px;
+                        margin-bottom:2px;
                     }
                 }
             }
             .form-wrapper {
-                margin-top: 25px;
+                margin-top: 10px;
             
                 @media(min-width:1250px) {
-                    margin: 0 auto;
-                    margin-right: 50px;
+           
+                    margin-right: auto;
                 }
                 form {
                     .input-wrapper{
                         display: flex;
                         height: fit-content;
                         flex-direction: column;
-                        @media(min-width: 600px) {
-                            flex-direction: row;
-                        }
+                        // @media(min-width: 600px) {
+                        //     flex-direction: row;
+                        // }
                         input[type=text] {
                             padding: 15px 20px;
-                            background-color: $white;
+                            background-color: #2B676C;
+                     
                             border: none;
                             font-size: 2rem;
-                            color: $black;
+                            color: $white;
                             width: 300px;
                             border-radius: 5px;
                             text-align: center;
-                            @media(min-width: 600px) {
-                                border-radius: 2px 0 0 2px;    
+                            border-radius: 4px;
+                            @media(min-width: 910px) {
+                                // border-radius: 2px 0 0 2px;    
                                 text-align: left;
                             }
                         }
                         input[type=text]::placeholder {
-                            opacity: 0.8;
+                            color: $white;
                         }
                         input[type=submit] {
                             background-color: $yellow-3;
                             display: flex;
                             border: none;            
                             width: fit-content;
-                            font-size: 1.9rem;
+                            font-size: 1.8rem;
                             font-weight: 500;
                             margin: 0 auto;
-                            margin-top: 25px;
+                            margin-top: 15px;
                             padding: 15px 30px;
                             color: $dark-green-1;
                             border-radius: 5px;
-                            @media(min-width: 600px) {
-                                border-radius: 0 2px 2px 0;
-                                color: rgba(0,0,0,0);
-                                margin-top: 0;
-                                padding: 0;
-                                width: 70px;
-                                background-image: url('/vectors/dark-green-arrow-btn.svg');
-                                background-repeat: no-repeat;
-                                background-position: center;
+                            @media(min-width: 910px) {
+                                margin-left: 0;
                             }
+                            //     border-radius: 0 2px 2px 0;
+                            //     color: rgba(0,0,0,0);
+                            //     margin-top: 0;
+                            //     padding: 0;
+                            //     width: 70px;
+                            //     background-image: url('/vectors/dark-green-arrow-btn.svg');
+                            //     background-repeat: no-repeat;
+                            //     background-position: center;
+                            // }
                         }
                     }
                 }

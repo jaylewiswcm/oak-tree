@@ -17,8 +17,9 @@ const Footer = () => {
                 <div className='email-signup-banner'>
                     <div className='content-and-form'>
                         <div className='content'>
-                            <h6>For Exclusive Offers</h6>
                             <p>Sign up to our newsletter</p>
+                            <h6>For Exclusive Offers</h6>
+                    
                         </div>
                         <div className='form-wrapper'>
                             <form action="">
@@ -29,7 +30,7 @@ const Footer = () => {
                             </form>
                         </div>
                     </div>
-                    <div className='graphic'>
+                    <div className='graphic hide'>
                             <Image
                                 src='/graphics/email-signup.svg'
                                 alt='Email Newsletter Sign Up'
@@ -43,7 +44,7 @@ const Footer = () => {
             <div className='footer-navigation'>
                 <nav>  
                     {menuConfig.map((menu, index) => <FooterNav menuConfig={menu} key={index}/>)}
-                    
+
                     {/* <div className='nav-section desktop-social'>
                         <ul className='connect'>
                             <li className='list-header'>Connect</li>
