@@ -13,7 +13,7 @@ const OccupationalTherapistSection = () => {
 
   const isMedium = useIsMedium() 
 
-  const [ref, inView] = useInView({rootMargin: "-300px 0px" });
+  const [ref, inView] = useInView({rootMargin: "-270px 0px" });
   const controls = useAnimation();
 
   useEffect(() => {

@@ -42,7 +42,7 @@ const stagger = {
 }
 
 const HomeCollections = () => {
-  const [ref, inView] = useInView({ rootMargin: "-250px 0px"})
+  const [ref, inView] = useInView({ rootMargin: "-150px 0px"})
   const controls = useAnimation();
 
   useEffect(() => {

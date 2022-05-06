@@ -2,6 +2,7 @@ import React from 'react'
 import {NextSeo} from 'next-seo';
 import Image from 'next/image';
 import Link from 'next/link';
+import FooterCollections from '../components/sections/collections/FooterCollections';
 
 const VatExemptEligibility = () => {
   return (
@@ -29,12 +30,51 @@ const VatExemptEligibility = () => {
                     <p>It is worth noting that, if you are elderly but able-bodied, you will not qualify. If you do meet the requirements, you will need to confirm it in writing. Our mobility advisors can help you with this if you need. To find out more visit <a href='https://www.gov.uk/financial-help-disabled/vat-relief' target='_blank'className='oaktree-green underline' rel='noreferrer'>the HMRC website</a>.</p>
                     <h3>Medical Conditions Acceptable for VAT Exemption</h3>
                     <p>There are too many medical conditions to list here, but some of most common ones include:</p>
-                    <ul>
-                        <li><p>Arthritis</p></li>
-                        <li><p>Knee/Hip replacement</p></li>
+                    <ul className='list-of-conditions'>
+                        <li><p>Alzheimers</p></li>
+                        <li><p>Amputee</p></li>
+                        <li><p>Angina</p></li>
+                        <li><p>Ankylosing Spondylitus</p></li>
+                        <li><p>Ataxia</p></li>
+                        <li><p>Bronchiectasis</p></li>
+                        <li><p>Cancer</p></li>
+                        <li><p>Cerebellum Ataxia</p></li>
+                        <li><p>Cerebral Palsy</p></li>
+                        <li><p>Cerebral Vasculitis</p></li>
+                        <li><p>Chronic Arthritis</p></li>
                         <li><p>COPD</p></li>
-                        <li><p>Fibromyalgia</p></li>
+                        <li><p>Degenerative Spine</p></li>
+                        <li><p>Dementia</p></li>
                         <li><p>Diabetes</p></li>
+                        <li><p>Diverticulitis</p></li>
+                        <li><p>Emphysema</p></li>
+                        <li><p>Epilepsy</p></li>
+                        <li><p>Fibromyalgia</p></li>
+                        <li><p>Functional Movement Disorder</p></li>
+                        <li><p>Knee/Hip replacement</p></li>
+                        <li><p>Lymphedema</p></li>
+                        <li><p>Motor Neuron Disease</p></li>
+                        <li><p>Multiple Sclerosis</p></li>
+                        <li><p>Muscular Dystrophy</p></li>
+                        <li><p>Myelitis</p></li>
+                        <li><p>Oedema</p></li>
+                        <li><p>Osteoarthritis</p></li>
+                        <li><p>Osteoporosis</p></li>
+                        <li><p>Parkinson’s</p></li>
+                        <li><p>Partially Sighted</p></li>
+                        <li><p>Peripheral Vascular Disease</p></li>
+                        <li><p>Pneumonia</p></li>
+                        <li><p>Polymyositis</p></li>
+                        <li><p>Pulmonary Fibrosis</p></li>
+                        <li><p>Pulmonary Hypertension</p></li>
+                        <li><p>Respiratory Failure</p></li>
+                        <li><p>Rheumatism</p></li>
+                        <li><p>Rheumatoid Arthritis</p></li>
+                        <li><p>Scoliosis</p></li>
+                        <li><p>Spina Bifida</p></li>
+                        <li><p>Spondylitis</p></li>
+                        <li><p>Stenosis</p></li>
+                        <li><p>Stroke</p></li>
                     </ul>
                     <p>For a full list, or to find out more, give us a call and speak to one of our advisors.</p>
                 </div>
@@ -56,6 +96,7 @@ const VatExemptEligibility = () => {
                     </div>
                     </div>
             </div>
+            <FooterCollections />
     </>
   )
 }

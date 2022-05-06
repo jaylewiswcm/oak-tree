@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { NextSeo } from 'next-seo';
 import Image from 'next/image';
+import Link from 'next/link';
 // Components 
 import { QuestionAccordian } from '../components/accordian/QuestionAccordian';
 
@@ -140,6 +141,80 @@ const PriceGuideChair = () => {
                 </QuestionAccordian>
             </div>
         </div>
+    <div className='recommended-products con-reg'>
+    <h6>Recommeded Chairs</h6>
+    <div className='product-grid'>
+    <Link href="/chairs">
+        <a className='product'>
+            <div className='hover-bg'>
+                <p className='view'>View All</p>
+                <p className='name'>Rise and Recline Chairs</p> 
+                <div className='acting-btn'>
+                    <Image 
+                        src='/buttons/arrow-yellow.svg'
+                        alt='Arrow'
+                        // layout='responsive'
+                        width={24}
+                        height={20}
+                    />
+                </div>
+            </div>
+        </a>
+        </Link>
+        <Link href="/chairs/the-oak">
+        <a className='product'>
+        <div className='image-wrapper'>
+            <Image
+                src='/images/products/chairs/oak/oak-cutout-leg-lift.png'
+                alt='The Oak'
+                layout='responsive'
+                width={303}
+                height={330}
+            />
+            </div>
+            <div className='hover-bg'>
+                <p className='name'>The Oak</p>
+                <p className='view'>View Chair</p>
+                <div className='acting-btn'>
+                    <Image 
+                        src='/buttons/arrow-yellow.svg'
+                        alt='Arrow'
+                        // layout='responsive'
+                        width={24}
+                        height={20}
+                    />
+                </div>
+            </div>
+        </a>
+        </Link>
+        <Link href="/chairs/the-tulip">
+        <a className='product'>
+            <div className='image-wrapper'>
+            <Image
+                src='/images/products/chairs/tulip/tulip-cutout.png'
+                alt='The Tulip'
+                layout='responsive'
+                width={303}
+                height={330}
+            />
+            </div>
+            <div className='hover-bg'>
+                <p className='name'>The Tulip</p>
+                <p className='view'>View Chair</p>
+                <div className='acting-btn'>
+                    <Image 
+                        src='/buttons/arrow-yellow.svg'
+                        alt='Arrow'
+                        // layout='responsive'
+                        width={24}
+                        height={20}
+                    />
+                </div>
+            </div>
+        </a>
+        </Link>
+    </div>
+    </div>
 </>
   )
 }

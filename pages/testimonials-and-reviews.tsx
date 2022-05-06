@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { NextSeo } from 'next-seo';
 import Link from 'next/link';
 import Image from 'next/image'
+import Script from 'next/script';
 // Hooks 
 import { useIsSmall } from '../utils/hooks';
 // Components
@@ -25,6 +26,7 @@ const TestimonialsAndReviews = () => {
 
     return (
         <>
+           <Script src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async />
             <NextSeo  
                 title="Testimonials and reviews| Oak Tree Mobility"
                 description="Take a look at the 2,000+ independent online reviews for Oak Tree Mobility. We have a customer satisfaction rate of more than 98%. Find out why"
@@ -34,15 +36,19 @@ const TestimonialsAndReviews = () => {
                 <div className='hero-content'>
                     <p className='subheading'>Rated Excellent on Trustpilot</p>
                     <h1 className='heading'>Trusted by thousands of customers across the country</h1>
-                    <Link href='#'><a className='main-cta'>View our customer stories</a></Link>
+                    <Link href='#t-and-r-customer-stories'><a className='main-cta'>View our customer stories</a></Link>
                     <div className='tp-logo'>
-                        <Image 
+                        {/* <Image 
                             src={isSmall ? leftLogo : centerLogo}
                             alt='Trustpilot logo'
                             layout='responsive'
                             width='218'
                             height='88'
-                        />
+                        /> */}
+                        
+                        <div className="trustpilot-widget" data-locale="en-GB" data-template-id="53aa8807dec7e10d38f59f32" data-businessunit-id="56607bac0000ff00058643ac" data-style-height="100%" data-style-width="200px" data-theme="light" data-text-color="#212923">
+                        <a href="https://uk.trustpilot.com/review/www.oaktreemobility.co.uk" target="_blank" rel="noopener">Trustpilot</a>
+                        </div>
                     </div>
                 </div>
                 <div className='testimonial-holder'>

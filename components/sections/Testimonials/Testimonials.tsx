@@ -12,7 +12,7 @@ interface ComponentProps {
 }
 
 const Testimonials = ({pageType} : ComponentProps) => {
-  const [ref, inView] = useInView({ rootMargin: "-300px 0px"})
+  const [ref, inView] = useInView({ rootMargin: "-280px 0px"})
   const controls = useAnimation();
 
   const [selectedCx, setSelectedCx] = useState({ 

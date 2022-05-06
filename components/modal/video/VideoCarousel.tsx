@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import Image from 'next/image';
 // components
 import Video from './Video';
 
@@ -20,7 +21,17 @@ interface ComponentProps {
      
         <div className='video-carousel'>
              <div className='background-close' onClick={() => setShow(false)}></div>
-            <button className='close-modal' onClick={() => setShow(false)}>Close</button>
+            <button className='close-modal' onClick={() => setShow(false)}>
+                <span className='icon-wrapper'>
+                <Image 
+                    src='/buttons/modal-close.svg'
+                    alt='Close modal'
+                    layout='responsive'
+                    width='15'
+                    height='15'
+                />
+                </span>
+            </button>
             {/* <div className='carousel-navigation nav-prev'>
                 <button className='prev' onClick={() => changeVideoId('prev')}></button>
             </div> */}

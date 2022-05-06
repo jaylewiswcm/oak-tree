@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 // Components
 import Logo from '../assets/Logo';
-
+import { FooterNav } from './navigation/FooterNav';
 
 const Footer = () => {
     
@@ -41,69 +41,16 @@ const Footer = () => {
             </div>
             <div className='con-reg'>
             <div className='footer-navigation'>
-                <nav>                    
-                    <div className='nav-section'>
-                        <div className='ul-wrapper'>
-                            <div className='list-header' onClick={(e) => toggleFooterNavList(e)}>About<span className='arrow-wrapper'><Image src='/vectors/down-arrow-black.svg' alt='open-arrow' width={18} height={11}/></span></div>
-                            <ul>
-                                <li className='list-link'><Link href='/about'><a>About Oak Tree Mobility</a></Link></li>
-                                <li className='list-link'><Link href='/occupational-therapist'><a>Our Occupational Therapist</a></Link></li>
-                                <li className='list-link'><Link href='/british-made'><a>British Made</a></Link></li>
-                                <li className='list-link'><Link href='/trade-in'><a>Trade In</a></Link></li>
-                                <li className='list-link'><Link href='/price-guide-chairs'><a>Price Guide Chairs</a></Link></li>
-                                <li className='list-link'><Link href='/price-guide-beds'><a>Price Guide Beds</a></Link></li>
-                                <li className='list-link'><Link href='/testimonials-and-reviews'><a>Testimonials and Reviews</a></Link></li>
-                            </ul>
-                        </div>
-                        <div className='ul-wrapper'>
-                            <div className='list-header'onClick={(e) => toggleFooterNavList(e)}>Customer Support<span className='arrow-wrapper'><Image src='/vectors/down-arrow-black.svg' alt='open-arrow' width={18} height={11}/></span></div>
-                            <ul>
-                                <li className='list-link'><Link href='/delivery-and-installation'><a>Delivery and Installation</a></Link></li>
-                                <li className='list-link'><Link href='/vat-exempt-eligibility'><a>VAT Exempt Eligibility</a></Link></li>
-                            </ul>   
-                        </div>
-                    </div>
-                    <div className='nav-section'>
-                        <div className='ul-wrapper'>
-                            <div className='list-header'  onClick={(e) => toggleFooterNavList(e)}>Chairs<span className='arrow-wrapper'><Image src='/vectors/down-arrow-black.svg' alt='open-arrow' width={18} height={11}/></span></div>
-                            <ul>                           
-                                <li className='list-link'><Link href='/recliner-chairs'><a>Recliner Chairs</a></Link></li>
-                                <li className='list-link'><Link href='/riser-recliner-chairs'><a>Riser Recliner Chairs</a></Link></li>
-                                <li className='list-link'><Link href='/armchairs'><a>Armchairs</a></Link></li>
-                                <li className='list-link'><Link href='/chairs'><a>All Chairs</a></Link></li>
-                            </ul>
-                        </div>
-                        <div className='ul-wrapper'>
-                            <div className='list-header'  onClick={(e) => toggleFooterNavList(e)}>Beds<span className='arrow-wrapper'><Image src='/vectors/down-arrow-black.svg' alt='open-arrow' width={18} height={11}/></span></div>
-                            <ul>
-                                <li className='list-link'><Link href='/adjustable-beds'><a>Adjustable Beds</a></Link></li>
-                                <li className='list-link'><Link href='/headboards'><a>Headboards</a></Link></li>
-                                <li className='list-link'><Link href='/beds'><a>All Beds</a></Link></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div className='nav-section'>
-                        <div className='ul-wrapper'>
-                            <div className='list-header'  onClick={(e) => toggleFooterNavList(e)}>Bath Lifts<span className='arrow-wrapper'><Image src='/vectors/down-arrow-black.svg' alt='open-arrow' width={18} height={11}/></span></div>
-                            <ul>  
-                                <li className='list-link'><Link href='/bath-lifts'><a>Bath Lift Range</a></Link></li>
-                                <li className='list-link'><Link href='/the-riviera-plus'><a>The Riviera Plus</a></Link></li>
-                                <li className='list-link'><Link href='/oak-tree-bath-lifts'><a>Oak Tree Bath Lifts</a></Link></li>
-                            </ul>
-                        </div>
-                        <ul className='connect mobile-social'>
-                            <li className='list-header'>Connect</li>
-                            <li><a href='www.facebook.com' className='facebook-blue social-link'><span className='icon'><Image src='/icons/socials/facebook.svg' alt='Facebook' width='25' height='25'/></span>Facebook</a></li>
-                            <li><a href='www.youtube.com' className='youtube-red social-link'><span className='icon'><Image src='/icons/socials/youtube.svg' alt='Youtube' width='25' height='25'/></span>YouTube</a></li>
-                        </ul>
-                    </div>
-                    <div className='nav-section desktop-social'>
+                <nav>  
+                    {menuConfig.map((menu, index) => <FooterNav menuConfig={menu} key={index}/>)}
+                    
+                    {/* <div className='nav-section desktop-social'>
                         <ul className='connect'>
                             <li className='list-header'>Connect</li>
                             <li className='list-link'><a href='www.facebook.com' className='facebook-blue social-link'><span className='icon'><Image src='/icons/socials/facebook.svg' alt='Facebook' width='25' height='25'/></span>Facebook</a></li>
                             <li className='list-link'><a href='www.youtube.com' className='youtube-red social-link'><span className='icon'><Image src='/icons/socials/youtube.svg' alt='Youtube' width='25' height='25'/></span>YouTube</a></li>
                         </ul>
-                    </div>
+                    </div> */}
                 </nav>
                 <Link href='/'>
                     <a className='logo-link'>
@@ -131,3 +78,36 @@ const Footer = () => {
 }
 
 export default Footer;
+
+const menuConfig = [
+    { menuHeader: 'About', menu: [
+        {link: '/about', text: 'About Oak Tree Mobility' },
+        { link: '/occupational-therapist', text: 'Our Occupational Therapist' },
+        { link: '/british-made', text: 'British Made' },
+        { link: '/trade-in', text: 'Trade In' },
+        { link: '/modern-slavery-statement', text: 'Modern Slavery Statement' }
+    ]},
+    {
+        menuHeader: 'Customer Support', menu: [
+            { link: '/delivery-and-installation', text: 'Delivery and Installation' },
+            { link: '/vat-exempt-eligibility', text: 'VAT Exempt Eligibilty' },
+            { link: '/testimonials-and-reviews', text: 'Testimonials And Reviews' }
+        ]
+    },
+    { menuHeader: 'Chairs', menu: [
+        {link: '/chairs/recliner-chairs', text: 'Recliner Chairs' },
+        {link: '/chairs/riser-recliner-chairs', text: 'Riser Recliner Chairs' },
+        {link: '/chairs', text: 'All Chairs' },
+        {link: '/price-guide-chairs', text: 'Price Guide Chairs' },
+    ]},
+    { menuHeader: 'Beds', menu: [
+        {link: '/adjustable-beds', text: 'Adjustable Beds' },
+        {link: '/adjustable-beds', text: 'All Beds' },
+        {link: '/price-guide-beds', text: 'Price Guide Beds' },
+    ]},
+    { menuHeader: 'Bath Lifts', menu: [
+        {link: '/bath-lifts', text: 'Bath Lift Range' },
+        {link: '/bath-lifts/the-riviera-plus', text: 'The Riviera Plus' },
+        {link: '/bath-lifts/home-visit', text: 'Oak Tree Bath Lifts' },
+    ]},
+  ];

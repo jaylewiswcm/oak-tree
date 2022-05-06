@@ -5,6 +5,7 @@ import Image from 'next/image';
 // images 
 import twoManDelivery from '../public/images/lifestyle/two-man-delivery.png';
 import Resources from '../components/sections/resources/Resources';
+import FooterCollections from '../components/sections/collections/FooterCollections';
 const deliveryAndInstallation = () => {
     return (
         <>
@@ -112,6 +113,7 @@ const deliveryAndInstallation = () => {
                     <p>We hope you’re happy with every purchase you make with Oak Tree Mobility, but if this isn’t the case we hope to make the returns process as simple as possible. Check our <Link href='/returns-policy'><a>returns policy here</a></Link> for details.</p>
                 </div>
             </div>
+            <FooterCollections />
             <Resources pageType='delivery'/>
         </>
     )

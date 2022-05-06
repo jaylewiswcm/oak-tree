@@ -174,7 +174,7 @@ const RecommendedProducts = ({product}: ComponentProps) => {
         </Link>
     </div>
     }
-</div>
+    </div>
   )
 }
 export default RecommendedProducts

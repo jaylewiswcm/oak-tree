@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { NextSeo } from 'next-seo';
 import Image from 'next/image';
+import Link from 'next/link';
 // Components 
 import { QuestionAccordian } from '../components/accordian/QuestionAccordian';
 
@@ -128,6 +129,80 @@ const PriceGuideBed = () => {
                 </QuestionAccordian>
             </div>
         </div>
+        <div className='recommended-products con-reg'>
+    <h6>Recommeded Beds</h6>
+    <div className='product-grid'>
+    <Link href="/adjustable-beds">
+        <a className='product'>
+            <div className='hover-bg'>
+                <p className='view'>View All</p>
+                <p className='name'>Adjustable Beds</p> 
+                <div className='acting-btn'>
+                    <Image 
+                        src='/buttons/arrow-yellow.svg'
+                        alt='Arrow'
+                        // layout='responsive'
+                        width={24}
+                        height={20}
+                    />
+                </div>
+            </div>
+        </a>
+        </Link>
+        <Link href="/adjustable-beds/the-hesper">
+        <a  className='product'>
+        <div className='image-wrapper'>
+            <Image
+                src='/images/products/beds/hesper/hesper-product.jpeg'
+                alt='The Hesper'
+                layout='responsive'
+                width={303}
+                height={330}
+            />
+            </div>
+            <div className='hover-bg'>
+                <p className='name'>The Hesper</p>
+                <p className='view'>View Bed</p>
+                <div className='acting-btn'>
+                    <Image 
+                        src='/buttons/arrow-yellow.svg'
+                        alt='Arrow'
+                        // layout='responsive'
+                        width={24}
+                        height={20}
+                    />
+                </div>
+            </div>
+        </a>
+        </Link>
+        <Link href="/adjustable-beds/the-poplar">
+        <a className='product'>
+            <div className='image-wrapper'>
+            <Image
+                src='/images/products/beds/poplar/poplar-product.jpeg'
+                alt='The Poplar'
+                layout='responsive'
+                width={303}
+                height={330}
+            />
+            </div>
+            <div className='hover-bg'>
+                <p className='name'>The Poplar</p>
+                <p className='view'>View Bed</p>
+                <div className='acting-btn'>
+                    <Image 
+                        src='/buttons/arrow-yellow.svg'
+                        alt='Arrow'
+                        // layout='responsive'
+                        width={24}
+                        height={20}
+                    />
+                </div>
+            </div>
+        </a>
+        </Link>
+    </div>
+    </div>
 </>
   )
 }

@@ -18,7 +18,7 @@ const TandRTestimonials = () => {
     const [show, setShow] = useState(false);
     const [videoId, setVideoId] = useState('');
   return ( 
-    <div className='t-and-r-customer-stories con-reg'>
+    <div className='t-and-r-customer-stories con-reg' id='t-and-r-customer-stories'>
       {show && <Modal classNames='' setShow={setShow}><VideoCarousel setShow={setShow} show={show} videoId={videoId}></VideoCarousel></Modal>}
     <p className='subheading'>Hear It From Them</p> 
     <h3 className='heading'>Our Customer Stories</h3>

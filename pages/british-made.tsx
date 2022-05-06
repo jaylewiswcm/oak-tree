@@ -33,7 +33,7 @@ const BritishMade = () => {
                 </div>
                 <div className='mobile-image-wrapper'>
                 <Image 
-                        src='/images/heros/about-hero-mobile.png'
+                        src='/images/heros/british-made-hero-mobile.png'
                         alt='About Oak Tree - watch the story'
                         layout='fill'
                         objectFit='cover'
@@ -43,17 +43,17 @@ const BritishMade = () => {
                 </div>
                 <div className='video-overlay-content'>
                     <h1>Handmade in Great Britain</h1>
-                    <button onClick={() => setVideoModal(true)}>
+                    <button onClick={() => setVideoModal(true)} className='hero-button-bg'>
                         <span className='icon-wrapper'>
-                            <Image
-                                src='/buttons/play-btn-outline.svg'
+                                <Image
+                                src='/buttons/play-btn-fill.svg'
                                 alt='Play button'
                                 width={22}
                                 height={19}
                             />
                             <span className='hover-play'>
                             <Image
-                                src='/buttons/play-btn-fill.svg'
+                                src='/buttons/play-btn-outline.svg'
                                 alt='Play button'
                                 width={22}
                                 height={19}
