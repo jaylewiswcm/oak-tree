@@ -47,7 +47,7 @@ const TestimonialsAndReviews = () => {
                         /> */}
                         
                         <div className="trustpilot-widget" data-locale="en-GB" data-template-id="53aa8807dec7e10d38f59f32" data-businessunit-id="56607bac0000ff00058643ac" data-style-height="100%" data-style-width="200px" data-theme="light" data-text-color="#212923">
-                        <a href="https://uk.trustpilot.com/review/www.oaktreemobility.co.uk" target="_blank" rel="noopener">Trustpilot</a>
+                        <a href="https://uk.trustpilot.com/review/www.oaktreemobility.co.uk" target="_blank" rel="noreferrer">Trustpilot</a>
                         </div>
                     </div>
                 </div>
