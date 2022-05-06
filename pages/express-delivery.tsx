@@ -26,7 +26,7 @@ const expressDelivery = () => {
               </div>
               <p className='intro-p'>A new unique service you won’t find anywhere else. Not only can we deliver in just 48 hours, but this service is so much more. At Oak Tree we’ve got you covered. You tell us when you would like delivery and leave the rest to us.</p>
             </div>
-            <div className="delivery-comparisons">
+            <div className="delivery-comparisons con-reg">
         <h3 className="delivery-heading">Why is this service better than standard delivery?</h3>
         <div className="comp-wrapper">
             <div className="comp-table">
@@ -44,7 +44,7 @@ const expressDelivery = () => {
                         <div className="comp-title">
                             <div className="icon-wrapper">
                               <Image
-                                src='/icons/delivery/express/icon-delivery-date.svg'
+                                src='/icons/delivery/icon-calender.svg'
                                 alt='Delivery Date'
                                 layout='responsive'
                                 width="50"
@@ -56,7 +56,7 @@ const expressDelivery = () => {
                         <div className="comp-col">
                             <div className="image-wrapper">
                               <Image
-                                src='/imgages/delivery/delivery-call-centre.png'
+                                src='/images/delivery/delivery-call-centre.webp'
                                 alt='Call Centre'
                                 layout='responsive'
                                 width="1000"
@@ -77,7 +77,7 @@ const expressDelivery = () => {
                         <div className="comp-col">
                         <div className="image-wrapper">
                               <Image
-                                src='/imgages/delivery/delivery-waiting.png'
+                                src='/images/delivery/delivery-waiting.webp'
                                 alt='Call Centre'
                                 layout='responsive'
                                 width="1000"
@@ -100,7 +100,7 @@ const expressDelivery = () => {
                         <div className="comp-title">
                             <div className="icon-wrapper">
                                 <Image
-                                    src='/icons/delivery/express/icon-delivery-package.svg'
+                                    src='/icons/delivery/icon-package.svg'
                                     alt="Deliver Package"
                                     layout='responsive'
                                     width="50"
@@ -112,7 +112,7 @@ const expressDelivery = () => {
                         <div className="comp-col">
                         <div className="image-wrapper">
                               <Image
-                                src='/imgages/delivery/delivery-2-man-van.png'
+                                src='/images/delivery/delivery-2-man-van.webp'
                                 alt='Call Centre'
                                 layout='responsive'
                                 width="1000"
@@ -133,7 +133,7 @@ const expressDelivery = () => {
                         <div className="comp-col">
                         <div className="image-wrapper">
                               <Image
-                                src='/imgages/delivery/delivery-at-door.png'
+                                src='/images/delivery/delivery-at-door.webp'
                                 alt='Call Centre'
                                 layout='responsive'
                                 width="1000"
@@ -145,69 +145,14 @@ const expressDelivery = () => {
                                     alt="Heavy Lifting Not Included"
                                     layout='responsive'
                                     width="50"
-                                    height='50'
+                                     height='50'
                                   />
                                 </div>
                             </div>
                             <p>We'll drop your product off on your doorstep You'll be responsible for getting the product into your house and unpacking everything.</p>
                         </div>
                 </div>
-                <div className='comp-row'>
-                        <div className="comp-title">
-                            <div className="icon-wrapper">
-                                <Image
-                                    src='/icons/delivery/express/icon-delivery-set-up.svg'
-                                    alt="Delivery Getting set up"
-                                    layout='responsive'
-                                    width="50"
-                                    height='50'
-                                  />
-                            </div>
-                            <p>Getting Set Up</p>
-                        </div>
-                        <div className="comp-col">
-                        <div className="image-wrapper">
-                              <Image
-                                src='/imgages/delivery/delivery-scooter.png'
-                                alt='Call Centre'
-                                layout='responsive'
-                                width="1000"
-                                height='667'
-                              />
-                                <div className="icon-wrapper">
-                                  <Image
-                                    src='/icons/delivery/express/icon-delivery-set-up-yes.svg'
-                                    alt="Set up Included"
-                                    layout='responsive'
-                                    width="50"
-                                    height='50'
-                                  />
-                                </div>
-                            </div>
-                            <p>We’ll assemble to product for you, taking care of everything. Once set up, we’ll explain how everything works and only leave once your completely satisfied.</p>
-                        </div>
-                        <div className="comp-col">
-                        <div className="image-wrapper">
-                              <Image
-                                src='/imgages/delivery/delivery-instructions.png'
-                                alt='Delivery set up instructions"'
-                                layout='responsive'
-                                width="1000"
-                                height='667'
-                              />
-                                <div className="icon-wrapper">
-                                  <Image
-                                    src='/icons/delivery/express/icon-delivery-set-up-no.svg'
-                                    alt="Set up Not Included"
-                                    layout='responsive'
-                                    width="50"
-                                    height='50'
-                                  />
-                                </div>
-                            </div>
-                            <p>You’ll be responsible for assembling your own product. You’ll need to use the instruction manual to help you get everything set up.</p>
-                        </div>
-                </div>
+     
                 <div className='comp-row'>
                         <div className="comp-title">
                             <div className="icon-wrapper">
@@ -224,7 +169,7 @@ const expressDelivery = () => {
                         <div className="comp-col">
                         <div className="image-wrapper">
                               <Image
-                                src='/imgages/delivery/delivery-removing-rubbish.png'
+                                src='/images/delivery/delivery-removing-rubbish.webp'
                                 alt='Removing rubbish"'
                                 layout='responsive'
                                 width="1000"
@@ -245,7 +190,7 @@ const expressDelivery = () => {
                         <div className="comp-col">
                           <div className="image-wrapper">
                                 <Image
-                                  src='/imgages/delivery/delivery-left-with-boxes.png'
+                                  src='/images/delivery/delivery-left-with-boxes.webp'
                                   alt='Delivery left with boxes"'
                                   layout='responsive'
                                   width="1000"
@@ -271,7 +216,7 @@ const expressDelivery = () => {
                     <div className="delivery-item">
                     <div className="image-wrapper">
                                 <Image
-                                  src='/imgages/delivery/delivery-left-with-boxes.png'
+                                  src='/images/delivery/delivery-left-with-boxes.webp'
                                   alt='Delivery left with boxes"'
                                   layout='responsive'
                                   width="1000"
@@ -288,7 +233,7 @@ const expressDelivery = () => {
                                   </div>
                               </div> 
                         <div className="image-wrapper">
-                            <img src="{{ 'delivery-call-centre.png' | asset_url }}" alt="Call Centre" loading="lazy">
+                            <img src="{{ 'delivery-call-centre.webp' | asset_url }}" alt="Call Centre" loading="lazy">
                         </div>
                         <div className="delivery-point">
                             <div className="icon-wrapper">
@@ -300,7 +245,7 @@ const expressDelivery = () => {
                     </div>
                     <div className="delivery-item">
                         <div className="image-wrapper">
-                            <img src="{{ 'delivery-waiting.png' | asset_url }}" alt="Waiting for delivery" loading="lazy"> 
+                            <img src="{{ 'delivery-waiting.webp' | asset_url }}" alt="Waiting for delivery" loading="lazy"> 
                             <!-- <div className="delivery-type">
                                 <p>Standard Delivery</p>
                             </div> -->
@@ -318,7 +263,7 @@ const expressDelivery = () => {
                     <p className="row-title">Your Package Arrives</p>
                     <div className="delivery-item">
                         <div className="image-wrapper">
-                            <img src="{{ 'delivery-2-man-van.png' | asset_url }}" alt="2 Man delivery" loading="lazy"> 
+                            <img src="{{ 'delivery-2-man-van.webp' | asset_url }}" alt="2 Man delivery" loading="lazy"> 
                             <!-- <div className="delivery-type">
                                 <p>Express Engineered Delivery</p>
                             </div> -->
@@ -333,7 +278,7 @@ const expressDelivery = () => {
                     </div>
                     <div className="delivery-item">
                         <div className="image-wrapper">
-                            <img src="{{ 'delivery-at-door.png' | asset_url }}" alt="Delivery left at door" loading="lazy"> 
+                            <img src="{{ 'delivery-at-door.webp' | asset_url }}" alt="Delivery left at door" loading="lazy"> 
                             <!-- <div className="delivery-type">
                                 <p>Standard Delivery</p>
                             </div> -->
@@ -352,7 +297,7 @@ const expressDelivery = () => {
                     <p className="row-title">Getting Set Up</p>
                     <div className="delivery-item">
                         <div className="image-wrapper">
-                            <img src="{{ 'delivery-scooter.png' | asset_url }}" alt="Expert Assemnbly" loading="lazy"> 
+                            <img src="{{ 'delivery-scooter.webp' | asset_url }}" alt="Expert Assemnbly" loading="lazy"> 
                             <!-- <div className="delivery-type">
                                 <p>Express Engineered Delivery</p>
                             </div> -->
@@ -367,7 +312,7 @@ const expressDelivery = () => {
                     </div>
                     <div className="delivery-item">
                         <div className="image-wrapper">
-                            <img src="{{ 'delivery-instructions.png' | asset_url }}" alt="Delivery Set up instructions" loading="lazy"> 
+                            <img src="{{ 'delivery-instructions.webp' | asset_url }}" alt="Delivery Set up instructions" loading="lazy"> 
                             <!-- <div className="delivery-type">
                                 <p>Standard Delivery</p>
                             </div> -->
@@ -385,7 +330,7 @@ const expressDelivery = () => {
                     <p className="row-title">Cleaning Up</p>
                     <div className="delivery-item">
                         <div className="image-wrapper">
-                            <img src="{{ 'delivery-removing-rubbish.png' | asset_url }}" alt="Removing rubbish" loading="lazy">
+                            <img src="{{ 'delivery-removing-rubbish.webp' | asset_url }}" alt="Removing rubbish" loading="lazy">
                             <!-- <div className="delivery-type">
                                 <p>Express Engineered Delivery</p>
                             </div> -->
@@ -400,7 +345,7 @@ const expressDelivery = () => {
                     </div>
                     <div className="delivery-item">
                         <div className="image-wrapper">
-                            <img src="{{ 'delivery-left-with-boxes.png' | asset_url }}" alt="Delivery left with boxes" loading="lazy"> 
+                            <img src="{{ 'delivery-left-with-boxes.webp' | asset_url }}" alt="Delivery left with boxes" loading="lazy"> 
                             <!-- <div className="delivery-type">
                                 <p>Standard Delivery</p>
                             </div> -->

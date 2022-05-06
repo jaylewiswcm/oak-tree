@@ -11573,6 +11573,10 @@ body.mobile-navbar .mobile-navigation {
 .delivery-comparisons .delivery-heading {
   text-align: center;
   padding: 0 15px;
+  font-size: 3rem;
+  font-family: "Euclid Circular A", "Helvetica", sans-serif;
+  font-weight: 600;
+  color: #17494D;
 }
 
 .delivery-comparisons .comp-wrapper {
@@ -11630,12 +11634,12 @@ body.mobile-navbar .mobile-navigation {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 20px;
+  padding-right: 20px;
 }
 
 .delivery-comparisons .comp-wrapper .comp-table .comp-row .comp-title .icon-wrapper {
-  width: 120px;
-  height: 120px;
+  width: 80px;
+  height: 80px;
   margin-bottom: 5px;
 }
 
@@ -11681,7 +11685,8 @@ body.mobile-navbar .mobile-navigation {
 
 .delivery-comparisons .comp-wrapper .comp-table .comp-row .comp-col p {
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 400;
+  margin-top: 15px;
 }
 
 .delivery-comparisons .comp-wrapper .comp-table .comp-row .comp-col:last-of-type {
