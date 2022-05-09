@@ -11,10 +11,14 @@ footer {
         align-items: center;
         justify-content: center;
         background-color: $dark-green-1;
-        padding:30px 60px;
-        border-radius: 6px;
+        padding:30px 15px;
+        
+        @media(min-width: 400px) {
+            border-radius: 6px;
+        }        
         @media(min-width: 910px){ 
             flex-direction: row;
+            padding:30px 60px;
         }
         .content-and-form {
             display: flex;
@@ -117,6 +121,7 @@ footer {
         }
         .graphic {
             margin: 0 auto;
+            
         }
     }
     .footer-navigation {

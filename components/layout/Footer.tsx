@@ -36,6 +36,7 @@ const Footer = () => {
                                 alt='Email Newsletter Sign Up'
                                 width='367.59'
                                 height='257.78'
+ 
                             />
                         </div>
                 </div>

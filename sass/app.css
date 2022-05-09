@@ -1845,8 +1845,13 @@ footer .email-signup-banner {
       -ms-flex-pack: center;
           justify-content: center;
   background-color: #17494D;
-  padding: 30px 60px;
-  border-radius: 6px;
+  padding: 30px 15px;
+}
+
+@media (min-width: 400px) {
+  footer .email-signup-banner {
+    border-radius: 6px;
+  }
 }
 
 @media (min-width: 910px) {
@@ -1855,6 +1860,7 @@ footer .email-signup-banner {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    padding: 30px 60px;
   }
 }
 
