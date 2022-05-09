@@ -30,12 +30,12 @@ const Footer = () => {
                             </form>
                         </div>
                     </div>
-                    <div className='graphic hide'>
+                    <div className='graphic'>
                             <Image
                                 src='/graphics/email-signup.svg'
                                 alt='Email Newsletter Sign Up'
-                                width='253.26'
-                                height='197.82'
+                                width='367.59'
+                                height='257.78'
                             />
                         </div>
                 </div>

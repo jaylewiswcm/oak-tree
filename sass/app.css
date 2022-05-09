@@ -1849,6 +1849,15 @@ footer .email-signup-banner {
   border-radius: 6px;
 }
 
+@media (min-width: 910px) {
+  footer .email-signup-banner {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
 footer .email-signup-banner .content-and-form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1993,6 +2002,10 @@ footer .email-signup-banner .content-and-form .form-wrapper form .input-wrapper 
   footer .email-signup-banner .content-and-form .form-wrapper form .input-wrapper input[type=submit] {
     margin-left: 0;
   }
+}
+
+footer .email-signup-banner .graphic {
+  margin: 0 auto;
 }
 
 footer .footer-navigation {

@@ -13,20 +13,9 @@ footer {
         background-color: $dark-green-1;
         padding:30px 60px;
         border-radius: 6px;
-        // @media(min-width: 400px) {
-        //     border-radius: 3px;
-        //     padding:50px;
-        // }
-        // @media(min-width: 910px) and (max-width: 1249px){
-        //     flex-direction: row;
-        //     justify-content: flex-start;
-        //     padding: 30px 50px;
-        // }
-        // @media(min-width:1250px) {
-        //     flex-direction: row;
-        //     justify-content: center;
-        //     padding: 30px 50px;
-        // }
+        @media(min-width: 910px){ 
+            flex-direction: row;
+        }
         .content-and-form {
             display: flex;
             align-items: center;
@@ -38,12 +27,6 @@ footer {
                 align-items: flex-start;
                 margin-bottom: 0;
             }
-            // @media(min-width:1250px) {
-            //     flex-direction: row;
-            //     align-items: center;
-            //     width: 100%;
-            //     margin-right: 0;
-            // }
             .content {
                 margin-right: auto;
                 text-align: center;
@@ -58,9 +41,6 @@ footer {
                     width: 100%;
                     line-height: 1.2;
                     margin-bottom:5px;
-                    // @media(min-width: 400px) and (max-width: 599px) {
-                    //     font-size: 4.3rem;
-                    // }
                     @media(min-width: 600px) {
                         font-size: 4.3rem;
                         text-align: left;
@@ -72,7 +52,6 @@ footer {
                     color: $white;
                     @media(min-width: 400px) {
                         font-size: 2.4rem;
-                        // margin-top: -5px;
                         margin-bottom:2px;
                     }
                 }
@@ -89,13 +68,9 @@ footer {
                         display: flex;
                         height: fit-content;
                         flex-direction: column;
-                        // @media(min-width: 600px) {
-                        //     flex-direction: row;
-                        // }
                         input[type=text] {
                             padding: 15px 20px;
                             background-color: #2B676C;
-                     
                             border: none;
                             font-size: 2rem;
                             color: $white;
@@ -139,6 +114,9 @@ footer {
                     }
                 }
             }           
+        }
+        .graphic {
+            margin: 0 auto;
         }
     }
     .footer-navigation {
