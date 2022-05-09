@@ -321,7 +321,10 @@ footer {
                 align-items: center;
                 @media(min-width: 350px)  {
                     flex-direction: row;
-                    
+                 
+                }
+                @media(min-width: 888px)  {
+                    width: fit-content;
                 }
                 .social-wrapper {
                     display: flex;   

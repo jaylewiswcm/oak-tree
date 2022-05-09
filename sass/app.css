@@ -2348,6 +2348,14 @@ footer .footer-footnote .footnote-inner .socials {
   }
 }
 
+@media (min-width: 888px) {
+  footer .footer-footnote .footnote-inner .socials {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}
+
 footer .footer-footnote .footnote-inner .socials .social-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;

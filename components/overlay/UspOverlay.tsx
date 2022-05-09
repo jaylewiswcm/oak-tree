@@ -22,9 +22,12 @@ export const UspOverlay = ({hideOverlay, className}:ComponentProps) => {
     <div className={className}>
            <Swiper
                 effect={"flip"}
+                flipEffect={{
+                    slideShadows:false
+                }}
                 grabCursor={true}
                 modules={[EffectFlip, Autoplay]}
-                autoplay={{ delay: 5000}}
+                autoplay={{ delay: 5000,}}
                 className="usp-overlay-swiper"
             >
                 <SwiperSlide>
