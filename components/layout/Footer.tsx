@@ -68,13 +68,13 @@ const Footer = () => {
             <div className='footer-footnote'>
                 <div className='footnote-inner con-reg'>
                     <div className='socials'>
-                        <a href='www.facebook.com' className='social-wrapper facebook-blue'>
+                        <a href='https://www.facebook.com/OakTreeMobility/' className='social-wrapper facebook-blue'>
                             <div className='icon-wrapper'>
                                 <Image src='/icons/socials/facebook.svg' alt='Facebook' width='25' height='25'/>
                             </div>
                             Facebook
                         </a>
-                        <a href='www.youtube.com' className='social-wrapper youtube-red'>
+                        <a href='https://www.youtube.com/c/oaktreemobility' className='social-wrapper youtube-red'>
                             <div className='icon-wrapper'>
                                 <Image src='/icons/socials/youtube.svg' alt='Youtube' width='25' height='25'/>
                             </div>
