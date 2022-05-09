@@ -67,11 +67,24 @@ const Footer = () => {
             </div>
             <div className='footer-footnote'>
                 <div className='footnote-inner con-reg'>
+                    <div className='socials'>
+                        <a href='www.facebook.com' className='social-wrapper facebook-blue'>
+                            <div className='icon-wrapper'>
+                                <Image src='/icons/socials/facebook.svg' alt='Facebook' width='25' height='25'/>
+                            </div>
+                            Facebook
+                        </a>
+                        <a href='www.youtube.com' className='social-wrapper youtube-red'>
+                            <div className='icon-wrapper'>
+                                <Image src='/icons/socials/youtube.svg' alt='Youtube' width='25' height='25'/>
+                            </div>
+                            Youtube
+                        </a>
+                    </div>
                     <p>© Copyright 2022 Oak Tree Mobility Ltd.</p>
                     <Link href="/terms-and-conditions"><a>Terms and Conditions</a></Link>
                     <Link href="/privacy-policy"><a>Privacy</a></Link>
                     <Link href="/cookie-policy"><a>Cookie Policy</a></Link>
-                    <Link href="/modern-slavery-statement"><a>Modern Slavery Statement</a></Link>
                 </div>
             </div>
         </footer>

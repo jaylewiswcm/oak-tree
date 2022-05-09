@@ -134,7 +134,7 @@ const expressDelivery = () => {
                         <div className="image-wrapper">
                               <Image
                                 src='/images/delivery/delivery-at-door.webp'
-                                alt='Call Centre'
+                                alt='Boxes left at the door'
                                 layout='responsive'
                                 width="1000"
                                 height='667'
@@ -208,6 +208,162 @@ const expressDelivery = () => {
                               </div> 
                             <p>We will not take away any of the waste materials, and you willl have to dispose of or recycle the packaging.</p>
                         </div>
+                </div>
+            </div>
+            <div className="comp-mobile">
+                <div className="delivery-row">
+                    <p className="row-title">Delivery Date</p>
+                    <div className="delivery-item">
+                        <div className="image-wrapper">
+                        <Image
+                                src='/images/delivery/delivery-call-centre.webp'
+                                alt='Call Centre'
+                                layout='responsive'
+                                width="1000"
+                                height='667'
+                              />
+                        </div>
+                        <div className="delivery-point">
+                        <div className="icon-wrapper">
+                                  <Image
+                                    src='/icons/delivery/express/icon-delivery-date-yes.svg'
+                                    alt='Choose Delivery Date'
+                                    layout='responsive'
+                                    width="50"
+                                    height='50'
+                                  />
+                                </div>
+                            <p className="delivery-type">Express Engineered Delivery</p>
+                            <p>Select the exact time and date when you would like your product delivered. We can fit the delivery around you, so you won’t have to wait at home all day.</p>
+                        </div>
+                    </div>
+                    <div className="delivery-item">
+                        <div className="image-wrapper">
+                            <Image
+                                src='/images/delivery/delivery-waiting.webp'
+                                alt='Call Centre'
+                                layout='responsive'
+                                width="1000"
+                                height='667'
+                              />
+                        </div>
+                        <div className="delivery-point">
+                            <div className="icon-wrapper">
+                                 <Image
+                                    src='/icons/delivery/express/icon-delivery-date-no.svg'
+                                    alt="Can't Choose Delivery Date"
+                                    layout='responsive'
+                                    width="50"
+                                    height='50'
+                                  />
+                            </div>
+                            <p className="delivery-type">Standard Delivery</p>
+                            <p>We'll provide a daily delivery window and cannot guarantee we will be with you at a certain time. You'll need to make sure you're at home until your product has been delivered.</p>
+                        </div>
+                    </div>
+                </div>
+                <div className="delivery-row">
+                    <p className="row-title">Your Package Arrives</p>
+                    <div className="delivery-item">
+                        <div className="image-wrapper">
+                          <Image
+                                src='/images/delivery/delivery-2-man-van.webp'
+                                alt='Call Centre'
+                                layout='responsive'
+                                width="1000"
+                                height='667'
+                              />
+                        </div>
+                        <div className="delivery-point">
+                            <div className="icon-wrapper">
+                              <Image
+                                    src='/icons/delivery/express/icon-delivery-heavylifting.svg'
+                                    alt="Heavy Lifting Included"
+                                    layout='responsive'
+                                    width="50"
+                                    height='50'
+                                  />
+                            </div>
+                            <p className="delivery-type">Express Engineered Delivery</p>
+                            <p>We’ll do all the heavy lifting, bringing your product inside to a room of your choice. As our product are often heavy, many of our customers cannot manage without this service.</p>
+                        </div>
+                    </div>
+                    <div className="delivery-item">
+                        <div className="image-wrapper">
+                            <Image
+                                src='/images/delivery/delivery-at-door.webp'
+                                alt='Call Centre'
+                                layout='responsive'
+                                width="1000"
+                                height='667'
+                              />
+                        </div>
+                        <div className="delivery-point">
+                            <div className="icon-wrapper">
+                              <Image
+                                    src='/icons/delivery/express/icon-delivery-heavylifting-no.svg'
+                                    alt="Heavy Lifting Not Included"
+                                    layout='responsive'
+                                    width="50"
+                                     height='50'
+                                  />
+                            </div>
+                            <p className="delivery-type">Standard Delivery</p>
+                            <p>We'll drop your product off on your doorstep You'll be responsible for getting the product into your house and unpacking everything.
+                            </p>
+                        </div>
+                    </div>
+                </div>      
+                <div className="delivery-row">
+                    <p className="row-title">Cleaning Up</p>
+                    <div className="delivery-item">
+                        <div className="image-wrapper">
+                            <Image
+                                src='/images/delivery/delivery-removing-rubbish.webp'
+                                alt='Removing rubbish"'
+                                layout='responsive'
+                                width="1000"
+                                height='667'
+                              />
+                        </div>
+                        <div className="delivery-point">
+                            <div className="icon-wrapper">
+                                <Image
+                                    src='/icons/delivery/express/icon-delivery-cleaning-up-yes.svg'
+                                    alt="Rubbish Removal Included"
+                                    layout='responsive'
+                                    width="50"
+                                    height='50'
+                                  />
+                            </div>
+                            <p className="delivery-type">Express Engineered Delivery</p>
+                            <p>Once you’re all set up, we’ll clear away all the packaging. We guarantee a completely mess-free setup and installation for your peace of mind.</p>
+                        </div>
+                    </div>
+                    <div className="delivery-item">
+                        <div className="image-wrapper">
+                              <Image
+                                  src='/images/delivery/delivery-left-with-boxes.webp'
+                                  alt='Delivery left with boxes"'
+                                  layout='responsive'
+                                  width="1000"
+                                  height='667'
+                                />
+                        </div>
+                        <div className="delivery-point">
+                            <div className="icon-wrapper">
+                                    <Image
+                                      src='/icons/delivery/express/icon-delivery-cleaning-up-no.svg'
+                                      alt="Rubbish Removal Not Included"
+                                      layout='responsive'
+                                      width="50"
+                                      height='50'
+                                    />
+                            </div>
+                            <p className="delivery-type">Standard Delivery</p>
+                            <p>We will not take away any of the waste materials, and you willl have to dispose of or recycle the packaging.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
             {/* <div className="comp-mobile">
