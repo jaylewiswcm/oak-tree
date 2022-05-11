@@ -19,7 +19,7 @@ import { Review } from '../review/Review';
 const fetcher = (url:string) =>  axios.get(url).then(res => res.data)
 
  const CarouselLanding = () => {
-    const { data, error } = useSWR('/api/reviews', fetcher)
+    const { data, error } = useSWR('/api', fetcher)
     
     if(error) {
         return <div>Error</div>

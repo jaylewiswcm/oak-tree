@@ -17,7 +17,7 @@ import { Navigation, Pagination, Autoplay } from "swiper";
 const fetcher = (url:string) =>  axios.get(url).then(res => res.data)
 
  const CarouselNormal = () => {
-    const { data, error } = useSWR('/api/reviews', fetcher)
+    const { data, error } = useSWR('/api', fetcher)
     
     if(error) {
         return <div>Error</div>
