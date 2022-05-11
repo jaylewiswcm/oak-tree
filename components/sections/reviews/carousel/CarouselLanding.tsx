@@ -1,8 +1,8 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
+import useSWR from 'swr'
+import axios from 'axios'
+// Swiper
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Review } from '../review/Review';
-// Data
-import reviews from '../../../../data/reviews/reviews.json';
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/free-mode";
@@ -11,11 +11,27 @@ import "swiper/css/navigation";
 import "swiper/css/autoplay";
 // import swiper modules
 import { Navigation, Pagination, Autoplay } from "swiper";
+// Data
+import reviews from '../../../../data/reviews/reviews.json';
+// Components
+import { Review } from '../review/Review';
+
+const fetcher = (url:string) =>  axios.get(url).then(res => res.data)
 
  const CarouselLanding = () => {
+    const { data, error } = useSWR('/api/reviews', fetcher)
+    
+    if(error) {
+        return <div>Error</div>
+    }
+
+    if(!data) {
+        return <div>Loading ...</div>
+    }
+
   return (
     <Swiper
-    slidesPerView={1}
+    slidesPerView={"auto"}
     spaceBetween={30}
     centeredSlides={true}
     navigation={{
@@ -32,10 +48,10 @@ import { Navigation, Pagination, Autoplay } from "swiper";
     autoplay={{delay: 4000}}
     modules={[Navigation, Pagination, Autoplay]}
 
-    className="mySwiper"
+    className="landing-carousel"
 >   
-    {reviews.map((review,index) => 
-        <SwiperSlide key={index}>
+    {data.map((review:any,index:number) => 
+        <SwiperSlide key={index}  className="review">
             <Review review={review}/>
         </SwiperSlide>
     )}

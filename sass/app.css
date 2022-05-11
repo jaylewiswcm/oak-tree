@@ -3886,16 +3886,10 @@ body.mobile-navbar .mobile-navigation {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin-top: 40px;
 }
 
-@media (min-width: 500px) and (max-width: 899px) {
-  .banners {
-    padding: 0 30px;
-    margin: 30px 0;
-  }
-}
-
-@media (min-width: 900px) {
+@media (min-width: 700px) {
   .banners {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -3906,12 +3900,40 @@ body.mobile-navbar .mobile-navigation {
 
 .banners .banner-vertical {
   width: 100%;
-  height: 350px;
-  margin: 0;
-  margin-bottom: 15px;
-  background-color: #F8F8F8;
-  padding: 25px;
-  padding-top: 80px;
+}
+
+.banners .banner-vertical:first-of-type {
+  margin-bottom: 30px;
+}
+
+@media (min-width: 700px) {
+  .banners .banner-vertical:first-of-type {
+    margin-right: 30px;
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 700px) {
+  .banners .banner-vertical {
+    width: calc(50% - 15px);
+  }
+}
+
+.occupational-therapist-wrapper {
+  margin: 60px auto;
+}
+
+.occupational-therapist-wrapper h3 {
+  font-family: "Euclid Circular A", "Helvetica", sans-serif;
+  font-size: 3rem;
+  font-weight: 600;
+  color: #17494D;
+  text-align: center;
+  padding: 0 15px;
+}
+
+.occupational-therapist-wrapper .sam-shann-intro {
+  margin-top: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3924,67 +3946,8 @@ body.mobile-navbar .mobile-navigation {
           align-items: center;
 }
 
-@media (min-width: 500px) and (max-width: 899px) {
-  .banners .banner-vertical {
-    margin-bottom: 30px;
-  }
-  .banners .banner-vertical:last-of-type {
-    margin-bottom: 0;
-  }
-}
-
-@media (min-width: 900px) {
-  .banners .banner-vertical {
-    margin: 30px 0;
-    margin-right: 30px;
-    height: 500px;
-  }
-}
-
-.banners .banner-vertical:last-of-type {
-  margin-right: 0;
-}
-
-.banners .banner-vertical .subheading {
-  font-size: 2rem;
-  font-weight: 500;
-  color: #EF0C2D;
-  text-align: center;
-}
-
-.banners .banner-vertical .heading {
-  font-size: 3rem;
-  font-weight: 500;
-  text-align: center;
-}
-
-.banners .banner-vertical button {
-  background-color: #EF0C2D;
-  border-radius: 6px;
-  font-size: 1.6rem;
-  color: #fff;
-  padding: 10px 25px;
-  margin-top: 25px;
-}
-
-.occupational-therapist-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-@media (min-width: 500px) and (max-width: 899px) {
-  .occupational-therapist-wrapper {
-    padding: 0 30px;
-  }
-}
-
-@media (min-width: 800px) {
-  .occupational-therapist-wrapper {
+@media (min-width: 1000px) {
+  .occupational-therapist-wrapper .sam-shann-intro {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -3992,130 +3955,169 @@ body.mobile-navbar .mobile-navigation {
   }
 }
 
-.occupational-therapist-wrapper .image-wrapper {
+.occupational-therapist-wrapper .sam-shann-intro .image-wrapper {
+  position: relative;
+}
+
+.occupational-therapist-wrapper .sam-shann-intro .image-wrapper .image {
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.occupational-therapist-wrapper .sam-shann-intro .image-wrapper .greeting {
+  position: absolute;
+  top: 38%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 3.8rem;
+  font-weight: 600;
   width: 100%;
-  height: 250px;
-}
-
-@media (min-width: 500px) {
-  .occupational-therapist-wrapper .image-wrapper {
-    height: 400px;
-  }
-}
-
-@media (min-width: 800px) {
-  .occupational-therapist-wrapper .image-wrapper {
-    width: 50%;
-    height: unset;
-  }
-}
-
-.occupational-therapist-wrapper .content {
-  width: 100%;
-  height: 100%;
-  background-color: #17494D;
   text-align: center;
-  padding-top: 30px;
+  display: none;
 }
 
-@media (min-width: 800px) {
-  .occupational-therapist-wrapper .content {
-    width: 50%;
-    padding-top: 50px;
+@media (min-width: 1000px) {
+  .occupational-therapist-wrapper .sam-shann-intro .image-wrapper .greeting {
+    display: none;
   }
 }
 
-.occupational-therapist-wrapper .content .subheading {
-  font-size: 2rem;
-  font-weight: 400;
-  color: #FEC51D;
-  padding: 0 15px;
-  text-align: left;
-}
-
-@media (min-width: 400px) {
-  .occupational-therapist-wrapper .content .subheading {
-    padding: 0 25px;
-  }
-}
-
-@media (min-width: 600px) {
-  .occupational-therapist-wrapper .content .subheading {
-    font-size: 2.2rem;
-    text-align: center;
-  }
-}
-
-.occupational-therapist-wrapper .content .heading {
-  font-size: 3rem;
-  font-weight: 500;
-  font-family: "Sentient-Variable", serif;
-  color: #fff;
-  padding: 0 15px;
-  text-align: left;
-}
-
-@media (min-width: 400px) {
-  .occupational-therapist-wrapper .content .heading {
-    padding: 0 25px;
-  }
-}
-
-@media (min-width: 600px) {
-  .occupational-therapist-wrapper .content .heading {
-    font-size: 3.3rem;
-    text-align: center;
-  }
-}
-
-.occupational-therapist-wrapper .content .info {
-  font-size: 1.8rem;
-  font-weight: 300;
-  line-height: 1.6;
-  color: #fff;
-  padding: 15px;
-  text-align: left;
-}
-
-@media (min-width: 400px) {
-  .occupational-therapist-wrapper .content .info {
-    padding: 15px 25px;
-    font-size: 2rem;
-  }
-}
-
-@media (min-width: 600px) {
-  .occupational-therapist-wrapper .content .info {
-    text-align: center;
-  }
-}
-
-@media (min-width: 1100px) {
-  .occupational-therapist-wrapper .content .info {
-    padding-bottom: 50px;
-  }
-}
-
-.occupational-therapist-wrapper .content .bottom {
-  padding: 15px;
-  background-color: #FFF3CE;
+.occupational-therapist-wrapper .sam-shann-intro .image-wrapper button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 25px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  padding: 0;
 }
 
-.oc-thera {
+@media (min-width: 600px) {
+  .occupational-therapist-wrapper .sam-shann-intro .image-wrapper button {
+    border-radius: 3px;
+    padding: 15px 25px;
+    width: unset;
+    height: unset;
+  }
+}
+
+@media (min-width: 1000px) {
+  .occupational-therapist-wrapper .sam-shann-intro .image-wrapper button {
+    top: unset;
+    left: unset;
+    bottom: 15px;
+    right: 15px;
+    -webkit-transform: unset;
+            transform: unset;
+  }
+}
+
+.occupational-therapist-wrapper .sam-shann-intro .image-wrapper button .icon-wrapper {
+  width: 105px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (min-width: 600px) and (max-width: 999px) {
+  .occupational-therapist-wrapper .sam-shann-intro .image-wrapper button .icon-wrapper {
+    margin-right: 10px;
+    width: 35px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .occupational-therapist-wrapper .sam-shann-intro .image-wrapper button .icon-wrapper {
+    width: 25px;
+    margin-right: 10px;
+  }
+}
+
+.occupational-therapist-wrapper .sam-shann-intro .image-wrapper button p {
+  font-size: 2rem;
+  font-weight: 500;
+  display: none;
+}
+
+@media (min-width: 600px) {
+  .occupational-therapist-wrapper .sam-shann-intro .image-wrapper button p {
+    display: initial;
+  }
+}
+
+@media (min-width: 1000px) {
+  .occupational-therapist-wrapper .sam-shann-intro .image-wrapper button p {
+    font-size: 1.7rem;
+  }
+}
+
+.occupational-therapist-wrapper .sam-shann-intro .content {
+  background-color: #F6F8FF;
+  margin: 25px 0;
+  padding: 20px;
+  border-radius: 3px;
+}
+
+@media (min-width: 400px) {
+  .occupational-therapist-wrapper .sam-shann-intro .content {
+    padding: 30px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .occupational-therapist-wrapper .sam-shann-intro .content {
+    margin: 25px;
+  }
+}
+
+.occupational-therapist-wrapper .sam-shann-intro .content .content-h {
+  font-size: 2.2rem;
+  font-weight: 500;
+  color: #17494D;
+  line-height: 1.3;
+  margin-bottom: 15px;
+}
+
+@media (min-width: 400px) {
+  .occupational-therapist-wrapper .sam-shann-intro .content .content-h {
+    font-size: 2.5rem;
+    line-height: 1.4;
+  }
+}
+
+.occupational-therapist-wrapper .sam-shann-intro .content .content-p {
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+@media (min-width: 400px) {
+  .occupational-therapist-wrapper .sam-shann-intro .content .content-p {
+    font-size: 1.8rem;
+    line-height: 1.7;
+  }
+}
+
+.occupational-therapist-wrapper .sam-shann-intro .content .partner-logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4123,133 +4125,375 @@ body.mobile-navbar .mobile-navigation {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding-top: 40px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 25px;
 }
 
-@media (min-width: 900px) {
-  .oc-thera {
+@media (min-width: 530px) {
+  .occupational-therapist-wrapper .sam-shann-intro .content .partner-logo {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    padding-top: 20px;
   }
 }
 
-.oc-thera .image-wrapper {
-  width: 150px;
-  height: 150px;
-  margin: 0 auto;
-  border-radius: 50%;
-  position: relative;
-  overflow: hidden;
+.occupational-therapist-wrapper .sam-shann-intro .content .partner-logo p {
+  font-size: 1.7rem;
+  font-weight: 400;
+  margin-bottom: 5px;
 }
 
-@media (min-width: 900px) {
-  .oc-thera .image-wrapper {
-    width: 50%;
-    height: auto;
-    margin: 0;
-    margin-right: 30px;
-    border-radius: 0;
+@media (min-width: 530px) {
+  .occupational-therapist-wrapper .sam-shann-intro .content .partner-logo p {
+    margin-right: 15px;
+    margin-bottom: 0px;
   }
 }
 
-.oc-thera .desktop-image {
-  display: initial;
+.occupational-therapist-wrapper .sam-shann-intro .content .partner-logo .logo {
   width: 200px;
-  height: 200px;
 }
 
-@media (min-width: 900px) {
-  .oc-thera .desktop-image {
-    display: initial;
-    width: 50%;
-    height: auto;
-  }
+.occupational-therapist-wrapper .advice-quotes {
+  background-color: #E5FCFF;
+  padding: 50px 0;
+  margin: 50px auto;
 }
 
-.oc-thera .mobile-image {
-  width: 200px;
-  height: 200px;
-  display: none;
+.occupational-therapist-wrapper .advice-quotes h4 {
+  font-size: 2.8rem;
+  font-weight: 500;
+  font-family: "Euclid Circular A", "Helvetica", sans-serif;
+  color: #17494D;
+  text-align: center;
+  padding: 0 15px;
 }
 
-@media (min-width: 900px) {
-  .oc-thera .mobile-image {
-    display: none;
-  }
-}
-
-.oc-thera .content {
-  padding: 40px 15px;
+.occupational-therapist-wrapper .advice-quotes .quotes-carousel {
   width: 100%;
+  padding-top: 50px;
 }
 
-@media (min-width: 900px) {
-  .oc-thera .content {
-    padding: 80px 30px;
-    width: 50%;
+.occupational-therapist-wrapper .advice-quotes .quotes-carousel .quote {
+  max-width: 700px;
+  width: 90%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (min-width: 400px) and (max-width: 599px) {
+  .occupational-therapist-wrapper .advice-quotes .quotes-carousel .quote {
+    width: 80%;
   }
 }
 
-.oc-thera .content .subheading {
+@media (min-width: 600px) {
+  .occupational-therapist-wrapper .advice-quotes .quotes-carousel .quote {
+    width: 70%;
+  }
+}
+
+.occupational-therapist-wrapper .advice-quotes .quotes-carousel .quote .quote-mark {
+  width: 40px;
+  margin-bottom: 25px;
+  opacity: 0.4;
+}
+
+.occupational-therapist-wrapper .advice-quotes .quotes-carousel .quote .quote-p {
   font-size: 2.2rem;
   font-weight: 500;
-  color: #0086C5;
-  margin-bottom: 5px;
-  text-align: center;
-}
-
-@media (min-width: 900px) {
-  .oc-thera .content .subheading {
-    text-align: left;
-  }
-}
-
-.oc-thera .content .heading {
-  font-size: 3.2rem;
-  font-weight: 500;
   color: #17494D;
-  margin-bottom: 15px;
-  text-align: center;
-}
-
-@media (min-width: 900px) {
-  .oc-thera .content .heading {
-    text-align: left;
-  }
-}
-
-.oc-thera .content .info {
-  font-size: 2rem;
-  font-weight: 400;
   line-height: 1.5;
   text-align: center;
 }
 
-@media (min-width: 900px) {
-  .oc-thera .content .info {
-    text-align: left;
+@media (min-width: 550px) {
+  .occupational-therapist-wrapper .advice-quotes .quotes-carousel .quote .quote-p {
+    font-size: 2.4rem;
   }
 }
 
-.oc-thera .content a {
-  font-size: 2rem;
-  font-weight: 500;
-  text-decoration: underline;
-  text-underline-offset: 2px;
-  text-decoration-thickness: 2px;
-  color: #0086C5;
-  margin-top: 40px;
-  display: block;
+.occupational-therapist-wrapper .advice-quotes .quotes-carousel .quote .selected-product {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 15px;
+}
+
+@media (min-width: 600px) {
+  .occupational-therapist-wrapper .advice-quotes .quotes-carousel .quote .selected-product {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.occupational-therapist-wrapper .advice-quotes .quotes-carousel .quote .selected-product .product-image {
+  width: 65px;
+  height: 65px;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+}
+
+.occupational-therapist-wrapper .advice-quotes .quotes-carousel .quote .selected-product div {
+  margin-top: 15px;
   text-align: center;
 }
 
-@media (min-width: 900px) {
-  .oc-thera .content a {
+@media (min-width: 600px) {
+  .occupational-therapist-wrapper .advice-quotes .quotes-carousel .quote .selected-product div {
     text-align: left;
+    margin-top: 25px;
+    margin-right: 15px;
   }
+}
+
+.occupational-therapist-wrapper .advice-quotes .quotes-carousel .quote .selected-product div .product-name {
+  font-size: 1.9rem;
+  font-weight: 500;
+}
+
+.occupational-therapist-wrapper .advice-quotes .quotes-carousel .quote .selected-product div .acting-link {
+  color: #212923;
+  font-size: 1.8rem;
+  font-weight: 300;
+  margin: 0;
+  line-height: 1.3;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.occupational-therapist-wrapper .advice-quotes .quotes-carousel .quote .selected-product:hover .acting-link {
+  color: #00AD74;
+}
+
+.occupational-therapist-wrapper .advice-quotes .quotes-carousel .swiper-slide-next, .occupational-therapist-wrapper .advice-quotes .quotes-carousel .swiper-slide-prev {
+  opacity: 0.4;
+}
+
+.occupational-therapist-wrapper .advice-quotes .quotes-carousel .nav-button {
+  width: 60px;
+  height: 60px;
+  background-color: #17494D;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0px;
+  -webkit-box-shadow: 0 0 21px rgba(23, 73, 77, 0.2);
+          box-shadow: 0 0 21px rgba(23, 73, 77, 0.2);
+  z-index: 5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  opacity: 1;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+@media (min-width: 650px) {
+  .occupational-therapist-wrapper .advice-quotes .quotes-carousel .nav-button {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    bottom: unset;
+  }
+}
+
+@media (min-width: 900px) {
+  .occupational-therapist-wrapper .advice-quotes .quotes-carousel .nav-button {
+    opacity: 0;
+  }
+}
+
+.occupational-therapist-wrapper .advice-quotes .quotes-carousel .nav-button .arrow-wrapper {
+  width: 30px;
+  height: 100%;
+}
+
+.occupational-therapist-wrapper .advice-quotes .quotes-carousel .prev-btn {
+  left: 15px;
+}
+
+.occupational-therapist-wrapper .advice-quotes .quotes-carousel .prev-btn .arrow-wrapper {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  padding-right: 2px;
+}
+
+.occupational-therapist-wrapper .advice-quotes .quotes-carousel .next-btn {
+  right: 15px;
+}
+
+.occupational-therapist-wrapper .advice-quotes .quotes-carousel .next-btn .arrow-wrapper {
+  padding-left: 2px;
+}
+
+@media (min-width: 900px) {
+  .occupational-therapist-wrapper .advice-quotes .quotes-carousel:hover .nav-button {
+    opacity: 0.5;
+  }
+  .occupational-therapist-wrapper .advice-quotes .quotes-carousel:hover .nav-button:hover {
+    opacity: 1;
+  }
+}
+
+.occupational-therapist-wrapper .advice-quotes .advice-pagination {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.occupational-therapist-wrapper .advice-quotes .advice-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  margin: 0 8px;
+  color: #F8F8F8;
+}
+
+.occupational-therapist-wrapper .advice-quotes .advice-pagination .swiper-pagination-bullet-active {
+  background-color: #17494D;
+}
+
+.occupational-therapist-wrapper .health-benefits {
+  margin: 70px auto;
+  margin-bottom: 100px;
+}
+
+.occupational-therapist-wrapper .health-benefits h5 {
+  font-size: 2.8rem;
+  font-weight: 500;
+  font-family: "Euclid Circular A", "Helvetica", sans-serif;
+  color: #17494D;
+  text-align: center;
+  line-height: 1.3;
+}
+
+.occupational-therapist-wrapper .health-benefits h5 br {
+  display: none;
+}
+
+@media (min-width: 460px) {
+  .occupational-therapist-wrapper .health-benefits h5 br {
+    display: initial;
+  }
+}
+
+.occupational-therapist-wrapper .health-benefits .benefits-grid {
+  margin: 80px auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[1];
+      grid-template-columns: repeat(1, 1fr);
+  gap: 50px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+@media (min-width: 525px) and (max-width: 1049px) {
+  .occupational-therapist-wrapper .health-benefits .benefits-grid {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 1049px) {
+  .occupational-therapist-wrapper .health-benefits .benefits-grid {
+    gap: 80px;
+  }
+}
+
+@media (min-width: 1050px) {
+  .occupational-therapist-wrapper .health-benefits .benefits-grid {
+    margin: 60px auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+  }
+}
+
+.occupational-therapist-wrapper .health-benefits .benefits-grid .benefit {
+  width: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (min-width: 1050px) {
+  .occupational-therapist-wrapper .health-benefits .benefits-grid .benefit {
+    width: calc(100% / 4);
+  }
+}
+
+.occupational-therapist-wrapper .health-benefits .benefits-grid .benefit .icon-wrapper {
+  width: 80px;
+}
+
+.occupational-therapist-wrapper .health-benefits .benefits-grid .benefit p {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #17494D;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.occupational-therapist-wrapper .health-benefits .find-more {
+  font-size: 1.9rem;
+  font-weight: 300;
+  color: #17494D;
+  text-align: center;
+  margin-top: 10px;
+  line-height: 1.4;
+}
+
+.occupational-therapist-wrapper .health-benefits .find-more a {
+  color: #00AD74;
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
 @media (max-width: 400px) {
@@ -8049,8 +8293,8 @@ body.mobile-navbar .mobile-navigation {
 
 .orphan-brochure-wrapper .content .hero .intro-box {
   width: 100%;
-  margin: 0 auto;
-  margin-top: auto;
+  margin: auto;
+  margin-bottom: 15px;
   position: relative;
   z-index: 5;
   background-color: #fff;
@@ -8062,6 +8306,7 @@ body.mobile-navbar .mobile-navigation {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  border-radius: 2px;
 }
 
 @media (min-width: 600px) {
@@ -8070,12 +8315,23 @@ body.mobile-navbar .mobile-navigation {
   }
 }
 
+.orphan-brochure-wrapper .content .hero .intro-box .inner-border {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: calc(100% - 16px);
+  height: calc(100% - 16px);
+  border: 3px #17494D solid;
+  border-radius: 2px;
+}
+
 .orphan-brochure-wrapper .content .hero .intro-box h1 {
-  font-size: 3.2rem;
-  font-weight: 600;
+  font-size: 3rem;
+  font-weight: 700;
   font-family: "Sentient-Variable", serif;
   text-align: left;
-  line-height: 1.5;
+  line-height: 1.4;
+  color: #17494D;
 }
 
 @media (min-width: 600px) {
@@ -8095,22 +8351,16 @@ body.mobile-navbar .mobile-navigation {
   font-size: 2.2rem;
   font-weight: 400;
   text-align: left;
-  margin-top: 10px;
+  margin-top: 5px;
   color: #407074;
-  line-height: 1.5;
+  line-height: 1.4;
 }
 
 @media (min-width: 600px) {
   .orphan-brochure-wrapper .content .hero .intro-box p {
     text-align: center;
     font-size: 2.6rem;
-    margin-top: 15px;
-  }
-}
-
-@media (min-width: 1000px) and (max-width: 1099px) {
-  .orphan-brochure-wrapper .content .hero .intro-box p {
-    font-size: 2.4rem;
+    margin-top: 5px;
   }
 }
 
@@ -8147,7 +8397,8 @@ body.mobile-navbar .mobile-navigation {
 
 .orphan-brochure-wrapper .content .health-benefits h2 {
   font-size: 3.3rem;
-  font-weight: 600;
+  font-weight: 700;
+  color: #17494D;
 }
 
 @media (min-width: 400px) {
@@ -8258,6 +8509,42 @@ body.mobile-navbar .mobile-navigation {
   }
 }
 
+.orphan-brochure-wrapper .content .health-benefits .benefits-grid.bathing {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  gap: 0;
+}
+
+.orphan-brochure-wrapper .content .health-benefits .benefits-grid.bathing .health-item {
+  width: 100%;
+  display: block;
+  margin: 20px 0;
+}
+
+.orphan-brochure-wrapper .content .health-benefits .benefits-grid.bathing .health-item .icon-wrapper {
+  width: 30px;
+  height: 30px;
+  margin: 0 auto;
+}
+
+.orphan-brochure-wrapper .content .health-benefits .benefits-grid.bathing .health-item p {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 2.1rem;
+  font-weight: 500;
+  color: #17494D;
+  width: 100%;
+}
+
 .orphan-brochure-wrapper .content .health-benefits .image-wrapper {
   height: 300px;
   position: relative;
@@ -8313,7 +8600,7 @@ body.mobile-navbar .mobile-navigation {
 .orphan-brochure-wrapper .content .quote .inner-wrapper .author {
   font-size: 2.4rem;
   font-weight: 400;
-  color: #A3D9B4;
+  color: #FEC51D;
   margin-bottom: 5px;
 }
 
@@ -8329,7 +8616,7 @@ body.mobile-navbar .mobile-navigation {
 
 .orphan-brochure-wrapper .content .brochure-usps h3 {
   font-size: 3.3rem;
-  font-weight: 600;
+  color: #17494D;
   text-align: center;
 }
 
@@ -8341,7 +8628,7 @@ body.mobile-navbar .mobile-navigation {
 
 @media (min-width: 1050px) {
   .orphan-brochure-wrapper .content .brochure-usps h3 {
-    text-align: left;
+    text-align: center;
   }
 }
 
@@ -8350,6 +8637,7 @@ body.mobile-navbar .mobile-navigation {
   -webkit-box-direction: reverse;
       -ms-flex-direction: column-reverse;
           flex-direction: column-reverse;
+  margin: 20px auto;
 }
 
 @media (min-width: 650px) and (max-width: 1000px) {
@@ -8482,7 +8770,7 @@ body.mobile-navbar .mobile-navigation {
 
 @media (min-width: 650px) {
   .orphan-brochure-wrapper .content .brochure-usps .usp-points ul li p {
-    font-size: 2.3rem;
+    font-size: 2rem;
     text-align: left;
     line-height: 1.4;
     width: calc(100% - 35px);
@@ -8491,9 +8779,13 @@ body.mobile-navbar .mobile-navigation {
 
 .orphan-brochure-wrapper .content .brochure-usps .brochure-wrapper {
   width: 100%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   position: relative;
-  margin: 0 auto;
-  margin-top: 50px;
+  margin: auto;
+  -webkit-box-shadow: 0px 8px 21px rgba(0, 0, 0, 0.18);
+          box-shadow: 0px 8px 21px rgba(0, 0, 0, 0.18);
 }
 
 @media (min-width: 500px) and (max-width: 599px) {
@@ -8511,8 +8803,7 @@ body.mobile-navbar .mobile-navigation {
 
 @media (min-width: 1050px) {
   .orphan-brochure-wrapper .content .brochure-usps .brochure-wrapper {
-    width: 50%;
-    height: 500px;
+    width: 45%;
   }
 }
 
@@ -8546,6 +8837,10 @@ body.mobile-navbar .mobile-navigation {
     padding-left: 0;
     padding-right: 0;
   }
+}
+
+.orphan-brochure-wrapper .content .testimonials.bathing .testimonial-tile {
+  margin: 25px auto;
 }
 
 .orphan-brochure-wrapper .content .reviews-wrapper .con-reg {
@@ -8665,6 +8960,33 @@ body.mobile-navbar .mobile-navigation {
 @media (min-width: 600px) {
   .orphan-brochure-wrapper .content .orphan-reasons .reasons-grid .reason .content .reason-title {
     font-size: 2.6rem;
+  }
+}
+
+@media (min-width: 600px) {
+  .orphan-brochure-wrapper .content .orphan-reasons .reasons-grid .reason .content .reason-title.bathing {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media (min-width: 600px) {
+  .orphan-brochure-wrapper .content .orphan-reasons .reasons-grid .reason .content .reason-title.bathing .number {
+    font-size: 3.8rem;
+    position: relative;
+    top: unset;
+    left: unset;
   }
 }
 
@@ -8856,6 +9178,105 @@ body.mobile-navbar .mobile-navigation {
     width: 50%;
     display: initial;
   }
+}
+
+.orphan-brochure-wrapper .content .occupational-therapist.bathing {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 50px 25px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+
+@media (min-width: 1100px) {
+  .orphan-brochure-wrapper .content .occupational-therapist.bathing {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+@media (min-width: 1400px) {
+  .orphan-brochure-wrapper .content .occupational-therapist.bathing {
+    padding-left: 15px;
+  }
+}
+
+.orphan-brochure-wrapper .content .occupational-therapist.bathing .content {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.orphan-brochure-wrapper .content .occupational-therapist.bathing .content .subheading {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #0086C5;
+  margin-bottom: 5px;
+}
+
+@media (min-width: 450px) {
+  .orphan-brochure-wrapper .content .occupational-therapist.bathing .content .subheading {
+    padding: 0;
+  }
+}
+
+.orphan-brochure-wrapper .content .occupational-therapist.bathing .content h6 {
+  font-size: 3.3rem;
+  font-weight: 600;
+  color: #17494D;
+}
+
+@media (min-width: 400px) {
+  .orphan-brochure-wrapper .content .occupational-therapist.bathing .content h6 {
+    font-size: 3.6rem;
+  }
+}
+
+.orphan-brochure-wrapper .content .occupational-therapist.bathing .content .mobile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 25px auto;
+  display: initial;
+}
+
+.orphan-brochure-wrapper .content .occupational-therapist.bathing .content .content-p {
+  font-size: 2rem;
+  line-height: 1.4;
+  font-weight: 400;
+  padding: 0;
+  margin: 0;
+}
+
+@media (min-width: 400px) {
+  .orphan-brochure-wrapper .content .occupational-therapist.bathing .content .content-p {
+    font-size: 2.2rem;
+    line-height: 1.5;
+  }
+}
+
+.orphan-brochure-wrapper .content .occupational-therapist.bathing .content .partnered-with {
+  margin-top: 40px;
+  margin-bottom: 10px;
+  font-size: 1.8rem;
+}
+
+.orphan-brochure-wrapper .content .occupational-therapist.bathing .image-wrapper {
+  display: none;
 }
 
 .orphan-brochure-wrapper .content .occupational-therapist-quote {
@@ -11964,6 +12385,7 @@ body.mobile-navbar .mobile-navigation {
   border-radius: 16px;
   overflow: hidden;
   width: 100%;
+  max-width: 500px;
   height: 400px;
   cursor: pointer;
   -webkit-transition: 0.2s;
@@ -12033,8 +12455,8 @@ body.mobile-navbar .mobile-navigation {
 
 @media (min-width: 800px) {
   .testimonials .testimonial-tile:hover {
-    -webkit-transform: translateY(-30px);
-            transform: translateY(-30px);
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
     -webkit-box-shadow: 0 3px 18px rgba(23, 73, 77, 0.4);
             box-shadow: 0 3px 18px rgba(23, 73, 77, 0.4);
   }
@@ -12256,7 +12678,20 @@ body.mobile-navbar .mobile-navigation {
   cursor: grabbing;
 }
 
-.review {
+@media (min-width: 700px) and (max-width: 999px) {
+  .landing-carousel .swiper-slide.review {
+    width: 70%;
+  }
+}
+
+@media (min-width: 1000px) {
+  .landing-carousel .swiper-slide.review {
+    max-width: 500px;
+    width: 60%;
+  }
+}
+
+.swiper-slide.review {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12264,8 +12699,8 @@ body.mobile-navbar .mobile-navigation {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 100%;
-  margin: 0 auto;
+  width: 95%;
+  margin: 0;
   background-color: #fff;
   -webkit-box-shadow: 0 3px 20px rgba(4, 82, 70, 0.08);
           box-shadow: 0 3px 20px rgba(4, 82, 70, 0.08);
@@ -12278,19 +12713,19 @@ body.mobile-navbar .mobile-navigation {
 }
 
 @media (min-width: 700px) and (max-width: 999px) {
-  .review {
+  .swiper-slide.review {
     width: 80%;
   }
 }
 
 @media (min-width: 1000px) {
-  .review {
+  .swiper-slide.review {
     max-width: 600px;
     width: 100%;
   }
 }
 
-.review .review-header {
+.swiper-slide.review .review-header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12299,7 +12734,7 @@ body.mobile-navbar .mobile-navigation {
           align-items: center;
 }
 
-.review .review-header .avatar {
+.swiper-slide.review .review-header .avatar {
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -12318,58 +12753,59 @@ body.mobile-navbar .mobile-navigation {
 }
 
 @media (min-width: 400px) {
-  .review .review-header .avatar {
+  .swiper-slide.review .review-header .avatar {
     width: 60px;
     height: 60px;
   }
 }
 
-.review .review-header .details {
+.swiper-slide.review .review-header .details {
   margin-left: 15px;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
 }
 
-.review .review-header .details .name {
+.swiper-slide.review .review-header .details .name {
   font-size: 1.6rem;
   font-weight: 500;
+  text-transform: capitalize;
 }
 
 @media (min-width: 400px) {
-  .review .review-header .details .name {
+  .swiper-slide.review .review-header .details .name {
     font-size: 1.9rem;
   }
 }
 
-.review .review-header .details .location {
+.swiper-slide.review .review-header .details .location {
   font-size: 1.6rem;
   font-weight: 400;
 }
 
 @media (min-width: 400px) {
-  .review .review-header .details .location {
+  .swiper-slide.review .review-header .details .location {
     font-size: 1.4rem;
   }
 }
 
-.review .review-header .rating {
+.swiper-slide.review .review-header .rating {
   margin-left: auto;
   width: 90px;
 }
 
 @media (min-width: 400px) {
-  .review .review-header .rating {
+  .swiper-slide.review .review-header .rating {
     width: auto;
   }
 }
 
-.review .review-content {
+.swiper-slide.review .review-content {
   padding: 15px 0;
   margin-bottom: auto;
 }
 
-.review .review-content p {
+.swiper-slide.review .review-content p {
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 1.6;
@@ -12377,12 +12813,12 @@ body.mobile-navbar .mobile-navigation {
 }
 
 @media (min-width: 400px) {
-  .review .review-content p {
+  .swiper-slide.review .review-content p {
     font-size: 1.8rem;
   }
 }
 
-.review .review-footer {
+.swiper-slide.review .review-footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -12392,12 +12828,12 @@ body.mobile-navbar .mobile-navigation {
   width: 100%;
 }
 
-.review .review-footer .date {
+.swiper-slide.review .review-footer .date {
   font-size: 1.6rem;
   font-weight: 500;
 }
 
-.review .review-footer .logo {
+.swiper-slide.review .review-footer .logo {
   margin-left: auto;
 }
 

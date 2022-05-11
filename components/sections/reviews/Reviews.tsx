@@ -9,7 +9,7 @@ interface ComponentProps {
 
 const Reviews = ({orphan} : ComponentProps) => {    
   return (
-    <div className='con-reg reviews-container'>
+    <div className='reviews-container'>
         <div className='reviews'>
         <div className='star-logo'>
             <Image 

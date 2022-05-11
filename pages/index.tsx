@@ -220,16 +220,28 @@ closeUspOverlay = () => {
         <HomeCollections />
       </div>
       <div className='banners con-reg'>
-        <div className='banner-vertical'>
-          <p className='subheading'>Limited Time Only</p>
-          <p className='heading'>Buy one get one half price</p>
-          <button>Learn More</button>
-        </div>
-        <div className='banner-vertical'>
-          <p className='subheading'>Supporting the British Heart Foundation</p>
-          <p className='heading'>Minimum £200 Trade in Offer </p>
-          <button className='bg-yellow3'>Learn More</button>
-        </div>
+        <Link href='/offers'>
+          <a className='banner-vertical'>
+            <Image 
+              src='/graphics/half-price-sale.svg'
+              alt='Half Price Sale'
+              width='568'
+              height='577'
+              layout='responsive'
+            />          
+          </a>
+        </Link>
+        <Link href='/trade-in'>
+          <a className='banner-vertical'>
+            <Image 
+                src='/graphics/trade-in.svg'
+                alt='Trade In'
+                width='568'
+                height='577'
+                layout='responsive'
+              />   
+          </a>
+        </Link>
       </div>
       <OccupationalTherapistSection />
       <Reviews orphan={false} />

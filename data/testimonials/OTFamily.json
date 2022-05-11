@@ -1,0 +1,39 @@
+[
+    {
+        "product" : "chair",
+        "testimonials" : [{
+            "image" : "/images/landing-pages/customers-chair/cx-1-mrs-c.png",
+            "name" : "Mrs C",
+            "text" : "Perfect chair for me. The comfort and health benefits are too good to not have"
+        },
+        {
+            "image" : "/images/landing-pages/customers-chair/cx-2-mr-e.png",
+            "name" : "Mr E",
+            "text" : "Just what I need as I suffer with Odema, So comfy and easy to get in and out of"
+        },
+        {
+            "image" : "/images/landing-pages/customers-chair/cx-3-mrs-g.png",
+            "name" : "Barabara G",
+            "text" : "The dream chair, makes me so comfy in my living room"
+        }]
+    },
+    {
+        "product" : "bath-lift",
+        "testimonials" : [{
+            "image" : "/images/landing-pages/customers-bathing/testimonial-2.png",
+            "name" : "Doris Watts",
+            "text" : "Doris Watts loved her home demo of our Bath Lift!"
+        },
+        {
+            "image" : "/images/landing-pages/customers-bathing/testimonial-3.png",
+            "name" : "Mrs Morris",
+            "text" : "A very happy Mrs Morris, who is seen giving the Bath Lift a go"
+        },
+        {
+            "image" : "/images/landing-pages/customers-bathing/testimonial-4.png",
+            "name" : "Mr and Mrs Frost",
+            "text" : "Mr and Mrs Frost giving each other a hand with the Bath Lift demo"
+        }]
+    }
+
+]

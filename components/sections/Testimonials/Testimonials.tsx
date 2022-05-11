@@ -4,8 +4,11 @@ import { useInView } from "react-intersection-observer";
 // Components
 import CarouselNormal from './carousel/CarouselNormal';
 import CarouselLandingPage from './carousel/CarouselLandingPage';
+import {TestimonialTile} from './TestimonialTile';
 import Modal from '../../modal/Modal'
 import VideoCarousel from '../../modal/video/VideoCarousel';
+// Data
+import testimonials from '../../../data/testimonials/testimonials.json';
 
 interface ComponentProps {
   pageType: string
@@ -31,7 +34,7 @@ const Testimonials = ({pageType} : ComponentProps) => {
   useEffect(() => {
     if (inView) {
       controls.start("visible");
-      console.log('Visibile')
+      
     }
   }, [controls, inView]);
 
@@ -49,12 +52,17 @@ const stagger = {
 
 
   return (
-    <motion.div ref={ref} animate={controls}  variants={stagger} initial="hidden" className='testimonials con-reg'>
+    <div ref={ref}  className='testimonials con-reg'>
         { pageType && pageType === 'normal' && <CarouselNormal setSelectedCx={setSelectedCx}  setShow={setShow} /> } 
         { pageType === 'orphan' &&  <CarouselLandingPage setSelectedCx={setSelectedCx}  setShow={setShow}/> } 
+        {pageType === 'bath-lift' && testimonials.map(cx => 
+            <>
+              {cx.product.name === 'The Riviera Plus' && <TestimonialTile cx={cx} setSelectedCx={setSelectedCx} setShow={setShow}/>} 
+            </>
+          )}
         <div className='carousel-pagination' id='testimonial-pagination'></div>
         {show &&  <Modal classNames='' setShow={setShow}><VideoCarousel  videoId={selectedCx.videoId} setShow={setShow} show={show}/></Modal>}
-  </motion.div>
+  </div>
   )
 }
 

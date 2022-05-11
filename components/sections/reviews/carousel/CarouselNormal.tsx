@@ -1,6 +1,8 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Review } from '../review/Review';
+import useSWR from 'swr'
+import axios from 'axios'
 // Data
 import reviews from "../../../../data/reviews/reviews.json";
 // Import Swiper styles
@@ -12,16 +14,28 @@ import "swiper/css/autoplay";
 // import swiper modules
 import { Navigation, Pagination, Autoplay } from "swiper";
 
+const fetcher = (url:string) =>  axios.get(url).then(res => res.data)
+
  const CarouselNormal = () => {
+    const { data, error } = useSWR('/api/reviews', fetcher)
+    
+    if(error) {
+        return <div>Error</div>
+    }
+
+    if(!data) {
+        return <div>Loading ...</div>
+    }
   return (
         <Swiper
-        slidesPerView={1}
+        slidesPerView={"auto"}
         spaceBetween={30}
         centeredSlides={true}
         navigation={{
             nextEl: '.slide-next',
             prevEl: '.slide-prev',
         }}
+        speed={600}
         loop={true}
         allowTouchMove={true}
         pagination={{
@@ -29,20 +43,20 @@ import { Navigation, Pagination, Autoplay } from "swiper";
         el: '.slider-pagination-dots',
         type: 'bullets',
         }}
-        breakpoints={{
-            1000: {
-                slidesPerView: 2,
-                spaceBetween:50
-            },
-            800: {
-                slidesPerView:1
-            }
-        }}
+        // breakpoints={{
+        //     1000: {
+        //         slidesPerView: 3,
+        //         spaceBetween:70
+        //     },
+        //     800: {
+        //         slidesPerView:1
+        //     }
+        // }}
         modules={[Navigation, Pagination]}
         className="mySwiper"
     > 
-    {reviews.map((review, index) => 
-            <SwiperSlide key={index}>
+    {data.map((review:any, index:number) => 
+            <SwiperSlide key={index} className='review'>
                 <Review review={review}/>
             </SwiperSlide>
         )}

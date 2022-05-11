@@ -5,10 +5,18 @@ import Image from 'next/image';
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
-
 // import swiper modules
 import { FreeMode, Pagination } from "swiper";
-const OtFamily = () => {
+// Components 
+import {Card} from './Card';
+// data 
+import data from '../../../data/testimonials/OTFamily.json';
+
+interface ComponentProps {
+    productType: string;
+}
+
+const OtFamily = ({productType}: ComponentProps) => {
   return (
         <Swiper
             slidesPerView={1}
@@ -39,49 +47,11 @@ const OtFamily = () => {
             modules={[Pagination]}
             className="mySwiper"
         >
-            <SwiperSlide>
-             <div className='cx-item'>
-                        <div className="image-wrapper">
-                            <Image 
-                                src='/images/landing-pages/customers-chair/cx-1-mrs-c.png'
-                                alt='Mrs C'
-                                layout='fill'
-                                objectFit='cover'
-                                objectPosition='center'
-                            />
-                        </div>
-                        <p>Perfect chair for me. The comfort and health benefits are too good to not have</p>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div className='cx-item'>
-                        <div className="image-wrapper">
-                            <Image 
-                                src='/images/landing-pages/customers-chair/cx-2-mr-e.png'
-                                alt='Mr E'
-                                layout='fill'
-                                objectFit='cover'
-                                objectPosition='center'
-                            />
-                        </div>
-                        <p>Just what I need as I suffer with Odema, So comfy and easy to get in and out of</p>
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div className='cx-item'>
-                        <div className="image-wrapper">
-                            <Image 
-                                src='/images/landing-pages/customers-chair/cx-3-mrs-g.png'
-                                alt='Barabara G'
-                                layout='fill'
-                                objectFit='cover'
-                                objectPosition='top'
-                            />
-                        </div>
-                        <p>The dream chair, makes me so comfy in my living room</p>
-                    </div>
-                </SwiperSlide>
-
+            {data.map(product => 
+                <>
+                    {product.product === productType && product.testimonials.map(cx =>  <SwiperSlide><Card cx={cx} /></SwiperSlide>)}
+                </>
+                )}
         </Swiper>
   )
 }

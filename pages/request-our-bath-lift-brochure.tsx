@@ -1,14 +1,18 @@
 import React from 'react'
 import Image from 'next/image';
 // Components
-
 import Reviews from '../components/sections/reviews/Reviews';
 import OtFamily from '../components/sections/customers/OtFamily';
 import OrphanBrochureForm from '../components/forms/OrphanBrochureForm';
 import Testimonials from '../components/sections/Testimonials/Testimonials';
+// Images
+import hero from '../public/images/products/bath-lifts/bath-lift-collection-hero.png';
+import bathlift1 from '../public/images/products/bath-lifts/the-riviera/bath-lift-1.png';
+import bathlift2 from '../public/images/products/bath-lifts/the-riviera/bath-lift-2.png';
+import bathlift3 from '../public/images/products/bath-lifts/the-riviera/bath-lift-3.png';
+import brochure from '../public/brochures/bath-lift-brochure.png';
 
-
-const requestOurChairBrochure = () => {
+const requestOurBathLiftBrochure = () => {
     return (
         <div className="orphan-brochure-wrapper">
             <div className='usp-header'>
@@ -79,94 +83,78 @@ const requestOurChairBrochure = () => {
         <div className='content'>
             <div className='hero orphan-con-reg'>
                 <Image 
-                    src='/images/landing-pages/hero-chair.jpeg'
-                    alt='Old man relaxing in an Oak Tree Chair'
+                    src={hero}
+                    alt='Lady in bath using bath lift'
                     layout='fill'
                     objectFit='cover'
-                    objectPosition='left'
+                    objectPosition='right'
+                    quality={100}
+                    priority
                 />
                 <div className='intro-box'>
-                    <h1>Transform Your Life with an Oak Tree Mobility Chair</h1>
-                    <p>Get your new Spring 2022 brochure today!</p>
+                    <div className='inner-border'></div>
+                    <h1>Transform Your Life with an Oak Tree Mobility Bath Lift</h1>
+                    <p className='blue-3'>Get your new Spring 2022 brochure today!</p>
                     {/* <div className='underline'></div> */}
                 </div>
             </div>
             <div className='health-benefits orphan-con-reg orphan-padding'>
                 <div className='inner-wrapper'>
-                <h2>Rise, Recline, Relax</h2>
-                <p>Our chairs have a variety of benefits some include:</p>
-                <div className='benefits-grid'>
+                <h2>Your Comfort is Our Strength</h2>
+                <div className='benefits-grid bathing'>
                     <div className='health-item'>
                         <div className='icon-wrapper'>
                             <Image 
-                                src='/icons/health/back-pain.svg'
-                                alt='Back Pain'
-                                width='60'
-                                height='60'
+                                src='/vectors/green-tick.svg'
+                                alt='Green Tick'
+                                width='35'
+                                height='35'
+                                layout='responsive'
                             />
                         </div>
-                        <p>Relieves Back Pain</p>
+                        <p>Quick and Simple Installation</p>
                     </div>
                     <div className='health-item'>
                         <div className='icon-wrapper'>
                             <Image 
-                                src='/icons/health/hip-and-knees.svg'
-                                alt='Support Hip and Knees'
-                                width='60'
-                                height='60'
+                                src='/vectors/green-tick.svg'
+                                alt='Green Tick'
+                                width='35'
+                                height='35'
+                                layout='responsive'
                             />
                         </div>
-                        <p>Support Hip & Knees</p>
+                        <p>Can be fitted to almost any bath</p>
                     </div>
                     <div className='health-item'>
                         <div className='icon-wrapper'>
                             <Image 
-                                src='/icons/health/breathing.svg'
-                                alt='Aids Breathing'
-                                width='60'
-                                height='60'
+                                src='/vectors/green-tick.svg'
+                                alt='Green Tick'
+                                width='35'
+                                height='35'
+                                layout='responsive'
                             />
                         </div>
-                        <p>Aids Breathing</p>
+                        <p>Enjoy sitting at the bottom of the bath</p>
                     </div>
                     <div className='health-item'>
                         <div className='icon-wrapper'>
                             <Image 
-                                src='/icons/health/sleep.svg'
-                                alt='Improves Sleep'
-                                width='60'
-                                height='60'
+                                src='/vectors/green-tick.svg'
+                                alt='Green Tick'
+                                width='35'
+                                height='35'
+                                layout='responsive'
                             />
                         </div>
-                        <p>Improves Sleep</p>
-                    </div>
-                    <div className='health-item'>
-                        <div className='icon-wrapper'>
-                            <Image 
-                                src='/icons/health/circulation.svg'
-                                alt='Improves Circulation'
-                                width='60'
-                                height='60'
-                            />
-                        </div>
-                        <p>Improves Circulation</p>
-                    </div>
-                    <div className='health-item'>
-                        <div className='icon-wrapper'>
-                            <Image 
-                                src='/icons/health/muscles.svg'
-                                alt='Relaxes Muscles'
-                                width='60'
-                                height='60'
-                            />
-                        </div>
-                        <p>Relaxes Muscles</p>
+                        <p>Gently get into the bath with ease</p>
                     </div>
                 </div>
                 </div>
                 <div className='image-wrapper orphan-con-reg'>
                    <Image 
-                    src='/images/landing-pages/lady-in-chair.jpeg'
+                    src={bathlift3}
                     alt='Lady In Chair'
                     layout='fill'
                     objectFit='cover'
@@ -176,9 +164,9 @@ const requestOurChairBrochure = () => {
             </div>
             <div className='quote bg-dark-green-1'>
                     <div className='inner-wrapper orphan-con-reg'>
-                        <p className='statement'>“When my chair came, it was absolutely wonderful to sit in. For the first time for ages, I felt really comfortable.”</p>
-                        <p className='author'>Mrs Atkins</p>
-                        <p className='author'>Bristol</p>
+                        <p className='statement'>“I didn’t know a Bath Lift would help my mum so much… she can now enjoy a hot bath once again.”</p>
+                        <p className='author'>Andrew Masters</p>
+                        <p className='author'>Nottingham</p>
                     </div>
             </div>
             <div className='brochure-usps orphan-con-reg orphan-padding'>
@@ -188,33 +176,34 @@ const requestOurChairBrochure = () => {
                         <ul>
                             <li>
                             <div className="num-wrapper">1.</div>
-                            <p>Browse our luxury styles, with <span className='oaktree-green'>over 100 fabrics and leather</span></p>
+                            <p>Learn all about how a Oak Tree bath lift can <span className='oaktree-green'>change your life</span>.</p>
                             </li>
                             <li>
                             <div className="num-wrapper">2.</div>
-                            <p><span className='oaktree-green'>Personalise your chair</span> with superb accessories such as heat and massage</p>
+                            <p>Take your time to <span className='oaktree-green'>discover our unique Riviera bath lift</span> with full colour photos.</p>
                             </li>
                             <li>
                             <div className="num-wrapper">3.</div>
-                            <p>Discover more about <span className='oaktree-green'>our clever motors</span> and how they can help you</p>
+                            <p>See all the <span className='oaktree-green'>options for installation and customisation</span> of your very own Oak Tree bath lift</p>
                             </li>
                         </ul>
                     </div>
                     <div className="brochure-wrapper">
                         <Image 
-                            src='/brochures/brochure-mockup.png'
+                            src={brochure}
                             alt='Chair Brochure'
                             layout='responsive'
-                            width={334}
-                            height={401}
+                            width='1000'
+                            height='1412'
+                            quality={100}
                         />
                     </div>
                 </div>
             </div>
-            <div className='testimonials orphan-con-reg orphan-padding'>
+            <div className='testimonials bathing orphan-con-reg orphan-padding'>
                 <h4>Hear what our customers have to say</h4>
                 <p className='subheading'>We believe in the power of individuality. We love that every Oak Tree customer has his or her own story to tell, and we build products to fit many different people. If you’d like to hear the stories of our customers, take a look at the testimonial videos.</p>
-                <Testimonials pageType='orphan'/>
+                <Testimonials pageType='bath-lift'/>
             </div>
             <div className='reviews-wrapper orphan-con-reg'>
                 <Reviews orphan={true} />
@@ -224,17 +213,8 @@ const requestOurChairBrochure = () => {
                 <div className='reasons-grid'>
                     <div className='reason'>
                         <div className='content'>
-                            
-                            <div className="icon-wrapper">
-                                <Image 
-                                    src='/icons/landing-page/british-made.svg'
-                                    alt='British Made'
-                                    width='110'
-                                    height='110'
-                                />
-                            </div>
-                            <p className='reason-title'><span className='number'>1.</span> British Made</p>
-                            <p className='reason-content'>Our furniture is proudly handmade in Great Britain by skilled craftspeople, using only the finest materials.</p>
+                            <p className='reason-title  bathing'><span className='number '>1.</span> British Made</p>
+                            <p className='reason-content'>Our Bath Lifts are proudly handmade in Great Britain by skilled engineers.</p>
                         </div>
                         <div className='image-wrapper'>
                             <Image 
@@ -243,69 +223,46 @@ const requestOurChairBrochure = () => {
                                 layout='fill'
                                 objectFit='cover'
                                 objectPosition='center'
+                                quality={100}
                             />
                         </div>
                     </div>
                     <div className='reason'>
                         <div className='content'>
-                            
-                            <div className="icon-wrapper">
-                                <Image 
-                                    src='/icons/landing-page/leg-lift.svg'
-                                    alt='British Made'
-                                    width='110'
-                                    height='110'
-                                />
-                            </div>
-                            <p className='reason-title'><span className='number'>2.</span> Our Unique High Leg Lift</p>
-                            <p className='reason-content'>If you suffer from poor circulation and swollen ankles, our patented high leg lift will make the difference.</p>
+                            <p className='reason-title  bathing'><span className='number'>2.</span> State-of-the-art belt</p>
+                            <p className='reason-content'>Gently lower yourself in and out of the bath for a truly relaxing experience.</p>
                         </div>
                         <div className='image-wrapper'>
                             <Image 
-                                src='/images/landing-pages/reasons-chair/reason-2.png'
-                                alt='Reason 2 - Unique High Leg Lift'
+                                src={bathlift2}
+                                alt='Reason 2 - State of the art belt'
                                 layout='fill'
                                 objectFit='cover'
                                 objectPosition='center'
+                                quality={100}
                             />
                         </div>
                     </div>
                     <div className='reason'>
                         <div className='content'>
-                           
-                            <div className="icon-wrapper">
-                                <Image 
-                                    src='/icons/landing-page/made-to-fit.svg'
-                                    alt='Made To Fit'
-                                    width='110'
-                                    height='110'
-                                />
-                            </div>
-                            <p className='reason-title'><span className='number'>3.</span> Made To Fit</p>
-                            <p className='reason-content'>Our furniture is proudly handmade in Great Britain by skilled craftspeople, using only the finest materials.</p>
+                            <p className='reason-title  bathing'><span className='number'>3.</span> Cab be fitted to almost any bath</p>
+                            <p className='reason-content'>With no expensive renovations, our lifts can even be fitted to corner and stand-alone baths.</p>
                         </div>
                         <div className='image-wrapper'>
                             <Image 
-                                src='/images/landing-pages/reasons-chair/reason-3.png'
+                                src={bathlift1}
                                 alt='Reason 3 - Made To Fit'
                                 layout='fill'
                                 objectFit='cover'
                                 objectPosition='center'
+                                quality={100}
                             />
                         </div>
                     </div>
                     <div className='reason'>
                         <div className='content'>
-                            <div className="icon-wrapper">
-                                <Image 
-                                    src='/icons/landing-page/free-delivery.svg'
-                                    alt='Free Delivery'
-                                    width='110'
-                                    height='110'
-                                />
-                            </div>
-                            <p className='reason-title'><span className='number'>4.</span> Free Delivery</p>
-                            <p className='reason-content'>Free delivery & installation is included with all orders. A two person, white glove delivery service will set up your chair.</p>
+                            <p className='reason-title  bathing'><span className='number'>4.</span> Free Delivery</p>
+                            <p className='reason-content'>Free delivery & installation is included with all orders. A two person, white glove delivery service will install your bath lift.</p>
                         </div>
                         <div className='image-wrapper'>
                             <Image 
@@ -319,15 +276,7 @@ const requestOurChairBrochure = () => {
                     </div>
                     <div className='reason'>
                         <div className='content'>                            
-                            <div className="icon-wrapper">
-                                <Image 
-                                    src='/icons/landing-page/trade-in.svg'
-                                    alt='£200 Trade in Offer'
-                                    width='110'
-                                    height='110'
-                                />
-                            </div>
-                            <p className='reason-title'><span className='number'>5.</span> Save £200</p>
+                            <p className='reason-title  bathing'><span className='number'>5.</span> Save £200</p>
                             <p className='reason-content'>If you trade-in your old furniture, we’ll donate it to the <span className='bhf-red'>British Heart Foundation</span> and give you £200 off your new product.</p>
                         </div>
                         <div className='image-wrapper'>
@@ -337,6 +286,7 @@ const requestOurChairBrochure = () => {
                                 layout='fill'
                                 objectFit='cover'
                                 objectPosition='center'
+                                quality={100}
                             />
                             <div className='bhf-overlay'>
                                 <Image 
@@ -357,7 +307,7 @@ const requestOurChairBrochure = () => {
                     <p>Get your FREE copy of our very latest brochure and enjoy our special offers…</p>
                 </div>
             </div>
-            <div className='occupational-therapist orphan-con-reg orphan-padding'>
+            <div className='occupational-therapist orphan-con-reg orphan-padding bathing'>
                 <div className='content'>
                     <p className='subheading'>Meet Samantha Shann</p>
                     <h6>Our Occupational Therapist</h6>
@@ -396,7 +346,7 @@ const requestOurChairBrochure = () => {
                     <h6>Occupational Therapists</h6>
                     <div className='ot-quote'>
                         <p className='quote-mark mark-left'>“</p>
-                        <p className='quote'>Too much standing or sitting can lead to poor circulation. A high Leg Lift raises the ankles above the level of your heart which helps the blood back to the heart, meaning your heart is not having to work as hard</p> 
+                        <p className='quote'>Bathing brings a world of benefits, from rest and relaxation to soothing away aches and pains. Yet for so many getting in and out can be a struggle that risks aggravating rather than alleviating pains. Oak Tree’s bath lift makes the whole experience easier on joints and muscles.</p> 
                         <p className='quote-mark mark-right'>”</p>
                     </div>
                     <p className='author'>Samantha Shann</p>
@@ -404,9 +354,9 @@ const requestOurChairBrochure = () => {
             </div>
             <div className='join-oak-tree orphan-con-reg orphan-padding'>
                 <h6>Join The Oak Tree Family</h6>
-                <p className='subheading'>See how our customers transformed their lives with an Oak Tree rise and recline chair…</p>
+                <p className='subheading'>See how our customers transformed their lives with an Oak Tree Bath Lift…</p>
                 <div className='cx-grid'>
-                    <OtFamily productType='chair' />
+                    <OtFamily productType='bath-lift'/>
                     <div className="carousel-pagination" id='ot-family-pagination'></div>
                 </div>
             </div>
@@ -466,4 +416,4 @@ const requestOurChairBrochure = () => {
 } 
 
 
-export default requestOurChairBrochure; 
+export default requestOurBathLiftBrochure; 
