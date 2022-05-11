@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Image from 'next/image';
 import Link from 'next/link'
 import {motion, useAnimation } from 'framer-motion';
@@ -8,23 +8,23 @@ import { useIsMedium } from '../../../utils/hooks';
 import desktopImage from '../../../public/occupational-therapist/sam-shann-1.png'
 import mobileImage from '../../../public/occupational-therapist/sam-shann-circle-2.png'
 import logo from '../../../public/occupational-therapist/ukts-logo.png';
-
+import Modal from '../../modal/Modal';
 import { QuoteCarousel } from './QuoteCarousel';
+import VideoCarousel from '../../modal/video/VideoCarousel';
 
 const OccupationalTherapistSection = () => {
-
+  const [isOpen, setOpenModal] = useState(false)
   const isMedium = useIsMedium() 
 
   const [ref, inView] = useInView({rootMargin: "-270px 0px" });
   const controls = useAnimation();
 
   useEffect(() => {
-    if(isMedium) {
-      console.log('isMedium')
-    }
+    // if(isMedium) {
+      
+    // }
     if (inView) {
       controls.start("visible");
-      console.log('Visibile')
     }
   }, [controls, inView, isMedium]);
 
@@ -63,6 +63,7 @@ const stagger = {
 
   return (
     <div className='occupational-therapist-wrapper'>
+      {isOpen && <Modal classNames="" setShow={setOpenModal}><VideoCarousel videoId="l9adE0mWzUY" setShow={setOpenModal} show={isOpen}></VideoCarousel></Modal> }
         <h3>Occupational Therapist Approved</h3>
         <div className='sam-shann-intro con-reg'>
           <div className='image-wrapper'>
@@ -77,7 +78,7 @@ const stagger = {
               />
             </div>
             <p className='greeting'>Meet Samantha Shann</p>
-            <button>
+            <button onClick={() => setOpenModal(true)}>
               <div className="icon-wrapper">
                 <Image
                   src='/buttons/play-btn-fill.svg'
