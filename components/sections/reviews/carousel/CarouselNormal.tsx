@@ -43,15 +43,6 @@ const fetcher = (url:string) =>  axios.get(url).then(res => res.data)
         el: '.slider-pagination-dots',
         type: 'bullets',
         }}
-        // breakpoints={{
-        //     1000: {
-        //         slidesPerView: 3,
-        //         spaceBetween:70
-        //     },
-        //     800: {
-        //         slidesPerView:1
-        //     }
-        // }}
         modules={[Navigation, Pagination]}
         className="mySwiper"
     > 

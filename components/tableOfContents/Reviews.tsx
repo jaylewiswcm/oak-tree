@@ -4,7 +4,7 @@ import Link from 'next/link';
 // Components
 import ProductReviews from '../sections/reviews/ProductReviews';
 import { Video } from '../../components/video/Video';
-
+import ReviewsAll from '../sections/reviews/Reviews';
 interface ComponentProps {
     isOpen: string
     openAccordian: any
@@ -32,7 +32,8 @@ const Reviews = ({isOpen, openAccordian, product}:ComponentProps) => {
         </button>
         <div className='product-content'>
             <div className='content'>
-                <ProductReviews />
+                <ReviewsAll orphan={false} />
+                {/* <ProductReviews /> */}
             </div>
             {product === 'chair' && 
                         <div className='product-testimonial con-reg'>

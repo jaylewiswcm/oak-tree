@@ -6,6 +6,10 @@ interface ComponentProps {
 }
 
 export const Review = ({review}:ComponentProps) => {
+    console.log(review)
+    if(!review) {
+        return <div>Loading...</div>
+    }
   return (
     <>
     <div className="review-header">

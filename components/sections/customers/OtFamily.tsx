@@ -49,7 +49,7 @@ const OtFamily = ({productType}: ComponentProps) => {
         >
             {data.map(product => 
                 <>
-                    {product.product === productType && product.testimonials.map(cx =>  <SwiperSlide><Card cx={cx} /></SwiperSlide>)}
+                    {product.product === productType && product.testimonials.map((cx, index) =>  <SwiperSlide key={index}><Card cx={cx} /></SwiperSlide>)}
                 </>
                 )}
         </Swiper>
