@@ -75,6 +75,7 @@ closeUspOverlay = () => {
       <Head>
         <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
       </Head>
+
       <div className='mobile-usp-banner'>
         <div className='bhf-banner'>
             <div className='logo-wrapper'>
@@ -130,6 +131,58 @@ closeUspOverlay = () => {
             <p>£250 Trade-in</p>
           </div>
         </div>
+      </div>
+      <div className='index-usp-banner'>
+          <div className='inner-div'>
+            <div className='usp-item'>
+              <div className='icon-wrapper'>
+                <Image 
+                  src='/icons/collection-usps/made-in-britain-new.svg'
+                  alt='British Design'
+                  layout='responsive'
+                  width='60'
+                  height='60'
+                />
+              </div>
+              <p>British Design</p>
+            </div>
+            <div className='usp-item'>
+              <div className='icon-wrapper'>
+                <Image 
+                  src='/icons/collection-usps/trade-in-new.svg'
+                  alt='Trade In Offer'
+                  layout='responsive'
+                  width='60'
+                  height='60'
+                />
+              </div>
+              <p>Trade In Offer</p>
+            </div>
+            <div className='usp-item'>
+              <div className='icon-wrapper'>
+                <Image 
+                  src='/icons/delivery/icon-delivery.svg'
+                  alt='Free Delivery'
+                  layout='responsive'
+                  width='60'
+                  height='60'
+                />
+              </div>
+              <p>Free Delivery</p>
+            </div>
+            <div className='usp-item'>
+              <div className='icon-wrapper'>
+                <Image 
+                  src='/icons/collection-usps/icon-warranty.svg'
+                  alt='10 Year Warranty'
+                  layout='responsive'
+                  width='60'
+                  height='60'
+                />
+              </div>
+              <p>10 Year Warranty</p>
+            </div>
+          </div>
       </div>
       <div className='home-intro'>
         <div className='intro-content'>

@@ -33,14 +33,26 @@ const OrphanBrochureForm = ({productType}: ComponentProps) => {
           <p>Completely FREE!</p>
         </li>
       </ul>
+      <div className='brochure-section'>
       <div className='brochure-image'>
         <Image 
-          src='/images/landing-pages/brochure.jpeg'
+          src={`/brochures/${productType}-brochure.png`}
           alt='Brochure'
           layout='responsive'
-          width={218}
-          height={130}
+          width={1000}
+          height={1412}
         />
+
+        </div>
+        <div className='brochure-open'>
+        <Image 
+          src={`/brochures/${productType}-brochure-open.png`}
+          alt='Brochure'
+          layout='responsive'
+          width={1000}
+          height={708}
+        />
+        </div>
       </div>
     </div>
     <BrochureRequestForm productType={productType} />

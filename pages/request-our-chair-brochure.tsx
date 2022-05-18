@@ -229,8 +229,9 @@ const requestOurChairBrochure = () => {
                                 <Image 
                                     src='/icons/landing-page/british-made.svg'
                                     alt='British Made'
-                                    width='110'
-                                    height='110'
+                                    layout='responsive'
+                                    width='106'
+                                    height='74'
                                 />
                             </div>
                             <p className='reason-title'><span className='number'>1.</span> British Made</p>
@@ -253,8 +254,9 @@ const requestOurChairBrochure = () => {
                                 <Image 
                                     src='/icons/landing-page/leg-lift.svg'
                                     alt='British Made'
-                                    width='110'
-                                    height='110'
+                                    layout='responsive'
+                                    width='106'
+                                    height='74'
                                 />
                             </div>
                             <p className='reason-title'><span className='number'>2.</span> Our Unique High Leg Lift</p>
@@ -277,8 +279,9 @@ const requestOurChairBrochure = () => {
                                 <Image 
                                     src='/icons/landing-page/made-to-fit.svg'
                                     alt='Made To Fit'
-                                    width='110'
-                                    height='110'
+                                    layout='responsive'
+                                    width='106'
+                                    height='74'
                                 />
                             </div>
                             <p className='reason-title'><span className='number'>3.</span> Made To Fit</p>
@@ -300,8 +303,9 @@ const requestOurChairBrochure = () => {
                                 <Image 
                                     src='/icons/landing-page/free-delivery.svg'
                                     alt='Free Delivery'
-                                    width='110'
-                                    height='110'
+                                    layout='responsive'
+                                    width='106'
+                                    height='74'
                                 />
                             </div>
                             <p className='reason-title'><span className='number'>4.</span> Free Delivery</p>
@@ -323,8 +327,9 @@ const requestOurChairBrochure = () => {
                                 <Image 
                                     src='/icons/landing-page/trade-in.svg'
                                     alt='£200 Trade in Offer'
-                                    width='110'
-                                    height='110'
+                                    layout='responsive'
+                                      width='106'
+                                    height='74'
                                 />
                             </div>
                             <p className='reason-title'><span className='number'>5.</span> Save £200</p>

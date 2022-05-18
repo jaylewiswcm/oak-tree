@@ -4,7 +4,11 @@
     "subheading" : "A Touch of Elegance",
     "desc": "All the hallmarks of a traditional chair - a button back cushion, full wings, and elegant wooden knuckles.",
     "url" : "/chairs/the-oak",
-    "icon": "/icons/products/icon-oak.svg"
+    "icon": "/icons/collection/leafs/icon-oak.svg",
+    "swatch": {
+        "src" : "coniston-floral-champagne.svg",
+        "name": "Coniston Floral Champagne"
+    } 
 },
 {
     "name" : "The Tulip",
@@ -12,7 +16,11 @@
     "subheading" : "Stylish and Modern",
     "desc": "A sleek, streamlined styling, these chairs are the very definition of modern sophistication and elegance.",
     "url" : "/chairs/the-tulip",
-    "icon": "/icons/products/icon-tulip.svg"
+    "icon": "/icons/collection/leafs/icon-tulip.svg",
+    "swatch": {
+        "src" : "boucle-cream.svg",
+        "name": "Boucle Cream"
+    } 
 },
 {
     "name" : "The Rowan",
@@ -20,7 +28,11 @@
     "subheading" : "Sleek and Sumptous",
     "desc": "A perfect balance of comfort and style, you’ll be hard pushed to find better than these rise and recline chairs.",
     "url" : "/chairs/the-rowan",
-    "icon": "/icons/products/icon-rowan.svg"
+    "icon": "/icons/collection/leafs/icon-rowan.svg",
+    "swatch": {
+        "src" : "coniston-patchwork-brown.svg",
+        "name": "Boucle Cream"
+    } 
 },
 {
     "name" : "The Cedar",
@@ -28,7 +40,11 @@
     "subheading" : "Distinguished and Charming",
     "desc": "With its combination of luxury materials and visual lightness, this chair offers an  aesthetic that fits well with most interior.",
     "url" : "/chairs/the-cedar",
-    "icon": "/icons/products/icon-cedar.svg"
+    "icon": "/icons/collection/leafs/icon-cedar.svg",
+    "swatch": {
+        "src" : "portobello-leaf-green.svg",
+        "name": "Potobello Leaf Green"
+    } 
 },
 {
     "name" : "The Maple",
@@ -36,5 +52,9 @@
     "subheading" : "Truly Superior Comfort",
     "desc": "If you’re looking for the perfect balance of comfort and style, you’ll be hard pushed to find better.",
     "url" : "/chairs/the-maple",
-    "icon": "/icons/products/icon-maple.svg"
+    "icon": "/icons/collection/leafs/icon-maple.svg",
+    "swatch": {
+        "src" : "forest-green-leather.svg",
+        "name": "Forrest Green Leather"
+    } 
 }]

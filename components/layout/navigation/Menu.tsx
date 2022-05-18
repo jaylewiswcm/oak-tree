@@ -34,28 +34,28 @@ const menuConfig = [
         menuName: 'About',
         menuType:'about',
         expand: true,
-        url: ''
+        url: '/about'
     },
     {
         id: 3,
         menuName: 'Chairs',
         menuType:'chairs',
         expand: true,
-        url: ''
+        url: '/chairs'
     },
     {
         id: 4,
         menuName: 'Beds',
         menuType:'beds',
         expand: true,
-        url: ''
+        url: '/adjustable-beds'
     },
     {
         id: 5,
         menuName: 'Bath Lifts',
         menuType:'bath-lifts',
         expand: true,
-        url: ''
+        url: '/bath-lifts'
     },
     {
         id: 6,

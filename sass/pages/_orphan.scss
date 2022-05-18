@@ -80,12 +80,15 @@
             text-align: center;
             h1 {
                 color: $white;
+                text-align: left;
+                line-height: 1.4;
             }
             p {
                 color: $white;
-                font-size: 1.6rem;
-                font-weight: 400;
+                font-size: 1.8rem;
+                font-weight: 300;
                 margin-top: 0px;
+                text-align: left;
             }
         }
     }
@@ -250,22 +253,41 @@
                 align-items: center;
                 width: 100%;
                 gap: 0;
+                margin: 20px auto;
+                margin-bottom:40px;
+                width: fit-content;
                 .health-item {
                     width: 100%;
-                    display: block;
-                    margin: 20px 0;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    // margin: 20px 0;
+                    padding: 10px 15px;
+                    @media(min-width: 600px) {
+                        flex-direction: row;
+                    }
                     .icon-wrapper {
                         width: 30px;
                         height: 30px;
-                        margin: 0 auto;
+                        margin: 0;
+                        margin-bottom: 5px;
+                        @media(min-width: 600px) {
+                            margin: 0;
+                            margin-right: 15px;
+                        }
                     }
                     p {
                         text-align: center;
-                        margin-top: 10px;
                         font-size:2.1rem;
                         font-weight: 500;
                         color: $dark-green-1;
                         width: 100%;
+                        margin: 0;
+                        padding:0;
+                        @media(min-width: 600px) {
+                            text-align: left;
+                        }
                     }
                 }
             }
@@ -504,10 +526,10 @@
                     display: flex;
                     border-bottom: 1px $lighter-grey solid;
 
-                    height: 390px;
+                    // height: 390px;
                     @media(min-width: 400px) {
                         padding: 40px 0;
-                        height: 400px;
+                        // height: 400px;
                     }
                     &:nth-of-type(even) {
                         flex-direction: row-reverse;
@@ -515,8 +537,8 @@
                   .content {
                       display: flex;
                       flex-direction: column;
-                      align-items: center;
-                      justify-content: center;
+                    //   align-items: center;
+                      justify-content: flex-end;
                       position: relative;
                       
                       width: 100%;
@@ -526,22 +548,41 @@
                         }
                       .number {
                         font-size: 2.8rem;
-                          color: $dark-green-2;
+                          color: $yellow-3;
                           @media(min-width: 600px) {
+                            color: $dark-green-1;
                             font-size: 3.8rem;
                             position: absolute;
                             top: 0;
-                            left:25px;
+                            right:10px;
+                            opacity: 0.2;
+                            font-size: 13rem;
+                            line-height: 0.7;
                         }
+                      }
+                      .number.bathing {
+                          color: $blue-3;
+                          @media(min-width: 600px) {
+                            color: $dark-green-1;
+                          }
+                      }
+                      .icon-wrapper {
+                        width: 40%;
+                          margin: 0 auto;
+                          @media(min-width: 600px) {
+                            width: 100px;
+                            margin:0;
+                          }
                       }
                     .reason-title {
                          font-size: 2.8rem;
-                          font-weight: 500;
+                          font-weight: 600;
                           color: $dark-green-1;
                           text-align: center;
                           margin-top: 5px;
                           @media(min-width: 600px) {
                             font-size: 2.6rem;
+                            text-align: left;
                         }
                       }
                       .reason-title.bathing {
@@ -563,12 +604,13 @@
                       .reason-content {
                           font-size: 1.8rem;
                           font-weight: 400;
-                          line-height: 1.6;
+                          line-height: 1.5;
                           text-align: center;
                           margin-top: 10px;
-                          opacity: 0.8;
+                          color: $darker-grey;
                           @media(min-width: 600px) {
-                            font-size: 1.8rem;
+                            font-size: 2rem;
+                            text-align: left;
                         }
                       }
                   }

@@ -49,7 +49,7 @@ export const QuoteCarousel = () => {
                 <Image
                     src='/vectors/white-arrow.svg'
                     alt='Previous Arrow'
-                    width='16.49'
+                    width='16.49' 
                     height='10.01'
                     layout='responsive'
                 />
@@ -70,48 +70,37 @@ export const QuoteCarousel = () => {
             </button>
         </div>
         <SwiperSlide className='quote'>
-        <div className='quote-mark'>
-            <Image
-            src={quoteMark}
-            alt='quoteMark'
-            layout='responsive'
-            width='50'
-            height='37'
-            />
-        </div>
-        <p className='quote-p'>Too much standing or sitting can lead to poor circulation. A high Leg Lift raises the ankles above the level of your heart which helps the blood back to the heart, meaning your heart is not having to work as hard</p>
-        <Link href='/chairs'>
-            <a className='selected-product'>
             <div className='product-image'>
+                <div className="image">
                 <Image
-                src='/images/collections/collection-chairs.png'
-                alt='Rise and Recline Chairs'
-                layout='fill'
-                objectFit='cover'
-                objectPosition='left'
-                />
+                        src='/images/collections/collection-chairs.png'
+                        alt='Rise and Recline Chairs'
+                        layout='fill'
+                        objectFit='cover'
+                        objectPosition='left'
+                    />
+                </div>
+                 <div className='quote-mark'>
+                     <div className='mark'>
+                        <Image
+                        src={quoteMark}
+                        alt='quoteMark'
+                        layout='responsive'
+                        width='50'
+                        height='37'
+                        />
+                    </div>
+                    </div>
             </div>
-            <div>
-                <p className='product-name'>Rise and Recline Chairs</p>
-                <p className='acting-link'>View our Chairs</p>
-            </div>
-            </a>
-        </Link>
+       
+        <div className='quote-text'>
+        <p className='quote-p'>Too much standing or sitting can lead to poor circulation. A high Leg Lift raises the ankles above the level of your heart which helps the blood back to the heart, meaning your heart is not having to work as hard</p>
+        <p className='quote-author'><span className='line'></span>Samantha Shann on our <Link href='/chairs'><a>chairs</a></Link></p>
+        </div>
         </SwiperSlide>
         <SwiperSlide className='quote'>
-        <div className='quote-mark'>
-            <Image
-            src={quoteMark}
-            alt='quoteMark'
-            layout='responsive'
-            width='50'
-            height='37'
-            />
-        </div>
-        <p className='quote-p'>If you have breathing problems, chest problems, or even back aches, just raising your upper body to a slight angle can allow you to get a much more comfortable night’s sleep. Being able to raise the top half of the body also enables us to get in and out of bed more easily.</p>
-        <Link href='/adjustable-beds'>
-            <a className='selected-product'>
-            <div className='product-image'>
+        <div className='product-image'>
+            <div className="image">
                 <Image
                 src='/images/collections/collection-beds.png'
                 alt='Adjustable Beds'
@@ -120,41 +109,50 @@ export const QuoteCarousel = () => {
                 objectPosition='left'
                 />
             </div>
-            <div>
-                <p className='product-name'>Adjustable Beds</p>
-                <p className='acting-link'>View our Beds</p>
+            <div className='quote-mark'>
+                     <div className='mark'>
+                        <Image
+                        src={quoteMark}
+                        alt='quoteMark'
+                        layout='responsive'
+                        width='50'
+                        height='37'
+                        />
+                    </div>
             </div>
-            </a>
-        </Link>
+        </div>
+        <div className='quote-text'>
+            <p className='quote-p'>If you have breathing problems, chest problems, or even back aches, just raising your upper body to a slight angle can allow you to get a much more comfortable night’s sleep. Being able to raise the top half of the body also enables us to get in and out of bed more easily.</p>
+            <p className='quote-author'><span className='line'></span>Samantha Shann on our <Link href='/adjustable-beds'><a>beds</a></Link></p>
+        </div>
         </SwiperSlide>
         <SwiperSlide className='quote'>
-        <div className='quote-mark'>
-            <Image
-            src={quoteMark}
-            alt='quoteMark'
-            layout='responsive'
-            width='50'
-            height='37'
-            />
-        </div>
-        <p className='quote-p'>Bathing brings a world of benefits, from rest and relaxation to soothing away aches and pains. Yet for so many getting in and out can be a struggle that risks aggravating rather than alleviating pains. Oak Tree’s bath lift makes the whole experience easier on joints and muscles.</p>
-        <Link href='/chairs'>
-            <a className='selected-product'>
-            <div className='product-image'>
+        <div className='product-image'>
+            <div className="image">
                 <Image
-                src='/images/collections/collection-bathlifts.png'
-                alt='Bath Lifts'
-                layout='fill'
-                objectFit='cover'
-                objectPosition='center'
+                    src='/images/collections/collection-bathlifts.png'
+                    alt='Bath Lifts'
+                    layout='fill'
+                    objectFit='cover'
+                    objectPosition='center'
                 /> 
             </div>
-            <div>
-                <p className='product-name'>Bath Lifts</p>
-                <p className='acting-link'>View our Bath Lifts</p>
+            <div className='quote-mark'>
+                     <div className='mark'>
+                        <Image
+                        src={quoteMark}
+                        alt='quoteMark'
+                        layout='responsive'
+                        width='50'
+                        height='37'
+                        />
+                    </div>
             </div>
-            </a>
-        </Link>
+        </div>
+        <div className='quote-text'>
+            <p className='quote-p'>Bathing brings a world of benefits, from rest and relaxation to soothing away aches and pains. Yet for so many getting in and out can be a struggle that risks aggravating rather than alleviating pains. Oak Tree’s bath lift makes the whole experience easier on joints and muscles.</p>
+            <p className='quote-author'><span className='line'></span>Samantha Shann on our  <Link href='/bath-lifts'><a>bath lifts</a></Link></p>
+        </div>
         </SwiperSlide>
     </Swiper>
   )

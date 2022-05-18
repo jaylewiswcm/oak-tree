@@ -20,21 +20,20 @@ const Header = () => {
 
     return (  
         <header>
-            {/* <div className='top-header'>
-                <div className='inner-wrapper con-reg'>
-                    <div className='header-bhf'>
-                        <Image 
+            <div className='top-header'>
+                <div className='supporting-bhf'>
+                    <p>Proudly Supporting</p>
+                    <div className='bhf-logo'>
+                        <Image
                             src='/bhf/bhf-logo.svg'
-                            alt='Oak Tree Mobility'
+                            alt='British Heart Foundation'
                             layout='responsive'
-                            width='106'
-                            height='29'
+                            width='95.98'
+                            height='26.36'
                         />
                     </div>
-                    <p>Questions? Call us FREE today on:</p>
-                    <Link href='tel:0800094999'><a className='number'>0800 094 999</a></Link>
                 </div>
-            </div> */}
+            </div>
             <div className='header-inner con-reg'>
                 <div className="header-logo">
                     <Link href="/">
@@ -62,7 +61,7 @@ const Header = () => {
                     <button className='main-cta'><p>Contact us</p></button>
                 </div> */}
                 <div className='header-phone-number'>
-                   <p className='number-support'>Call us <b>free</b>:</p>
+                   <p className='number-support'>Call us <b>free</b> on:</p>
                    <p className='number'>0800 094 999</p>
                 </div> 
                 <div className='mobile-menu-btn'>

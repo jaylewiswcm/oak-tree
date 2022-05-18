@@ -811,6 +811,19 @@ body.freeze {
   border-bottom: 1px #E3E3E3 solid;
 }
 
+.brochure-form-usps ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .brochure-form-usps ul li {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -828,9 +841,45 @@ body.freeze {
   font-weight: 400;
 }
 
-.brochure-form-usps .brochure-image {
-  width: 45%;
+.brochure-form-usps .brochure-section {
+  width: 50%;
   margin-left: auto;
+  position: relative;
+}
+
+.brochure-form-usps .brochure-image {
+  width: 85%;
+  margin-left: auto;
+  -webkit-box-shadow: -5px 2px 21px rgba(0, 0, 0, 0.18);
+          box-shadow: -5px 2px 21px rgba(0, 0, 0, 0.18);
+  position: relative;
+  z-index: 2;
+}
+
+@media (min-width: 1110px) {
+  .brochure-form-usps .brochure-image {
+    width: 55%;
+  }
+}
+
+.brochure-form-usps .brochure-open {
+  position: absolute;
+  top: 50%;
+  left: 25px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.18);
+          box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.18);
+  width: 85%;
+  z-index: 0;
+  opacity: 0.9;
+  display: none;
+}
+
+@media (min-width: 1110px) {
+  .brochure-form-usps .brochure-open {
+    display: initial;
+  }
 }
 
 .sticky-footer {
@@ -2380,37 +2429,28 @@ header {
 }
 
 header .top-header {
-  border-bottom: 1px solid #E3E3E3;
-}
-
-header .top-header .inner-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  display: none;
   padding: 8px 25px;
 }
 
-header .top-header .header-bhf {
-  margin-right: auto;
-  margin-left: 15px;
-  width: 130px;
+header .top-header .supporting-bhf {
+  margin-left: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-header .top-header p {
-  font-size: 1.6rem;
-}
-
-header .top-header .number {
-  font-size: 2.2rem;
+header .top-header .supporting-bhf p {
+  font-size: 1.4rem;
   font-weight: 500;
-  color: #00AD74;
-  margin-left: 10px;
+  margin-right: 8px;
+}
+
+header .top-header .supporting-bhf .bhf-logo {
+  width: 130px;
 }
 
 header .header-inner {
@@ -2422,6 +2462,7 @@ header .header-inner {
           align-items: center;
   padding: 15px 25px;
   height: 100%;
+  max-width: 1500px;
 }
 
 header .header-inner .mobile-menu-btn {
@@ -2465,9 +2506,13 @@ header .header-inner .logo {
   width: 100%;
 }
 
+header .header-inner .logo span {
+  display: none;
+}
+
 @media (min-width: 400px) {
   header .header-inner .logo {
-    width: 190px;
+    width: 170px;
   }
 }
 
@@ -2482,7 +2527,7 @@ header .header-inner .main-nav {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-right: auto;
+  margin: 0  auto;
   height: 40px;
   display: none;
 }
@@ -2506,14 +2551,14 @@ header .header-inner .main-nav .main-ul {
 
 header .header-inner .main-nav .main-ul li {
   padding: 0 20px;
-  padding: 0 15px;
+  padding: 0 18px;
   position: relative;
   cursor: pointer;
 }
 
 header .header-inner .main-nav .main-ul li a {
   font-size: 1.7rem;
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: 0px;
   color: #212923;
   color: #17494D;
@@ -2605,7 +2650,6 @@ header .header-inner .header-phone-number .number {
   color: #17494D;
   text-align: right;
   letter-spacing: 0.5px;
-  color: #00AD74;
 }
 
 header .header-inner .mobile-call-btn {
@@ -3067,22 +3111,22 @@ body.mobile-navbar .mobile-navigation {
 
 .dd-menu.about-dd {
   opacity: 1;
-  left: -155px;
+  left: -73px;
 }
 
 .dd-menu.chairs-dd {
-  left: -60px;
+  left: 7px;
   opacity: 1;
 }
 
 .dd-menu.beds-dd {
   opacity: 1;
-  left: 35px;
+  left: 92px;
 }
 
 .dd-menu.bath-lifts-dd {
   opacity: 1;
-  left: 130px;
+  left: 172px;
 }
 
 .bottom-bar {
@@ -3276,6 +3320,88 @@ body.mobile-navbar .mobile-navigation {
   display: none !important;
 }
 
+.index-usp-banner {
+  border-bottom: 1px #E3E3E3 solid;
+}
+
+.index-usp-banner .inner-div {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 8px 15px;
+}
+
+@media (min-width: 300px) {
+  .index-usp-banner .inner-div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+.index-usp-banner .inner-div .usp-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.index-usp-banner .inner-div .usp-item:last-of-type {
+  display: none;
+}
+
+@media (min-width: 620px) {
+  .index-usp-banner .inner-div .usp-item:last-of-type {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (min-width: 800px) {
+  .index-usp-banner .inner-div .usp-item {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.index-usp-banner .inner-div .usp-item .icon-wrapper {
+  width: 40px;
+  margin-right: 0px;
+  margin-bottom: 5px;
+}
+
+@media (min-width: 800px) {
+  .index-usp-banner .inner-div .usp-item .icon-wrapper {
+    margin-right: 10px;
+    margin-bottom: 0;
+  }
+}
+
+.index-usp-banner .inner-div .usp-item p {
+  text-align: center;
+  font-weight: 400;
+  color: #4c5151;
+  color: #17494D;
+}
+
 @media (min-width: 600px) {
   .mobile-usp-banner {
     display: none;
@@ -3314,6 +3440,7 @@ body.mobile-navbar .mobile-navigation {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  display: none;
 }
 
 .mobile-usp-banner .usps .usp {
@@ -4173,9 +4300,88 @@ body.mobile-navbar .mobile-navigation {
   padding: 0 15px;
 }
 
+.occupational-therapist-wrapper .advice-quotes .advice-pagination {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.occupational-therapist-wrapper .advice-quotes .advice-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  margin: 0 8px;
+  color: #F8F8F8;
+}
+
+.occupational-therapist-wrapper .advice-quotes .advice-pagination .swiper-pagination-bullet-active {
+  background-color: #17494D;
+}
+
+.occupational-therapist-wrapper .advice-quotes .swiper-slide-next, .occupational-therapist-wrapper .advice-quotes .swiper-slide-prev {
+  opacity: 0.4;
+}
+
+.occupational-therapist-wrapper .advice-quotes .nav-button {
+  width: 60px;
+  height: 60px;
+  background-color: #17494D;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 0px;
+  -webkit-box-shadow: 0 0 21px rgba(23, 73, 77, 0.2);
+          box-shadow: 0 0 21px rgba(23, 73, 77, 0.2);
+  z-index: 5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  opacity: 1;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+@media (min-width: 650px) {
+  .occupational-therapist-wrapper .advice-quotes .nav-button {
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    bottom: unset;
+  }
+}
+
+.occupational-therapist-wrapper .advice-quotes .nav-button .arrow-wrapper {
+  width: 30px;
+  height: 100%;
+}
+
+.occupational-therapist-wrapper .advice-quotes .prev-btn {
+  left: 15px;
+}
+
+.occupational-therapist-wrapper .advice-quotes .prev-btn .arrow-wrapper {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  padding-right: 2px;
+}
+
+.occupational-therapist-wrapper .advice-quotes .next-btn {
+  right: 15px;
+}
+
+.occupational-therapist-wrapper .advice-quotes .next-btn .arrow-wrapper {
+  padding-left: 2px;
+}
+
 .occupational-therapist-wrapper .advice-quotes .quotes-carousel {
   width: 100%;
   padding-top: 50px;
+  padding: 50px 0;
 }
 
 .occupational-therapist-wrapper .advice-quotes .quotes-carousel .quote {
@@ -4192,6 +4398,13 @@ body.mobile-navbar .mobile-navigation {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: #17494D;
+  background: #1a595d;
+  background: linear-gradient(317deg, #1a595d 0%, #0b4a4c 100%);
+  -webkit-box-shadow: 0 6px 21px rgba(26, 89, 93, 0.2);
+          box-shadow: 0 6px 21px rgba(26, 89, 93, 0.2);
+  border-radius: 19px;
+  overflow: hidden;
 }
 
 @media (min-width: 400px) and (max-width: 599px) {
@@ -4206,24 +4419,137 @@ body.mobile-navbar .mobile-navigation {
   }
 }
 
-.occupational-therapist-wrapper .advice-quotes .quotes-carousel .quote .quote-mark {
-  width: 40px;
+@media (min-width: 900px) {
+  .occupational-therapist-wrapper .advice-quotes .quotes-carousel .quote {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    height: auto;
+  }
+}
+
+.occupational-therapist-wrapper .advice-quotes .quotes-carousel .quote .product-image {
+  width: 100%;
+  height: 200px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media (min-width: 900px) {
+  .occupational-therapist-wrapper .advice-quotes .quotes-carousel .quote .product-image {
+    width: 35%;
+    min-height: 100%;
+  }
+}
+
+.occupational-therapist-wrapper .advice-quotes .quotes-carousel .quote .product-image .image {
+  position: relative;
+  min-height: 100%;
+  width: 100%;
+}
+
+@media (min-width: 900px) {
+  .occupational-therapist-wrapper .advice-quotes .quotes-carousel .quote .product-image .image {
+    -webkit-clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
+            clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
+  }
+}
+
+.occupational-therapist-wrapper .advice-quotes .quotes-carousel .quote .product-image .quote-mark {
+  width: 50px;
+  height: 50px;
   margin-bottom: 25px;
+  position: absolute;
+  bottom: -50px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: #fff;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (min-width: 900px) {
+  .occupational-therapist-wrapper .advice-quotes .quotes-carousel .quote .product-image .quote-mark {
+    top: 50%;
+    right: -5px;
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+    bottom: unset;
+    left: unset;
+  }
+}
+
+.occupational-therapist-wrapper .advice-quotes .quotes-carousel .quote .product-image .quote-mark .mark {
+  width: 50%;
   opacity: 0.4;
 }
 
-.occupational-therapist-wrapper .advice-quotes .quotes-carousel .quote .quote-p {
-  font-size: 2.2rem;
-  font-weight: 500;
+.occupational-therapist-wrapper .advice-quotes .quotes-carousel .quote .quote-text {
+  width: 100%;
+  padding: 25px;
+  padding-top: 35px;
+}
+
+@media (min-width: 900px) {
+  .occupational-therapist-wrapper .advice-quotes .quotes-carousel .quote .quote-text {
+    width: 70%;
+    padding-left: 35px;
+  }
+}
+
+.occupational-therapist-wrapper .advice-quotes .quotes-carousel .quote .quote-text .quote-p {
+  font-size: 1.8rem;
+  font-weight: 300;
   color: #17494D;
-  line-height: 1.5;
-  text-align: center;
+  color: #fff;
+  line-height: 1.4;
+  text-align: left;
 }
 
 @media (min-width: 550px) {
-  .occupational-therapist-wrapper .advice-quotes .quotes-carousel .quote .quote-p {
-    font-size: 2.4rem;
+  .occupational-therapist-wrapper .advice-quotes .quotes-carousel .quote .quote-text .quote-p {
+    font-size: 2rem;
   }
+}
+
+.occupational-therapist-wrapper .advice-quotes .quotes-carousel .quote .quote-text a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 2px;
+  color: inherit;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+}
+
+.occupational-therapist-wrapper .advice-quotes .quotes-carousel .quote .quote-text a:hover {
+  color: #fff;
+}
+
+.occupational-therapist-wrapper .advice-quotes .quotes-carousel .quote .quote-text .quote-author {
+  color: #32C4A2;
+  font-size: 1.8rem;
+  margin-top: 10px;
+}
+
+.occupational-therapist-wrapper .advice-quotes .quotes-carousel .quote .quote-text .quote-author .line {
+  width: 18px;
+  height: 2px;
+  background-color: #32C4A2;
+  display: inline-block;
+  margin-bottom: 5px;
+  margin-right: 15px;
 }
 
 .occupational-therapist-wrapper .advice-quotes .quotes-carousel .quote .selected-product {
@@ -4287,104 +4613,6 @@ body.mobile-navbar .mobile-navigation {
   line-height: 1.3;
   -webkit-transition: 0.2s;
   transition: 0.2s;
-}
-
-.occupational-therapist-wrapper .advice-quotes .quotes-carousel .quote .selected-product:hover .acting-link {
-  color: #00AD74;
-}
-
-.occupational-therapist-wrapper .advice-quotes .quotes-carousel .swiper-slide-next, .occupational-therapist-wrapper .advice-quotes .quotes-carousel .swiper-slide-prev {
-  opacity: 0.4;
-}
-
-.occupational-therapist-wrapper .advice-quotes .quotes-carousel .nav-button {
-  width: 60px;
-  height: 60px;
-  background-color: #17494D;
-  border-radius: 50%;
-  position: absolute;
-  bottom: 0px;
-  -webkit-box-shadow: 0 0 21px rgba(23, 73, 77, 0.2);
-          box-shadow: 0 0 21px rgba(23, 73, 77, 0.2);
-  z-index: 5;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  opacity: 1;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-
-@media (min-width: 650px) {
-  .occupational-therapist-wrapper .advice-quotes .quotes-carousel .nav-button {
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
-    bottom: unset;
-  }
-}
-
-@media (min-width: 900px) {
-  .occupational-therapist-wrapper .advice-quotes .quotes-carousel .nav-button {
-    opacity: 0;
-  }
-}
-
-.occupational-therapist-wrapper .advice-quotes .quotes-carousel .nav-button .arrow-wrapper {
-  width: 30px;
-  height: 100%;
-}
-
-.occupational-therapist-wrapper .advice-quotes .quotes-carousel .prev-btn {
-  left: 15px;
-}
-
-.occupational-therapist-wrapper .advice-quotes .quotes-carousel .prev-btn .arrow-wrapper {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-  padding-right: 2px;
-}
-
-.occupational-therapist-wrapper .advice-quotes .quotes-carousel .next-btn {
-  right: 15px;
-}
-
-.occupational-therapist-wrapper .advice-quotes .quotes-carousel .next-btn .arrow-wrapper {
-  padding-left: 2px;
-}
-
-@media (min-width: 900px) {
-  .occupational-therapist-wrapper .advice-quotes .quotes-carousel:hover .nav-button {
-    opacity: 0.5;
-  }
-  .occupational-therapist-wrapper .advice-quotes .quotes-carousel:hover .nav-button:hover {
-    opacity: 1;
-  }
-}
-
-.occupational-therapist-wrapper .advice-quotes .advice-pagination {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  margin: 0 auto;
-  margin-top: 50px;
-}
-
-.occupational-therapist-wrapper .advice-quotes .advice-pagination .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
-  margin: 0 8px;
-  color: #F8F8F8;
-}
-
-.occupational-therapist-wrapper .advice-quotes .advice-pagination .swiper-pagination-bullet-active {
-  background-color: #17494D;
 }
 
 .occupational-therapist-wrapper .health-benefits {
@@ -4514,20 +4742,19 @@ body.mobile-navbar .mobile-navigation {
 @media (min-width: 1000px) {
   .product-collections .heading {
     font-size: 4rem;
-    margin-bottom: 35px;
+    margin-bottom: 0px;
   }
 }
 
 .product-collections .sub-heading {
-  font-size: 2rem;
-  font-weight: 500;
+  font-size: 2.1rem;
+  font-weight: 400;
   margin: 0 auto;
   margin-bottom: 5px;
   text-align: center;
-  color: #17494D;
-  text-transform: uppercase;
-  text-align: center;
-  letter-spacing: .8px;
+  color: #407074;
+  margin-bottom: 35px;
+  max-width: 900px;
 }
 
 .product-collections .intro {
@@ -4839,12 +5066,69 @@ body.mobile-navbar .mobile-navigation {
 .product-collections .collections-grid .collection-item .image-wrapper {
   width: 100%;
   margin-bottom: 10px;
+  position: relative;
+}
+
+.product-collections .collections-grid .collection-item .image-wrapper .selected-swatch {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+}
+
+.product-collections .collections-grid .collection-item .image-wrapper .selected-swatch .swatch-tooltip {
+  position: absolute;
+  top: -80px;
+  right: 0;
+  min-width: 250px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #17494D;
+  padding: 15px;
+  border-radius: 2px;
+  -webkit-box-shadow: 0 2px 16px rgba(0, 0, 0, 0.18);
+          box-shadow: 0 2px 16px rgba(0, 0, 0, 0.18);
+  opacity: 0;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.product-collections .collections-grid .collection-item .image-wrapper .selected-swatch .swatch-tooltip p {
+  font-size: 16px;
+  font-weight: 400;
+  color: #fff;
+}
+
+.product-collections .collections-grid .collection-item .image-wrapper .selected-swatch .swatch-tooltip p .highlight {
+  color: #FEC51D;
+  font-weight: 400;
+}
+
+.product-collections .collections-grid .collection-item .image-wrapper .selected-swatch .swatch-tooltip .arrow {
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #17494D;
+  position: absolute;
+  bottom: -5px;
+  right: 25px;
+}
+
+.product-collections .collections-grid .collection-item .image-wrapper .selected-swatch:hover .swatch-tooltip {
+  opacity: 1;
 }
 
 .product-collections .collections-grid .collection-item .col-name-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -4859,12 +5143,92 @@ body.mobile-navbar .mobile-navigation {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 100%;
 }
 
 .product-collections .collections-grid .collection-item .col-name-wrapper .icon-wrapper {
   width: 50px;
   height: 50px;
   margin-left: auto;
+}
+
+.product-collections .collections-grid .collection-item .col-name-wrapper .title-and-swatches {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.product-collections .collections-grid .collection-item .col-name-wrapper .title-and-swatches .sub-heading {
+  margin-right: auto;
+}
+
+.product-collections .collections-grid .collection-item .col-name-wrapper .swatches {
+  margin-left: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.product-collections .collections-grid .collection-item .col-name-wrapper .swatches button {
+  padding: 0;
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #7C7C7C;
+  margin-left: 10px;
+}
+
+.product-collections .collections-grid .collection-item .col-name-wrapper .swatches .swatch {
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.18);
+          box-shadow: 0 0 2px rgba(0, 0, 0, 0.18);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 5px;
+  padding: 0;
+}
+
+.product-collections .collections-grid .collection-item .col-name-wrapper .swatches .swatch .inner {
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.product-collections .collections-grid .collection-item .col-name-wrapper .swatches .swatch.red {
+  border: 1px #850C1E solid;
+  background-color: #fff;
+}
+
+.product-collections .collections-grid .collection-item .col-name-wrapper .swatches .swatch.blue {
+  border: 1px #37667A solid;
+  background-color: #fff;
+}
+
+.product-collections .collections-grid .collection-item .col-name-wrapper .swatches .swatch.brown {
+  border: 1px #5B3D3E solid;
+  background-color: #fff;
 }
 
 .product-collections .collections-grid .collection-item .subheading {
@@ -4879,15 +5243,71 @@ body.mobile-navbar .mobile-navigation {
   font-weight: 600;
   font-family: "Euclid Circular A", "Helvetica", sans-serif;
   color: #17494D;
+  text-align: left;
+  width: 100%;
 }
 
 .product-collections .collections-grid .collection-item .desc {
   font-size: 1.8rem;
   margin-top: 10px;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   line-height: 1.6;
   max-width: 500px;
   opacity: 0.8;
+}
+
+.product-collections .collections-grid .collection-item .choose-from {
+  margin-bottom: 15px;
+}
+
+.product-collections .collections-grid .collection-item .choose-from .options-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.product-collections .collections-grid .collection-item .choose-from .options-grid .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-right: 15px;
+}
+
+.product-collections .collections-grid .collection-item .choose-from .options-grid .item .icon {
+  width: 50px;
+  height: 50px;
+  margin-right: 5px;
+  position: relative;
+}
+
+.product-collections .collections-grid .collection-item .choose-from .options-grid .item .icon .grey {
+  width: 50px;
+  height: 50px;
+}
+
+.product-collections .collections-grid .collection-item .choose-from .options-grid .item .icon .green {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 5;
+  width: 50px;
+  height: 50px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.product-collections .collections-grid .collection-item .choose-from .options-grid .item p {
+  color: #7C7C7C;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
 }
 
 .product-collections .collections-grid .collection-item .main-cta {
@@ -4904,6 +5324,58 @@ body.mobile-navbar .mobile-navigation {
 
 .product-collections .collections-grid .collection-item .main-cta p {
   font-size: 1.8rem;
+}
+
+.product-collections .collections-grid .collection-item .btn-leaf-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.product-collections .collections-grid .collection-item .btn-leaf-wrapper .leaf {
+  margin-left: auto;
+  width: 60px;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50%;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.product-collections .collections-grid .collection-item .btn-leaf-wrapper .leaf .icon-wrapper {
+  width: 90%;
+}
+
+.product-collections .collections-grid .collection-item:hover .btn-leaf-wrapper
+.leaf {
+  background-color: #CCF7E9;
+}
+
+.product-collections .collections-grid .collection-item:hover .choose-from .options-grid .item .icon .green {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  z-index: 5;
+  width: 50px;
+  height: 50px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.product-collections .collections-grid .collection-item:hover .choose-from .options-grid .item p {
+  color: #00AD74;
 }
 
 .product-collections .single-grid {
@@ -4994,7 +5466,6 @@ body.mobile-navbar .mobile-navigation {
       -ms-flex-pack: center;
           justify-content: center;
   margin-top: 25px;
-  margin-bottom: 50px;
   padding: 0;
 }
 
@@ -5143,6 +5614,7 @@ body.mobile-navbar .mobile-navigation {
 
 .product-collections .our-process {
   padding: 0px 15px;
+  margin-top: 50px;
 }
 
 .product-collections .our-process .heading {
@@ -8254,13 +8726,16 @@ body.mobile-navbar .mobile-navigation {
 
 .orphan-brochure-wrapper .form .form-title h1 {
   color: #fff;
+  text-align: left;
+  line-height: 1.4;
 }
 
 .orphan-brochure-wrapper .form .form-title p {
   color: #fff;
-  font-size: 1.6rem;
-  font-weight: 400;
+  font-size: 1.8rem;
+  font-weight: 300;
   margin-top: 0px;
+  text-align: left;
 }
 
 .orphan-brochure-wrapper .content {
@@ -8523,27 +8998,68 @@ body.mobile-navbar .mobile-navigation {
           align-items: center;
   width: 100%;
   gap: 0;
+  margin: 20px auto;
+  margin-bottom: 40px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
 .orphan-brochure-wrapper .content .health-benefits .benefits-grid.bathing .health-item {
   width: 100%;
-  display: block;
-  margin: 20px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10px 15px;
+}
+
+@media (min-width: 600px) {
+  .orphan-brochure-wrapper .content .health-benefits .benefits-grid.bathing .health-item {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
 }
 
 .orphan-brochure-wrapper .content .health-benefits .benefits-grid.bathing .health-item .icon-wrapper {
   width: 30px;
   height: 30px;
-  margin: 0 auto;
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+@media (min-width: 600px) {
+  .orphan-brochure-wrapper .content .health-benefits .benefits-grid.bathing .health-item .icon-wrapper {
+    margin: 0;
+    margin-right: 15px;
+  }
 }
 
 .orphan-brochure-wrapper .content .health-benefits .benefits-grid.bathing .health-item p {
   text-align: center;
-  margin-top: 10px;
   font-size: 2.1rem;
   font-weight: 500;
   color: #17494D;
   width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 600px) {
+  .orphan-brochure-wrapper .content .health-benefits .benefits-grid.bathing .health-item p {
+    text-align: left;
+  }
 }
 
 .orphan-brochure-wrapper .content .health-benefits .image-wrapper {
@@ -8894,13 +9410,11 @@ body.mobile-navbar .mobile-navigation {
   display: -ms-flexbox;
   display: flex;
   border-bottom: 1px #E3E3E3 solid;
-  height: 390px;
 }
 
 @media (min-width: 400px) {
   .orphan-brochure-wrapper .content .orphan-reasons .reasons-grid .reason {
     padding: 40px 0;
-    height: 400px;
   }
 }
 
@@ -8919,12 +9433,9 @@ body.mobile-navbar .mobile-navigation {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   position: relative;
   width: 100%;
 }
@@ -8938,21 +9449,47 @@ body.mobile-navbar .mobile-navigation {
 
 .orphan-brochure-wrapper .content .orphan-reasons .reasons-grid .reason .content .number {
   font-size: 2.8rem;
-  color: #407074;
+  color: #FEC51D;
 }
 
 @media (min-width: 600px) {
   .orphan-brochure-wrapper .content .orphan-reasons .reasons-grid .reason .content .number {
+    color: #17494D;
     font-size: 3.8rem;
     position: absolute;
     top: 0;
-    left: 25px;
+    right: 10px;
+    opacity: 0.2;
+    font-size: 13rem;
+    line-height: 0.7;
+  }
+}
+
+.orphan-brochure-wrapper .content .orphan-reasons .reasons-grid .reason .content .number.bathing {
+  color: #0086C5;
+}
+
+@media (min-width: 600px) {
+  .orphan-brochure-wrapper .content .orphan-reasons .reasons-grid .reason .content .number.bathing {
+    color: #17494D;
+  }
+}
+
+.orphan-brochure-wrapper .content .orphan-reasons .reasons-grid .reason .content .icon-wrapper {
+  width: 40%;
+  margin: 0 auto;
+}
+
+@media (min-width: 600px) {
+  .orphan-brochure-wrapper .content .orphan-reasons .reasons-grid .reason .content .icon-wrapper {
+    width: 100px;
+    margin: 0;
   }
 }
 
 .orphan-brochure-wrapper .content .orphan-reasons .reasons-grid .reason .content .reason-title {
   font-size: 2.8rem;
-  font-weight: 500;
+  font-weight: 600;
   color: #17494D;
   text-align: center;
   margin-top: 5px;
@@ -8961,6 +9498,7 @@ body.mobile-navbar .mobile-navigation {
 @media (min-width: 600px) {
   .orphan-brochure-wrapper .content .orphan-reasons .reasons-grid .reason .content .reason-title {
     font-size: 2.6rem;
+    text-align: left;
   }
 }
 
@@ -8994,15 +9532,16 @@ body.mobile-navbar .mobile-navigation {
 .orphan-brochure-wrapper .content .orphan-reasons .reasons-grid .reason .content .reason-content {
   font-size: 1.8rem;
   font-weight: 400;
-  line-height: 1.6;
+  line-height: 1.5;
   text-align: center;
   margin-top: 10px;
-  opacity: 0.8;
+  color: #4c5151;
 }
 
 @media (min-width: 600px) {
   .orphan-brochure-wrapper .content .orphan-reasons .reasons-grid .reason .content .reason-content {
-    font-size: 1.8rem;
+    font-size: 2rem;
+    text-align: left;
   }
 }
 

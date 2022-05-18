@@ -14,8 +14,10 @@ import { CollectionUsps } from '../../components/sections/usps/CollectionUsps';
 import OurProcess from '../../components/sections/process/OurProcess';
 import Modal from '../../components/modal/Modal';
 import PopupBrochureRequestForm from '../../components/forms/PopupBrochureRequestForm';
+import { CollectionGrid } from '../../components/collection/CollectionGrid';
 // images 
 import heroImage from '../../public/images/heros/chair-collection-hero.png'
+
 const Index = () => {
     const [show, setFormToShow] = useState(false)
     const isMedium = useIsMedium()
@@ -55,6 +57,7 @@ const Index = () => {
                             <p>Explore our Chairs</p>
                         </a>
                     </Link> */}
+                    
                 </div>
                 </div> 
                 <div className='hero-form'>
@@ -81,54 +84,38 @@ const Index = () => {
           <p>Completely FREE!</p>
         </li>
       </ul>
-      <div className='brochure-image'>
+      <div className="brochure-section">
+        <div className='brochure-image'>
+          <Image 
+            src='/brochures/chair-brochure.png'
+            alt='Brochure'
+            layout='responsive'
+            width={1000}
+            height={1412}
+          />
+        </div>
+        <div className='brochure-open'>
         <Image 
-          src='/images/landing-pages/brochure.jpeg'
-          alt='Brochure'
-          layout='responsive'
-          width={218}
-          height={130}
-        />
+            src='/brochures/chair-brochure-open.png'
+            alt='Brochure'
+            layout='responsive'
+            width={1000}
+            height={708}
+          />
+        </div>
       </div>
     </div>
                    <CollectionBrochureRequestForm productType='chair'/>
                 </div>
               </div>    
-              <p className='sub-heading' id='collection-top-chair'>Rise and Recline Chairs</p>  
+              {/* <p className='sub-heading' id='collection-top-chair'>Rise and Recline Chairs</p>   */}
               <h2 className='heading' >A Chair That is Truly Yours</h2>
-              <div className='collections-grid con-reg'>
-                  {chairs.map((product, index) => 
-                  <Link href={product!.url} key={index}>
-                    <a className='collection-item'>
-                        <div className='image-wrapper'>
-                            <Image 
-                                src={product!.collectionImage}
-                                alt={product!.name + 'Collections'}
-                                layout='responsive'
-                                width={1000}
-                                height={671}
-                                quality={100}
-                            />
-                        </div>
-                        <div className='col-name-wrapper'>
-                            <div className='name-wrapper'>
-                                <p className='subheading'>{product!.subheading}</p>
-                                <h2>{product!.name}</h2>
-                            </div>
-                            <span className='icon-wrapper'>
-                                <Image src={product.icon} alt={product.name} layout='responsive' width={40} height={40}/>
-                            </span>
-                        </div>
-               
-                        <p className='desc'>{product!.desc}</p>
-                       <div className='main-cta'><p>View Collection</p></div>
-                    </a>
-                    </Link>
-                    )}
-              </div>
-                <CollectionUsps />
-                <Reviews orphan={false}/>
+              <p className='sub-heading'>Our Chairs are fully customisable and made-to-fit your measurements - we have curated a collection of chairs that embed different styles suited for different living environments</p>
+                <CollectionGrid products={chairs}/>
                 <OurProcess />
+             
+                <Reviews orphan={false}/>
+                <CollectionUsps />
                 <Resources pageType='chairs' />
           </div>
           <FooterCollections />

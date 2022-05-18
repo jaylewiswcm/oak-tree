@@ -79,7 +79,7 @@ const requestOurBathLiftBrochure = () => {
                 </div>
                 </div>
             </div>
-        <OrphanBrochureForm productType='chair'/>
+        <OrphanBrochureForm productType='bath-lift'/>
         <div className='content'>
             <div className='hero orphan-con-reg'>
                 <Image 
@@ -213,7 +213,16 @@ const requestOurBathLiftBrochure = () => {
                 <div className='reasons-grid'>
                     <div className='reason'>
                         <div className='content'>
-                            <p className='reason-title  bathing'><span className='number '>1.</span> British Made</p>
+                            <div className="icon-wrapper">
+                                <Image 
+                                    src='/icons/landing-page/british-made.svg'
+                                    alt='British Made'
+                                    layout='responsive'
+                                    width='106'
+                                    height='74'
+                                />
+                            </div>
+                            <p className='reason-title'><span className='number bathing '>1.</span> British Made</p>
                             <p className='reason-content'>Our Bath Lifts are proudly handmade in Great Britain by skilled engineers.</p>
                         </div>
                         <div className='image-wrapper'>
@@ -228,8 +237,17 @@ const requestOurBathLiftBrochure = () => {
                         </div>
                     </div>
                     <div className='reason'>
-                        <div className='content'>
-                            <p className='reason-title  bathing'><span className='number'>2.</span> State-of-the-art belt</p>
+                        <div className='content'> 
+                            <div className="icon-wrapper">
+                                <Image 
+                                    src='/icons/landing-page/lift-belt.svg'
+                                    alt='Bath lift belt'
+                                    layout='responsive'
+                                    width='106'
+                                    height='74'
+                                />
+                            </div>
+                            <p className='reason-title'><span className='number bathing'>2.</span> State-of-the-art belt</p>
                             <p className='reason-content'>Gently lower yourself in and out of the bath for a truly relaxing experience.</p>
                         </div>
                         <div className='image-wrapper'>
@@ -244,8 +262,17 @@ const requestOurBathLiftBrochure = () => {
                         </div>
                     </div>
                     <div className='reason'>
-                        <div className='content'>
-                            <p className='reason-title  bathing'><span className='number'>3.</span> Cab be fitted to almost any bath</p>
+                        <div className='content'> 
+                            <div className="icon-wrapper">
+                                <Image 
+                                    src='/icons/landing-page/bath.svg'
+                                    alt='Fitted to almost any bath'
+                                    layout='responsive'
+                                    width='106'
+                                    height='74'
+                                />
+                            </div>
+                            <p className='reason-title'><span className='number bathing'>3.</span> Can be fitted to almost any bath</p>
                             <p className='reason-content'>With no expensive renovations, our lifts can even be fitted to corner and stand-alone baths.</p>
                         </div>
                         <div className='image-wrapper'>
@@ -260,8 +287,17 @@ const requestOurBathLiftBrochure = () => {
                         </div>
                     </div>
                     <div className='reason'>
-                        <div className='content'>
-                            <p className='reason-title  bathing'><span className='number'>4.</span> Free Delivery</p>
+                        <div className='content'> 
+                            <div className="icon-wrapper">
+                                <Image 
+                                    src='/icons/landing-page/free-delivery.svg'
+                                    alt='Free delivery'
+                                    layout='responsive'
+                                    width='106'
+                                    height='74'
+                                />
+                            </div>
+                            <p className='reason-title'><span className='number bathing'>4.</span> Free Delivery</p>
                             <p className='reason-content'>Free delivery & installation is included with all orders. A two person, white glove delivery service will install your bath lift.</p>
                         </div>
                         <div className='image-wrapper'>
@@ -275,8 +311,17 @@ const requestOurBathLiftBrochure = () => {
                         </div>
                     </div>
                     <div className='reason'>
-                        <div className='content'>                            
-                            <p className='reason-title  bathing'><span className='number'>5.</span> Save £200</p>
+                        <div className='content'>        
+                        <div className="icon-wrapper">
+                                <Image 
+                                    src='/icons/landing-page/trade-in.svg'
+                                    alt='Trade In'
+                                    layout='responsive'
+                                    width='106'
+                                    height='74'
+                                />
+                            </div>                     
+                            <p className='reason-title'><span className='number bathing'>5.</span> Save £200</p>
                             <p className='reason-content'>If you trade-in your old furniture, we’ll donate it to the <span className='bhf-red'>British Heart Foundation</span> and give you £200 off your new product.</p>
                         </div>
                         <div className='image-wrapper'>
@@ -300,13 +345,21 @@ const requestOurBathLiftBrochure = () => {
                     </div>
                 </div>
             </div>
-            <div className='sales-banner bg-red-2'>
-                <div className='orphan-con-reg'>
-                    <p className='subheading'>Limited Time Only</p>
+            <div className='orphan-con-reg'>
+                    {/* <p className='subheading'>Limited Time Only</p>
                     <h6>Half Price Sale</h6>
-                    <p>Get your FREE copy of our very latest brochure and enjoy our special offers…</p>
+                    <p>Get your FREE copy of our very latest brochure and enjoy our special offers…</p> */}
+                         <Image
+                        src='/graphics/half-price-sale-horizontal.svg'
+                        alt='Half Price Sale'
+                        layout='responsive'
+                        width='750'
+                        height='389'
+                    />
                 </div>
-            </div>
+            {/* <div className='sales-banner bg-red-2'>
+                
+            </div> */}
             <div className='occupational-therapist orphan-con-reg orphan-padding bathing'>
                 <div className='content'>
                     <p className='subheading'>Meet Samantha Shann</p>
