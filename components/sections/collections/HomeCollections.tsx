@@ -48,7 +48,6 @@ const HomeCollections = () => {
   useEffect(() => {
     if (inView) {
       controls.start("visible");
-      console.log('Visibile')
     }
   }, [controls, inView]);
 
@@ -70,6 +69,7 @@ const HomeCollections = () => {
                   objectFit='cover'
                   objectPosition='center'
                   quality='100'
+                  priority
                 />
               </div>
               <h3 className='collection-title'>Rise and Recline Chairs</h3>
@@ -91,6 +91,7 @@ const HomeCollections = () => {
                   objectFit='cover'
                   objectPosition='center'
                   quality='100'
+                  priority
                 />
               </div>
               <h3 className='collection-title'>Adjustable Beds</h3>
@@ -112,6 +113,7 @@ const HomeCollections = () => {
                   objectFit='cover'
                   objectPosition='center'
                   quality='100'
+                  priority
                 />
               </div>
               <h3 className='collection-title'>Bath Lifts</h3>

@@ -21,11 +21,17 @@ interface ComponentProps {
             options: Array<MenuArray>
         }
     }
+    keyId: number
+    menuIndex: number
     closeMenu: any
 }
 
-export const InnerMenus = ({menus, closeMenu}: ComponentProps) => {
+export const InnerMenus = ({menus, closeMenu, keyId,menuIndex }: ComponentProps) => {
     const {menu1, menu2} = menus
+
+    if(keyId !== menuIndex) {
+        return null;
+    }
 
   return (
     <>

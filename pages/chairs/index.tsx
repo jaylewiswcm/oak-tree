@@ -5,7 +5,6 @@ import { NextSeo } from 'next-seo';
 import { motion } from 'framer-motion';
 import { useIsMedium } from '../../utils/hooks';
 // Components
-import chairs from '../../data/products/chairs.json';
 import Reviews from '../../components/sections/reviews/Reviews';
 import FooterCollections from '../../components/sections/collections/FooterCollections';
 import Resources from '../../components/sections/resources/Resources';
@@ -17,6 +16,8 @@ import PopupBrochureRequestForm from '../../components/forms/PopupBrochureReques
 import { CollectionGrid } from '../../components/collection/CollectionGrid';
 // images 
 import heroImage from '../../public/images/heros/chair-collection-hero.png'
+// data
+import chairs from '../../data/products/chairs.json';
 
 const Index = () => {
     const [show, setFormToShow] = useState(false)
@@ -47,17 +48,6 @@ const Index = () => {
                     <p className='subheading'>Oak Tree</p>
                     <h1>Rise and Recline Chairs</h1>
                     <p className='intro-statement'>Transform Your Life with an Oak Tree Mobility Chair</p>
-                    
-                    {/* <button className='main-cta brochure-request-btn' onClick={() => setFormToShow(true)}>
-                        <p>Request a Brochure</p>
-                    </button>
-                    {show &&  <Modal classNames='form-modal' setShow={setFormToShow}><PopupBrochureRequestForm setShow={setFormToShow} /></Modal>}
-                    <Link href='#collection-top-chair'>
-                        <a className='main-cta cta-link'>
-                            <p>Explore our Chairs</p>
-                        </a>
-                    </Link> */}
-                    
                 </div>
                 </div> 
                 <div className='hero-form'>

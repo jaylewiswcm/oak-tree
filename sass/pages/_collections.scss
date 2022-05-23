@@ -1,8 +1,8 @@
 .product-collections {
     .heading {
-        font-size: 3rem;
+        font-size: 3.2rem;
         text-align: center;
-        margin-bottom: 15px; 
+        margin-bottom: 10px; 
         color: $dark-green-1;
         padding: 0 15px;
         @media(min-width: 1000px) {
@@ -11,7 +11,7 @@
         }
     }
     .sub-heading {
-        font-size: 2.1rem;
+        font-size: 2rem;
         font-weight: 400;
         margin: 0 auto;
         margin-bottom: 5px;
@@ -19,7 +19,10 @@
         color: $dark-green-2;  
         margin-bottom: 35px;
         max-width: 900px;
-        
+        padding: 0 15px;
+        @media(min-width: 900px) {
+            font-size: 2.2rem;
+        }
         // text-transform: uppercase;
         // text-align: center;
         // letter-spacing: .8px;
@@ -211,12 +214,12 @@
             .brochure-form-usps {
                 ul {
                     li {
-                        &:nth-of-type(3),  &:nth-of-type(4) {
-                            display: none;
-                            @media(min-width: 950px) {
-                                display: flex;
-                            }
-                        }
+                        // &:nth-of-type(3),  &:nth-of-type(4) {
+                        //     display: none;
+                        //     @media(min-width: 950px) {
+                        //         display: flex;
+                        //     }
+                        // }
                         p {
                             font-size: 1.6rem;
                             @media(min-width:1000px) {
@@ -325,18 +328,28 @@
                 }
                 .title-and-swatches{
                     display: flex;
+                    // flex-direction: column-reverse;
                     justify-content: center;
                     align-items: center;
                     width: 100%;
-                    .sub-heading {
+               
+                    .subheading {
                         margin-right: auto;
-                    }
-                    
+                    } 
                 }
                 .swatches {
                     margin-left: auto;
-                    display: flex;
+                    display: none;
                     align-items: center;
+                    @media(min-width: 480px) and (max-width: 599px) {
+                        display: flex;
+                    }
+                    @media(min-width: 600px ) and (max-width: 899px){
+                        display: none;
+                    }
+                    @media(min-width: 900px) {
+                        display: flex;
+                    }
                     button {
                         padding: 0;
                         margin: 0;
@@ -405,6 +418,11 @@
                 .options-grid {
                     display: flex;
                     width: 100%;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    @media(min-width: 900px ){
+                        flex-direction: row;
+                    }
                     .item {
                         display: flex;
                         align-items: center;

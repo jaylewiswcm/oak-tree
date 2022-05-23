@@ -4,6 +4,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import { BottomBar } from './ctaBar/BottomBar';
 import {UspOverlay} from '../overlay/UspOverlay';
+import BreadcrumbNav from './breadcrumbs/BreadcrumbNav';
 
 interface ComponentProps  {
     children: any
@@ -38,6 +39,7 @@ interface ComponentProps  {
         <>
           <div className='main'>
               <Header />
+              <BreadcrumbNav />
               { children }
               <BottomBar className={hideClass}/>
               {overlay && <UspOverlay className={overlayClass} hideOverlay={hideOverlay} />}

@@ -19,7 +19,6 @@ export const Menu = () => {
   )
 }
 
-
 // Menu Items
 const menuConfig = [
     {   

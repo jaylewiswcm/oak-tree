@@ -26,9 +26,10 @@ const Menu = ({ type, keyId , toggleVisibility, setVisible, setHover}: Component
        <div className='header-arrow'></div>
        <div className='menu-inner'>
          {menuConfig.map((menu, index) => 
-            <>
-            {menu.keyId === menuIndex && <InnerMenus menus={menu} closeMenu={toggleVisibility} />} 
-            </>
+          <InnerMenus menus={menu} closeMenu={toggleVisibility} key={index} keyId={menu.keyId} menuIndex={menuIndex} />
+            // <>
+            // {menu.keyId === menuIndex && <InnerMenus menus={menu} closeMenu={toggleVisibility} key={index}/>} 
+            // </>
           )}
 
        </div>

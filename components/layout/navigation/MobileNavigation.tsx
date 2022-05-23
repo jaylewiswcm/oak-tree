@@ -26,35 +26,34 @@ const MobileNavigation = ({isOpen, toggleMobileMenu} : ComponentProps) => {
 
     const navigation = [
         { subMenuHeader: 'About', submenu: [
-            {link: '/about', text: 'About Oak Tree Mobility' },
+            {link: '/about', text: 'About Us' },
             { link: '/occupational-therapist', text: 'Our Occupational Therapist' },
-            { link: '/british-made', text: 'British Made' },
             { link: '/trade-in', text: 'Trade In' },
-            { link: '/price-guide', text: 'Price Guide' },
             { link: '/testimonials-and-reviews', text: 'Testimonials And Reviews' },
+            { link: '/british-made', text: 'British Made' },
+            { link: '/price-guide-chair', text: 'Chair Price Guide' },
+            { link: '/price-guide-bed', text: 'Bed Price Guide' },
             { link: '/delivery-and-installation', text: 'Delivery and Installation' },
             { link: '/vat-exempt-eligibility', text: 'VAT Exempt Eligibilty' },
         ]},
         { subMenuHeader: 'Chairs', submenu: [
             {link: '/chairs', text: 'All Chairs' },
             {link: '/chairs/the-oak', text: 'The Oak' },
-            {link: '/chairs/the-maple', text: 'The Maple' },
-            {link: '/chairs/the-cedar', text: 'The Cedar' },
-            {link: '/chairs/the-rowan', text: 'The Rowan' },
-            {link: '/chairs/the-tulip', text: 'The Tulip' },
+            {link: '/chairs/the-oak', text: 'The Maple' },
+            {link: '/chairs/the-oak', text: 'The Cedar' },
+            {link: '/chairs/the-oak', text: 'The Rowan' },
+            {link: '/chairs/the-oak', text: 'The Tulip' },
         ]},
         { subMenuHeader: 'Beds', submenu: [
             {link: '/adjustable-beds', text: 'All Beds' },
-            {link: '/adjustable-beds/the-lilac', text: 'The Lilac' },
+            {link: '/adjustable-beds/the-hazel', text: 'The Lilac' },
             {link: '/adjustable-beds/the-hazel', text: 'The Hazel' },
-            {link: '/adjustable-beds/the-hesper', text: 'The Hesper' },
-            {link: '/adjustable-beds/the-oysterwood', text: 'The Oysterwood' },
+            {link: '/adjustable-beds/the-hazel', text: 'The Hesper' },
+            {link: '/adjustable-beds/the-hazel', text: 'The Oysterwood' },
         ]},
         { subMenuHeader: 'Bath Lifts', submenu: [
-            {link: '/bath-lifts', text: 'Bath Lifts' },
-            {link: '/bath-lifts/the-lilac', text: 'Oak Tree Bath Lifts' },
-            {link: '/bath-lifts/the-riviera-plus', text: 'The Riviera Plus' },
-            {link: '/bath-lifts/home-visit', text: 'Home Visit Bath Lifts' },
+            {link: '/bath-lifts', text: 'Oak Tree Bath Lifts' },
+            {link: '/bath-lifts/the-riviera-plus', text: 'The Riviera Plus' },  
         ]},
       ];
     
@@ -89,7 +88,7 @@ const MobileNavigation = ({isOpen, toggleMobileMenu} : ComponentProps) => {
                         <button onClick={() => openDropDownSubMenu(index)}>{listItem.subMenuHeader}<span className='arrow'><Image src='/vectors/down-arrow-black.svg' alt='Down Arrow' width='21' height='11'/></span></button>
                         <ul className='subNav'>
                             {listItem.submenu?.map( link => 
-                                <li key={link.link}><Link href={link.link}><a onClick={() => toggleMobileMenu()}>{link.text}</a></Link></li>
+                                <li key={link.text}><Link href={link.link}><a onClick={() => toggleMobileMenu()}>{link.text}</a></Link></li>
                             )}
                         </ul>
                  </li>

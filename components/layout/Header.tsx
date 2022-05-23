@@ -13,7 +13,6 @@ const Header = () => {
 
     const toggleMobileMenu = () => {
         let dd = document.body;
-        console.log(dd);
         dd.classList.toggle("mobile-navbar");
         setOpen(!isOpen);
     }

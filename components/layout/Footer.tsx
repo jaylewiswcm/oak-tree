@@ -69,13 +69,13 @@ const Footer = () => {
             <div className='footer-footnote'>
                 <div className='footnote-inner con-reg'>
                     <div className='socials'>
-                        <a href='https://www.facebook.com/OakTreeMobility/' className='social-wrapper facebook-blue'>
+                        <a href='https://www.facebook.com/OakTreeMobility/' className='social-wrapper facebook-blue' target='__blank' rel="noopener noreferrer">
                             <div className='icon-wrapper'>
                                 <Image src='/icons/socials/facebook.svg' alt='Facebook' width='25' height='25'/>
                             </div>
                             Facebook
                         </a>
-                        <a href='https://www.youtube.com/c/oaktreemobility' className='social-wrapper youtube-red'>
+                        <a href='https://www.youtube.com/c/oaktreemobility' className='social-wrapper youtube-red' target='__blank' rel="noopener noreferrer">
                             <div className='icon-wrapper'>
                                 <Image src='/icons/socials/youtube.svg' alt='Youtube' width='25' height='25'/>
                             </div>
@@ -110,19 +110,15 @@ const menuConfig = [
         ]
     },
     { menuHeader: 'Chairs', menu: [
-        {link: '/chairs/recliner-chairs', text: 'Recliner Chairs' },
-        {link: '/chairs/riser-recliner-chairs', text: 'Riser Recliner Chairs' },
-        {link: '/chairs', text: 'All Chairs' },
+        {link: '/chairs', text: 'Riser Recliner Chairs' },
         {link: '/price-guide-chairs', text: 'Price Guide Chairs' },
     ]},
     { menuHeader: 'Beds', menu: [
         {link: '/adjustable-beds', text: 'Adjustable Beds' },
-        {link: '/adjustable-beds', text: 'All Beds' },
         {link: '/price-guide-beds', text: 'Price Guide Beds' },
     ]},
     { menuHeader: 'Bath Lifts', menu: [
-        {link: '/bath-lifts', text: 'Bath Lift Range' },
+        {link: '/bath-lifts', text: 'Oak Tree Bath Lifts' },
         {link: '/bath-lifts/the-riviera-plus', text: 'The Riviera Plus' },
-        {link: '/bath-lifts/home-visit', text: 'Oak Tree Bath Lifts' },
     ]},
   ];

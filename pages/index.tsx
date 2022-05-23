@@ -184,7 +184,10 @@ closeUspOverlay = () => {
             </div>
           </div>
       </div>
-      <div className='home-intro'>
+      <div className='stand-in-hero'>
+        <h1>Hero section in progress</h1>
+      </div>
+      <div className='home-intro hide'>
         <div className='intro-content'>
           <div className='hero-bg'>
             <Image 

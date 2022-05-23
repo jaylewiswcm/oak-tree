@@ -35,7 +35,6 @@ export const CollectionItem = ({product}: ComponentProps ) => {
                   <div className='arrow'></div>
               </div>
               </div>
-        
           </div>
           <div className='col-name-wrapper'>
             <div className='title-and-swatches'>
@@ -47,15 +46,10 @@ export const CollectionItem = ({product}: ComponentProps ) => {
                 <button>+ 37 more</button>
               </div>
             </div>
-            
               <div className='name-wrapper'>
                   <h2>{product!.name}</h2>
               </div>
-              {/* <span className='icon-wrapper'>
-                  <Image src={product.icon} alt={product.name} layout='responsive' width={40} height={40}/>
-              </span> */}
           </div>
- 
           <p className='desc'>{product!.desc}</p>
           <div className='choose-from'>
             <p>Choose from:</p>
@@ -88,7 +82,7 @@ export const CollectionItem = ({product}: ComponentProps ) => {
                         <Image src={fabricGrey} alt='Fabric' layout='responsive' width='50' height='50'/>
                         </div>
                         <div className='green'>
-                        <Image src={ fabricGreen} alt='Fabric' layout='responsive' width='50' height='50'/>
+                        <Image src={fabricGreen} alt='Fabric' layout='responsive' width='50' height='50'/>
                         </div>
                     </div>
                     <p className='option-p'>40 Fabrics</p>
