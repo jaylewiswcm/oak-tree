@@ -21,7 +21,7 @@ const Reviews = ({orphan} : ComponentProps) => {
         </div>
             <p className='oaktree-green subheading'>Rated Excellent on Trustpilot</p>
             <p className='statement'>Hear what our customers have to say</p>
-            <p className='trustscore'>TrustScore 4.5 | 1000 reviews</p>
+            <p className='trustscore'>TrustScore 4.7 | 2,163 reviews</p>
             <div className='review-carousel'>
                 <div className='left-hider  hider'>
                     <button className='slide-prev'>
