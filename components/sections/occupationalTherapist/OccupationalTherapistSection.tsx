@@ -5,7 +5,7 @@ import {motion, useAnimation } from 'framer-motion';
 import { useInView } from "react-intersection-observer";
 import { useIsMedium } from '../../../utils/hooks';
 // images 
-import desktopImage from '../../../public/occupational-therapist/sam-shann-1.png'
+import desktopImage from '../../../public/occupational-therapist/sam-shann-circle-b-and-w.png'
 import mobileImage from '../../../public/occupational-therapist/sam-shann-circle-2.png'
 import logo from '../../../public/occupational-therapist/ukts-logo.png';
 import Modal from '../../modal/Modal';
@@ -65,7 +65,8 @@ const stagger = {
     <div className='occupational-therapist-wrapper'>
       {isOpen && <Modal classNames="" setShow={setOpenModal}><VideoCarousel videoId="l9adE0mWzUY" setShow={setOpenModal} show={isOpen}></VideoCarousel></Modal> }
         <h3>Occupational Therapist Approved</h3>
-        <div className='sam-shann-intro con-reg'>
+        <p className='oc-intro'>All of our products are approved by Samantha Shann, occupational therapist. Samantha fully tests and evaluates everything we offer, ensuring it satisfies the high standards of an independent health professional.</p>
+        {/* <div className='sam-shann-intro con-reg'>
           <div className='image-wrapper'>
             <div className='image'>
               <Image
@@ -106,9 +107,19 @@ const stagger = {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
         <div className='advice-quotes'>
+          <div className='sam-shann-image'>
+              <Image
+                src={desktopImage}
+                alt='Samantha Shann'
+                layout='responsive'
+                width='140'
+                height='140'
+                quality={100}
+              />
+          </div>
           <h4>Advice From Samantha</h4>
             <QuoteCarousel />
             <div className='advice-pagination'></div>
@@ -128,6 +139,26 @@ const stagger = {
                 />
               </div>
               <p>Relieves Back Pain</p>
+              <ul>
+                <li>
+                  <span className='tick'>
+                    <Image src='/vectors/red-tick.svg' alt='Tick 1' layout='responsive' width='30' height='30'/>
+                  </span>
+                  <p>Chairs</p>
+                </li>
+                <li>
+                  <span className='tick'>
+                    <Image src='/vectors/red-tick.svg' alt='Tick 2' layout='responsive' width='30' height='30'/>
+                  </span>
+                  <p>Beds</p>
+                </li>
+                <li>
+                  <span className='tick'>
+                    <Image src='/vectors/red-tick.svg' alt='Tick 3' layout='responsive' width='30' height='30'/>
+                  </span>
+                  <p>Bath Lifts</p>
+                </li>
+              </ul>
             </div>
             <div className='benefit'>
               <div className='icon-wrapper'>
@@ -140,6 +171,20 @@ const stagger = {
                 />
               </div>
               <p>Support Hip & Knees</p>
+              <ul>
+                <li>
+                  <span className='tick'>
+                    <Image src='/vectors/red-tick.svg' alt='Tick 1' layout='responsive' width='30' height='30'/>
+                  </span>
+                  <p>Chairs</p>
+                </li>
+                <li>
+                  <span className='tick'>
+                    <Image src='/vectors/red-tick.svg' alt='Tick 2' layout='responsive' width='30' height='30'/>
+                  </span>
+                  <p>Beds</p>
+                </li>
+              </ul>
             </div>
             <div className='benefit'>
               <div className='icon-wrapper'>
@@ -152,6 +197,26 @@ const stagger = {
                 />
               </div>
               <p>Improves Circulation</p>
+              <ul>
+                <li>
+                  <span className='tick'>
+                    <Image src='/vectors/red-tick.svg' alt='Tick 1' layout='responsive' width='30' height='30'/>
+                  </span>
+                  <p>Chairs</p>
+                </li>
+                <li>
+                  <span className='tick'>
+                    <Image src='/vectors/red-tick.svg' alt='Tick 2' layout='responsive' width='30' height='30'/>
+                  </span>
+                  <p>Beds</p>
+                </li>
+                <li>
+                  <span className='tick'>
+                    <Image src='/vectors/red-tick.svg' alt='Tick 3' layout='responsive' width='30' height='30'/>
+                  </span>
+                  <p>Bath Lifts</p>
+                </li>
+              </ul>
             </div>
             <div className='benefit'>
               <div className='icon-wrapper'>
@@ -164,6 +229,20 @@ const stagger = {
                 />
               </div>
               <p>Improves Sleep</p>
+              <ul>
+                <li>
+                  <span className='tick'>
+                    <Image src='/vectors/red-tick.svg' alt='Tick 1' layout='responsive' width='30' height='30'/>
+                  </span>
+                  <p>Chairs</p>
+                </li>
+                <li>
+                  <span className='tick'>
+                    <Image src='/vectors/red-tick.svg' alt='Tick 2' layout='responsive' width='30' height='30'/>
+                  </span>
+                  <p>Beds</p>
+                </li>
+              </ul>
             </div>
           </div>
           <p className='find-more'>Plus many more, find <Link href='/occupational-therapist'><a>all the benefits here</a></Link></p>

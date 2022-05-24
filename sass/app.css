@@ -1072,7 +1072,7 @@ a {
   text-decoration: none;
   font-size: inherit;
   font-weight: 400;
-  color: #7C7C7C;
+  color: #7F7F7F;
   position: relative;
   cursor: pointer;
 }
@@ -3103,7 +3103,7 @@ body.mobile-navbar .mobile-navigation {
   margin: 10px 0;
   font-size: 14px;
   font-weight: 400;
-  color: #7C7C7C;
+  color: #7F7F7F;
   text-decoration: none;
   text-transform: capitalize;
 }
@@ -3122,7 +3122,7 @@ body.mobile-navbar .mobile-navigation {
   margin-right: 10px;
   font-size: 10px;
   line-height: 1;
-  color: #7C7C7C;
+  color: #7F7F7F;
   pointer-events: none;
 }
 
@@ -3130,7 +3130,7 @@ body.mobile-navbar .mobile-navigation {
   margin: auto 10px;
   font-size: 12px;
   line-height: 1;
-  color: #7C7C7C;
+  color: #7F7F7F;
   pointer-events: none;
 }
 
@@ -4057,13 +4057,8 @@ body.mobile-navbar .mobile-navigation {
   width: 100%;
 }
 
-.banners .banner-vertical:first-of-type {
-  margin-bottom: 30px;
-}
-
 @media (min-width: 700px) {
   .banners .banner-vertical:first-of-type {
-    margin-right: 30px;
     margin-bottom: 0;
   }
 }
@@ -4074,16 +4069,40 @@ body.mobile-navbar .mobile-navigation {
   }
 }
 
+.banners .plus {
+  width: 40px;
+  height: 40px;
+  margin: 15px auto;
+}
+
+@media (min-width: 700px) {
+  .banners .plus {
+    margin: auto 15px;
+  }
+}
+
 .occupational-therapist-wrapper {
   margin: 60px auto;
 }
 
 .occupational-therapist-wrapper h3 {
   font-family: "Euclid Circular A", "Helvetica", sans-serif;
-  font-size: 3rem;
+  font-size: 3.2rem;
   font-weight: 600;
   color: #17494D;
   text-align: center;
+  padding: 0 15px;
+}
+
+.occupational-therapist-wrapper .oc-intro {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.6;
+  text-align: center;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 10px;
   padding: 0 15px;
 }
 
@@ -4316,6 +4335,21 @@ body.mobile-navbar .mobile-navigation {
   background-color: #E5FCFF;
   padding: 50px 0;
   margin: 50px auto;
+  position: relative;
+  margin-top: 150px;
+  padding-top: 130px;
+}
+
+.occupational-therapist-wrapper .advice-quotes .sam-shann-image {
+  position: absolute;
+  top: -110px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  border: 10px #E5FCFF solid;
 }
 
 .occupational-therapist-wrapper .advice-quotes h4 {
@@ -4735,6 +4769,32 @@ body.mobile-navbar .mobile-navigation {
   color: #17494D;
   text-align: center;
   margin-top: 10px;
+}
+
+.occupational-therapist-wrapper .health-benefits .benefits-grid .benefit ul {
+  margin-top: 10px;
+}
+
+.occupational-therapist-wrapper .health-benefits .benefits-grid .benefit ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.occupational-therapist-wrapper .health-benefits .benefits-grid .benefit ul li .tick {
+  width: 35px;
+  height: 35px;
+  margin-right: 10px;
+}
+
+.occupational-therapist-wrapper .health-benefits .benefits-grid .benefit ul li p {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #7F7F7F;
+  margin: 0;
 }
 
 .occupational-therapist-wrapper .health-benefits .find-more {
@@ -5238,7 +5298,7 @@ body.mobile-navbar .mobile-navigation {
   margin: 0;
   font-size: 1.6rem;
   font-weight: 400;
-  color: #7C7C7C;
+  color: #7F7F7F;
   margin-left: 10px;
 }
 
@@ -5375,7 +5435,7 @@ body.mobile-navbar .mobile-navigation {
 }
 
 .product-collections .collections-grid .collection-item .choose-from .options-grid .item p {
-  color: #7C7C7C;
+  color: #7F7F7F;
   -webkit-transition: 0.1s;
   transition: 0.1s;
 }
@@ -6551,7 +6611,7 @@ body.mobile-navbar .mobile-navigation {
   font-weight: 400;
   font-size: 1.7rem;
   text-align: center;
-  color: #7C7C7C;
+  color: #7F7F7F;
 }
 
 .table-of-contents-nav ul li button.active {
@@ -7614,7 +7674,7 @@ body.mobile-navbar .mobile-navigation {
 .table-of-contents .toc .product-content .fabric-carousel .fabric .type {
   font-size: 1.8rem;
   font-weight: 500;
-  color: #7C7C7C;
+  color: #7F7F7F;
   margin-top: 2px;
   text-align: center;
 }
@@ -8336,7 +8396,7 @@ body.mobile-navbar .mobile-navigation {
 }
 
 .table-of-contents .toc .motor-container .comp-table .motor ul .not-included p {
-  color: #7C7C7C;
+  color: #7F7F7F;
   width: calc(100% - 20px);
 }
 

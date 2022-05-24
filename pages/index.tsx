@@ -287,6 +287,9 @@ closeUspOverlay = () => {
             />          
           </a>
         </Link>
+        <div className='plus'>
+          <Image src='/vectors/plus-yellow-and-red.svg' alt='Plus' layout='responsive' width='20' height='20' />
+        </div>
         <Link href='/trade-in'>
           <a className='banner-vertical'>
             <Image 
