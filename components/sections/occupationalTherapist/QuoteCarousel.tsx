@@ -16,7 +16,7 @@ export const QuoteCarousel = () => {
   return (
     <Swiper
         slidesPerView={"auto"}
-        spaceBetween={250}
+        spaceBetween={100}
         centeredSlides={true}
         initialSlide={1}
         loop={true}
