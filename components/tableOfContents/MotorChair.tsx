@@ -25,7 +25,7 @@ const MotorChair = ({isOpen, openAccordian}:ComponentProps) => {
                 height={15} />
             </span>
         </button>
-        <div className='product-content'>
+        <div className='product-content' id='motor-section'>
           <div className='motor-container'>
             <div className='content con-reg'>
                 <p className='subheading oaktree-green'>Step Three</p>

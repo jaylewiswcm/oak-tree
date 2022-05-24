@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import Link from 'next/link';
 import Image from 'next/image';
 import { NextSeo } from 'next-seo';
@@ -12,12 +12,13 @@ import Reviews from '../../components/tableOfContents/Reviews';
 import RecommendedProducts from '../../components/sections/recommendedProducts/RecommendedProducts';
 import Modal from '../../components/modal/Modal';
 import PopupBrochureRequestForm from '../../components/forms/PopupBrochureRequestForm';
+import { TOC } from '../../components/tableOfContents/TOC';
 
 
 const TheOak = () => {
     const [isOpen, setAccordianOpen] = useState('');
     const [show, setFormToShow] = useState(false);
-    
+    const tocRef = useRef<HTMLDivElement>(null);
 
     const openAccordian = (type:string) => {
         if(isOpen === type ) {
@@ -95,7 +96,9 @@ const TheOak = () => {
                     />
                 </div>
             </div>
-            <div className='table-of-contents'>
+            <TOC reference={tocRef}/>
+            <div className='table-of-contents' ref={tocRef}>
+                
                 <h4 className='toc-heading'>Our Process</h4>
                 <MaterialChair isOpen={isOpen} openAccordian={() => openAccordian('material')}/>
                 <SizeChair isOpen={isOpen} openAccordian={() => openAccordian('size')}/>
@@ -103,6 +106,7 @@ const TheOak = () => {
                 <Accessories  isOpen={isOpen} openAccordian={() => openAccordian('accessories')} type='chair'/>
                 <Reviews product='chair' isOpen={isOpen} openAccordian={() => openAccordian('reviews')}/>
             </div>
+          
             <div className='request-wrapper con-reg'>
                 <h6 className='heading'>Book a Home Visit</h6>
                 <p className='content'>Our consultant will be able to advise exactly which product is best for you and your home.</p>

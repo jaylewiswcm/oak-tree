@@ -30,7 +30,7 @@ const Reviews = ({isOpen, openAccordian, product}:ComponentProps) => {
                 height={15} />
             </span>
         </button>
-        <div className='product-content'>
+        <div className='product-content' id='reviews-section'>
             <div className='content'>
                 <ReviewsAll orphan={false} />
                 {/* <ProductReviews /> */}

@@ -65,6 +65,12 @@ export default function BreadcrumbNav() {
 
     // The last crumb is rendered as normal text since we are already on the page
     if (last) {
+      if(text.includes('#')) {
+        title = text.split('#')[0]
+        if(title.includes('-')) {
+          title = title.split('-').join(' ')   
+        }
+      }
         return <p className='crumb'>{title}</p>
     }
 

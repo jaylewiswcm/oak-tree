@@ -20,7 +20,7 @@ import heroImage from '../../public/images/heros/chair-collection-hero.png'
 import chairs from '../../data/products/chairs.json';
 
 const Index = () => {
-    const [show, setFormToShow] = useState(false)
+    const [show, setFormToShow] = useState(false);
     const isMedium = useIsMedium()
     return (
         <motion.div exit={{opacity:0}} >

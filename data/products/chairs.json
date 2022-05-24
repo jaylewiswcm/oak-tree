@@ -6,7 +6,7 @@
     "url" : "/chairs/the-oak",
     "icon": "/icons/collection/leafs/icon-oak.svg",
     "swatch": {
-        "src" : "coniston-floral-champagne.svg",
+        "src" : "/images/fabric/swatches/coniston-floral-champagne.png",
         "name": "Coniston Floral Champagne"
     } 
 },
@@ -18,7 +18,7 @@
     "url" : "/chairs/the-tulip",
     "icon": "/icons/collection/leafs/icon-tulip.svg",
     "swatch": {
-        "src" : "boucle-cream.svg",
+        "src" : "/images/fabric/swatches/boucle-cream.png",
         "name": "Boucle Cream"
     } 
 },
@@ -30,8 +30,8 @@
     "url" : "/chairs/the-rowan",
     "icon": "/icons/collection/leafs/icon-rowan.svg",
     "swatch": {
-        "src" : "coniston-patchwork-brown.svg",
-        "name": "Boucle Cream"
+        "src" : "/images/fabric/swatches/coniston-patchwork-brown.png",
+        "name": "Coniston Patchwork Brown"
     } 
 },
 {
@@ -42,7 +42,7 @@
     "url" : "/chairs/the-cedar",
     "icon": "/icons/collection/leafs/icon-cedar.svg",
     "swatch": {
-        "src" : "portobello-leaf-green.svg",
+        "src" : "/images/fabric/swatches/portobello-leaf-green.png",
         "name": "Potobello Leaf Green"
     } 
 },
@@ -54,7 +54,7 @@
     "url" : "/chairs/the-maple",
     "icon": "/icons/collection/leafs/icon-maple.svg",
     "swatch": {
-        "src" : "forest-green-leather.svg",
+        "src" : "/images/fabric/swatches/forest-green-leather.png",
         "name": "Forrest Green Leather"
     } 
 }]

@@ -357,23 +357,23 @@ transform: translateY(12px) translateX(-8.4375px) translateX(50%) rotate(45deg);
     // }
     opacity: 1;
     // left: -155px;
-    left:-73px
+    left:-50px
 }
 .dd-menu.chairs-dd {
     // transform: translateX(-50%) translateX(-80px);
     // left: -60px;
-    left:7px;
+    left:26px;
     opacity: 1;
 }
 .dd-menu.beds-dd {
     // transform: translateX(-50%) translateX(0);
     opacity: 1;
-    left:92px;
+    left:113px;
 }
 .dd-menu.bath-lifts-dd {
     // transform: translateX(-50%) translateX(95px);
     opacity: 1;
-    left:172px;
+    left:190px;
 }
 // .breadcumb-navigation {
 //     max-width: 1300px;
@@ -402,15 +402,15 @@ transform: translateY(12px) translateX(-8.4375px) translateX(50%) rotate(45deg);
                     text-decoration: none;
                     text-transform: capitalize;
              
-                    &:after {
-                        // content: ">";
-                        // margin-left:  8px; 
-                        // font-size: 10px;
-                        // line-height: 1;
-                        // color: $grey;
-                        // pointer-events: none;
-                        // text-decoration: none!important;
-                    }
+                    // &:after {
+                    //     content: ">";
+                    //     margin-left:  8px; 
+                    //     font-size: 10px;
+                    //     line-height: 1;
+                    //     color: $grey;
+                    //     pointer-events: none;
+                    //     text-decoration: none!important;
+                    // }
             }
             a:hover {
                 text-decoration: underline;
