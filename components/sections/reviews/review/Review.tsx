@@ -8,14 +8,17 @@ interface ComponentProps {
 export const Review = ({review}:ComponentProps) => {
     const [userAvatar, setUserAvatar] = useState('')
     const [avatarColourClass, setAvatarColourClass] = useState('')
-    if(!review) {
-        return <div>Loading...</div>
-    }
-
+    
     useEffect(() => {
         createAvatar();
         randomiseAvatarClass();
     },[])
+
+    if(!review) {
+        return <div>Loading...</div>
+    }
+
+
 
     const createAvatar = () => {
         const userName = review.consumer.displayName.split(' ');
