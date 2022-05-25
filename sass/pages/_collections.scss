@@ -261,10 +261,23 @@
             &:last-of-type {
                 margin-bottom: 0;;
             }
+            a {
+                width: 100%;
+            }
             .image-wrapper {
                 width: 100%;
                 margin-bottom: 10px;      
                 position: relative;
+                .leaf {
+                    background-color: $white;
+                    width: 50px;
+                    height: 50px;
+                    border-radius: 50%;
+                    box-shadow: 0 0 19px rgba(0,0,0,0.18);
+                    position: absolute;
+                    top: 15px;
+                    right: 15px;
+                }
                 .selected-swatch  {
                     width: 60px;
                     height: 60px;
@@ -367,10 +380,15 @@
                         font-weight: 400;
                         color: $grey;
                         margin-left:10px;
+                        transition: 0.2s;
+                    }
+                    button:hover {
+                        text-decoration: underline;
+                        text-underline-offset: 2px;
                     }
                     .swatch{
-                        width: 27px;
-                        height: 27px;
+                        width: 30px;
+                        height: 30px;
                         border-radius: 50%;
                         box-shadow: 0 0 2px rgba(0,0,0,0.18);
                         display: flex;
@@ -379,8 +397,9 @@
                         margin: 0 5px;
                         padding:0;
                         .inner {
-                            width: 20px;
-                            height:20px;
+                            width: 100%;
+                            height:100%;
+                            border: 1px $white solid;
                             border-radius: 50%;
                             margin:0;
                             position: relative;
@@ -418,50 +437,25 @@
             .desc {
                 font-size: 1.8rem;
                 margin-top: 10px;
-                margin-bottom: 20px;
+                margin-bottom: 10px;
                 line-height: 1.6;
                 max-width: 500px;
                 opacity: 0.8;
             }
-            .choose-from {
-                margin-bottom:15px;
-                .options-grid {
+            .desc-list {
+                margin-bottom: 20px;
+                li {
                     display: flex;
-                    width: 100%;
-                    flex-direction: column;
-                    align-items: flex-start;
-                    @media(min-width: 900px ){
-                        flex-direction: row;
+                    padding: 5px 0;
+                    .tick {
+                        width: 30px;
+                        height: 30px;
+                        margin-right: 10px;
                     }
-                    .item {
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        margin-right: 15px;
-                        .icon {
-                            width: 50px;
-                            height: 50px;
-                            margin-right: 5px;
-                            position: relative;
-                            .grey {
-                                width: 50px;
-                                height: 50px; 
-                            }
-                            .green {
-                                position: absolute;
-                                top:0;
-                                left:0;
-                                opacity: 0;
-                                z-index: 5;
-                                width: 50px;
-                                height: 50px;
-                                transition: 0.2s
-                            }
-                        }
-                        p {
-                            color: $grey;
-                            transition: 0.1s
-                        }
+                    p {
+                        font-size: 1.8rem;
+                        font-weight: 400;
+                        color: $grey;
                     }
                 }
             }

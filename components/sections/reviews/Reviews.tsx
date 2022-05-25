@@ -2,12 +2,24 @@ import React from 'react'
 import Image from 'next/image';
 import CarouselNormal from './carousel/CarouselNormal';
 import CarouselLanding from './carousel/CarouselLanding';
+import axios from 'axios';
+import useSWR from 'swr';
+
+const fetcher = (url:string) =>  axios.get(url).then(res => res.data)
 
 interface ComponentProps {
     orphan: boolean
 }
 
-const Reviews = ({orphan} : ComponentProps) => {    
+const Reviews = ({ orphan }:ComponentProps) => {  
+    const { data, error } = useSWR('/api/trustpilotData', fetcher)
+
+    if(!data) {
+        return <>...Loading</>
+    }
+
+    const { numberOfReviews, score } = data;
+    
   return (
     <div className='reviews-container'>
         <div className='reviews'>
@@ -19,9 +31,9 @@ const Reviews = ({orphan} : ComponentProps) => {
                 height='32'
             />
         </div>
-            <p className='oaktree-green subheading'>Rated Excellent on Trustpilot</p>
+            <p className='oaktree-green subheading'>We're Rated Excellent on Trustpilot</p>
             <p className='statement'>Hear what our customers have to say</p>
-            <p className='trustscore'>TrustScore 4.7 | 2,163 reviews</p>
+            <p className='trustscore'>TrustScore {score.trustScore} | {numberOfReviews.total} reviews</p>
             <div className='review-carousel'>
                 <div className='left-hider  hider'>
                     <button className='slide-prev'>

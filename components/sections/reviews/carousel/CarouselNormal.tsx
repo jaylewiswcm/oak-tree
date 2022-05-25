@@ -26,6 +26,7 @@ const fetcher = (url:string) =>  axios.get(url).then(res => res.data)
     if(!data) {
         return <div>Loading ...</div>
     }
+    
   return (
         <Swiper
         slidesPerView={"auto"}

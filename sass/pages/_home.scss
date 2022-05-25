@@ -1133,9 +1133,10 @@
                         background-color: $dark-green-1;
                         background: rgb(26,89,93);
                         background: linear-gradient(317deg, rgba(26,89,93,1) 0%, rgba(11,74,76,1) 100%);
-                        box-shadow: 0 6px 21px rgba(26,89,93, 0.2);;
+                     
                         border-radius: 19px;
                         overflow: hidden;
+                        transition: 0.8s;
                         @media(min-width:400px) and (max-width: 599px) {
                             width: 80%;
                         }
@@ -1281,6 +1282,9 @@
                             }
                         }
                     }
+                    .swiper-slide-active {
+                        box-shadow: 0 6px 21px rgba(26,89,93, 0.2);;
+                    }
                 }
     }
 
@@ -1306,14 +1310,19 @@
             margin: 80px auto;
             display: grid;
             grid-template-columns: repeat(1,1fr);
-            gap:50px;
-            width: fit-content;
+            gap: 20px;
+            width: 100%;
+            @media(min-width: 395px) and (max-width: 525px) {
+                gap:50px;
+            }
             @media(min-width: 525px) and (max-width: 1049px) {
                 grid-template-columns: repeat(2,1fr);
                 gap:50px;
+                width: fit-content;
             }
             @media(min-width: 700px) and (max-width: 1049px) {
                 gap:80px;
+                width: fit-content;
             }
             @media(min-width: 1050px) {
                 margin: 60px auto;
@@ -1322,10 +1331,13 @@
                 width: 100%;
             }
             .benefit {
-                width: 200px;
+                width: 100%;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                @media(min-width: 525px) {
+                    width: 200px;
+                }
                 @media(min-width: 1050px) {
                     width: calc(100% / 4);
                 }
@@ -1341,10 +1353,23 @@
                 }
                 ul {
                     margin-top: 10px;
+                   
+                    @media(min-width: 395px) and (max-width: 525px) {
+                        display: flex;
+                        flex-direction: row;
+                        width: 100%;
+                    }
+                    // @media(min-width: 525px) {
+                    //     flex-direction: column;
+                    //     width: unset;
+                    // }
                     li {
                         display: flex;
                         align-items: center;
-
+                        margin: 0 auto;
+                        @media(min-width: 525px) {
+                            margin: 0;
+                        }
                         .tick {
                             width: 35px;
                             height: 35px;

@@ -162,3 +162,74 @@ body.freeze {
         }
     }
 }
+
+.fabric-selection-modal {
+    width: 100%;
+    max-width:600px;
+    background-color: $white;
+    margin: 0 auto;
+    padding: 40px;
+    border-radius: 8px;
+    position: relative;
+    .close-btn {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        position: absolute;
+        right: -60px;
+        top: 0;
+        background-color: $white;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .cross-icon {
+            width: 40%;
+        }
+    }
+    .inner-border {
+        width: calc(100% - 30px);
+        height: calc(100% - 30px);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border:3px $dark-green-1 solid;
+        border-radius: 8px;
+    }
+    .modal-heading {
+        font-size: 2.6rem;
+        font-weight: 600;
+        color: $dark-green-1;
+        text-align: center;
+        margin-bottom:5px;
+    }
+    p {
+        font-size: 1.8rem;
+        font-weight: 400;
+        text-align: center;
+        padding: 0 25px;
+        color: $grey;
+    }
+    .fabric-grid {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 20px;
+        width:80%;
+        margin: 0 auto;
+        margin-top: 20px;
+        .fabric {
+            width: 100%;
+            .image-wrapper {
+                width: 100%;
+            }
+            .fabric-name {
+                font-size: 1.4rem;
+                font-weight: 400;
+                color: $grey;
+                margin-top: 10px;;
+                padding: 0;
+            }
+        }
+    }
+}

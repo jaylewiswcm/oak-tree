@@ -161,7 +161,7 @@ closeUspOverlay = () => {
             <div className='usp-item'>
               <div className='icon-wrapper'>
                 <Image 
-                  src='/icons/delivery/icon-delivery.svg'
+                  src='/icons/collection-usps/free-delivery.svg'
                   alt='Free Delivery'
                   layout='responsive'
                   width='60'
@@ -173,7 +173,7 @@ closeUspOverlay = () => {
             <div className='usp-item'>
               <div className='icon-wrapper'>
                 <Image 
-                  src='/icons/collection-usps/icon-warranty.svg'
+                  src='/icons/collection-usps/warranty.svg'
                   alt='10 Year Warranty'
                   layout='responsive'
                   width='60'

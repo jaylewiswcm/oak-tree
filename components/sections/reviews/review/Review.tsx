@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import Image from 'next/image';
 
 interface ComponentProps {
@@ -6,13 +6,52 @@ interface ComponentProps {
 }
 
 export const Review = ({review}:ComponentProps) => {
+    const [userAvatar, setUserAvatar] = useState('')
+    const [avatarColourClass, setAvatarColourClass] = useState('')
     if(!review) {
         return <div>Loading...</div>
     }
+
+    useEffect(() => {
+        createAvatar();
+        randomiseAvatarClass();
+    },[])
+
+    const createAvatar = () => {
+        const userName = review.consumer.displayName.split(' ');
+        let avatar;
+        switch(userName.length) {
+            case 1: 
+                    avatar = userName[0].charAt(0).toUpperCase() + userName[0].charAt(1);
+                    break;
+            case 2: 
+                    if(userName[1] !== '') {
+                        avatar = userName[0].charAt(0).toUpperCase() + userName[1].charAt(0).toUpperCase()
+                    } else {
+                        avatar = userName[0].charAt(0).toUpperCase() + userName[0].charAt(1);
+                    }
+                    break;
+            case 3: 
+                    avatar = userName[0].charAt(0).toUpperCase() + userName[1].charAt(0).toUpperCase()
+                    break;
+            default: 
+                    avatar = userName[0].charAt(0).toUpperCase() + userName[1].charAt(0).toUpperCase()
+                    return;
+        }
+        setUserAvatar(avatar)
+    }
+
+    const randomiseAvatarClass = () => {
+        const classArray = ["avatar-yellow-and-purple","avatar-red","avatar-purple","avatar-green","avatar-green-flipped"];
+        console.log(classArray[Math.floor(Math.random() * classArray.length)])
+        setAvatarColourClass(classArray[Math.floor(Math.random() * classArray.length)])
+    }
+
+
   return (
     <>
     <div className="review-header">
-        <div  className='avatar'>TP</div>
+        <div  className={`avatar ${avatarColourClass}`}>{userAvatar}</div>
         <div className='details'>
             <p className='name'>{review.consumer.displayName}</p>
             <p className='location'>{review.consumer.displayLocation}</p>

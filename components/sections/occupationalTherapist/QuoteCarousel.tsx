@@ -26,7 +26,7 @@ export const QuoteCarousel = () => {
         }} 
         breakpoints={{
             1200: {
-                spaceBetween: 250
+                spaceBetween:100
             },
             1100: {
                 spaceBetween: 150
