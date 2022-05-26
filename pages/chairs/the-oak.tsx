@@ -96,18 +96,112 @@ const TheOak = () => {
                     />
                 </div>
             </div>
+            <Reviews product='chair' isOpen={isOpen} openAccordian={() => openAccordian('reviews')}/>
             <TOC reference={tocRef}/>
             <div className='table-of-contents' ref={tocRef}>
-                
                 <h4 className='toc-heading'>Our Process</h4>
                 <MaterialChair isOpen={isOpen} openAccordian={() => openAccordian('material')}/>
                 <SizeChair isOpen={isOpen} openAccordian={() => openAccordian('size')}/>
                 <MotorChair isOpen={isOpen} openAccordian={() => openAccordian('motor')}/>
                 <Accessories  isOpen={isOpen} openAccordian={() => openAccordian('accessories')} type='chair'/>
-                <Reviews product='chair' isOpen={isOpen} openAccordian={() => openAccordian('reviews')}/>
             </div>
-          
-            <div className='request-wrapper con-reg'>
+            <div className='request-wrapper'>
+                <div className='con-reg'>
+                    <div className='request-intro'>
+                        <p className='subheading'>Step Five</p>
+                        <h6>Request a Free Home Visit</h6>
+                        <p>Our consultant will be able to advise exactly which product is best for you and your home.</p>
+                    </div>
+                <div className='form-and-content'>
+                    <div className='supporting-content'>
+                        <p className='support-heading'>What will it include?</p>
+                        <ul>
+                            <li>
+                                <div className='icon-wrapper'>
+                                    <Image 
+                                        src='/icons/home-visit/icon-made-to-measure.svg'
+                                        alt='Made-to-measure'
+                                        layout='responsive'
+                                        width='84'
+                                        height='70'
+                                    />
+                                </div>
+                                <p>Our consultant will be able to advise exactly which product is best for you and your home.</p>
+                            </li>
+                            <li>
+                                <div className='icon-wrapper'>
+                                <Image 
+                                        src='/icons/home-visit/icon-consulting.svg'
+                                        alt='Made-to-measure'
+                                        layout='responsive'
+                                        width='84'
+                                        height='70'
+                                    />
+                                </div>
+                                <p>Our consultant will be able to advise exactly which product is best for you and your home.</p>
+                            </li>
+                            <li>
+                                <div className='icon-wrapper'>
+                                <Image 
+                                        src='/icons/home-visit/icon-made-to-measure.svg'
+                                        alt='Made-to-measure'
+                                        layout='responsive'
+                                        width='84'
+                                        height='70'
+                                    />
+                                </div>
+                                <p>Our consultant will be able to advise exactly which product is best for you and your home.</p>
+                            </li>
+                            <li>
+                                <div className='icon-wrapper'>
+                                <Image 
+                                        src='/icons/home-visit/icon-consulting.svg'
+                                        alt='Made-to-measure'
+                                        layout='responsive'
+                                        width='84'
+                                        height='70'
+                                    />
+                                </div>
+                                <p>Our consultant will be able to advise exactly which product is best for you and your home.</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div className='form'>
+                        <p className='form-title'>Request your FREE home visit by entering your details below</p>
+                        <form action="">
+                            <div className='input-wrapper'>
+                                <label htmlFor="title">Title <span className='required'>*</span></label>
+                                <input type="text" name='title' id='title' placeholder='Choose your title'/>
+                            </div>
+                            <div className='input-wrapper'>
+                                <label htmlFor="lname">Last Name <span className='required'>*</span></label>
+                                <input type="text" name='lname' id='lname' placeholder='Enter your last name'/>
+                            </div>
+                            <div className='input-wrapper'>
+                                <label htmlFor="tel">Phone Number <span className='required'>*</span></label>
+                                <input type="text" name='tel' id='tel' placeholder='Enter your phone number'/>
+                            </div>
+                            <div className='input-wrapper'>
+                                <label htmlFor="street">First Line of Address <span className='required'>*</span></label>
+                                <input type="text" name='street' id='street' placeholder='Enter your first line of address'/>
+                            </div>
+                            <div className='input-wrapper'>
+                                <label htmlFor="zip">Postal Code <span className='required'>*</span></label>
+                                <input type="text" name='zip' id='zip' placeholder='Enter your Postal Code'/>
+                            </div>
+                            <div className='consent-wrapper'>
+                                <label htmlFor="consent">I agree to recieve emails from Oak Tree Mobility and our terms and conditions</label>
+                                <input type="checkbox" id="consent" name="consent" value="true" />
+                            </div>
+                            <div className='submit-wrapper'>
+                                <input type="submit" value='Request Home Visit' />
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                </div>
+            </div>
+            {/* <div className='request-wrapper con-reg'>
                 <h6 className='heading'>Book a Home Visit</h6>
                 <p className='content'>Our consultant will be able to advise exactly which product is best for you and your home.</p>
                 <div className='image-and-form'>
@@ -127,7 +221,7 @@ const TheOak = () => {
                         <HomeVisitForm />
                     </div>
                 </div>
-            </div>
+            </div> */}
             <RecommendedProducts product='chairs'/>
         </div>
         </>

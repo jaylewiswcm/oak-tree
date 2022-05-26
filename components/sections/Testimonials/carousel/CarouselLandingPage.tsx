@@ -43,7 +43,7 @@ const CarouselLandingPage = ({setSelectedCx, setShow}: ComponentProps) => {
              }}
              modules={[Pagination]}
              className="mySwiper"> 
-             {testimonials.map((cx) => 
+             {testimonials.slice(0,4).map((cx) => 
                  <SwiperSlide key={cx.name}>
                      <TestimonialTile 
                         cx={cx}

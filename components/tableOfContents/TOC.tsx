@@ -47,13 +47,7 @@ const [hideClass, setHideClass] = useState('')
                 <Link  href="#accessories-section">
                     <a>Accessories</a>
                 </Link>
-            </li>
-            <li>
-                <Link  href="#reviews-section">
-                    <a>Reviews</a>
-                </Link>
-            </li>
-           
+            </li>    
         </ul>
         <button className='cta-btn'>Request Your Brochure</button>
         </nav>

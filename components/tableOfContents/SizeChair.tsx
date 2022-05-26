@@ -38,7 +38,16 @@ const SizeChair = ({isOpen, openAccordian}:ComponentProps) => {
                           height={673}
                         />
                       </div>
-                      <div className='content'>
+                      <div className='content size-content'>
+                        <div className='icon-wrapper'>
+                          <Image
+                            src='/icons/collection-process/customisation-new.svg'
+                            alt='Made To Measure'
+                            layout='responsive'
+                            width='136'
+                            height='114'
+                          />
+                        </div>
                           <h3>Made to Measure</h3>
                           <p>One of the most important choices you will make when buying your chair is its size. During your home consultation, you can try out one of our chairs and see how it feels. Then we will take your exact measurements and help you choose a chair that will fit you perfectly and offer supreme comfort.</p>
                       </div>

@@ -18,24 +18,13 @@ const Reviews = ({isOpen, openAccordian, product}:ComponentProps) => {
       setTimeout(() => {tocElement.current!.scrollIntoView()}, 400); 
   }
   return (
-    <div className={isOpen === 'reviews' ? "toc open con-reg" : "toc  con-reg"} ref={tocElement}>
-    <button className='toc-btn' onClick={() => openAndJumpToAccordian('reviews')}>
-          <p>Reviews</p> 
-            <span className='icon-wrapper'>
-              <Image 
-             src='/buttons/plus-black.svg'
-                alt='Plus'
-                layout='responsive'
-                width={15}
-                height={15} />
-            </span>
-        </button>
-        <div className='product-content' id='reviews-section'>
+    <div className='product-reviews'>
+          <ReviewsAll orphan={false} />
+        {/* <div className='product-content' id='reviews-section'>
             <div className='content'>
-                <ReviewsAll orphan={false} />
-                {/* <ProductReviews /> */}
+              
             </div>
-            {product === 'chair' && 
+             {product === 'chair' && 
                         <div className='product-testimonial con-reg'>
                         <h6>Our Customers View</h6>
                         <div className='inner-wrapper'>
@@ -63,9 +52,9 @@ const Reviews = ({isOpen, openAccordian, product}:ComponentProps) => {
                         </div>
                     </div>
             
-            }
+            } 
 
-        </div>
+        </div> */}
         
 </div>
   )

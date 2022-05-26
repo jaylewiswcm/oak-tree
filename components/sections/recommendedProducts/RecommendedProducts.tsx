@@ -9,32 +9,26 @@ interface ComponentProps {
 const RecommendedProducts = ({product}: ComponentProps) => {
   return (
     <div className='other-products con-reg'>
-    <h6>Our other chairs</h6>
+    <h6>You may also like</h6>
     {product === 'chairs' && 
     <div className='product-grid'>
     <Link href="/chairs/the-maple">
         <a className='product'>
             <div className='image-wrapper'>
-            <Image
-                src='/images/products/chairs/maple/maple-cutout.png'
-                alt='The Maple'
-                layout='responsive'
-                width={303}
-                height={330}
-            />
-            </div>
-            <div className='hover-bg'>
-                <p className='name'>The Maple</p>
-                <p className='view'>View Chair</p>
-                <div className='acting-btn'>
-                    <Image 
-                        src='/buttons/arrow-yellow.svg'
-                        alt='Arrow'
-                        // layout='responsive'
-                        width={24}
-                        height={20}
-                    />
+                <Image
+                    src='/images/products/chairs/maple/maple-collection.png'
+                    alt='The Maple'
+                    layout='responsive'
+                    width={1000}
+                    height={671}
+                />
+                <div className='hover-bg'>
+                    <p>View Chair</p>
                 </div>
+            </div>
+            <div className='product-name-wrapper'>
+                <p className='name'>The Maple</p>
+                <p className='type'>Rise and Recline Chair</p>
             </div>
         </a>
         </Link>
@@ -42,25 +36,19 @@ const RecommendedProducts = ({product}: ComponentProps) => {
         <a  className='product'>
         <div className='image-wrapper'>
             <Image
-                src='/images/products/chairs/tulip/tulip-cutout.png'
+                src='/images/products/chairs/tulip/tulip-collection.png'
                 alt='The Tulip'
                 layout='responsive'
-                width={303}
-                height={330}
+                width={1000}
+                height={671}
             />
-            </div>
-            <div className='hover-bg'>
-                <p className='name'>The Tulip</p>
-                <p className='view'>View Chair</p>
-                <div className='acting-btn'>
-                    <Image 
-                        src='/buttons/arrow-yellow.svg'
-                        alt='Arrow'
-                        // layout='responsive'
-                        width={24}
-                        height={20}
-                    />
+               <div className='hover-bg'>
+                    <p>View Chair</p>
                 </div>
+            </div>
+            <div className='product-name-wrapper'>
+                <p className='name'>The Tulip</p>
+                <p className='type'>Rise and Recline Chair</p>
             </div>
         </a>
         </Link>
@@ -68,25 +56,19 @@ const RecommendedProducts = ({product}: ComponentProps) => {
         <a className='product'>
             <div className='image-wrapper'>
             <Image
-                src='/images/products/chairs/rowan/rowan-cutout.png'
+                src='/images/products/chairs/rowan/rowan-collection.png'
                 alt='The Rowan'
                 layout='responsive'
-                width={303}
-                height={330}
+                width={1000}
+                height={671}
             />
-            </div>
-            <div className='hover-bg'>
-                <p className='name'>The Rowan</p>
-                <p className='view'>View Chair</p>
-                <div className='acting-btn'>
-                    <Image 
-                        src='/buttons/arrow-yellow.svg'
-                        alt='Arrow'
-                        // layout='responsive'
-                        width={24}
-                        height={20}
-                    />
+               <div className='hover-bg'>
+                    <p>View Chair</p>
                 </div>
+            </div>
+            <div className='product-name-wrapper'>
+                <p className='name'>The Rowan</p>
+                <p className='type'>Rise and Recline Chair</p>
             </div>
         </a>
         </Link>

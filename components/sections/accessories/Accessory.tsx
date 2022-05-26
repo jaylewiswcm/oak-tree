@@ -21,7 +21,7 @@ export const Accessory = ({item, slideChange}:ComponentProps) => {
     },[slideChange])
 
   return (
-        <div className={isOpen ? 'accessory-wrapper open' : 'accessory-wrapper'}>
+        <div className='accessory-wrapper open'>
                     <div className="image-wrapper">
                         <Image 
                             src={image}
@@ -46,18 +46,6 @@ export const Accessory = ({item, slideChange}:ComponentProps) => {
                         <p>{name}</p>
                     </div>
                     <div className='desc'><p>{desc}</p></div>
-                    <button className='learn-more' onClick={() => isOpen ? setIsOpen(false) :setIsOpen(true)}>
-                        <p>{ isOpen ? 'Show Less' : 'Learn More' }</p>
-                        <div className="arrow">
-                            <Image 
-                                src='/vectors/arrow-down-learn-more-green.svg'
-                                alt='Down arrow'
-                                layout='responsive'
-                                width={20}
-                                height={20}
-                            />
-                        </div>
-                    </button>
                 </div>
   )
 }

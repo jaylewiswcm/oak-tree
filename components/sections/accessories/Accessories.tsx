@@ -19,8 +19,8 @@ interface ComponentProps {
 export const Accessories = ({type}: ComponentProps ) => {
     const [slideChange, setSlideChange] = useState(false)
   return (
-    <div className='accessories-carousel'>
-        <Swiper
+    <div className='accessories-grid'>
+        {/* <Swiper
         slidesPerView={"auto"}
         spaceBetween={20}
         centeredSlides={true}
@@ -48,31 +48,12 @@ export const Accessories = ({type}: ComponentProps ) => {
                  <Accessory item={item} slideChange={slideChange} />
             </SwiperSlide>
           ) }
-        </Swiper>
-       <div className="button-wrapper">
-                                    <button className='acc-prev carousel-button'>
-                                        <span className='arrow-wrapper'>
-                                            <Image
-                                                src='/buttons/arrow-prev-white.svg'
-                                                alt='Previous Accessory'
-                                                layout='responsive'
-                                                width={16}
-                                                height={21}
-                                            />
-                                        </span>
-                                    </button>
-                                    <button className='acc-next carousel-button next-btn'>
-                                        <span className='arrow-wrapper'>
-                                            <Image
-                                                src='/buttons/arrow-next-white.svg'
-                                                alt='Next Accessory'
-                                                layout='responsive'
-                                                width={16}
-                                                height={21}
-                                            />
-                                        </span>
-                                    </button>
-                                </div>
+        </Swiper> */}
+    { chair_accessories.map((item, index) => 
+        <Accessory item={item} slideChange={slideChange} key={index}/>
+        )
+    }
+
     </div>
   )
 }

@@ -18,17 +18,31 @@ interface ComponentProps {
 export const Fabrics = ({ product } : ComponentProps) => {
   return (
     <div className='fabric-carousel'>
+                                <div className='button-wrapper'>
+                                    <button className='fabric-prev carousel-button'>
+                                        <span className='arrow-wrapper'>
+                                            <Image
+                                                src='/buttons/arrow-prev-white.svg'
+                                                alt='Previous Fabric'
+                                                layout='responsive'
+                                                width={16}
+                                                height={21}
+                                            />
+                                        </span>
+                                    </button>                     
+                                </div>
                             <Swiper
                                 slidesPerView={"auto"}
                                 spaceBetween={20}
                                 centeredSlides={true}
                                 initialSlide={1}
+                                speed={500}
                                 navigation={{
                                     prevEl: '.fabric-prev',
                                     nextEl: '.fabric-next',
                                 }}    
                                 modules={[Navigation]}
-                                className="mySwiper"
+                                className="carousel"
                                 loop={true}
                           
                                 >
@@ -46,7 +60,22 @@ export const Fabrics = ({ product } : ComponentProps) => {
                                 } 
                              
                                 </Swiper>
-                                <div className="button-wrapper">
+                                <div className='button-wrapper'>
+                                    <button className='fabric-next carousel-button next-btn'>
+                                        <span className='arrow-wrapper'>
+                                            <Image
+                                                src='/buttons/arrow-next-white.svg'
+                                                alt='Next Fabric'
+                                                layout='responsive'
+                                                width={16}
+                                                height={21}
+                                            />
+                                        </span>
+                                    </button>                  
+                                </div>
+                           
+                           
+                                {/* <div className="button-wrapper">
                                     <div className='border border-left'>
                                     <button className='fabric-prev carousel-button'>
                                         <span className='arrow-wrapper'>
@@ -73,7 +102,7 @@ export const Fabrics = ({ product } : ComponentProps) => {
                                         </span>
                                     </button>
                                     </div>
-                                </div>
+                                </div> */}
                             </div>
   )
 }

@@ -5,7 +5,7 @@ import {motion, useAnimation } from 'framer-motion';
 import { useInView } from "react-intersection-observer";
 import { useIsMedium } from '../../../utils/hooks';
 // images 
-import desktopImage from '../../../public/occupational-therapist/sam-shann-circle-b-and-w.png'
+import desktopImage from '../../../public/occupational-therapist/sam-shann-new.jpeg'
 import mobileImage from '../../../public/occupational-therapist/sam-shann-circle-2.png'
 import logo from '../../../public/occupational-therapist/ukts-logo.png';
 import Modal from '../../modal/Modal';
@@ -111,14 +111,16 @@ const stagger = {
 
         <div className='advice-quotes'>
           <div className='sam-shann-image'>
-              <Image
-                src={desktopImage}
-                alt='Samantha Shann'
-                layout='responsive'
-                width='140'
-                height='140'
-                quality={100}
-              />
+            <div className='image'>
+                <Image
+                  src={desktopImage}
+                  alt='Samantha Shann'
+                  layout='responsive'
+                  width='238'
+                  height='216'
+                  quality={100}
+                />
+              </div>
           </div>
           <h4>Advice From Samantha</h4>
             <QuoteCarousel />
