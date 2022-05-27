@@ -3,7 +3,7 @@ import { NextSeo } from 'next-seo';
 import Image from 'next/image';
 import Link from 'next/link';
 // Components 
-import HomeVisitForm from '../../components/forms/homeVisit/HomeVisitForm';
+// import HomeVisitForm from '../../components/forms/homeVisit/HomeVisitForm';
 import BathLiftSteps from '../../components/sections/how-it-works/BathLiftSteps';
 import BathLiftStages from '../../components/sections/stages/BathLiftStages';
 import Modal from '../../components/modal/Modal';
@@ -199,7 +199,7 @@ const TheRivieraPlus = () => {
                         <button className='main-cta'>
                             <p>Request A Home Visit</p>
                         </button>
-                        <HomeVisitForm />
+                        {/* <HomeVisitForm /> */}
                     </div>
                 </div>
             </div>

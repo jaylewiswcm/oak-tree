@@ -7,11 +7,11 @@ import beds from '../../data/products/beds.json';
 import Reviews from '../../components/sections/reviews/Reviews';
 import FooterCollections from '../../components/sections/collections/FooterCollections';
 import Resources from '../../components/sections/resources/Resources';
-import CollectionBrochureRequestForm from '../../components/forms/brochure/SwiperBrochureRequestForm';
 import { CollectionUsps } from '../../components/sections/usps/CollectionUsps';
 import OurProcess from '../../components/sections/process/OurProcess';
-import Modal from '../../components/modal/Modal';
-import PopupBrochureRequestForm from '../../components/forms/PopupBrochureRequestForm';
+// import Modal from '../../components/modal/Modal';
+// import PopupBrochureRequestForm from '../../components/forms/PopupBrochureRequestForm';
+import CollectionForm from '../../components/forms/brochure/CollectionForm';
 // images 
 import heroImage from '../../public/images/heros/bed-collection-hero.png';
 
@@ -79,7 +79,7 @@ const Index = () => {
         />
       </div>
     </div>
-                   <CollectionBrochureRequestForm productType='chair'/>
+                   <CollectionForm productType='chair'/>
                 </div>
               </div>   
               <p className='sub-heading' id='collection-top-chair'>Adjustable Beds</p>  

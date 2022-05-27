@@ -25,7 +25,6 @@ const PopupBrochureRequestForm = ({setShow}: ComponentProps) => {
               <h6>Request your <em className='oaktree-green'>free</em> brochure</h6>
               <p className='supporting-text'>See our full collections, brand new products and gain useful help & advice all from the comfort of your home.</p>
           </div>
-        {/* <SwiperBrochureRequestFormWithProductInterest setShow={setShow}/>  */}
        <PopupGenericForm setShow={setShow}/>
 </div>
   )

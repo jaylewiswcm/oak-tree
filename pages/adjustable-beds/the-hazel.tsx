@@ -3,7 +3,7 @@ import { NextSeo } from 'next-seo';
 import Link from 'next/link';
 import Image from 'next/image';
 // Components
-import HomeVisitForm from '../../components/forms/homeVisit/HomeVisitForm';
+// import HomeVisitForm from '../../components/forms/homeVisit/HomeVisitForm';
 import MaterialBed from '../../components/tableOfContents/MaterialBed';
 import Reviews from '../../components/tableOfContents/Reviews';
 import RecommendedProducts from '../../components/sections/recommendedProducts/RecommendedProducts';
@@ -120,7 +120,7 @@ const TheHazel = () => {
                         <button className='main-cta'>
                             <p>Request A Home Visit</p>
                         </button>
-                        <HomeVisitForm />
+                        {/* <HomeVisitForm /> */}
                     </div>
                 </div>
             </div>

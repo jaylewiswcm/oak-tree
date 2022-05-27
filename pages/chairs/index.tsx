@@ -8,7 +8,6 @@ import { useIsMedium } from '../../utils/hooks';
 import Reviews from '../../components/sections/reviews/Reviews';
 import FooterCollections from '../../components/sections/collections/FooterCollections';
 import Resources from '../../components/sections/resources/Resources';
-import CollectionBrochureRequestForm from '../../components/forms/brochure/SwiperBrochureRequestForm';
 import CollectionForm from '../../components/forms/brochure/CollectionForm';
 
 import { CollectionUsps } from '../../components/sections/usps/CollectionUsps';

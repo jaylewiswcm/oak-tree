@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
-import BrochureRequestForm from './brochure/OrphanBrochureRequestForm';
 import OrphanBrochureForm from './brochure/OrphanBrochureForm';
 
 interface ComponentProps {
@@ -57,7 +56,7 @@ const OrphanBrochureFormWrapper = ({productType}: ComponentProps) => {
       </div>
     </div>
     <OrphanBrochureForm />
-    {/* <BrochureRequestForm productType={productType} /> */}
+  
     </div>
 </div>
   )

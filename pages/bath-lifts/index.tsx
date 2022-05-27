@@ -3,7 +3,7 @@ import { NextSeo } from 'next-seo'
 import Image from 'next/image';
 import Link from 'next/link';
  // Components
- import CollectionBrochureRequestForm from '../../components/forms/brochure/SwiperBrochureRequestForm';
+ import CollectionForm from '../../components/forms/brochure/CollectionForm';
 import OurProcess from '../../components/sections/process/OurProcess';
 import Reviews from '../../components/sections/reviews/Reviews';
 import Resources from '../../components/sections/resources/Resources';
@@ -77,7 +77,7 @@ const index = () => {
         />
       </div>
     </div>
-                   <CollectionBrochureRequestForm productType='bath_lift'/>
+                   <CollectionForm productType='bath_lift'/>
                 </div>
               </div>    
               <p className='sub-heading' id='collection-top-bath-lift'>Bath Lifts</p>  

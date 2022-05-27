@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { NextSeo } from 'next-seo';
 // Components
-import HomeVisitForm from '../../components/forms/homeVisit/HomeVisitForm';
+// import HomeVisitForm from '../../components/forms/homeVisit/HomeVisitForm';
 import MaterialChair from '../../components/tableOfContents/MaterialChair';
 import MotorChair from '../../components/tableOfContents/MotorChair';
 import SizeChair from '../../components/tableOfContents/SizeChair';
