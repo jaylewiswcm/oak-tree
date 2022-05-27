@@ -45,8 +45,7 @@ export const Review = ({review}:ComponentProps) => {
     }
 
     const randomiseAvatarClass = () => {
-        const classArray = ["avatar-yellow-and-purple","avatar-red","avatar-purple","avatar-green","avatar-green-flipped"];
-        console.log(classArray[Math.floor(Math.random() * classArray.length)])
+        const classArray = ["avatar-yellow-and-purple","avatar-red","avatar-purple","avatar-green","avatar-green-flipped"];       
         setAvatarColourClass(classArray[Math.floor(Math.random() * classArray.length)])
     }
 

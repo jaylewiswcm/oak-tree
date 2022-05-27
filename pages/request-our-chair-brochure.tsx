@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 import Reviews from '../components/sections/reviews/Reviews';
 import OtFamily from '../components/sections/customers/OtFamily';
-import OrphanBrochureForm from '../components/forms/OrphanBrochureForm';
+import OrphanBrochureFormWrapper from '../components/forms/OrphanBrochureFormWrapper';
 import Testimonials from '../components/sections/Testimonials/Testimonials';
 
 
@@ -75,7 +75,7 @@ const requestOurChairBrochure = () => {
                 </div>
                 </div>
             </div>
-        <OrphanBrochureForm productType='chair'/>
+        <OrphanBrochureFormWrapper productType='chair'/>
         <div className='content'>
             <div className='hero orphan-con-reg'>
                 <Image 

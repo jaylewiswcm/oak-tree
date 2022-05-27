@@ -47,10 +47,10 @@ const OtFamily = ({productType}: ComponentProps) => {
             modules={[Pagination]}
             className="mySwiper"
         >
-            {data.map(product => 
-                <>
+            {data.map((product, index) => 
+                <div key={index}>
                     {product.product === productType && product.testimonials.map((cx, index) =>  <SwiperSlide key={index}><Card cx={cx} /></SwiperSlide>)}
-                </>
+                </div>
                 )}
         </Swiper>
   )

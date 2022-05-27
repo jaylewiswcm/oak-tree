@@ -394,11 +394,10 @@ body.freeze {
 }
 
 .generic-form .tight-form-wrapper .input-wrapper {
-  width: 100%;
+  width: calc(50% - 10px);
 }
 
 .generic-form .tight-form-wrapper .input-wrapper:first-of-type {
-  width: 40%;
   margin-right: 20px;
 }
 
@@ -468,7 +467,7 @@ body.freeze {
 }
 
 .generic-form .input-wrapper input[type=text], .generic-form .input-wrapper input[type=tel], .generic-form .input-wrapper input[type=email], .generic-form .input-wrapper select {
-  border: 1px #E3E3E3 solid;
+  border: 1px #b1b4b6 solid;
   padding: 15px;
   font-size: 1.6rem;
   font-weight: 400;
@@ -495,8 +494,19 @@ body.freeze {
   margin-top: 8px;
   display: none;
   position: absolute;
-  bottom: -22px;
+  bottom: -24px;
   right: 5px;
+}
+
+.generic-form .input-wrapper .green-tick {
+  width: 17px;
+  height: 17px;
+  position: absolute;
+  bottom: 17px;
+  right: 15px;
+  opacity: 0;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
 }
 
 .generic-form .select-wrapper .input-and-label {
@@ -574,6 +584,24 @@ body.freeze {
 
 .generic-form .input-wrapper.errors .radio-wrapper:hover p, .generic-form .input-wrapper.errors .radio-wrapper.checked p {
   color: #0086C5;
+}
+
+.generic-form .input-wrapper.success-input input, .generic-form .input-wrapper.success-input select {
+  border: 1px #2FAF2E solid;
+}
+
+.generic-form .input-wrapper.success-input input:focus, .generic-form .input-wrapper.success-input select:focus {
+  border: 1px #2FAF2E solid;
+  -webkit-box-shadow: 0 0 18px rgba(47, 175, 46, 0.25);
+          box-shadow: 0 0 18px rgba(47, 175, 46, 0.25);
+}
+
+.generic-form .input-wrapper.success-input input:focus + label, .generic-form .input-wrapper.success-input select:focus + label {
+  color: #2FAF2E;
+}
+
+.generic-form .input-wrapper.success-input .green-tick {
+  opacity: 1;
 }
 
 .generic-form .action-wrapper {
@@ -701,7 +729,9 @@ body.freeze {
 }
 
 .orphan-form .input-wrapper .error-p {
-  margin-bottom: -24px;
+  margin-bottom: 0;
+  right: unset;
+  left: 0;
 }
 
 .collection-form {

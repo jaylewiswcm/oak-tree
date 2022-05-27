@@ -1,32 +1,45 @@
-import React from 'react'
-import InputMask from 'react-input-mask';
+import React, {useState, useEffect} from 'react'
+import Image from 'next/image';
+
 interface ComponentProps {
-    className: string
+    // className: string
     error: string
     id: string
+    name: string
+    autoComplete: string
+    placeholder: string
     value: string | undefined
     onChange: any
     htmlFor: string
+    label: string
     required: boolean
-    placeholder: string
 }
 
-export const PostCodeInput = ({className, error, id, value, onChange,htmlFor,required,placeholder}:ComponentProps) => {
-  return ( 
-    <div className={className}>
-    <p className='error-p'>{error}</p>
-            <InputMask 
-                id={id}
-                name="postal-code"
-                autoComplete="home postal-code"
-                type="text"
-                placeholder={placeholder}
-                mask='' 
-                value={value}
-                onChange={onChange} 
-                >
-            </InputMask>
-            <label htmlFor={htmlFor}>Postal Code <span className={required ? 'required' : 'required hide'}>*</span></label>
-        </div>
+export const PostCodeInput = ({error, id, name, autoComplete, placeholder, value, onChange,htmlFor,label,required}:ComponentProps) => {
+    const [success, setSuccess] = useState('')  
+
+    useEffect(() => {
+      if(!error && value !== "" && value !== " " && value!.length >= 6 && value!.length <= 8 ) {
+        setSuccess('success-input')
+      } else {
+        setSuccess('')
+      }
+    },[error, value])
+  
+  return (
+                  <div className={`input-wrapper ${error !== '' ? 'errors' : null} ${success}`}>
+                    <p className='error-p'>{error}</p>
+                    <input type="text" id={id} name={name} autoComplete={autoComplete} placeholder={placeholder} value={value} onChange={onChange}  />
+                    <label htmlFor={htmlFor}>{label} <span className={required ? 'required' : 'hide'}>*</span></label>
+                    <div className='green-tick'>
+                      <Image
+                        src='/icons/forms/green-success-tick.svg'
+                        alt='Green success tick'
+                        layout='responsive'
+                        width='30'
+                        height='30'
+                      />
+                    </div>
+                </div>
   )
 }

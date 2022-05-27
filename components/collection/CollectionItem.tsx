@@ -97,7 +97,7 @@ export const CollectionItem = ({product, setShow}: ComponentProps ) => {
                 </li>
                 <li>
                     <span className='tick'><Image src='/vectors/red-tick.svg' alt='Made for you tick' layout='responsive' width='30' height='30'/></span>
-                    <p>Made for you in 6 - 10 weeks</p>
+                    <p>Made in Britain</p>
                 </li>
             </ul>
             <Link href={url} >

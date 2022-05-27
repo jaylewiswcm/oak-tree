@@ -19,9 +19,9 @@
             display: flex;
             align-items: flex-start;
             .input-wrapper {
-                width: 100%;
+                width: calc(50% - 10px);
                 &:first-of-type {
-                    width: 40%;
+                    // width: 40%;
                     margin-right: 20px;
                 }
             }
@@ -71,7 +71,7 @@
                 }
            }
             input[type=text], input[type=tel], input[type=email], select {
-                border: 1px $lighter-grey solid;
+                border: 1px $light-grey solid;
                 padding: 15px;
                 font-size: 1.6rem;
                 font-weight: 400;
@@ -95,9 +95,18 @@
                 margin-top: 8px;
                 display: none;
                 position: absolute;
-                bottom: -22px;
+                bottom: -24px;
                 right:5px;
-            }                    
+            }  
+            .green-tick {
+                width: 17px;
+                height: 17px;
+                position: absolute;
+                bottom:17px;
+                right:15px;
+                opacity: 0;
+                transition: 0.1s;
+            }                  
         }
         .select-wrapper {
             .input-and-label {
@@ -123,17 +132,11 @@
                 text-transform: capitalize;
                 font-size: 1.8rem;
             }
-            .error-p {
-                // margin-left: 160px;
-            }
         }
         .product-interest-wrapper {
             margin-bottom: 0;
         }
         .input-wrapper.errors {
-            // label,.label {
-            //     color: $red-3;
-            // }
             .error-p {
                 display: initial;
             }
@@ -162,6 +165,21 @@
                 }
             }
       
+        }
+        .input-wrapper.success-input {
+            input,select {
+                border: 1px  $success-green solid;
+            }
+            input:focus, select:focus {
+                border: 1px $success-green solid;
+                box-shadow:  0 0 18px rgba(47, 175, 46, 0.25);
+            }
+            input:focus  + label, select:focus + label {
+                color:$success-green;
+            }        
+            .green-tick {
+                opacity: 1;
+            }
         }
         .action-wrapper {
             padding-top: 15px;
@@ -262,7 +280,9 @@
         .input-wrapper {
             margin-bottom: 30px;
             .error-p {
-                margin-bottom: -24px;
+                margin-bottom: 0;
+                right: unset;
+                left: 0;
             }
         }
     }

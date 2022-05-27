@@ -1,12 +1,13 @@
 import React, { useState } from 'react'
 import Image from 'next/image'
 import BrochureRequestForm from './brochure/OrphanBrochureRequestForm';
+import OrphanBrochureForm from './brochure/OrphanBrochureForm';
 
 interface ComponentProps {
   productType : string
 }
 
-const OrphanBrochureForm = ({productType}: ComponentProps) => {
+const OrphanBrochureFormWrapper = ({productType}: ComponentProps) => {
   return (
     <div className='form'>
     <div className='form-title'>
@@ -55,10 +56,11 @@ const OrphanBrochureForm = ({productType}: ComponentProps) => {
         </div>
       </div>
     </div>
-    <BrochureRequestForm productType={productType} />
+    <OrphanBrochureForm />
+    {/* <BrochureRequestForm productType={productType} /> */}
     </div>
 </div>
   )
 }
 
-export default OrphanBrochureForm;
+export default OrphanBrochureFormWrapper;

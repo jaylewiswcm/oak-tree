@@ -123,7 +123,7 @@ const onChange = (e:React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTML
                     id="lname"
                     name="lname"
                     autoComplete="family-name"
-                    placeholder='Enter your last name'
+                    placeholder=''
                     value={formData.lname} 
                     onChange={(e:any) => onChange(e)} 
                     htmlFor="lname"
@@ -138,7 +138,7 @@ const onChange = (e:React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTML
                     id="postal-code"
                     name="postal-code"
                     autoComplete="home postal-code"
-                    placeholder='Enter your postal code'
+                    placeholder=''
                     value={formData['postal-code']} 
                     onChange={(e:any) => onChange(e)} 
                     htmlFor="postal-code"
@@ -151,7 +151,7 @@ const onChange = (e:React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTML
                     id="street-address"
                     name="street-address"
                     autoComplete="home address-line1"
-                    placeholder='Enter your street address'
+                    placeholder=''
                     value={formData['street-address']} 
                     onChange={(e:any) => onChange(e)} 
                     htmlFor="street-address"
@@ -163,7 +163,7 @@ const onChange = (e:React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTML
                     className={formErrors[3].errors.error ? 'input-wrapper errors' : 'input-wrapper'}
                     error={formErrors[3].errors.type}
                     id="tel"
-                    placeholder='Enter your telephone number'
+                    placeholder=''
                     value={formData['tel']} 
                     onChange={(e:any) => onChange(e)} 
                     htmlFor="tel"
@@ -173,7 +173,7 @@ const onChange = (e:React.ChangeEvent<HTMLInputElement> | React.ChangeEvent<HTML
                     className={formErrors[4].errors.error ? 'input-wrapper errors' : 'input-wrapper'}
                     error={formErrors[4].errors.type}
                     id="email"
-                    placeholder='Enter your email address'
+                    placeholder=''
                     value={formData['email']} 
                     onChange={(e:any) => onChange(e)} 
                     htmlFor="email"
