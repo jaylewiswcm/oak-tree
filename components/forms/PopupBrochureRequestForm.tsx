@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import Image from 'next/image';
 // Components
-import SwiperBrochureRequestFormWithProductInterest from './brochure/SwiperBrochureRequestFormWithProductInterest';
+import PopupGenericForm from './brochure/PopupGenericForm';
 
 interface ComponentProps {
-    setShow: any
+    setShow: any 
 }
 
 const PopupBrochureRequestForm = ({setShow}: ComponentProps) => {
@@ -25,8 +25,8 @@ const PopupBrochureRequestForm = ({setShow}: ComponentProps) => {
               <h6>Request your <em className='oaktree-green'>free</em> brochure</h6>
               <p className='supporting-text'>See our full collections, brand new products and gain useful help & advice all from the comfort of your home.</p>
           </div>
-        <SwiperBrochureRequestFormWithProductInterest setShow={setShow}/> 
-       
+        {/* <SwiperBrochureRequestFormWithProductInterest setShow={setShow}/>  */}
+       <PopupGenericForm setShow={setShow}/>
 </div>
   )
 }

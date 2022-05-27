@@ -13,7 +13,8 @@ const Modal = ({children, classNames, setShow}: ComponentProps) => {
             return () => dd.classList.remove('freeze');                
     })
   return (
-    <div className='modal show-modal' onClick={() => setShow(false)}>
+    <div className='modal show-modal' >
+      <div className='modal-bg-btn' onClick={() => setShow(false)}></div>
         <div className={`modal-inner ${classNames}`}>
         { children }
         </div>

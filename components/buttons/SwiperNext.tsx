@@ -2,23 +2,23 @@ import React from 'react';
 import { useSwiper } from 'swiper/react';
 
 interface ComponentProps {
-    func: any
+    validation: any
     classNames: string
 }
 
-export default function SwiperNext({func, classNames}: ComponentProps) {
+export default function SwiperNext({validation, classNames}: ComponentProps) {
   const swiper = useSwiper();
-
-
-  const validateForm = (e:React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+  
+  const validate = (e:React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     e.preventDefault();
-    if(func(e)) {
-       console.log('Are errors')
+  
+    if(validation() === true) {
+      swiper.slideNext()
     } else {
-        swiper.slideNext()
+      return false
     }
   }
   return (
-    <button className={classNames} onClick={(e) => validateForm(e)}>Next</button>
+    <button className={classNames} onClick={(e) => validate(e)}>Next</button>
   );
 }

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Router from 'next/router';
 // Components
 import {TextInput} from '../inputs/TextInput';
 import {EmailInput} from '../inputs/EmailInput';
@@ -96,6 +97,8 @@ export default class OrphanBrochureForm extends Component {
             console.log(this.state);    
             // clear form
             this.setState(initialState);
+            // Send user to thank you page 
+            Router.push('/thank-you-for-your-brochure-request')
         }
       
     }

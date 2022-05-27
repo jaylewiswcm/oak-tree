@@ -25,12 +25,22 @@ body.freeze {
     display: none;
     align-items: center;
     justify-content: center;
-    z-index: 99999;
+    z-index: 99998;
+    .modal-bg-btn {
+        position: absolute;
+        top:0;
+        left:0;
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+    }
     .modal-inner {
         // background-color: $white;
         border-radius: 6px;
         width: 90%;
         max-width: 900px;
+        position: relative;
+        z-index: 99999;
         // width:90%;
         // height:50%;
         // position: relative;
