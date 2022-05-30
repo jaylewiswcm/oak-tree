@@ -25,6 +25,7 @@ const MotorChair = ({isOpen, openAccordian}:ComponentProps) => {
                 height={15} />
             </span>
         </button>
+        {/* <div className='anchor-target'></div> */}
         <div className='product-content' id='motor-section'>
           <div className='motor-container'>
             <div className='content con-reg'>

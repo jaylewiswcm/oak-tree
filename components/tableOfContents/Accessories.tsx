@@ -27,7 +27,8 @@ const AccessoriesChair = ({isOpen, openAccordian, type }:ComponentProps) => {
                 height={15} />
             </span>
         </button>
-        <div className='product-content' id='accessories-section'>
+        <div className='anchor-target' id='accessories-section'></div>
+        <div className='product-content'>
             <div className='content'>
                 <p className='subheading oaktree-green'>Step Four</p>
                 <h5 className='heading'>Choose Your Accessories</h5>

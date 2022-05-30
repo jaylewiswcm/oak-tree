@@ -19,18 +19,19 @@ const Headboards = ({isOpen, openAccordian }:ComponentProps) => {
           <p>Headboards</p> 
             <span className='icon-wrapper'>
               <Image 
-              src='/buttons/plus-black.svg'
+               src='/buttons/plus-black.svg'
                 alt='Plus'
                 layout='responsive'
                 width={15}
                 height={15} />
             </span>
         </button>
+        <div className='anchor-target' id='headboard-section'></div>
         <div className='product-content'>
             <div className='content'>
                 <p className='subheading oaktree-green'>Step Three</p>
                 <h5 className='heading'>Choose Your Headboard</h5>
-                <Accessories type='headboards' />
+                {/* <Accessories type='headboards' /> */}
             </div>
         </div>
 </div>

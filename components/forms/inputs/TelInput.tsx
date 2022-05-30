@@ -23,7 +23,7 @@ export const TelInput = ({error, id, value, onChange,htmlFor,required ,placehold
   },[error, value])
 
   return (
-    <div className={`input-wrapper ${error !== '' ? 'errors' : null} ${success}`}>
+    <div className={`input-wrapper ${error !== '' ? 'errors' : ''} ${success}`}>
     <p className='error-p'>{error}</p>
       <input 
          id={id}

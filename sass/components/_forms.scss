@@ -21,11 +21,9 @@
             .input-wrapper {
                 width: calc(50% - 10px);
                 &:first-of-type {
-                    // width: 40%;
                     margin-right: 20px;
                 }
             }
-
             .select-wrapper {
                 flex-direction: column-reverse;
                 .input-and-label {
@@ -81,7 +79,7 @@
 
             }
             input[type=text]:focus, input[type=tel]:focus, input[type=email]:focus, select:focus {
-                border: 1px $blue-3 solid;
+                border: 1px $blue-3 solid!important;;
                 box-shadow: 0 0 21px rgba(58, 132, 192,0.18);
             }
             input[type=text]:focus + label, input[type=tel]:focus + label, input[type=email]:focus  + label, select:focus + label {
@@ -141,10 +139,10 @@
                 display: initial;
             }
             input,select {
-                border: 1px $red-3 solid;
+                border: 1px $red-3 solid!important;
             }
             input:focus, select:focus {
-                border: 1px $red-3 solid;
+                border: 1px $red-3 solid!important;;
                 box-shadow:  0 0 18px rgba(180, 62, 59, 0.35);
             }
             input:focus  + label, select:focus + label {
@@ -164,14 +162,13 @@
                     color: $blue-3;
                 }
             }
-      
         }
         .input-wrapper.success-input {
             input,select {
-                border: 1px  $success-green solid;
+                border: 1px  $success-green solid!important;
             }
             input:focus, select:focus {
-                border: 1px $success-green solid;
+                border: 1px $success-green solid!important;
                 box-shadow:  0 0 18px rgba(47, 175, 46, 0.25);
             }
             input:focus  + label, select:focus + label {
@@ -276,6 +273,13 @@
       background-color: $dark-green-2;
     }
 
+    .generic-form.product-home-visit-form {
+        height: auto;
+    }
+
+    .generic-form.product-home-visit-form {
+        padding: 0
+    }
     .orphan-form {
         .input-wrapper {
             margin-bottom: 30px;

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import { NextSeo } from 'next-seo';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -12,11 +12,35 @@ import Headboards from '../../components/tableOfContents/Headboards';
 import Accessories from '../../components/tableOfContents/Accessories';
 import Modal from '../../components/modal/Modal';
 import PopupBrochureRequestForm from '../../components/forms/PopupBrochureRequestForm';
+import { InformationContainer } from '../../components/product/InformationContainer';
+import { TOC } from '../../components/tableOfContents/TOC';
+import ProductForm from '../../components/forms/homeVisit/ProductForm';
 
 const TheHazel = () => {
     const [isOpen, setAccordianOpen] = useState('');
     const [show, setFormToShow] = useState(false);
-
+    const [product, setProduct] = useState({
+        name: 'The Hazel',
+        category: 'Adjustable Bed',
+        usps: [
+            {
+                text: 'Made-To-Measure',
+                img: '/icons/product-usps/made-to-measure.svg',
+                alt: 'Made-to-measure'
+            },
+            {
+                text: 'Qualifies for trade in',
+                img: '/icons/product-usps/trade-in.svg',
+                alt: 'Trade In'
+            },
+            {
+                text: 'Made in Britian',
+                img: '/icons/product-usps/british-made.svg',
+                alt: 'Made in britian'
+            }
+        ]
+    })
+    const tocRef = useRef<HTMLDivElement>(null);
     const openAccordian = (type:string) => {
         if(isOpen === type ) {
             setAccordianOpen('')
@@ -65,7 +89,7 @@ const TheHazel = () => {
                 </div>
             </div>
     </div>
-            <div className='product-details con-reg' id='product-information'>
+            {/* <div className='product-details con-reg' id='product-information'>
                 <h3 className='heading'>Long-lasting style and comfort</h3>
                 <p className='desc mobile'>Hidden away inside is a state-of-the-art motor that allows complete control of the mattress with a simple handheld control. If you’re struggling to get into and out of bed, the smart actions of the Hazel might very well be life changing.</p>
                 <ul className='mobile'>
@@ -94,8 +118,39 @@ const TheHazel = () => {
                         height={461}
                     />
                 </div>
+            </div> */}
+            <div className='product-details con-reg' id='product-information'>
+                <div className='product-content'>
+                    <h3 className='heading'>Long-lasting style and comfort</h3>
+                    <p className='desc'>Hidden away inside is a state-of-the-art motor that allows complete control of the mattress with a simple handheld control. If you’re struggling to get into and out of bed, the smart actions of the Hazel might very well be life changing.</p>
+                    <div className="product-images">
+                        <div className='image-wrapper'>
+                        <Image
+                            src='/images/products/beds/hazel/hazel-product-1.png'
+                            alt='The Hazel Bed 1'
+                            layout='responsive'
+                            width={577}
+                            height={461}
+                        />
+                        </div>
+                        <p className='desc'>The gently curved lines lend an airy feel and bestow upon the bed a refined elegance. Hidden away inside is a state-of-the-art motor that allows complete control of the mattress with a simple handheld control. If you’re struggling to get into and out of bed, the smart actions of the Hazel might very well be life changing.</p>
+                        <div className='image-wrapper'>
+                        <Image
+                        src='/images/products/beds/hazel/hazel-product-2.png'
+                        alt='The Hazel Bed 2'
+                        layout='responsive'
+                        width={577}
+                        height={461}
+                    />
+                        </div>
+                    </div>
+                    </div>
+                <div className='product-info'>
+                    <InformationContainer product={product} productType='bed' />
+                </div>
             </div>
-            <div className='table-of-contents'>
+            <TOC reference={tocRef} type='bed'/>
+            <div className='table-of-contents' ref={tocRef} >
                 <h4 className='toc-heading'>Our Process</h4>
                 <MaterialBed isOpen={isOpen} openAccordian={() => openAccordian('material')}/>
                 <Mattress isOpen={isOpen} openAccordian={() => openAccordian('mattress')}/>
@@ -103,25 +158,69 @@ const TheHazel = () => {
                 <Accessories isOpen={isOpen} openAccordian={() => openAccordian('accessories')} type='bed'/>
                 <Reviews product='bed' isOpen={isOpen} openAccordian={() => openAccordian('reviews')}/>
             </div>
-            <div className='request-wrapper con-reg'>
-                <h6 className='heading'>Book a Home Visit</h6>
-                <p className='content'>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore.</p>
-                <div className='image-and-form'>
-                    <div className='image-wrapper'>
-                        <Image 
-                            src='/images/lifestyle/home-visit-desktop.png'
-                            alt='home visit'
-                            layout='fill'
-                            objectFit='cover'
-                            objectPosition='center'
-                        />
+            <div className='request-wrapper'>
+                <div className='con-reg'>
+                    <div className='request-intro'>
+                        <p className='subheading'>Step Five</p>
+                        <h6>Request a Free Home Visit</h6>
+                        <p>Our consultant will be able to advise exactly which product is best for you and your home.</p>
                     </div>
-                    <div className='form-and-cta'>
-                        <button className='main-cta'>
-                            <p>Request A Home Visit</p>
-                        </button>
-                        {/* <HomeVisitForm /> */}
+                <div className='form-and-content'>
+                    <div className='supporting-content'>
+                        <p className='support-heading'>What will it include?</p>
+                        <ul>
+                            <li>
+                                <div className='icon-wrapper'>
+                                    <Image 
+                                        src='/icons/home-visit/icon-made-to-measure.svg'
+                                        alt='Made-to-measure'
+                                        layout='responsive'
+                                        width='84'
+                                        height='70'
+                                    />
+                                </div>
+                                <p>Our consultant will be able to advise exactly which product is best for you and your home.</p>
+                            </li>
+                            <li>
+                                <div className='icon-wrapper'>
+                                <Image 
+                                        src='/icons/home-visit/icon-consulting.svg'
+                                        alt='Made-to-measure'
+                                        layout='responsive'
+                                        width='84'
+                                        height='70'
+                                    />
+                                </div>
+                                <p>Our consultant will be able to advise exactly which product is best for you and your home.</p>
+                            </li>
+                            <li>
+                                <div className='icon-wrapper'>
+                                <Image 
+                                        src='/icons/home-visit/icon-made-to-measure.svg'
+                                        alt='Made-to-measure'
+                                        layout='responsive'
+                                        width='84'
+                                        height='70'
+                                    />
+                                </div>
+                                <p>Our consultant will be able to advise exactly which product is best for you and your home.</p>
+                            </li>
+                            <li>
+                                <div className='icon-wrapper'>
+                                <Image 
+                                        src='/icons/home-visit/icon-consulting.svg'
+                                        alt='Made-to-measure'
+                                        layout='responsive'
+                                        width='84'
+                                        height='70'
+                                    />
+                                </div>
+                                <p>Our consultant will be able to advise exactly which product is best for you and your home.</p>
+                            </li>
+                        </ul>
                     </div>
+                   <ProductForm/> 
+                </div>
                 </div>
             </div>
             <RecommendedProducts product='beds' />

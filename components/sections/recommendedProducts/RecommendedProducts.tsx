@@ -80,80 +80,63 @@ const RecommendedProducts = ({product}: ComponentProps) => {
         <a className='product'>
             <div className='image-wrapper'>
             <Image
-                src='/images/products/beds/birch/birch-product.jpeg'
+               src='/images/products/beds/birch/birch-collection.png'
                 alt='The Birch'
                 layout='responsive'
-                width={303}
-                height={330}
+                width={1000}
+                height={671}
             />
+               <div className='hover-bg'>
+                    <p>View Bed</p>
+                </div>
             </div>
-            <div className='hover-bg'>
+            <div className='product-name-wrapper'>
                 <p className='name'>The Birch</p>
-                <p className='view'>View Bed</p>
-                <div className='acting-btn'>
-                    <Image 
-                        src='/buttons/arrow-yellow.svg'
-                        alt='Arrow'
-                        // layout='responsive'
-                        width={24}
-                        height={20}
-                    />
-                </div>
+                <p className='type'>Adjustable Bed</p>
             </div>
         </a>
-        </Link>
-        <Link href="/adjustable-beds/the-hesper">
-        <a  className='product'>
-        <div className='image-wrapper'>
-            <Image
-                src='/images/products/beds/hesper/hesper-product.jpeg'
-                alt='The Hesper'
-                layout='responsive'
-                width={303}
-                height={330}
-            />
-            </div>
-            <div className='hover-bg'>
-                <p className='name'>The Hesper</p>
-                <p className='view'>View Bed</p>
-                <div className='acting-btn'>
-                    <Image 
-                        src='/buttons/arrow-yellow.svg'
-                        alt='Arrow'
-                        // layout='responsive'
-                        width={24}
-                        height={20}
-                    />
-                </div>
-            </div>
-        </a>
-        </Link>
-        <Link href="/adjustable-beds/the-poplar">
+    </Link>
+    <Link href="/adjustable-beds/the-hesper">
         <a className='product'>
             <div className='image-wrapper'>
             <Image
-                src='/images/products/beds/poplar/poplar-product.jpeg'
-                alt='The Poplar'
+                src='/images/products/beds/hesper/hesper-collection.png'
+                alt='The Hesper'
                 layout='responsive'
-                width={303}
-                height={330}
+                width={1000}
+                height={671}
             />
-            </div>
-            <div className='hover-bg'>
-                <p className='name'>The Poplar</p>
-                <p className='view'>View Bed</p>
-                <div className='acting-btn'>
-                    <Image 
-                        src='/buttons/arrow-yellow.svg'
-                        alt='Arrow'
-                        // layout='responsive'
-                        width={24}
-                        height={20}
-                    />
+               <div className='hover-bg'>
+                    <p>View Bed</p>
                 </div>
             </div>
+            <div className='product-name-wrapper'>
+                <p className='name'>The Hesper</p>
+                <p className='type'>Adjustable Bed</p>
+            </div>
         </a>
-        </Link>
+    </Link>
+    <Link href="/adjustable-beds/the-poplar">
+        <a className='product'>
+            <div className='image-wrapper'>
+            <Image
+                src='/images/products/beds/poplar/poplar-collection.png'
+                alt='The Poplar'
+                layout='responsive'
+                width={1000}
+                height={671}
+            />
+               <div className='hover-bg'>
+                    <p>View Bed</p>
+                </div>
+            </div>
+            <div className='product-name-wrapper'>
+                <p className='name'>The Poplar</p>
+                <p className='type'>Adjustable Bed</p>
+            </div>
+        </a>
+    </Link>
+
     </div>
     }
     </div>

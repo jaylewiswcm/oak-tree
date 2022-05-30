@@ -1,8 +1,7 @@
-import React, { Component } from 'react'
+import React from 'react'
 import Router from 'next/router';
 // Components
 import {TextInput} from '../inputs/TextInput';
-import {EmailInput} from '../inputs/EmailInput';
 import {TelInput} from '../inputs/TelInput';
 import { PostCodeInput } from '../inputs/PostCodeInput';
 
@@ -21,7 +20,7 @@ const initialState = {
     emailError: "",  
 }
 
-export default class OrphanBrochureForm extends Component {
+export default class ProductForm extends React.Component {
     state = initialState;
 
     onChange = (event: any) => {
@@ -37,11 +36,8 @@ export default class OrphanBrochureForm extends Component {
         const errorName:string = name + "Error";  
       
         if(state[errorName] !== '') {
-            console.log(state[errorName]);
             this.validate();
-            // this.setState({ [errorName] : '' })
         }
- 
     }
 
     validate = () => {
@@ -103,11 +99,12 @@ export default class OrphanBrochureForm extends Component {
       
     }
 
-  render() {
-    return (
-        <form onSubmit={(e) => this.onSubmit(e)} className='generic-form orphan-form'>
-            <div className='tight-form-wrapper'>
-            <TextInput 
+    render() {
+  return (
+    <div className='form'>
+        <p className='form-title'>Request your FREE home visit by entering your details below</p>
+        <form action="" onClick={(e) => this.onSubmit(e)} className='generic-form product-home-visit-form'>
+        <TextInput 
                     error={this.state.fnameError}
                     id="fname"
                     name="fname"
@@ -131,21 +128,16 @@ export default class OrphanBrochureForm extends Component {
                     label='Last name'
                     required={true}
                 />
-                </div>
-                <div className='tight-form-wrapper'>
-            <PostCodeInput 
-                        error={this.state.postalCodeError}
-                        id="postal-code"
-                        name='postal-code'
-                        autoComplete="home postal-code"
-                        placeholder=''
-                        value={this.state.postalCode} 
-                        onChange={(e:any) => this.onChange(e)} 
-                        htmlFor="postal-code"
-                        label='Postal Code'
-                        required={true}
-                    />
-                <TextInput 
+              <TelInput 
+                    error={this.state.telError}
+                    id="tel"
+                    placeholder=''
+                    value={this.state.tel} 
+                    onChange={(e:any) => this.onChange(e)} 
+                    htmlFor="tel"
+                    required={true}
+                />
+            <TextInput 
                     error={this.state.streetAddressError}
                     id="street-address"
                     name="street-address"
@@ -157,31 +149,27 @@ export default class OrphanBrochureForm extends Component {
                     label='Street Address'
                     required={true}
                 />
-                </div>
-            {/* <div className='tight-form-wrapper'>
-                </div> */}
-                <TelInput 
-                    error={this.state.telError}
-                    id="tel"
-                    placeholder=''
-                    value={this.state.tel} 
-                    onChange={(e:any) => this.onChange(e)} 
-                    htmlFor="tel"
-                    required={true}
-                />
-                <EmailInput 
-                    error={this.state.emailError}
-                    id="email"
-                    placeholder=''
-                    value={this.state.email} 
-                    onChange={(e:any) => this.onChange(e)} 
-                    htmlFor="email"
-                    required={true}
-                />
-    <div className='form-section action-wrapper'>
-        <input type="submit" value='Request Your Free Brochure' />
+        <PostCodeInput 
+                        error={this.state.postalCodeError}
+                        id="postal-code"
+                        name='postal-code'
+                        autoComplete="home postal-code"
+                        placeholder=''
+                        value={this.state.postalCode} 
+                        onChange={(e:any) => this.onChange(e)} 
+                        htmlFor="postal-code"
+                        label='Postal Code'
+                        required={true}
+                    />
+            {/* <div className='consent-wrapper'>
+                <label htmlFor="consent">I agree to recieve emails from Oak Tree Mobility and our terms and conditions</label>
+                <input type="checkbox" id="consent" value={this.state.consent} name="consent" onChange={(e) => this.onCheckChange(e)} />
+            </div> */}
+            <div className='submit-wrapper'>
+                <input type="submit" value='Request Home Visit' />
+            </div>
+        </form>
     </div>
-</form>
-    )
-  }
+  )
+}
 }

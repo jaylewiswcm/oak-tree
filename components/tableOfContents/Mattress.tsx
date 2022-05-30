@@ -34,6 +34,7 @@ const Mattress = ({isOpen, openAccordian}:ComponentProps) => {
                 height={15} />
             </span>
         </button>
+        <div className='anchor-target' id='mattress-section'></div>
         <div className='product-content'>
             <div className='content'>
                 <p className='subheading oaktree-green'>Step Two</p>

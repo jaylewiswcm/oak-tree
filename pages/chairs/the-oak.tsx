@@ -13,11 +13,34 @@ import RecommendedProducts from '../../components/sections/recommendedProducts/R
 import Modal from '../../components/modal/Modal';
 import PopupBrochureRequestForm from '../../components/forms/PopupBrochureRequestForm';
 import { TOC } from '../../components/tableOfContents/TOC';
+import { InformationContainer } from '../../components/product/InformationContainer';
+import ProductForm from '../../components/forms/homeVisit/ProductForm';
 
 
 const TheOak = () => {
     const [isOpen, setAccordianOpen] = useState('');
     const [show, setFormToShow] = useState(false);
+    const [product, setProduct] = useState({
+        name: 'The Oak',
+        category: 'Rise and Recline Chair',
+        usps: [
+            {
+                text: 'Made-To-Measure',
+                img: '/icons/product-usps/made-to-measure.svg',
+                alt: 'Made-to-measure'
+            },
+            {
+                text: 'Qualifies for trade in',
+                img: '/icons/product-usps/trade-in.svg',
+                alt: 'Trade In'
+            },
+            {
+                text: 'Made in Britian',
+                img: '/icons/product-usps/british-made.svg',
+                alt: 'Made in britian'
+            }
+        ]
+    })
     const tocRef = useRef<HTMLDivElement>(null);
 
     const openAccordian = (type:string) => {
@@ -59,45 +82,41 @@ const TheOak = () => {
                         <p className='mobile-text'>Request a Brochure</p>
                         <p className='desktop-text'>Request Your Free Brochure</p>
                     </button>
-                    {/* <Link href='#product-information' ><a className='learn-more'>
-                        <p className='mobile-text'>Learn More</p>
-                        <p className='desktop-text'>Learn more about the Oak</p>
-                        </a></Link> */}
                 </div>
             </div>
     </div>
             <div className='product-details con-reg' id='product-information'>
-                <h3 className='heading'>Unparralleled Comfort and Support</h3>
-                <p className='desc mobile'>The chairs in this range each feature three luxuriously filled back cushions, which provide unparalleled comfort and support.</p>
-                <ul className='mobile'>
-                    <li><p>Scroll Arms</p></li>
-                    <li><p>Piped Wings</p></li>
-                    <li><p>Perfectly Elegant</p></li> 
-                </ul>
-                <p className='desc desktop'>The chairs in this range each feature three luxuriously filled back cushions, which provide unparalleled comfort and support. In addition, with their scroll arms and piped wings, these recliners are perfectly suited to those looking to add a touch of elegance to their home. With the simple-to-use handheld control panel, sitting and standing will be a breeze too.</p>
-            </div>
-            <div className="product-images con-reg">
-                <div className='image-wrapper'>
-                    <Image
-                        src='/images/products/chairs/oak/oak-product-2.png'
-                        alt='The Oak Chair'
-                        layout='responsive'
-                        width={577}
-                        height={461}
-                    />
-                </div>
-                <div className='image-wrapper'>
-                <Image
-                        src='/images/products/chairs/oak/oak-product-3.png'
-                        alt='The Oak Chair'
-                        layout='responsive'
-                        width={577}
-                        height={461}
-                    />
+                <div className='product-content'>
+                    <h3 className='heading'>Unparralleled Comfort and Support</h3>
+                    <p className='desc'>The chairs in this range each feature three luxuriously filled back cushions, which provide unparalleled comfort and support. In addition, with their scroll arms and piped wings, these recliners are perfectly suited to those looking to add a touch of elegance to their home. With the simple-to-use handheld control panel, sitting and standing will be a breeze too.</p>
+                    <div className="product-images">
+                        <div className='image-wrapper'>
+                            <Image
+                                src='/images/products/chairs/oak/oak-product-2.png'
+                                alt='The Oak Chair'
+                                layout='responsive'
+                                width={577}
+                                height={461}
+                            />
+                        </div>
+                        <p className='desc'>The chairs in this range each feature three luxuriously filled back cushions, which provide unparalleled comfort and support. In addition, with their scroll arms and piped wings, these recliners are perfectly suited to those looking to add a touch of elegance to their home. With the simple-to-use handheld control panel, sitting and standing will be a breeze too.</p>
+                        <div className='image-wrapper'>
+                        <Image
+                                src='/images/products/chairs/oak/oak-product-3.png'
+                                alt='The Oak Chair'
+                                layout='responsive'
+                                width={577}
+                                height={461}
+                            />
+                        </div>
+                    </div>
+                    </div>
+                <div className='product-info'>
+                    <InformationContainer product={product} productType='chair' />
                 </div>
             </div>
             <Reviews product='chair' isOpen={isOpen} openAccordian={() => openAccordian('reviews')}/>
-            <TOC reference={tocRef}/>
+            <TOC reference={tocRef} type='chair'/>
             <div className='table-of-contents' ref={tocRef}>
                 <h4 className='toc-heading'>Our Process</h4>
                 <MaterialChair isOpen={isOpen} openAccordian={() => openAccordian('material')}/>
@@ -166,62 +185,11 @@ const TheOak = () => {
                             </li>
                         </ul>
                     </div>
-                    <div className='form'>
-                        <p className='form-title'>Request your FREE home visit by entering your details below</p>
-                        <form action="">
-                            <div className='input-wrapper'>
-                                <label htmlFor="title">Title <span className='required'>*</span></label>
-                                <input type="text" name='title' id='title' placeholder='Choose your title'/>
-                            </div>
-                            <div className='input-wrapper'>
-                                <label htmlFor="lname">Last Name <span className='required'>*</span></label>
-                                <input type="text" name='lname' id='lname' placeholder='Enter your last name'/>
-                            </div>
-                            <div className='input-wrapper'>
-                                <label htmlFor="tel">Phone Number <span className='required'>*</span></label>
-                                <input type="text" name='tel' id='tel' placeholder='Enter your phone number'/>
-                            </div>
-                            <div className='input-wrapper'>
-                                <label htmlFor="street">First Line of Address <span className='required'>*</span></label>
-                                <input type="text" name='street' id='street' placeholder='Enter your first line of address'/>
-                            </div>
-                            <div className='input-wrapper'>
-                                <label htmlFor="zip">Postal Code <span className='required'>*</span></label>
-                                <input type="text" name='zip' id='zip' placeholder='Enter your Postal Code'/>
-                            </div>
-                            <div className='consent-wrapper'>
-                                <label htmlFor="consent">I agree to recieve emails from Oak Tree Mobility and our terms and conditions</label>
-                                <input type="checkbox" id="consent" name="consent" value="true" />
-                            </div>
-                            <div className='submit-wrapper'>
-                                <input type="submit" value='Request Home Visit' />
-                            </div>
-                        </form>
-                    </div>
+                   <ProductForm/> 
                 </div>
                 </div>
             </div>
-            {/* <div className='request-wrapper con-reg'>
-                <h6 className='heading'>Book a Home Visit</h6>
-                <p className='content'>Our consultant will be able to advise exactly which product is best for you and your home.</p>
-                <div className='image-and-form'>
-                    <div className='image-wrapper'>
-                        <Image 
-                            src='/images/lifestyle/home-visit-desktop.png'
-                            alt='home visit'
-                            layout='fill'
-                            objectFit='cover'
-                            objectPosition='center'
-                        />
-                    </div>
-                    <div className='form-and-cta'>
-                        <button className='main-cta'>
-                            <p>Request A Home Visit</p>
-                        </button>
-                        <HomeVisitForm />
-                    </div>
-                </div>
-            </div> */}
+    
             <RecommendedProducts product='chairs'/>
         </div>
         </>

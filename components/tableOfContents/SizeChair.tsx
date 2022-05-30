@@ -25,7 +25,8 @@ const SizeChair = ({isOpen, openAccordian}:ComponentProps) => {
                 height={15} />
             </span>
         </button>
-        <div className='product-content' id='size-section'>
+        <div className='anchor-target' id='size-section'></div>
+        <div className='product-content size-section'>
             <div className='content'>
                 <p className='subheading oaktree-green'>Step Two</p>
                 <h5 className='heading'>Choose Your Size</h5>
