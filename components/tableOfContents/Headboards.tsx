@@ -32,6 +32,7 @@ const Headboards = ({isOpen, openAccordian }:ComponentProps) => {
                 <p className='subheading oaktree-green'>Step Three</p>
                 <h5 className='heading'>Choose Your Headboard</h5>
                 {/* <Accessories type='headboards' /> */}
+                <div></div>
             </div>
         </div>
 </div>

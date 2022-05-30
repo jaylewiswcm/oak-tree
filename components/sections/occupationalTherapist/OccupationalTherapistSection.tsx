@@ -5,7 +5,7 @@ import {motion, useAnimation } from 'framer-motion';
 import { useInView } from "react-intersection-observer";
 import { useIsMedium } from '../../../utils/hooks';
 // images 
-import desktopImage from '../../../public/occupational-therapist/sam-shann-new.jpeg'
+import desktopImage from '../../../public/occupational-therapist/sam-shann-new.png'
 import mobileImage from '../../../public/occupational-therapist/sam-shann-circle-2.png'
 import logo from '../../../public/occupational-therapist/ukts-logo.png';
 import Modal from '../../modal/Modal';
@@ -116,8 +116,8 @@ const stagger = {
                   src={desktopImage}
                   alt='Samantha Shann'
                   layout='responsive'
-                  width='238'
-                  height='216'
+                  width='900'
+                  height='580'
                   quality={100}
                 />
               </div>
@@ -128,7 +128,28 @@ const stagger = {
         </div>
 
         <div className='health-benefits con-reg'>
-          <h5>Health benefits outlined by our <br/>Occupational Therapist include</h5>
+          {/* <h5>Health benefits outlined by our <br/>Occupational Therapist include</h5> */}
+          <h5>Oak Tree Mobility's <span>chairs</span>, <span>beds</span> and <span>bathlifts</span> can help to:</h5>
+          <ul className='benefits-product-list'>
+                <li>
+                  <span className='tick'>
+                    <Image src='/vectors/red-tick.svg' alt='Tick 1' layout='responsive' width='30' height='30'/>
+                  </span>
+                  <p>Chairs</p>
+                </li>
+                <li>
+                  <span className='tick'>
+                    <Image src='/vectors/red-tick.svg' alt='Tick 2' layout='responsive' width='30' height='30'/>
+                  </span>
+                  <p>Beds</p>
+                </li>
+                <li>
+                  <span className='tick'>
+                    <Image src='/vectors/red-tick.svg' alt='Tick 3' layout='responsive' width='30' height='30'/>
+                  </span>
+                  <p>Bath Lifts</p>
+                </li>
+          </ul>
           <div className='benefits-grid'>
             <div className='benefit'>
               <div className='icon-wrapper'>
@@ -141,26 +162,6 @@ const stagger = {
                 />
               </div>
               <p>Relieves Back Pain</p>
-              <ul>
-                <li>
-                  <span className='tick'>
-                    <Image src='/vectors/red-tick.svg' alt='Tick 1' layout='responsive' width='30' height='30'/>
-                  </span>
-                  <p>Chairs</p>
-                </li>
-                <li>
-                  <span className='tick'>
-                    <Image src='/vectors/red-tick.svg' alt='Tick 2' layout='responsive' width='30' height='30'/>
-                  </span>
-                  <p>Beds</p>
-                </li>
-                <li>
-                  <span className='tick'>
-                    <Image src='/vectors/red-tick.svg' alt='Tick 3' layout='responsive' width='30' height='30'/>
-                  </span>
-                  <p>Bath Lifts</p>
-                </li>
-              </ul>
             </div>
             <div className='benefit'>
               <div className='icon-wrapper'>
@@ -173,20 +174,6 @@ const stagger = {
                 />
               </div>
               <p>Support Hip & Knees</p>
-              <ul>
-                <li>
-                  <span className='tick'>
-                    <Image src='/vectors/red-tick.svg' alt='Tick 1' layout='responsive' width='30' height='30'/>
-                  </span>
-                  <p>Chairs</p>
-                </li>
-                <li>
-                  <span className='tick'>
-                    <Image src='/vectors/red-tick.svg' alt='Tick 2' layout='responsive' width='30' height='30'/>
-                  </span>
-                  <p>Beds</p>
-                </li>
-              </ul>
             </div>
             <div className='benefit'>
               <div className='icon-wrapper'>
@@ -199,26 +186,6 @@ const stagger = {
                 />
               </div>
               <p>Improves Circulation</p>
-              <ul>
-                <li>
-                  <span className='tick'>
-                    <Image src='/vectors/red-tick.svg' alt='Tick 1' layout='responsive' width='30' height='30'/>
-                  </span>
-                  <p>Chairs</p>
-                </li>
-                <li>
-                  <span className='tick'>
-                    <Image src='/vectors/red-tick.svg' alt='Tick 2' layout='responsive' width='30' height='30'/>
-                  </span>
-                  <p>Beds</p>
-                </li>
-                <li>
-                  <span className='tick'>
-                    <Image src='/vectors/red-tick.svg' alt='Tick 3' layout='responsive' width='30' height='30'/>
-                  </span>
-                  <p>Bath Lifts</p>
-                </li>
-              </ul>
             </div>
             <div className='benefit'>
               <div className='icon-wrapper'>
@@ -230,21 +197,7 @@ const stagger = {
                   layout='responsive'
                 />
               </div>
-              <p>Improves Sleep</p>
-              <ul>
-                <li>
-                  <span className='tick'>
-                    <Image src='/vectors/red-tick.svg' alt='Tick 1' layout='responsive' width='30' height='30'/>
-                  </span>
-                  <p>Chairs</p>
-                </li>
-                <li>
-                  <span className='tick'>
-                    <Image src='/vectors/red-tick.svg' alt='Tick 2' layout='responsive' width='30' height='30'/>
-                  </span>
-                  <p>Beds</p>
-                </li>
-              </ul>
+              <p>Improves Sleep</p>               
             </div>
           </div>
           <p className='find-more'>Plus many more, find <Link href='/occupational-therapist'><a>all the benefits here</a></Link></p>
