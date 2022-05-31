@@ -250,40 +250,71 @@
             position: sticky;
             top:25px;
             .top {
-                padding-bottom: 15px;
+                padding-bottom: 10px;
                 h4{ 
-                    font-size: 3rem;
+                    font-size: 2.8rem;
                     font-weight: 600;
                     font-family: $fontText;
                     color: $dark-green-1;
                 }
                 p {
-                    font-size: 2.2rem;
-                    font-weight: 500;
-                    color: $grey;
+                    font-size: 2rem;
+                    font-weight: 400;
+                    color: $dark-green-3;
                 }
+            }
+            .british-made-icon {
+                position: absolute;
+                top:15px;
+                right: 15px;
+                width: 60px;
+                .tooltip {
+                    position: absolute;
+                    top: -40px;
+                    right: 0;
+                    width: 160px;
+                    font-size: 18px;
+                    font-weight: 400;
+                    background-color: $gb-blue;
+                    color: $white;
+                    padding: 10px;
+                    text-align: center;
+                    border-radius: 6px;
+                    opacity: 0;
+                    transition: 0.2s;
+                    .arrow {
+                        width: 0; 
+                        height: 0; 
+                        border-left: 8px solid transparent;
+                        border-right: 8px solid transparent;
+                        border-top: 8px solid  $gb-blue;
+                        position: absolute;
+                        bottom:-7px;
+                        right: 22px;
+                    }
+                }
+            }
+            .british-made-icon:hover .tooltip{
+                opacity: 1;
             }
             .usp-list {
                 li {
                     display: flex;
                     align-items: center;
-                    padding: 8px 0;
+                    padding: 5px 0;
                     .icon {
-                        width: 35px;
-                        height: 35px;
-                        margin-right: 10px;
+                        width: 30px;
+                        height: 30px;
+                        margin-right: 12px;
                     }
                     p {
-                        font-size:2rem;
+                        font-size:1.8rem;
                         color: $grey;
                     }
                 }
             }
             .info-section {
                 padding-top: 20px;
-                // &:first-of-type {
-                //     border-top: 1px $light-grey solid;
-                // }
                 .info-header  {
                     font-size: 2rem;
                     font-weight: 500;
@@ -292,16 +323,15 @@
                 }
                 .swatch-grid {
                     display: flex;
-                    align-items: center;
-                    justify-content: space-between;
-                    margin-bottom: 15px;
+                    align-items: center;                                
                     .swatch {
-                        width: 30px;
-                        height: 30px;
+                        width: 35px;
+                        height: 35px;
                         border-radius: 50%;
                         overflow: hidden;
                         border: 1px $grey solid;
                         position: relative;
+                        margin-right: 10px;
                         .inner-swatch {
                             width: 90%;
                             border-radius: 50%;
@@ -312,18 +342,11 @@
                             transform: translate(-50%, -50%);
                         }
                     }
-                    .bed-swatch {
-                        width: 40px;
-                        height: 40px;
-                    }
-                }
-                .plus-more {
-                    font-size: 1.8rem;
-                    font-weight: 400;
-                    color: $grey;
-                    a {
-                        text-decoration: underline;
-                        text-underline-offset: 2px;
+                    .plus-more {
+                        font-size: 1.8rem;
+                        font-weight: 400;
+                        color: $grey;
+                        margin-left: 5px;
                     }
                 }
                 .accessory-grid {
@@ -343,6 +366,7 @@
                 }
                 &.motors {
                     display: flex;
+                    flex-direction: column;
                     justify-content: center;
                     border-bottom: 1px $light-grey solid;
                     padding-bottom: 20px;
@@ -351,7 +375,7 @@
                     }
                     a {
                         margin-top: 3px;
-                        margin-left: 10px;
+                        // margin-left: 10px;
                         font-size: 1.8rem;
                         font-weight: 400;
                         color: $grey;
@@ -366,7 +390,7 @@
                     font-weight: 500;
                     color: $dark-green-1;
                     text-align: center;
-                    margin-top: 10px;
+                    // margin-top: 10px;
                 }
                 button {
                     width: 100%;
@@ -374,12 +398,6 @@
                     font-weight: 500;
                     padding: 15px 0;
                     letter-spacing: 0.2px;
-                }
-                .or {
-                    margin: 10px auto;
-                }
-                .no-bg-btn {
-                    border: 2px $dark-green-1 solid;
                     margin-top: 15px;
                 }
                 .main-cta {

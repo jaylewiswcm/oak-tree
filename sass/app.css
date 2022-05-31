@@ -5321,7 +5321,6 @@ body.mobile-navbar .mobile-navigation {
 
 .product-collections .collections-grid .collection-item {
   width: 100%;
-  margin-bottom: 30px;
 }
 
 .product-collections .collections-grid .collection-item:last-of-type {
@@ -5332,9 +5331,16 @@ body.mobile-navbar .mobile-navigation {
   width: 100%;
 }
 
+.product-collections .collections-grid .collection-item .col-details {
+  padding: 10px 30px;
+  padding-bottom: 30px;
+  border: 1px #E3E3E3 solid;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
 .product-collections .collections-grid .collection-item .image-wrapper {
   width: 100%;
-  margin-bottom: 10px;
   position: relative;
 }
 
@@ -6621,20 +6627,59 @@ body.mobile-navbar .mobile-navigation {
 }
 
 .product-details .product-info .info-container .top {
-  padding-bottom: 15px;
+  padding-bottom: 10px;
 }
 
 .product-details .product-info .info-container .top h4 {
-  font-size: 3rem;
+  font-size: 2.8rem;
   font-weight: 600;
   font-family: "Euclid Circular A", "Helvetica", sans-serif;
   color: #17494D;
 }
 
 .product-details .product-info .info-container .top p {
-  font-size: 2.2rem;
-  font-weight: 500;
-  color: #7F7F7F;
+  font-size: 2rem;
+  font-weight: 400;
+  color: #60898D;
+}
+
+.product-details .product-info .info-container .british-made-icon {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 60px;
+}
+
+.product-details .product-info .info-container .british-made-icon .tooltip {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  width: 160px;
+  font-size: 18px;
+  font-weight: 400;
+  background-color: #012169;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  border-radius: 6px;
+  opacity: 0;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.product-details .product-info .info-container .british-made-icon .tooltip .arrow {
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid #012169;
+  position: absolute;
+  bottom: -7px;
+  right: 22px;
+}
+
+.product-details .product-info .info-container .british-made-icon:hover .tooltip {
+  opacity: 1;
 }
 
 .product-details .product-info .info-container .usp-list li {
@@ -6644,17 +6689,17 @@ body.mobile-navbar .mobile-navigation {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 8px 0;
+  padding: 5px 0;
 }
 
 .product-details .product-info .info-container .usp-list li .icon {
-  width: 35px;
-  height: 35px;
-  margin-right: 10px;
+  width: 30px;
+  height: 30px;
+  margin-right: 12px;
 }
 
 .product-details .product-info .info-container .usp-list li p {
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: #7F7F7F;
 }
 
@@ -6676,19 +6721,16 @@ body.mobile-navbar .mobile-navigation {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-bottom: 15px;
 }
 
 .product-details .product-info .info-container .info-section .swatch-grid .swatch {
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
   overflow: hidden;
   border: 1px #7F7F7F solid;
   position: relative;
+  margin-right: 10px;
 }
 
 .product-details .product-info .info-container .info-section .swatch-grid .swatch .inner-swatch {
@@ -6702,20 +6744,11 @@ body.mobile-navbar .mobile-navigation {
           transform: translate(-50%, -50%);
 }
 
-.product-details .product-info .info-container .info-section .swatch-grid .bed-swatch {
-  width: 40px;
-  height: 40px;
-}
-
-.product-details .product-info .info-container .info-section .plus-more {
+.product-details .product-info .info-container .info-section .swatch-grid .plus-more {
   font-size: 1.8rem;
   font-weight: 400;
   color: #7F7F7F;
-}
-
-.product-details .product-info .info-container .info-section .plus-more a {
-  text-decoration: underline;
-  text-underline-offset: 2px;
+  margin-left: 5px;
 }
 
 .product-details .product-info .info-container .info-section .accessory-grid {
@@ -6743,6 +6776,10 @@ body.mobile-navbar .mobile-navigation {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -6756,7 +6793,6 @@ body.mobile-navbar .mobile-navigation {
 
 .product-details .product-info .info-container .info-section.motors a {
   margin-top: 3px;
-  margin-left: 10px;
   font-size: 1.8rem;
   font-weight: 400;
   color: #7F7F7F;
@@ -6771,7 +6807,6 @@ body.mobile-navbar .mobile-navigation {
   font-weight: 500;
   color: #17494D;
   text-align: center;
-  margin-top: 10px;
 }
 
 .product-details .product-info .info-container .cta-wrapper button {
@@ -6780,14 +6815,6 @@ body.mobile-navbar .mobile-navigation {
   font-weight: 500;
   padding: 15px 0;
   letter-spacing: 0.2px;
-}
-
-.product-details .product-info .info-container .cta-wrapper .or {
-  margin: 10px auto;
-}
-
-.product-details .product-info .info-container .cta-wrapper .no-bg-btn {
-  border: 2px #17494D solid;
   margin-top: 15px;
 }
 

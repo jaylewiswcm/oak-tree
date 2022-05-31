@@ -22,7 +22,7 @@ interface ComponentProps {
     }
 }
 
-export const InformationContainer = ({product, productType}:ComponentProps) => {
+export const InformationContainer = ({product, productType }:ComponentProps) => {
 
     const {name, category, usps} = product;
 
@@ -31,6 +31,21 @@ export const InformationContainer = ({product, productType}:ComponentProps) => {
     <div className='top'>
         <h4>{name}</h4>
         <p>{category}</p>
+    </div>
+    <div className="british-made-icon">
+        <div className='icon'>
+            <Image 
+                src='/icons/product-usps/british-made.svg'
+                alt='British made'
+                layout='responsive'
+                width='80'
+                height='80'
+            />
+        </div>
+        <div className='tooltip'>
+            Made in Britain
+            <div className='arrow'></div>
+        </div>
     </div>
     <ul className='usp-list'>
         {usps.map((usp, index) => 
@@ -87,7 +102,7 @@ export const InformationContainer = ({product, productType}:ComponentProps) => {
     <div className='info-section fabrics'>
         <p className='info-header'>Fabrics and Leathers:</p>
         <div className='swatch-grid'>
-            {productType === 'chair' && chair_fabrics.map((fabric, index) => 
+            {productType === 'chair' && chair_fabrics.slice(0,6).map((fabric, index) => 
                 <div className='swatch' key={index}>
                     <div className='inner-swatch'>
                         <Image 
@@ -100,8 +115,8 @@ export const InformationContainer = ({product, productType}:ComponentProps) => {
                     </div>
                 </div>
             ) }
-            {productType === 'bed' && bed_fabrics.map((fabric, index) => 
-                <div className='swatch bed-swatch' key={index}>
+            {productType === 'bed' && bed_fabrics.slice(0,6).map((fabric, index) => 
+                <div className='swatch' key={index}>
                     <div className='inner-swatch'>
                         <Image 
                             src={fabric.src}
@@ -113,8 +128,9 @@ export const InformationContainer = ({product, productType}:ComponentProps) => {
                     </div>
                 </div>
             ) }
+            <p className='plus-more'>+ 32 more</p>
         </div>
-        <p className='plus-more'>Plus many more, <Link href='/'><a>See options here</a></Link></p>
+        
     </div>
     <div className='info-section accessories'>
         <p className='info-header'>Accessories:</p>
@@ -145,12 +161,10 @@ export const InformationContainer = ({product, productType}:ComponentProps) => {
     </div>
     <div className='info-section motors'>
         <p className='info-header'>Motors:</p>
-        <Link href='/'><a>Choice of motors click to learn more</a></Link>
+        <Link href='/'><a>Choice of three motors</a></Link>
     </div>
     <div className='cta-wrapper'>
-        <p>Think you're ready to build your chair?</p>
-        <button className='no-bg-btn'>Book a Home Visit</button>
-        <p className='or'>Or</p>
+        <p>See all our options in our free brochure</p>
         <button className='main-cta'>Request a Free Brochure</button>
     </div>
 </div>

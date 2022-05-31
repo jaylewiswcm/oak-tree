@@ -67,6 +67,8 @@ export const CollectionItem = ({product, setShow}: ComponentProps ) => {
                     </div>
                 </a>
             </Link>
+
+            <div className='col-details'>
             <div className='col-name-wrapper'>
                 <div className='title-and-swatches'>
                 <p className='subheading'>{subheading}</p>
@@ -107,6 +109,7 @@ export const CollectionItem = ({product, setShow}: ComponentProps ) => {
                     </div>
                 </a>
             </Link>
+            </div>
         {/* <div className='btn-leaf-wrapper'>
     
             <div className='leaf'>

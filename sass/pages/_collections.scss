@@ -254,17 +254,26 @@
         }
         .collection-item {
             width: 100%;
-            margin-bottom: 30px;
+            // padding-bottom: 45px;
             // background-color: $lighter-grey;
+            // border: 1px $lighter-grey solid;
+            
+   
             &:last-of-type {
                 margin-bottom: 0;;
             }
             a {
                 width: 100%;
             }
+            .col-details {
+                padding: 10px 30px;;
+                padding-bottom:30px;
+                border: 1px $lighter-grey solid;
+                transition: 0.2s;
+            }
             .image-wrapper {
                 width: 100%;
-                margin-bottom: 10px;      
+   
                 position: relative;
                 .leaf {
                     background-color: $white;

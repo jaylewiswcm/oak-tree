@@ -1,7 +1,8 @@
-import React, { useState, useRef } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import Link from 'next/link';
 import Image from 'next/image';
 import { NextSeo } from 'next-seo';
+import { useAppContext } from '../../context/state'
 // Components
 // import HomeVisitForm from '../../components/forms/homeVisit/HomeVisitForm';
 import MaterialChair from '../../components/tableOfContents/MaterialChair';
@@ -33,16 +34,18 @@ const TheOak = () => {
                 text: 'Qualifies for trade in',
                 img: '/icons/product-usps/trade-in.svg',
                 alt: 'Trade In'
-            },
-            {
-                text: 'Made in Britian',
-                img: '/icons/product-usps/british-made.svg',
-                alt: 'Made in britian'
             }
         ]
     })
+    // Refs
     const tocRef = useRef<HTMLDivElement>(null);
 
+    const { setProductPage} = useAppContext();
+
+    useEffect(() => {
+        setProductPage(true)
+    },[setProductPage])
+    
     const openAccordian = (type:string) => {
         if(isOpen === type ) {
             setAccordianOpen('')
@@ -50,7 +53,6 @@ const TheOak = () => {
         else {
             setAccordianOpen(type)
         }
-
     }
     return (
         <>
@@ -112,7 +114,7 @@ const TheOak = () => {
                     </div>
                     </div>
                 <div className='product-info'>
-                    <InformationContainer product={product} productType='chair' />
+                    <InformationContainer product={product} productType='chair'/>
                 </div>
             </div>
             <Reviews product='chair' isOpen={isOpen} openAccordian={() => openAccordian('reviews')}/>

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { useAppContext } from '../../context/state'
 // Components
 import Header from "./Header";
 import Footer from "./Footer";
@@ -11,10 +12,12 @@ interface ComponentProps  {
 }
 
  const Layout = ({ children }:ComponentProps) => {
-    const [hideClass, setHideClass] = useState('bottom-bar hide-bar')
+    // const [hideClass, setHideClass] = useState('hide-bar')
     const [overlayClass, setOverlayClass] = useState('british-made-overlay')
     const [overlay, hideOverlay] = useState(true);
- 
+
+
+   const { hideBottomBar, setToHideBottomBar, productPage } = useAppContext();
 
     useEffect(() => {
       window.addEventListener("scroll", handleScroll);
@@ -25,13 +28,18 @@ interface ComponentProps  {
     
     const handleScroll = () => {
       const position = window.pageYOffset;
-        if(position < 80) {
-            setHideClass('bottom-bar hide-bar');
-            setOverlayClass('british-made-overlay')
-        } else {
-            setHideClass('bottom-bar')
-            setOverlayClass('british-made-overlay increased-bottom-margin')
-        }
+      let setPosition = 80;
+      if(productPage) {
+        setToHideBottomBar("hide-bar") 
+      } else {
+        if(position < setPosition) {
+          setToHideBottomBar("hide-bar") 
+          setOverlayClass('british-made-overlay')
+      } else {
+          setToHideBottomBar("") 
+          setOverlayClass('british-made-overlay increased-bottom-margin')
+      }
+      }
     };
 
 
@@ -41,7 +49,7 @@ interface ComponentProps  {
               <Header />
               <BreadcrumbNav />
               { children }
-              <BottomBar className={hideClass}/>
+              <BottomBar className={hideBottomBar}/>
               {overlay && <UspOverlay className={overlayClass} hideOverlay={hideOverlay} />}
               <Footer />
           </div>
