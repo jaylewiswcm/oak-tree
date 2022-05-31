@@ -97,8 +97,10 @@
 .how-you-can-help {
     margin: 50px auto;
     margin-bottom:25px;
+    margin-top: 25px;
     @media(min-width: 950px) {
         margin: 50px auto;
+        margin-top: 25px;
     }
     h5 {
         font-size: 3rem;

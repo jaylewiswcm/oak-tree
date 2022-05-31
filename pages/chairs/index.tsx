@@ -104,7 +104,6 @@ const Index = () => {
               <p className='sub-heading'>Our Chairs are fully customisable and made-to-fit your measurements - we have curated a collection of chairs that embed different styles suited for different living environments</p>
                 <CollectionGrid products={chairs}/>
                 <OurProcess />
-             
                 <Reviews orphan={false}/>
                 <CollectionUsps />
                 <Resources pageType='chairs' />

@@ -64,7 +64,7 @@ const TradeIn = () => {
                     <div className='section-content'>
                         <div className='icon-wrapper'>
                             <Image
-                                src='/icons/delivery/icon-delivery.svg'
+                                src='/icons/collection-usps/free-delivery.svg'
                                 alt='Delivery Van icon'
                                 layout='responsive'
                                 width='60'
@@ -83,7 +83,7 @@ const TradeIn = () => {
                 </div>
             </div>
             <div className='trade-in-bhf-logo'>
-                <p className='bhf-red'>Proudly Supporting</p>
+                <p className=''>Proudly Supporting</p>
                 <div className='logo-wrapper'>
                     <Image
                         src='/bhf/bhf-logo.svg'
@@ -95,7 +95,7 @@ const TradeIn = () => {
                 </div>
             </div>
             <div className='how-you-can-help con-reg'>
-                <h5 className='bhf-red'>How your furniture could help</h5>
+                <h5 className=''>How your furniture could help</h5>
                 <div className='section-grid'>
                     <div className='section'>
                         <div className="icon-wrapper">

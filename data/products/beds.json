@@ -4,15 +4,23 @@
     "subheading" : "An Elegant and Refined Bed",
     "desc": "The Hazel bed strikes a fine balance between traditional and contemporary, making it fit in well with most interior styles.",
     "url" : "/adjustable-beds/the-hazel",
-    "icon": "/icons/products/icon-hazel.svg"
+    "icon": "/icons/collection/leaves/icon-hazel.svg",
+    "swatch": {
+        "src" : "/images/fabric/swatches/coniston-floral-champagne.png",
+        "name": "Coniston Floral Champagne"
+    } 
 },
 {
     "name" : "The Hesper",
     "collectionImage" : "/images/products/beds/hesper/hesper-collection.png",
     "subheading" : "Eye Catching With Style",
     "desc": "With its clean lines and square head, this eye-catching adjustable bed will be perfectly at home in any contemporary setting.",
-    "url" : "/adjustable-beds/the-hesper",
-    "icon": "/icons/products/icon-hesper.svg"
+    "url" : "/adjustable-beds/the-hazel",
+    "icon": "/icons/collection/leaves/icon-hesper.svg",
+    "swatch": {
+        "src" : "/images/fabric/swatches/coniston-floral-champagne.png",
+        "name": "Coniston Floral Champagne"
+    } 
 },
 {
     "name" : "The Oysterwood",
@@ -20,7 +28,11 @@
     "subheading" : "A Versatile Bed With Plenty of Style",
     "desc": "One of the more recent additions to the Oak Tree Mobility family, the Oysterwood is a versatile option for any bedroom setting.",
     "url" : "/adjustable-beds/the-oysterwood",
-    "icon": "/icons/products/icon-oysterwood.svg"
+    "icon": "/icons/collection/leaves/icon-oysterwood.svg",
+    "swatch": {
+        "src" : "/images/fabric/swatches/coniston-floral-champagne.png",
+        "name": "Coniston Floral Champagne"
+    } 
 },
 {
     "name" : "The Poplar",
@@ -28,7 +40,11 @@
     "subheading" : "Innovative Comfort and Great Design",
     "desc": "Featuring a full base that allows for various configurations of under-bed storage, a good choice for those who might be short on space.",
     "url" : "/adjustable-beds/the-poplar",
-    "icon": "/icons/products/icon-poplar.svg"
+    "icon": "/icons/collection/leaves/icon-poplar.svg",
+    "swatch": {
+        "src" : "/images/fabric/swatches/coniston-floral-champagne.png",
+        "name": "Coniston Floral Champagne"
+    } 
 },
 {
     "name" : "The Birch",
@@ -36,7 +52,11 @@
     "subheading" : "Modern Technology and British Style",
     "desc": "If you favour simpler and more traditional-looking furniture, you’ll like the classic styling of the Birch adjustable bed.",
     "url" : "/adjustable-beds/the-birch",
-    "icon": "/icons/products/icon-birch.svg"
+    "icon": "/icons/collection/leaves/icon-birch.svg",
+    "swatch": {
+        "src" : "/images/fabric/swatches/coniston-floral-champagne.png",
+        "name": "Coniston Floral Champagne"
+    } 
 },
 {
     "name" : "The Lilac",
@@ -44,5 +64,9 @@
     "subheading" : "Innovation and stylish",
     "desc": "With its solid, regal lines and plump head and footboard, this classic choice will bring you long-lasting style and durability.",
     "url" : "/adjustable-beds/the-lilac",
-    "icon": "/icons/products/icon-lilac.svg"
+    "icon": "/icons/collection/leaves/icon-lilac.svg",
+    "swatch": {
+        "src" : "/images/fabric/swatches/coniston-floral-champagne.png",
+        "name": "Coniston Floral Champagne"
+    } 
 }]

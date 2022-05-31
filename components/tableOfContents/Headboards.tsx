@@ -1,6 +1,7 @@
 import React, { useRef } from 'react'
 import Image from 'next/image';
-import {Accessories} from '../sections/accessories/Accessories';
+// data
+import headboards from '../../data/headboards/headboards.json'
 
 interface ComponentProps {
     isOpen: string
@@ -32,7 +33,16 @@ const Headboards = ({isOpen, openAccordian }:ComponentProps) => {
                 <p className='subheading oaktree-green'>Step Three</p>
                 <h5 className='heading'>Choose Your Headboard</h5>
                 {/* <Accessories type='headboards' /> */}
-                <div></div>
+                <div className='headboard-grid'>
+                  {headboards.map((item, index) => 
+                    <div className='item' key={index}>
+                      <div className='image-wrapper'>
+                        <Image src={item.image} alt={item.name} layout='responsive' width='295' height='222'/>
+                      </div>
+                      <p className='name'>{item.name}</p>
+                    </div>
+                    )}
+                </div>
             </div>
         </div>
 </div>

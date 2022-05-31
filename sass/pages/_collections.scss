@@ -250,15 +250,18 @@
         @media(min-width: 600px) {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 50px 25px;
+            // gap: 50px 25px;
+            gap: 30px;
         }
         .collection-item {
             width: 100%;
             // padding-bottom: 45px;
             // background-color: $lighter-grey;
             // border: 1px $lighter-grey solid;
-            
-   
+            margin-bottom: 30px;
+            @media(min-width: 600px) {
+            margin-bottom: 0;
+            }
             &:last-of-type {
                 margin-bottom: 0;;
             }
@@ -266,10 +269,11 @@
                 width: 100%;
             }
             .col-details {
-                padding: 10px 30px;;
-                padding-bottom:30px;
+                padding: 20px;;
+                padding-top:10px;
                 border: 1px $lighter-grey solid;
                 transition: 0.2s;
+                border-top: none;
             }
             .image-wrapper {
                 width: 100%;
@@ -446,7 +450,7 @@
                 margin-top: 10px;
                 margin-bottom: 10px;
                 line-height: 1.6;
-                max-width: 500px;
+                // max-width: 500px;
                 opacity: 0.8;
             }
             .desc-list {

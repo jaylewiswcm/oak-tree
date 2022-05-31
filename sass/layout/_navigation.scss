@@ -246,14 +246,14 @@ transform: translateY(12px) translateX(-8.4375px) translateX(50%) rotate(45deg);
             .menu-title {
                 font-size: 1.6rem;
                 font-weight: 500;
-                color: $dark-green-2;
+                color: $dark-green-3;
                 letter-spacing: 0.2px;
                 padding: 0 15px;
                 margin-bottom: 5px;
             }
             ul {
                 li {
-                    padding: 15px 15px;
+                    padding: 8px 15px;
                     border-radius: 4px;
                     transition: 0.1s;
                     a {
@@ -288,6 +288,9 @@ transform: translateY(12px) translateX(-8.4375px) translateX(50%) rotate(45deg);
                     }
                 }
                 li:hover {
+                    background-color: $light-green-2;
+                }
+                .all-products {
                     background-color: $light-green-2;
                 }
             }

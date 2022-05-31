@@ -76,7 +76,7 @@ const RecommendedProducts = ({product}: ComponentProps) => {
     }
     {product === 'beds' && 
     <div className='product-grid'>
-    <Link href="/adjustable-beds/the-birch">
+    <Link href="/adjustable-beds/the-hazel">
         <a className='product'>
             <div className='image-wrapper'>
             <Image
@@ -96,7 +96,7 @@ const RecommendedProducts = ({product}: ComponentProps) => {
             </div>
         </a>
     </Link>
-    <Link href="/adjustable-beds/the-hesper">
+    <Link href="/adjustable-beds/the-hazel">
         <a className='product'>
             <div className='image-wrapper'>
             <Image
@@ -116,7 +116,7 @@ const RecommendedProducts = ({product}: ComponentProps) => {
             </div>
         </a>
     </Link>
-    <Link href="/adjustable-beds/the-poplar">
+    <Link href="/adjustable-beds/the-hazel">
         <a className='product'>
             <div className='image-wrapper'>
             <Image

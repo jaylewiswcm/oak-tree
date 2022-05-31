@@ -8,7 +8,7 @@ interface ComponentProps {
 }
 
 export const TOC = ({reference, type}: ComponentProps) => {
-const [hideClass, setHideClass] = useState('')
+const [hideClass, setHideClass] = useState('hide-toc')
     useEffect(() => {
         window.addEventListener("scroll", handleScroll);
         return () => {

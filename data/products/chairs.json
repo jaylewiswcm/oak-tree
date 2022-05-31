@@ -4,7 +4,7 @@
     "subheading" : "A Touch of Elegance",
     "desc": "All the hallmarks of a traditional chair - a button back cushion, full wings, and elegant wooden knuckles.",
     "url" : "/chairs/the-oak",
-    "icon": "/icons/collection/leafs/icon-oak.svg",
+    "icon": "/icons/collection/leaves/icon-oak.svg",
     "swatch": {
         "src" : "/images/fabric/swatches/coniston-floral-champagne.png",
         "name": "Coniston Floral Champagne"
@@ -16,7 +16,7 @@
     "subheading" : "Stylish and Modern",
     "desc": "A sleek, streamlined styling, these chairs are the very definition of modern sophistication and elegance.",
     "url" : "/chairs/the-tulip",
-    "icon": "/icons/collection/leafs/icon-tulip.svg",
+    "icon": "/icons/collection/leaves/icon-tulip.svg",
     "swatch": {
         "src" : "/images/fabric/swatches/boucle-cream.png",
         "name": "Boucle Cream"
@@ -28,7 +28,7 @@
     "subheading" : "Sleek and Sumptous",
     "desc": "A perfect balance of comfort and style, you’ll be hard pushed to find better than these rise and recline chairs.",
     "url" : "/chairs/the-rowan",
-    "icon": "/icons/collection/leafs/icon-rowan.svg",
+    "icon": "/icons/collection/leaves/icon-rowan.svg",
     "swatch": {
         "src" : "/images/fabric/swatches/coniston-patchwork-brown.png",
         "name": "Coniston Patchwork Brown"
@@ -40,7 +40,7 @@
     "subheading" : "Distinguished and Charming",
     "desc": "With its combination of luxury materials and visual lightness, this chair offers an  aesthetic that fits well with most interior.",
     "url" : "/chairs/the-cedar",
-    "icon": "/icons/collection/leafs/icon-cedar.svg",
+    "icon": "/icons/collection/leaves/icon-cedar.svg",
     "swatch": {
         "src" : "/images/fabric/swatches/portobello-leaf-green.png",
         "name": "Potobello Leaf Green"
@@ -52,7 +52,7 @@
     "subheading" : "Truly Superior Comfort",
     "desc": "If you’re looking for the perfect balance of comfort and style, you’ll be hard pushed to find better.",
     "url" : "/chairs/the-maple",
-    "icon": "/icons/collection/leafs/icon-maple.svg",
+    "icon": "/icons/collection/leaves/icon-maple.svg",
     "swatch": {
         "src" : "/images/fabric/swatches/forest-green-leather.png",
         "name": "Forrest Green Leather"

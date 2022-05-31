@@ -84,11 +84,11 @@ const menuConfig = [
       menuName: 'Rise and Recline Chairs',
       options: [
               { title: "The Oak", desc: "", icon : "/icons/products/navigation/oak.svg", url: '/chairs/the-oak' },
-              { title: "The Maple", desc:"", icon : "/icons/products/navigation/maple.svg", url: '/chairs/the-maple' },
-              { title: "The Cedar", desc:"", icon : "/icons/products/navigation/cedar.svg", url: '/chairs/the-cedar' },
-              { title: "The Rowan", desc:"", icon : "/icons/products/navigation/rowan.svg", url: '/chairs/the-rowan' },
-              { title: "The Tulip", desc:"", icon : "/icons/products/navigation/tulip.svg", url: '/chairs/the-tulip' },
-              { title: "All Chairs", desc:"View our whole collection of chairs", icon : "", url: '/chairs' },
+              { title: "The Maple", desc:"", icon : "/icons/products/navigation/maple.svg", url: '/chairs/the-oak' },
+              { title: "The Cedar", desc:"", icon : "/icons/products/navigation/cedar.svg", url: '/chairs/the-oak' },
+              { title: "The Rowan", desc:"", icon : "/icons/products/navigation/rowan.svg", url: '/chairs/the-oak' },
+              { title: "The Tulip", desc:"", icon : "/icons/products/navigation/tulip.svg", url: '/chairs/the-oak' },
+              { title: "All Chairs", desc:"View our whole collection of chairs", icon : "all", url: '/chairs' },
             ],
     },
     menu2: {
@@ -105,13 +105,13 @@ const menuConfig = [
     menu1: {
       menuName: 'Adjustable Beds',
       options: [
-              { title: "The Poplar", desc:"", icon : "/icons/products/navigation/poplar.svg", url: '/adjustable-beds/the-poplar' },
-              { title: "The Lilac", desc:"", icon : "/icons/products/navigation/lilac.svg", url: '/adjustable-beds/the-lilac' },
+              { title: "The Poplar", desc:"", icon : "/icons/products/navigation/poplar.svg", url: '/adjustable-beds/the-hazel' },
+              { title: "The Lilac", desc:"", icon : "/icons/products/navigation/lilac.svg", url: '/adjustable-beds/the-hazel' },
               { title: "The Hazel", desc:"", icon : "/icons/products/navigation/hazel.svg", url: '/adjustable-beds/the-hazel' },
-              { title: "The Hesper", desc:"", icon : "/icons/products/navigation/hesper.svg", url: '/adjustable-beds/the-hesper' },
-              { title: "The Oysterwood", desc:"", icon : "/icons/products/navigation/oysterwood.svg", url: '/adjustable-beds/the-oysterwood' },
-              { title: "The Birch", desc:"", icon : "/icons/products/navigation/birch.svg", url: '/adjustable-beds/the-birch' },
-              { title: "All Beds", desc:"View our whole collection of beds", icon : "", url: '/adjustable-beds' },
+              { title: "The Hesper", desc:"", icon : "/icons/products/navigation/hesper.svg", url: '/adjustable-beds/the-hazel' },
+              { title: "The Oysterwood", desc:"", icon : "/icons/products/navigation/oysterwood.svg", url: '/adjustable-beds/the-hazel' },
+              { title: "The Birch", desc:"", icon : "/icons/products/navigation/birch.svg", url: '/adjustable-beds/the-hazel' },
+              { title: "All Beds", desc:"View our whole collection of beds", icon : "all", url: '/adjustable-beds' },
             ],
     },
     menu2: {
@@ -126,7 +126,7 @@ const menuConfig = [
   {
     keyId: 5,
     menu1: {
-      menuName: 'Adjustable Beds',
+      menuName: 'Bath Lifts',
       options: [
            
               { title: "Oak Tree Bath Lifts", desc: "View our whole collection of bath lifts", icon : "", url: '/bath-lifts' },

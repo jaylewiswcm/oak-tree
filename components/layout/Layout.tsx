@@ -18,29 +18,30 @@ interface ComponentProps  {
 
 
    const { hideBottomBar, setToHideBottomBar, productPage } = useAppContext();
+   
+   const handleScroll = () => {
+    const position = window.pageYOffset;
+    let setPosition = 80;
+    if(productPage) {
+      setToHideBottomBar("hide-bar") 
+    } else {
+      if(position < setPosition) {
+        setToHideBottomBar("hide-bar") 
+        setOverlayClass('british-made-overlay')
+    } else {
+        setToHideBottomBar("") 
+        setOverlayClass('british-made-overlay increased-bottom-margin')
+    }
+    }
+  };
 
     useEffect(() => {
       window.addEventListener("scroll", handleScroll);
       return () => {
         window.removeEventListener("scroll", handleScroll);
       };
-    }, []);
+    }, [handleScroll]);
     
-    const handleScroll = () => {
-      const position = window.pageYOffset;
-      let setPosition = 80;
-      if(productPage) {
-        setToHideBottomBar("hide-bar") 
-      } else {
-        if(position < setPosition) {
-          setToHideBottomBar("hide-bar") 
-          setOverlayClass('british-made-overlay')
-      } else {
-          setToHideBottomBar("") 
-          setOverlayClass('british-made-overlay increased-bottom-margin')
-      }
-      }
-    };
 
 
     return (

@@ -49,7 +49,11 @@ export const Accessories = ({type}: ComponentProps ) => {
             </SwiperSlide>
           ) }
         </Swiper> */}
-    { chair_accessories.map((item, index) => 
+    { type === 'chair' && chair_accessories.map((item, index) => 
+        <Accessory item={item} slideChange={slideChange} key={index}/>
+        )
+    }
+    { type === 'bed' && bed_accessories.map((item, index) => 
         <Accessory item={item} slideChange={slideChange} key={index}/>
         )
     }

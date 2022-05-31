@@ -3,15 +3,15 @@ import { NextSeo } from 'next-seo'
 import Image from 'next/image';
 import Link from 'next/link';
 // Components
-import beds from '../../data/products/beds.json';
 import Reviews from '../../components/sections/reviews/Reviews';
 import FooterCollections from '../../components/sections/collections/FooterCollections';
 import Resources from '../../components/sections/resources/Resources';
 import { CollectionUsps } from '../../components/sections/usps/CollectionUsps';
 import OurProcess from '../../components/sections/process/OurProcess';
-// import Modal from '../../components/modal/Modal';
-// import PopupBrochureRequestForm from '../../components/forms/PopupBrochureRequestForm';
 import CollectionForm from '../../components/forms/brochure/CollectionForm';
+import { CollectionGrid } from '../../components/collection/CollectionGrid';
+// data 
+import beds from '../../data/products/beds.json';
 // images 
 import heroImage from '../../public/images/heros/bed-collection-hero.png';
 
@@ -69,54 +69,38 @@ const Index = () => {
           <p>Completely FREE!</p>
         </li>
       </ul>
-      <div className='brochure-image'>
+      <div className="brochure-section">
+        <div className='brochure-image'>
+          <Image 
+            src='/brochures/chair-brochure.png'
+            alt='Brochure'
+            layout='responsive'
+            width={1000}
+            height={1412}
+          />
+        </div>
+        <div className='brochure-open'>
         <Image 
-          src='/images/landing-pages/brochure.jpeg'
-          alt='Brochure'
-          layout='responsive'
-          width={218}
-          height={130}
-        />
+            src='/brochures/chair-brochure-open.png'
+            alt='Brochure'
+            layout='responsive'
+            width={1000}
+            height={708}
+          />
+        </div>
       </div>
     </div>
-                   <CollectionForm productType='chair'/>
+                   <CollectionForm productType='bed'/>
                 </div>
               </div>   
-              <p className='sub-heading' id='collection-top-chair'>Adjustable Beds</p>  
+              
               <h2 className='heading' >The Perfect Nights Sleep</h2>
-              <div className='collections-grid con-reg'>
-                  {beds.map((product, index) => 
-                  <Link href={product!.url} key={index}>
-                    <a className='collection-item'>
-                        <div className='image-wrapper'>
-                            <Image 
-                                src={product!.collectionImage}
-                                alt={product!.name + 'Collections'}
-                                layout='responsive'
-                                width={580}
-                                height={325.07}
-                                quality={100}
-                            />
-                        </div>
-                        <div className='col-name-wrapper'>
-                            <div className='name-wrapper'>
-                                <p className='subheading'>{product!.subheading}</p>
-                                <h2>{product!.name}</h2>
-                            </div>
-                            <span className='icon-wrapper'>
-                                <Image src={product.icon} alt={product.name} layout='responsive' width={40} height={40}/>
-                            </span>
-                        </div>
-                        <p className='desc'>{product!.desc}</p>
-                       <div className='main-cta'><p>View Collection</p></div>
-                    </a>
-                    </Link>
-                    )}
-              </div>
-                <CollectionUsps />
-                <Reviews orphan={false}/>
-                <OurProcess />
-                <Resources pageType='beds'/>
+              <p className='sub-heading' id='collection-top-chair'>Our Beds are fully customisable and made-to-fit your measurements - we have curated a collection of beds that embed different styles suited for different living environments</p>  
+              <CollectionGrid products={beds}/>  
+              <OurProcess />    
+              <Reviews orphan={false}/>      
+              <CollectionUsps />
+              <Resources pageType='beds'/>
           </div>
           <FooterCollections />
         </>

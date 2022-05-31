@@ -42,7 +42,7 @@ const TheOak = () => {
 
     const { setProductPage} = useAppContext();
 
-    useEffect(() => {
+    useEffect(() => {   
         setProductPage(true)
     },[setProductPage])
     

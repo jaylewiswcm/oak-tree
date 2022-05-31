@@ -8,6 +8,8 @@ import BathLiftSteps from '../../components/sections/how-it-works/BathLiftSteps'
 import BathLiftStages from '../../components/sections/stages/BathLiftStages';
 import Modal from '../../components/modal/Modal';
 import PopupBrochureRequestForm from '../../components/forms/PopupBrochureRequestForm';
+import ProductForm from '../../components/forms/homeVisit/ProductForm';
+
 const TheRivieraPlus = () => {
     const [show, setFormToShow] = useState(false);
     return (
@@ -182,25 +184,69 @@ const TheRivieraPlus = () => {
                     </ul>
                 </div>               
               </div>
-            <div className='request-wrapper con-reg'>
-                <h6 className='heading'>Book a Home Visit</h6>
-                <p className='content'>Our consultant will be able to advise exactly which product is best for you and your home.</p>
-                <div className='image-and-form'>
-                    <div className='image-wrapper'>
-                        <Image 
-                            src='/images/lifestyle/home-visit-desktop.png'
-                            alt='home visit'
-                            layout='fill'
-                            objectFit='cover'
-                            objectPosition='center'
-                        />
+              <div className='request-wrapper'>
+                <div className='con-reg'>
+                    <div className='request-intro'>
+                        <p className='subheading'>Step Five</p>
+                        <h6>Request a Free Home Visit</h6>
+                        <p>Our consultant will be able to advise exactly which product is best for you and your home.</p>
                     </div>
-                    <div className='form-and-cta'>
-                        <button className='main-cta'>
-                            <p>Request A Home Visit</p>
-                        </button>
-                        {/* <HomeVisitForm /> */}
+                <div className='form-and-content'>
+                    <div className='supporting-content'>
+                        <p className='support-heading'>What will it include?</p>
+                        <ul>
+                            <li>
+                                <div className='icon-wrapper'>
+                                    <Image 
+                                        src='/icons/home-visit/icon-made-to-measure.svg'
+                                        alt='Made-to-measure'
+                                        layout='responsive'
+                                        width='84'
+                                        height='70'
+                                    />
+                                </div>
+                                <p>Our consultant will be able to advise exactly which product is best for you and your home.</p>
+                            </li>
+                            <li>
+                                <div className='icon-wrapper'>
+                                <Image 
+                                        src='/icons/home-visit/icon-consulting.svg'
+                                        alt='Made-to-measure'
+                                        layout='responsive'
+                                        width='84'
+                                        height='70'
+                                    />
+                                </div>
+                                <p>Our consultant will be able to advise exactly which product is best for you and your home.</p>
+                            </li>
+                            <li>
+                                <div className='icon-wrapper'>
+                                <Image 
+                                        src='/icons/home-visit/icon-made-to-measure.svg'
+                                        alt='Made-to-measure'
+                                        layout='responsive'
+                                        width='84'
+                                        height='70'
+                                    />
+                                </div>
+                                <p>Our consultant will be able to advise exactly which product is best for you and your home.</p>
+                            </li>
+                            <li>
+                                <div className='icon-wrapper'>
+                                <Image 
+                                        src='/icons/home-visit/icon-consulting.svg'
+                                        alt='Made-to-measure'
+                                        layout='responsive'
+                                        width='84'
+                                        height='70'
+                                    />
+                                </div>
+                                <p>Our consultant will be able to advise exactly which product is best for you and your home.</p>
+                            </li>
+                        </ul>
                     </div>
+                   <ProductForm/> 
+                </div>
                 </div>
             </div>
             </div>

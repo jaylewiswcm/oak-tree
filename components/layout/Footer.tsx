@@ -111,11 +111,11 @@ const menuConfig = [
     },
     { menuHeader: 'Chairs', menu: [
         {link: '/chairs', text: 'Riser Recliner Chairs' },
-        {link: '/price-guide-chairs', text: 'Price Guide Chairs' },
+        {link: '/price-guide-chair', text: 'Price Guide Chairs' },
     ]},
     { menuHeader: 'Beds', menu: [
         {link: '/adjustable-beds', text: 'Adjustable Beds' },
-        {link: '/price-guide-beds', text: 'Price Guide Beds' },
+        {link: '/price-guide-bed', text: 'Price Guide Beds' },
     ]},
     { menuHeader: 'Bath Lifts', menu: [
         {link: '/bath-lifts', text: 'Oak Tree Bath Lifts' },

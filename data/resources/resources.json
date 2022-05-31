@@ -134,7 +134,7 @@
                 "contentSrc": "",
                 "placeholder": "/images/resources/vat-exempt.png",
                 "video": false,
-                "url" : "/vat-exemption"
+                "url" : "/vat-exempt-eligibility"
             },
             {
                 "heading" : "How We Make Our Products",
@@ -172,7 +172,7 @@
                 "contentSrc": "",
                 "placeholder": "/images/resources/vat-exempt.png",
                 "video": false,
-                "url" : "/vat-exemption"
+                "url" : "/vat-exempt-eligibility"
             }
         ]
     },
@@ -202,7 +202,7 @@
                 "contentSrc": "",
                 "placeholder": "/images/resources/vat-exempt.png",
                 "video": false,
-                "url" : "/vat-exemption"
+                "url" : "/vat-exempt-eligibility"
             }
         ]
     },
@@ -232,7 +232,7 @@
                 "contentSrc": "",
                 "placeholder": "/images/resources/vat-exempt.png",
                 "video": false,
-                "url" : "/vat-exemption"
+                "url" : "/vat-exempt-eligibility"
             }
         ]
     }
