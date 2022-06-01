@@ -6,16 +6,17 @@ interface ComponentProps {
     isOpen: string
     openAccordian: any
     type: string
+    reference: React.RefObject<HTMLDivElement> | null
 }
 
-const AccessoriesChair = ({isOpen, openAccordian, type }:ComponentProps) => {
-  const tocElement = useRef<HTMLDivElement>(null)
+const AccessoriesChair = ({isOpen, openAccordian, type, reference}:ComponentProps) => {
+  
   const openAndJumpToAccordian = (type:string) => {
       openAccordian(type);
-      setTimeout(() => {tocElement.current!.scrollIntoView()}, 400); 
+      setTimeout(() => {reference!.current!.scrollIntoView()}, 400); 
   }
   return (
-    <div className={isOpen === 'accessories' ? "toc open con-reg" : "toc  con-reg"} ref={tocElement}>
+    <div className={isOpen === 'accessories' ? "toc open con-reg" : "toc  con-reg"} ref={reference}>
     <button className='toc-btn' onClick={() => openAndJumpToAccordian('accessories')}>
           <p>Accessories</p> 
             <span className='icon-wrapper'>

@@ -247,18 +247,7 @@ export default class PopupGenericForm extends Component<ComponentProps> {
                 <SwiperSlide className='no-swipe'>
                 <div  className="form-section">
                 <p className="section-heading">Your Address</p>
-                    <PostCodeInput 
-                        error={this.state.sectionTwoErrors.postalCodeError}
-                        id="postal-code"
-                        name='postal-code'
-                        autoComplete="home postal-code"
-                        placeholder=''
-                        value={this.state.postalCode} 
-                        onChange={(e:any) => this.onChange(e)} 
-                        htmlFor="postal-code"
-                        label='Postal Code'
-                        required={true}
-                    />
+             
                 <TextInput 
                     error={this.state.sectionTwoErrors.streetAddressError}
                     id="street-address"
@@ -269,6 +258,18 @@ export default class PopupGenericForm extends Component<ComponentProps> {
                     onChange={(e:any) => this.onChange(e)} 
                     htmlFor="street-address"
                     label='Street Address'
+                    required={true}
+                />
+                   <PostCodeInput 
+                    error={this.state.sectionTwoErrors.postalCodeError}
+                    id="postal-code"
+                    name='postal-code'
+                    autoComplete="home postal-code"
+                    placeholder=''
+                    value={this.state.postalCode} 
+                    onChange={(e:any) => this.onChange(e)} 
+                    htmlFor="postal-code"
+                    label='Postal Code'
                     required={true}
                 />
                 </div>
@@ -304,7 +305,7 @@ export default class PopupGenericForm extends Component<ComponentProps> {
             {this.state.readyToSubmit ? <input type="submit" value='Request Brochure' /> : <SwiperNext validation={() => this.validate(this.state.slideIndex)} classNames='form-next form-buttons' />}  
             </div>
             <div className='progress-bar'></div>
-            <div className='step-counter'><p>Step {this.state.slideIndex + 1} / 3</p></div>
+            <div className='step-counter'><p>Step {this.state.slideIndex + 1} / 4</p></div>
     </Swiper>
 </form>
     )

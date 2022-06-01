@@ -41,12 +41,12 @@ const TheOak = () => {
     const sectionTwo = useRef<HTMLDivElement>(null);
     const sectionThree = useRef<HTMLDivElement>(null);
     const sectionFour = useRef<HTMLDivElement>(null);
-    const sectionFive = useRef<HTMLDivElement>(null);
-
+    
     const { setProductPage, setFormModal} = useAppContext();
 
     useEffect(() => {   
         setProductPage(true)
+    
     },[setProductPage])
     
     const openAccordian = (type:string) => {
@@ -118,13 +118,13 @@ const TheOak = () => {
                     <InformationContainer product={product} productType='chair' showForm={() => setFormModal(true)}/>
             </div>
             <Reviews product='chair' isOpen={isOpen} openAccordian={() => openAccordian('reviews')}/>
-            <TOC reference={tocRef} type='chair' references={sectionOne}/>
+            <TOC reference={tocRef} type='chair' sectionOneRef={sectionOne} sectionTwoRef={sectionTwo} sectionThreeRef={sectionThree} sectionFourRef={sectionFour}/>
             <div className='table-of-contents' ref={tocRef}>
                 <h4 className='toc-heading'>Our Process</h4>
                 <MaterialChair isOpen={isOpen} openAccordian={() => openAccordian('material')} reference={sectionOne}/>
-                <SizeChair isOpen={isOpen} openAccordian={() => openAccordian('size')}/>
-                <MotorChair isOpen={isOpen} openAccordian={() => openAccordian('motor')}/>
-                <Accessories  isOpen={isOpen} openAccordian={() => openAccordian('accessories')} type='chair'/>
+                <SizeChair isOpen={isOpen} openAccordian={() => openAccordian('size')} reference={sectionTwo}/>
+                <MotorChair isOpen={isOpen} openAccordian={() => openAccordian('motor')} reference={sectionThree}/>
+                <Accessories  isOpen={isOpen} openAccordian={() => openAccordian('accessories')} type='chair' reference={sectionFour}/>
             </div>
             <div className='request-wrapper'>
                 <div className='con-reg'>

@@ -34,8 +34,12 @@ const TheHazel = () => {
             }
         ]
     })
+    // Refs
     const tocRef = useRef<HTMLDivElement>(null);
     const sectionOne = useRef<HTMLDivElement>(null);
+    const sectionTwo = useRef<HTMLDivElement>(null);
+    const sectionThree = useRef<HTMLDivElement>(null);
+    const sectionFour = useRef<HTMLDivElement>(null);
 
     const { setProductPage, setFormModal} = useAppContext();
 
@@ -114,13 +118,13 @@ const TheHazel = () => {
                     <InformationContainer product={product} productType='bed' showForm={() => setFormModal(true)} />
             </div>
             <Reviews product='bed' isOpen={isOpen} openAccordian={() => openAccordian('reviews')}/>
-            <TOC reference={tocRef} type='bed' references={sectionOne}/>
+            <TOC reference={tocRef} type='bed'  sectionOneRef={sectionOne} sectionTwoRef={sectionTwo} sectionThreeRef={sectionThree} sectionFourRef={sectionFour}/>
             <div className='table-of-contents' ref={tocRef} >
                 <h4 className='toc-heading'>Our Process</h4>
                 <MaterialBed isOpen={isOpen} openAccordian={() => openAccordian('material')} reference={sectionOne}/>
-                <Mattress isOpen={isOpen} openAccordian={() => openAccordian('mattress')}/>
-                <Headboards isOpen={isOpen} openAccordian={() => openAccordian('headboards')}/>
-                <Accessories isOpen={isOpen} openAccordian={() => openAccordian('accessories')} type='bed'/>
+                <Mattress isOpen={isOpen} openAccordian={() => openAccordian('mattress')} reference={sectionTwo}/>
+                <Headboards isOpen={isOpen} openAccordian={() => openAccordian('headboards')} reference={sectionThree}/>
+                <Accessories isOpen={isOpen} openAccordian={() => openAccordian('accessories')} type='bed' reference={sectionFour}/>
             </div>
             <div className='request-wrapper'>
                 <div className='con-reg'>

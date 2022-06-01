@@ -6964,6 +6964,8 @@ body.mobile-navbar .mobile-navigation {
   font-size: 1.7rem;
   text-align: center;
   color: #7F7F7F;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 @media (min-width: 900px) {
@@ -6974,8 +6976,8 @@ body.mobile-navbar .mobile-navigation {
 
 .table-of-contents-nav ul li a.active {
   background-color: rgba(0, 173, 116, 0.11);
-  border: 1.5px #009B72 solid;
-  border-radius: 3px;
+  border: 1px #009B72 solid;
+  border-radius: 5px;
   color: #009B72;
 }
 
@@ -7704,7 +7706,7 @@ body.mobile-navbar .mobile-navigation {
 
 .table-of-contents {
   margin-top: 15px;
-  padding: 0 15px;
+  padding: 0 30px;
 }
 
 @media (min-width: 600px) {

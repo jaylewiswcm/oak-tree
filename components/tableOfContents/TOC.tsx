@@ -6,73 +6,66 @@ import { useAppContext } from '../../context/state'
 interface ComponentProps {
     reference: React.RefObject<HTMLDivElement>
     type: string
-    references: React.RefObject<HTMLDivElement> 
+    sectionOneRef: React.RefObject<HTMLDivElement>
+    sectionTwoRef: React.RefObject<HTMLDivElement>
+    sectionThreeRef: React.RefObject<HTMLDivElement>
+    sectionFourRef: React.RefObject<HTMLDivElement>
 }
 
-export const TOC = ({reference, type, references}: ComponentProps) => {
+export const TOC = ({reference, type, sectionOneRef, sectionTwoRef, sectionThreeRef, sectionFourRef}: ComponentProps) => {
 const [hideClass, setHideClass] = useState('hide-toc')
+const [active, setActive] = useState(99);
+
     useEffect(() => {
         window.addEventListener("scroll", handleScroll);
         return () => {
           window.removeEventListener("scroll", handleScroll);
         };
-      }, [reference, references]);
+      }, []);
       
       const handleScroll = () => {
-        const ref = reference.current!.getBoundingClientRect().top;
-          if(ref > 150) {
-              setHideClass('hide-toc');
-          } else {
-              setHideClass('')
+          if(reference.current) {
+            const ref = reference.current!.getBoundingClientRect().top;
+            if(ref > 150) {
+                setHideClass('hide-toc');
+            } else {
+                setHideClass('')
+            }
           }
+       
           checkIfSectionIsInViewAndAssignActive()
       };
 
       const checkIfSectionIsInViewAndAssignActive = () => {
-        const sectionPos = references!.current!.getBoundingClientRect().top
-        if(sectionPos < 0) {
-            console.log('Below 0')
+        if(sectionOneRef.current) {
+            const sectionOnePos = sectionOneRef!.current!.getBoundingClientRect()
+            const sectionTwoPos = sectionTwoRef!.current!.getBoundingClientRect()
+            const sectionThreePos = sectionThreeRef!.current!.getBoundingClientRect()
+            const sectionFourPos = sectionFourRef!.current!.getBoundingClientRect()
+            // Check if section's position is within the window if so assign active
+            if(sectionOnePos.top > 0 ) {
+                setActive(0)
+            } else if(sectionOnePos.bottom > 110) {
+                setActive(0)
+            } else if(sectionTwoPos.top > 0 ) {
+                setActive(1)
+            } else if(sectionTwoPos.bottom > 110) {
+                setActive(1)
+            } else if(sectionThreePos.top > 0 ) {
+                setActive(2)
+            } else if(sectionThreePos.bottom > 110) {
+                setActive(2)
+            } else if(sectionFourPos.top > 0 ) {
+                setActive(3)
+            } else if(sectionFourPos.bottom > 110) {
+                setActive(3)
+            } else {
+                setActive(99)
+            }
         }
       }
 
       const { setFormModal } = useAppContext();
-
-      const chairLinks = [
-          {
-              "name": "Material",
-              "href" : "#material-section"
-          },
-          {
-              "name": "Size",
-              "href" : "#size-section"
-          },
-          {
-              "name": "Motor",
-              "href" : "#motor-section"
-          },
-          {
-              "name": "Accessories",
-              "href" : "#accessories-section"
-          }
-      ]
-      const bedLinks = [
-          {
-              "name": "Material",
-              "href" : "#material-section"
-          },
-          {
-              "name": "Mattress",
-              "href" : "#mattress-section"
-          },
-          {
-              "name": "Headboard",
-              "href" : "#headboard-section"
-          },
-          {
-              "name": "Accessories",
-              "href" : "#accessories-section"
-          }
-      ]
 
   return (
     <div className={`table-of-contents-nav ${hideClass}`}>
@@ -81,14 +74,14 @@ const [hideClass, setHideClass] = useState('hide-toc')
             { type === 'chair' && chairLinks.map((link, index) => 
                 <li key={index}>
                  <Link href={link.href}>
-                     <a>{link.name}</a>
+                     <a className={active === index ? 'active': ''}>{link.name}</a>
                  </Link>
                 </li>
             ) }
             { type === 'bed' && bedLinks.map((link, index) => 
                 <li key={index}>
                  <Link href={link.href}>
-                     <a>{link.name}</a>
+                     <a className={active === index ? 'active': ''}>{link.name}</a>
                  </Link>
                 </li>
             ) }
@@ -99,3 +92,41 @@ const [hideClass, setHideClass] = useState('hide-toc')
 
   )
 }
+
+
+const chairLinks = [
+    {
+        "name": "Material",
+        "href" : "#material-section",
+    },
+    {
+        "name": "Size",
+        "href" : "#size-section"
+    },
+    {
+        "name": "Motor",
+        "href" : "#motor-section"
+    },
+    {
+        "name": "Accessories",
+        "href" : "#accessories-section"
+    }
+]
+const bedLinks = [
+    {
+        "name": "Material",
+        "href" : "#material-section"
+    },
+    {
+        "name": "Mattress",
+        "href" : "#mattress-section"
+    },
+    {
+        "name": "Headboard",
+        "href" : "#headboard-section"
+    },
+    {
+        "name": "Accessories",
+        "href" : "#accessories-section"
+    }
+]

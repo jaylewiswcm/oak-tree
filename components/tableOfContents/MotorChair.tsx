@@ -4,16 +4,16 @@ import Image from 'next/image';
 interface ComponentProps {
     isOpen: string
     openAccordian: any
+    reference: React.RefObject<HTMLDivElement> | null
 }
 
-const MotorChair = ({isOpen, openAccordian}:ComponentProps) => {
-  const tocElement = useRef<HTMLDivElement>(null)
+const MotorChair = ({isOpen, openAccordian, reference}:ComponentProps) => {
   const openAndJumpToAccordian = (type:string) => {
       openAccordian(type);
-      setTimeout(() => {tocElement.current!.scrollIntoView()}, 400); 
+      setTimeout(() => {reference!.current!.scrollIntoView()}, 400); 
   }
   return (
-    <div className={isOpen === 'motor' ? "toc open motor-toc" : "toc motor-toc"} ref={tocElement}>
+    <div className={isOpen === 'motor' ? "toc open motor-toc" : "toc motor-toc"} ref={reference}>
     <button className='toc-btn' onClick={() => openAndJumpToAccordian('motor')}>
           <p>Motor</p> 
             <span className='icon-wrapper'>
@@ -25,7 +25,6 @@ const MotorChair = ({isOpen, openAccordian}:ComponentProps) => {
                 height={15} />
             </span>
         </button>
-        {/* <div className='anchor-target'></div> */}
         <div className='product-content' id='motor-section'>
           <div className='motor-container'>
             <div className='content con-reg'>

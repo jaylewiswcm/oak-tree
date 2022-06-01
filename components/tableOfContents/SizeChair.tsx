@@ -4,16 +4,17 @@ import Image from 'next/image';
 interface ComponentProps {
     isOpen: string
     openAccordian: any
+    reference: React.RefObject<HTMLDivElement> | null
 }
 
-const SizeChair = ({isOpen, openAccordian}:ComponentProps) => {
-  const tocElement = useRef<HTMLDivElement>(null)
+const SizeChair = ({isOpen, openAccordian, reference}:ComponentProps) => {
+
   const openAndJumpToAccordian = (type:string) => {
       openAccordian(type);
-      setTimeout(() => {tocElement.current!.scrollIntoView()}, 400); 
+      setTimeout(() => {reference!.current!.scrollIntoView()}, 400); 
   }
   return (
-    <div className={isOpen === 'size' ? "toc open con-reg" : "toc con-reg"} ref={tocElement}>
+    <div className={isOpen === 'size' ? "toc open con-reg" : "toc con-reg"} ref={reference}>
     <button className='toc-btn' onClick={() => openAndJumpToAccordian('size')}>
           <p>Size</p> 
             <span className='icon-wrapper'>

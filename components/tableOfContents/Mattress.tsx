@@ -7,14 +7,14 @@ import mattress from '../../data/mattress/mattress.json'
 interface ComponentProps {
     isOpen: string
     openAccordian: any
+    reference: React.RefObject<HTMLDivElement> | null
 }
 
-const Mattress = ({isOpen, openAccordian}:ComponentProps) => {
+const Mattress = ({isOpen, openAccordian, reference}:ComponentProps) => {
     const [mattressIndex, setMattressIndex] = useState(0);
-    const tocElement = useRef<HTMLDivElement>(null)
     const openAndJumpToAccordian = (type:string) => {
         openAccordian(type);
-        setTimeout(() => {tocElement.current!.scrollIntoView()}, 400); 
+        setTimeout(() => {reference!.current!.scrollIntoView()}, 400); 
     }
   return (
       <>
@@ -22,7 +22,7 @@ const Mattress = ({isOpen, openAccordian}:ComponentProps) => {
           { mattress.map((i, index) => <link rel="preload" as="image" key={index} href={i.src}></link>) }
      
       </Head>
-    <div className={isOpen === 'mattress' ? "toc open con-reg" : "toc con-reg"} ref={tocElement}>
+    <div className={isOpen === 'mattress' ? "toc open con-reg" : "toc con-reg"} ref={reference}>
     <button className='toc-btn' onClick={() => openAndJumpToAccordian('mattress')}>
           <p>Mattress</p> 
             <span className='icon-wrapper'>

@@ -588,14 +588,16 @@
                 font-size: 1.7rem;
                 text-align: center;
                 color: $grey;
+                transition: 0.5s;
+                // border: 1.5px $whtie solid;
                 @media(min-width: 900px) {
                     padding: 10px 5px;
                 }
             }
             a.active {
                 background-color: rgba(0,173,116,0.11);
-                border: 1.5px $oaktree-green solid;
-                border-radius: 3px;
+                border: 1px $oaktree-green solid;
+                border-radius: 5px;
                 color: $oaktree-green;
             }
         }
@@ -1085,7 +1087,7 @@
 
 .table-of-contents {
     margin-top: 15px;
-    padding:0 15px;
+    padding:0 30px;
     @media(min-width: 600px) {
       margin-top: 50px;
     }
