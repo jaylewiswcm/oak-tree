@@ -4,27 +4,36 @@ import Link from 'next/link';
 import { useAppContext } from '../../context/state'
 
 interface ComponentProps {
-    reference: any
+    reference: React.RefObject<HTMLDivElement>
     type: string
+    references: React.RefObject<HTMLDivElement> 
 }
 
-export const TOC = ({reference, type}: ComponentProps) => {
+export const TOC = ({reference, type, references}: ComponentProps) => {
 const [hideClass, setHideClass] = useState('hide-toc')
     useEffect(() => {
         window.addEventListener("scroll", handleScroll);
         return () => {
           window.removeEventListener("scroll", handleScroll);
         };
-      }, [reference]);
+      }, [reference, references]);
       
       const handleScroll = () => {
-        const ref = reference.current.getBoundingClientRect().top;
+        const ref = reference.current!.getBoundingClientRect().top;
           if(ref > 150) {
               setHideClass('hide-toc');
           } else {
               setHideClass('')
           }
+          checkIfSectionIsInViewAndAssignActive()
       };
+
+      const checkIfSectionIsInViewAndAssignActive = () => {
+        const sectionPos = references!.current!.getBoundingClientRect().top
+        if(sectionPos < 0) {
+            console.log('Below 0')
+        }
+      }
 
       const { setFormModal } = useAppContext();
 

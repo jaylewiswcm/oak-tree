@@ -37,6 +37,11 @@ const TheOak = () => {
 
     // Refs
     const tocRef = useRef<HTMLDivElement>(null);
+    const sectionOne = useRef<HTMLDivElement>(null);
+    const sectionTwo = useRef<HTMLDivElement>(null);
+    const sectionThree = useRef<HTMLDivElement>(null);
+    const sectionFour = useRef<HTMLDivElement>(null);
+    const sectionFive = useRef<HTMLDivElement>(null);
 
     const { setProductPage, setFormModal} = useAppContext();
 
@@ -113,10 +118,10 @@ const TheOak = () => {
                     <InformationContainer product={product} productType='chair' showForm={() => setFormModal(true)}/>
             </div>
             <Reviews product='chair' isOpen={isOpen} openAccordian={() => openAccordian('reviews')}/>
-            <TOC reference={tocRef} type='chair'/>
+            <TOC reference={tocRef} type='chair' references={sectionOne}/>
             <div className='table-of-contents' ref={tocRef}>
                 <h4 className='toc-heading'>Our Process</h4>
-                <MaterialChair isOpen={isOpen} openAccordian={() => openAccordian('material')}/>
+                <MaterialChair isOpen={isOpen} openAccordian={() => openAccordian('material')} reference={sectionOne}/>
                 <SizeChair isOpen={isOpen} openAccordian={() => openAccordian('size')}/>
                 <MotorChair isOpen={isOpen} openAccordian={() => openAccordian('motor')}/>
                 <Accessories  isOpen={isOpen} openAccordian={() => openAccordian('accessories')} type='chair'/>

@@ -126,9 +126,131 @@ const stagger = {
             <QuoteCarousel />
             <div className='advice-pagination'></div>
         </div>
-
         <div className='health-benefits con-reg'>
-          {/* <h5>Health benefits outlined by our <br/>Occupational Therapist include</h5> */}
+          <h5>Health benefits outlined by our <br/>Occupational Therapist include</h5>
+          <div className='benefits-grid'>
+            <div className='benefit'>
+              <div className='icon-wrapper'>
+                <Image
+                  src='/icons/health/lighter/back-pain.svg'
+                  alt='Relieves Back Pain'
+                  width='68'
+                  height='68'
+                  layout='responsive'
+                />
+              </div>
+              <p>Relieves Back Pain</p>
+              <ul>
+                <li>
+                  <span className='tick'>
+                    <Image src='/vectors/red-tick.svg' alt='Tick 1' layout='responsive' width='30' height='30'/>
+                  </span>
+                  <p>Chairs</p>
+                </li>
+                <li>
+                  <span className='tick'>
+                    <Image src='/vectors/red-tick.svg' alt='Tick 2' layout='responsive' width='30' height='30'/>
+                  </span>
+                  <p>Beds</p>
+                </li>
+                <li>
+                  <span className='tick'>
+                    <Image src='/vectors/red-tick.svg' alt='Tick 3' layout='responsive' width='30' height='30'/>
+                  </span>
+                  <p>Bath Lifts</p>
+                </li>
+              </ul>
+            </div>
+            <div className='benefit'>
+              <div className='icon-wrapper'>
+                <Image
+                  src='/icons/health/lighter/hip-and-knees.svg'
+                  alt='Support Hip & Knee'
+                  width='68'
+                  height='68'
+                  layout='responsive'
+                />
+              </div>
+              <p>Support Hip & Knees</p>
+              <ul>
+                <li>
+                  <span className='tick'>
+                    <Image src='/vectors/red-tick.svg' alt='Tick 1' layout='responsive' width='30' height='30'/>
+                  </span>
+                  <p>Chairs</p>
+                </li>
+                <li>
+                  <span className='tick'>
+                    <Image src='/vectors/red-tick.svg' alt='Tick 2' layout='responsive' width='30' height='30'/>
+                  </span>
+                  <p>Beds</p>
+                </li>
+              </ul>
+            </div>
+            <div className='benefit'>
+              <div className='icon-wrapper'>
+                <Image
+                  src='/icons/health/lighter/circulation.svg'
+                  alt='Improves Circulation'
+                  width='68'
+                  height='68'
+                  layout='responsive'
+                />
+              </div>
+              <p>Improves Circulation</p>
+              <ul>
+                <li>
+                  <span className='tick'>
+                    <Image src='/vectors/red-tick.svg' alt='Tick 1' layout='responsive' width='30' height='30'/>
+                  </span>
+                  <p>Chairs</p>
+                </li>
+                <li>
+                  <span className='tick'>
+                    <Image src='/vectors/red-tick.svg' alt='Tick 2' layout='responsive' width='30' height='30'/>
+                  </span>
+                  <p>Beds</p>
+                </li>
+                <li>
+                  <span className='tick'>
+                    <Image src='/vectors/red-tick.svg' alt='Tick 3' layout='responsive' width='30' height='30'/>
+                  </span>
+                  <p>Bath Lifts</p>
+                </li>
+              </ul>
+            </div>
+            <div className='benefit'>
+              <div className='icon-wrapper'>
+                <Image
+                  src='/icons/health/lighter/sleep.svg'
+                  alt='Improves Sleep'
+                  width='68'
+                  height='68'
+                  layout='responsive'
+                />
+              </div>
+              <p>Improves Sleep</p>
+              <ul>
+                <li>
+                  <span className='tick'>
+                    <Image src='/vectors/red-tick.svg' alt='Tick 1' layout='responsive' width='30' height='30'/>
+                  </span>
+                  <p>Chairs</p>
+                </li>
+                <li>
+                  <span className='tick'>
+                    <Image src='/vectors/red-tick.svg' alt='Tick 2' layout='responsive' width='30' height='30'/>
+                  </span>
+                  <p>Beds</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <p className='find-more'>Plus many more, find <Link href='/occupational-therapist'><a>all the benefits here</a></Link></p>
+        </div>
+        
+        {/* <div className='health-benefits con-reg'>
+          <h5>Health benefits outlined by our <br/>Occupational Therapist include</h5> 
           <h5>Oak Tree Mobility's <span>chairs</span>, <span>beds</span> and <span>bathlifts</span> can help to:</h5>
           <ul className='benefits-product-list'>
                 <li>
@@ -201,44 +323,7 @@ const stagger = {
             </div>
           </div>
           <p className='find-more'>Plus many more, find <Link href='/occupational-therapist'><a>all the benefits here</a></Link></p>
-        </div>
-{/* 
-        <motion.div  
-          ref={ref}
-          animate={controls}
-          variants={fadeInLeft}
-          initial="hidden"
-          className='image-wrapper desktop-image'>
-          <Image 
-              src={isMedium ? desktopImage : mobileImage}
-              alt='Sam Shann'
-              layout='fill'
-              objectFit='cover'
-              objectPosition='left top'
-              quality='100'
-              placeholder='blur'
-          />
-        </motion.div>
-        
-        
-        <div className='image-wrapper mobile-image'>
-                            <Image
-                                src={mobileImage}
-                                alt='Sam Shann face shot'
-                                layout='responsive'
-                                width='250'
-                                height='250'
-                                quality='100' 
-                                placeholder='blur'
-                            />
-        </div>
-        <motion.div  animate={controls} initial="hidden"   variants={stagger} className='content'>
-            <motion.p variants={fadeInFromAbove1} className='subheading'>Meet Samantha Shann</motion.p>
-            <motion.p variants={fadeInFromAbove2} className='heading'>Our Occupational Therapist</motion.p>
-          
-        <motion.p variants={fadeInFromBelow} className='info'>All of our products are approved by Samantha Shann, occupational therapist and co-founder of UK Therapy Services Ltd. She fully tests and evaluates everything we offer, ensuring it satisfies the high standards of an independent health professional.</motion.p>
-        <motion.a variants={fadeInFromBelow} href='/occupational-therapist'>Find out more</motion.a>
-        </motion.div> */}
+        </div> */}
     </div>
   )
 }
