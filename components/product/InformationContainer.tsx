@@ -127,7 +127,7 @@ export const InformationContainer = ({product, productType, showForm }:Component
     </div>
     <div className='info-section motors'>
         <p className='info-header'>Motors:</p>
-        <Link href='/'><a>Choice of three motors</a></Link>
+        <p className='desc'>Choice of three motors</p>
     </div>
     <div className='cta-wrapper'>
         <p>See all our options in our free brochure</p>

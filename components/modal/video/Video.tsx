@@ -2,14 +2,12 @@ import React, { useEffect } from 'react'
 import YouTube from 'react-youtube';
 
 interface ComponentProps {
-    // using `interface` is also ok
     videoId: string
-    show:boolean
   };
 
 
 
-const Video = ({videoId, show}: ComponentProps) => { 
+const Video = ({videoId}: ComponentProps) => { 
   const opts:Options = {
       height: '485',
       width: '860',
@@ -24,7 +22,9 @@ const Video = ({videoId, show}: ComponentProps) => {
     event.target.pauseVideo();
   }
       return (
-        <YouTube videoId={videoId} opts={opts} onReady={_onReady}/>
+        <>
+        { videoId === 'h8awxkhxyh' || videoId === '3z6umq1myj' ?   <WisitiaVideo videoId={videoId}/>  : <YouTube videoId={videoId} opts={opts} onReady={_onReady}/>}
+        </>
       ) 
   
 
@@ -63,3 +63,33 @@ const Video = ({videoId, show}: ComponentProps) => {
     host?: string;
     playerVars?: PlayerVars;
   }
+
+  const WisitiaVideo = ({ videoId }: ComponentProps) => {
+  
+    useEffect(() => {
+      const script1 = document.createElement("script");
+      const script2 = document.createElement("script");
+
+      console.log(videoId)
+    
+      script1.src = `https://fast.wistia.com/embed/medias/${videoId}.jsonp`;
+      script1.async = true;
+    
+      script2.src = "https://fast.wistia.com/assets/external/E-v1.js";
+      script2.async = true;
+    
+      document.body.appendChild(script1);
+      document.body.appendChild(script2);
+      console.log(script1);
+    }, [videoId])
+
+
+  return (
+      <div>
+          <div className="wistia_embed wistia_async_videolink videoFoam=true"/>
+          <div className="wistia_responsive_padding">
+            <div className="wistia_responsive_wrapper" >
+              <div className={`wistia_embed wistia_async_${videoId} videoFoam=true`}></div></div></div>
+      </div>
+      );
+}

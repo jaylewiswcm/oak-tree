@@ -3224,7 +3224,7 @@ body.mobile-navbar .mobile-navigation {
 
 .dd-menu.beds-dd {
   opacity: 1;
-  left: 113px;
+  left: 95px;
 }
 
 .dd-menu.bath-lifts-dd {
@@ -6831,7 +6831,7 @@ body.mobile-navbar .mobile-navigation {
   margin: 0;
 }
 
-.product-details .product-info .info-container .info-section.motors a {
+.product-details .product-info .info-container .info-section.motors .desc {
   margin-top: 3px;
   font-size: 1.8rem;
   font-weight: 400;
@@ -10640,8 +10640,7 @@ body.mobile-navbar .mobile-navigation {
 
 @media (min-width: 900px) {
   .about-hero {
-    padding: 25px 30px;
-    padding-bottom: 0;
+    padding: 0px 30px;
   }
 }
 

@@ -67,27 +67,31 @@ const index = () => {
           <p>Completely FREE!</p>
         </li>
       </ul>
-      <div className='brochure-image'>
+      <div className="brochure-section">
+        <div className='brochure-image'>
+          <Image 
+            src='/brochures/bath-lift-brochure.png'
+            alt='Brochure'
+            layout='responsive'
+            width={1000}
+            height={1412}
+          />
+        </div>
+        <div className='brochure-open'>
         <Image 
-          src='/images/landing-pages/brochure.jpeg'
-          alt='Brochure'
-          layout='responsive'
-          width={218}
-          height={130}
-        />
+            src='/brochures/bath-lift-brochure-open.png'
+            alt='Brochure'
+            layout='responsive'
+            width={1000}
+            height={708}
+          />
+        </div>
       </div>
     </div>
                    <CollectionForm productType='bath_lift'/>
                 </div>
               </div>    
               <h2 className='heading'>Enjoy a Bath Like You Used To</h2>
-              {/* <p className='sub-heading' id='collection-top-bath-lift'>Bath Lifts</p>   */}
-            
-              {/* <div className='intro'>
-                <p className='sub-heading' id='collection-top-bath-lift'>Bath Lifts</p>  
-                <h2 className='heading'>Enjoy a Bath Like You Used To</h2>
-                <p className='statement'>Do you miss relaxing in a nice warm bath? An Oak Tree electric powered bath lift gently lowers you in and out of the bath, helping you enjoy a relaxing and therapeutic soak again. Say goodbye to fussy plastic seats, expensive renovations or baths with doors… With the Riviera, you’ll enjoy bathing just like you used to.</p> 
-              </div> */}
               <div className='collections-grid single-grid con-reg'>
                   <Link href='/bath-lifts/the-riviera-plus'>
                     <a className='collection-item'>

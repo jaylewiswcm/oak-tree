@@ -35,7 +35,7 @@ interface ComponentProps {
             {/* <div className='carousel-navigation nav-prev'>
                 <button className='prev' onClick={() => changeVideoId('prev')}></button>
             </div> */}
-            <div className='video-container'><Video videoId={currentVideoId} show={show}/></div>
+            <div className='video-container'><Video videoId={currentVideoId}/></div>
             {/* <div className='carousel-navigation nav-next'>
                 <button className='next'  onClick={() => changeVideoId('next')}></button>
             </div> */}
