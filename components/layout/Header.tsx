@@ -20,6 +20,15 @@ const Header = () => {
     return (  
         <header>
             <div className='top-header'>
+                <div className='trustpilot-logo'>
+                    <Image
+                      src='/trustpilot/trustpilot-header-logo.svg'
+                      alt='Trust pilot rated 4.5 stars'
+                      layout='responsive'
+                      width='106.78'
+                      height='39.12'
+                    />
+                </div>
                 <div className='supporting-bhf'>
                     <p>Proudly Supporting</p>
                     <div className='bhf-logo'>
@@ -32,6 +41,19 @@ const Header = () => {
                         />
                     </div>
                 </div>
+                <div className='search-bar'>
+                    <form action="">
+                        <div className='input-wrapper'>
+                        <input type="text" id='search-bar' placeholder='Search Products, Posts and Pages...'/>
+                        <label htmlFor='search-bar'>Search</label>
+                        <input type="submit" value=''/>
+                        </div>
+                    </form>
+                </div>
+                <div className='header-phone-number'>
+                   <p className='number-support'>Questions? Call us <b>free</b> today:</p>
+                   <p className='number'>0800 094 999</p>
+                </div> 
             </div>
             <div className='header-inner con-reg'>
                 <div className="header-logo">
@@ -59,10 +81,10 @@ const Header = () => {
                 {/* <div className='contact-us'>
                     <button className='main-cta'><p>Contact us</p></button>
                 </div> */}
-                <div className='header-phone-number'>
+                {/* <div className='header-phone-number'>
                    <p className='number-support'>Call us <b>free</b> on:</p>
                    <p className='number'>0800 094 999</p>
-                </div> 
+                </div>  */}
                 <div className='mobile-menu-btn'>
                     <button className='icon-btn' onClick={() => toggleMobileMenu()}>
                         <Image
@@ -75,7 +97,58 @@ const Header = () => {
                 </div> 
             </div>
             <MobileNavigation isOpen={isOpen} toggleMobileMenu={toggleMobileMenu}/>
-       
+            <div className='index-usp-banner'>
+          <div className='inner-div'>
+            <div className='usp-item'>
+              <div className='icon-wrapper'>
+                <Image 
+                  src='/icons/collection-usps/made-in-britain-new.svg'
+                  alt='British Design'
+                  layout='responsive'
+                  width='60'
+                  height='60'
+                />
+              </div>
+              <p>British Design</p>
+            </div>
+            <div className='usp-item'>
+              <div className='icon-wrapper'>
+                <Image 
+                  src='/icons/collection-usps/trade-in-new.svg'
+                  alt='Trade In Offer'
+                  layout='responsive'
+                  width='60'
+                  height='60'
+                />
+              </div>
+              <p>Trade In Offer</p>
+            </div>
+            <div className='usp-item'>
+              <div className='icon-wrapper'>
+                <Image 
+                  src='/icons/collection-usps/free-delivery.svg'
+                  alt='Free Delivery'
+                  layout='responsive'
+                  width='60'
+                  height='60'
+                />
+              </div>
+              <p>Free Delivery</p>
+            </div>
+            <div className='usp-item'>
+              <div className='icon-wrapper'>
+                <Image 
+                  src='/icons/collection-usps/warranty.svg'
+                  alt='10 Year Warranty'
+                  layout='responsive'
+                  width='60'
+                  height='60'
+                />
+              </div>
+              <p>10 Year Warranty</p>
+            </div>
+          </div>
+      </div>
         </header>
     )
 }

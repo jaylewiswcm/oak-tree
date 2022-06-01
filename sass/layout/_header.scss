@@ -29,19 +29,76 @@ header {
   //   }
   // }
   .top-header {
-    display: none;
-    padding: 8px 25px;
+    padding: 10px 25px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px $lighter-grey solid;
+    .trustpilot-logo {
+      width: 110px;
+    }
     .supporting-bhf {
-      margin-left: auto;
-      display: flex;
-      align-items: center;
+      margin-left: 30px;
       p {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         font-weight: 500;
-        margin-right: 8px;
-      }
+        color: $grey;
+        margin-bottom:4px;
+         }
       .bhf-logo {
-        width:130px;
+        width:120px;
+      }
+    }
+    .search-bar {
+      position: relative;
+      // height: 30px;
+      display:flex;
+      margin: 0 auto;
+      input[type="text"] { 
+        width: 320px;
+        height: 35px;
+        border: 1px solid $lighter-grey;
+        background-color: $lightest-grey;
+        border-radius:2px;
+        outline: none;
+        padding: 10px;
+        padding-right: 42px;
+        font-size: 1.4rem;
+      }
+    
+      input[type="submit"] {       
+        height: 35px;
+        border: 1px solid  $dark-green-1;
+        background-color: $dark-green-1;
+        border-radius:2px;
+        outline: none;
+        position: absolute;
+        top:0;
+        right:0;
+        color: $white;
+        padding: 0 20px;
+        background-image: url('../public/buttons/icon-search.svg');
+        background-position: center;
+        background-size: 40%;
+        background-repeat: no-repeat;
+      }
+      label {
+        display: none;
+      }
+    }
+    .header-phone-number {
+      // margin-left: auto;
+      display: flex;
+      flex-direction: column;
+      text-align: right;
+      .number-support {
+        font-size: 1.4rem;
+        color: $grey;
+      }
+      .number {
+        font-size: 3.2rem;
+        font-weight: 600;
+        color: $dark-green-1;
+        letter-spacing: 1px;
       }
     }
   }
@@ -116,7 +173,8 @@ header {
       // margin: auto;
       // margin-left: 15px;
       // margin: 0 auto;
-      margin: 0  auto; 
+      margin: 0;
+      margin-left: auto; 
       height: 40px;
       display: none;
       @media(min-width: 1080px) {
@@ -130,13 +188,17 @@ header {
           padding: 0 18px;
           position: relative;
           cursor: pointer;
+          &:last-of-type {
+            margin-right:0;
+            padding-right: 0;
+          }
           a {
             font-size: 1.7rem;
-            font-weight: 400;
+            font-weight: 500;
             letter-spacing: 0px;
             color: $black;
-            color: $dark-green-1;
-            
+            color: $dark-green-2;
+            opacity: 0.8;
             display: flex;
             align-items: center;
             .arrow {

@@ -132,7 +132,7 @@ closeUspOverlay = () => {
           </div>
         </div>
       </div>
-      <div className='index-usp-banner'>
+      {/* <div className='index-usp-banner'>
           <div className='inner-div'>
             <div className='usp-item'>
               <div className='icon-wrapper'>
@@ -183,10 +183,21 @@ closeUspOverlay = () => {
               <p>10 Year Warranty</p>
             </div>
           </div>
-      </div>
-      <div className='stand-in-hero'>
+      </div> */}
+      {/* <div className='stand-in-hero'>
         <h1>Hero section in progress</h1>
-      </div>
+      </div> */}
+  <div className='home-intro'>
+    <Image 
+       src='/images/heros/home-hero.png'
+       alt='Man dancing in kitchen'
+       layout='responsive'
+       width={1600}
+       height={598}
+       quality={100}
+       priority
+       />
+  </div>
       <div className='home-intro hide'>
         <div className='intro-content'>
           <div className='hero-bg'>
