@@ -36,7 +36,7 @@ const TheHazel = () => {
     })
     const tocRef = useRef<HTMLDivElement>(null);
     const sectionOne = useRef<HTMLDivElement>(null);
-    
+
     const { setProductPage, setFormModal} = useAppContext();
 
     useEffect(() => {   
@@ -117,7 +117,7 @@ const TheHazel = () => {
             <TOC reference={tocRef} type='bed' references={sectionOne}/>
             <div className='table-of-contents' ref={tocRef} >
                 <h4 className='toc-heading'>Our Process</h4>
-                <MaterialBed isOpen={isOpen} openAccordian={() => openAccordian('material')}/>
+                <MaterialBed isOpen={isOpen} openAccordian={() => openAccordian('material')} reference={sectionOne}/>
                 <Mattress isOpen={isOpen} openAccordian={() => openAccordian('mattress')}/>
                 <Headboards isOpen={isOpen} openAccordian={() => openAccordian('headboards')}/>
                 <Accessories isOpen={isOpen} openAccordian={() => openAccordian('accessories')} type='bed'/>
