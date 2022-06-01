@@ -1,24 +1,20 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { NextSeo } from 'next-seo';
 import Image from 'next/image';
-import Link from 'next/link';
+// Context
+import { useAppContext } from '../../context/state'
 // Components 
-// import HomeVisitForm from '../../components/forms/homeVisit/HomeVisitForm';
-import BathLiftSteps from '../../components/sections/how-it-works/BathLiftSteps';
 import BathLiftStages from '../../components/sections/stages/BathLiftStages';
-import Modal from '../../components/modal/Modal';
-import PopupBrochureRequestForm from '../../components/forms/PopupBrochureRequestForm';
 import ProductForm from '../../components/forms/homeVisit/ProductForm';
 
 const TheRivieraPlus = () => {
-    const [show, setFormToShow] = useState(false);
+    const { setFormModal } = useAppContext();
     return (
         <>
             <NextSeo  
                 title="The Riviera Plus | Oak Tree Mobility"
                 description="The therapeutic benefits of a long soak in the tub are numerous. Now, with the Oak Tree Riviera, you can relax and enjoy a comfortable bath again. See more."
             />
-             {show &&  <Modal classNames='form-modal' setShow={setFormToShow}><PopupBrochureRequestForm setShow={setFormToShow} /></Modal>}
         <div className='product-wrapper'>
             <div className='con-reg'>
         <div className='product-hero-wrapper '>
@@ -39,14 +35,10 @@ const TheRivieraPlus = () => {
                  <h2 className='category  blue-3'>Bath Lift</h2>
                  <p className='desc'>Our Riviera Plus offers the best way to enjoy the therapeutic benefits of a hot bath again</p>
                 <div className='button-wrapper'>
-                    <button className='blue-cta'  onClick={() => setFormToShow(true)}>
+                    <button className='blue-cta'  onClick={() => setFormModal(true)}>
                         <p className='mobile-text'>Request a Brochure</p>
                         <p className='desktop-text'>Request Your Free Brochure</p>
                     </button>
-                    {/* <Link href='#product-information' ><a className='learn-more'>
-                        <p className='mobile-text'>Learn More</p>
-                        <p className='desktop-text'>Learn more about the Oak</p>
-                        </a></Link> */}
                 </div>
             </div>
     </div>

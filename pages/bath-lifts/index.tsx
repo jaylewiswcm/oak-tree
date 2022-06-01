@@ -80,8 +80,9 @@ const index = () => {
                    <CollectionForm productType='bath_lift'/>
                 </div>
               </div>    
-              <p className='sub-heading' id='collection-top-bath-lift'>Bath Lifts</p>  
-                <h2 className='heading'>Enjoy a Bath Like You Used To</h2>
+              <h2 className='heading'>Enjoy a Bath Like You Used To</h2>
+              {/* <p className='sub-heading' id='collection-top-bath-lift'>Bath Lifts</p>   */}
+            
               {/* <div className='intro'>
                 <p className='sub-heading' id='collection-top-bath-lift'>Bath Lifts</p>  
                 <h2 className='heading'>Enjoy a Bath Like You Used To</h2>
@@ -106,9 +107,9 @@ const index = () => {
                                     <p className='subheading blue-3'>Enjoy a Nice Hot Bath Again</p>
                                     <h2>The Riviera Plus</h2>
                                 </div>
-                                <span className='icon-wrapper'>
+                                {/* <span className='icon-wrapper'>
                                     <Image src='/icons/products/icon-riviera.svg' alt='The riviera icon' layout='responsive' width={40} height={40}/>
-                                </span>
+                                </span> */}
                             </div>
                             <p className='desc'>If you are looking for a more comfortable way to bathe, the Oak Tree Riviera bath lift could change your life. The Riviera relies on state-of-the-art technology to gently aid the elderly, disabled and those with limited mobility into and out of the bath.</p>
                         <div className='main-cta blue-cta'><p>View Bath Lift</p></div>

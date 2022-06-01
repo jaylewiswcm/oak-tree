@@ -1,26 +1,23 @@
 import React, { useState, useRef, useEffect } from 'react'
-import Link from 'next/link';
 import Image from 'next/image';
 import { NextSeo } from 'next-seo';
+// Context
 import { useAppContext } from '../../context/state'
-// Components
-// import HomeVisitForm from '../../components/forms/homeVisit/HomeVisitForm';
+// Product Section Components
 import MaterialChair from '../../components/tableOfContents/MaterialChair';
 import MotorChair from '../../components/tableOfContents/MotorChair';
 import SizeChair from '../../components/tableOfContents/SizeChair';
 import Accessories from '../../components/tableOfContents/Accessories';
 import Reviews from '../../components/tableOfContents/Reviews';
 import RecommendedProducts from '../../components/sections/recommendedProducts/RecommendedProducts';
-import Modal from '../../components/modal/Modal';
-import PopupBrochureRequestForm from '../../components/forms/PopupBrochureRequestForm';
 import { TOC } from '../../components/tableOfContents/TOC';
 import { InformationContainer } from '../../components/product/InformationContainer';
+// Form
 import ProductForm from '../../components/forms/homeVisit/ProductForm';
 
 
 const TheOak = () => {
     const [isOpen, setAccordianOpen] = useState('');
-    const [show, setFormToShow] = useState(false);
     const [product, setProduct] = useState({
         name: 'The Oak',
         category: 'Rise and Recline Chair',
@@ -37,10 +34,11 @@ const TheOak = () => {
             }
         ]
     })
+
     // Refs
     const tocRef = useRef<HTMLDivElement>(null);
 
-    const { setProductPage} = useAppContext();
+    const { setProductPage, setFormModal} = useAppContext();
 
     useEffect(() => {   
         setProductPage(true)
@@ -60,7 +58,6 @@ const TheOak = () => {
                 title="The Oak Rise and Recline Chair| Oak Tree Mobility"
                 description="Choose a stylish & comfortable rise and recline chair & settee from our Oak Collection, representing the very best of classic British design."
             />
-            {show &&  <Modal classNames='form-modal' setShow={setFormToShow}><PopupBrochureRequestForm setShow={setFormToShow} /></Modal>}
         <div className='product-wrapper'>
         <div className='product-hero-wrapper con-reg'>
             <div className='product-hero-carousel'>
@@ -80,7 +77,7 @@ const TheOak = () => {
                  <h2 className='category'>Rise and Recliner Chair</h2>
                  <p className='desc'>Combining amazing comfort and exceptional looks, the Oak is our most popular collection</p>
                 <div className='button-wrapper'>
-                    <button className='main-cta' onClick={() => setFormToShow(true)}>
+                    <button className='main-cta' onClick={() => setFormModal(true)}>
                         <p className='mobile-text'>Request a Brochure</p>
                         <p className='desktop-text'>Request Your Free Brochure</p>
                     </button>
@@ -112,10 +109,8 @@ const TheOak = () => {
                             />
                         </div>
                     </div>
-                    </div>
-                <div className='product-info'>
-                    <InformationContainer product={product} productType='chair'/>
                 </div>
+                    <InformationContainer product={product} productType='chair' showForm={() => setFormModal(true)}/>
             </div>
             <Reviews product='chair' isOpen={isOpen} openAccordian={() => openAccordian('reviews')}/>
             <TOC reference={tocRef} type='chair'/>
@@ -191,7 +186,7 @@ const TheOak = () => {
                 </div>
                 </div>
             </div>
-    
+
             <RecommendedProducts product='chairs'/>
         </div>
         </>

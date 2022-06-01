@@ -4,7 +4,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useAppContext } from '../../context/state'
 // Components
-// import HomeVisitForm from '../../components/forms/homeVisit/HomeVisitForm';
 import MaterialBed from '../../components/tableOfContents/MaterialBed';
 import Reviews from '../../components/tableOfContents/Reviews';
 import RecommendedProducts from '../../components/sections/recommendedProducts/RecommendedProducts';
@@ -19,7 +18,6 @@ import ProductForm from '../../components/forms/homeVisit/ProductForm';
 
 const TheHazel = () => {
     const [isOpen, setAccordianOpen] = useState('');
-    const [show, setFormToShow] = useState(false);
     const [product, setProduct] = useState({
         name: 'The Hazel',
         category: 'Adjustable Bed',
@@ -38,7 +36,7 @@ const TheHazel = () => {
     })
     const tocRef = useRef<HTMLDivElement>(null);
 
-    const { setProductPage } = useAppContext();
+    const { setProductPage, setFormModal} = useAppContext();
 
     useEffect(() => {   
         setProductPage(true)
@@ -60,7 +58,6 @@ const TheHazel = () => {
                 title="The Hazel | Oak Tree Mobility"
                 description="The Hazel adjustable bed strikes a fine balance between traditional and contemporary, making it fit in well with most interior styles. Find out more."
             />
-            {show &&  <Modal classNames='form-modal' setShow={setFormToShow}><PopupBrochureRequestForm setShow={setFormToShow} /></Modal>}
         <div className='product-wrapper'>
         <div className='product-hero-wrapper con-reg'>
             <div className='product-hero-carousel'>
@@ -80,49 +77,13 @@ const TheHazel = () => {
                  <h2 className='category'>Adjustable Bed</h2>
                  <p className='desc'>The Hazel bed strikes a fine balance between traditional and contemporary, making it fit in well with most interior styles.</p>
                 <div className='button-wrapper'>
-                    <button className='main-cta' onClick={() => setFormToShow(true)}>
+                    <button className='main-cta' onClick={() => setFormModal(true)}>
                         <p className='mobile-text'>Request a Brochure</p>
                         <p className='desktop-text'>Request Your Free Brochure</p>
                     </button>
-                    {/* <Link href='#product-information' >
-                        <a className='learn-more'>
-                            <p className='mobile-text'>Learn More</p>
-                            <p className='desktop-text'>Learn more about the Hazel</p>
-                        </a>
-                    </Link> */}
                 </div>
             </div>
     </div>
-            {/* <div className='product-details con-reg' id='product-information'>
-                <h3 className='heading'>Long-lasting style and comfort</h3>
-                <p className='desc mobile'>Hidden away inside is a state-of-the-art motor that allows complete control of the mattress with a simple handheld control. If you’re struggling to get into and out of bed, the smart actions of the Hazel might very well be life changing.</p>
-                <ul className='mobile'>
-                    <li><p>Gently curved lines</p></li>
-                    <li><p>State-of-the-art motor</p></li>
-                    <li><p>Refined eleganct</p></li> 
-                </ul>
-                <p className='desc desktop'>The gently curved lines lend an airy feel and bestow upon the bed a refined elegance. Hidden away inside is a state-of-the-art motor that allows complete control of the mattress with a simple handheld control. If you’re struggling to get into and out of bed, the smart actions of the Hazel might very well be life changing.</p>
-            </div>
-            <div className="product-images con-reg">
-                <div className='image-wrapper'>
-                    <Image
-                        src='/images/products/beds/hazel/hazel-product-1.png'
-                        alt='The Hazel Bed 1'
-                        layout='responsive'
-                        width={577}
-                        height={461}
-                    />
-                </div>
-                <div className='image-wrapper'>
-                <Image
-                        src='/images/products/beds/hazel/hazel-product-2.png'
-                        alt='The Hazel Bed 2'
-                        layout='responsive'
-                        width={577}
-                        height={461}
-                    />
-                </div>
-            </div> */}
             <div className='product-details con-reg' id='product-information'>
                 <div className='product-content'>
                     <h3 className='heading'>Long-lasting style and comfort</h3>
@@ -149,9 +110,7 @@ const TheHazel = () => {
                         </div>
                     </div>
                     </div>
-                <div className='product-info'>
-                    <InformationContainer product={product} productType='bed' />
-                </div>
+                    <InformationContainer product={product} productType='bed' showForm={() => setFormModal(true)} />
             </div>
             <Reviews product='bed' isOpen={isOpen} openAccordian={() => openAccordian('reviews')}/>
             <TOC reference={tocRef} type='bed'/>

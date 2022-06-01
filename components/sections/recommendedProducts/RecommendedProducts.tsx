@@ -12,7 +12,7 @@ const RecommendedProducts = ({product}: ComponentProps) => {
     <h6>You may also like</h6>
     {product === 'chairs' && 
     <div className='product-grid'>
-    <Link href="/chairs/the-maple">
+    <Link href="/chairs/the-oak">
         <a className='product'>
             <div className='image-wrapper'>
                 <Image
@@ -32,7 +32,7 @@ const RecommendedProducts = ({product}: ComponentProps) => {
             </div>
         </a>
         </Link>
-        <Link href="/chairs/the-tulip">
+        <Link href="/chairs/the-oak">
         <a  className='product'>
         <div className='image-wrapper'>
             <Image
@@ -52,7 +52,7 @@ const RecommendedProducts = ({product}: ComponentProps) => {
             </div>
         </a>
         </Link>
-        <Link href="/chairs/the-rowan">
+        <Link href="/chairs/the-oak">
         <a className='product'>
             <div className='image-wrapper'>
             <Image

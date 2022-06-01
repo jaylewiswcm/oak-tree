@@ -20,13 +20,15 @@ interface ComponentProps {
         category: string
         usps: Array<usp>
     }
+    showForm: any
 }
 
-export const InformationContainer = ({product, productType }:ComponentProps) => {
+export const InformationContainer = ({product, productType, showForm }:ComponentProps) => {
 
     const {name, category, usps} = product;
 
   return (
+    <div className='product-info'>
     <div className='info-container'>
     <div className='top'>
         <h4>{name}</h4>
@@ -62,42 +64,6 @@ export const InformationContainer = ({product, productType }:ComponentProps) => 
               <p>{usp.text}</p>
           </li>
         )}
-        {/* <li>
-            <span className='icon-wrapper'>
-                <Image 
-                    src='/icons/product-usps/made-to-measure.svg'
-                    alt='Made to Measure'
-                    layout='responsive'
-                    width='50'
-                    height='50'
-                />
-            </span>
-            <p>Made-to-Measure</p>
-        </li>
-        <li>
-            <span className='icon-wrapper'>
-                <Image 
-                    src='/icons/product-usps/trade-in.svg'
-                    alt='Trade In'
-                    layout='responsive'
-                    width='50'
-                    height='50'
-                />
-            </span>
-            <p>Trade In</p>
-        </li>
-        <li>
-            <span className='icon-wrapper'>
-                <Image 
-                    src='/icons/product-usps/made-in-britain.svg'
-                    alt='Made in Britiain'
-                    layout='responsive'
-                    width='50'
-                    height='50'
-                />
-            </span>
-            <p>Made in Britain</p>
-        </li> */}
     </ul>
     <div className='info-section fabrics'>
         <p className='info-header'>Fabrics and Leathers:</p>
@@ -165,8 +131,9 @@ export const InformationContainer = ({product, productType }:ComponentProps) => 
     </div>
     <div className='cta-wrapper'>
         <p>See all our options in our free brochure</p>
-        <button className='main-cta'>Request a Free Brochure</button>
+        <button className='main-cta' onClick={showForm}>Request a Free Brochure</button>
     </div>
+</div>
 </div>
   )
 }

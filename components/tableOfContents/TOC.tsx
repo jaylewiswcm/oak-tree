@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Link from 'next/link';
-import { linkClasses } from '@mui/material';
+// Context
+import { useAppContext } from '../../context/state'
 
 interface ComponentProps {
     reference: any
@@ -25,6 +26,7 @@ const [hideClass, setHideClass] = useState('hide-toc')
           }
       };
 
+      const { setFormModal } = useAppContext();
 
       const chairLinks = [
           {
@@ -82,7 +84,7 @@ const [hideClass, setHideClass] = useState('hide-toc')
                 </li>
             ) }
         </ul>
-        <button className='cta-btn'>Request Your Brochure</button>
+        <button className='cta-btn' onClick={() => setFormModal(true)}>Request Your Brochure</button>
         </nav>
     </div>
 

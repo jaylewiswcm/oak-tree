@@ -3,13 +3,15 @@ import React, { createContext, useContext, useState } from 'react'
 const AppContext = createContext();
 
 export const AppWrapper = ({ children }) => {
-    const [hideBottomBar, setToHideBottomBar] = useState('');
+
     const [productPage, setProductPage] = useState(false);
+    const [formModal, setFormModal]  = useState(false)
+
     let sharedState = {
-        hideBottomBar,
-        setToHideBottomBar,
         productPage,
-        setProductPage
+        setProductPage,
+        formModal,
+        setFormModal
     }
 return (
     <AppContext.Provider value={sharedState}>
