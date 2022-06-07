@@ -11,6 +11,7 @@ import HomeCollections from '../components/sections/collections/HomeCollections'
 import FooterCollections from '../components/sections/collections/FooterCollections';
 import Reviews from '../components/sections/reviews/Reviews';
 import OccupationalTherapistSection from '../components/sections/occupationalTherapist/OccupationalTherapistSection';
+import { OfferBanners } from '../components/sections/banners/OfferBanners';
 // images 
 import homeHeroGraphic from '../public/graphics/home-hero.png'
 import { Partners } from '../components/sections/partners/Partners';
@@ -133,61 +134,7 @@ closeUspOverlay = () => {
           </div>
         </div>
       </div>
-      {/* <div className='index-usp-banner'>
-          <div className='inner-div'>
-            <div className='usp-item'>
-              <div className='icon-wrapper'>
-                <Image 
-                  src='/icons/collection-usps/made-in-britain-new.svg'
-                  alt='British Design'
-                  layout='responsive'
-                  width='60'
-                  height='60'
-                />
-              </div>
-              <p>British Design</p>
-            </div>
-            <div className='usp-item'>
-              <div className='icon-wrapper'>
-                <Image 
-                  src='/icons/collection-usps/trade-in-new.svg'
-                  alt='Trade In Offer'
-                  layout='responsive'
-                  width='60'
-                  height='60'
-                />
-              </div>
-              <p>Trade In Offer</p>
-            </div>
-            <div className='usp-item'>
-              <div className='icon-wrapper'>
-                <Image 
-                  src='/icons/collection-usps/free-delivery.svg'
-                  alt='Free Delivery'
-                  layout='responsive'
-                  width='60'
-                  height='60'
-                />
-              </div>
-              <p>Free Delivery</p>
-            </div>
-            <div className='usp-item'>
-              <div className='icon-wrapper'>
-                <Image 
-                  src='/icons/collection-usps/warranty.svg'
-                  alt='10 Year Warranty'
-                  layout='responsive'
-                  width='60'
-                  height='60'
-                />
-              </div>
-              <p>10 Year Warranty</p>
-            </div>
-          </div>
-      </div> */}
-      {/* <div className='stand-in-hero'>
-        <h1>Hero section in progress</h1>
-      </div> */}
+
   <div className='home-intro'>
     <div className='hero-image'>
     <Image 
@@ -302,34 +249,7 @@ closeUspOverlay = () => {
         <h2 className='heading'>Our products</h2>
         <HomeCollections />
       </div>
-      <div className='banners con-reg'>
-        <Link href='/offers'>
-          <a className='banner-vertical'>
-            <Image 
-              src='/graphics/half-price-sale.svg'
-              alt='Half Price Sale'
-              width='568'
-              height='577'
-              layout='responsive'
-            />          
-          </a>
-        </Link>
-        <div className='plus'>
-          {/* <Image src='/vectors/plus-yellow-and-red.svg' alt='Plus' layout='responsive' width='20' height='20' /> */}
-          <p>and</p>
-        </div>
-        <Link href='/trade-in'>
-          <a className='banner-vertical'>
-            <Image 
-                src='/graphics/trade-in.svg'
-                alt='Trade In'
-                width='568'
-                height='577'
-                layout='responsive'
-              />   
-          </a>
-        </Link>
-      </div>
+      <OfferBanners />
       <OccupationalTherapistSection />
       <Reviews orphan={false} />
       <Testimonials pageType='normal' />

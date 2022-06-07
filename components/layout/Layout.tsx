@@ -26,9 +26,9 @@ interface ComponentProps  {
    
    const handleScroll = useCallback(() => {
       const position = window.pageYOffset;
-      
+
       if(!productPage) {
-        if(position < 80) {
+        if(position < 500) {
             setHideClass("hide-bar") 
             setOverlayClass('british-made-overlay')
         } else if(!productPage) {
