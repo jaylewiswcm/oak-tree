@@ -9,7 +9,11 @@
         display: flex;
         flex-direction: row-reverse;
     }
-
+    .image-wrapper {
+        width: 100%;
+        height: 400px;
+        position: relative;
+    }
 }
 .product-hero-carousel {
     width: 100%;

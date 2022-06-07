@@ -845,12 +845,12 @@
             // margin: 50px auto;
             margin: 50px 0;
             margin-top:5px;
-            margin-left: auto;
             position: relative;
             width: 100%;
             @media(min-width: 1050px) {
                 width: 65%;
                 margin: 50px 0;
+                margin-left: auto;
             }
             h4 {
                 font-size: 2.8rem;
@@ -1581,12 +1581,28 @@
         }
     }
 }
+.over-13-years {
+    width: 200px;
 
+    margin: 50px auto;
+    @media(min-width: 500px) {
+        width: 250px;
+    }
+    @media(min-width: 800px) {
+        margin: 25px auto;
+        margin-bottom: 60px;
+    }
+}
 .our-partners {
     border-top: 1px $lighter-grey solid;
     border-bottom: 1px $lighter-grey solid;
     padding: 25px 0;
     margin-bottom: 15px;
+    width: calc(100% - 30px);
+    @media(min-width: 600px) {
+        width: calc(100% - 60px);
+    }
+
     @media(min-width: 800px) {
         margin-bottom: 30px;
     }

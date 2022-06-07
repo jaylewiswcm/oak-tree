@@ -64,9 +64,26 @@ const TheOak = () => {
                 description="Choose a stylish & comfortable rise and recline chair & settee from our Oak Collection, representing the very best of classic British design."
             />
         <div className='product-wrapper'>
-        <div className='product-hero-wrapper con-reg'>
-            <div className='product-hero-carousel'>
+        <div className='product-hero-wrapper'>
                 <div className='image-wrapper'>
+                    <Image
+                        src='/images/products/chairs/oak/oak-product-1.png'
+                        alt='The Oak Chair'
+                        layout='fill'
+                        objectFit='cover'
+                        objectPosition='center'
+                    />
+                </div>
+
+            {/* <div className='product-hero-carousel'>
+                <div className='image-wrapper'>
+                    <Image
+                        src='/images/products/chairs/oak/oak-product-1.png'
+                        alt='The Oak Chair'
+                        layout='fill'
+                        objectFit='cover'
+                        objectPosition='center'
+                    />
                     <Image
                         src='/images/products/chairs/oak/oak-product-1.png'
                         alt='The Oak Chair'
@@ -75,8 +92,8 @@ const TheOak = () => {
                         height={631}
                     />
                 </div>
-            </div>
-            <div className='product-intro'>
+            </div> */}
+            {/* <div className='product-intro'>
                 <p className='subheading'>A Touch of Elegance</p>
                  <h1 className='name'>The Oak</h1>
                  <h2 className='category'>Rise and Recliner Chair</h2>
@@ -87,7 +104,7 @@ const TheOak = () => {
                         <p className='desktop-text'>Request Your Free Brochure</p>
                     </button>
                 </div>
-            </div>
+            </div> */}
     </div>
             <div className='product-details con-reg' id='product-information'>
                 <div className='product-content'>

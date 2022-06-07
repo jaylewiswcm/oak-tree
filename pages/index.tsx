@@ -254,6 +254,15 @@ closeUspOverlay = () => {
       <Reviews orphan={false} />
       <Testimonials pageType='normal' />
       <FooterCollections />
+      <div className='over-13-years'>
+        <Image 
+          src='/vectors/over-13-years.svg'
+          alt='Over 13 years in business'
+          layout='responsive'
+          width='216'
+          height='85'
+        />
+      </div>
       <Partners />
       </div>
   )

@@ -4400,7 +4400,6 @@ body.mobile-navbar .mobile-navigation {
   padding: 0 0;
   margin: 50px 0;
   margin-top: 5px;
-  margin-left: auto;
   position: relative;
   width: 100%;
 }
@@ -4409,6 +4408,7 @@ body.mobile-navbar .mobile-navigation {
   .occupational-therapist-wrapper .occ-section-flex .advice-quotes {
     width: 65%;
     margin: 50px 0;
+    margin-left: auto;
   }
 }
 
@@ -4893,11 +4893,36 @@ body.mobile-navbar .mobile-navigation {
   text-underline-offset: 2px;
 }
 
+.over-13-years {
+  width: 200px;
+  margin: 50px auto;
+}
+
+@media (min-width: 500px) {
+  .over-13-years {
+    width: 250px;
+  }
+}
+
+@media (min-width: 800px) {
+  .over-13-years {
+    margin: 25px auto;
+    margin-bottom: 60px;
+  }
+}
+
 .our-partners {
   border-top: 1px #E3E3E3 solid;
   border-bottom: 1px #E3E3E3 solid;
   padding: 25px 0;
   margin-bottom: 15px;
+  width: calc(100% - 30px);
+}
+
+@media (min-width: 600px) {
+  .our-partners {
+    width: calc(100% - 60px);
+  }
 }
 
 @media (min-width: 800px) {
@@ -4987,6 +5012,8 @@ body.mobile-navbar .mobile-navigation {
           transform: translateY(-50%);
   background-color: #fff;
   border-radius: 6px;
+  -webkit-box-shadow: 0 3px 21px rgba(0, 0, 0, 0.18);
+          box-shadow: 0 3px 21px rgba(0, 0, 0, 0.18);
   overflow: hidden;
 }
 
@@ -5062,12 +5089,12 @@ body.mobile-navbar .mobile-navigation {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 5px 0;
+  padding: 9px 0;
 }
 
 .col-hero .hero-inner .form .form-usps ul li .tick {
-  width: 28px;
-  margin-right: 5px;
+  width: 20px;
+  margin-right: 10px;
 }
 
 .col-hero .hero-inner .form .form-usps ul li p {
@@ -5081,7 +5108,7 @@ body.mobile-navbar .mobile-navigation {
 }
 
 .col-hero .hero-inner .form .form-wrapper .form-top {
-  background-color: #17494D;
+  background-color: #09595E;
   padding: 15px 25px;
 }
 
@@ -6450,6 +6477,95 @@ body.mobile-navbar .mobile-navigation {
   margin-top: 10px;
 }
 
+.product-collections .health-benefits {
+  padding: 50px 25px;
+  padding-top: 75px;
+}
+
+.product-collections .health-benefits h5 {
+  font-size: 3.2rem;
+  color: #17494D;
+}
+
+@media (min-width: 500px) {
+  .product-collections .health-benefits h5 {
+    text-align: center;
+  }
+}
+
+.product-collections .health-benefits .subheading {
+  font-size: 2rem;
+  color: #60898D;
+  margin-top: 5px;
+}
+
+@media (min-width: 500px) {
+  .product-collections .health-benefits .subheading {
+    text-align: center;
+  }
+}
+
+.product-collections .health-benefits ul {
+  display: -ms-grid;
+  display: grid;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  gap: 0 30px;
+  margin-right: auto;
+  margin-top: 25px;
+  -ms-grid-columns: (1fr)[1];
+      grid-template-columns: repeat(1, 1fr);
+}
+
+@media (min-width: 500px) and (max-width: 769px) {
+  .product-collections .health-benefits ul {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    margin: 0 auto;
+    margin-top: 25px;
+  }
+}
+
+@media (min-width: 770px) and (max-width: 979px) {
+  .product-collections .health-benefits ul {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    margin: 0 auto;
+    margin-top: 25px;
+  }
+}
+
+@media (min-width: 980px) {
+  .product-collections .health-benefits ul {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+    margin: 0 auto;
+    margin-top: 25px;
+  }
+}
+
+.product-collections .health-benefits ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  padding: 8px 0;
+}
+
+.product-collections .health-benefits ul li .icon {
+  width: 30px;
+  margin-right: 10px;
+}
+
+.product-collections .health-benefits ul li p {
+  font-size: 1.8rem;
+  color: #7F7F7F;
+}
+
 .collection-details {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6728,6 +6844,12 @@ body.mobile-navbar .mobile-navigation {
         -ms-flex-direction: row-reverse;
             flex-direction: row-reverse;
   }
+}
+
+.product-hero-wrapper .image-wrapper {
+  width: 100%;
+  height: 400px;
+  position: relative;
 }
 
 .product-hero-carousel {
