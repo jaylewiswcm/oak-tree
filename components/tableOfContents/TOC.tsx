@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import Link from 'next/link';
 // Context
 import { useAppContext } from '../../context/state'
@@ -16,6 +16,35 @@ export const TOC = ({reference, type, sectionOneRef, sectionTwoRef, sectionThree
 const [hideClass, setHideClass] = useState('hide-toc')
 const [active, setActive] = useState(99);
 
+const checkIfSectionIsInViewAndAssignActive = useCallback(() => {
+    if(sectionOneRef.current) {
+        const sectionOnePos = sectionOneRef!.current!.getBoundingClientRect()
+        const sectionTwoPos = sectionTwoRef!.current!.getBoundingClientRect()
+        const sectionThreePos = sectionThreeRef!.current!.getBoundingClientRect()
+        const sectionFourPos = sectionFourRef!.current!.getBoundingClientRect()
+        // Check if section's position is within the window if so assign active
+        if(sectionOnePos.top > 0 ) {
+            setActive(0)
+        } else if(sectionOnePos.bottom > 110) {
+            setActive(0)
+        } else if(sectionTwoPos.top > 0 ) {
+            setActive(1)
+        } else if(sectionTwoPos.bottom > 110) {
+            setActive(1)
+        } else if(sectionThreePos.top > 0 ) {
+            setActive(2)
+        } else if(sectionThreePos.bottom > 110) {
+            setActive(2)
+        } else if(sectionFourPos.top > 0 ) {
+            setActive(3)
+        } else if(sectionFourPos.bottom > 110) {
+            setActive(3)
+        } else {
+            setActive(99)
+        }
+    }
+  }, [sectionOneRef, sectionTwoRef, sectionThreeRef, sectionFourRef] )
+  
     useEffect(() => {
         const handleScroll = () => {
             if(reference.current) {
@@ -34,37 +63,10 @@ const [active, setActive] = useState(99);
         return () => {
           window.removeEventListener("scroll", handleScroll);
         };
-      }, [reference, setHideClass]);
+      }, [reference, setHideClass, checkIfSectionIsInViewAndAssignActive ]);
       
   
-      const checkIfSectionIsInViewAndAssignActive = () => {
-        if(sectionOneRef.current) {
-            const sectionOnePos = sectionOneRef!.current!.getBoundingClientRect()
-            const sectionTwoPos = sectionTwoRef!.current!.getBoundingClientRect()
-            const sectionThreePos = sectionThreeRef!.current!.getBoundingClientRect()
-            const sectionFourPos = sectionFourRef!.current!.getBoundingClientRect()
-            // Check if section's position is within the window if so assign active
-            if(sectionOnePos.top > 0 ) {
-                setActive(0)
-            } else if(sectionOnePos.bottom > 110) {
-                setActive(0)
-            } else if(sectionTwoPos.top > 0 ) {
-                setActive(1)
-            } else if(sectionTwoPos.bottom > 110) {
-                setActive(1)
-            } else if(sectionThreePos.top > 0 ) {
-                setActive(2)
-            } else if(sectionThreePos.bottom > 110) {
-                setActive(2)
-            } else if(sectionFourPos.top > 0 ) {
-                setActive(3)
-            } else if(sectionFourPos.bottom > 110) {
-                setActive(3)
-            } else {
-                setActive(99)
-            }
-        }
-      }
+   
 
       const { setFormModal } = useAppContext();
 
