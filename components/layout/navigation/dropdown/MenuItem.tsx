@@ -18,6 +18,7 @@ export const MenuItem = ({closeMenu, item}: ComponentProps) => {
     <li className={icon === 'all' ? 'all-products' : '' }>
       <Link href={url} >
         <a onClick={() => closeMenu(false)}>
+          { icon && icon !== 'all' && <span className='product-image'><Image src={icon} alt={title} layout='fill' objectFit='contain' objectPosition='center'></Image></span> }
           {/* { icon &&  <span className='icon'><Image src={icon} alt={`${title} Leaf`} layout='responsive' width={50} height={50}/></span>} */}
           <div className='link-content'>
             <p className='link-title'>{title}</p>

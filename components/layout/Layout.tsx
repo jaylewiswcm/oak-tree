@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState, useCallback } from 'react'
 // Context
 import { useAppContext } from '../../context/state'
 // Layout Components
@@ -24,25 +24,27 @@ interface ComponentProps  {
 
    const { productPage, formModal, setFormModal} = useAppContext();
    
-   const handleScroll = () => {
-    const position = window.pageYOffset;
-    
-    if(!productPage) {
-      if(position < 80) {
-          setHideClass("hide-bar") 
-          setOverlayClass('british-made-overlay')
-      } else if(!productPage) {
-          setHideClass("") 
-          setOverlayClass('british-made-overlay increased-bottom-margin')
+   const handleScroll = useCallback(() => {
+      const position = window.pageYOffset;
+      
+      if(!productPage) {
+        if(position < 80) {
+            setHideClass("hide-bar") 
+            setOverlayClass('british-made-overlay')
+        } else if(!productPage) {
+            setHideClass("") 
+            setOverlayClass('british-made-overlay increased-bottom-margin')
+        }
       }
-    }
-    }
+    }, [productPage]);
 
     useEffect(() => {
       window.addEventListener("scroll", handleScroll);
       return () => {
         window.removeEventListener("scroll", handleScroll);
+        handleScroll()
       };
+
     }, [handleScroll]);
     
     return (

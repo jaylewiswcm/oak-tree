@@ -13,6 +13,7 @@ import Reviews from '../components/sections/reviews/Reviews';
 import OccupationalTherapistSection from '../components/sections/occupationalTherapist/OccupationalTherapistSection';
 // images 
 import homeHeroGraphic from '../public/graphics/home-hero.png'
+import { Partners } from '../components/sections/partners/Partners';
 
 type MyProps = { };
 type MyState = { requestClassName: string, uspOverlay:string };
@@ -188,6 +189,7 @@ closeUspOverlay = () => {
         <h1>Hero section in progress</h1>
       </div> */}
   <div className='home-intro'>
+    <div className='hero-image'>
     <Image 
        src='/images/heros/home-hero.png'
        alt='Man dancing in kitchen'
@@ -197,6 +199,20 @@ closeUspOverlay = () => {
        quality={100}
        priority
        />
+      </div>
+       <div className='as-seen-on-tv'>
+         <Image
+            src='/icons/seen-on-tv.svg'
+            alt='As seen on tv'
+            layout='responsive'
+            width='150'
+            height='100'
+         />
+       </div>
+       <div className='hero-content'>
+         <h1>Rise, Recline, Relax</h1>
+         <button className='main-cta'>Request a Free Brochure</button>
+      </div>
   </div>
       <div className='home-intro hide'>
         <div className='intro-content'>
@@ -283,7 +299,7 @@ closeUspOverlay = () => {
         </div>
       </div>
       <div className='home-collections con-reg'>
-        <h2 className='heading'>Oak Tree Catalogue</h2>
+        <h2 className='heading'>Our products</h2>
         <HomeCollections />
       </div>
       <div className='banners con-reg'>
@@ -299,7 +315,8 @@ closeUspOverlay = () => {
           </a>
         </Link>
         <div className='plus'>
-          <Image src='/vectors/plus-yellow-and-red.svg' alt='Plus' layout='responsive' width='20' height='20' />
+          {/* <Image src='/vectors/plus-yellow-and-red.svg' alt='Plus' layout='responsive' width='20' height='20' /> */}
+          <p>and</p>
         </div>
         <Link href='/trade-in'>
           <a className='banner-vertical'>
@@ -317,6 +334,7 @@ closeUspOverlay = () => {
       <Reviews orphan={false} />
       <Testimonials pageType='normal' />
       <FooterCollections />
+      <Partners />
       </div>
   )
 }

@@ -29,15 +29,51 @@ header {
   //   }
   // }
   .top-header {
-    padding: 10px 25px;
-    display: flex;
-    align-items: center;
+    padding: 10px 0;
+    
     border-bottom: 1px $lighter-grey solid;
+    .con-reg {
+      display: flex;
+      align-items: center;
+      max-width: 1500px;
+    }
+    .mobile-header-logo {
+      display: block;
+      width: 40%;
+      max-width: 220px;
+      padding: 15px 0;
+      @media(min-width: 970px) {
+        display: none;
+      }
+    }
+    .mobile-phone-number {
+      border-radius: 4px;
+      background-color: rgba(240,246,247,1);
+      border: 2px solid $dark-green-1;
+      padding: 10px 25px;
+      margin-left: auto;
+      @media(min-width: 970px) {
+        display: none;
+      }
+      p {
+        font-size: 1.8rem;
+        font-weight: 500;
+        color: $dark-green-1;
+      }
+    }
     .trustpilot-logo {
       width: 110px;
+      // display: none;
+      // @media(min-width: 970px) {
+      //   display: block;
+      // }
     }
     .supporting-bhf {
       margin-left: 30px;
+      display: none;
+      @media(min-width: 970px) {
+        display: block;
+      }
       p {
         font-size: 1.2rem;
         font-weight: 500;
@@ -51,8 +87,11 @@ header {
     .search-bar {
       position: relative;
       // height: 30px;
-      display:flex;
+      display:none;
       margin: 0 auto;
+      @media(min-width: 970px) {
+        display: flex;
+      }
       input[type="text"] { 
         width: 320px;
         height: 35px;
@@ -76,7 +115,7 @@ header {
         right:0;
         color: $white;
         padding: 0 20px;
-        background-image: url('../public/buttons/icon-search.svg');
+        background-image: url('../public/buttons/icon-search-white.svg');
         background-position: center;
         background-size: 40%;
         background-repeat: no-repeat;
@@ -87,9 +126,13 @@ header {
     }
     .header-phone-number {
       // margin-left: auto;
-      display: flex;
+      display: none;
       flex-direction: column;
       text-align: right;
+      margin-left: auto;
+      @media(min-width: 970px) {
+        display: flex;
+      }
       .number-support {
         font-size: 1.4rem;
         color: $grey;
@@ -127,16 +170,21 @@ header {
       display: flex;
       align-items: center;
       justify-content: center;
+      cursor: pointer; 
+
       margin-left: auto;
-      cursor: pointer;
       @media(min-width: 1080px) {
         display: none;
+      }
+      p {
+        font-size:1.6rem;
+        margin-top: 5px;
+        text-align: center;
       }
     }
     .header-logo,.header-cta {
       display: flex;
     }
- 
     .header-logo {
       width: 60%;
       @media(min-width: 400px) {
@@ -183,6 +231,7 @@ header {
       .main-ul {
         display: flex;
         justify-content: center;
+        position: relative;
         li {
           padding: 0 20px;
           padding: 0 18px;
@@ -197,7 +246,7 @@ header {
             font-weight: 500;
             letter-spacing: 0px;
             color: $black;
-            color: $dark-green-2;
+            // color: $light-grey;
             opacity: 0.8;
             display: flex;
             align-items: center;

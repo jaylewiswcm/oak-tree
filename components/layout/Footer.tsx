@@ -54,39 +54,48 @@ const Footer = () => {
                         </ul>
                     </div> */}
                 </nav>
-                <Link href='/'>
-                    <a className='logo-link'>
-                    <Image 
-                            src='/logo/logo.svg'
-                            alt='Oak Tree Mobility'
-                            width='215.42'
-                            height='44.89'
-                        />
-                    </a>
-                </Link>
+                <div className='logo-and-socials'>
+                    <Link href='/'>
+                        <a className='logo-link'>
+                        <Image 
+                                src='/logo/logo.svg'
+                                alt='Oak Tree Mobility'
+                                width='215.42'
+                                height='44.89'
+                            />
+                        </a>
+                    </Link>
+                    <div className='socials'>
+                            <a href='https://www.facebook.com/OakTreeMobility/' className='social-wrapper facebook-blue' target='__blank' rel="noopener noreferrer">
+                                <div className='icon-wrapper desktop'>
+                                    <Image src='/icons/socials/facebook.svg' alt='Facebook' width='25' height='25'/>
+                                </div>
+                                <div className='icon-wrapper mobile'>
+                                    <Image src='/icons/socials/facebook-mobile.svg' alt='Facebook' width='42' height='42'/>
+                                </div>
+                                <p className='facebook-blue'>Facebook</p> 
+                            </a>
+                            <a href='https://www.youtube.com/c/oaktreemobility' className='social-wrapper youtube-red' target='__blank' rel="noopener noreferrer">
+                                <div className='icon-wrapper desktop'>
+                                    <Image src='/icons/socials/youtube.svg' alt='Youtube' width='25' height='25'/>
+                                </div>
+                                <div className='icon-wrapper mobile'>
+                                    <Image src='/icons/socials/youtube-mobile.svg' alt='Youtube' width='42' height='42'/>
+                                </div>
+                                <p className='youtube-red'>Youtube</p>   
+                            </a>
+                        </div>
+                    </div>
             </div>
             </div>
             <div className='footer-footnote'>
                 <div className='footnote-inner con-reg'>
-                    <div className='socials'>
-                        <a href='https://www.facebook.com/OakTreeMobility/' className='social-wrapper facebook-blue' target='__blank' rel="noopener noreferrer">
-                            <div className='icon-wrapper'>
-                                <Image src='/icons/socials/facebook.svg' alt='Facebook' width='25' height='25'/>
-                            </div>
-                            Facebook
-                        </a>
-                        <a href='https://www.youtube.com/c/oaktreemobility' className='social-wrapper youtube-red' target='__blank' rel="noopener noreferrer">
-                            <div className='icon-wrapper'>
-                                <Image src='/icons/socials/youtube.svg' alt='Youtube' width='25' height='25'/>
-                            </div>
-                            Youtube
-                        </a>
-                    </div>
-                    <p>© Copyright 2022 Oak Tree Mobility Ltd.</p>
-                    <Link href="/terms-and-conditions"><a>Terms and Conditions</a></Link>
-                    <Link href="/privacy-policy"><a>Privacy</a></Link>
-                    <Link href="/cookie-policy"><a>Cookie Policy</a></Link>
+                        <p>© Copyright 2022 Oak Tree Mobility Ltd.</p>
+                        <Link href="/terms-and-conditions"><a>Terms and Conditions</a></Link>
+                        <Link href="/privacy-policy"><a>Privacy</a></Link>
+                        <Link href="/cookie-policy"><a>Cookie Policy</a></Link>
                 </div>
+                <div className='reg-address con-reg'><p>Oak Tree Mobility Limited. Registered Office: 2nd Floor, St. James Court, 9/12 St James Parade, Bristol, BS1 3LH, United Kingdom. Registered Number: 06829860. Registered in England and Wales.</p></div>
             </div>
         </footer>
     )

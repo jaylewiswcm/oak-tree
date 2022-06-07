@@ -64,68 +64,44 @@ const stagger = {
   return (
     <div className='occupational-therapist-wrapper'>
       {isOpen && <Modal classNames="" setShow={setOpenModal}><VideoCarousel videoId="l9adE0mWzUY" setShow={setOpenModal} show={isOpen}></VideoCarousel></Modal> }
-        <h3>Occupational Therapist Approved</h3>
-        <p className='oc-intro'>All of our products are approved by Samantha Shann, occupational therapist. Samantha fully tests and evaluates everything we offer, ensuring it satisfies the high standards of an independent health professional.</p>
-        {/* <div className='sam-shann-intro con-reg'>
-          <div className='image-wrapper'>
-            <div className='image'>
-              <Image
-                src={desktopImage}
-                alt='Samantha Shann'
-                layout='responsive'
-                width='575.5'
-                height='346.06'
-                quality={100}
-              />
-            </div>
-            <p className='greeting'>Meet Samantha Shann</p>
-            <button onClick={() => setOpenModal(true)}>
-              <div className="icon-wrapper">
-                <Image
-                  src='/buttons/play-btn-fill.svg'
-                  alt='Play button'
-                  width='13'
-                  height='16'
-                />
+        <div className='bg-dark-green-6'>
+          <div className='occ-section-flex con-reg'>
+            <div className='content'>
+            <div className='sam-shann-image'>
+              <div className='image'>
+                    <Image
+                      src={desktopImage}
+                      alt='Samantha Shann'
+                      layout='responsive'
+                      width='900'
+                      height='580'
+                      quality={100}
+                    />
+                    </div>
               </div>
-              <p>Meet Samantha Shann</p>
-            </button>
-          </div>
-          <div className='content'>
-            <p className='content-h'>All of our products are approved by Samantha Shann, occupational therapist.</p>
-            <p className='content-p'>Samantha fully tests and evaluates everything we offer, ensuring it satisfies the high standards of an independent health professional.</p>
+            <h3>Occupational Therapist Approved</h3>
+            <p className='oc-intro'>All of our products are approved by Samantha Shann, occupational therapist. Samantha fully tests and evaluates everything we offer, ensuring it satisfies the high standards of an independent health professional.</p>
             <div className='partner-logo'>
               <p>In Partnership with</p>
               <div className='logo'>
-                <Image
-                  src={logo}
-                  alt='UK Therapy services'
-                  layout='responsive'
-                  width='160.5'
-                  height='25.83'
+                <Image 
+                  src='/occupational-therapist/ukts-logo.png'
+                  alt='UKTS Logo'
+                  width='186'
+                  height='30'
                 />
               </div>
             </div>
           </div>
-        </div> */}
-
-        <div className='advice-quotes'>
-          <div className='sam-shann-image'>
-            <div className='image'>
-                <Image
-                  src={desktopImage}
-                  alt='Samantha Shann'
-                  layout='responsive'
-                  width='900'
-                  height='580'
-                  quality={100}
-                />
-              </div>
+          
+          <div className='advice-quotes'>
+            <h4>Advice From Samantha</h4>
+              <QuoteCarousel />
+              <div className='advice-pagination'></div>
           </div>
-          <h4>Advice From Samantha</h4>
-            <QuoteCarousel />
-            <div className='advice-pagination'></div>
+          </div>
         </div>
+
         <div className='health-benefits con-reg'>
           <h5>Health benefits outlined by our <br/>Occupational Therapist include</h5>
           <div className='benefits-grid'>
@@ -143,19 +119,19 @@ const stagger = {
               <ul>
                 <li>
                   <span className='tick'>
-                    <Image src='/vectors/red-tick.svg' alt='Tick 1' layout='responsive' width='30' height='30'/>
+                    <Image src='/vectors/yellow-tick.svg' alt='Tick 1' layout='responsive' width='30' height='30'/>
                   </span>
                   <p>Chairs</p>
                 </li>
                 <li>
                   <span className='tick'>
-                    <Image src='/vectors/red-tick.svg' alt='Tick 2' layout='responsive' width='30' height='30'/>
+                    <Image src='/vectors/yellow-tick.svg' alt='Tick 2' layout='responsive' width='30' height='30'/>
                   </span>
                   <p>Beds</p>
                 </li>
                 <li>
                   <span className='tick'>
-                    <Image src='/vectors/red-tick.svg' alt='Tick 3' layout='responsive' width='30' height='30'/>
+                    <Image src='/vectors/yellow-tick.svg' alt='Tick 3' layout='responsive' width='30' height='30'/>
                   </span>
                   <p>Bath Lifts</p>
                 </li>
@@ -175,13 +151,13 @@ const stagger = {
               <ul>
                 <li>
                   <span className='tick'>
-                    <Image src='/vectors/red-tick.svg' alt='Tick 1' layout='responsive' width='30' height='30'/>
+                    <Image src='/vectors/yellow-tick.svg' alt='Tick 1' layout='responsive' width='30' height='30'/>
                   </span>
                   <p>Chairs</p>
                 </li>
                 <li>
                   <span className='tick'>
-                    <Image src='/vectors/red-tick.svg' alt='Tick 2' layout='responsive' width='30' height='30'/>
+                    <Image src='/vectors/yellow-tick.svg' alt='Tick 2' layout='responsive' width='30' height='30'/>
                   </span>
                   <p>Beds</p>
                 </li>
@@ -201,19 +177,19 @@ const stagger = {
               <ul>
                 <li>
                   <span className='tick'>
-                    <Image src='/vectors/red-tick.svg' alt='Tick 1' layout='responsive' width='30' height='30'/>
+                    <Image src='/vectors/yellow-tick.svg' alt='Tick 1' layout='responsive' width='30' height='30'/>
                   </span>
                   <p>Chairs</p>
                 </li>
                 <li>
                   <span className='tick'>
-                    <Image src='/vectors/red-tick.svg' alt='Tick 2' layout='responsive' width='30' height='30'/>
+                    <Image src='/vectors/yellow-tick.svg' alt='Tick 2' layout='responsive' width='30' height='30'/>
                   </span>
                   <p>Beds</p>
                 </li>
                 <li>
                   <span className='tick'>
-                    <Image src='/vectors/red-tick.svg' alt='Tick 3' layout='responsive' width='30' height='30'/>
+                    <Image src='/vectors/yellow-tick.svg' alt='Tick 3' layout='responsive' width='30' height='30'/>
                   </span>
                   <p>Bath Lifts</p>
                 </li>
@@ -233,20 +209,20 @@ const stagger = {
               <ul>
                 <li>
                   <span className='tick'>
-                    <Image src='/vectors/red-tick.svg' alt='Tick 1' layout='responsive' width='30' height='30'/>
+                    <Image src='/vectors/yellow-tick.svg' alt='Tick 1' layout='responsive' width='30' height='30'/>
                   </span>
                   <p>Chairs</p>
                 </li>
                 <li>
                   <span className='tick'>
-                    <Image src='/vectors/red-tick.svg' alt='Tick 2' layout='responsive' width='30' height='30'/>
+                    <Image src='/vectors/yellow-tick.svg' alt='Tick 2' layout='responsive' width='30' height='30'/>
                   </span>
                   <p>Beds</p>
                 </li>
               </ul>
             </div>
           </div>
-          <p className='find-more'>Plus many more, find <Link href='/occupational-therapist'><a>all the benefits here</a></Link></p>
+          {/* <p className='find-more'>Plus many more, find <Link href='/occupational-therapist'><a>all the benefits here</a></Link></p> */}
         </div>
         
         {/* <div className='health-benefits con-reg'>
@@ -255,13 +231,13 @@ const stagger = {
           <ul className='benefits-product-list'>
                 <li>
                   <span className='tick'>
-                    <Image src='/vectors/red-tick.svg' alt='Tick 1' layout='responsive' width='30' height='30'/>
+                    <Image src='/vectors/yellow-tick.svg' alt='Tick 1' layout='responsive' width='30' height='30'/>
                   </span>
                   <p>Chairs</p>
                 </li>
                 <li>
                   <span className='tick'>
-                    <Image src='/vectors/red-tick.svg' alt='Tick 2' layout='responsive' width='30' height='30'/>
+                    <Image src='/vectors/yellow-tick.svg' alt='Tick 2' layout='responsive' width='30' height='30'/>
                   </span>
                   <p>Beds</p>
                 </li>

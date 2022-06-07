@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42">
+  <g id="Group_2373" data-name="Group 2373" transform="translate(-543 -4747)">
+    <g id="Group_2369" data-name="Group 2369" transform="translate(84 9)">
+      <g id="Ellipse_645" data-name="Ellipse 645" transform="translate(459 4738)" fill="#4892f5" stroke="#4892f5" stroke-width="1.5">
+        <circle cx="21" cy="21" r="21" stroke="none"/>
+        <circle cx="21" cy="21" r="20.25" fill="none"/>
+      </g>
+      <path id="Path_5554" data-name="Path 5554" d="M477.328,4768.1H482.4l5-11.257-.906-5.047-6.312-.651-5.207.886-3.066,4,.751,8.246Z" transform="translate(-0.015 -1)" fill="#fff" stroke="#fff" stroke-width="1"/>
+      <path id="Icon_awesome-facebook-square" data-name="Icon awesome-facebook-square" d="M17.212,2.25H2.065A2.065,2.065,0,0,0,0,4.315V19.462a2.065,2.065,0,0,0,2.065,2.065H7.971V14.973H5.26V11.889H7.971V9.538c0-2.674,1.592-4.152,4.031-4.152a16.423,16.423,0,0,1,2.389.208V8.219H13.045a1.543,1.543,0,0,0-1.739,1.667v2h2.96l-.473,3.085H11.306v6.554h5.906a2.065,2.065,0,0,0,2.065-2.065V4.315A2.065,2.065,0,0,0,17.212,2.25Z" transform="translate(470 4746.086)" fill="#4892f5"/>
+    </g>
+  </g>
+</svg>

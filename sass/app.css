@@ -1745,6 +1745,10 @@ body {
   background-color: #17494D !important;
 }
 
+.bg-dark-green-6 {
+  background-color: #EDF9FA !important;
+}
+
 .bg-light-green {
   background-color: #D6EFE3 !important;
 }
@@ -2039,7 +2043,7 @@ footer .email-signup-banner {
   padding: 30px 15px;
 }
 
-@media (min-width: 400px) {
+@media (min-width: 401px) {
   footer .email-signup-banner {
     border-radius: 6px;
   }
@@ -2230,17 +2234,119 @@ footer .footer-navigation {
   }
 }
 
-footer .footer-navigation .logo-link {
-  display: block;
-  margin: 0 auto;
+footer .footer-navigation .logo-and-socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   margin-top: 50px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 @media (min-width: 600px) {
-  footer .footer-navigation .logo-link {
-    margin-right: 0;
-    margin-top: 30px;
+  footer .footer-navigation .logo-and-socials {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
+}
+
+footer .footer-navigation .logo-and-socials .socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (min-width: 350px) {
+  footer .footer-navigation .logo-and-socials .socials {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+@media (min-width: 600px) {
+  footer .footer-navigation .logo-and-socials .socials {
+    margin-left: auto;
+  }
+}
+
+@media (min-width: 888px) {
+  footer .footer-navigation .logo-and-socials .socials {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+}
+
+footer .footer-navigation .logo-and-socials .socials .social-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.6rem;
+  margin: 20px 15px;
+}
+
+@media (min-width: 600px) {
+  footer .footer-navigation .logo-and-socials .socials .social-wrapper {
+    margin: 0;
+    margin-right: 20px;
+  }
+}
+
+@media (min-width: 600px) {
+  footer .footer-navigation .logo-and-socials .socials .social-wrapper .icon-wrapper.mobile {
+    display: none;
+  }
+}
+
+footer .footer-navigation .logo-and-socials .socials .social-wrapper .icon-wrapper.desktop {
+  display: none;
+  margin-right: 10px;
+}
+
+@media (min-width: 600px) {
+  footer .footer-navigation .logo-and-socials .socials .social-wrapper .icon-wrapper.desktop {
+    display: block;
+  }
+}
+
+footer .footer-navigation .logo-and-socials .socials .social-wrapper p {
+  display: none;
+}
+
+@media (min-width: 600px) {
+  footer .footer-navigation .logo-and-socials .socials .social-wrapper p {
+    display: block;
+  }
+}
+
+footer .footer-navigation .logo-link {
+  display: block;
+  margin-right: auto;
 }
 
 footer .footer-navigation nav {
@@ -2466,7 +2572,7 @@ footer .footer-footnote {
   padding-bottom: 100px;
 }
 
-footer .footer-footnote .footnote-inner {
+footer .footer-footnote .footnote-inner, footer .footer-footnote .reg-address {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2478,10 +2584,11 @@ footer .footer-footnote .footnote-inner {
       -ms-flex-align: center;
           align-items: center;
   padding: 30px 25px;
+  padding-bottom: 0;
 }
 
 @media (min-width: 888px) {
-  footer .footer-footnote .footnote-inner {
+  footer .footer-footnote .footnote-inner, footer .footer-footnote .reg-address {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -2490,13 +2597,13 @@ footer .footer-footnote .footnote-inner {
 }
 
 @media (min-width: 888px) {
-  footer .footer-footnote .footnote-inner p {
+  footer .footer-footnote .footnote-inner p, footer .footer-footnote .reg-address p {
     border-right: 1px #212923 solid;
     padding-right: 20px;
   }
 }
 
-footer .footer-footnote .footnote-inner p, footer .footer-footnote .footnote-inner a {
+footer .footer-footnote .footnote-inner p, footer .footer-footnote .footnote-inner a, footer .footer-footnote .reg-address p, footer .footer-footnote .reg-address a {
   font-size: 1.6rem;
   font-weight: 300;
   color: #212923;
@@ -2505,61 +2612,33 @@ footer .footer-footnote .footnote-inner p, footer .footer-footnote .footnote-inn
 }
 
 @media (min-width: 888px) {
-  footer .footer-footnote .footnote-inner p, footer .footer-footnote .footnote-inner a {
+  footer .footer-footnote .footnote-inner p, footer .footer-footnote .footnote-inner a, footer .footer-footnote .reg-address p, footer .footer-footnote .reg-address a {
     margin-right: 20px;
     margin-bottom: 0;
     font-size: 1.4rem;
   }
 }
 
-footer .footer-footnote .footnote-inner .socials {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-right: auto;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+footer .footer-footnote .footnote-inner a:hover, footer .footer-footnote .reg-address a:hover {
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
-@media (min-width: 350px) {
-  footer .footer-footnote .footnote-inner .socials {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
+footer .footer-footnote .reg-address {
+  padding-top: 20px;
+}
+
+footer .footer-footnote .reg-address p {
+  text-align: center;
+  border-right: none;
+  line-height: 1.4;
+  max-width: 800px;
 }
 
 @media (min-width: 888px) {
-  footer .footer-footnote .footnote-inner .socials {
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
+  footer .footer-footnote .reg-address p {
+    text-align: left;
   }
-}
-
-footer .footer-footnote .footnote-inner .socials .social-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-size: 1.6rem;
-  margin-right: 20px;
-}
-
-footer .footer-footnote .footnote-inner .socials .social-wrapper .icon-wrapper {
-  margin-right: 10px;
 }
 
 header {
@@ -2571,14 +2650,51 @@ header {
 }
 
 header .top-header {
-  padding: 10px 25px;
+  padding: 10px 0;
+  border-bottom: 1px #E3E3E3 solid;
+}
+
+header .top-header .con-reg {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-bottom: 1px #E3E3E3 solid;
+  max-width: 1500px;
+}
+
+header .top-header .mobile-header-logo {
+  display: block;
+  width: 40%;
+  max-width: 220px;
+  padding: 15px 0;
+}
+
+@media (min-width: 970px) {
+  header .top-header .mobile-header-logo {
+    display: none;
+  }
+}
+
+header .top-header .mobile-phone-number {
+  border-radius: 4px;
+  background-color: #f0f6f7;
+  border: 2px solid #17494D;
+  padding: 10px 25px;
+  margin-left: auto;
+}
+
+@media (min-width: 970px) {
+  header .top-header .mobile-phone-number {
+    display: none;
+  }
+}
+
+header .top-header .mobile-phone-number p {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #17494D;
 }
 
 header .top-header .trustpilot-logo {
@@ -2587,6 +2703,13 @@ header .top-header .trustpilot-logo {
 
 header .top-header .supporting-bhf {
   margin-left: 30px;
+  display: none;
+}
+
+@media (min-width: 970px) {
+  header .top-header .supporting-bhf {
+    display: block;
+  }
 }
 
 header .top-header .supporting-bhf p {
@@ -2602,10 +2725,16 @@ header .top-header .supporting-bhf .bhf-logo {
 
 header .top-header .search-bar {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   margin: 0 auto;
+}
+
+@media (min-width: 970px) {
+  header .top-header .search-bar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 header .top-header .search-bar input[type="text"] {
@@ -2631,7 +2760,7 @@ header .top-header .search-bar input[type="submit"] {
   right: 0;
   color: #fff;
   padding: 0 20px;
-  background-image: url("../public/buttons/icon-search.svg");
+  background-image: url("../public/buttons/icon-search-white.svg");
   background-position: center;
   background-size: 40%;
   background-repeat: no-repeat;
@@ -2642,14 +2771,21 @@ header .top-header .search-bar label {
 }
 
 header .top-header .header-phone-number {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: right;
+  margin-left: auto;
+}
+
+@media (min-width: 970px) {
+  header .top-header .header-phone-number {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 header .top-header .header-phone-number .number-support {
@@ -2686,14 +2822,20 @@ header .header-inner .mobile-menu-btn {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-left: auto;
   cursor: pointer;
+  margin-left: auto;
 }
 
 @media (min-width: 1080px) {
   header .header-inner .mobile-menu-btn {
     display: none;
   }
+}
+
+header .header-inner .mobile-menu-btn p {
+  font-size: 1.6rem;
+  margin-top: 5px;
+  text-align: center;
 }
 
 header .header-inner .header-logo, header .header-inner .header-cta {
@@ -2759,6 +2901,7 @@ header .header-inner .main-nav .main-ul {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: relative;
 }
 
 header .header-inner .main-nav .main-ul li {
@@ -2778,7 +2921,6 @@ header .header-inner .main-nav .main-ul li a {
   font-weight: 500;
   letter-spacing: 0px;
   color: #212923;
-  color: #09595E;
   opacity: 0.8;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3075,14 +3217,14 @@ body.mobile-navbar .mobile-navigation {
   border-radius: 3px 0 0 0;
   background-color: #fff;
   z-index: 2;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .dd-menu-wrapper {
   position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  top: 51px;
+  top: 17px;
+  left: 0;
   z-index: 1000;
   max-width: 1250px;
   width: 100%;
@@ -3114,7 +3256,6 @@ body.mobile-navbar .mobile-navigation {
   width: fit-content;
   position: absolute;
   top: 0px;
-  margin-left: 190px;
   padding-top: 30px;
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
@@ -3159,7 +3300,7 @@ body.mobile-navbar .mobile-navigation {
 }
 
 .dd-menu .menu-inner .menus ul li {
-  padding: 8px 15px;
+  padding: 16px 15px;
   border-radius: 4px;
   -webkit-transition: 0.1s;
   transition: 0.1s;
@@ -3184,6 +3325,15 @@ body.mobile-navbar .mobile-navigation {
 
 .dd-menu .menu-inner .menus ul li a .icon span {
   width: 90% !important;
+}
+
+.dd-menu .menu-inner .menus ul li a .product-image {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  border-radius: 50%;
+  margin-right: 15px;
+  padding: 15px;
 }
 
 .dd-menu .menu-inner .menus ul li a .link-content .link-title {
@@ -3290,22 +3440,38 @@ body.mobile-navbar .mobile-navigation {
 
 .dd-menu.about-dd {
   opacity: 1;
-  left: -50px;
+  right: 0px;
+}
+
+.dd-menu.about-dd .header-arrow {
+  left: 26%;
 }
 
 .dd-menu.chairs-dd {
-  left: 26px;
   opacity: 1;
+  right: 0px;
+}
+
+.dd-menu.chairs-dd .header-arrow {
+  left: 43%;
 }
 
 .dd-menu.beds-dd {
   opacity: 1;
-  left: 95px;
+  right: 0px;
+}
+
+.dd-menu.beds-dd .header-arrow {
+  left: 59%;
 }
 
 .dd-menu.bath-lifts-dd {
   opacity: 1;
-  left: 190px;
+  right: 0px;
+}
+
+.dd-menu.bath-lifts-dd .header-arrow {
+  left: 69%;
 }
 
 .breadcrumb-navigation {
@@ -3446,6 +3612,8 @@ body.mobile-navbar .mobile-navigation {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 }
 
@@ -3459,24 +3627,28 @@ body.mobile-navbar .mobile-navigation {
   padding: 15px;
 }
 
+.bottom-bar .inner-wrapper .phone-wrapper .icon-wrapper {
+  width: 30px;
+  margin-right: 5px;
+}
+
 .bottom-bar .inner-wrapper .phone-wrapper p {
   font-size: 1.8rem;
-  font-weight: 400;
+  font-weight: 300;
   color: #fff;
-  margin-right: 15px;
+  margin-right: 10px;
 }
 
 .bottom-bar .inner-wrapper .phone-wrapper .number {
-  font-size: 3rem;
-  font-weight: 500;
+  font-size: 2.8rem;
+  font-weight: 400;
   color: #fff;
 }
 
 .bottom-bar .inner-wrapper .brochure-cta {
+  margin: auto 0;
   margin-left: auto;
-  position: absolute;
-  right: 15px;
-  bottom: 0;
+  position: relative;
 }
 
 .bottom-bar .inner-wrapper .brochure-cta .bottom-cta {
@@ -3490,19 +3662,24 @@ body.mobile-navbar .mobile-navigation {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border-radius: 8px 8px 0px 0px;
-  -webkit-box-shadow: 0 0 21px rgba(0, 0, 0, 0.4);
-          box-shadow: 0 0 21px rgba(0, 0, 0, 0.4);
-  padding: 15px 30px;
+  margin: auto 0;
+  border-radius: 4px;
+  padding-right: 100px;
+  position: relative;
 }
 
-.bottom-bar .inner-wrapper .brochure-cta .bottom-cta .icon-wrapper {
+.bottom-bar .inner-wrapper .brochure-cta .bottom-cta .brochure {
   width: 80px;
   margin-right: 15px;
+  position: absolute;
+  right: -15px;
+  bottom: -18px;
+  -webkit-box-shadow: 0 0 21px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0 21px rgba(0, 0, 0, 0.4);
 }
 
 .bottom-bar .inner-wrapper .brochure-cta .bottom-cta p {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 500;
   color: #fff;
   text-align: left;
@@ -3716,9 +3893,80 @@ body.mobile-navbar .mobile-navigation {
   font-weight: 500;
 }
 
-.home-hero {
+.home-intro {
+  position: relative;
+  height: 400px;
+  background-image: url(../public/images/heros/home-hero.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+@media (min-width: 800px) {
+  .home-intro {
+    height: unset;
+    background-image: none;
+  }
+}
+
+.home-intro .hero-image {
+  display: none;
+}
+
+@media (min-width: 800px) {
+  .home-intro .hero-image {
+    display: initial;
+  }
+}
+
+.home-intro .as-seen-on-tv {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 150px;
+  display: none;
+}
+
+@media (min-width: 800px) {
+  .home-intro .as-seen-on-tv {
+    display: initial;
+  }
+}
+
+.home-intro .hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 100%;
-  height: 500px;
+}
+
+.home-intro .hero-content h1 {
+  font-size: 4rem;
+  color: #fff;
+  text-align: center;
+}
+
+@media (min-width: 1050px) {
+  .home-intro .hero-content h1 {
+    font-size: 4.8rem;
+  }
+}
+
+.home-intro .hero-content .main-cta {
+  border-radius: 3px;
+  font-size: 1.8rem;
+  margin: 0 auto;
+  margin-top: 10px;
 }
 
 .green-strip {
@@ -3821,7 +4069,7 @@ body.mobile-navbar .mobile-navigation {
 
 @media (min-width: 899px) {
   .home-collections {
-    margin-top: 50px;
+    margin-top: 30px;
   }
 }
 
@@ -3991,44 +4239,38 @@ body.mobile-navbar .mobile-navigation {
 }
 
 .banners .plus {
-  width: 40px;
-  height: 40px;
-  margin: 15px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 25px 0;
 }
 
 @media (min-width: 700px) {
   .banners .plus {
-    margin: auto 15px;
+    padding: 0 25px;
+  }
+}
+
+.banners .plus p {
+  font-size: 2.4rem;
+  font-weight: 600;
+  color: #17494D;
+}
+
+@media (min-width: 700px) {
+  .banners .plus p {
+    font-size: 2.8rem;
   }
 }
 
 .occupational-therapist-wrapper {
   margin: 60px auto;
-}
-
-.occupational-therapist-wrapper h3 {
-  font-family: "Euclid Circular A", "Helvetica", sans-serif;
-  font-size: 3.2rem;
-  font-weight: 600;
-  color: #17494D;
-  text-align: center;
-  padding: 0 15px;
-}
-
-.occupational-therapist-wrapper .oc-intro {
-  font-size: 2rem;
-  font-weight: 400;
-  line-height: 1.6;
-  text-align: center;
-  max-width: 800px;
-  width: 100%;
-  margin: 0 auto;
-  margin-top: 10px;
-  padding: 0 15px;
-}
-
-.occupational-therapist-wrapper .sam-shann-intro {
-  margin-top: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4036,13 +4278,20 @@ body.mobile-navbar .mobile-navigation {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
-@media (min-width: 1000px) {
-  .occupational-therapist-wrapper .sam-shann-intro {
+.occupational-therapist-wrapper .occ-section-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 1050px) {
+  .occupational-therapist-wrapper .occ-section-flex {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -4050,169 +4299,76 @@ body.mobile-navbar .mobile-navigation {
   }
 }
 
-.occupational-therapist-wrapper .sam-shann-intro .image-wrapper {
-  position: relative;
-}
-
-.occupational-therapist-wrapper .sam-shann-intro .image-wrapper .image {
-  border-radius: 3px;
-  overflow: hidden;
-}
-
-.occupational-therapist-wrapper .sam-shann-intro .image-wrapper .greeting {
-  position: absolute;
-  top: 38%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  font-size: 3.8rem;
-  font-weight: 600;
+.occupational-therapist-wrapper .occ-section-flex .content {
   width: 100%;
-  text-align: center;
-  display: none;
+  padding: 50px 0;
+  padding-right: 15px;
 }
 
-@media (min-width: 1000px) {
-  .occupational-therapist-wrapper .sam-shann-intro .image-wrapper .greeting {
-    display: none;
+@media (min-width: 1050px) {
+  .occupational-therapist-wrapper .occ-section-flex .content {
+    width: 30%;
   }
 }
 
-.occupational-therapist-wrapper .sam-shann-intro .image-wrapper button {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background-color: rgba(255, 255, 255, 0.7);
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  padding: 0;
-}
-
-@media (min-width: 600px) {
-  .occupational-therapist-wrapper .sam-shann-intro .image-wrapper button {
-    border-radius: 3px;
-    padding: 15px 25px;
-    width: unset;
-    height: unset;
-  }
-}
-
-@media (min-width: 1000px) {
-  .occupational-therapist-wrapper .sam-shann-intro .image-wrapper button {
-    top: unset;
-    left: unset;
-    bottom: 15px;
-    right: 15px;
-    -webkit-transform: unset;
-            transform: unset;
-  }
-}
-
-.occupational-therapist-wrapper .sam-shann-intro .image-wrapper button .icon-wrapper {
-  width: 105px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-@media (min-width: 600px) and (max-width: 999px) {
-  .occupational-therapist-wrapper .sam-shann-intro .image-wrapper button .icon-wrapper {
-    margin-right: 10px;
-    width: 35px;
-  }
-}
-
-@media (min-width: 1000px) {
-  .occupational-therapist-wrapper .sam-shann-intro .image-wrapper button .icon-wrapper {
-    width: 25px;
-    margin-right: 10px;
-  }
-}
-
-.occupational-therapist-wrapper .sam-shann-intro .image-wrapper button p {
-  font-size: 2rem;
-  font-weight: 500;
-  display: none;
-}
-
-@media (min-width: 600px) {
-  .occupational-therapist-wrapper .sam-shann-intro .image-wrapper button p {
-    display: initial;
-  }
-}
-
-@media (min-width: 1000px) {
-  .occupational-therapist-wrapper .sam-shann-intro .image-wrapper button p {
-    font-size: 1.7rem;
-  }
-}
-
-.occupational-therapist-wrapper .sam-shann-intro .content {
-  background-color: #F6F8FF;
-  margin: 25px 0;
-  padding: 20px;
-  border-radius: 3px;
-}
-
-@media (min-width: 400px) {
-  .occupational-therapist-wrapper .sam-shann-intro .content {
-    padding: 30px;
-  }
-}
-
-@media (min-width: 1000px) {
-  .occupational-therapist-wrapper .sam-shann-intro .content {
-    margin: 25px;
-  }
-}
-
-.occupational-therapist-wrapper .sam-shann-intro .content .content-h {
-  font-size: 2.2rem;
-  font-weight: 500;
+.occupational-therapist-wrapper .occ-section-flex h3 {
+  font-family: "Euclid Circular A", "Helvetica", sans-serif;
+  font-size: 3.2rem;
+  font-weight: 600;
   color: #17494D;
-  line-height: 1.3;
-  margin-bottom: 15px;
+  text-align: center;
 }
 
-@media (min-width: 400px) {
-  .occupational-therapist-wrapper .sam-shann-intro .content .content-h {
-    font-size: 2.5rem;
-    line-height: 1.4;
+@media (min-width: 1050px) {
+  .occupational-therapist-wrapper .occ-section-flex h3 {
+    text-align: left;
   }
 }
 
-.occupational-therapist-wrapper .sam-shann-intro .content .content-p {
-  font-size: 1.6rem;
-  font-weight: 300;
-  line-height: 1.5;
+.occupational-therapist-wrapper .occ-section-flex .oc-intro {
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.6;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 10px;
+  text-align: center;
 }
 
-@media (min-width: 400px) {
-  .occupational-therapist-wrapper .sam-shann-intro .content .content-p {
-    font-size: 1.8rem;
-    line-height: 1.7;
+@media (min-width: 1050px) {
+  .occupational-therapist-wrapper .occ-section-flex .oc-intro {
+    text-align: left;
   }
 }
 
-.occupational-therapist-wrapper .sam-shann-intro .content .partner-logo {
+.occupational-therapist-wrapper .occ-section-flex .sam-shann-image {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 5px #17494D solid;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-bottom: 25px;
+}
+
+@media (min-width: 1050px) {
+  .occupational-therapist-wrapper .occ-section-flex .sam-shann-image {
+    margin: 0;
+    margin-bottom: 25px;
+  }
+}
+
+.occupational-therapist-wrapper .occ-section-flex .sam-shann-image .image {
+  width: 200%;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.occupational-therapist-wrapper .occ-section-flex .partner-logo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4224,65 +4380,38 @@ body.mobile-navbar .mobile-navigation {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 25px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-@media (min-width: 530px) {
-  .occupational-therapist-wrapper .sam-shann-intro .content .partner-logo {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+@media (min-width: 1050px) {
+  .occupational-therapist-wrapper .occ-section-flex .partner-logo {
+    display: block;
   }
 }
 
-.occupational-therapist-wrapper .sam-shann-intro .content .partner-logo p {
-  font-size: 1.7rem;
-  font-weight: 400;
-  margin-bottom: 5px;
+.occupational-therapist-wrapper .occ-section-flex .partner-logo p {
+  margin-bottom: 10px;
 }
 
-@media (min-width: 530px) {
-  .occupational-therapist-wrapper .sam-shann-intro .content .partner-logo p {
-    margin-right: 15px;
-    margin-bottom: 0px;
-  }
-}
-
-.occupational-therapist-wrapper .sam-shann-intro .content .partner-logo .logo {
-  width: 200px;
-}
-
-.occupational-therapist-wrapper .advice-quotes {
-  background-color: #E5FCFF;
-  padding: 50px 0;
-  margin: 50px auto;
+.occupational-therapist-wrapper .occ-section-flex .advice-quotes {
+  padding: 0 0;
+  margin: 50px 0;
+  margin-top: 5px;
+  margin-left: auto;
   position: relative;
-  margin-top: 150px;
-  padding-top: 130px;
+  width: 100%;
 }
 
-.occupational-therapist-wrapper .advice-quotes .sam-shann-image {
-  position: absolute;
-  top: -110px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  width: 220px;
-  height: 220px;
-  border-radius: 50%;
-  border: 10px #E5FCFF solid;
-  overflow: hidden;
+@media (min-width: 1050px) {
+  .occupational-therapist-wrapper .occ-section-flex .advice-quotes {
+    width: 65%;
+    margin: 50px 0;
+  }
 }
 
-.occupational-therapist-wrapper .advice-quotes .sam-shann-image .image {
-  width: 200%;
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-}
-
-.occupational-therapist-wrapper .advice-quotes h4 {
+.occupational-therapist-wrapper .occ-section-flex .advice-quotes h4 {
   font-size: 2.8rem;
   font-weight: 500;
   font-family: "Euclid Circular A", "Helvetica", sans-serif;
@@ -4291,29 +4420,29 @@ body.mobile-navbar .mobile-navigation {
   padding: 0 15px;
 }
 
-.occupational-therapist-wrapper .advice-quotes .advice-pagination {
+.occupational-therapist-wrapper .occ-section-flex .advice-quotes .advice-pagination {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   margin: 0 auto;
 }
 
-.occupational-therapist-wrapper .advice-quotes .advice-pagination .swiper-pagination-bullet {
+.occupational-therapist-wrapper .occ-section-flex .advice-quotes .advice-pagination .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
   margin: 0 8px;
   color: #F8F8F8;
 }
 
-.occupational-therapist-wrapper .advice-quotes .advice-pagination .swiper-pagination-bullet-active {
+.occupational-therapist-wrapper .occ-section-flex .advice-quotes .advice-pagination .swiper-pagination-bullet-active {
   background-color: #17494D;
 }
 
-.occupational-therapist-wrapper .advice-quotes .swiper-slide-next, .occupational-therapist-wrapper .advice-quotes .swiper-slide-prev {
-  opacity: 0.4;
+.occupational-therapist-wrapper .occ-section-flex .advice-quotes .swiper-slide-next, .occupational-therapist-wrapper .occ-section-flex .advice-quotes .swiper-slide-prev {
+  opacity: 0;
 }
 
-.occupational-therapist-wrapper .advice-quotes .nav-button {
+.occupational-therapist-wrapper .occ-section-flex .advice-quotes .nav-button {
   width: 60px;
   height: 60px;
   background-color: #17494D;
@@ -4335,49 +4464,41 @@ body.mobile-navbar .mobile-navigation {
   opacity: 1;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  bottom: 0;
 }
 
-@media (min-width: 650px) {
-  .occupational-therapist-wrapper .advice-quotes .nav-button {
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
-    bottom: unset;
-  }
-}
-
-.occupational-therapist-wrapper .advice-quotes .nav-button .arrow-wrapper {
+.occupational-therapist-wrapper .occ-section-flex .advice-quotes .nav-button .arrow-wrapper {
   width: 30px;
   height: 100%;
 }
 
-.occupational-therapist-wrapper .advice-quotes .prev-btn {
+.occupational-therapist-wrapper .occ-section-flex .advice-quotes .prev-btn {
   left: 15px;
 }
 
-.occupational-therapist-wrapper .advice-quotes .prev-btn .arrow-wrapper {
+.occupational-therapist-wrapper .occ-section-flex .advice-quotes .prev-btn .arrow-wrapper {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
   padding-right: 2px;
 }
 
-.occupational-therapist-wrapper .advice-quotes .next-btn {
+.occupational-therapist-wrapper .occ-section-flex .advice-quotes .next-btn {
   right: 15px;
 }
 
-.occupational-therapist-wrapper .advice-quotes .next-btn .arrow-wrapper {
+.occupational-therapist-wrapper .occ-section-flex .advice-quotes .next-btn .arrow-wrapper {
   padding-left: 2px;
 }
 
-.occupational-therapist-wrapper .advice-quotes .quotes-carousel {
+.occupational-therapist-wrapper .occ-section-flex .advice-quotes .quotes-carousel {
   width: 100%;
   padding-top: 50px;
   padding: 50px 0;
+  padding-bottom: 80px;
 }
 
-.occupational-therapist-wrapper .advice-quotes .quotes-carousel .quote {
-  max-width: 700px;
-  width: 90%;
+.occupational-therapist-wrapper .occ-section-flex .advice-quotes .quotes-carousel .quote {
+  width: calc(100% - 30px);
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -4398,20 +4519,8 @@ body.mobile-navbar .mobile-navigation {
   transition: 0.8s;
 }
 
-@media (min-width: 400px) and (max-width: 599px) {
-  .occupational-therapist-wrapper .advice-quotes .quotes-carousel .quote {
-    width: 80%;
-  }
-}
-
-@media (min-width: 600px) {
-  .occupational-therapist-wrapper .advice-quotes .quotes-carousel .quote {
-    width: 70%;
-  }
-}
-
 @media (min-width: 900px) {
-  .occupational-therapist-wrapper .advice-quotes .quotes-carousel .quote {
+  .occupational-therapist-wrapper .occ-section-flex .advice-quotes .quotes-carousel .quote {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -4420,7 +4529,7 @@ body.mobile-navbar .mobile-navigation {
   }
 }
 
-.occupational-therapist-wrapper .advice-quotes .quotes-carousel .quote .product-image {
+.occupational-therapist-wrapper .occ-section-flex .advice-quotes .quotes-carousel .quote .product-image {
   width: 100%;
   height: 200px;
   position: relative;
@@ -4430,26 +4539,26 @@ body.mobile-navbar .mobile-navigation {
 }
 
 @media (min-width: 900px) {
-  .occupational-therapist-wrapper .advice-quotes .quotes-carousel .quote .product-image {
+  .occupational-therapist-wrapper .occ-section-flex .advice-quotes .quotes-carousel .quote .product-image {
     width: 35%;
     min-height: 100%;
   }
 }
 
-.occupational-therapist-wrapper .advice-quotes .quotes-carousel .quote .product-image .image {
+.occupational-therapist-wrapper .occ-section-flex .advice-quotes .quotes-carousel .quote .product-image .image {
   position: relative;
   min-height: 100%;
   width: 100%;
 }
 
 @media (min-width: 900px) {
-  .occupational-therapist-wrapper .advice-quotes .quotes-carousel .quote .product-image .image {
+  .occupational-therapist-wrapper .occ-section-flex .advice-quotes .quotes-carousel .quote .product-image .image {
     -webkit-clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
             clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
   }
 }
 
-.occupational-therapist-wrapper .advice-quotes .quotes-carousel .quote .product-image .quote-mark {
+.occupational-therapist-wrapper .occ-section-flex .advice-quotes .quotes-carousel .quote .product-image .quote-mark {
   width: 50px;
   height: 50px;
   margin-bottom: 25px;
@@ -4472,7 +4581,7 @@ body.mobile-navbar .mobile-navigation {
 }
 
 @media (min-width: 900px) {
-  .occupational-therapist-wrapper .advice-quotes .quotes-carousel .quote .product-image .quote-mark {
+  .occupational-therapist-wrapper .occ-section-flex .advice-quotes .quotes-carousel .quote .product-image .quote-mark {
     top: 50%;
     right: -5px;
     -webkit-transform: translateY(-50%);
@@ -4482,25 +4591,25 @@ body.mobile-navbar .mobile-navigation {
   }
 }
 
-.occupational-therapist-wrapper .advice-quotes .quotes-carousel .quote .product-image .quote-mark .mark {
+.occupational-therapist-wrapper .occ-section-flex .advice-quotes .quotes-carousel .quote .product-image .quote-mark .mark {
   width: 50%;
   opacity: 0.4;
 }
 
-.occupational-therapist-wrapper .advice-quotes .quotes-carousel .quote .quote-text {
+.occupational-therapist-wrapper .occ-section-flex .advice-quotes .quotes-carousel .quote .quote-text {
   width: 100%;
   padding: 25px;
   padding-top: 35px;
 }
 
 @media (min-width: 900px) {
-  .occupational-therapist-wrapper .advice-quotes .quotes-carousel .quote .quote-text {
+  .occupational-therapist-wrapper .occ-section-flex .advice-quotes .quotes-carousel .quote .quote-text {
     width: 70%;
     padding-left: 35px;
   }
 }
 
-.occupational-therapist-wrapper .advice-quotes .quotes-carousel .quote .quote-text .quote-p {
+.occupational-therapist-wrapper .occ-section-flex .advice-quotes .quotes-carousel .quote .quote-text .quote-p {
   font-size: 1.8rem;
   font-weight: 300;
   color: #17494D;
@@ -4510,12 +4619,12 @@ body.mobile-navbar .mobile-navigation {
 }
 
 @media (min-width: 550px) {
-  .occupational-therapist-wrapper .advice-quotes .quotes-carousel .quote .quote-text .quote-p {
+  .occupational-therapist-wrapper .occ-section-flex .advice-quotes .quotes-carousel .quote .quote-text .quote-p {
     font-size: 2rem;
   }
 }
 
-.occupational-therapist-wrapper .advice-quotes .quotes-carousel .quote .quote-text a {
+.occupational-therapist-wrapper .occ-section-flex .advice-quotes .quotes-carousel .quote .quote-text a {
   text-decoration: underline;
   text-underline-offset: 3px;
   text-decoration-thickness: 2px;
@@ -4524,17 +4633,17 @@ body.mobile-navbar .mobile-navigation {
   transition: 0.1s;
 }
 
-.occupational-therapist-wrapper .advice-quotes .quotes-carousel .quote .quote-text a:hover {
+.occupational-therapist-wrapper .occ-section-flex .advice-quotes .quotes-carousel .quote .quote-text a:hover {
   color: #fff;
 }
 
-.occupational-therapist-wrapper .advice-quotes .quotes-carousel .quote .quote-text .quote-author {
+.occupational-therapist-wrapper .occ-section-flex .advice-quotes .quotes-carousel .quote .quote-text .quote-author {
   color: #32C4A2;
   font-size: 1.8rem;
   margin-top: 10px;
 }
 
-.occupational-therapist-wrapper .advice-quotes .quotes-carousel .quote .quote-text .quote-author .line {
+.occupational-therapist-wrapper .occ-section-flex .advice-quotes .quotes-carousel .quote .quote-text .quote-author .line {
   width: 18px;
   height: 2px;
   background-color: #32C4A2;
@@ -4543,7 +4652,7 @@ body.mobile-navbar .mobile-navigation {
   margin-right: 15px;
 }
 
-.occupational-therapist-wrapper .advice-quotes .quotes-carousel .quote .selected-product {
+.occupational-therapist-wrapper .occ-section-flex .advice-quotes .quotes-carousel .quote .selected-product {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4562,7 +4671,7 @@ body.mobile-navbar .mobile-navigation {
 }
 
 @media (min-width: 600px) {
-  .occupational-therapist-wrapper .advice-quotes .quotes-carousel .quote .selected-product {
+  .occupational-therapist-wrapper .occ-section-flex .advice-quotes .quotes-carousel .quote .selected-product {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -4570,7 +4679,7 @@ body.mobile-navbar .mobile-navigation {
   }
 }
 
-.occupational-therapist-wrapper .advice-quotes .quotes-carousel .quote .selected-product .product-image {
+.occupational-therapist-wrapper .occ-section-flex .advice-quotes .quotes-carousel .quote .selected-product .product-image {
   width: 65px;
   height: 65px;
   border-radius: 50%;
@@ -4578,25 +4687,25 @@ body.mobile-navbar .mobile-navigation {
   position: relative;
 }
 
-.occupational-therapist-wrapper .advice-quotes .quotes-carousel .quote .selected-product div {
+.occupational-therapist-wrapper .occ-section-flex .advice-quotes .quotes-carousel .quote .selected-product div {
   margin-top: 15px;
   text-align: center;
 }
 
 @media (min-width: 600px) {
-  .occupational-therapist-wrapper .advice-quotes .quotes-carousel .quote .selected-product div {
+  .occupational-therapist-wrapper .occ-section-flex .advice-quotes .quotes-carousel .quote .selected-product div {
     text-align: left;
     margin-top: 25px;
     margin-right: 15px;
   }
 }
 
-.occupational-therapist-wrapper .advice-quotes .quotes-carousel .quote .selected-product div .product-name {
+.occupational-therapist-wrapper .occ-section-flex .advice-quotes .quotes-carousel .quote .selected-product div .product-name {
   font-size: 1.9rem;
   font-weight: 500;
 }
 
-.occupational-therapist-wrapper .advice-quotes .quotes-carousel .quote .selected-product div .acting-link {
+.occupational-therapist-wrapper .occ-section-flex .advice-quotes .quotes-carousel .quote .selected-product div .acting-link {
   color: #212923;
   font-size: 1.8rem;
   font-weight: 300;
@@ -4606,14 +4715,14 @@ body.mobile-navbar .mobile-navigation {
   transition: 0.2s;
 }
 
-.occupational-therapist-wrapper .advice-quotes .quotes-carousel .swiper-slide-active {
+.occupational-therapist-wrapper .occ-section-flex .advice-quotes .quotes-carousel .swiper-slide-active {
   -webkit-box-shadow: 0 6px 21px rgba(26, 89, 93, 0.2);
           box-shadow: 0 6px 21px rgba(26, 89, 93, 0.2);
 }
 
 .occupational-therapist-wrapper .health-benefits {
   margin: 70px auto;
-  margin-bottom: 100px;
+  margin-bottom: 0px;
 }
 
 .occupational-therapist-wrapper .health-benefits h5 {
@@ -4781,6 +4890,49 @@ body.mobile-navbar .mobile-navigation {
   color: #009B72;
   text-decoration: underline;
   text-underline-offset: 2px;
+}
+
+.our-partners {
+  border-top: 1px #E3E3E3 solid;
+  border-bottom: 1px #E3E3E3 solid;
+  padding: 25px 0;
+  margin-bottom: 15px;
+}
+
+@media (min-width: 800px) {
+  .our-partners {
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .our-partners {
+    padding: 25px 0;
+  }
+}
+
+.our-partners p {
+  font-size: 2.2rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.our-partners .logo-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 5px;
+  padding-right: 15px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.our-partners .logo-grid .partner-logo {
+  margin-bottom: 15px;
+  min-width: 150px;
 }
 
 @media (max-width: 400px) {
@@ -13627,10 +13779,17 @@ body.mobile-navbar .mobile-navigation {
 .testimonials {
   padding-bottom: 50px;
   margin-top: -50px;
+  padding-top: 40px;
+}
+
+.testimonials .heading {
+  text-align: center;
+  font-size: 3.2rem;
+  color: #17494D;
 }
 
 .testimonials .swiper {
-  padding-top: 50px;
+  padding-top: 35px;
 }
 
 .testimonials .testimonial-tile {

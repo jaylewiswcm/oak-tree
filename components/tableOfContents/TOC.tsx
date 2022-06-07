@@ -17,25 +17,26 @@ const [hideClass, setHideClass] = useState('hide-toc')
 const [active, setActive] = useState(99);
 
     useEffect(() => {
+        const handleScroll = () => {
+            if(reference.current) {
+              const ref = reference.current!.getBoundingClientRect().top;
+              if(ref > 150) {
+                  setHideClass('hide-toc');
+              } else {
+                  setHideClass('')
+              }
+            }
+         
+            checkIfSectionIsInViewAndAssignActive()
+        };
+
         window.addEventListener("scroll", handleScroll);
         return () => {
           window.removeEventListener("scroll", handleScroll);
         };
-      }, []);
+      }, [reference, setHideClass]);
       
-      const handleScroll = () => {
-          if(reference.current) {
-            const ref = reference.current!.getBoundingClientRect().top;
-            if(ref > 150) {
-                setHideClass('hide-toc');
-            } else {
-                setHideClass('')
-            }
-          }
-       
-          checkIfSectionIsInViewAndAssignActive()
-      };
-
+  
       const checkIfSectionIsInViewAndAssignActive = () => {
         if(sectionOneRef.current) {
             const sectionOnePos = sectionOneRef!.current!.getBoundingClientRect()

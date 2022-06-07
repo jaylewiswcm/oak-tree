@@ -20,6 +20,20 @@ const Header = () => {
     return (  
         <header>
             <div className='top-header'>
+              <div className='con-reg'>
+              {/* <div className='mobile-header-logo'>
+                    <Link href="/">
+                        <a className="logo">
+                        <Image 
+                            src='/logo/logo.svg'
+                            alt='Oak Tree Mobility'
+                            layout='responsive'
+                            width={215.42}
+                            height={44.89}
+                        />
+                         </a>
+                    </Link>
+               </div> */}
                 <div className='trustpilot-logo'>
                     <Image
                       src='/trustpilot/trustpilot-header-logo.svg'
@@ -41,19 +55,14 @@ const Header = () => {
                         />
                     </div>
                 </div>
-                <div className='search-bar'>
-                    <form action="">
-                        <div className='input-wrapper'>
-                        <input type="text" id='search-bar' placeholder='Search Products, Posts and Pages...'/>
-                        <label htmlFor='search-bar'>Search</label>
-                        <input type="submit" value=''/>
-                        </div>
-                    </form>
-                </div>
+                <div className='mobile-phone-number'>
+                 <p>Call Us</p>
+               </div>
                 <div className='header-phone-number'>
                    <p className='number-support'>Questions? Call us <b>free</b> today:</p>
                    <p className='number'>0800 094 999</p>
                 </div> 
+                </div>
             </div>
             <div className='header-inner con-reg'>
                 <div className="header-logo">
@@ -69,22 +78,7 @@ const Header = () => {
                          </a>
                     </Link>
                 </div>
-                {/* <div className='header-bhf'>
-                    <Image 
-                          src='/bhf/supporting-bhf.svg'
-                          alt='Oak Tree Mobility'
-                          width='117.07'
-                          height='49.84'
-                    /> 
-                </div> */}
                 <Menu />
-                {/* <div className='contact-us'>
-                    <button className='main-cta'><p>Contact us</p></button>
-                </div> */}
-                {/* <div className='header-phone-number'>
-                   <p className='number-support'>Call us <b>free</b> on:</p>
-                   <p className='number'>0800 094 999</p>
-                </div>  */}
                 <div className='mobile-menu-btn'>
                     <button className='icon-btn' onClick={() => toggleMobileMenu()}>
                         <Image
@@ -93,6 +87,7 @@ const Header = () => {
                             width='40'
                             height='30'
                         />
+                        <p>Menu</p>
                     </button>
                 </div> 
             </div>

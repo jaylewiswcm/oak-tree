@@ -13,7 +13,7 @@ footer {
         background-color: $dark-green-1;
         padding:30px 15px;
         
-        @media(min-width: 400px) {
+        @media(min-width: 401px) {
             border-radius: 6px;
         }        
         @media(min-width: 910px){ 
@@ -132,14 +132,70 @@ footer {
             flex-direction: column;
             align-items: unset;
         }
+        .logo-and-socials {
+            display: flex;
+            margin-top: 50px;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            @media(min-width: 600px) {
+                flex-direction: row;
+            }
+            .socials {
+                display: flex;
+                
+                flex-direction: column;
+                // width: 100%;
+                justify-content: center;
+                align-items: center;
+                @media(min-width: 350px)  {
+                    flex-direction: row;
+                }
+                @media(min-width: 600px) {
+                    margin-left: auto;
+                }
+                @media(min-width: 888px)  {
+                    width: fit-content;
+                }
+                .social-wrapper {
+                    display: flex;   
+                    align-items: center;
+                    font-size: 1.6rem;
+                    margin:20px 15px;
+                    @media(min-width: 600px) {
+                        margin: 0;
+                        margin-right: 20px;
+                    }
+                    .icon-wrapper.mobile {
+                        @media(min-width: 600px) {
+                            display: none;
+                        }
+                    }
+                    .icon-wrapper.desktop {
+                        display: none;
+                        margin-right: 10px;
+                        @media(min-width: 600px) {
+                            display: block;
+                        }
+                    }
+                    p {
+                        display: none;
+                        @media(min-width: 600px) {
+                            display: block;
+                        }
+                    }
+                }
+            }
+        }
         .logo-link {
             display: block;
-            margin: 0 auto;
-            margin-top: 50px;
-            @media(min-width: 600px) {
-                margin-right: 0;
-                margin-top: 30px;
-            }
+            // margin: 0 auto;
+            margin-right: auto;
+            // margin-top: 50px;
+            // @media(min-width: 600px) {
+            //     margin-right: 0;
+            //     margin-top: 30px;
+            // }
         }
         nav {
             width: 100%;
@@ -286,14 +342,16 @@ footer {
         border-top: $lighter-grey 1px solid;
         background-color: $lightest-grey;
         padding-bottom:  100px;
-        .footnote-inner {
+        .footnote-inner, .reg-address {
             display: flex;
             flex-direction: column;
             align-items: center;
             padding: 30px 25px;
+            padding-bottom: 0;
             @media(min-width: 888px)  {
                 flex-direction: row;
             }
+
             p {
                 @media(min-width: 888px)  {
                 border-right: 1px $black solid;
@@ -312,32 +370,28 @@ footer {
                     font-size: 1.4rem;
                 }
             }
-            .socials {
-                display: flex;
-                margin-right: auto;
-                flex-direction: column;
-                width: 100%;
-                justify-content: center;
-                align-items: center;
-                @media(min-width: 350px)  {
-                    flex-direction: row;
-                 
-                }
+            a:hover {
+                text-decoration: underline;
+                text-underline-offset: 2px;
+            }
+   
+        }
+    
+        .reg-address {
+            padding-top: 20px;     
+
+            p {
+                text-align:center;
+                border-right: none;
+                line-height: 1.4;
+                max-width: 800px;  
                 @media(min-width: 888px)  {
-                    width: fit-content;
-                }
-                .social-wrapper {
-                    display: flex;   
-                    align-items: center;
-                    font-size: 1.6rem;
-                    margin-right: 20px;
-                    .icon-wrapper {
-                        margin-right: 10px;
-                    }
+
+                    text-align: left;
                 }
             }
+         
         }
-  
     }
 }
 

@@ -172,36 +172,26 @@ body.mobile-navbar {
     top: 2px;
     top: -16px;
     left: 50%;
-    // margin: 0 0 0 -6px;
     width: 12px;
     height: 12px;
-
-    // width: 40px;
-    // height: 50px;;
-transform: translateY(12px) translateX(-8.4375px) translateX(50%) rotate(45deg);;
+    transform: translateY(12px) translateX(-8.4375px) translateX(50%) rotate(45deg);;
     border-radius: 3px 0 0 0;
     background-color: $white;
-    // box-shadow: -3px -3px 5px rgb(82 95 127 / 4%);
-    // transition-property: transform;
-    // // transition-duration: var(--siteMenuTransition);
     z-index: 2;
+    transition: 0.2s;
 }
 .dd-menu-wrapper {
     position: absolute; 
-    left: 50%;
-    transform: translateX(-50%);
-    // top:82px;
-    top: 51px;
+    top: 17px;
+    left:0;
     z-index: 1000;
     max-width: 1250px;
     width: 100%;
     margin: 0;
     overflow: hidden;
-
     padding: 0;
     height: 100%;
     max-height: 0;
-
 }
 .dd-menu-wrapper.is-visible {
     padding: 50px 25px;
@@ -221,10 +211,7 @@ transform: translateY(12px) translateX(-8.4375px) translateX(50%) rotate(45deg);
     width: fit-content;
     position: absolute;
     top:0px;
-    margin-left: 190px;
-    // left:10%;
     padding-top: 30px;
-
     transition: 0.3s ease;
     .dd-inner {
         background-color: $white;
@@ -253,7 +240,7 @@ transform: translateY(12px) translateX(-8.4375px) translateX(50%) rotate(45deg);
             }
             ul {
                 li {
-                    padding: 8px 15px;
+                    padding: 16px 15px;
                     border-radius: 4px;
                     transition: 0.1s;
                     a {
@@ -271,7 +258,16 @@ transform: translateY(12px) translateX(-8.4375px) translateX(50%) rotate(45deg);
                             }
 
                         }
+                        .product-image {
+                            width: 50px;
+                            height: 50px;
+                            position: relative;
+                            border-radius: 50%;
+                            margin-right: 15px;
+                            padding: 15px;
+                        }
                         .link-content {
+                         
                             .link-title {
                                 font-size: 1.8rem;
                                 font-weight: 500;
@@ -354,43 +350,33 @@ transform: translateY(12px) translateX(-8.4375px) translateX(50%) rotate(45deg);
 }
 
 .dd-menu.about-dd {
-    // transform: translateX(-50%) translateX(-153px);
-    // .header-arrow {
-    //     left:137px;
-    // }
     opacity: 1;
-    // left: -155px;
-    left:-50px
+    right: 0px;
+    .header-arrow {
+        left: 26%;
+    }
 }
 .dd-menu.chairs-dd {
-    // transform: translateX(-50%) translateX(-80px);
-    // left: -60px;
-    left:26px;
     opacity: 1;
+    right: 0px;
+    .header-arrow {
+        left: 43%;
+    }
 }
 .dd-menu.beds-dd {
-    // transform: translateX(-50%) translateX(0);
     opacity: 1;
-    left:95px;
+    right: 0px;
+    .header-arrow {
+        left: 59%;
+    }
 }
 .dd-menu.bath-lifts-dd {
-    // transform: translateX(-50%) translateX(95px);
     opacity: 1;
-    left:190px;
+    right: 0px;
+    .header-arrow {
+        left: 69%;
+    }
 }
-// .breadcumb-navigation {
-//     max-width: 1300px;
-//     margin: 0 auto;
-//     padding: 15px;
-//     a {
-//         font-size:1.6rem;
-//         font-weight: 400;
-//         color: $grey;
-//     }
-//     a:hover{ 
-//         text-decoration: underline;
-//     }
-// }
 
 .breadcrumb-navigation {
         max-width: 1300px;

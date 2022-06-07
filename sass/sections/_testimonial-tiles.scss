@@ -1,9 +1,16 @@
 .testimonials {
     padding-bottom: 50px;
     margin-top: -50px;
-    .swiper {
-        padding-top: 50px;
+    padding-top: 40px;
+    .heading {
+        text-align: center;
+        font-size: 3.2rem;
+        color: $dark-green-1;
     }
+    .swiper {
+        padding-top: 35px;
+    }
+  
     .testimonial-tile {
         position: relative;
         border-radius: 16px;

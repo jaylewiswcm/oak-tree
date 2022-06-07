@@ -1,6 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="12.464" height="12.484" viewBox="0 0 12.464 12.484">
-  <g id="Group_2325" data-name="Group 2325" transform="translate(-884 -32.409)">
-    <path id="Ellipse_642" data-name="Ellipse 642" d="M5,1.5A3.5,3.5,0,1,0,8.5,5,3.5,3.5,0,0,0,5,1.5M5,0A5,5,0,1,1,0,5,5,5,0,0,1,5,0Z" transform="translate(884 32.409)" fill="#fff"/>
-    <path id="Path_5529" data-name="Path 5529" d="M5082.966-7367.907l-3.895-4.143,1.093-1.027,3.895,4.143Z" transform="translate(-4187.595 7412.8)" fill="#fff"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="39" height="34" viewBox="0 0 39 34">
+  <g id="Group_2338" data-name="Group 2338" transform="translate(-264 -85)">
+    <rect id="Rectangle_3499" data-name="Rectangle 3499" width="39" height="34" transform="translate(264 85)" fill="none"/>
+    <g id="Group_2337" data-name="Group 2337" transform="translate(-613.205 56.68)">
+      <path id="Ellipse_642" data-name="Ellipse 642" d="M10.594,3.178a7.416,7.416,0,1,0,7.416,7.416,7.424,7.424,0,0,0-7.416-7.416m0-3.178A10.594,10.594,0,1,1,0,10.594,10.594,10.594,0,0,1,10.594,0Z" transform="translate(884 32.409)" fill="#17494d"/>
+      <path id="Path_5529" data-name="Path 5529" d="M5087.323-7362.122l-8.252-8.778,2.315-2.177,8.252,8.778Z" transform="translate(-4179.229 7420.982)" fill="#17494d"/>
+    </g>
   </g>
 </svg>

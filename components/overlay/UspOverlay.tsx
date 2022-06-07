@@ -4,6 +4,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // Components 
 import {BritishMade} from './BritishMade';
 import {TradeIn} from './TradeIn';
+import {FreeDelivery} from './FreeDelivery';
+import {Warranty} from './Warranty';
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/effect-flip";
@@ -35,6 +37,12 @@ export const UspOverlay = ({hideOverlay, className}:ComponentProps) => {
                 </SwiperSlide>
                 <SwiperSlide>
                     <TradeIn />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <FreeDelivery />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <Warranty />
                 </SwiperSlide>
             </Swiper>
             <div className='close-button' onClick={() => hideOverlay(false)}>
