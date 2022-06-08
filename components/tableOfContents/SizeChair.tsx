@@ -29,8 +29,8 @@ const SizeChair = ({isOpen, openAccordian, reference}:ComponentProps) => {
         <div className='anchor-target' id='size-section'></div>
         <div className='product-content size-section'>
             <div className='content'>
-                <p className='subheading oaktree-green'>Step Two</p>
-                <h5 className='heading'>Choose Your Size</h5>
+                {/* <p className='subheading oaktree-green'>Step Two</p> */}
+                {/* <h5 className='heading'>Choose Your Size</h5> */}
                   <div className='detail'>
                       <div className="image-wrapper">
                         <Image 

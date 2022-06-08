@@ -6388,95 +6388,6 @@ body.mobile-navbar .mobile-navigation {
           transform: rotate(180deg);
 }
 
-.product-collections .our-process {
-  padding: 0px 15px;
-  margin-top: 50px;
-}
-
-.product-collections .our-process .heading {
-  color: #fff;
-  font-weight: 600;
-  margin-bottom: 0;
-  font-size: 3.2rem;
-  font-size: 2.7rem;
-  font-family: "Euclid Circular A", "Helvetica", sans-serif;
-  color: #17494D;
-}
-
-.product-collections .our-process .process-grid {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-@media (min-width: 600px) and (max-width: 8999px) {
-  .product-collections .our-process .process-grid {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-  }
-}
-
-@media (min-width: 1000px) {
-  .product-collections .our-process .process-grid {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-}
-
-.product-collections .our-process .process-grid .item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: center;
-  padding: 25px 15px;
-  color: #fff;
-}
-
-.product-collections .our-process .process-grid .item .icon-wrapper {
-  width: 190px;
-}
-
-.product-collections .our-process .process-grid .item h5 {
-  font-size: 2.4rem;
-  font-size: 2.2rem;
-  font-weight: 600;
-  font-family: "Euclid Circular A", "Helvetica", sans-serif;
-  line-height: 1.3;
-  color: #17494D;
-  margin-top: 15px;
-}
-
-.product-collections .our-process .process-grid .item h5 .number {
-  color: #E0AD16;
-  margin-right: 0px;
-}
-
-.product-collections .our-process .process-grid .item p {
-  font-size: 1.8rem;
-  font-weight: 200;
-  color: #17494D;
-  margin-top: 10px;
-}
-
 .product-collections .health-benefits {
   padding: 50px 25px;
   padding-top: 75px;
@@ -6564,6 +6475,96 @@ body.mobile-navbar .mobile-navigation {
 .product-collections .health-benefits ul li p {
   font-size: 1.8rem;
   color: #7F7F7F;
+}
+
+.our-process {
+  padding: 0px 15px;
+  margin-top: 50px;
+}
+
+.our-process .heading {
+  color: #fff;
+  font-weight: 600;
+  margin-bottom: 0;
+  font-size: 3.2rem;
+  font-size: 2.7rem;
+  font-family: "Euclid Circular A", "Helvetica", sans-serif;
+  color: #17494D;
+  text-align: center;
+}
+
+.our-process .process-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 600px) and (max-width: 8999px) {
+  .our-process .process-grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .our-process .process-grid {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.our-process .process-grid .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  padding: 25px 15px;
+  color: #fff;
+}
+
+.our-process .process-grid .item .icon-wrapper {
+  width: 190px;
+}
+
+.our-process .process-grid .item h5 {
+  font-size: 2.4rem;
+  font-size: 2.2rem;
+  font-weight: 600;
+  font-family: "Euclid Circular A", "Helvetica", sans-serif;
+  line-height: 1.3;
+  color: #17494D;
+  margin-top: 15px;
+}
+
+.our-process .process-grid .item h5 .number {
+  color: #E0AD16;
+  margin-right: 0px;
+}
+
+.our-process .process-grid .item p {
+  font-size: 1.8rem;
+  font-weight: 200;
+  color: #17494D;
+  margin-top: 10px;
 }
 
 .collection-details {
@@ -8377,7 +8378,7 @@ body.mobile-navbar .mobile-navigation {
 
 @media (min-width: 650px) {
   .table-of-contents .toc .product-content .content .heading {
-    font-size: 3rem;
+    font-size: 3.3rem;
   }
 }
 

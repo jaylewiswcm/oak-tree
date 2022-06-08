@@ -99,7 +99,7 @@ export const InformationContainer = ({product, productType, showForm }:Component
         
     </div>
     <div className='info-section accessories'>
-        <p className='info-header'>Accessories:</p>
+        <p className='info-header'>Personalise with Accessories:</p>
         <div className='accessory-grid'>
             {productType === 'chair' && chair_accessories.map((item, index) => 
                 <div className='item' key={index}>
@@ -126,11 +126,11 @@ export const InformationContainer = ({product, productType, showForm }:Component
         </div>
     </div>
     <div className='info-section motors'>
-        <p className='info-header'>Motors:</p>
+        <p className='info-header'>Motor Options:</p>
         <p className='desc'>Choice of three motors</p>
     </div>
     <div className='cta-wrapper'>
-        <p>See all our options in our free brochure</p>
+        <p>Find your perfect chair, Request your Free Brochure</p>
         <button className='main-cta' onClick={showForm}>Request a Free Brochure</button>
     </div>
 </div>

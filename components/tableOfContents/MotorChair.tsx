@@ -28,8 +28,8 @@ const MotorChair = ({isOpen, openAccordian, reference}:ComponentProps) => {
         <div className='product-content' id='motor-section'>
           <div className='motor-container'>
             <div className='content con-reg'>
-                <p className='subheading oaktree-green'>Step Three</p>
-                <h5 className='heading'>Choose Your Motor</h5>
+                {/* <p className='subheading oaktree-green'>Step Three</p> */}
+                <h5 className='heading'>Precision engineering</h5>
                 <p className='desc'>We offer a number of motors, each of which suits a particular requirement. If you like to sleep on a chair that reclines.</p>
                 <div className='comp-table'>
                   <div className='motor'>

@@ -1067,63 +1067,7 @@
             }
         }
     }
-    .our-process {
-        padding: 0px 15px;
-        margin-top: 50px;
-        .heading {
-            color: $white;
-            font-weight: 600;
-            margin-bottom: 0;
-            font-size: 3.2rem;
-            font-size: 2.7rem;
-            font-family: $fontText;
-            color: $dark-green-1;
-        }
-        .process-grid {
-            display: flex;
-            flex-direction: column;
-            @media(min-width: 600px) and (max-width: 8999px) {
-                display: grid;
-                grid-template-columns: repeat(2,1fr);
-                gap: 30px;
-            }
-            @media(min-width: 1000px) {
-                display: flex;
-                flex-direction: row;
-            }
-            .item {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                // justify-content: center;
-                text-align: center;
-                padding: 25px 15px;
-                color: $white;
-                .icon-wrapper {
-                    width: 190px;
-                }
-                h5 {
-                    font-size:2.4rem;
-                    font-size:2.2rem;
-                    font-weight: 600;
-                    font-family: $fontText;
-                    line-height: 1.3;
-                    color: $dark-green-1;
-                    margin-top: 15px;
-                    .number {
-                        color: $yellow-2;
-                        margin-right:0px;
-                    }
-                }
-                p {
-                    font-size: 1.8rem;
-                    font-weight: 200;
-                    color: $dark-green-1;
-                    margin-top: 10px;
-                }
-            }
-        }
-    }
+
     .health-benefits {
         padding: 50px 25px;
         padding-top: 75px;
@@ -1184,6 +1128,64 @@
     }
 }
 
+.our-process {
+    padding: 0px 15px;
+    margin-top: 50px;
+    .heading {
+        color: $white;
+        font-weight: 600;
+        margin-bottom: 0;
+        font-size: 3.2rem;
+        font-size: 2.7rem;
+        font-family: $fontText;
+        color: $dark-green-1;
+        text-align: center;
+    }
+    .process-grid {
+        display: flex;
+        flex-direction: column;
+        @media(min-width: 600px) and (max-width: 8999px) {
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 30px;
+        }
+        @media(min-width: 1000px) {
+            display: flex;
+            flex-direction: row;
+        }
+        .item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            // justify-content: center;
+            text-align: center;
+            padding: 25px 15px;
+            color: $white;
+            .icon-wrapper {
+                width: 190px;
+            }
+            h5 {
+                font-size:2.4rem;
+                font-size:2.2rem;
+                font-weight: 600;
+                font-family: $fontText;
+                line-height: 1.3;
+                color: $dark-green-1;
+                margin-top: 15px;
+                .number {
+                    color: $yellow-2;
+                    margin-right:0px;
+                }
+            }
+            p {
+                font-size: 1.8rem;
+                font-weight: 200;
+                color: $dark-green-1;
+                margin-top: 10px;
+            }
+        }
+    }
+}
 
 .collection-details {
     display: flex;

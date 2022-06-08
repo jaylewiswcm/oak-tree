@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image';
 const OurProcess = () => {
   return (
-    <div className='our-process '>
+    <div className='our-process con-reg'>
     <h4 className='heading'>Our Process</h4>
     <div className='process-grid con-reg'>
         <div className="item">

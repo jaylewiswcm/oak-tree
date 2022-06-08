@@ -14,6 +14,7 @@ import { TOC } from '../../components/tableOfContents/TOC';
 import { InformationContainer } from '../../components/product/InformationContainer';
 // Form
 import ProductForm from '../../components/forms/homeVisit/ProductForm';
+import OurProcess from '../../components/sections/process/OurProcess';
 
 
 const TheOak = () => {
@@ -23,15 +24,26 @@ const TheOak = () => {
         category: 'Rise and Recline Chair',
         usps: [
             {
-                text: 'Made-To-Measure',
-                img: '/icons/product-usps/made-to-measure.svg',
-                alt: 'Made-to-measure'
-            },
-            {
                 text: 'Qualifies for trade in',
                 img: '/icons/product-usps/trade-in.svg',
                 alt: 'Trade In'
-            }
+            },
+            {
+                text: 'Half Price Offer Available',
+                img: '/icons/product-usps/trade-in.svg',
+                alt: 'Half Price Offer Available'
+            },
+            {
+                text: 'Unique High-Leg Lift',
+                img: '/icons/product-usps/made-to-measure.svg',
+                alt: 'Unique High-Leg Lift'
+            },
+            {
+                text: 'Made to Fit',
+                img: '/icons/product-usps/made-to-measure.svg',
+                alt: 'Made To Fit'
+            },
+           
         ]
     })
 
@@ -67,7 +79,7 @@ const TheOak = () => {
         <div className='product-hero-wrapper'>
                 <div className='image-wrapper'>
                     <Image
-                        src='/images/products/chairs/oak/oak-product-1.png'
+                        src='/images/products/chairs/oak/oak-collection.png'
                         alt='The Oak Chair'
                         layout='fill'
                         objectFit='cover'
@@ -134,7 +146,8 @@ const TheOak = () => {
                 </div>
                     <InformationContainer product={product} productType='chair' showForm={() => setFormModal(true)}/>
             </div>
-            <Reviews product='chair' isOpen={isOpen} openAccordian={() => openAccordian('reviews')}/>
+            {/* <Reviews product='chair' isOpen={isOpen} openAccordian={() => openAccordian('reviews')}/> */}
+            <OurProcess />
             <TOC reference={tocRef} type='chair' sectionOneRef={sectionOne} sectionTwoRef={sectionTwo} sectionThreeRef={sectionThree} sectionFourRef={sectionFour}/>
             <div className='table-of-contents' ref={tocRef}>
                 <h4 className='toc-heading'>Our Process</h4>
