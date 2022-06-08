@@ -17,11 +17,13 @@ const [hideClass, setHideClass] = useState('hide-toc')
 const [active, setActive] = useState(99);
 
 const checkIfSectionIsInViewAndAssignActive = useCallback(() => {
+  
     if(sectionOneRef.current) {
         const sectionOnePos = sectionOneRef!.current!.getBoundingClientRect()
         const sectionTwoPos = sectionTwoRef!.current!.getBoundingClientRect()
         const sectionThreePos = sectionThreeRef!.current!.getBoundingClientRect()
         const sectionFourPos = sectionFourRef!.current!.getBoundingClientRect()
+        
         // Check if section's position is within the window if so assign active
         if(sectionOnePos.top > 0 ) {
             setActive(0)
@@ -39,6 +41,8 @@ const checkIfSectionIsInViewAndAssignActive = useCallback(() => {
             setActive(3)
         } else if(sectionFourPos.bottom > 110) {
             setActive(3)
+        } else if(sectionFourPos.bottom < 85){
+            setHideClass('hide-toc')
         } else {
             setActive(99)
         }

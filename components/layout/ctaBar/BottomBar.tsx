@@ -27,7 +27,7 @@ export const BottomBar = ({className}: ComponentProps) => {
                 </button>
         <div className='inner-wrapper con-reg'>
             <div className='phone-wrapper'>
-                <div className='icon-wrapper'>
+                {/* <div className='icon-wrapper'>
                 <Image
                         src='/icons/icon-phone.svg'
                         alt='Brochure'
@@ -35,13 +35,13 @@ export const BottomBar = ({className}: ComponentProps) => {
                         width='19.37'
                         height='24.62'
                     />
-                </div>
-                <p>Call us till 7pm:</p>
+                </div> */}
+                <p>Questions? Call us free today:</p>
                 <Link href='tel:0800094999'><a className='number'>0800 094 999</a></Link>
             </div>
             <div className='brochure-cta'>
                 <button className='bottom-cta' onClick={() => setFormToShow(true)}>
-                    <p>Request Your Free Brochure</p>
+                    <p>Request Your<br/> <b>Free</b> Brochure</p>
                     <span className='brochure'>
                         <Image
                             src='/brochures/chair-brochure.png'

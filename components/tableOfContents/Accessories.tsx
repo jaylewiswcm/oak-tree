@@ -31,8 +31,7 @@ const AccessoriesChair = ({isOpen, openAccordian, type, reference}:ComponentProp
         <div className='anchor-target' id='accessories-section'></div>
         <div className='product-content'>
             <div className='content'>
-                <p className='subheading oaktree-green'>Step Four</p>
-                <h5 className='heading'>Choose Your Accessories</h5>
+                <h5 className='heading'>Make your chair your own</h5>
                 <Accessories type={type} />
             </div>
         </div>

@@ -57,8 +57,8 @@ export const InformationContainer = ({product, productType, showForm }:Component
                       src={usp.img}
                       alt={usp.alt}
                       layout='responsive'
-                      width='50'
-                      height='50'
+                      width='28'
+                      height='25'
                   />
               </span>
               <p>{usp.text}</p>

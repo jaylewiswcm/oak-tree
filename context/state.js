@@ -1,18 +1,18 @@
-import React, { createContext, useContext, useState } from 'react'
+import React, { createContext, useContext, useState, useEffect } from 'react'
 
-const AppContext = createContext();
+export const AppContext = createContext();
 
 export const AppWrapper = ({ children }) => {
-
     const [productPage, setProductPage] = useState(false);
     const [formModal, setFormModal]  = useState(false)
-
+    
     let sharedState = {
         productPage,
-        setProductPage,
         formModal,
-        setFormModal
+        setFormModal,
+        setProductPage
     }
+
 return (
     <AppContext.Provider value={sharedState}>
         {children}

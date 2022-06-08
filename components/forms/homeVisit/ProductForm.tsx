@@ -102,8 +102,11 @@ export default class ProductForm extends React.Component {
     render() {
   return (
     <div className='form'>
-        <p className='form-title'>Request your FREE home visit by entering your details below</p>
-        <form action="" onClick={(e) => this.onSubmit(e)} className='generic-form product-home-visit-form'>
+        <div className="form-top">
+            <p className='form-title'>Want to see The Oak Chair in your own home?</p>
+            <p className='subtitle'>Request a home visit and our consultant will be able to advise exactly which product is best for you and your home.</p>
+        </div>
+        <form action="" onSubmit={(e) => this.onSubmit(e)} className='generic-form product-home-visit-form'>
         <TextInput 
                     error={this.state.fnameError}
                     id="fname"

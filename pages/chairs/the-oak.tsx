@@ -30,17 +30,17 @@ const TheOak = () => {
             },
             {
                 text: 'Half Price Offer Available',
-                img: '/icons/product-usps/trade-in.svg',
+                img: '/icons/product-usps/half-price.svg',
                 alt: 'Half Price Offer Available'
             },
             {
                 text: 'Unique High-Leg Lift',
-                img: '/icons/product-usps/made-to-measure.svg',
+                img: '/icons/product-usps/leg-lift.svg',
                 alt: 'Unique High-Leg Lift'
             },
             {
                 text: 'Made to Fit',
-                img: '/icons/product-usps/made-to-measure.svg',
+                img: '/icons/product-usps/made-to-fit.svg',
                 alt: 'Made To Fit'
             },
            
@@ -55,10 +55,12 @@ const TheOak = () => {
     const sectionFour = useRef<HTMLDivElement>(null);
     
     const { setProductPage, setFormModal} = useAppContext();
-
+  
     useEffect(() => {   
-        setProductPage(true)
-    
+        setProductPage(true);
+        return () => {
+            setProductPage(false);
+        }
     },[setProductPage])
     
     const openAccordian = (type:string) => {
@@ -158,14 +160,14 @@ const TheOak = () => {
             </div>
             <div className='request-wrapper'>
                 <div className='con-reg'>
-                    <div className='request-intro'>
+                    {/* <div className='request-intro'>
                         <p className='subheading'>Step Five</p>
                         <h6>Request a Free Home Visit</h6>
                         <p>Our consultant will be able to advise exactly which product is best for you and your home.</p>
-                    </div>
+                    </div> */}
                 <div className='form-and-content'>
                     <div className='supporting-content'>
-                        <p className='support-heading'>What will it include?</p>
+                        <p className='support-heading'>Your Home Visit Will Include</p>
                         <ul>
                             <li>
                                 <div className='icon-wrapper'>
@@ -217,7 +219,9 @@ const TheOak = () => {
                             </li>
                         </ul>
                     </div>
-                   <ProductForm/> 
+                    <div className='form-wrapper'>
+                        <ProductForm/> 
+                   </div>
                 </div>
                 </div>
             </div>

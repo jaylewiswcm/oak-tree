@@ -23,29 +23,29 @@ interface ComponentProps  {
     const [overlay, hideOverlay] = useState(true);
 
    const { productPage, formModal, setFormModal} = useAppContext();
-   
-   const handleScroll = useCallback(() => {
-      const position = window.pageYOffset;
-
-      if(!productPage) {
-        if(position < 500) {
-            setHideClass("hide-bar") 
-            setOverlayClass('british-made-overlay')
-        } else if(!productPage) {
-            setHideClass("") 
-            setOverlayClass('british-made-overlay increased-bottom-margin')
-        }
-      }
-    }, [productPage]);
-
+  
     useEffect(() => {
+   
+      const handleScroll = () => {
+        const position = window.pageYOffset;
+        if(!productPage) {
+          if(position < 500) {
+              setHideClass("hide-bar") 
+              setOverlayClass('british-made-overlay')
+          } else if(!productPage) {
+              setHideClass("") 
+              setOverlayClass('british-made-overlay increased-bottom-margin')
+          }
+        }
+      };
+
       window.addEventListener("scroll", handleScroll);
       return () => {
         window.removeEventListener("scroll", handleScroll);
         handleScroll()
       };
 
-    }, [handleScroll]);
+    }, [productPage, setHideClass, setOverlayClass]);
     
     return (
         <>

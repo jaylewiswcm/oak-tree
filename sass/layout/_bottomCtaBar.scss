@@ -10,12 +10,14 @@
     justify-content: center; 
     @media(min-width: 800px) {
         background-color: $dark-green-1;
+        // background: rgb(9,129,132);
+        // background: linear-gradient(187deg, rgba(9,129,132,1) 0%, rgba(27,108,111,1) 100%); 
         box-shadow: 0 0 24px rgba(0, 0, 0, 0.30);
         display: initial;
     }
     .mobile-button {
         display: flex;
-        align-items: center;
+        align-items: center;  
         justify-content: center;
         background-color: $red-2;
         // background-color: $blue-3;
@@ -54,65 +56,66 @@
         display: none;
         @media(min-width: 800px) {
             display: flex;
-            padding-top: 10px;
-            padding-bottom: 10px;
+            // padding-top: 10px;
+            // padding-bottom: 10px;
             // padding: 15px 0;
         }
         .phone-wrapper {
             display: flex;
-            align-items: center;
+            flex-direction: column;
             padding: 15px;
             .icon-wrapper {
                 width: 30px;
                 margin-right:5px;
             }
             p {
-                font-size: 1.8rem;
+                font-size: 1.6rem;
                 font-weight: 300;
                 color: $white;
                 margin-right: 10px;
             }
             .number {
-                font-size: 2.8rem;
-                font-weight: 400;
+                font-size: 3.4rem;
+                font-weight: 500;
                 color: $white;
             }
         }
         .brochure-cta {
-            margin: auto 0;
+ 
             margin-left: auto;
             position: relative;
-            // position: absolute;
-            // right:15px;
-            // bottom: 0;
             .bottom-cta {
-                background-color: $oaktree-green;
-                // background-color: $red-2;
+                background-color: $blue-3;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                margin: auto 0;
-                border-radius: 4px;
-                padding: 20px 30px;
-                padding-right: 110px;
-                // border-radius: 8px 8px 0px 0px;
-                // box-shadow: 0 0 21px rgba(0, 0, 0, 0.40);
-                // padding:15px 30px;
+                padding: 0 30px;
+                padding-right: 115px;
+                box-shadow: 0 0 21px rgba(0, 0, 0, 0.50);
                 position: relative;
+                height:100%;
+                border-radius: 0;
+                transition: 0.2s;
                 .brochure {
-                    width: 90px;
+                    width: 95px;
                     margin-right: 15px;
                     position: absolute;
                     right: -15px;
-                    bottom:-18px;
+                    bottom:0px;
                     box-shadow: 0 0 21px rgba(0, 0, 0, 0.40);
+                }
+                b {
+                    font-size: 500;
                 }
                 p {
                     font-size: 1.8rem;
-                    font-weight: 500;
+                    font-weight: 400;
                     color: $white;
                     text-align: left;
                 }
+            }
+            .bottom-cta:hover {
+                background-color: #0D9ADD;
             }
         }
     }
