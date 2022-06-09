@@ -6,7 +6,7 @@ export const OfferBanners = () => {
   return (
     <div className='banners con-reg'>
     <Link href='/offers'>
-      <a className='banner-vertical'>
+      <a className='banner-vertical sale-banner'>
         <Image 
           src='/graphics/half-price-sale.svg'
           alt='Half Price Sale'
@@ -20,7 +20,7 @@ export const OfferBanners = () => {
       <p>and</p>
     </div>
     <Link href='/trade-in'>
-      <a className='banner-vertical'>
+      <a className='banner-vertical trade-in-banner'>
         <Image 
             src='/graphics/trade-in.svg'
             alt='Trade In'

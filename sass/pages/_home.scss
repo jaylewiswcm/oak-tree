@@ -531,6 +531,7 @@
     }
     .banner-vertical {
         width: 100%;
+        transition: 0.2s;
         &:first-of-type {
             // margin-bottom: 30px;
             @media(min-width: 700px) {
@@ -542,6 +543,12 @@
             width: calc(50% - 15px);
         }
     } 
+    .sale-banner:hover  {
+        box-shadow: 0 0px 25px rgba(239,12,45,0.8);
+    }
+    .trade-in-banner:hover  {
+        box-shadow: 0 0px 25px rgba(224,173,52,0.8);
+    }
     .plus {
         // width: 40px;
         // height: 40px;

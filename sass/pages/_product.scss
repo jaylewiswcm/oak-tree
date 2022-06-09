@@ -2073,7 +2073,7 @@
         }
         .form {
             background-color: $white;
-            border-radius: 3px;
+            border-radius: 10px;
             box-shadow: 0 3px 22px rgba(0, 0,0, 0.24);
             max-width: 500px;
             margin: 50px auto;
@@ -2100,6 +2100,9 @@
                 color: $white;
                 margin-bottom: 10px;
                 
+            }
+            .product-name {
+                color: $yellow-3;
             }
             .subtitle {
                 font-size: 1.8rem;
