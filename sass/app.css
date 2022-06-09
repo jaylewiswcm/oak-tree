@@ -3660,7 +3660,7 @@ body.mobile-navbar .mobile-navigation {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 0 30px;
+  padding: 0 50px;
   padding-right: 115px;
   -webkit-box-shadow: 0 0 21px rgba(0, 0, 0, 0.5);
           box-shadow: 0 0 21px rgba(0, 0, 0, 0.5);
@@ -3686,7 +3686,7 @@ body.mobile-navbar .mobile-navigation {
 }
 
 .bottom-bar .inner-wrapper .brochure-cta .bottom-cta p {
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: 400;
   color: #fff;
   text-align: left;

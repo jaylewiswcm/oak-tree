@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useContext }  from 'react';
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import { NextSeo } from 'next-seo';
 import { motion } from 'framer-motion';
+// Context
+import { useAppContext } from '../context/state'
 // Component
 import Testimonials from '../components/sections/Testimonials/Testimonials';
 import HomeCollections from '../components/sections/collections/HomeCollections';
@@ -16,14 +18,15 @@ import { OfferBanners } from '../components/sections/banners/OfferBanners';
 import homeHeroGraphic from '../public/graphics/home-hero.png'
 import { Partners } from '../components/sections/partners/Partners';
 
-type MyProps = { };
+type MyProps = {setFormModal: any};
 type MyState = { requestClassName: string, uspOverlay:string };
+
+
 
 class Home extends React.Component<MyProps, MyState> {
   constructor(props: any) {
     super(props);
     this.state = { requestClassName: 'original',  uspOverlay: '' }
-
   }
   
   private introText = React.createRef<HTMLDivElement>()
@@ -66,7 +69,6 @@ class Home extends React.Component<MyProps, MyState> {
 closeUspOverlay = () => {
   this.setState({uspOverlay : 'overlay-hide'})
 }
-
   render() {
     return (
       <div >
@@ -158,10 +160,7 @@ closeUspOverlay = () => {
        </div>
        <div className='hero-content'>
          <h1>Rise, Recline, Relax</h1>
-         <button className='main-cta'>
-           <div className='bg'></div>
-           <p>Request a Free Brochure</p>
-          </button>
+        <MainRequestButton />
       </div>
   </div>
       <div className='home-intro hide'>
@@ -273,3 +272,13 @@ closeUspOverlay = () => {
 }
 
 export default Home
+
+export const MainRequestButton = () => {
+  const { setFormModal } = useAppContext()
+   return (
+    <button className='main-cta' onClick={() => setFormModal(true)}>
+           <div className='bg'></div>
+           <p>Request a Free Brochure</p>
+    </button>
+  )
+}
