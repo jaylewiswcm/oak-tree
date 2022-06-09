@@ -3957,7 +3957,7 @@ body.mobile-navbar .mobile-navigation {
 
 .home-intro .hero-content {
   position: absolute;
-  right: 0;
+  right: 25px;
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
@@ -3971,13 +3971,18 @@ body.mobile-navbar .mobile-navigation {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: #E8F6F4;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 50px 25px;
 }
 
 .home-intro .hero-content h1 {
   font-size: 4rem;
   color: #17494D;
   text-align: center;
-  font-size: 5.2rem;
+  font-size: 4.8rem;
 }
 
 .home-intro .hero-content p {
@@ -3985,11 +3990,10 @@ body.mobile-navbar .mobile-navigation {
   font-weight: 400;
   line-height: 1.5;
   text-align: center;
-  max-width: 700px;
+  max-width: 680px;
   margin: 0 auto;
   margin-top: 10px;
   margin-bottom: 25px;
-  padding: 0 25px;
 }
 
 .home-intro .hero-content .main-cta {
@@ -4204,7 +4208,14 @@ body.mobile-navbar .mobile-navigation {
 
 .home-collections .collections .collection-item .image-wrapper {
   width: 100%;
-  height: 250px;
+  height: 350px;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.home-collections .collections .collection-item .image-wrapper span {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .home-collections .collections .collection-item .collection-title {
@@ -4223,17 +4234,12 @@ body.mobile-navbar .mobile-navigation {
 }
 
 .home-collections .collections .collection-item .acting-btn {
-  padding: 10px 25px;
   margin-top: 10px;
-  border: 2px #009B72 solid;
   position: relative;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   border-radius: 2px;
-  -webkit-transition: 0.2s background;
-  transition: 0.2s background;
-  background-color: #009B72;
 }
 
 .home-collections .collections .collection-item .acting-btn .hover-bg {
@@ -4253,17 +4259,26 @@ body.mobile-navbar .mobile-navigation {
 .home-collections .collections .collection-item .acting-btn p {
   font-size: 1.8rem;
   font-weight: 500;
-  color: #009B72;
+  color: #09595E;
   position: relative;
-  color: #fff;
 }
 
-.home-collections .collections .collection-item .acting-btn:hover .hover-bg {
-  max-height: 100%;
+.home-collections .collections .collection-item .acting-btn .underline {
+  width: 0;
+  height: 2px;
+  background-color: #09595E;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  margin-top: 2px;
 }
 
-.home-collections .collections .collection-item .acting-btn:hover p {
-  color: #fff;
+.home-collections .collections .collection-item:hover .image-wrapper span {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.home-collections .collections .collection-item:hover .acting-btn .underline {
+  width: 100%;
 }
 
 .banners {

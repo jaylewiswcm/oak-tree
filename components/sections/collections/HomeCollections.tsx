@@ -67,7 +67,7 @@ const HomeCollections = () => {
                   alt='Rise and Recline Chairs'
                   layout='fill'
                   objectFit='cover'
-                  objectPosition='center'
+                  objectPosition='left'
                   quality='100'
                   priority
                 />
@@ -75,7 +75,8 @@ const HomeCollections = () => {
               <h3 className='collection-title'>Rise and Recline Chairs</h3>
               <p className='desc'>Luxurious and well made allowing comfort at the touch of a button.</p>
               <div className='acting-btn'>
-                <p>View Chairs</p>
+                <p>Browse Chairs</p>
+                <div className='underline'></div> 
              </div>
             </a>
           </Link>
@@ -89,7 +90,7 @@ const HomeCollections = () => {
                   alt='Adjustable Beds'
                   layout='fill'
                   objectFit='cover'
-                  objectPosition='center'
+                  objectPosition='left'
                   quality='100'
                   priority
                 />
@@ -97,7 +98,8 @@ const HomeCollections = () => {
               <h3 className='collection-title'>Adjustable Beds</h3>
               <p className='desc'>The ultimate in sophistication and comfort, offering a wide collection.</p>
               <div className='acting-btn'>
-                <p>View Beds</p>
+                <p>Browse Beds</p>
+                <div className='underline'></div> 
              </div>
             </a>
           </Link>
@@ -119,7 +121,8 @@ const HomeCollections = () => {
               <h3 className='collection-title'>Bath Lifts</h3>
               <p className='desc'>Rediscover the joys and health benefits of a nice warm bath with our bath lift.</p>
               <div className='acting-btn'>
-                <p>View Bath Lifts</p>
+                <p>Browse Bath Lifts</p>
+                <div className='underline'></div> 
              </div>
             </a>
           </Link>
