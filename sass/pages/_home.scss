@@ -89,6 +89,10 @@
         background-position: center;
         background-size:cover;
         position: relative;
+        .con-reg {
+            position: relative;
+            height: 100%;
+        }
     }
     .as-seen-on-tv {
         position: absolute;
@@ -652,7 +656,7 @@
     }
     .banner-vertical {
         width: 100%;
-        transition: 0.2s;
+        transition: 0.3s;
         &:first-of-type {
             // margin-bottom: 30px;
             @media(min-width: 700px) {

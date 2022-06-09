@@ -3940,6 +3940,11 @@ body.mobile-navbar .mobile-navigation {
   position: relative;
 }
 
+.home-intro .hero-image .con-reg {
+  position: relative;
+  height: 100%;
+}
+
 .home-intro .as-seen-on-tv {
   position: absolute;
   top: 15px;
@@ -4322,8 +4327,8 @@ body.mobile-navbar .mobile-navigation {
 
 .banners .banner-vertical {
   width: 100%;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 @media (min-width: 700px) {
