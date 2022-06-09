@@ -21,29 +21,16 @@ const Header = () => {
         <header>
             <div className='top-header'>
               <div className='con-reg'>
-              {/* <div className='mobile-header-logo'>
-                    <Link href="/">
-                        <a className="logo">
-                        <Image 
-                            src='/logo/logo.svg'
-                            alt='Oak Tree Mobility'
-                            layout='responsive'
-                            width={215.42}
-                            height={44.89}
-                        />
-                         </a>
-                    </Link>
-               </div> */}
                 <div className='trustpilot-logo'>
                     <Image
-                      src='/trustpilot/trustpilot-header-logo.svg'
+                      src='/trustpilot/trustpilot-logo-heeader.svg'
                       alt='Trust pilot rated 4.5 stars'
                       layout='responsive'
-                      width='106.78'
-                      height='39.12'
+                      width='160.76'
+                      height='16.15'
                     />
                 </div>
-                <div className='supporting-bhf'>
+                {/* <div className='supporting-bhf'>
                     <p>Proudly Supporting</p>
                     <div className='bhf-logo'>
                         <Image
@@ -62,9 +49,11 @@ const Header = () => {
                    <p className='number-support'>Questions? Call us <b>free</b> today:</p>
                    <p className='number'>0800 094 999</p>
                 </div> 
-                </div>
+                </div> */}
+              </div>
             </div>
-            <div className='header-inner con-reg'>
+            <div className='header-inner '>
+              <div className='con-reg'>
                 <div className="header-logo">
                     <Link href="/">
                         <a className="logo">
@@ -90,6 +79,11 @@ const Header = () => {
                         <p>Menu</p>
                     </button>
                 </div> 
+                <div className='header-phone-number'>
+                   <p className='number-support'>Questions? Call us <b>free</b> today:</p>
+                   <p className='number'>0800 094 999</p>
+                </div> 
+                </div>
             </div>
             <MobileNavigation isOpen={isOpen} toggleMobileMenu={toggleMobileMenu}/>
             <div className='index-usp-banner'>
@@ -97,7 +91,7 @@ const Header = () => {
             <div className='usp-item'>
               <div className='icon-wrapper'>
                 <Image 
-                  src='/icons/collection-usps/made-in-britain-new.svg'
+                  src='/icons/usps/icon-british-made-small.svg'
                   alt='British Design'
                   layout='responsive'
                   width='60'
@@ -109,7 +103,7 @@ const Header = () => {
             <div className='usp-item'>
               <div className='icon-wrapper'>
                 <Image 
-                  src='/icons/collection-usps/trade-in-new.svg'
+                  src='/icons/usps/icon-trade-in-small.svg'
                   alt='Trade In Offer'
                   layout='responsive'
                   width='60'
@@ -121,7 +115,7 @@ const Header = () => {
             <div className='usp-item'>
               <div className='icon-wrapper'>
                 <Image 
-                  src='/icons/collection-usps/free-delivery.svg'
+                  src='/icons/usps/icon-free-delivery-small.svg'
                   alt='Free Delivery'
                   layout='responsive'
                   width='60'
@@ -133,7 +127,7 @@ const Header = () => {
             <div className='usp-item'>
               <div className='icon-wrapper'>
                 <Image 
-                  src='/icons/collection-usps/warranty.svg'
+                  src='/icons/usps/icon-warranty-small.svg'
                   alt='10 Year Warranty'
                   layout='responsive'
                   width='60'

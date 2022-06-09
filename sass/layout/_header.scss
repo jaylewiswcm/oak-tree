@@ -4,34 +4,11 @@ header {
   z-index: 999;
   background-color: $white;
   border-bottom: 1px solid $lighter-grey;
-  // .top-header {
-  //   border-bottom: 1px solid $lighter-grey;
-  //   .inner-wrapper {
-  //     display: flex;
-  //     justify-content: flex-end;
-  //     align-items: center;
-  //     padding: 8px 25px;
-  //   }
-  //   .header-bhf {
-  //     margin-right: auto;
-  //     margin-left: 15px;
-  //     width: 130px;
-  //   }
-  //   p {
-  //     // color: $white;
-  //     font-size: 1.6rem;
-  //   }
-  //   .number {
-  //     font-size: 2.2rem;
-  //     font-weight: 500;
-  //     color: $oaktree-green;
-  //     margin-left: 10px;
-  //   }
-  // }
+
   .top-header {
     padding: 10px 0;
-    
-    border-bottom: 1px $lighter-grey solid;
+    // border-bottom: 1px $lighter-grey solid;
+    background-color: $dark-green-1;
     .con-reg {
       display: flex;
       align-items: center;
@@ -62,7 +39,7 @@ header {
       }
     }
     .trustpilot-logo {
-      width: 110px;
+      width: 190px;
       // display: none;
       // @media(min-width: 970px) {
       //   display: block;
@@ -125,7 +102,6 @@ header {
       }
     }
     .header-phone-number {
-      // margin-left: auto;
       display: none;
       flex-direction: column;
       text-align: right;
@@ -146,26 +122,14 @@ header {
     }
   }
   .header-inner {
-    display: flex;
-    align-items: center;
-    padding: 15px 25px;
-    height: 100%;
-    max-width: 1500px;
-    // max-width: 1350px;
-    // height: 90px;
-    // border-bottom: 1px solid $lighter-grey;
-    // @media(min-width: 400px) and (max-width: 499px) {
-    //   padding: 20px 30px;
-    // }
-    // @media(min-width: 500px) and (max-width: 899px) {
-    //   padding: 20px 50px;
-    // }
-    //  @media(min-width: 630px) and (min-width: 1079px) {
-    //   padding: 20px 25px;
-    // }
-    // @media(min-width:1080px) {
-    //   padding: 15px 25px;
-    // }
+    box-shadow:  0 3px 9px rgba(23,73,77, 0.12) ;
+    .con-reg {
+      display: flex;
+      align-items: center;
+      padding: 10px 25px;
+      height: 100%;
+      max-width: 1500px;
+    }
     .mobile-menu-btn {
       display: flex;
       align-items: center;
@@ -201,28 +165,11 @@ header {
         width: 170px;
        }
     }
-    // .header-bhf {
-    //   display: none;
-    //   @media(min-width:950px) and (max-width: 1079px){
-    //     display: initial;
-    //   }
-    //   @media(min-width: 1080px) and (max-width: 1246px) {
-    //     display: none;
-    //   }
-    //   @media(min-width: 1247px) {
-    //     display: initial;
-    //   }
-    // }
-
     .main-nav {
       display: flex; 
       flex-direction: column;
       justify-content: center;
-      // margin: auto;
-      // margin-left: 15px;
-      // margin: 0 auto;
-      margin: 0;
-      margin-left: auto; 
+      margin: 0 auto;
       height: 40px;
       display: none;
       @media(min-width: 1080px) {
@@ -245,9 +192,7 @@ header {
             font-size: 1.7rem;
             font-weight: 500;
             letter-spacing: 0px;
-            color: $black;
-            // color: $light-grey;
-            opacity: 0.8;
+            color: $dark-green-1;
             display: flex;
             align-items: center;
             .arrow {
@@ -261,9 +206,6 @@ header {
               letter-spacing: 0px;
             }
           }
-          // a:hover {
-          //   color: $oaktree-green;
-          // }
         }
         li.is-hovered {
           a {
@@ -305,15 +247,11 @@ header {
         display: flex;
        }
       .number-support {
-        font-size: 1.6rem;
+        font-size: 1.3rem;
         font-weight: 500;
-        color: $black;
+        color: $grey;
         text-align: right;
-        // margin-right: 15px;
-        // b {
-        //   color: $oaktree-green;
-        //   font-weight: 500;
-        // }
+
       }
       .number {
         font-size: 2.5rem;
@@ -344,4 +282,52 @@ header {
       }
     }
   }
+  .index-usp-banner {
+    .inner-div {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 30px;
+        max-width: 900px;
+        margin: 0 auto;  
+          padding: 8px 15px;
+        @media(min-width: 300px) {
+            display: flex;
+            justify-content: space-around;
+            width: fit-content
+        }
+        .usp-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            // margin-right: 35px;
+            &:last-of-type {
+                display: none;
+                @media(min-width: 620px) {
+                    display: flex;
+                }
+            }
+ 
+            @media(min-width: 800px) {
+                flex-direction: row;
+            }
+            .icon-wrapper {
+                width: 35px;
+                margin-right: 0px;  
+                margin-bottom: 5px;
+
+                @media(min-width: 800px) {
+                    margin-right: 10px;
+                    margin-bottom:0;
+                }
+            }
+            p {
+                text-align: center;
+                font-weight: 400;
+                color: $dark-grey;
+                opacity: 0.8;
+            }
+        }
+    }
+}
 }
