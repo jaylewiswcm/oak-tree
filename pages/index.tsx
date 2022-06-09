@@ -81,6 +81,11 @@ closeUspOverlay = () => {
       </Head>
   <div className='home-intro'>
     <div className='hero-image'>
+      <div className='hero-content'>
+         <h1>Life Is For Living</h1>
+         <p>Change is the one certainty in life. It's all part of life's rich experience. Over time your mobility changes too. What we once took for granted feels out of reach. This can be hard. As the UK's leading mobility specialist, we're here to help</p>
+        <MainRequestButton />
+      </div>
     </div>
     <div className='as-seen-on-tv'>
          <Image
@@ -91,11 +96,11 @@ closeUspOverlay = () => {
             height='100'
          />
     </div>
-    <div className='hero-content'>
+    {/* <div className='hero-content'>
          <h1>Life Is For Living</h1>
          <p>Change is the one certainty in life. It's all part of life's rich experience. Over time your mobility changes too. What we once took for granted feels out of reach. This can be hard. As the UK's leading mobility specialist, we're here to help</p>
         <MainRequestButton />
-    </div>
+    </div> */}
   </div>
       {/* <div className='home-intro hide'>
         <div className='intro-content'>
