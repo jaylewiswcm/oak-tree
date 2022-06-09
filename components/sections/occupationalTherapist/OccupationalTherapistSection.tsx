@@ -79,7 +79,7 @@ const stagger = {
                     />
                     </div>
               </div>
-            <h3>Occupational Therapist Approved</h3>
+            <h3>Advised and approved by leading experts</h3>
             <p className='oc-intro'>All of our products are approved by Samantha Shann, occupational therapist. Samantha fully tests and evaluates everything we offer, ensuring it satisfies the high standards of an independent health professional.</p>
             <div className='partner-logo'>
               <p>In Partnership with</p>
@@ -103,7 +103,7 @@ const stagger = {
         </div>
 
         <div className='health-benefits con-reg'>
-          <h5>Health benefits outlined by our <br/>Occupational Therapist include</h5>
+          <h5>Transformational health benefits</h5>
           <div className='benefits-grid'>
             <div className='benefit'>
               <div className='icon-wrapper'>

@@ -79,77 +79,10 @@ closeUspOverlay = () => {
       <Head>
         <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
       </Head>
-
-      <div className='mobile-usp-banner'>
-        <div className='bhf-banner'>
-            <div className='logo-wrapper'>
-              <Image 
-                src='/bhf/bhf-white.svg'
-                alt='The British Heart Foundation'
-                layout='responsive'
-                width={108.13}
-                height={29.7}
-                quality="100"
-              />
-            </div>
-            <div className='support-text'>
-              <p>Proudly Working</p>
-              <p>In Partnership</p>
-            </div>
-        </div>
-        <div className='usps'>
-          <div className='usp'>
-            <div className='icon'>
-              <Image 
-                  src='/icons/home-usp-british-made.svg'
-                  alt='British Made'
-                  layout='responsive'
-                  width={32}
-                  height={32}
-              />
-            </div>
-            <p>British Made</p>
-          </div>
-          <div className='usp'>
-            <div className='icon'>
-              <Image 
-                  src='/icons/home-usp-trustpilot.svg'
-                  alt='4.5 Star Rated'
-                  layout='responsive'
-                  width={32}
-                  height={32}
-              />
-            </div>
-            <p>4.5 Star Rated</p>
-          </div>
-          <div className='usp'>
-            <div className='icon'>
-              <Image 
-                  src='/icons/home-usp-trade-in.svg'
-                  alt='Trade In'
-                  layout='responsive'
-                  width={32}
-                  height={32}
-              />
-            </div>
-            <p>£250 Trade-in</p>
-          </div>
-        </div>
-      </div>
-
   <div className='home-intro'>
     <div className='hero-image'>
-    <Image 
-       src='/images/heros/home-hero.png'
-       alt='Man dancing in kitchen'
-       layout='responsive'
-       width={1600}
-       height={598}
-       quality={100}
-       priority
-       />
-      </div>
-       <div className='as-seen-on-tv'>
+    </div>
+    <div className='as-seen-on-tv'>
          <Image
             src='/icons/seen-on-tv.svg'
             alt='As seen on tv'
@@ -157,13 +90,14 @@ closeUspOverlay = () => {
             width='150'
             height='100'
          />
-       </div>
-       <div className='hero-content'>
-         <h1>Rise, Recline, Relax</h1>
+    </div>
+    <div className='hero-content'>
+         <h1>Life Is For Living</h1>
+         <p>Change is the one certainty in life. It's all part of life's rich experience. Over time your mobility changes too. What we once took for granted feels out of reach. This can be hard. As the UK's leading mobility specialist, we're here to help</p>
         <MainRequestButton />
-      </div>
+    </div>
   </div>
-      <div className='home-intro hide'>
+      {/* <div className='home-intro hide'>
         <div className='intro-content'>
           <div className='hero-bg'>
             <Image 
@@ -192,63 +126,10 @@ closeUspOverlay = () => {
             <Image src='/images/heros/home-mobile-hero.png' alt='Oak Tree Advert' layout='responsive' width={1262} height={751}/>
           </span>
         </div>
-      </div>
-      <div className='green-strip hide'>
-        <div className='inner-wrapper con-reg'>
-        {/* <div className="trustpilot-widget" data-locale="en-GB" data-template-id="53aa8807dec7e10d38f59f32" data-businessunit-id="56607bac0000ff00058643ac" data-style-height="100px" data-style-width="180px" data-theme="dark" data-font-family="Source Sans Pro" data-text-color="#ffffff">
-          <a href="https://uk.trustpilot.com/review/www.oaktreemobility.co.uk" target="_blank" rel="noreferrer" >Trustpilot</a>
-        </div> */}
-        <div className='seen-on-tv-icon'>
-          <Image 
-            src='/icons/seen-on-tv.svg'
-            alt='Seen on tv'
-            layout='responsive'
-            width={152.26}
-            height={101.39}
-          />
-        </div>
-        </div>
-      </div>
-      <div className='mobile-usps'>
-        <div className='usp'>
-          <div className='tick-wrapper'>
-            <Image 
-              src='/icons/green-tick.svg'
-              alt='Green Tick 1'
-              layout='responsive'
-              width={30}
-              height={30}
-            />
-          </div>
-          <p>Handmade by skilled craftsmen to order in the UK</p>
-        </div>
-        <div className='usp'>
-          <div className='tick-wrapper'>
-            <Image 
-              src='/icons/green-tick.svg'
-              alt='Green Tick 2'
-              layout='responsive'
-              width={30}
-              height={30}
-            />
-          </div>
-          <p>A minimum £250 off when you trade in your old furniture</p>
-        </div>
-        <div className='usp'>
-          <div className='tick-wrapper'>
-            <Image 
-              src='/icons/green-tick.svg'
-              alt='Green Tick 3'
-              layout='responsive'
-              width={30}
-              height={30}
-            />
-          </div>
-          <p>Huge choice of fabris & leather to match your style</p>
-        </div>
-      </div>
+      </div> */}
+
       <div className='home-collections con-reg'>
-        <h2 className='heading'>Our products</h2>
+        <h2 className='heading'>Introducing Our Products</h2>
         <HomeCollections />
       </div>
       <OfferBanners />

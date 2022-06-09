@@ -2672,7 +2672,7 @@ header .top-header .con-reg p {
   color: #fff;
   font-weight: 400;
   padding: 0;
-  margin: 0 8px;
+  margin-right: 8px;
 }
 
 header .top-header .con-reg .bhf-logo {
@@ -2714,6 +2714,7 @@ header .top-header .mobile-phone-number p {
 
 header .top-header .trustpilot-logo {
   width: 190px;
+  margin-right: auto;
 }
 
 header .top-header .supporting-bhf {
@@ -3923,28 +3924,19 @@ body.mobile-navbar .mobile-navigation {
 
 .home-intro {
   position: relative;
-  height: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 500px;
+  width: 100%;
+}
+
+.home-intro .hero-image {
+  width: 55%;
   background-image: url(../public/images/heros/home-hero.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-}
-
-@media (min-width: 800px) {
-  .home-intro {
-    height: unset;
-    background-image: none;
-  }
-}
-
-.home-intro .hero-image {
-  display: none;
-}
-
-@media (min-width: 800px) {
-  .home-intro .hero-image {
-    display: initial;
-  }
 }
 
 .home-intro .as-seen-on-tv {
@@ -3958,15 +3950,11 @@ body.mobile-navbar .mobile-navigation {
 @media (min-width: 800px) {
   .home-intro .as-seen-on-tv {
     display: initial;
+    display: none;
   }
 }
 
 .home-intro .hero-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
   z-index: 5;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3975,25 +3963,44 @@ body.mobile-navbar .mobile-navigation {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 45%;
+  background-color: #E8F6F4;
 }
 
 .home-intro .hero-content h1 {
   font-size: 4rem;
-  color: #fff;
+  color: #17494D;
   text-align: center;
 }
 
 @media (min-width: 1050px) {
   .home-intro .hero-content h1 {
-    font-size: 5.5rem;
+    font-size: 4.5rem;
   }
+}
+
+.home-intro .hero-content p {
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.5;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 5px;
+  margin-bottom: 25px;
+  padding: 0 25px;
 }
 
 .home-intro .hero-content .main-cta {
   border-radius: 3px;
   letter-spacing: 1;
-  padding: 18px 60px;
+  padding: 15px 40px;
   margin: 0 auto;
   margin-top: 10px;
   background: #098184;
@@ -4007,6 +4014,7 @@ body.mobile-navbar .mobile-navigation {
   font-size: 1.9rem;
   font-weight: 500;
   position: relative;
+  margin: 0;
 }
 
 .home-intro .hero-content .main-cta .bg {

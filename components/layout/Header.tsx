@@ -31,7 +31,7 @@ const Header = () => {
                       height='16.15'
                     />
                 </div>
-                <p>and are proud to support the</p>
+                <p>Proudly supporting the</p>
                 <div className='bhf-logo'>
                   <Image
                       src='/bhf/bhf-logo-header.svg'
@@ -41,7 +41,6 @@ const Header = () => {
                       height='23'
                     />
                 </div>
-                <p>with our trade-in offer.</p>
                 {/* <div className='supporting-bhf'>
                     <p>Proudly Supporting</p>
                     <div className='bhf-logo'>
