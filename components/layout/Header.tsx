@@ -21,6 +21,7 @@ const Header = () => {
         <header>
             <div className='top-header'>
               <div className='con-reg'>
+                <p>We're rated excellent on</p>
                 <div className='trustpilot-logo'>
                     <Image
                       src='/trustpilot/trustpilot-logo-heeader.svg'
@@ -30,6 +31,17 @@ const Header = () => {
                       height='16.15'
                     />
                 </div>
+                <p>and are proud to support the</p>
+                <div className='bhf-logo'>
+                  <Image
+                      src='/bhf/bhf-logo-header.svg'
+                      alt='British Heart Foundation'
+                      layout='responsive'
+                      width='136'
+                      height='23'
+                    />
+                </div>
+                <p>with our trade-in offer.</p>
                 {/* <div className='supporting-bhf'>
                     <p>Proudly Supporting</p>
                     <div className='bhf-logo'>

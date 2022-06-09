@@ -12,7 +12,18 @@ header {
     .con-reg {
       display: flex;
       align-items: center;
+      justify-content: center;
       max-width: 1500px;
+      p {
+        font-size: 1.4rem;
+        color: $white;
+        font-weight: 400;
+        padding:0;
+        margin:0 8px;
+      }
+      .bhf-logo {
+        width: 200px;
+      }
     }
     .mobile-header-logo {
       display: block;

@@ -2661,7 +2661,22 @@ header .top-header .con-reg {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   max-width: 1500px;
+}
+
+header .top-header .con-reg p {
+  font-size: 1.4rem;
+  color: #fff;
+  font-weight: 400;
+  padding: 0;
+  margin: 0 8px;
+}
+
+header .top-header .con-reg .bhf-logo {
+  width: 200px;
 }
 
 header .top-header .mobile-header-logo {
