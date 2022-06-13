@@ -237,7 +237,7 @@ const TheRivieraPlus = () => {
                             </li>
                         </ul>
                     </div>
-                   <ProductForm/> 
+                   <ProductForm productName='The Riviera Plus'/> 
                 </div>
                 </div>
             </div>

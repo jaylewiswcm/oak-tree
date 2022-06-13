@@ -2665,6 +2665,7 @@ header .top-header .con-reg {
       -ms-flex-pack: center;
           justify-content: center;
   max-width: 1500px;
+  padding: 0 25px;
 }
 
 header .top-header .con-reg p {

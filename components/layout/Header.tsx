@@ -37,8 +37,8 @@ const Header = () => {
                       src='/bhf/bhf-logo-header.svg'
                       alt='British Heart Foundation'
                       layout='responsive'
-                      width='136'
-                      height='23'
+                      width='153'
+                      height='28'
                     />
                 </div>
                 {/* <div className='supporting-bhf'>
