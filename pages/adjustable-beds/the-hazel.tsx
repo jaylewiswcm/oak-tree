@@ -15,6 +15,7 @@ import PopupBrochureRequestForm from '../../components/forms/PopupBrochureReques
 import { InformationContainer } from '../../components/product/InformationContainer';
 import { TOC } from '../../components/tableOfContents/TOC';
 import ProductForm from '../../components/forms/homeVisit/ProductForm';
+import OurProcess from '../../components/sections/process/OurProcess';
 
 const TheHazel = () => {
     const [isOpen, setAccordianOpen] = useState('');
@@ -23,15 +24,25 @@ const TheHazel = () => {
         category: 'Adjustable Bed',
         usps: [
             {
-                text: 'Made-To-Measure',
-                img: '/icons/product-usps/made-to-measure.svg',
-                alt: 'Made-to-measure'
-            },
-            {
                 text: 'Qualifies for trade in',
                 img: '/icons/product-usps/trade-in.svg',
                 alt: 'Trade In'
-            }
+            },
+            {
+                text: 'Half Price Offer Available',
+                img: '/icons/product-usps/half-price.svg',
+                alt: 'Half Price Offer Available'
+            },
+            {
+                text: 'Unique High-Leg Lift',
+                img: '/icons/product-usps/leg-lift.svg',
+                alt: 'Unique High-Leg Lift'
+            },
+            {
+                text: 'Made to Fit',
+                img: '/icons/product-usps/made-to-fit.svg',
+                alt: 'Made To Fit'
+            },
         ]
     })
     // Refs
@@ -64,7 +75,18 @@ const TheHazel = () => {
                 description="The Hazel adjustable bed strikes a fine balance between traditional and contemporary, making it fit in well with most interior styles. Find out more."
             />
         <div className='product-wrapper'>
-        <div className='product-hero-wrapper con-reg'>
+            <div className='product-hero-wrapper'>
+                <div className='image-wrapper'>
+                    <Image
+                        src='/images/products/beds/hazel/hazel-collection.png'
+                        alt='The Hazel bed'
+                        layout='fill'
+                        objectFit='cover'
+                        objectPosition='center'
+                    />
+                </div>
+            </div>
+        {/* <div className='product-hero-wrapper con-reg'>
             <div className='product-hero-carousel'>
                 <div className='image-wrapper'>
                     <Image
@@ -88,10 +110,10 @@ const TheHazel = () => {
                     </button>
                 </div>
             </div>
-    </div>
-            <div className='product-details con-reg' id='product-information'>
+    </div> */}
+                <div className='product-details con-reg' id='product-information'>
                 <div className='product-content'>
-                    <h3 className='heading'>Long-lasting style and comfort</h3>
+                <h3 className='heading'>Long-lasting style and comfort</h3>
                     <p className='desc'>Hidden away inside is a state-of-the-art motor that allows complete control of the mattress with a simple handheld control. If you’re struggling to get into and out of bed, the smart actions of the Hazel might very well be life changing.</p>
                     <div className="product-images">
                         <div className='image-wrapper'>
@@ -106,18 +128,18 @@ const TheHazel = () => {
                         <p className='desc'>The gently curved lines lend an airy feel and bestow upon the bed a refined elegance. Hidden away inside is a state-of-the-art motor that allows complete control of the mattress with a simple handheld control. If you’re struggling to get into and out of bed, the smart actions of the Hazel might very well be life changing.</p>
                         <div className='image-wrapper'>
                         <Image
-                        src='/images/products/beds/hazel/hazel-product-2.png'
-                        alt='The Hazel Bed 2'
-                        layout='responsive'
-                        width={577}
-                        height={461}
-                    />
+                            src='/images/products/beds/hazel/hazel-product-2.png'
+                            alt='The Hazel Bed 2'
+                            layout='responsive'
+                            width={577}
+                            height={461}
+                        />
                         </div>
                     </div>
-                    </div>
-                    <InformationContainer product={product} productType='bed' showForm={() => setFormModal(true)} />
+                </div>
+                    <InformationContainer product={product} productType='chair' showForm={() => setFormModal(true)}/>
             </div>
-            <Reviews product='bed' isOpen={isOpen} openAccordian={() => openAccordian('reviews')}/>
+            <OurProcess />
             <TOC reference={tocRef} type='bed'  sectionOneRef={sectionOne} sectionTwoRef={sectionTwo} sectionThreeRef={sectionThree} sectionFourRef={sectionFour}/>
             <div className='table-of-contents' ref={tocRef} >
                 <h4 className='toc-heading'>Our Process</h4>
@@ -128,14 +150,14 @@ const TheHazel = () => {
             </div>
             <div className='request-wrapper'>
                 <div className='con-reg'>
-                    <div className='request-intro'>
+                    {/* <div className='request-intro'>
                         <p className='subheading'>Step Five</p>
                         <h6>Request a Free Home Visit</h6>
                         <p>Our consultant will be able to advise exactly which product is best for you and your home.</p>
-                    </div>
+                    </div> */}
                 <div className='form-and-content'>
                     <div className='supporting-content'>
-                        <p className='support-heading'>What will it include?</p>
+                        <p className='support-heading'>Your Home Visit Will Include</p>
                         <ul>
                             <li>
                                 <div className='icon-wrapper'>
@@ -182,15 +204,18 @@ const TheHazel = () => {
                                         width='84'
                                         height='70'
                                     />
-                                </div>
+                                </div> 
                                 <p>Our consultant will be able to advise exactly which product is best for you and your home.</p>
                             </li>
                         </ul>
                     </div>
-                   <ProductForm/> 
+                    <div className='form-wrapper'>
+                        <ProductForm productName='The Hazel'/> 
+                   </div>
                 </div>
                 </div>
             </div>
+
             <RecommendedProducts product='beds' />
         </div>
         </>

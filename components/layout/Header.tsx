@@ -63,7 +63,7 @@ const Header = () => {
                 </div> */}
               </div>
             </div>
-            <div className='header-inner '>
+            <div className='header-inner main-header'>
               <div className='con-reg'>
                 <div className="header-logo">
                     <Link href="/">

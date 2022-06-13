@@ -227,10 +227,11 @@
         }
         .rating {
             margin-left: auto;
-            width: 90px;
-            @media(min-width: 400px) {
-                 width: auto;
-             }
+            width: 110px;
+
+            // @media(min-width: 400px) {
+            //      width: auto;
+            //  }
         }
     }
     .review-content {
@@ -256,6 +257,7 @@
         }
         .logo {
             margin-left: auto;
+            width: 100px;
         }
     }
 }

@@ -43,7 +43,6 @@ const TheOak = () => {
                 img: '/icons/product-usps/made-to-fit.svg',
                 alt: 'Made To Fit'
             },
-           
         ]
     })
 
@@ -78,48 +77,17 @@ const TheOak = () => {
                 description="Choose a stylish & comfortable rise and recline chair & settee from our Oak Collection, representing the very best of classic British design."
             />
         <div className='product-wrapper'>
-        <div className='product-hero-wrapper'>
-                <div className='image-wrapper'>
-                    <Image
-                        src='/images/products/chairs/oak/oak-collection.png'
-                        alt='The Oak Chair'
-                        layout='fill'
-                        objectFit='cover'
-                        objectPosition='center'
-                    />
-                </div>
-
-            {/* <div className='product-hero-carousel'>
-                <div className='image-wrapper'>
-                    <Image
-                        src='/images/products/chairs/oak/oak-product-1.png'
-                        alt='The Oak Chair'
-                        layout='fill'
-                        objectFit='cover'
-                        objectPosition='center'
-                    />
-                    <Image
-                        src='/images/products/chairs/oak/oak-product-1.png'
-                        alt='The Oak Chair'
-                        layout='responsive'
-                        width={790}
-                        height={631}
-                    />
-                </div>
-            </div> */}
-            {/* <div className='product-intro'>
-                <p className='subheading'>A Touch of Elegance</p>
-                 <h1 className='name'>The Oak</h1>
-                 <h2 className='category'>Rise and Recliner Chair</h2>
-                 <p className='desc'>Combining amazing comfort and exceptional looks, the Oak is our most popular collection</p>
-                <div className='button-wrapper'>
-                    <button className='main-cta' onClick={() => setFormModal(true)}>
-                        <p className='mobile-text'>Request a Brochure</p>
-                        <p className='desktop-text'>Request Your Free Brochure</p>
-                    </button>
-                </div>
-            </div> */}
-    </div>
+            <div className='product-hero-wrapper'>
+                    <div className='image-wrapper'>
+                        <Image
+                            src='/images/products/chairs/oak/oak-collection.png'
+                            alt='The Oak Chair'
+                            layout='fill'
+                            objectFit='cover'
+                            objectPosition='center'
+                        />
+                    </div>
+            </div>
             <div className='product-details con-reg' id='product-information'>
                 <div className='product-content'>
                     <h3 className='heading'>Unparralleled Comfort and Support</h3>
@@ -214,13 +182,13 @@ const TheOak = () => {
                                         width='84'
                                         height='70'
                                     />
-                                </div>
+                                </div> 
                                 <p>Our consultant will be able to advise exactly which product is best for you and your home.</p>
                             </li>
                         </ul>
                     </div>
                     <div className='form-wrapper'>
-                        <ProductForm/> 
+                        <ProductForm productName='The Oak'/> 
                    </div>
                 </div>
                 </div>

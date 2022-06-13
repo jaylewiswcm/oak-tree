@@ -178,24 +178,12 @@ const Index = () => {
                             </div>
                             <p>Useful help & advice</p>
                           </li>
-                          <li>
-                            <div className='tick'>
-                              <Image 
-                                src='/vectors/green-tick.svg'
-                                alt='Tick 1'
-                                layout='responsive'
-                                width='40'
-                                height='40'
-                              />
-                            </div>
-                            <p>Completely FREE!</p>
-                          </li>
                         </ul>
                       </div>
                       <div className='form-wrapper'>
                         <div className="form-top">
-                          <h1>Request Your <span className='yellow-3'>Free</span> Brochure</h1>
-                          <p>Get our new brochure delivered to your door!</p>
+                        <h1>Request Your Free Brochure</h1>
+                          {/* <p>Get our new brochure delivered to your door!</p> */}
                         </div>
                       
                         <CollectionForm productType='chair'/>

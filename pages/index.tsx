@@ -17,6 +17,7 @@ import { OfferBanners } from '../components/sections/banners/OfferBanners';
 // images 
 import homeHeroGraphic from '../public/graphics/home-hero.png'
 import { Partners } from '../components/sections/partners/Partners';
+import OurValues from '../components/sections/our-values/OurValues';
 
 type MyProps = {setFormModal: any};
 type MyState = { requestClassName: string, uspOverlay:string };
@@ -143,6 +144,7 @@ closeUspOverlay = () => {
       <OccupationalTherapistSection />
       <Reviews orphan={false} />
       <Testimonials pageType='normal' />
+      <OurValues />
       <FooterCollections />
       <div className='over-13-years'>
         <Image 

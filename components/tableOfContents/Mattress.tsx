@@ -37,7 +37,6 @@ const Mattress = ({isOpen, openAccordian, reference}:ComponentProps) => {
         <div className='anchor-target' id='mattress-section'></div>
         <div className='product-content'>
             <div className='content'>
-                <p className='subheading oaktree-green'>Step Two</p>
                 <h5 className='heading'>Choose Your Mattress</h5>
                 <div className='mattress-wrapper'>
                     <div className='inner-wrapper'>

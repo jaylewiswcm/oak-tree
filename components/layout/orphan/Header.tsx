@@ -7,7 +7,7 @@ import Logo from '../../assets/Logo';
 const Header = () => {
     return (
         <header>
-            <div className='header-inner con-reg'>
+            <div className='header-inner orphan-header con-reg'>
                 <div className="header-logo">
                     <Link  href="/">
                         <a className="logo">

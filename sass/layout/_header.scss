@@ -290,6 +290,14 @@ header {
       }
     }
   }
+  .header-inner.orphan-header {
+      display: flex;
+      align-items: center;
+      padding: 10px 25px;
+      height: 100%;
+      max-width: 1400px;
+      box-shadow: none;
+  }
   .index-usp-banner {
     .inner-div {
         display: grid;

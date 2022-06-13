@@ -29,7 +29,7 @@ export const CollectionGrid = ({products}: ComponentProps) => {
     </div>
 
     <div className='collections-carousel con-reg hide'>
-    <Swiper
+              <Swiper
                 slidesPerView={"auto"}
                 spaceBetween={20}
                 centeredSlides={true}

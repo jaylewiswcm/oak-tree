@@ -186,7 +186,7 @@ export default class CollectionBrochureForm extends Component<ComponentProps> {
                 >
             <SwiperSlide className='no-swipe'>
             <div className='form-section'>
-                <p className="section-heading">Personal Information</p>
+                {/* <p className="section-heading">Personal Information</p> */}
             <TextInput 
                     error={this.state.sectionOneErrors.fnameError}
                     id="fname"
@@ -215,7 +215,7 @@ export default class CollectionBrochureForm extends Component<ComponentProps> {
                 </SwiperSlide>
                 <SwiperSlide className='no-swipe'>
                 <div  className="form-section">
-                <p className="section-heading">Your Address</p>
+                {/* <p className="section-heading">Your Address</p> */}
                     <PostCodeInput 
                         error={this.state.sectionTwoErrors.postalCodeError}
                         id="postal-code"
@@ -244,7 +244,7 @@ export default class CollectionBrochureForm extends Component<ComponentProps> {
                 </SwiperSlide>
                 <SwiperSlide className='no-swipe'>
                 <div className="form-section">
-                <p className="section-heading">Contact Information</p>
+                {/* <p className="section-heading">Contact Information</p> */}
                 <TelInput 
                     error={this.state.sectionThreeErrors.telError}
                     id="tel"

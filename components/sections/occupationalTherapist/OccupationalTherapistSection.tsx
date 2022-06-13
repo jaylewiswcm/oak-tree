@@ -64,6 +64,7 @@ const stagger = {
   return (
     <div className='occupational-therapist-wrapper'>
       {isOpen && <Modal classNames="" setShow={setOpenModal}><VideoCarousel videoId="l9adE0mWzUY" setShow={setOpenModal} show={isOpen}></VideoCarousel></Modal> }
+        <h3>Advised and approved by leading experts</h3>
         <div className='bg-dark-green-6'>
           <div className='occ-section-flex con-reg'>
             <div className='content'>
@@ -79,7 +80,7 @@ const stagger = {
                     />
                     </div>
               </div>
-            <h3>Advised and approved by leading experts</h3>
+            {/* <h3>Advised and approved by leading experts</h3> */}
             <p className='oc-intro'>All of our products are approved by Samantha Shann, occupational therapist. Samantha fully tests and evaluates everything we offer, ensuring it satisfies the high standards of an independent health professional.</p>
             <div className='partner-logo'>
               <p>In Partnership with</p>
@@ -95,7 +96,7 @@ const stagger = {
           </div>
           
           <div className='advice-quotes'>
-            <h4>Advice From Samantha</h4>
+            {/* <h4>Advice From Samantha</h4> */}
               <QuoteCarousel />
               <div className='advice-pagination'></div>
           </div>

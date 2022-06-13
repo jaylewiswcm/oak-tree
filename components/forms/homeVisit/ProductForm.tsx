@@ -17,10 +17,14 @@ const initialState = {
     postalCodeError:"",
     streetAddressError: "",
     telError: "",
-    emailError: "",  
+    emailError: ""
 }
 
-export default class ProductForm extends React.Component {
+interface ComponentProps {
+    productName: string
+}
+
+export default class ProductForm extends React.Component<ComponentProps> {
     state = initialState;
 
     onChange = (event: any) => {
@@ -103,7 +107,7 @@ export default class ProductForm extends React.Component {
   return (
     <div className='form'>
         <div className="form-top">
-            <p className='form-title'>Want to see <span className='product-name'>The Oak Chair</span> in your own home?</p>
+            <p className='form-title'>Want to see <span className='product-name'>{this.props.productName}</span> in your own home?</p>
             <p className='subtitle'>Request a home visit and our consultant will be able to advise exactly which product is best for you and your home.</p>
         </div>
         <form action="" onSubmit={(e) => this.onSubmit(e)} className='generic-form product-home-visit-form'>
