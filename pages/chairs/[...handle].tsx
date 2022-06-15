@@ -1,14 +1,16 @@
 import React, { useState, useRef, useEffect } from 'react'
 import Image from 'next/image';
 import { NextSeo } from 'next-seo';
+import { useRouter } from 'next/router';
 // Context
 import { useAppContext } from '../../context/state'
+// Shopify
+import { getProduct } from "../../lib/shopify"
 // Product Section Components
 import MaterialChair from '../../components/tableOfContents/MaterialChair';
 import MotorChair from '../../components/tableOfContents/MotorChair';
 import SizeChair from '../../components/tableOfContents/SizeChair';
 import Accessories from '../../components/tableOfContents/Accessories';
-import Reviews from '../../components/tableOfContents/Reviews';
 import RecommendedProducts from '../../components/sections/recommendedProducts/RecommendedProducts';
 import { TOC } from '../../components/tableOfContents/TOC';
 import { InformationContainer } from '../../components/product/InformationContainer';
@@ -17,34 +19,36 @@ import ProductForm from '../../components/forms/homeVisit/ProductForm';
 import OurProcess from '../../components/sections/process/OurProcess';
 
 
-const TheOak = () => {
+const ChairProduct = (props:any) => {
     const [isOpen, setAccordianOpen] = useState('');
-    const [product, setProduct] = useState({
-        name: 'The Oak',
-        category: 'Rise and Recline Chair',
-        usps: [
-            {
-                text: 'Qualifies for trade in',
-                img: '/icons/product-usps/trade-in.svg',
-                alt: 'Trade In'
-            },
-            {
-                text: 'Half Price Offer Available',
-                img: '/icons/product-usps/half-price.svg',
-                alt: 'Half Price Offer Available'
-            },
-            {
-                text: 'Unique High-Leg Lift',
-                img: '/icons/product-usps/leg-lift.svg',
-                alt: 'Unique High-Leg Lift'
-            },
-            {
-                text: 'Made to Fit',
-                img: '/icons/product-usps/made-to-fit.svg',
-                alt: 'Made To Fit'
-            },
-        ]
-    })
+    // const [product, setProduct] = useState({
+    //     name: 'The Oak',
+    //     category: 'Rise and Recline Chair',
+    //     usps: [
+    //         {
+    //             text: 'Qualifies for trade in',
+    //             img: '/icons/product-usps/trade-in.svg',
+    //             alt: 'Trade In'
+    //         },
+    //         {
+    //             text: 'Half Price Offer Available',
+    //             img: '/icons/product-usps/half-price.svg',
+    //             alt: 'Half Price Offer Available'
+    //         },
+    //         {
+    //             text: 'Unique High-Leg Lift',
+    //             img: '/icons/product-usps/leg-lift.svg',
+    //             alt: 'Unique High-Leg Lift'
+    //         },
+    //         {
+    //             text: 'Made to Fit',
+    //             img: '/icons/product-usps/made-to-fit.svg',
+    //             alt: 'Made To Fit'
+    //         },
+    //     ]
+    // })
+
+    const router = useRouter()
 
     // Refs
     const tocRef = useRef<HTMLDivElement>(null);
@@ -54,14 +58,26 @@ const TheOak = () => {
     const sectionFour = useRef<HTMLDivElement>(null);
     
     const { setProductPage, setFormModal} = useAppContext();
-  
-    useEffect(() => {   
-        setProductPage(true);
-        return () => {
-            setProductPage(false);
-        }
-    },[setProductPage])
     
+    const { title, handle, images, id } = props.product;
+
+    const heroImage = images.edges[0].node;
+
+    useEffect(() => {   
+
+        if(props.product.length === 0) {
+            router.push('/404')
+        }
+    
+        setProductPage(true);
+        
+        return () => {
+            setProductPage(false);        
+        }
+    },[setProductPage, props, router])
+
+
+ 
     const openAccordian = (type:string) => {
         if(isOpen === type ) {
             setAccordianOpen('')
@@ -70,6 +86,11 @@ const TheOak = () => {
             setAccordianOpen(type)
         }
     }
+
+   const myLoader = ({src, width, quality}:any) => {
+        return `${src}?w=${width}&q=${quality || 75}`
+    }
+
     return (
         <>
              <NextSeo  
@@ -80,8 +101,9 @@ const TheOak = () => {
             <div className='product-hero-wrapper'>
                     <div className='image-wrapper'>
                         <Image
-                            src='/images/products/chairs/oak/oak-collection.png'
-                            alt='The Oak Chair'
+                            loader={myLoader}
+                            src={heroImage.originalSrc}
+                            alt={`The ${handle}`}
                             layout='fill'
                             objectFit='cover'
                             objectPosition='center'
@@ -114,7 +136,7 @@ const TheOak = () => {
                         </div>
                     </div>
                 </div>
-                    <InformationContainer product={product} productType='chair' showForm={() => setFormModal(true)}/>
+                    <InformationContainer product={props.product} productType='chair' showForm={() => setFormModal(true)}/>
             </div>
             {/* <Reviews product='chair' isOpen={isOpen} openAccordian={() => openAccordian('reviews')}/> */}
             <OurProcess />
@@ -128,11 +150,6 @@ const TheOak = () => {
             </div>
             <div className='request-wrapper'>
                 <div className='con-reg'>
-                    {/* <div className='request-intro'>
-                        <p className='subheading'>Step Five</p>
-                        <h6>Request a Free Home Visit</h6>
-                        <p>Our consultant will be able to advise exactly which product is best for you and your home.</p>
-                    </div> */}
                 <div className='form-and-content'>
                     <div className='supporting-content'>
                         <p className='support-heading'>Your Home Visit Will Include</p>
@@ -188,16 +205,41 @@ const TheOak = () => {
                         </ul>
                     </div>
                     <div className='form-wrapper'>
-                        <ProductForm productName='The Oak'/> 
+                        <ProductForm productName={`The ${title}`}/> 
                    </div>
                 </div>
                 </div>
             </div>
 
-            <RecommendedProducts product='chairs'/>
+            <RecommendedProducts product='chairs' productId={id}/>
         </div>
         </>
     )
 }
 
-export default TheOak;
+export default ChairProduct;
+
+export const getServerSideProps = async (context:any) => {
+
+    // Retrieve route handle from context
+    const productHandleFromRoute = context.params.handle
+
+    let productHandle = '';
+    // Format the product name
+    if(productHandleFromRoute[0].includes('the')) {
+        productHandle = productHandleFromRoute[0].split('the')[1].substring(1)
+    }
+
+    // Get Oak Product 
+    const product = await getProduct(productHandle);
+    
+    return {
+  
+      props: {
+        product: product   
+      },
+  
+    };
+  
+  };
+  

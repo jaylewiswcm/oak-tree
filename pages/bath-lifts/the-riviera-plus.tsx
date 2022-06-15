@@ -15,9 +15,9 @@ const TheRivieraPlus = () => {
                 title="The Riviera Plus | Oak Tree Mobility"
                 description="The therapeutic benefits of a long soak in the tub are numerous. Now, with the Oak Tree Riviera, you can relax and enjoy a comfortable bath again. See more."
             />
-        <div className='product-wrapper'>
+        <div className='product-wrapper bath-lift-product'>
             <div className='con-reg'>
-        <div className='product-hero-wrapper '>
+        <div className='product-hero-wrapper'>
             <div className='product-hero-carousel'>
                 <div className='image-wrapper'>
                         <Image 
@@ -41,7 +41,7 @@ const TheRivieraPlus = () => {
                     </button>
                 </div>
             </div>
-    </div>
+        </div>
            <div className='info-and-images'>
                <div className='image-grid'>
                <div className='image-wrapper'>
@@ -178,14 +178,9 @@ const TheRivieraPlus = () => {
               </div>
               <div className='request-wrapper'>
                 <div className='con-reg'>
-                    <div className='request-intro'>
-                        <p className='subheading'>Step Five</p>
-                        <h6>Request a Free Home Visit</h6>
-                        <p>Our consultant will be able to advise exactly which product is best for you and your home.</p>
-                    </div>
-                <div className='form-and-content'>
+                    <div className='form-and-content'>
                     <div className='supporting-content'>
-                        <p className='support-heading'>What will it include?</p>
+                        <p className='support-heading'>Your Home Visit Will Include</p>
                         <ul>
                             <li>
                                 <div className='icon-wrapper'>
@@ -232,12 +227,14 @@ const TheRivieraPlus = () => {
                                         width='84'
                                         height='70'
                                     />
-                                </div>
+                                </div> 
                                 <p>Our consultant will be able to advise exactly which product is best for you and your home.</p>
                             </li>
                         </ul>
                     </div>
-                   <ProductForm productName='The Riviera Plus'/> 
+                    <div className='form-wrapper'>
+                        <ProductForm productName={`The Riviera`}/> 
+                   </div>
                 </div>
                 </div>
             </div>

@@ -10,7 +10,7 @@ import Resources from '../../components/sections/resources/Resources';
 import FooterCollections from '../../components/sections/collections/FooterCollections';
 import { Video } from '../../components/video/Video';
 // images 
-import heroImage from '../../public/images/products/bath-lifts/bath-lift-collection-hero.png'
+import heroImage from '../../public/images/heros/bath-lift-collection-hero.jpg'
 import tech1 from '../../public/images/products/bath-lifts/the-riviera/tech-1.png'
 import tech2 from '../../public/images/products/bath-lifts/the-riviera/tech-2.png'
 import tech3 from '../../public/images/products/bath-lifts/the-riviera/tech-3.png'
@@ -23,78 +23,75 @@ const index = () => {
                 description="An Oak Tree bath lift gently lowers you in and out of the bath, helping you enjoy a relaxing and therapeutic soak again. Take a look at our bath lifts."
             />
              <div className='product-collections'>
-              <div className='hero-split con-reg'>
-                  <div className='hero-left'>
-                <div className='hero-image'>
+             <div className='col-hero'>
+                <div className='hero-image bath-lift-hero'>
                     <Image 
                         src={heroImage}
                         alt='Our Rise and Recline Chairs'
                         layout='fill'
                         objectFit='cover'
-                        objectPosition='right center'
+                        objectPosition='center'
                         quality={100}
                         placeholder='blur'
+                        priority
                     />
                 </div>
-                <div className="hero-intro">
-                <div className="intro-border"></div>
-                    <p className='subheading blue-3'>Oak Tree</p>
-                    <h1>Bath Lifts</h1>
-                    <p className='intro-statement'>Enjoy sitting at the the bottom of the bath and bathing as normal</p>
-                </div>
-                </div>
+                <div className='hero-inner con-reg'>
+                <button className='mobile-cta main-cta'>
+                  <p>Request a Free Brochure</p>
+                </button>
                 <div className='hero-form'>
                     <div className='form-top'>
                         <h2>Request Your <span className='yellow-3'>Free</span> Brochure</h2>
-                        <p>Get our new brochure delivered to your door!</p>
                     </div>
                     <div className='brochure-form-usps'>
-      <ul>
-        <li>
-          <span className='tick'><Image src='/vectors/green-tick.svg' alt='green tick' width={20} height={20}/></span>
-          <p>See our full collections</p>
-        </li>
-        <li>
-          <span className='tick'><Image src='/vectors/green-tick.svg' alt='green tick' width={20} height={20}/></span>
-          <p>Brand new products</p>
-        </li>
-        <li>
-          <span className='tick'><Image src='/vectors/green-tick.svg' alt='green tick' width={20} height={20}/></span>
-          <p>Useful help & advice</p>
-        </li>
-        <li>
-          <span className='tick'><Image src='/vectors/green-tick.svg' alt='green tick' width={20} height={20}/></span>
-          <p>Completely FREE!</p>
-        </li>
-      </ul>
-      <div className="brochure-section">
-        <div className='brochure-image'>
-          <Image 
-            src='/brochures/bath-lift-brochure.png'
-            alt='Brochure'
-            layout='responsive'
-            width={1000}
-            height={1412}
-          />
-        </div>
-        <div className='brochure-open'>
-        <Image 
-            src='/brochures/bath-lift-brochure-open.png'
-            alt='Brochure'
-            layout='responsive'
-            width={1000}
-            height={708}
-          />
-        </div>
-      </div>
-    </div>
-                   <CollectionForm productType='bath_lift'/>
+                  <ul>
+                    <li>
+                      <span className='tick'><Image src='/vectors/green-tick.svg' alt='green tick' width={20} height={20}/></span>
+                      <p>See our full collections</p>
+                    </li>
+                    <li>
+                      <span className='tick'><Image src='/vectors/green-tick.svg' alt='green tick' width={20} height={20}/></span>
+                      <p>Brand new products</p>
+                    </li>
+                    <li>
+                      <span className='tick'><Image src='/vectors/green-tick.svg' alt='green tick' width={20} height={20}/></span>
+                      <p>Useful help & advice</p>
+                    </li>
+                    <li>
+                      <span className='tick'><Image src='/vectors/green-tick.svg' alt='green tick' width={20} height={20}/></span>
+                      <p>Completely FREE!</p>
+                    </li>
+                  </ul>
+                <div className="brochure-section">
+                  <div className='brochure-image'>
+                    <Image 
+                      src='/brochures/chair-brochure.png'
+                      alt='Brochure'
+                      layout='responsive'
+                      width={1000}
+                      height={1412}
+                    />
+                  </div>
+                  <div className='brochure-open'>
+                  <Image 
+                      src='/brochures/chair-brochure-open.png'
+                      alt='Brochure'
+                      layout='responsive'
+                      width={1000}
+                      height={708}
+                    />
+                  </div>
                 </div>
-              </div>    
+              </div>
+                   <CollectionForm productType='chair'/>
+                </div>
+                </div>
+              </div>  
               <h2 className='heading'>Enjoy a Bath Like You Used To</h2>
               <div className='collections-grid single-grid con-reg'>
                   <Link href='/bath-lifts/the-riviera-plus'>
-                    <a className='collection-item'>
+                    <a className='collection-item bath-lift-collection-item'>
                         <div className='image-wrapper'>
                             <Image 
                                 src='/images/products/bath-lifts/the-riviera/the-riviera-collection.png'

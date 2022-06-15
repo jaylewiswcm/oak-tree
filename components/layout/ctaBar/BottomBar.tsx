@@ -25,7 +25,9 @@ export const BottomBar = ({className}: ComponentProps) => {
                     </span>
                     <p>Request a Brochure</p>
                 </button>
-        <div className='inner-wrapper con-reg'>
+
+        
+        <div className='inner-wrapper con-reg'>            
             <div className='phone-wrapper'>
                 {/* <div className='icon-wrapper'>
                 <Image
@@ -41,8 +43,8 @@ export const BottomBar = ({className}: ComponentProps) => {
             </div>
             <div className='brochure-cta'>
                 <button className='bottom-cta' onClick={() => setFormToShow(true)}>
-                    <p>Request Your<br/> <b>Free</b> Brochure</p>
-                    <span className='brochure'>
+                
+                    {/* <span className='brochure'>
                         <Image
                             src='/brochures/chair-brochure.png'
                             alt='Brochure'
@@ -50,7 +52,28 @@ export const BottomBar = ({className}: ComponentProps) => {
                             width='1000'
                             height='1412'
                         />
-                    </span>
+                    </span>  */}
+                       <div className="brochure-section">
+                          <div className='brochure-image'>
+                            <Image 
+                              src='/brochures/chair-brochure.png'
+                              alt='Brochure'
+                              layout='responsive'
+                              width={1000}
+                              height={1412}
+                            />
+                          </div>
+                          <div className='brochure-open'>
+                          <Image 
+                              src='/brochures/chair-brochure-open.png'
+                              alt='Brochure'
+                              layout='responsive'
+                              width={1000}
+                              height={708}
+                            />
+                          </div>
+                        </div>
+                        <p>Request Your<br/> <span>Free</span> Brochure</p>
                 </button>
             </div>
         </div>

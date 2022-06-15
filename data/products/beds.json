@@ -1,6 +1,6 @@
 [{
     "name" : "The Hazel",
-    "collectionImage" : "/images/products/beds/hazel/hazel-collection.png",
+    "collectionImage" : "/images/products/beds/hazel/hazel-collection.jpg",
     "subheading" : "An Elegant and Refined Bed",
     "desc": "The Hazel bed strikes a fine balance between traditional and contemporary, making it fit in well with most interior styles.",
     "url" : "/adjustable-beds/the-hazel",
@@ -12,10 +12,10 @@
 },
 {
     "name" : "The Hesper",
-    "collectionImage" : "/images/products/beds/hesper/hesper-collection.png",
+    "collectionImage" : "/images/products/beds/hesper/hesper-collection.jpg",
     "subheading" : "Eye Catching With Style",
     "desc": "With its clean lines and square head, this eye-catching adjustable bed will be perfectly at home in any contemporary setting.",
-    "url" : "/adjustable-beds/the-hazel",
+    "url" : "/adjustable-beds/the-hesper",
     "icon": "/icons/collection/leaves/icon-hesper.svg",
     "swatch": {
         "src" : "/images/fabric/swatches/coniston-floral-champagne.png",
@@ -24,7 +24,7 @@
 },
 {
     "name" : "The Oysterwood",
-    "collectionImage" : "/images/products/beds/oysterwood/oysterwood-collection.png",
+    "collectionImage" : "/images/products/beds/oysterwood/oysterwood-collection.jpg",
     "subheading" : "A Versatile Bed With Plenty of Style",
     "desc": "One of the more recent additions to the Oak Tree Mobility family, the Oysterwood is a versatile option for any bedroom setting.",
     "url" : "/adjustable-beds/the-oysterwood",
@@ -48,7 +48,7 @@
 },
 {
     "name" : "The Birch",
-    "collectionImage" : "/images/products/beds/birch/birch-collection.png",
+    "collectionImage" : "/images/products/beds/birch/birch-collection.jpg",
     "subheading" : "Modern Technology and British Style",
     "desc": "If you favour simpler and more traditional-looking furniture, you’ll like the classic styling of the Birch adjustable bed.",
     "url" : "/adjustable-beds/the-birch",
@@ -60,7 +60,7 @@
 },
 {
     "name" : "The Lilac",
-    "collectionImage" : "/images/products/beds/lilac/lilac-collection.png",
+    "collectionImage" : "/images/products/beds/lilac/lilac-collection.jpg",
     "subheading" : "Innovation and stylish",
     "desc": "With its solid, regal lines and plump head and footboard, this classic choice will bring you long-lasting style and durability.",
     "url" : "/adjustable-beds/the-lilac",

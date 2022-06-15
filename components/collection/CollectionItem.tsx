@@ -10,34 +10,73 @@ import accessoriesGreen from '../../public/icons/collection/icon-accessories-gre
 import fabricGrey from '../../public/icons/collection/icon-fabric-grey.svg'
 import fabricGreen from '../../public/icons/collection/icon-fabric-green.svg'
 
-interface ComponentProps {
-    product: {
-        name: string
-        collectionImage: string
-        subheading: string
-        desc: string
-        url: string
-        icon: string
-        swatch: {
-            src: string
-            name:string
-        }
+type Image = {
+    node: {
+        originalSrc: string
+        altText: string | null
     }
+  }
+  
+  type Product = {
+    node : {
+      handle: string
+      id: string
+      images: {
+        edges: Array<Image>
+      }
+      description: string
+      title: string
+      productLeaf: {
+        type: string
+        value: string
+      }
+      productSubheading:  {
+        type: string
+        value: string
+      }
+      productSwatch:  {
+        type: string
+        value: string
+      }
+      productURL:  {
+        type: string
+        value: string
+      }
+      productType:  {
+        type: string
+        value: string
+      }
+    }
+  }
+
+interface ComponentProps {
+    product: Product
     setShow: any
 }
 
 export const CollectionItem = ({product, setShow}: ComponentProps ) => {
     const [itemHover, setItemHover] = useState(false)
-   const { name, collectionImage, subheading, desc, url, icon, swatch} = product
 
+   const { id, title, handle, description, images, productURL, productSwatch, productSubheading, productLeaf } = product.node;
+
+   const swatch = JSON.parse(productSwatch.value);
+
+   const productImage = images.edges[0].node;
+
+   const myLoader = ({src, width, quality}:any) => {
+        return `${src}?w=${width}&q=${quality || 75}`
+  }
+  
   return (
-      <div className='collection-item'>
-            <Link href={url} >
-                <a>
+    <Link href={productURL.value} >
+    <a className='collection-item'>
+            {/* <Link href={url} >
+                <a> */}
                     <div className='image-wrapper'>
                         <Image 
-                            src={collectionImage}
-                            alt={name + 'Collections'}
+                            loader={myLoader}
+                            src={productImage!.originalSrc}
+                            alt={title + 'collection'}
                             layout='responsive'
                             width={1000}
                             height={671}
@@ -45,7 +84,7 @@ export const CollectionItem = ({product, setShow}: ComponentProps ) => {
                         />
                          <div className='leaf'>
                             <div className='icon-wrapper'>
-                                <Image src={product.icon} alt={product.name} layout='responsive' width='50' height='50'/>
+                                <Image src={`/icons/collection/leaves/${productLeaf.value}`} alt={`The ${handle} leaf`} layout='responsive' width='50' height='50'/>
                             </div>
                         </div>
                         <div className='selected-swatch'>
@@ -58,13 +97,13 @@ export const CollectionItem = ({product, setShow}: ComponentProps ) => {
                                 </div>
                         </div>
                     </div>
-                </a>
-            </Link>
+                {/* </a>
+            </Link> */}
 
             <div className='col-details'>
             <div className='col-name-wrapper'>
                 <div className='title-and-swatches'>
-                <p className='subheading'>{subheading}</p>
+                <p className='subheading'>{productSubheading.value}</p>
                 <div className='swatches'>
                     <div className='swatch red'><div className='inner'><Image src='/images/fabric/chairs/boucle-claret.png' alt='Boucle Claret Fabric' layout='fill' objectFit='cover' objectPosition='center' quality="100" /></div></div>
                     <div className='swatch blue'><div className='inner'><Image src='/images/fabric/chairs/boucle-bluebell.png' alt='Boucle Bluebell Fabric' layout='fill' objectFit='cover' objectPosition='center' quality="100" /></div></div>
@@ -72,15 +111,15 @@ export const CollectionItem = ({product, setShow}: ComponentProps ) => {
                     <button onClick={() => setShow(true)}>Many more</button>
                 </div>
                 </div>
-                <Link href={url}>
-                    <a>
+                {/* <Link href={url}>
+                    <a> */}
                         <div className='name-wrapper'>
-                            <h2>{name}</h2>
+                            <h2>{title}</h2>
                         </div>
-                    </a>
-                </Link>
+                    {/* </a>
+                </Link> */}
             </div>
-            <p className='desc'>{desc}</p>
+            <p className='desc'>{description}</p>
             <ul className='desc-list'>
                 <li>
                     <span className='icon'><Image src='/icons/collection-usps/icon-measure.svg' alt='Made to measure' layout='responsive' width='29' height='21'/></span>
@@ -103,13 +142,13 @@ export const CollectionItem = ({product, setShow}: ComponentProps ) => {
                     <p>Selection of accessories, fabrics and leathers</p>
                 </li>
             </ul>
-            <Link href={url} >
-                <a>
+            {/* <Link href={url} >
+                <a> */}
                     <div className='main-cta'>
                         <p>View Collection</p>
                     </div>
-                </a>
-            </Link>
+                {/* </a>
+            </Link> */}
             </div>
         {/* <div className='btn-leaf-wrapper'>
     
@@ -119,7 +158,7 @@ export const CollectionItem = ({product, setShow}: ComponentProps ) => {
                     </div>
                 </div>
         </div> */}
-     
-      </div>
+        </a>
+    </Link>
   )
 }

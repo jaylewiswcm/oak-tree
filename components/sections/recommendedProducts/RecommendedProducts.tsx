@@ -1,12 +1,44 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link';
+// axios
+import axios from 'axios';
 
 interface ComponentProps {
     product: string
+    productId: string
 }
 
-const RecommendedProducts = ({product}: ComponentProps) => {
+const RecommendedProducts = ({product, productId}: ComponentProps) => {
+
+    console.log(productId);
+    const fetchRecommendedProducts = () => {
+
+        const url = `https://oak-tree-mobility.myshopify.com/recommendations/products.json?product_id=${productId}&limit=3`
+        axios.get(url).then(response => {
+            console.log(response);
+        });
+    }
+
+    useEffect(() => {
+        fetchRecommendedProducts()
+    }, [fetchRecommendedProducts])
+
+
+
+        // fetch(url +  "recommendations/products.json?product_id=1234567890123&limit=3")
+        // .then(response => response.json())
+        // .then(({ products }) => {
+        //     if (products.length > 0) {
+        //     const firstRecommendedProduct = products[0];
+    
+        //     alert(
+        //         `The title of the first recommended product is: ${firstRecommendedProduct.title}`
+        //     );
+        //     }
+        // }
+        // );
+
   return (
     <div className='other-products con-reg'>
     <h6>You may also like</h6>

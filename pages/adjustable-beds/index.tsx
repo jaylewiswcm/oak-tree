@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import { NextSeo } from 'next-seo'
 import Image from 'next/image';
-import Link from 'next/link';
+// Shopify 
+import { getProductsInCollection } from "../../lib/shopify"
 // Components
 import Reviews from '../../components/sections/reviews/Reviews';
 import FooterCollections from '../../components/sections/collections/FooterCollections';
@@ -13,10 +14,17 @@ import { CollectionGrid } from '../../components/collection/CollectionGrid';
 // data 
 import beds from '../../data/products/beds.json';
 // images 
-import heroImage from '../../public/images/heros/bed-collection-hero.png';
+import heroImage from '../../public/images/heros/bed-collection-hero.jpg';
 
-const Index = () => {
+const Index = (props:any) => {
     const [show, setFormToShow] = useState(false)
+
+    const { products } = props;
+
+    if(products.length === 0 ) {
+      return <div>Error</div>
+    }
+
     return (
         <>
             <NextSeo  
@@ -24,12 +32,11 @@ const Index = () => {
                 description="Here at Oak Tree Mobility we offer a two-man white-glove delivery and installation service included in the price of all our chairs and beds. Find out more."
             />
           <div className='product-collections'>
-              <div className='hero-split con-reg'>
-                  <div className='hero-left'>
+            <div className='col-hero'>
                 <div className='hero-image'>
                     <Image 
                         src={heroImage}
-                        alt='Our Adjustable Beds'
+                        alt='Our Rise and Recline Chairs'
                         layout='fill'
                         objectFit='cover'
                         objectPosition='center'
@@ -38,65 +45,62 @@ const Index = () => {
                         priority
                     />
                 </div>
-                <div className="hero-intro">
-                <div className="intro-border"></div>
-                    <p className='subheading'>Oak Tree</p>
-                    <h1>Adjustable Beds</h1>
-                    <p className='intro-statement'>Transform Your Life with an Oak Tree Mobility Bed</p>
-                </div>
-                </div>
+                <div className='hero-inner con-reg'>
+                <button className='mobile-cta main-cta'>
+                  <p>Request a Free Brochure</p>
+                </button>
                 <div className='hero-form'>
                     <div className='form-top'>
                         <h2>Request Your <span className='yellow-3'>Free</span> Brochure</h2>
-                        <p>Get our new brochure delivered to your door!</p>
                     </div>
                     <div className='brochure-form-usps'>
-      <ul>
-        <li>
-          <span className='tick'><Image src='/vectors/green-tick.svg' alt='green tick' width={20} height={20}/></span>
-          <p>See our full collections</p>
-        </li>
-        <li>
-          <span className='tick'><Image src='/vectors/green-tick.svg' alt='green tick' width={20} height={20}/></span>
-          <p>Brand new products</p>
-        </li>
-        <li>
-          <span className='tick'><Image src='/vectors/green-tick.svg' alt='green tick' width={20} height={20}/></span>
-          <p>Useful help & advice</p>
-        </li>
-        <li>
-          <span className='tick'><Image src='/vectors/green-tick.svg' alt='green tick' width={20} height={20}/></span>
-          <p>Completely FREE!</p>
-        </li>
-      </ul>
-      <div className="brochure-section">
-        <div className='brochure-image'>
-          <Image 
-            src='/brochures/chair-brochure.png'
-            alt='Brochure'
-            layout='responsive'
-            width={1000}
-            height={1412}
-          />
-        </div>
-        <div className='brochure-open'>
-        <Image 
-            src='/brochures/chair-brochure-open.png'
-            alt='Brochure'
-            layout='responsive'
-            width={1000}
-            height={708}
-          />
-        </div>
-      </div>
-    </div>
-                   <CollectionForm productType='bed'/>
+                  <ul>
+                    <li>
+                      <span className='tick'><Image src='/vectors/green-tick.svg' alt='green tick' width={20} height={20}/></span>
+                      <p>See our full collections</p>
+                    </li>
+                    <li>
+                      <span className='tick'><Image src='/vectors/green-tick.svg' alt='green tick' width={20} height={20}/></span>
+                      <p>Brand new products</p>
+                    </li>
+                    <li>
+                      <span className='tick'><Image src='/vectors/green-tick.svg' alt='green tick' width={20} height={20}/></span>
+                      <p>Useful help & advice</p>
+                    </li>
+                    <li>
+                      <span className='tick'><Image src='/vectors/green-tick.svg' alt='green tick' width={20} height={20}/></span>
+                      <p>Completely FREE!</p>
+                    </li>
+                  </ul>
+                <div className="brochure-section">
+                  <div className='brochure-image'>
+                    <Image 
+                      src='/brochures/chair-brochure.png'
+                      alt='Brochure'
+                      layout='responsive'
+                      width={1000}
+                      height={1412}
+                    />
+                  </div>
+                  <div className='brochure-open'>
+                  <Image 
+                      src='/brochures/chair-brochure-open.png'
+                      alt='Brochure'
+                      layout='responsive'
+                      width={1000}
+                      height={708}
+                    />
+                  </div>
                 </div>
-              </div>   
+              </div>
+                   <CollectionForm productType='chair'/>
+                </div>
+                </div>
+              </div>
               
               <h2 className='heading' >The Perfect Nights Sleep</h2>
               <p className='sub-heading' id='collection-top-chair'>Our Beds are fully customisable and made-to-fit your measurements - we have curated a collection of beds that embed different styles suited for different living environments</p>  
-              <CollectionGrid products={beds}/>  
+                <CollectionGrid products={products}/> 
               <OurProcess />    
               <Reviews orphan={false}/>      
               <CollectionUsps />
@@ -108,3 +112,19 @@ const Index = () => {
 }
 
 export default Index;
+
+
+export const getServerSideProps = async (context:any) => {
+
+  // Get All Products in Collection 
+  const products = await getProductsInCollection('adjustable-beds');
+  
+  return {
+
+    props: {
+      products: products   
+    },
+
+  };
+
+};

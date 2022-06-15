@@ -7,32 +7,59 @@ import bed_fabrics from '../../data/fabrics/bed_fabrics.json'
 import chair_accessories from '../../data/accessories/chair_accessories.json'
 import bed_accessories from '../../data/accessories/chair_accessories.json'
 
-interface usp {
-    text: string
-    img: string
-    alt: string
-}
+type Image = {
+    node: {
+        originalSrc: string
+        altText: string | null
+    }
+  }
+  
+  type Product = {
+      handle: string
+      id: string
+      images: {
+        edges: Array<Image>
+      }
+      description: string
+      title: string
+      productLeaf: {
+        type: string
+        value: string
+      }
+      productSubheading:  {
+        type: string
+        value: string
+      }
+      productSwatch:  {
+        type: string
+        value: string
+      }
+      productURL:  {
+        type: string
+        value: string
+      }
+      productType: {
+        type: string
+        value: string 
+      }
+  }
 
 interface ComponentProps {
     productType: string
-    product: {
-        name: string
-        category: string
-        usps: Array<usp>
-    }
+    product: Product
     showForm: any
 }
 
-export const InformationContainer = ({product, productType, showForm }:ComponentProps) => {
+export const InformationContainer = ({product, showForm }:ComponentProps) => {
 
-    const {name, category, usps} = product;
+    const { title, productType } = product;
 
   return (
     <div className='product-info'>
     <div className='info-container'>
     <div className='top'>
-        <h4>{name}</h4>
-        <p>{category}</p>
+        <h4>The {title}</h4>
+        <p>{productType.value}</p>
     </div>
     <div className="british-made-icon">
         <div className='icon'>
@@ -50,7 +77,7 @@ export const InformationContainer = ({product, productType, showForm }:Component
         </div>
     </div>
     <ul className='usp-list'>
-        {usps.map((usp, index) => 
+        {/* {usps.map((usp, index) => 
             <li key={index}>
               <span className='icon'>
                   <Image 
@@ -63,12 +90,12 @@ export const InformationContainer = ({product, productType, showForm }:Component
               </span>
               <p>{usp.text}</p>
           </li>
-        )}
+        )} */}
     </ul>
     <div className='info-section fabrics'>
         <p className='info-header'>Fabrics and Leathers:</p>
         <div className='swatch-grid'>
-            {productType === 'chair' && chair_fabrics.slice(0,6).map((fabric, index) => 
+            {productType.value === 'Rise and Recline Chair' && chair_fabrics.slice(0,6).map((fabric, index) => 
                 <div className='swatch' key={index}>
                     <div className='inner-swatch'>
                         <Image 
@@ -81,7 +108,7 @@ export const InformationContainer = ({product, productType, showForm }:Component
                     </div>
                 </div>
             ) }
-            {productType === 'bed' && bed_fabrics.slice(0,6).map((fabric, index) => 
+            {productType.value === 'Adjustable Bed' && bed_fabrics.slice(0,6).map((fabric, index) => 
                 <div className='swatch' key={index}>
                     <div className='inner-swatch'>
                         <Image 
@@ -101,7 +128,7 @@ export const InformationContainer = ({product, productType, showForm }:Component
     <div className='info-section accessories'>
         <p className='info-header'>Personalise with Accessories:</p>
         <div className='accessory-grid'>
-            {productType === 'chair' && chair_accessories.map((item, index) => 
+            {productType.value === 'Rise and Recline Chair' && chair_accessories.map((item, index) => 
                 <div className='item' key={index}>
                     <Image 
                         src={item.image}
@@ -112,7 +139,7 @@ export const InformationContainer = ({product, productType, showForm }:Component
                     />
                 </div>
             ) }
-            {productType === 'bed' && bed_accessories.map((item, index) => 
+            {productType.value === 'Adjustable Bed' && bed_accessories.map((item, index) => 
                 <div className='item' key={index}>
                     <Image 
                         src={item.image}
