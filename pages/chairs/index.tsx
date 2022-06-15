@@ -19,7 +19,7 @@ import { CollectionGrid } from '../../components/collection/CollectionGrid';
 // images 
 import heroImage from '../../public/images/heros/chair-collection-hero.jpg'
 // data
-import chairs from '../../data/products/chairs.json';
+// import chairs from '../../data/products/chairs.json';
 import { OfferBanners } from '../../components/sections/banners/OfferBanners';
 
 const Index = (props:any) => {
