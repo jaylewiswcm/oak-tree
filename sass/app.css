@@ -1201,6 +1201,12 @@ body.freeze {
   bottom: 150px;
 }
 
+.LandbotLivechat, .kAfRMA, .jLUvWe {
+  bottom: 0px !important;
+  right: unset !important;
+  left: 0 !important;
+}
+
 li {
   list-style-type: none;
   font-size: 1.6rem;

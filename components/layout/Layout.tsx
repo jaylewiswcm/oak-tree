@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useCallback } from 'react'
+import React, { useEffect, useState } from 'react'
 // Context
 import { useAppContext } from '../../context/state'
 // Layout Components
@@ -12,6 +12,7 @@ import Modal from '../modal/Modal';
 import PopupBrochureRequestForm from '../forms/PopupBrochureRequestForm';
 // USP Components
 import {UspOverlay} from '../overlay/UspOverlay';
+import LandbotChat from '../chatbot/LandbotChat';
 
 interface ComponentProps  {
     children: any
@@ -54,6 +55,7 @@ interface ComponentProps  {
               <Header />
               <BreadcrumbNav />
               { children }
+              <LandbotChat />
               <BottomBar className={hideClass}/>
               {overlay && <UspOverlay className={overlayClass} hideOverlay={hideOverlay} />}
               {formModal &&  <Modal classNames='form-modal' setShow={setFormModal}><PopupBrochureRequestForm setShow={setFormModal} /></Modal>}
