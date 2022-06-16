@@ -95,7 +95,7 @@ const TheHazel = (props:any) => {
     return (
         <>
             <NextSeo  
-                title="The Hazel | Oak Tree Mobility"
+                title={`The ${title} | Oak Tree Mobility`}
                 description="The Hazel adjustable bed strikes a fine balance between traditional and contemporary, making it fit in well with most interior styles. Find out more."
             />
         <div className='product-wrapper'>
@@ -235,7 +235,7 @@ const TheHazel = (props:any) => {
                         </ul>
                     </div>
                     <div className='form-wrapper'>
-                        <ProductForm productName='The Hazel'/> 
+                        <ProductForm productName={`The ${title}`}/> 
                    </div>
                 </div>
                 </div>

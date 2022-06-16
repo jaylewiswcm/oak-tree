@@ -11,6 +11,10 @@
   "dependencies": {
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
+    "@firebase/app": "^0.7.26",
+    "@firebase/auth": "^0.20.3",
+    "@firebase/database": "^0.13.1",
+    "@landbot/core": "^1.6.2",
     "@mui/material": "^5.8.0",
     "@sanity/cli": "^2.30.0",
     "@shopify/shopify-api": "^3.1.3",

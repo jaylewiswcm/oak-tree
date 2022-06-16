@@ -12,7 +12,7 @@ import Modal from '../modal/Modal';
 import PopupBrochureRequestForm from '../forms/PopupBrochureRequestForm';
 // USP Components
 import {UspOverlay} from '../overlay/UspOverlay';
-import LandbotChat from '../chatbot/LandbotChat';
+import LandbotChat  from '../chatbot/LandbotChat';
 
 interface ComponentProps  {
     children: any
