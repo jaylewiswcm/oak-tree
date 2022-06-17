@@ -57,7 +57,7 @@ export default {
         { type: 'video' },
         { type: 'gallery' },
         { type: 'form' },
-        { type: 'hero' },
+    
         ]
     }
   ],

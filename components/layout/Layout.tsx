@@ -29,7 +29,7 @@ interface ComponentProps  {
    
       const handleScroll = () => {
         const position = window.pageYOffset;
-        console.log(productPage)
+        
         if(!productPage) {
           if(position < 500) {
               setHideClass("hide-bar") 
@@ -44,7 +44,6 @@ interface ComponentProps  {
       window.addEventListener("scroll", handleScroll);
       return () => {
         window.removeEventListener("scroll", handleScroll);
- 
       };
 
     }, [productPage, setHideClass, setOverlayClass]);
