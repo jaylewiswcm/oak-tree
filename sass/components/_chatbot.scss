@@ -1,5 +1,35 @@
 .LandbotLivechat, .kAfRMA, .jLUvWe {
-        bottom:0px!important;
+        bottom:36px!important;
         right: unset!important;
-        left: 0!important;
+        left:26px!important;
+        // position: relative!important;
+        // width:100px!important;
+        // height: 100px!important;
+        box-shadow: none; 
+}
+.kKkmhx {
+        height: 100%!important;
+}
+.is-launcher__avatar{
+        width: 100% !important;
+        height: 100% !important;
+        }
+        .launcher__bubble{
+        width: 85px;
+        height: 85px;
+        }
+
+// .jLUvWe {
+//         background-color: $dark-green-1;
+//         border-radius: 50%;
+// }
+// .jLUvWe.is-open {
+//         background: none;
+//         border-radius: 50%;
+// }
+.chatbot {
+        @media(min-width: 800px) {
+                width: 50px;
+                height: 50px;
+            }
 }
