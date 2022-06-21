@@ -5,44 +5,16 @@ import Link from 'next/link';
 import axios from 'axios';
 
 interface ComponentProps {
-    product: string
-    productId: string
+    products: {}
+ 
 }
 
-const RecommendedProducts = ({product, productId}: ComponentProps) => {
-
-    console.log(productId);
-    const fetchRecommendedProducts = () => {
-
-        const url = `https://oak-tree-mobility.myshopify.com/recommendations/products.json?product_id=${productId}&limit=3`
-        axios.get(url).then(response => {
-            console.log(response);
-        });
-    }
-
-    useEffect(() => {
-        fetchRecommendedProducts()
-    }, [fetchRecommendedProducts])
-
-
-
-        // fetch(url +  "recommendations/products.json?product_id=1234567890123&limit=3")
-        // .then(response => response.json())
-        // .then(({ products }) => {
-        //     if (products.length > 0) {
-        //     const firstRecommendedProduct = products[0];
+const RecommendedProducts = (products:ComponentProps) => {
     
-        //     alert(
-        //         `The title of the first recommended product is: ${firstRecommendedProduct.title}`
-        //     );
-        //     }
-        // }
-        // );
-
   return (
     <div className='other-products con-reg'>
     <h6>You may also like</h6>
-    {product === 'chairs' && 
+
     <div className='product-grid'>
     <Link href="/chairs/the-oak">
         <a className='product'>
@@ -105,8 +77,7 @@ const RecommendedProducts = ({product, productId}: ComponentProps) => {
         </a>
         </Link>
     </div>
-    }
-    {product === 'beds' && 
+{/* 
     <div className='product-grid'>
     <Link href="/adjustable-beds/the-hazel">
         <a className='product'>
@@ -169,9 +140,11 @@ const RecommendedProducts = ({product, productId}: ComponentProps) => {
         </a>
     </Link>
 
-    </div>
-    }
+    </div> */}
+    
     </div>
   )
 }
-export default RecommendedProducts
+export default RecommendedProducts;
+  
+  

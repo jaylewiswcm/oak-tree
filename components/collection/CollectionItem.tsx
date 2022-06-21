@@ -57,7 +57,7 @@ interface ComponentProps {
 export const CollectionItem = ({product, setShow}: ComponentProps ) => {
     const [itemHover, setItemHover] = useState(false)
 
-   const { id, title, handle, description, images, productURL, productSwatch, productSubheading, productLeaf } = product.node;
+   const { id, title, handle, description, images, productURL, productSwatch, productSubheading, productLeaf, productType } = product.node;
 
    const swatch = JSON.parse(productSwatch.value);
 
@@ -78,8 +78,8 @@ export const CollectionItem = ({product, setShow}: ComponentProps ) => {
                             src={productImage!.originalSrc}
                             alt={title + 'collection'}
                             layout='responsive'
-                            width={1000}
-                            height={671}
+                            width={1500}
+                            height={1006}
                             quality={100}
                         />
                          <div className='leaf'>
@@ -87,6 +87,7 @@ export const CollectionItem = ({product, setShow}: ComponentProps ) => {
                                 <Image src={`/icons/collection/leaves/${productLeaf.value}`} alt={`The ${handle} leaf`} layout='responsive' width='50' height='50'/>
                             </div>
                         </div>
+                        { productType.value === 'Rise and Recline Chair' && 
                         <div className='selected-swatch'>
                             <div className="image">
                                 <Image src={swatch.src} alt={`Current Swatch - ${swatch.name}`} layout='responsive' width='60px' height='60px'/>
@@ -96,6 +97,7 @@ export const CollectionItem = ({product, setShow}: ComponentProps ) => {
                                     <div className='arrow'></div>
                                 </div>
                         </div>
+                        }
                     </div>
                 {/* </a>
             </Link> */}
@@ -103,21 +105,23 @@ export const CollectionItem = ({product, setShow}: ComponentProps ) => {
             <div className='col-details'>
             <div className='col-name-wrapper'>
                 <div className='title-and-swatches'>
-                <p className='subheading'>{productSubheading.value}</p>
-                <div className='swatches'>
-                    <div className='swatch red'><div className='inner'><Image src='/images/fabric/chairs/boucle-claret.png' alt='Boucle Claret Fabric' layout='fill' objectFit='cover' objectPosition='center' quality="100" /></div></div>
-                    <div className='swatch blue'><div className='inner'><Image src='/images/fabric/chairs/boucle-bluebell.png' alt='Boucle Bluebell Fabric' layout='fill' objectFit='cover' objectPosition='center' quality="100" /></div></div>
-                    <div className='swatch brown'><div className='inner'><Image src='/images/fabric/chairs/mocca-leather.png' alt='Moca Leather' layout='fill' objectFit='cover' objectPosition='center' quality="100"/></div></div>                
-                    <button onClick={() => setShow(true)}>Many more</button>
-                </div>
-                </div>
+                    {/* <p className='subheading'>{productSubheading.value}</p>  */}
+                    <div className='swatches'>
+                        <div className='swatch red'><div className='inner'><Image src='/images/fabric/chairs/boucle-claret.png' alt='Boucle Claret Fabric' layout='fill' objectFit='cover' objectPosition='center' quality="100" /></div></div>
+                        <div className='swatch blue'><div className='inner'><Image src='/images/fabric/chairs/boucle-bluebell.png' alt='Boucle Bluebell Fabric' layout='fill' objectFit='cover' objectPosition='center' quality="100" /></div></div>
+                        <div className='swatch brown'><div className='inner'><Image src='/images/fabric/chairs/mocca-leather.png' alt='Moca Leather' layout='fill' objectFit='cover' objectPosition='center' quality="100"/></div></div>                
+                        {/* <button onClick={() => setShow(true)}>Many more</button> */}
+                    </div>
+                </div> 
                 {/* <Link href={url}>
                     <a> */}
                         <div className='name-wrapper'>
-                            <h2>{title}</h2>
+                            <h2>The {title}</h2>
+                            <p className='subheading'>{productSubheading.value}</p>
                         </div>
                     {/* </a>
                 </Link> */}
+              
             </div>
             <p className='desc'>{description}</p>
             <ul className='desc-list'>

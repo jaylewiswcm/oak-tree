@@ -2,10 +2,11 @@ import React, { useState, useRef, useEffect } from 'react'
 import Image from 'next/image';
 import { NextSeo } from 'next-seo';
 import { useRouter } from 'next/router';
+import Link from 'next/link';
 // Context
 import { useAppContext } from '../../context/state'
 // Shopify
-import { getProduct } from "../../lib/shopify"
+import { getProduct, getProductsForRecommendations } from "../../lib/shopify"
 // Product Section Components
 import MaterialChair from '../../components/tableOfContents/MaterialChair';
 import MotorChair from '../../components/tableOfContents/MotorChair';
@@ -21,32 +22,6 @@ import OurProcess from '../../components/sections/process/OurProcess';
 
 const ChairProduct = (props:any) => {
     const [isOpen, setAccordianOpen] = useState('');
-    // const [product, setProduct] = useState({
-    //     name: 'The Oak',
-    //     category: 'Rise and Recline Chair',
-    //     usps: [
-    //         {
-    //             text: 'Qualifies for trade in',
-    //             img: '/icons/product-usps/trade-in.svg',
-    //             alt: 'Trade In'
-    //         },
-    //         {
-    //             text: 'Half Price Offer Available',
-    //             img: '/icons/product-usps/half-price.svg',
-    //             alt: 'Half Price Offer Available'
-    //         },
-    //         {
-    //             text: 'Unique High-Leg Lift',
-    //             img: '/icons/product-usps/leg-lift.svg',
-    //             alt: 'Unique High-Leg Lift'
-    //         },
-    //         {
-    //             text: 'Made to Fit',
-    //             img: '/icons/product-usps/made-to-fit.svg',
-    //             alt: 'Made To Fit'
-    //         },
-    //     ]
-    // })
 
     const router = useRouter()
 
@@ -64,8 +39,6 @@ const ChairProduct = (props:any) => {
     const heroImage = images.edges[0].node;
 
     useEffect(() => {   
-        console.log(props.product.chairRisingImage);
-
         if(props.product.length === 0) {
             router.push('/404')
         }
@@ -109,6 +82,23 @@ const ChairProduct = (props:any) => {
                             objectFit='cover'
                             objectPosition='center'
                         />
+                        <div className='product-title'>
+                            <h1>The {title}</h1>
+                            <p>{props.product.productSubheading.value}</p>
+                        </div>
+                    </div>
+                    <div className='scroll-down-button'>
+                        <Link href='#product-information'> 
+                            <a className='arrow-button'>
+                                <Image 
+                                    src='/buttons/scroll-down-arrow.svg'
+                                    alt='Scroll Down Arrow'
+                                    layout='responsive'
+                                    width='50'
+                                    height='50'
+                                />
+                            </a>
+                        </Link>
                     </div>
             </div>
             <div className='product-details con-reg' id='product-information'>
@@ -116,57 +106,40 @@ const ChairProduct = (props:any) => {
                     <h3 className='heading'>{props.product.productTitle.value}</h3>
                     <p className='desc'>{props.product.productParagraph.value}</p>
                     <div className='product-images chair-image-grid'>
-                        {/* <div className='image-wrapper'>
-                            <Image 
-                                loader={myLoader}
-                                src={props.product.chairRisingImage.value}
-                                alt='The Oak Chair'
-                                layout='responsive'
-                                width={577}
-                                height={461}
-                            />
-                        </div>
                         <div className='image-wrapper'>
                             <Image 
                                 loader={myLoader}
                                 src={props.product.chairLegLiftImage.value}
-                                alt='The Oak Chair'
+                                alt={`${props.product.title} 1`}
                                 layout='responsive'
-                                width={577}
-                                height={461}
+                                width={1369}
+                                height={1500}
+                                quality={100}
                             />
-                        </div> */}
+                        </div>
                         <div className='image-wrapper'>
                             <Image 
-                                src='/images/products/chairs/oak/oak-product-2.png'
-                                alt='The Oak Chair'
+                                loader={myLoader}
+                                src={props.product.chairRisingImage.value}
+                                alt={`${props.product.title} 2`}
                                 layout='responsive'
-                                width={577}
-                                height={461}
+                                width={1369}
+                                height={1500}
+                                quality={100}
+                            />
+                        </div>
+                        <div className='image-wrapper'>
+                            <Image 
+                                loader={myLoader}
+                                src={props.product.chairLifestyleImage.value}
+                                alt={`${props.product.title} 3`}
+                                layout='responsive'
+                                width={1500}
+                                height={1006}
+                                quality={100}
                             />
                         </div>
                     </div>
-                    {/* <div className="product-images">
-                        <div className='image-wrapper'>
-                            <Image
-                                src='/images/products/chairs/oak/oak-product-2.png'
-                                alt='The Oak Chair'
-                                layout='responsive'
-                                width={577}
-                                height={461}
-                            />
-                        </div>
-                        <p className='desc'>The chairs in this range each feature three luxuriously filled back cushions, which provide unparalleled comfort and support. In addition, with their scroll arms and piped wings, these recliners are perfectly suited to those looking to add a touch of elegance to their home. With the simple-to-use handheld control panel, sitting and standing will be a breeze too.</p> 
-                        <div className='image-wrapper'>
-                        <Image
-                                src='/images/products/chairs/oak/oak-product-3.png'
-                                alt='The Oak Chair'
-                                layout='responsive'
-                                width={577}
-                                height={461}
-                            />
-                        </div>
-                    </div> */}
                 </div>
                     <InformationContainer product={props.product} productType='chair' showForm={() => setFormModal(true)}/>
             </div>
@@ -174,7 +147,7 @@ const ChairProduct = (props:any) => {
             <OurProcess />
             <TOC reference={tocRef} type='chair' sectionOneRef={sectionOne} sectionTwoRef={sectionTwo} sectionThreeRef={sectionThree} sectionFourRef={sectionFour}/>
             <div className='table-of-contents' ref={tocRef}>
-                <h4 className='toc-heading'>Our Process</h4>
+   
                 <MaterialChair isOpen={isOpen} openAccordian={() => openAccordian('material')} reference={sectionOne}/>
                 <SizeChair isOpen={isOpen} openAccordian={() => openAccordian('size')} reference={sectionTwo}/>
                 <MotorChair isOpen={isOpen} openAccordian={() => openAccordian('motor')} reference={sectionThree}/>
@@ -243,7 +216,7 @@ const ChairProduct = (props:any) => {
                 </div>
             </div>
 
-            {/* <RecommendedProducts product='chairs' productId={id}/> */}
+            <RecommendedProducts products={props.recommendedProducts}/>
         </div>
         </>
     )
@@ -264,11 +237,22 @@ export const getServerSideProps = async (context:any) => {
 
     // Get Product By Handle
     const product = await getProduct(productHandle);
+
+    console.log(product)
     
+    let recommendedProducts
+
+    // console.log(product.id)
+    
+    if(product) {
+        recommendedProducts = await getProductsForRecommendations(product.id);
+    }
     return {
   
       props: {
-        product: product   
+        product: product,
+        
+
       },
   
     };

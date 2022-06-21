@@ -175,7 +175,7 @@ const PriceGuideBed = () => {
             </div>
         </a>
         </Link>
-        <Link href="/adjustable-beds/the-poplar">
+        <Link href="/adjustable-beds/the-oak">
         <a className='product'>
             <div className='image-wrapper'>
             <Image

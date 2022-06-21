@@ -89,7 +89,7 @@ const menuConfig = [
     menu1: {
       menuName: 'Adjustable Beds',
       options: [
-              { title: "The Poplar", desc:"Innovative Comfort and Great Design", icon : "/images/products/beds/poplar/poplar-product.jpeg", url: '/adjustable-beds/the-poplar' },
+              { title: "The Poplar", desc:"Innovative Comfort and Great Design", icon : "/images/products/beds/poplar/poplar-product.jpeg", url: '/adjustable-beds/the-oak' },
               { title: "The Lilac", desc:"Innovation and stylish", icon : "/images/products/beds/lilac/lilac-product.jpeg", url: '/adjustable-beds/the-lilac' },
               { title: "The Hazel", desc:"An Elegant and Refined Bed", icon : "/images/products/beds/hazel/hazel-product.jpeg", url: '/adjustable-beds/the-hazel' },
               { title: "The Hesper", desc:"Eye Catching With Style", icon : "/images/products/beds/hesper/hesper-product.jpeg", url: '/adjustable-beds/the-hesper' },

@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Head from 'next/head';
 import Script from "next/script";
 
 function setupLandbot() {
@@ -15,6 +16,9 @@ function setupLandbot() {
 export default function LandbotChat() {
   return (
     <div className='chatbot'>
+      {/* <Head>
+        <script type='text/javascript' src='https://static.landbot.io/landbot-3/landbot-3.0.0.js'/>
+      </Head> */}
       <Script
         strategy="lazyOnload"
         src="https://static.landbot.io/landbot-3/landbot-3.0.0.js"

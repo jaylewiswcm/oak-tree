@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { useRouter }  from 'next/router';
 // Context
 import { useAppContext } from '../../context/state'
 // Layout Components
@@ -23,20 +24,22 @@ interface ComponentProps  {
     const [overlay, hideOverlay] = useState(true);
 
    const { productPage, formModal, setFormModal} = useAppContext();
-  
-    useEffect(() => {
-   
+    const router = useRouter()
+
+    useEffect(() => {   
       const handleScroll = () => {
         const position = window.pageYOffset;
         
-        if(!productPage) {
-          if(position < 500) {
+        if(router.pathname.includes('/chairs/') || router.pathname.includes('/beds/')) {
+          setHideClass("hide-bar") 
+        } else {
+            if(position < 500) {
               setHideClass("hide-bar") 
               setOverlayClass('british-made-overlay')
           } else if(!productPage) {
               setHideClass("") 
               setOverlayClass('british-made-overlay increased-bottom-margin')
-          }
+          }  
         }
       };
 
@@ -45,7 +48,7 @@ interface ComponentProps  {
         window.removeEventListener("scroll", handleScroll);
       };
 
-    }, [productPage, setHideClass, setOverlayClass]);
+    }, [productPage, setHideClass, setOverlayClass, router]);
     
     return (
         <>

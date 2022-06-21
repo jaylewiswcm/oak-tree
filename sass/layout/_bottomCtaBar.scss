@@ -189,7 +189,10 @@
         border-radius: 8px;
         display: flex;
         align-items: center;
-        padding: 25px 50px;
+        // padding: 25px 50px;
+        @media(min-width: 490px) {
+            padding: 25px 50px;
+        }
         @media(min-width: 800px) {
             background-color: $white;
             box-shadow: 0 0 21px rgba(0,0,0,0.19);
