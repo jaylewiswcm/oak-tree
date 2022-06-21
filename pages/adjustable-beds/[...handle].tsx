@@ -211,7 +211,7 @@ const TheHazel = (props:any) => {
                 </div>
             </div>
 
-            <RecommendedProducts product='beds' productId={id}/>
+            {/* <RecommendedProducts product='beds' productId={id}/> */}
         </div>
         </>
     )
