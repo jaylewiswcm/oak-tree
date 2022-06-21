@@ -5,12 +5,12 @@ import {motion, useAnimation } from 'framer-motion';
 import { useInView } from "react-intersection-observer";
 import { useIsMedium } from '../../../utils/hooks';
 // images 
-import desktopImage from '../../../public/occupational-therapist/sam-shann-new.png'
+import desktopImage from '../../../public/occupational-therapist/sam-shann.jpg'
 import mobileImage from '../../../public/occupational-therapist/sam-shann-circle-2.png'
 import logo from '../../../public/occupational-therapist/ukts-logo.png';
 import Modal from '../../modal/Modal';
 import { QuoteCarousel } from './QuoteCarousel';
-import VideoCarousel from '../../modal/video/VideoCarousel';
+import VideoCarousel from '../../modal/video/VideoCarousel'; 
 
 const OccupationalTherapistSection = () => {
   const [isOpen, setOpenModal] = useState(false)
@@ -20,9 +20,6 @@ const OccupationalTherapistSection = () => {
   const controls = useAnimation();
 
   useEffect(() => {
-    // if(isMedium) {
-      
-    // }
     if (inView) {
       controls.start("visible");
     }
@@ -64,8 +61,8 @@ const stagger = {
   return (
     <div className='occupational-therapist-wrapper'>
       {isOpen && <Modal classNames="" setShow={setOpenModal}><VideoCarousel videoId="l9adE0mWzUY" setShow={setOpenModal} show={isOpen}></VideoCarousel></Modal> }
-        <h3>Advised and approved by leading experts</h3>
-        <div className='bg-dark-green-6'>
+        {/* <h3>Advised and approved by leading experts</h3> */}
+        {/* <div className='bg-dark-green-6'>
           <div className='occ-section-flex con-reg'>
             <div className='content'>
             <div className='sam-shann-image'>
@@ -80,7 +77,7 @@ const stagger = {
                     />
                     </div>
               </div>
-            {/* <h3>Advised and approved by leading experts</h3> */}
+            
             <p className='oc-intro'>All of our products are approved by Samantha Shann, occupational therapist. Samantha fully tests and evaluates everything we offer, ensuring it satisfies the high standards of an independent health professional.</p>
             <div className='partner-logo'>
               <p>In Partnership with</p>
@@ -96,13 +93,67 @@ const stagger = {
           </div>
           
           <div className='advice-quotes'>
-            {/* <h4>Advice From Samantha</h4> */}
               <QuoteCarousel />
               <div className='advice-pagination'></div>
           </div>
           </div>
-        </div>
+        </div> */}
 
+        <div className='ot-intro con-reg'>
+          <div className='image-wrapper'> 
+            <Image
+              src={desktopImage}
+              alt='Samantha Shann'
+              layout='responsive'
+              width='800'
+              height='580'
+            />
+          </div>
+          <div className='content'>
+            <h4>Advised and Approved<br/>by Leading Experts</h4>
+            <p>All of our products are approved by <span className='name'>Samantha Shann</span>, occupational therapist. Samantha fully tests and evaluates everything we offer, ensuring it satisfies the high standards of an independent health professional.</p>
+          </div>
+        </div>
+        <div className='con-reg'>
+        <div className='logos-container'>
+          <div className='logo'>
+            <Image 
+              src='/occupational-therapist/logos/the-ot-service.png'
+              alt='The OT service'
+              
+              width='90'
+              height='54'
+            />
+          </div>
+          <div className='logo'>
+            <Image 
+              src='/occupational-therapist/logos/wfot.svg'
+              alt='World Federation of Occupational Therapists'
+              
+              width='83'
+              height='55'
+            />
+          </div>
+          <div className='logo'>
+            <Image 
+              src='/occupational-therapist/logos/hcpc.png'
+              alt='Health & Care Professions Council'
+              
+              width='140'
+              height='39'
+            />
+          </div>
+          <div className='logo'>
+            <Image 
+              src='/occupational-therapist/logos/rcot.png'
+              alt='Royal College of Occupational Therapists'
+              
+              width='120'
+              height='38'
+            />
+          </div>
+        </div>
+        </div>
         <div className='health-benefits con-reg'>
           <h5>Transformational health benefits</h5>
           <div className='benefits-grid'>

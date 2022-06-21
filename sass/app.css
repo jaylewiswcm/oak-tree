@@ -3698,6 +3698,8 @@ body.mobile-navbar .mobile-navigation {
   bottom: 0;
   left: 0;
   width: 100%;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   padding: 25px;
   z-index: 99999;
 }
@@ -4378,6 +4380,143 @@ body.mobile-navbar .mobile-navigation {
           flex-direction: column;
 }
 
+.occupational-therapist-wrapper .ot-intro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 900px) {
+  .occupational-therapist-wrapper .ot-intro {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.occupational-therapist-wrapper .ot-intro .image-wrapper {
+  width: 100%;
+  max-width: 500px;
+}
+
+@media (min-width: 900px) {
+  .occupational-therapist-wrapper .ot-intro .image-wrapper {
+    width: calc(50% - 48.5px);
+  }
+}
+
+.occupational-therapist-wrapper .ot-intro .content {
+  width: 100%;
+  padding-top: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (min-width: 900px) and (max-width: 999px) {
+  .occupational-therapist-wrapper .ot-intro .content {
+    padding: 0;
+    padding-left: 60px;
+    width: 50%;
+  }
+}
+
+@media (min-width: 1000px) {
+  .occupational-therapist-wrapper .ot-intro .content {
+    padding: 0;
+    padding-left: 100px;
+    width: 50%;
+  }
+}
+
+.occupational-therapist-wrapper .ot-intro .content h4 {
+  font-size: 3rem;
+  font-weight: 600;
+  font-family: "Euclid Circular A", "Helvetica", sans-serif;
+  color: #17494D;
+}
+
+@media (min-width: 480px) {
+  .occupational-therapist-wrapper .ot-intro .content h4 {
+    font-size: 3.4rem;
+  }
+}
+
+.occupational-therapist-wrapper .ot-intro .content p {
+  font-size: 1.9rem;
+  line-height: 1.6;
+  margin-top: 15px;
+  max-width: 600px;
+}
+
+@media (min-width: 900px) {
+  .occupational-therapist-wrapper .ot-intro .content p {
+    max-width: 500px;
+  }
+}
+
+.occupational-therapist-wrapper .ot-intro .content p .name {
+  font-weight: 600;
+  color: #17494D;
+}
+
+.occupational-therapist-wrapper .logos-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 4px;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+@media (min-width: 800px) {
+  .occupational-therapist-wrapper .logos-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-shadow: 0 0 21px rgba(0, 0, 0, 0.18);
+            box-shadow: 0 0 21px rgba(0, 0, 0, 0.18);
+    padding: 25px 60px;
+    margin-top: 70px;
+  }
+}
+
+.occupational-therapist-wrapper .logos-container .logo {
+  margin: 25px;
+}
+
+@media (min-width: 800px) {
+  .occupational-therapist-wrapper .logos-container .logo {
+    margin: auto 0;
+  }
+}
+
 .occupational-therapist-wrapper h3 {
   font-family: "Euclid Circular A", "Helvetica", sans-serif;
   font-size: 3.2rem;
@@ -4820,8 +4959,14 @@ body.mobile-navbar .mobile-navigation {
 }
 
 .occupational-therapist-wrapper .health-benefits {
-  margin: 70px auto;
-  margin-bottom: 0px;
+  margin: 0px auto;
+  margin-top: 40px;
+}
+
+@media (min-width: 800px) {
+  .occupational-therapist-wrapper .health-benefits {
+    margin-top: 70px;
+  }
 }
 
 .occupational-therapist-wrapper .health-benefits h5 {

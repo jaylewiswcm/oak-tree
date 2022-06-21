@@ -64,6 +64,7 @@ const ChairProduct = (props:any) => {
     const heroImage = images.edges[0].node;
 
     useEffect(() => {   
+        console.log(props.product.chairRisingImage);
 
         if(props.product.length === 0) {
             router.push('/404')
@@ -112,9 +113,40 @@ const ChairProduct = (props:any) => {
             </div>
             <div className='product-details con-reg' id='product-information'>
                 <div className='product-content'>
-                    <h3 className='heading'>Unparralleled Comfort and Support</h3>
-                    <p className='desc'>The chairs in this range each feature three luxuriously filled back cushions, which provide unparalleled comfort and support. In addition, with their scroll arms and piped wings, these recliners are perfectly suited to those looking to add a touch of elegance to their home. With the simple-to-use handheld control panel, sitting and standing will be a breeze too.</p>
-                    <div className="product-images">
+                    <h3 className='heading'>{props.product.productTitle.value}</h3>
+                    <p className='desc'>{props.product.productParagraph.value}</p>
+                    <div className='product-images chair-image-grid'>
+                        {/* <div className='image-wrapper'>
+                            <Image 
+                                loader={myLoader}
+                                src={props.product.chairRisingImage.value}
+                                alt='The Oak Chair'
+                                layout='responsive'
+                                width={577}
+                                height={461}
+                            />
+                        </div>
+                        <div className='image-wrapper'>
+                            <Image 
+                                loader={myLoader}
+                                src={props.product.chairLegLiftImage.value}
+                                alt='The Oak Chair'
+                                layout='responsive'
+                                width={577}
+                                height={461}
+                            />
+                        </div> */}
+                        <div className='image-wrapper'>
+                            <Image 
+                                src='/images/products/chairs/oak/oak-product-2.png'
+                                alt='The Oak Chair'
+                                layout='responsive'
+                                width={577}
+                                height={461}
+                            />
+                        </div>
+                    </div>
+                    {/* <div className="product-images">
                         <div className='image-wrapper'>
                             <Image
                                 src='/images/products/chairs/oak/oak-product-2.png'
@@ -124,7 +156,7 @@ const ChairProduct = (props:any) => {
                                 height={461}
                             />
                         </div>
-                        <p className='desc'>The chairs in this range each feature three luxuriously filled back cushions, which provide unparalleled comfort and support. In addition, with their scroll arms and piped wings, these recliners are perfectly suited to those looking to add a touch of elegance to their home. With the simple-to-use handheld control panel, sitting and standing will be a breeze too.</p>
+                        <p className='desc'>The chairs in this range each feature three luxuriously filled back cushions, which provide unparalleled comfort and support. In addition, with their scroll arms and piped wings, these recliners are perfectly suited to those looking to add a touch of elegance to their home. With the simple-to-use handheld control panel, sitting and standing will be a breeze too.</p> 
                         <div className='image-wrapper'>
                         <Image
                                 src='/images/products/chairs/oak/oak-product-3.png'
@@ -134,7 +166,7 @@ const ChairProduct = (props:any) => {
                                 height={461}
                             />
                         </div>
-                    </div>
+                    </div> */}
                 </div>
                     <InformationContainer product={props.product} productType='chair' showForm={() => setFormModal(true)}/>
             </div>
@@ -211,7 +243,7 @@ const ChairProduct = (props:any) => {
                 </div>
             </div>
 
-            <RecommendedProducts product='chairs' productId={id}/>
+            {/* <RecommendedProducts product='chairs' productId={id}/> */}
         </div>
         </>
     )
@@ -230,7 +262,7 @@ export const getServerSideProps = async (context:any) => {
         productHandle = productHandleFromRoute[0].split('the')[1].substring(1)
     }
 
-    // Get Oak Product 
+    // Get Product By Handle
     const product = await getProduct(productHandle);
     
     return {
