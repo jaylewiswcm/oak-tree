@@ -4127,10 +4127,12 @@ body.mobile-navbar .mobile-navigation {
 }
 
 .home-collections .heading {
-  font-size: 3.4rem;
+  font-size: 3.6rem;
   font-family: "Sentient-Variable", serif;
   text-align: center;
   color: #17494D;
+  padding-top: 25px;
+  padding-bottom: 10px;
 }
 
 .home-collections .collections {
@@ -4288,7 +4290,7 @@ body.mobile-navbar .mobile-navigation {
 }
 
 .banners h3 {
-  font-size: 3.4rem;
+  font-size: 3.6rem;
   text-align: center;
   color: #17494D;
   margin-bottom: 40px;
@@ -4393,6 +4395,7 @@ body.mobile-navbar .mobile-navigation {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin-top: 30px;
 }
 
 @media (min-width: 900px) {
@@ -4455,7 +4458,8 @@ body.mobile-navbar .mobile-navigation {
 
 @media (min-width: 480px) {
   .occupational-therapist-wrapper .ot-intro .content h4 {
-    font-size: 3.4rem;
+    font-size: 3.8rem;
+    line-height: 1.3;
   }
 }
 
@@ -4970,17 +4974,18 @@ body.mobile-navbar .mobile-navigation {
 
 @media (min-width: 800px) {
   .occupational-therapist-wrapper .health-benefits {
-    margin-top: 70px;
+    margin-top: 100px;
+    margin-bottom: 25px;
   }
 }
 
 .occupational-therapist-wrapper .health-benefits h5 {
-  font-size: 2.8rem;
-  font-weight: 500;
-  font-family: "Euclid Circular A", "Helvetica", sans-serif;
+  font-size: 3.6rem;
+  font-weight: 700;
   color: #17494D;
   text-align: center;
   line-height: 1.3;
+  margin-bottom: 15px;
 }
 
 .occupational-therapist-wrapper .health-benefits h5 br {
@@ -5141,8 +5146,12 @@ body.mobile-navbar .mobile-navigation {
   text-underline-offset: 2px;
 }
 
+.our-values {
+  margin-top: 30px;
+}
+
 .our-values h6 {
-  font-size: 3rem;
+  font-size: 3.6rem;
   color: #17494D;
   text-align: center;
 }
@@ -5153,8 +5162,8 @@ body.mobile-navbar .mobile-navigation {
   -ms-grid-columns: (1fr)[1];
       grid-template-columns: repeat(1, 1fr);
   gap: 30px;
-  margin-top: 45px;
-  margin-bottom: 45px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 @media (min-width: 600px) and (max-width: 899px) {
@@ -6661,6 +6670,7 @@ body.mobile-navbar .mobile-navigation {
   font-size: 6rem;
   font-weight: 600;
   color: #fff;
+  line-height: 1;
 }
 
 .product-hero-wrapper .product-title p {
@@ -14412,18 +14422,28 @@ body.mobile-navbar .mobile-navigation {
 
 .testimonials {
   padding-bottom: 50px;
-  margin-top: -50px;
+  margin-top: -40px;
   padding-top: 40px;
+}
+
+.testimonials .subheading {
+  font-size: 2.4rem;
+  font-weight: 500;
+  color: #009B72;
+  text-align: center;
+  display: none;
 }
 
 .testimonials .heading {
   text-align: center;
-  font-size: 3.2rem;
+  font-size: 3.6rem;
   color: #17494D;
+  line-height: 1.2;
 }
 
 .testimonials .swiper {
   padding-top: 35px;
+  margin-top: 0px;
 }
 
 .testimonials .testimonial-tile {

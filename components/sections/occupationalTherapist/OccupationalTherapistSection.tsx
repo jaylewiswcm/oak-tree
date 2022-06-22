@@ -155,7 +155,7 @@ const stagger = {
         </div>
         </div>
         <div className='health-benefits con-reg'>
-          <h5>Transformational health benefits</h5>
+          <h5>Transformational Health Benefits</h5>
           <div className='benefits-grid'>
             <div className='benefit'>
               <div className='icon-wrapper'>

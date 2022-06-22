@@ -9,14 +9,11 @@
     @media(min-width: 650px) {
         display: flex;
         flex-direction: column;
-        // flex-direction: row-reverse;
     }
     .image-wrapper {
         width: calc(100% - 30px);
         margin: 0 auto;
-    
         height: calc(100vh - 334px);
-
         position: relative;
     }
     .product-title {
@@ -30,6 +27,7 @@
             font-size: 6rem;
             font-weight: 600;
             color: $white;
+            line-height: 1;
         }
           p{ 
             font-size: 3rem;

@@ -53,10 +53,11 @@ const stagger = {
 
   return (
     <div ref={ref}  className='testimonials con-reg'>
-      <h6 className='heading'>Our customers come first</h6>
+      <p className='subheading'>Take Their Word For It</p>
+      <h6 className='heading'>Our Customers Come First</h6>
         { pageType && pageType === 'normal' && <CarouselNormal setSelectedCx={setSelectedCx}  setShow={setShow} /> } 
         { pageType === 'orphan' &&  <CarouselLandingPage setSelectedCx={setSelectedCx}  setShow={setShow}/> } 
-        {pageType === 'bath-lift' && testimonials.map(cx => 
+         {pageType === 'bath-lift' && testimonials.map(cx => 
             <>
               {cx.product.name === 'The Riviera Plus' && <TestimonialTile cx={cx} setSelectedCx={setSelectedCx} setShow={setShow}/>} 
             </>

@@ -523,10 +523,12 @@
         margin-top: 30px;
     }
     .heading {
-        font-size: 3.4rem;
+        font-size: 3.6rem;
         font-family: $fontHeadings;
         text-align: center;
         color: $dark-green-1;
+        padding-top: 25px;
+        padding-bottom:10px;
     }
     .collections {
         margin-top: 30px;
@@ -649,7 +651,7 @@
 .banners {
     margin-top: 30px;
     h3 {
-        font-size: 3.4rem;
+        font-size: 3.6rem;
         text-align: center;
         color: $dark-green-1;
         margin-bottom: 40px;
@@ -897,6 +899,7 @@
     .ot-intro {
         display: flex;
         flex-direction:column;
+        margin-top: 30px;
         @media(min-width: 900px ){
             flex-direction: row;
         }
@@ -928,8 +931,10 @@
                 font-weight: 600;
                 font-family: $fontText;
                 color: $dark-green-1;
+        
                 @media(min-width: 480px) {
-                    font-size: 3.4rem;
+                    font-size: 3.8rem;
+                    line-height: 1.3;
                 }
             }
             p {
@@ -1690,15 +1695,17 @@
         margin: 0px auto;
         margin-top:40px;
         @media(min-width: 800px) {
-            margin-top:70px;
+            margin-top:100px;
+            margin-bottom:25px;
         }
         h5 {
-            font-size: 2.8rem;
-            font-weight: 500;
-            font-family: $fontText;
+            font-size: 3.6rem;
+            font-weight: 700;
+            // font-family: $fontText;
             color: $dark-green-1;
             text-align: center;
             line-height: 1.3;
+            margin-bottom:15px;
             br {
                 display: none;
                 @media(min-width: 460px) {
@@ -1803,8 +1810,9 @@
     }
 }
 .our-values {
+    margin-top: 30px;
     h6 {
-        font-size: 3rem;
+        font-size: 3.6rem;
         color: $dark-green-1;
         text-align: center;
     }
@@ -1812,8 +1820,8 @@
         display: grid;
         grid-template-columns: repeat(1,1fr);
         gap: 30px;
-        margin-top: 45px;
-        margin-bottom: 45px;
+        margin-top: 50px;
+        margin-bottom: 50px;
         @media(min-width: 600px) and (max-width: 899px) {
             grid-template-columns: repeat(2,1fr);
         }

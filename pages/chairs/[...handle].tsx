@@ -80,7 +80,7 @@ const ChairProduct = (props:any) => {
                             alt={`The ${handle}`}
                             layout='fill'
                             objectFit='cover'
-                            objectPosition='center'
+                            objectPosition='left'
                         />
                         <div className='product-title'>
                             <h1>The {title}</h1>
