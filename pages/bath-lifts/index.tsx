@@ -66,7 +66,7 @@ const index = () => {
                 <div className="brochure-section">
                   <div className='brochure-image'>
                     <Image 
-                      src='/brochures/chair-brochure.png'
+                      src='/brochures/bath-lift-brochure.png'
                       alt='Brochure'
                       layout='responsive'
                       width={1000}
@@ -75,7 +75,7 @@ const index = () => {
                   </div>
                   <div className='brochure-open'>
                   <Image 
-                      src='/brochures/chair-brochure-open.png'
+                      src='/brochures/bath-lift-brochure-open.png'
                       alt='Brochure'
                       layout='responsive'
                       width={1000}
