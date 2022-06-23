@@ -44,7 +44,7 @@ const SizeChair = ({isOpen, openAccordian, reference}:ComponentProps) => {
                       <div className='content size-content'>
                         <div className='icon-wrapper'>
                           <Image
-                            src='/icons/collection-process/customisation-new.svg'
+                            src='/icons/collection-process/customisation.svg'
                             alt='Made To Measure'
                             layout='responsive'
                             width='136'

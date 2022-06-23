@@ -3,7 +3,7 @@ import { NextSeo } from 'next-seo';
 import Image from 'next/image';
 import Link from 'next/link';
 // Components 
-import { QuestionAccordian } from '../components/accordian/QuestionAccordian';
+import { QuestionAccordion } from '../components/accordion/QuestionAccordion';
 
 const PriceGuideBed = () => {
   return (
@@ -118,15 +118,15 @@ const PriceGuideBed = () => {
         <div className='price-guide-questions con-reg'>
             <h6>Have questions?</h6>
             <div className='questions-table'>
-                <QuestionAccordian question='So why can other mobility companies show prices on their websites?'>
+                <QuestionAccordion question='So why can other mobility companies show prices on their websites?'>
                     <p>Companies that advertise with prices are able to do so because they offer stock beds in standard sizes with limited or basic accessories.</p>
                     <p>They aren’t interested in finding you a bed that is perfect – for them, close enough is good enough. You won’t be able to choose your accessories and you’ll have very limited options in terms of size.</p>
-                </QuestionAccordian>
-                <QuestionAccordian question='Why do you offer discounts? Shouldn’t you just offer a flat price all year round?'>
+                </QuestionAccordion>
+                <QuestionAccordion question='Why do you offer discounts? Shouldn’t you just offer a flat price all year round?'>
                         <p>Good question. Yes, we do offer discounts, as we can work to help reduce costs in certain circumstances.</p>
                         <p>When we give the price for one bed, it includes white-glove delivery and installation by a two-person team. If you order more than one bed – or a bed and a chair – delivering and installing gets cheaper and we can pass those savings onto you.</p>
                         <p>When we explain this, we’ve never met a customer who doesn’t approve!</p>
-                </QuestionAccordian>
+                </QuestionAccordion>
             </div>
         </div>
         <div className='recommended-products con-reg'>

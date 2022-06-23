@@ -3,7 +3,7 @@ import { NextSeo } from 'next-seo';
 import Image from 'next/image';
 import Link from 'next/link';
 // Components 
-import { QuestionAccordian } from '../components/accordian/QuestionAccordian';
+import { QuestionAccordion } from '../components/accordion/QuestionAccordion';
 // images
 import hero from '../public/images/heros/price-guide-hero.jpg';
 const PriceGuideChair = () => {

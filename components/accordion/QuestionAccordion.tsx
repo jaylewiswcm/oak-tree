@@ -6,7 +6,7 @@ interface ComponentProps {
     children: any
 }
 
-export const QuestionAccordian = ({question, children}: ComponentProps) => {
+export const QuestionAccordion = ({question, children}: ComponentProps) => {
     const [isOpen, toggleOpen] = React.useState(true);
     return (
     <div className='question'>

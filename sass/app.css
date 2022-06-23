@@ -3180,7 +3180,7 @@ header .index-usp-banner .inner-div .usp-item .icon-wrapper {
 header .index-usp-banner .inner-div .usp-item p {
   text-align: center;
   font-weight: 400;
-  color: #3D3437;
+  color: #53565F;
   opacity: 0.8;
 }
 
@@ -3555,7 +3555,7 @@ body.mobile-navbar .mobile-navigation {
   font-size: 1.8rem;
   font-weight: 400;
   white-space: nowrap;
-  color: #3D3437;
+  color: #53565F;
 }
 
 .dd-menu .dd-ul li .all-products {
@@ -6362,8 +6362,9 @@ body.mobile-navbar .mobile-navigation {
 }
 
 .our-process .process-grid .item p {
-  font-size: 1.8rem;
-  font-weight: 300;
+  font-size: 1.7rem;
+  font-weight: 400;
+  color: #53565F;
   margin-top: 10px;
 }
 
@@ -8545,7 +8546,7 @@ body.mobile-navbar .mobile-navigation {
 
 .table-of-contents .toc .product-content .fabric-carousel .fabric .composition {
   font-size: 1.4rem;
-  color: #3D3437;
+  color: #53565F;
   text-align: center;
   margin: 8px auto;
   margin-bottom: 3px;
@@ -8553,7 +8554,7 @@ body.mobile-navbar .mobile-navigation {
 
 .table-of-contents .toc .product-content .fabric-carousel .fabric .description {
   font-size: 1.6rem;
-  color: #3D3437;
+  color: #53565F;
   text-align: center;
 }
 
