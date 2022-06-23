@@ -31,8 +31,7 @@ const MaterialChair = ({isOpen, openAccordian, reference}:ComponentProps) => {
         <div className='anchor-target' id='material-section'></div>
         <div className='product-content'>
             <div className='content'>
-                {/* <p className='subheading oaktree-green'>Step One</p> */}
-                <h5 className='heading'>A fabric for every taste and style</h5>
+                <h5 className='heading'>A Fabric For Every Taste And Style</h5>
                 <p className='desc'>At Oak Tree, we pride ourselves on our comprehensive range of fabrics and leather. With such a wide selection, there will be something you love whatever your taste.</p>
             </div>
             <Fabrics product="chair"/>

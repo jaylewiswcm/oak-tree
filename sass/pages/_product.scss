@@ -346,7 +346,7 @@
             width: 100%;
             @media(min-width: 950px) {
                 width: 100%;
-                border-radius: 29px;
+                border-radius: 15px;
                 padding: 30px;
                 box-shadow: 0 3px 25px rgba(9,39,41,0.15);
                 position: sticky;
@@ -1167,6 +1167,7 @@
     padding:0 15px;
     @media(min-width: 600px) {
       margin-top: 50px;
+      padding:0 30px;
     }
     .toc-heading {
         font-size: 2.2rem;
@@ -1236,16 +1237,17 @@
                     text-align: center;
                     color: $dark-green-1;
                     @media(min-width: 650px) {
-                        font-size: 3.3rem;
+                        font-size: 3.6rem;
                     }
                 }
                 .desc {
-                    font-size: 1.8rem;
-                    font-weight: 400;
-                    line-height: 1.4;
+                    font-size: 2rem;
+                    font-weight: 300;
+                    line-height: 1.6;
                     text-align: center;
-                    max-width: 700px;
+                    max-width: 800px;
                     margin: 0 auto;
+                    margin-top: 5px;
             
                 }
                 .flex-row {
@@ -1348,56 +1350,59 @@
                 position: relative;
                 // width: 80%;
                 display: flex;
-            .button-wrapper {
-                display: flex;
-                align-items: center;
-                padding: 0 15px;
                 .carousel-button {
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-90px);
                     width: 50px;
-                    height: 50px;
-                    border-radius: 50%;
-                    padding: 0;
+                    height: 80px;
+                    background-color:rgba(255,255,255,0.6);
+                    z-index: 5;
+                    border-radius: 0;
+                    padding:0;
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    background-color: $oaktree-green;
-                    box-shadow: 0 0 16px rgba(75,177,107, 0.3);
-                    transition: 0.2s;
-                    .arrow-wrapper {
-                        width: 20px;
-                        // transform: rotate(180deg);
+                    .arrow {
+                        width:20px;
+                        width: 90%;
                     }
                 }
-                .swiper-button-disabled {
-                    background-color: $light-green-1;
-                    box-shadow: none;
+                .prev-btn {
+                    left: 0;
+                    .arrow {
+                        transform: rotate(180deg);   
+                    }
                 }
                 .next-btn {
-                    .arrow-wrapper {
-                        transform: rotate(180deg);
-                    }
-                }
-            }
-                
-                .swiper-slide {
-                    width: 200px;
+                    right: 0;   
                 }
                 .fabric {
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
-                    max-width: 200px;
                     .image-wrapper {
                         width: 100%;
                         margin-bottom: 15px;
-                        border-radius: 4px;
                         overflow: hidden;
                     }
                     .fabric-name {
                         font-size: 2rem;
                         font-weight: 500;
-                        text-align: left;
+                        text-align: center;
                         color: $dark-green-1;
+                    }
+                    .composition {
+                        font-size: 1.4rem;
+                        color: $dark-grey;
+                        text-align: center;
+                        margin: 8px auto;
+                        margin-bottom: 3px;
+                    }
+                    .description {
+                        font-size: 1.6rem;
+                        color: $dark-grey;
+                        text-align: center;
                     }
                     .type {
                         font-size: 1.8rem;
@@ -1409,12 +1414,22 @@
                 }  
             }
             &.size-section {
+                @media(min-width: 600px) {
+                    margin: 50px auto;
+                }
                 .content {
                     .image-wrapper {
                         width: 100%;
+                        height: 400px;
                         margin: 0 auto;
                         @media(min-width: 600px) and (max-width: 949px){
-                            width: 80%;
+                            width: 100%;
+                            height: 400px;
+                            margin: 0;
+                        }
+                        @media(min-width: 950px){
+                            width: 100%;
+                            height: auto;
                         }
                     }
                     .detail {
@@ -1425,19 +1440,26 @@
                         }
                         .size-content { 
                             align-items: center;
-                            justify-content: center;
-                            text-align: center;
+                            text-align: left;
                             width: 100%;
                             margin: 40px auto;
+                            padding:0;
+                            @media(min-width: 950px) {
+                                padding: 0;
+                                padding-left: 60px;
+                            }
                             .icon-wrapper {
                                 width: 150px;
+                                margin-right: auto;
                             } 
+                            h3 {
+                                margin-right: auto;
+                            }
                             p {
                                 max-width: 650px;
                                 font-size: 1.8rem;
-                                @media(min-width:950px) {
-                                    font-size: 1.6rem;
-                                }
+                                line-height: 1.8;
+                                 margin-right: auto;
                             }
                         }
                     }
@@ -2284,8 +2306,13 @@
 }
 
 .other-products {
-    padding: 0 30px;
-    margin-bottom: 25px;
+    padding: 0 15px;
+    // margin-bottom: 25px;
+    padding-top: 50px;
+    @media(min-width: 600px) {
+        padding: 0 30px;
+        padding-top: 50px;
+    }
     h6 {
         font-size: 2.4rem;
         font-weight: 600;

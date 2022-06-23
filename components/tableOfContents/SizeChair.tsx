@@ -36,8 +36,9 @@ const SizeChair = ({isOpen, openAccordian, reference}:ComponentProps) => {
                         <Image 
                           src='/images/lifestyle/rep-and-chair.png'
                           alt='Rep and chair'
-                          width={1000}
-                          height={673}
+                          layout='fill'
+                          objectFit='cover'
+                          objectPosition='center'
                         />
                       </div>
                       <div className='content size-content'>

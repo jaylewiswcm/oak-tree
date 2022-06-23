@@ -242,7 +242,7 @@ export const getServerSideProps = async (context:any) => {
     
     // let recommendedProducts
 
-    // // console.log(product.id)
+    console.log(product.id)
     
     // if(product) {
     //     recommendedProducts = await getProductsForRecommendations(product.id);
