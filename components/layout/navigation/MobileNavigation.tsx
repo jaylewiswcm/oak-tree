@@ -46,10 +46,12 @@ const MobileNavigation = ({isOpen, toggleMobileMenu} : ComponentProps) => {
         ]},
         { subMenuHeader: 'Beds', submenu: [
             {link: '/adjustable-beds', text: 'All Beds' },
+            {link: '/adjustable-beds/the-poplar', text: 'The Poplar' },
             {link: '/adjustable-beds/the-lilac', text: 'The Lilac' },
             {link: '/adjustable-beds/the-hazel', text: 'The Hazel' },
             {link: '/adjustable-beds/the-hesper', text: 'The Hesper' },
             {link: '/adjustable-beds/the-oysterwood', text: 'The Oysterwood' },
+         ,
         ]},
         { subMenuHeader: 'Bath Lifts', submenu: [
             {link: '/bath-lifts', text: 'Oak Tree Bath Lifts' },
@@ -87,8 +89,8 @@ const MobileNavigation = ({isOpen, toggleMobileMenu} : ComponentProps) => {
                  <li className={subMenuOpen === index ? 'open-submenu' : ''} key={index}>
                         <button onClick={() => openDropDownSubMenu(index)}>{listItem.subMenuHeader}<span className='arrow'><Image src='/vectors/down-arrow-black.svg' alt='Down Arrow' width='21' height='11'/></span></button>
                         <ul className='subNav'>
-                            {listItem.submenu?.map( link => 
-                                <li key={link.text}><Link href={link.link}><a onClick={() => toggleMobileMenu()}>{link.text}</a></Link></li>
+                            {listItem.submenu?.map(link => 
+                                <li key={link!.text}><Link href={link!.link}><a onClick={() => toggleMobileMenu()}>{link!.text}</a></Link></li>
                             )}
                         </ul>
                  </li>

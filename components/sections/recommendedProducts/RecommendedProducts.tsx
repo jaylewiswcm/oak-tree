@@ -1,41 +1,109 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link';
 // axios
 import axios from 'axios';
 
 interface ComponentProps {
-    products: {}
- 
+    products: {
+            edges: CollectionArray[] 
+    }
+    productHandle : string
+    productType: string
 }
 
-const RecommendedProducts = (products:ComponentProps) => {
-    
+type CollectionArray = {
+    node: {
+        products: {
+            edges:ProductNode[]
+        }
+    }
+}
+
+type ProductNode = {
+    node: {
+        handle: string
+        id:string
+        images:{
+            edges: ImageNode[]
+        }
+        title: string
+        productType: {
+            value:string
+        }
+    }
+}
+
+type ImageNode = {
+    node: {
+        altText: string
+        originalSrc: string
+    }
+}
+
+const RecommendedProducts = ({products, productHandle, productType}:ComponentProps) => {
+    const [recommendedProducts, setRecommendedProducts] = useState<ProductNode[]>([])
+
+    useEffect(() => {
+
+        
+        removeCurrentProductFromCollectionArray();
+
+        
+    },[productHandle])
+
+
+    const removeCurrentProductFromCollectionArray = () => {
+        let index = 0;
+        const productsInCollection = [...products.edges[0].node.products.edges]
+        let filteredProducts;
+
+        productsInCollection.map((product:ProductNode) => {
+            if(product.node.handle === productHandle) {    
+                filteredProducts  = productsInCollection.filter(x => x !== product);
+               
+                const shuffle = (arr:any) => [...arr].sort(() => Math.random() - 0.5);
+                const shuffledArray = shuffle(filteredProducts);
+                setRecommendedProducts(shuffledArray);
+            }
+        })
+
+    }
+
+
+   const imageLoader = ({src, width, quality}:any) => {
+    return `${src}?w=${width}&q=${quality || 75}`
+}
+
   return (
     <div className='other-products con-reg'>
     <h6>You may also like</h6>
 
     <div className='product-grid'>
-    <Link href="/chairs/the-oak">
-        <a className='product'>
-            <div className='image-wrapper'>
-                <Image
-                    src='/images/products/chairs/maple/maple-collection.png'
-                    alt='The Maple'
-                    layout='responsive'
-                    width={1000}
-                    height={671}
-                />
-                <div className='hover-bg'>
-                    <p>View Chair</p>
+        { recommendedProducts.slice(0, 3).map((product:ProductNode) => 
+            <Link href={`/${productType === 'chair' ? 'chairs' : 'adjustable-beds'}/the-${product.node.handle}`}>
+            <a className='product'>
+                <div className='image-wrapper'>
+                    <Image
+                        loader={imageLoader}
+                        src={product.node.images.edges[0].node.originalSrc}
+                        alt={product.node.title}
+                        layout='responsive'
+                        width={1000}
+                        height={671}
+                    />
+                    <div className='hover-bg'>
+                        <p>View Chair</p>
+                    </div>
                 </div>
-            </div>
-            <div className='product-name-wrapper'>
-                <p className='name'>The Maple</p>
-                <p className='type'>Rise and Recline Chair</p>
-            </div>
-        </a>
-        </Link>
+                <div className='product-name-wrapper'>
+                    <p className='name'>The {product.node.title}</p>
+                    <p className='type'>{product.node.productType.value}</p>
+                </div>
+            </a>
+            </Link>
+        )}
+{/* 
         <Link href="/chairs/the-oak">
         <a  className='product'>
         <div className='image-wrapper'>
@@ -75,7 +143,7 @@ const RecommendedProducts = (products:ComponentProps) => {
                 <p className='type'>Rise and Recline Chair</p>
             </div>
         </a>
-        </Link>
+        </Link> */}
     </div>
 {/* 
     <div className='product-grid'>

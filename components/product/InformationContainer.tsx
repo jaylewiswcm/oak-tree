@@ -6,6 +6,8 @@ import chair_fabrics from '../../data/fabrics/chair_fabrics.json'
 import bed_fabrics from '../../data/fabrics/bed_fabrics.json'
 import chair_accessories from '../../data/accessories/chair_accessories.json'
 import bed_accessories from '../../data/accessories/chair_accessories.json'
+import headboards from '../../data/headboards/headboards.json'
+import mattress from '../../data/mattress/mattress.json'
 
 type Image = {
     node: {
@@ -92,23 +94,56 @@ export const InformationContainer = ({product, showForm }:ComponentProps) => {
           </li>
         )} */}
     </ul>
+    { productType.value === 'Rise and Recline Chair' &&
+    <>
+    <div className='info-section fabrics'>
+    <p className='info-header'>Fabrics and Leathers:</p>
+    <div className='swatch-grid'>
+        { chair_fabrics.slice(0,6).map((fabric, index) => 
+            <div className='swatch' key={index}>
+                <div className='inner-swatch'>
+                    <Image 
+                        src={fabric.src}
+                        alt={fabric.name}
+                        layout='responsive'
+                        width='60'
+                        height='60'
+                    />
+                </div>
+            </div>
+        ) }
+        <p className='plus-more'>+ 32 more</p>
+    </div>
+    
+    </div>
+    <div className='info-section accessories'>
+            <p className='info-header'>Personalise with Accessories:</p>
+            <div className='accessory-grid'>
+                { chair_accessories.map((item, index) => 
+                    <div className='item' key={index}>
+                        <Image 
+                            src={item.image}
+                            alt={item.name}
+                            layout='responsive'
+                            width='1000'
+                            height='855'
+                        />
+                    </div>
+                ) }
+            </div>
+    </div>
+    <div className='info-section motors'>
+        <p className='info-header'>Motor Options:</p>
+        <p className='desc'>Choice of three motors</p>
+    </div>
+    </>
+    }
+      { productType.value === 'Adjustable Bed' &&
+      <>
     <div className='info-section fabrics'>
         <p className='info-header'>Fabrics and Leathers:</p>
         <div className='swatch-grid'>
-            {productType.value === 'Rise and Recline Chair' && chair_fabrics.slice(0,6).map((fabric, index) => 
-                <div className='swatch' key={index}>
-                    <div className='inner-swatch'>
-                        <Image 
-                            src={fabric.src}
-                            alt={fabric.name}
-                            layout='responsive'
-                            width='60'
-                            height='60'
-                        />
-                    </div>
-                </div>
-            ) }
-            {productType.value === 'Adjustable Bed' && bed_fabrics.slice(0,6).map((fabric, index) => 
+            { bed_fabrics.slice(0,6).map((fabric, index) => 
                 <div className='swatch' key={index}>
                     <div className='inner-swatch'>
                         <Image 
@@ -125,37 +160,40 @@ export const InformationContainer = ({product, showForm }:ComponentProps) => {
         </div>
         
     </div>
-    <div className='info-section accessories'>
-        <p className='info-header'>Personalise with Accessories:</p>
-        <div className='accessory-grid'>
-            {productType.value === 'Rise and Recline Chair' && chair_accessories.map((item, index) => 
-                <div className='item' key={index}>
-                    <Image 
-                        src={item.image}
-                        alt={item.name}
-                        layout='responsive'
-                        width='1000'
-                        height='855'
-                    />
-                </div>
-            ) }
-            {productType.value === 'Adjustable Bed' && bed_accessories.map((item, index) => 
-                <div className='item' key={index}>
-                    <Image 
-                        src={item.image}
-                        alt={item.name}
-                        layout='responsive'
-                        width='1000'
-                        height='855'
-                    />
-                </div>
-            ) }
-        </div>
+    <div className='info-section mattress accessories'>
+            <p className='info-header'>Choose a Mattress:</p>
+            <div className='accessory-grid'>
+                { mattress.map((item, index) => 
+                    <div className='item' key={index}>
+                        <Image 
+                            src={item.src}
+                            alt={item.name}
+                            layout='responsive'
+                            width='1200'
+                            height='629'
+                        />
+                    </div>
+                ) }
+            </div>
     </div>
-    <div className='info-section motors'>
-        <p className='info-header'>Motor Options:</p>
-        <p className='desc'>Choice of three motors</p>
+    <div className='info-section accessories headboards'>
+            <p className='info-header'>Choose a Headboard:</p>
+            <div className='accessory-grid'>
+                { headboards.map((item, index) => 
+                    <div className='item' key={index}>
+                        <Image 
+                            src={item.image}
+                            alt={item.name}
+                            layout='responsive'
+                            width='310'
+                            height='210'
+                        />
+                    </div>
+                ) }
+            </div>
     </div>
+    </>
+    }
     <div className='cta-wrapper'>
         <p>Find your perfect chair, Request your Free Brochure</p>
         <button className='main-cta' onClick={showForm}>Request a Free Brochure</button>

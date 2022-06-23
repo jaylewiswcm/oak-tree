@@ -104,15 +104,15 @@ export const CollectionItem = ({product, setShow}: ComponentProps ) => {
 
             <div className='col-details'>
             <div className='col-name-wrapper'>
-                <div className='title-and-swatches'>
-                    {/* <p className='subheading'>{productSubheading.value}</p>  */}
+                {/* <div className='title-and-swatches'>
+                    <h2>The {title}</h2>
                     <div className='swatches'>
                         <div className='swatch red'><div className='inner'><Image src='/images/fabric/chairs/boucle-claret.png' alt='Boucle Claret Fabric' layout='fill' objectFit='cover' objectPosition='center' quality="100" /></div></div>
                         <div className='swatch blue'><div className='inner'><Image src='/images/fabric/chairs/boucle-bluebell.png' alt='Boucle Bluebell Fabric' layout='fill' objectFit='cover' objectPosition='center' quality="100" /></div></div>
                         <div className='swatch brown'><div className='inner'><Image src='/images/fabric/chairs/mocca-leather.png' alt='Moca Leather' layout='fill' objectFit='cover' objectPosition='center' quality="100"/></div></div>                
-                        {/* <button onClick={() => setShow(true)}>Many more</button> */}
+                        <button onClick={() => setShow(true)}>Many more</button>
                     </div>
-                </div> 
+                </div>  */}
                 {/* <Link href={url}>
                     <a> */}
                         <div className='name-wrapper'>
@@ -127,22 +127,22 @@ export const CollectionItem = ({product, setShow}: ComponentProps ) => {
             <ul className='desc-list'>
                 <li>
                     <span className='icon'><Image src='/icons/collection-usps/icon-measure.svg' alt='Made to measure' layout='responsive' width='29' height='21'/></span>
-                    <span className='icon icon-colour'><Image src='/icons/collection-usps/icon-measure-colour.svg' alt='Made to measure in colour' layout='responsive' width='29' height='21'/></span>
+                    <span className='icon icon-colour hide'><Image src='/icons/collection-usps/icon-measure-colour.svg' alt='Made to measure in colour' layout='responsive' width='29' height='21'/></span>
                     <p>Sized to fit you perfectly</p>
                 </li>
                 <li>
                     <span className='icon'><Image src='/icons/collection-usps/icon-leg-lift.svg' alt='High Leg Lift' layout='responsive' width='29' height='21'/></span>
-                    <span className='icon icon-colour'><Image src='/icons/collection-usps/icon-leg-lift-colour.svg' alt='High Leg Lift Colour' layout='responsive' width='29' height='21'/></span>
+                    <span className='icon icon-colour hide'><Image src='/icons/collection-usps/icon-leg-lift-colour.svg' alt='High Leg Lift Colour' layout='responsive' width='29' height='21'/></span>
                     <p>Unique High-leg lift</p>
                 </li>
                 <li>
                     <span className='icon'><Image src='/icons/collection-usps/icon-circulation.svg' alt='Circulation Heart' layout='responsive' width='29' height='21'/></span>
-                    <span className='icon icon-colour'><Image src='/icons/collection-usps/icon-circulation-colour.svg' alt='Circulation Heart Colour' layout='responsive' width='29' height='21'/></span>
+                    <span className='icon icon-colour hide'><Image src='/icons/collection-usps/icon-circulation-colour.svg' alt='Circulation Heart Colour' layout='responsive' width='29' height='21'/></span>
                     <p>Improves circulation</p>
                 </li>
                 <li>
                     <span className='icon'><Image src='/icons/collection-usps/icon-fabrics.svg' alt='Fabric Swatch' layout='responsive' width='29' height='21'/></span>
-                    <span className='icon icon-colour'><Image src='/icons/collection-usps/icon-fabrics-colour.svg' alt='Fabric Swatch Colour' layout='responsive' width='29' height='21'/></span>
+                    <span className='icon icon-colour hide'><Image src='/icons/collection-usps/icon-fabrics-colour.svg' alt='Fabric Swatch Colour' layout='responsive' width='29' height='21'/></span>
                     <p>Selection of accessories, fabrics and leathers</p>
                 </li>
             </ul>

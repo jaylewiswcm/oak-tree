@@ -6,7 +6,7 @@ import Link from 'next/link';
 // Context
 import { useAppContext } from '../../context/state'
 // Shopify
-import { getProduct } from "../../lib/shopify"
+import { getProduct, getProductsForRecommendations } from "../../lib/shopify"
 // Product Section Components
 import MaterialChair from '../../components/tableOfContents/MaterialChair';
 import MotorChair from '../../components/tableOfContents/MotorChair';
@@ -37,6 +37,8 @@ const ChairProduct = (props:any) => {
     const { title, handle, images, id } = props.product;
 
     const heroImage = images.edges[0].node;
+
+    console.log(props.product);
 
     useEffect(() => {   
         if(props.product.length === 0) {
@@ -216,7 +218,7 @@ const ChairProduct = (props:any) => {
                 </div>
             </div>
 
-            <RecommendedProducts products={props.recommendedProducts}/>
+            <RecommendedProducts products={props.product.collections} productHandle={handle} productType='chair' />
         </div>
         </>
     )
@@ -238,15 +240,6 @@ export const getServerSideProps = async (context:any) => {
     // Get Product By Handle
     const product = await getProduct(productHandle);
 
-    // console.log(product)
-    
-    // let recommendedProducts
-
-    console.log(product.id)
-    
-    // if(product) {
-    //     recommendedProducts = await getProductsForRecommendations(product.id);
-    // }
     return {
   
       props: {
