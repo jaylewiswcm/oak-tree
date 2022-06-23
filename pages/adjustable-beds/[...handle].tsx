@@ -145,11 +145,7 @@ const TheHazel = (props:any) => {
             </div>
             <div className='request-wrapper'>
                 <div className='con-reg'>
-                    {/* <div className='request-intro'>
-                        <p className='subheading'>Step Five</p>
-                        <h6>Request a Free Home Visit</h6>
-                        <p>Our consultant will be able to advise exactly which product is best for you and your home.</p>
-                    </div> */}
+
                 <div className='form-and-content'>
                     <div className='supporting-content'>
                         <p className='support-heading'>Your Home Visit Will Include</p>

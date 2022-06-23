@@ -185,8 +185,8 @@ export const InformationContainer = ({product, showForm }:ComponentProps) => {
                             src={item.image}
                             alt={item.name}
                             layout='responsive'
-                            width='310'
-                            height='210'
+                            width='700' 
+                            height='484'
                         />
                     </div>
                 ) }

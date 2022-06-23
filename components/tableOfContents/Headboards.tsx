@@ -36,7 +36,7 @@ const Headboards = ({isOpen, openAccordian, reference }:ComponentProps) => {
                   {headboards.map((item, index) => 
                     <div className='item' key={index}>
                       <div className='image-wrapper'>
-                        <Image src={item.image} alt={item.name} layout='responsive' width='295' height='222'/>
+                        <Image src={item.image} alt={item.name} layout='responsive' width='700' height='484'/>
                       </div>
                       <p className='name'>{item.name}</p>
                     </div>

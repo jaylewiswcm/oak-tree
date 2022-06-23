@@ -1,26 +1,26 @@
 [{
     "name" : "Square Headboard",
-    "image" : "/images/products/beds/headboards/square-headboard.png",
+    "image" : "/images/products/beds/headboards/square-headboard.jpg",
     "desc" : "A simple, elegant design, our square headboard is the perfect match for your divan bed."
 },
 {
     "name" : "D/D Headboard",
-    "image" : "/images/products/beds/headboards/dd-headboard.png",
+    "image" : "/images/products/beds/headboards/dd-headboard.jpg",
     "desc" : "Aesthetically pleasing with a square-shaped top that makes a style statement in any bedroom."
 },
 {
     "name" : "Fraser Headboard",
-    "image" : "/images/products/beds/headboards/fraser-headboard.png",
+    "image" : "/images/products/beds/headboards/fraser-headboard.jpg",
     "desc" : "This headboard has subtle curves that softens its look and offers a fresh clean style."
 },
 {
     "name" : "Harrow Headboard",
-    "image" : "/images/products/beds/headboards/harrow-headboard.png",
+    "image" : "/images/products/beds/headboards/harrow-headboard.jpg",
     "desc" : "Smart and attractive, with a rounded top that’s generously padded."
 },
 {
     "name" : "Soho Headboard",
-    "image" : "/images/products/beds/headboards/soho-headboard.png",
+    "image" : "/images/products/beds/headboards/soho-headboard.jpg",
     "desc" : "Horizontal panels offer a luxurious and unique look."
 }
 ]
