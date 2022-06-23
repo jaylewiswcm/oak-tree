@@ -35,6 +35,7 @@ const MobileNavigation = ({isOpen, toggleMobileMenu} : ComponentProps) => {
             { link: '/price-guide-bed', text: 'Bed Price Guide' },
             { link: '/delivery-and-installation', text: 'Delivery and Installation' },
             { link: '/vat-exempt-eligibility', text: 'VAT Exempt Eligibilty' },
+            { link: '/frequently-asked-questions', text: 'Frequently Asked Questions' },
         ]},
         { subMenuHeader: 'Chairs', submenu: [
             {link: '/chairs', text: 'All Chairs' },

@@ -48,8 +48,6 @@ const menuConfig = [
         { title: "Trade In", desc: "Learn about our trade in offer", icon : "", url: '/trade-in' },
         { title: "Testimonials and Reviews", desc: "See what our customers think", icon : "", url: '/testimonials-and-reviews' },
         { title: "British Made", desc: "Proud British manufacturing", icon : "", url: '/british-made' },
-        
-        
       ],
     },
     menu2: {
@@ -59,6 +57,8 @@ const menuConfig = [
         { title: "VAT Exempt Eligibility", desc: "See if you’re eligible for VAT exemption", icon : "", url: '/vat-exempt-eligibility' },
         { title: "Chair Price Guide", desc: "Understand our chair prices", icon : "", url: '/price-guide-chair' },
         { title: "Bed Price Guide", desc: "Understand our bed prices", icon : "", url: '/price-guide-bed' },
+        { title: "Frequently Asked Questions", desc: "See if we answered your question", icon : "", url: '/frequently-asked-questions' },
+        
       ],
     }
   },
