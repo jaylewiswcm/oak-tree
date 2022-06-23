@@ -8281,7 +8281,7 @@ body.mobile-navbar .mobile-navigation {
 }
 
 .table-of-contents .toc .product-content .content .heading {
-  font-size: 2.6rem;
+  font-size: 3.2rem;
   font-weight: 700;
   text-align: center;
   color: #17494D;
@@ -8490,6 +8490,8 @@ body.mobile-navbar .mobile-navigation {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
 .table-of-contents .toc .product-content .fabric-carousel .carousel-button .arrow {
@@ -8558,7 +8560,19 @@ body.mobile-navbar .mobile-navigation {
   text-align: left;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 650px) {
+  .table-of-contents .toc .product-content .fabric-carousel:hover .carousel-button {
+    background-color: #fff;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 949px) {
+  .table-of-contents .toc .product-content.size-section {
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 950px) {
   .table-of-contents .toc .product-content.size-section {
     margin: 50px auto;
   }
