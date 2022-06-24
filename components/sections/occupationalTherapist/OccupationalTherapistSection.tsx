@@ -11,6 +11,7 @@ import logo from '../../../public/occupational-therapist/ukts-logo.png';
 import Modal from '../../modal/Modal';
 import { QuoteCarousel } from './QuoteCarousel';
 import VideoCarousel from '../../modal/video/VideoCarousel'; 
+import samShannVideo from '../../../public/occupational-therapist/sam-shann-video.png'
 
 const OccupationalTherapistSection = () => {
   const [isOpen, setOpenModal] = useState(false)
@@ -98,7 +99,7 @@ const stagger = {
           </div>
           </div>
         </div> */}
-
+{/* 
         <div className='ot-intro con-reg'>
           <div className='image-wrapper'> 
             <Image
@@ -113,7 +114,74 @@ const stagger = {
             <h4>Advised and Approved<br/>by Leading Experts</h4>
             <p>All of our products are approved by <span className='name'>Samantha Shann</span>, occupational therapist. Samantha fully tests and evaluates everything we offer, ensuring it satisfies the high standards of an independent health professional.</p>
           </div>
+        </div> */}
+
+
+        <div className='ot-intro con-reg'>
+            <div className='section'>
+              <div className='meet-sam-shann'>
+                <div className='image-wrapper'>
+                  <Image
+                    src={desktopImage}
+                    alt='Samantha Shann'
+                    layout='fill'
+                    objectFit='cover'
+                    objectPosition='center'
+                  />
+                </div>
+                <div>
+                  <p className='heading'>Meet Samantha Shann</p>
+                  <p>Occupational Therapist</p>
+                </div>
+              </div>
+              <div className='content'>
+                <p>All of our products are approved by Samantha Shann, occupational therapist. Samantha fully tests and evaluates everything we offer, ensuring it satisfies the high standards of an independent health professional.</p>
+                <div className='signature'>
+                  <Image
+                    src='/occupational-therapist/signature.png'
+                    alt='Samantha Shann Occupational Therapist'
+                    layout='responsive'
+                    width='303'
+                    height='37'
+                  />
+                </div>
+                <Link href='/occupational-therapist'>
+                  <a>Learn more about our Occupational Therapist</a>
+                </Link>
+              </div>
+            </div>
+            <div className='video'>
+                            <Image
+                                src={samShannVideo}
+                                alt='Samantha Shann Demonstrating the recline chair'
+                                layout='fill'
+                                objectFit='cover'
+                                objectPosition='center'
+                            />
+                        <div className='video-overlay-content'>
+                        <button>
+                            <span className='icon-wrapper'>
+                                <Image
+                                    src='/buttons/play-btn-outline.svg'
+                                    alt='Play button'
+                                    width={22}
+                                    height={19}
+                                />
+                                <span className='hover-play'>
+                                <Image
+                                    src='/buttons/play-btn-fill.svg'
+                                    alt='Play button'
+                                    width={22}
+                                    height={19}
+                                />
+                                </span>
+                            </span>
+                            <p>Watch The Video</p>
+                        </button>
+                    </div>
+            </div>
         </div>
+
         <div className='con-reg'>
         <div className='logos-container'>
           <div className='logo'>

@@ -1,3 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="19.277" height="19.277" viewBox="0 0 19.277 19.277">
-  <path id="Icon_awesome-facebook-square" data-name="Icon awesome-facebook-square" d="M17.212,2.25H2.065A2.065,2.065,0,0,0,0,4.315V19.462a2.065,2.065,0,0,0,2.065,2.065H7.971V14.973H5.26V11.889H7.971V9.538c0-2.674,1.592-4.152,4.031-4.152a16.423,16.423,0,0,1,2.389.208V8.219H13.045a1.543,1.543,0,0,0-1.739,1.667v2h2.96l-.473,3.085H11.306v6.554h5.906a2.065,2.065,0,0,0,2.065-2.065V4.315A2.065,2.065,0,0,0,17.212,2.25Z" transform="translate(0 -2.25)" fill="#1a77f2"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
+  <g id="Group_2516" data-name="Group 2516" transform="translate(-277 -1576)">
+    <rect id="Rectangle_3571" data-name="Rectangle 3571" width="26" height="26" transform="translate(277 1576)" fill="#fff"/>
+    <path id="_5296500_fb_social_media_facebook_facebook_logo_social_network_icon" data-name="5296500_fb_social media_facebook_facebook logo_social network_icon" d="M128.081,9.169l.452-2.95H125.7V4.3a1.475,1.475,0,0,1,1.663-1.594h1.287V.2a15.694,15.694,0,0,0-2.285-.2,3.6,3.6,0,0,0-3.855,3.971V6.219h-2.591v2.95h2.591V16.3a10.316,10.316,0,0,0,3.189,0V9.169Z" transform="translate(165.883 1580.788)" fill="#1877f2"/>
+  </g>
 </svg>

@@ -1,3 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="21.296" height="14.974" viewBox="0 0 21.296 14.974">
-  <path id="Icon_awesome-youtube" data-name="Icon awesome-youtube" d="M21.9,6.843a2.676,2.676,0,0,0-1.883-1.895C18.357,4.5,11.7,4.5,11.7,4.5s-6.659,0-8.32.448A2.676,2.676,0,0,0,1.495,6.843,28.07,28.07,0,0,0,1.05,12a28.07,28.07,0,0,0,.445,5.159,2.636,2.636,0,0,0,1.883,1.865c1.661.448,8.32.448,8.32.448s6.659,0,8.32-.448A2.636,2.636,0,0,0,21.9,17.161,28.071,28.071,0,0,0,22.346,12,28.071,28.071,0,0,0,21.9,6.843ZM9.52,15.168V8.836L15.086,12Z" transform="translate(-1.05 -4.5)" fill="red"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26">
+  <g id="Group_2515" data-name="Group 2515" transform="translate(-313 -1576)">
+    <rect id="Rectangle_3574" data-name="Rectangle 3574" width="26" height="26" transform="translate(313 1576)" fill="#fff"/>
+    <g id="_5296521_play_video_vlog_youtube_youtube_logo_icon" data-name="5296521_play_video_vlog_youtube_youtube logo_icon" transform="translate(317.005 1583)">
+      <path id="Path_5454" data-name="Path 5454" d="M17.453,78.749a2.232,2.232,0,0,0-1.576-1.576A53.263,53.263,0,0,0,8.913,76.8a53.264,53.264,0,0,0-6.964.373A2.232,2.232,0,0,0,.372,78.749a24.9,24.9,0,0,0,0,8.581,2.233,2.233,0,0,0,1.576,1.576,53.283,53.283,0,0,0,6.964.372,53.282,53.282,0,0,0,6.964-.372,2.232,2.232,0,0,0,1.576-1.576,23.191,23.191,0,0,0,.373-4.29A23.193,23.193,0,0,0,17.453,78.749Z" transform="translate(0 -76.801)" fill="#ed1f24"/>
+      <path id="Path_5455" data-name="Path 5455" d="M204.8,184.549l4.631-2.674L204.8,179.2Z" transform="translate(-197.666 -175.636)" fill="#fff"/>
+    </g>
+  </g>
 </svg>

@@ -45,17 +45,8 @@ const Footer = () => {
             <div className='footer-navigation'>
                 <nav>  
                     {menuConfig.map((menu, index) => <FooterNav menuConfig={menu} key={index}/>)}
-
-                    {/* <div className='nav-section desktop-social'>
-                        <ul className='connect'>
-                            <li className='list-header'>Connect</li>
-                            <li className='list-link'><a href='www.facebook.com' className='facebook-blue social-link'><span className='icon'><Image src='/icons/socials/facebook.svg' alt='Facebook' width='25' height='25'/></span>Facebook</a></li>
-                            <li className='list-link'><a href='www.youtube.com' className='youtube-red social-link'><span className='icon'><Image src='/icons/socials/youtube.svg' alt='Youtube' width='25' height='25'/></span>YouTube</a></li>
-                        </ul>
-                    </div> */}
                 </nav>
-                <div className='logo-and-socials'>
-                    <Link href='/'>
+                <Link href='/'>
                         <a className='logo-link'>
                         <Image 
                                 src='/logo/logo.svg'
@@ -65,6 +56,8 @@ const Footer = () => {
                             />
                         </a>
                     </Link>
+                {/* <div className='logo-and-socials'>
+                    <p className='heading'>Follow us on:</p>
                     <div className='socials'>
                             <a href='https://www.facebook.com/OakTreeMobility/' className='social-wrapper facebook-blue' target='__blank' rel="noopener noreferrer">
                                 <div className='icon-wrapper desktop'>
@@ -85,8 +78,44 @@ const Footer = () => {
                                 <p className='youtube-red'>Youtube</p>   
                             </a>
                         </div>
-                    </div>
+                    </div> */}
+                </div> 
             </div>
+            <div className='social-container con-reg'>
+                {/* <p className='heading'>Follow Oak Tree Mobility on:</p> */}
+                <div className='social-grid'>
+                            <a href='https://www.facebook.com/OakTreeMobility/' className='social-wrapper facebook-blue' target='__blank' rel="noopener noreferrer">
+                                <div className='icon'>
+                                    <Image 
+                                        src='/icons/socials/facebook.svg' 
+                                        alt='Facebook' 
+                                        layout='responsive' 
+                                        width='50' 
+                                        height='50'
+                                    />
+                                </div>
+                                <p className='facebook-blue'>Facebook</p> 
+                            </a>
+                            <a href='https://www.youtube.com/c/oaktreemobility' className='social-wrapper youtube-red' target='__blank' rel="noopener noreferrer">
+                                <div className='icon'>
+                                    <Image 
+                                        src='/icons/socials/youtube.svg' 
+                                        alt='Youtube' 
+                                        layout='responsive' 
+                                        width='50' 
+                                        height='50'/>
+                                </div>
+                                <p className='youtube-red'>Youtube</p>   
+                            </a>
+                            <a href='https://www.youtube.com/c/oaktreemobility' className='social-wrapper linkedin-blue' target='__blank' rel="noopener noreferrer">
+                                <div className='icon'>
+                                    <Image 
+                                        src='/icons/socials/linkedin.svg' 
+                                        alt='LinkedIn' layout='responsive' width='50' height='50'/>
+                                </div>
+                                <p className='linkedin-blue'>LinkedIn</p>   
+                            </a>
+                </div>
             </div>
             <div className='footer-footnote'>
                 <div className='footnote-inner con-reg'>
