@@ -4612,6 +4612,7 @@ body.mobile-navbar .mobile-navigation {
   .occupational-therapist-wrapper .ot-intro .video {
     width: 60%;
     height: unset;
+    height: 400px;
     margin-top: 0;
     margin-left: 25px;
   }
