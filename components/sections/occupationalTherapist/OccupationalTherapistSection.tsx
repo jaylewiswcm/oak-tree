@@ -5,7 +5,7 @@ import {motion, useAnimation } from 'framer-motion';
 import { useInView } from "react-intersection-observer";
 import { useIsMedium } from '../../../utils/hooks';
 // images 
-import desktopImage from '../../../public/occupational-therapist/sam-shann.jpg'
+import desktopImage from '../../../public/occupational-therapist/sam-shann-circle.png'
 import mobileImage from '../../../public/occupational-therapist/sam-shann-circle-2.png'
 import logo from '../../../public/occupational-therapist/ukts-logo.png';
 import Modal from '../../modal/Modal';
@@ -62,7 +62,7 @@ const stagger = {
   return (
     <div className='occupational-therapist-wrapper'>
       {isOpen && <Modal classNames="" setShow={setOpenModal}><VideoCarousel videoId="l9adE0mWzUY" setShow={setOpenModal} show={isOpen}></VideoCarousel></Modal> }
-        {/* <h3>Advised and approved by leading experts</h3> */}
+        <h3>Advised and approved by leading experts</h3>
         {/* <div className='bg-dark-green-6'>
           <div className='occ-section-flex con-reg'>
             <div className='content'>
@@ -159,7 +159,7 @@ const stagger = {
                                 objectPosition='center'
                             />
                         <div className='video-overlay-content'>
-                        <button>
+                        <button onClick={() => setOpenModal(true)}>
                             <span className='icon-wrapper'>
                                 <Image
                                     src='/buttons/play-btn-outline.svg'

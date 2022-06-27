@@ -8,9 +8,49 @@
         "description" : "General purpose co-ordinated chenille fabric"
     },
     {
-        "name": "Fleur Green",
-        "src" : "/images/fabric/chairs/coniston-fleur-green.jpeg",
-        "alt": "Fabric Coniston Fluer Green",
+        "name": "Floral Oyster",
+        "src" : "/images/fabric/chairs/coniston-floral-oyster.jpeg",
+        "alt": "Fabric Coniston Floral Oyster",
+        "type" : "Fabric",
+        "composition": "40% Acrylic, 40% Polyester, 20% Viscose",
+        "description" : "General purpose co-ordinated chenille fabric"
+    },
+    {
+        "name": "Floral Blue",
+        "src" : "/images/fabric/chairs/coniston-floral-blue.jpeg",
+        "alt": "Fabric Coniston Floral Blue",
+        "type" : "Fabric",
+        "composition": "40% Acrylic, 40% Polyester, 20% Viscose",
+        "description" : "General purpose co-ordinated chenille fabric"
+    },
+    {
+        "name": "Floral Nutmeg",
+        "src" : "/images/fabric/chairs/coniston-floral-nutmeg.jpeg",
+        "alt": "Fabric Coniston Floral Nutmeg",
+        "type" : "Fabric",
+        "composition": "40% Acrylic, 40% Polyester, 20% Viscose",
+        "description" : "General purpose co-ordinated chenille fabric"
+    },
+    {
+        "name": "Floral Rafia",
+        "src" : "/images/fabric/chairs/coniston-floral-rafia.jpeg",
+        "alt": "Fabric Coniston Floral Rafia",
+        "type" : "Fabric",
+        "composition": "40% Acrylic, 40% Polyester, 20% Viscose",
+        "description" : "General purpose co-ordinated chenille fabric"
+    },
+    {
+        "name": "Floral Wine",
+        "src" : "/images/fabric/chairs/coniston-floral-wine.jpeg",
+        "alt": "Fabric Coniston Floral Wine",
+        "type" : "Fabric",
+        "composition": "40% Acrylic, 40% Polyester, 20% Viscose",
+        "description" : "General purpose co-ordinated chenille fabric"
+    },
+    {
+        "name": "Floral Terracotta",
+        "src" : "/images/fabric/chairs/coniston-floral-terracotta.jpeg",
+        "alt": "Fabric Coniston Floral Terracotta",
         "type" : "Fabric",
         "composition": "40% Acrylic, 40% Polyester, 20% Viscose",
         "description" : "General purpose co-ordinated chenille fabric"
@@ -19,6 +59,38 @@
         "name": "Floral Green",
         "src" : "/images/fabric/chairs/coniston-floral-green.jpeg",
         "alt": "Fabric Coniston Floral Green",
+        "type" : "Fabric",
+        "composition": "40% Acrylic, 40% Polyester, 20% Viscose",
+        "description" : "General purpose co-ordinated chenille fabric"
+    },
+    {
+        "name": "Fleur Green",
+        "src" : "/images/fabric/chairs/coniston-fleur-green.jpeg",
+        "alt": "Fabric Coniston Fluer Green",
+        "type" : "Fabric",
+        "composition": "40% Acrylic, 40% Polyester, 20% Viscose",
+        "description" : "General purpose co-ordinated chenille fabric"
+    },
+    {
+        "name": "Fleur Champagne",
+        "src" : "/images/fabric/chairs/coniston-fleur-champagne.jpeg",
+        "alt": "Fabric Coniston Fluer Champagne",
+        "type" : "Fabric",
+        "composition": "40% Acrylic, 40% Polyester, 20% Viscose",
+        "description" : "General purpose co-ordinated chenille fabric"
+    },
+    {
+        "name": "Fleur Oyster",
+        "src" : "/images/fabric/chairs/coniston-fleur-oyster.jpeg",
+        "alt": "Fabric Coniston Fluer Oyster",
+        "type" : "Fabric",
+        "composition": "40% Acrylic, 40% Polyester, 20% Viscose",
+        "description" : "General purpose co-ordinated chenille fabric"
+    },
+    {
+        "name": "Fleur Blue",
+        "src" : "/images/fabric/chairs/coniston-fleur-blue.jpeg",
+        "alt": "Fabric Coniston Fluer Blue",
         "type" : "Fabric",
         "composition": "40% Acrylic, 40% Polyester, 20% Viscose",
         "description" : "General purpose co-ordinated chenille fabric"
@@ -38,5 +110,61 @@
         "type" : "Fabric",
         "composition": "40% Acrylic, 40% Polyester, 20% Viscose",
         "description" : "General purpose co-ordinated chenille fabric"
+    },
+    {
+        "name": "Portobello Boucle Navy",
+        "src" : "/images/fabric/chairs/portobello-boucle-navy.jpeg",
+        "alt": "Fabric Portobello Boucle Navy",
+        "type" : "Fabric",
+        "composition": "49% Acrylic, 39% Polyester, 12% Viscose",
+        "description" : "General purpose co-ordinated chenille fabric"
+    },
+    {
+        "name": "Portobello Boucle Cocoa",
+        "src" : "/images/fabric/chairs/portobello-boucle-cocoa.jpeg",
+        "alt": "Fabric Portobello Boucle Cocoa",
+        "type" : "Fabric",
+        "composition": "49% Acrylic, 39% Polyester, 12% Viscose",
+        "description" : "General purpose co-ordinated chenille fabric"
+    },
+    {
+        "name": "Portobello Boucle Claret",
+        "src" : "/images/fabric/chairs/portobello-boucle-claret.jpeg",
+        "alt": "Fabric Portobello Boucle Claret",
+        "type" : "Fabric",
+        "composition": "49% Acrylic, 39% Polyester, 12% Viscose",
+        "description" : "General purpose co-ordinated chenille fabric"
+    },
+    {
+        "name": "Portobello Boucle Rose",
+        "src" : "/images/fabric/chairs/portobello-boucle-rose.jpeg",
+        "alt": "Fabric Portobello Boucle Rose",
+        "type" : "Fabric",
+        "composition": "49% Acrylic, 39% Polyester, 12% Viscose",
+        "description" : "General purpose co-ordinated chenille fabric"
+    },
+    {
+        "name": "Portobello Boucle Natural",
+        "src" : "/images/fabric/chairs/portobello-boucle-natural.jpeg",
+        "alt": "Fabric Portobello Boucle Natural",
+        "type" : "Fabric",
+        "composition": "49% Acrylic, 39% Polyester, 12% Viscose",
+        "description" : "General purpose co-ordinated chenille fabric"
+    },
+    {
+        "name": "Plain Grey",
+        "src" : "/images/fabric/chairs/cromwell-plain-grey.jpeg",
+        "alt": "Fabric Cromwell Plain Grey",
+        "type" : "Fabric",
+        "composition": "55% Acrylic, 40% Polyester, 5% Viscose",
+        "description" : "General purpose chenille fabric"
+    },
+    {
+        "name": "Plain Silver",
+        "src" : "/images/fabric/chairs/cromwell-plain-silver.jpeg",
+        "alt": "Fabric Cromwell Plain Grey",
+        "type" : "Fabric",
+        "composition": "55% Acrylic, 40% Polyester, 5% Viscose",
+        "description" : "General purpose chenille fabric"
     }
 ]

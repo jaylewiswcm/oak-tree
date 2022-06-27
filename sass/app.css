@@ -1201,11 +1201,19 @@ body.freeze {
 }
 
 .LandbotLivechat, .kAfRMA, .jLUvWe {
-  bottom: 36px !important;
+  bottom: 115px !important;
   right: unset !important;
-  left: 26px !important;
+  left: 0px !important;
   -webkit-box-shadow: none;
           box-shadow: none;
+}
+
+@media (min-width: 800px) {
+  .LandbotLivechat, .kAfRMA, .jLUvWe {
+    bottom: 36px !important;
+    right: unset !important;
+    left: 26px !important;
+  }
 }
 
 .kKkmhx {
@@ -2048,6 +2056,11 @@ body {
   .page-intro h2, .page-intro p {
     text-align: center;
   }
+}
+
+.loading-spinner {
+  width: 60px;
+  margin: auto;
 }
 
 @media (max-width: 400px) {
@@ -3789,7 +3802,7 @@ body.mobile-navbar .mobile-navigation {
   -webkit-transition: 0.3s;
   transition: 0.3s;
   padding: 25px;
-  z-index: 99999;
+  z-index: 100;
 }
 
 .bottom-bar .inner-bar {
@@ -4466,6 +4479,7 @@ body.mobile-navbar .mobile-navigation {
 .occupational-therapist-wrapper {
   margin: 60px auto;
   margin-top: 70px;
+  margin-top: 90px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4545,6 +4559,10 @@ body.mobile-navbar .mobile-navigation {
   }
 }
 
+.occupational-therapist-wrapper .ot-intro .section .meet-sam-shann div {
+  width: calc(100% - 165px);
+}
+
 .occupational-therapist-wrapper .ot-intro .section .meet-sam-shann .heading {
   font-size: 2.4rem;
   font-weight: 600;
@@ -4613,7 +4631,7 @@ body.mobile-navbar .mobile-navigation {
     width: 60%;
     height: unset;
     height: 400px;
-    margin-top: 0;
+    margin: auto 0;
     margin-left: 25px;
   }
 }
@@ -4664,9 +4682,8 @@ body.mobile-navbar .mobile-navigation {
 }
 
 .occupational-therapist-wrapper h3 {
-  font-family: "Euclid Circular A", "Helvetica", sans-serif;
-  font-size: 3.2rem;
-  font-weight: 600;
+  font-size: 3.6rem;
+  font-weight: 700;
   color: #17494D;
   text-align: center;
   margin-bottom: 35px;
@@ -8310,11 +8327,19 @@ body.mobile-navbar .mobile-navigation {
 }
 
 .headboard-grid p {
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: 500;
   color: #17494D;
   text-align: center;
+  margin-top: 20px;
+}
+
+.headboard-grid .item-desc {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #53565F;
   margin-top: 10px;
+  display: none;
 }
 
 .table-of-contents {
@@ -8617,8 +8642,8 @@ body.mobile-navbar .mobile-navigation {
 .table-of-contents .toc .product-content .fabric-carousel .carousel-button {
   position: absolute;
   top: 50%;
-  -webkit-transform: translateY(-90px);
-          transform: translateY(-90px);
+  -webkit-transform: translateY(-80px);
+          transform: translateY(-80px);
   width: 50px;
   height: 80px;
   background-color: rgba(255, 255, 255, 0.6);
@@ -14506,7 +14531,7 @@ body.mobile-navbar .mobile-navigation {
   display: none;
 }
 
-.faq-hero {
+.help-centre-hero {
   width: 100%;
   background-color: #EDF9FA;
   display: -webkit-box;
@@ -14515,10 +14540,16 @@ body.mobile-navbar .mobile-navigation {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 80px 50px;
+  padding: 80px 15px;
 }
 
-.faq-hero h1 {
+@media (min-width: 700px) {
+  .help-centre-hero {
+    padding: 80px 50px;
+  }
+}
+
+.help-centre-hero h1 {
   font-size: 1.8rem;
   font-weight: 400;
   font-family: "Euclid Circular A", "Helvetica", sans-serif;
@@ -14526,14 +14557,14 @@ body.mobile-navbar .mobile-navigation {
   margin-bottom: 5px;
 }
 
-.faq-hero h2 {
+.help-centre-hero h2 {
   font-size: 5.5rem;
   font-weight: 600;
   font-family: "Euclid Circular A", "Helvetica", sans-serif;
   color: #17494D;
 }
 
-.faq-hero p {
+.help-centre-hero p {
   font-size: 2rem;
   font-weight: 400;
   margin-top: 5px;
@@ -14543,12 +14574,33 @@ body.mobile-navbar .mobile-navigation {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin: 50px auto;
 }
 
+@media (min-width: 950px) {
+  .faq-content {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
 .faq-content .side-panel {
-  width: 40%;
-  padding-right: 25px;
+  width: 100%;
+  padding: 15px;
+}
+
+@media (min-width: 950px) {
+  .faq-content .side-panel {
+    width: 40%;
+    padding: 0;
+    padding-right: 25px;
+  }
 }
 
 .faq-content .side-panel h3 {
@@ -14575,8 +14627,17 @@ body.mobile-navbar .mobile-navigation {
 }
 
 .faq-content .faqs {
-  width: 60%;
-  padding-left: 50px;
+  width: 95%;
+  margin: 0 auto;
+  margin-top: 25px;
+}
+
+@media (min-width: 950px) {
+  .faq-content .faqs {
+    width: 60%;
+    margin-top: 0;
+    padding-left: 50px;
+  }
 }
 
 .faq-content .faqs .faq-table .accordion {
@@ -14584,7 +14645,7 @@ body.mobile-navbar .mobile-navigation {
 }
 
 .faq-content .faqs .faq-table .accordion .top {
-  padding: 25px 25px;
+  padding: 25px 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -14598,9 +14659,16 @@ body.mobile-navbar .mobile-navigation {
   text-align: left;
 }
 
+@media (min-width: 950px) {
+  .faq-content .faqs .faq-table .accordion .top {
+    padding: 25px 25px;
+  }
+}
+
 .faq-content .faqs .faq-table .accordion .top .question {
   font-size: 2.2rem;
   font-weight: 500;
+  line-height: 1.5;
   letter-spacing: 0;
   color: #17494D;
   padding-right: 15px;

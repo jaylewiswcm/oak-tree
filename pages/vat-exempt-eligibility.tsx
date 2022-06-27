@@ -11,11 +11,20 @@ const VatExemptEligibility = () => {
                 title="£200 Trade In | Oak Tree Mobility"
                 description="£200 Trade In. Find out more."
             />
-        <div className='bg-dark-green-1 wave-banner'>
+        {/* <div className='bg-dark-green-1 wave-banner'>
             <div className='con-reg'>
                 <h1 className='heading'>VAT Exempt Eligibilty</h1>    
             </div>    
-        </div>  
+        </div>   */}
+
+        <div className='help-centre-hero'>
+                <div className='con-reg inner-hero'>
+                    <h1>VAT Exempt Eligibilty</h1>
+                    <h2>Help Centre</h2>
+                    {/* <p>Everything you need to know about Oak Tree Mobility</p> */}
+                </div>
+            </div>
+
         <div className='legal-container con-reg'>
                 <div className='content'>
                     <h1>What is it?</h1>

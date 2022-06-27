@@ -1,21 +1,16 @@
 .LandbotLivechat, .kAfRMA, .jLUvWe {
-        bottom:36px!important;
+        bottom:115px!important;
         right: unset!important;
-        left:26px!important;
+        left:0px!important;
         // position: relative!important;
         // width:100px!important;
         // height: 100px!important;
         box-shadow: none; 
-
-}
-.kAfRMA {
-        // background-color: $dark-green-1;
-        // border-radius: 50%;
-        // width: 80px!important;
-        // height: 80px!important;
-        // display: flex;
-        // align-items: center;
-        // justify-content: center;
+        @media(min-width: 800px) {
+                bottom:36px!important;
+                right: unset!important;
+                left:26px!important;
+        }
 }
 .kKkmhx {
         height: 100%!important;

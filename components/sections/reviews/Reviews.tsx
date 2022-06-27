@@ -13,9 +13,27 @@ interface ComponentProps {
 
 const Reviews = ({ orphan }:ComponentProps) => {  
     const { data, error } = useSWR('/api/trustpilotData', fetcher)
-
+    
     if(!data) {
-        return <>...Loading</>
+        return (
+            <div className='reviews-container'>
+            <div className='reviews'>
+            <div className='star-logo'>
+                <Image 
+                    src='/trustpilot/logo-star.svg'
+                    alt='Trustpilot logo star'
+                    width='35'
+                    height='32'
+                />
+            </div>
+                <p className='oaktree-green subheading'>We're Rated Excellent on Trustpilot</p>
+                <p className='statement'>We love hearing from you</p>
+                <p className='trustscore'>TrustScore | reviews</p>
+                <div className='review-carousel'>
+                <div className='loading-spinner'><Image src='/gifs/loading.gif' alt='Loading Spinner' layout='responsive' width='200' height='200'/></div>
+                </div>
+            </div>
+        </div>)
     }
 
     const { numberOfReviews, score } = data;
@@ -55,6 +73,7 @@ const Reviews = ({ orphan }:ComponentProps) => {
                         />
                     </button>
                 </div>
+                
                 { orphan === false ? <CarouselNormal /> : <CarouselLanding />}
      
      <div className='slider-pagination-dots'></div>

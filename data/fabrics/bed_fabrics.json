@@ -4,7 +4,7 @@
         "src" : "/images/fabric/beds/beige.png",
         "alt": "Fabric Beige",
         "type" : "Fabric",
-        "composition": "40% Acrylic, 40% Polyester, 20% Viscose",
+        "composition": "",
         "description" : "General purpose co-ordinated chenille fabric"
     },
     {
@@ -12,7 +12,7 @@
         "src" : "/images/fabric/beds/black-leather.png",
         "alt": "Leather Black",
         "type" : "Leather",
-        "composition": "40% Acrylic, 40% Polyester, 20% Viscose",
+        "composition": "",
         "description" : "General purpose co-ordinated chenille fabric"
     },
     {
@@ -20,7 +20,7 @@
         "src" : "/images/fabric/beds/brown-leather.png",
         "alt": "Leather Brown",
         "type" : "Leather",
-        "composition": "40% Acrylic, 40% Polyester, 20% Viscose",
+        "composition": "",
         "description" : "General purpose co-ordinated chenille fabric"
     },
     {
@@ -28,7 +28,7 @@
         "src" : "/images/fabric/beds/gold-damask.png",
         "alt": "Fabric Gold Damask",
         "type" : "Fabric",
-        "composition": "40% Acrylic, 40% Polyester, 20% Viscose",
+        "composition": "",
         "description" : "General purpose co-ordinated chenille fabric"
     },
     {
@@ -36,7 +36,7 @@
         "src" : "/images/fabric/beds/natural.png",
         "alt": "Leather Natural",
         "type" : "Leather",
-        "composition": "40% Acrylic, 40% Polyester, 20% Viscose",
+        "composition": "",
         "description" : "General purpose co-ordinated chenille fabric"
     },
     {
@@ -44,15 +44,15 @@
         "src" : "/images/fabric/beds/silver-damask.png",
         "alt": "Fabric Silver Damask",
         "type" : "Fabric",
-        "composition": "40% Acrylic, 40% Polyester, 20% Viscose",
+        "composition": "",
         "description" : "General purpose co-ordinated chenille fabric"
     },
     {
-        "name": "Silvery Grey",
+        "name": "Silver Grey",
         "src" : "/images/fabric/beds/silver-grey.png",
-        "alt": "Fabric Silvery Grey",
+        "alt": "Fabric Silver Grey",
         "type" : "Fabric",
-        "composition": "40% Acrylic, 40% Polyester, 20% Viscose",
+        "composition": "",
         "description" : "General purpose co-ordinated chenille fabric"
     }
 ]

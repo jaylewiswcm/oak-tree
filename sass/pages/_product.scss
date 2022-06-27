@@ -1158,11 +1158,18 @@
         }
     }
     p {
-        font-size: 1.8rem;
+        font-size: 2rem;
         font-weight: 500;
         color: $dark-green-1;
         text-align: center;
+        margin-top:20px;
+    }
+    .item-desc {
+        font-size: 1.6rem;
+        font-weight: 400;
+        color: $dark-grey;
         margin-top:10px;
+        display: none;
     }
 }
 
@@ -1357,7 +1364,7 @@
                 .carousel-button {
                     position: absolute;
                     top: 50%;
-                    transform: translateY(-90px);
+                    transform: translateY(-80px);
                     width: 50px;
                     height: 80px;
                     background-color:rgba(255,255,255,0.6);

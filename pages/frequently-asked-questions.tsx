@@ -11,7 +11,7 @@ const FrequentlyAskedQuestions = () => {
             description="Take a look at our Frequently Asked Questions and find out more about the range of mobility products available from Oak Tree Mobility."
         />
 
-        <div className='faq-hero'>
+        <div className='help-centre-hero'>
             <div className='con-reg inner-hero'>
                 <h1>Frequently Asked Questions</h1>
                 <h2>Help Centre</h2>

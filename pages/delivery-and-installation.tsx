@@ -13,11 +13,19 @@ const deliveryAndInstallation = () => {
                 title="Delivery and Installation | Oak Tree Mobility"
                 description="Here at Oak Tree Mobility we offer a two-man white-glove delivery and installation service included in the price of all our chairs and beds. Find out more."
             />
-            <div className='bg-dark-green-1 wave-banner'>
+            {/* <div className='bg-dark-green-1 wave-banner'>
                 <div className='con-reg'>
                     <h1 className='heading'>Delivery and Installation</h1>
                 </div>
+            </div> */}
+            <div className='help-centre-hero'>
+                <div className='con-reg inner-hero'>
+                    <h1>Delivery and Installation</h1>
+                    <h2>Help Centre</h2>
+                    {/* <p>Everything you need to know about Oak Tree Mobility</p> */}
+                </div>
             </div>
+
             <div className='page-intro con-reg'>
                 <h2>Delivery</h2>
                 <p>Once your chair or bed has been built and quality checked, our customer service team will contact you to arrange a convenient delivery date for your furniture to be delivered. </p>

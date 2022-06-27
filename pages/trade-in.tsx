@@ -13,11 +13,19 @@ const TradeIn = () => {
                 title="£200 Trade In | Oak Tree Mobility"
                 description="£200 Trade In. Find out more."
             />
-            <div className='bg-dark-green-1 wave-banner'>
+            {/* <div className='bg-dark-green-1 wave-banner'>
                 <div className='con-reg'>
                     <h1 className='heading'>Trade In</h1>    
                 </div>    
-            </div>  
+            </div>  */}
+            <div className='help-centre-hero'>
+                <div className='con-reg inner-hero'>
+                    <h1>Trade In</h1>
+                    <h2>Help Centre</h2>
+                </div>
+            </div>
+
+            
             <div className='page-intro trade-in-intro'>
                 <h2>Are you thinking of what you’ll do<br/>with your old furniture?</h2>
                 <p>When looking for a new chair or bed, an ongoing concern for many prospective customers is what to do with their existing furniture. Disposal can often be expensive and time consuming, and tends to add to the burden of finding the right company to choose.</p>

@@ -27,7 +27,7 @@ export const Fabric = ({fabric}: ComponentProps) => {
         </div>
         <p className='fabric-name'>{name}</p>
         <p className='composition'>{composition}</p>
-        <p className='description'>{description}</p>
+        {/* <p className='description'>{description}</p> */}
     </div>
   )
 }

@@ -56,33 +56,9 @@ const Footer = () => {
                             />
                         </a>
                     </Link>
-                {/* <div className='logo-and-socials'>
-                    <p className='heading'>Follow us on:</p>
-                    <div className='socials'>
-                            <a href='https://www.facebook.com/OakTreeMobility/' className='social-wrapper facebook-blue' target='__blank' rel="noopener noreferrer">
-                                <div className='icon-wrapper desktop'>
-                                    <Image src='/icons/socials/facebook.svg' alt='Facebook' width='25' height='25'/>
-                                </div>
-                                <div className='icon-wrapper mobile'>
-                                    <Image src='/icons/socials/facebook-mobile.svg' alt='Facebook' width='42' height='42'/>
-                                </div>
-                                <p className='facebook-blue'>Facebook</p> 
-                            </a>
-                            <a href='https://www.youtube.com/c/oaktreemobility' className='social-wrapper youtube-red' target='__blank' rel="noopener noreferrer">
-                                <div className='icon-wrapper desktop'>
-                                    <Image src='/icons/socials/youtube.svg' alt='Youtube' width='25' height='25'/>
-                                </div>
-                                <div className='icon-wrapper mobile'>
-                                    <Image src='/icons/socials/youtube-mobile.svg' alt='Youtube' width='42' height='42'/>
-                                </div>
-                                <p className='youtube-red'>Youtube</p>   
-                            </a>
-                        </div>
-                    </div> */}
                 </div> 
             </div>
             <div className='social-container con-reg'>
-                {/* <p className='heading'>Follow Oak Tree Mobility on:</p> */}
                 <div className='social-grid'>
                             <a href='https://www.facebook.com/OakTreeMobility/' className='social-wrapper facebook-blue' target='__blank' rel="noopener noreferrer">
                                 <div className='icon'>
@@ -144,7 +120,8 @@ const menuConfig = [
         menuHeader: 'Customer Support', menu: [
             { link: '/delivery-and-installation', text: 'Delivery and Installation' },
             { link: '/vat-exempt-eligibility', text: 'VAT Exempt Eligibilty' },
-            { link: '/testimonials-and-reviews', text: 'Testimonials And Reviews' }
+            { link: '/testimonials-and-reviews', text: 'Testimonials And Reviews' },
+            { link: '/frequently-asked-questions', text: 'Frequently Asked Questions'}
         ]
     },
     { menuHeader: 'Chairs', menu: [

@@ -8,7 +8,7 @@ export const AppWrapper = ({ children }) => {
     
     let sharedState = {
         productPage,
-        formModal,
+        formModal, 
         setFormModal,
         setProductPage
     }

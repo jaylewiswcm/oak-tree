@@ -39,6 +39,7 @@ const Headboards = ({isOpen, openAccordian, reference }:ComponentProps) => {
                         <Image src={item.image} alt={item.name} layout='responsive' width='700' height='484'/>
                       </div>
                       <p className='name'>{item.name}</p>
+                      <p className='item-desc'>{item.desc}</p>
                     </div>
                     )}
                 </div>
