@@ -27,7 +27,7 @@ const TradeIn = () => {
 
             
             <div className='page-intro trade-in-intro'>
-                <h2>Are you thinking of what you’ll do<br/>with your old furniture?</h2>
+                <h2>Are you thinking of what you’ll do <br/>with your old furniture?</h2>
                 <p>When looking for a new chair or bed, an ongoing concern for many prospective customers is what to do with their existing furniture. Disposal can often be expensive and time consuming, and tends to add to the burden of finding the right company to choose.</p>
             </div>
             <div className='trade-in-sections con-reg'>

@@ -1945,14 +1945,20 @@
                         padding: 10px 15px;
                         border-radius: 4px;
                         word-break: keep-all;
-                        width: fit-content;
+                       
                         height: fit-content;
                         font-size: 1.4rem;
                         font-weight: 600;
                         margin-left: auto;
                         margin-bottom:15px;
+
+                        width: 100%;
+                        text-align: center;
+
                         @media(min-width: 600px) {
                         margin-bottom:0;
+                        width: unset;
+                        width: fit-content;
                         }
                     }
                     ul {
