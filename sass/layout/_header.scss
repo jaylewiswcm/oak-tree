@@ -7,7 +7,6 @@ header {
 
   .top-header {
     padding: 10px 0;
-    // border-bottom: 1px $lighter-grey solid;
     background-color: $dark-green-1;
     .con-reg {
       display: flex;
@@ -21,113 +20,30 @@ header {
         font-weight: 400;
         padding:0;
         margin-right: 8px;
+        display: none;
+        @media(min-width: 460px) {
+          display: initial;
+        }
+      }
+      .trustpilot-logo {
+        width: 190px;
+        margin-left: auto;
+        padding:6px 0;
+        @media(min-width: 460px) {
+          margin-left: 0;
+          margin-right: auto;
+        }
+      }
+    .supporting-bhf {
+      display: none;
+      align-items: center;
+      @media(min-width: 830px) {
+        display: flex;
       }
       .bhf-logo {
         width: 200px;
       }
     }
-    .mobile-header-logo {
-      display: block;
-      width: 40%;
-      max-width: 220px;
-      padding: 15px 0;
-      @media(min-width: 970px) {
-        display: none;
-      }
-    }
-    .mobile-phone-number {
-      border-radius: 4px;
-      background-color: rgba(240,246,247,1);
-      border: 2px solid $dark-green-1;
-      padding: 10px 25px;
-      margin-left: auto;
-      @media(min-width: 970px) {
-        display: none;
-      }
-      p {
-        font-size: 1.8rem;
-        font-weight: 500;
-        color: $dark-green-1;
-      }
-    }
-    .trustpilot-logo {
-      width: 190px;
-      margin-right: auto;
-    }
-    .supporting-bhf {
-      margin-left: 30px;
-      display: none;
-      @media(min-width: 970px) {
-        display: block;
-      }
-      p {
-        font-size: 1.2rem;
-        font-weight: 500;
-        color: $grey;
-        margin-bottom:4px;
-         }
-      .bhf-logo {
-        width:120px;
-      }
-    }
-    .search-bar {
-      position: relative;
-      // height: 30px;
-      display:none;
-      margin: 0 auto;
-      @media(min-width: 970px) {
-        display: flex;
-      }
-      input[type="text"] { 
-        width: 320px;
-        height: 35px;
-        border: 1px solid $lighter-grey;
-        background-color: $lightest-grey;
-        border-radius:2px;
-        outline: none;
-        padding: 10px;
-        padding-right: 42px;
-        font-size: 1.4rem;
-      }
-    
-      input[type="submit"] {       
-        height: 35px;
-        border: 1px solid  $dark-green-1;
-        background-color: $dark-green-1;
-        border-radius:2px;
-        outline: none;
-        position: absolute;
-        top:0;
-        right:0;
-        color: $white;
-        padding: 0 20px;
-        background-image: url('../public/buttons/icon-search-white.svg');
-        background-position: center;
-        background-size: 40%;
-        background-repeat: no-repeat;
-      }
-      label {
-        display: none;
-      }
-    }
-    .header-phone-number {
-      display: none;
-      flex-direction: column;
-      text-align: right;
-      margin-left: auto;
-      @media(min-width: 970px) {
-        display: flex;
-      }
-      .number-support {
-        font-size: 1.4rem;
-        color: $grey;
-      }
-      .number {
-        font-size: 3.2rem;
-        font-weight: 600;
-        color: $dark-green-1;
-        letter-spacing: 1px;
-      }
     }
   }
   .header-inner {
@@ -139,30 +55,48 @@ header {
       height: 100%;
       max-width: 1500px;
     }
-    .mobile-menu-btn {
+    .desktop-logo {
+      display: none;
+      @media(min-width:440px) {
+        display: initial;
+      }
+    }
+    .mobile-logo {
+      width: 42px;
+      @media(min-width:440px) {
+        display: none;
+      }
+    }
+    .mobile-phone-btn {
+      margin-left: auto;
+      margin-right: 30px;
+    }
+    .mobile-header-btn {
       display: flex;
       align-items: center;
       justify-content: center;
-      cursor: pointer; 
-
-      margin-left: auto;
+      cursor: pointer;
       @media(min-width: 1080px) {
         display: none;
       }
-      p {
-        font-size:1.6rem;
-        margin-top: 5px;
-        text-align: center;
+     .icon-btn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        p {
+          font-size:1.6rem;
+          font-weight: 500;
+          color: $grey;
+          margin-top: 5px;
+          text-align: center;
+          letter-spacing: 0.5px;
+        }
       }
+    
     }
     .header-logo,.header-cta {
       display: flex;
-    }
-    .header-logo {
-      width: 60%;
-      @media(min-width: 400px) {
-        width: unset;
-      }
     }
     .logo {  
       margin-right: 20px;

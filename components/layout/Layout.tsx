@@ -35,10 +35,10 @@ interface ComponentProps  {
         } else {
             if(position < 500) {
               setHideClass("hide-bar") 
-              setOverlayClass('british-made-overlay')
+              setOverlayClass('')
           } else if(!productPage) {
               setHideClass("") 
-              setOverlayClass('british-made-overlay increased-bottom-margin')
+              setOverlayClass('increased-bottom-margin')
           }  
         }
       };

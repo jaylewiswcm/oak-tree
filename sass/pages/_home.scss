@@ -63,63 +63,43 @@
 .home-intro {
     position: relative;
     display: flex;
- 
-    height: 500px;
+    flex-direction: column;
+    // height: 500px;
     width: 100%;
-    // background-image: url(../public/images/heros/home-hero.png);
-    // background-repeat: no-repeat;
-    // background-position: center;
-    // background-size:cover;
-    // display: flex;
-
-    // @media(min-width: 800px) {
-    //     height: unset;
-    //     background-image: none;
-    // }
-    // .hero-image {
-    //     display: none;
-    //     @media(min-width: 800px) {
-    //      display: initial;
-    //     }   
-    // }
     .hero-image {
         width: 100%;
-        background-image: url(../public/images/heros/home-hero-full.png);
+        height: 500px;
+        background-image: url(../public/images/heros/home-hero-mobile.jpg);
         background-repeat: no-repeat;
         background-position: center;
         background-size:cover;
         position: relative;
+        @media(min-width: 850px) {
+            background-image: url(../public/images/heros/home-hero-full.png);
+        }
         .con-reg {
             position: relative;
             height: 100%;
         }
     }
-    .as-seen-on-tv {
-        position: absolute;
-        top: 15px;
-        left: 15px;
-        width: 150px;
-        display: none;
-        @media(min-width: 800px) {
-            display: initial;
-            display: none;
-        }
-    }
+
     .hero-content {
-        position: absolute;
-         right: 25px;
-         top: 50%;
-         transform: translateY(-50%);
          display: flex;
          flex-direction: column;
          align-items: center;
-         background-color: #E8F6F4;
-        //  background-color: $white;
-        //  background-color: $dark-green-6;
-         width: fit-content;
-         max-width: 650px;
-         padding: 50px 40px;
- 
+        width: 100%;
+        padding: 30px 40px;
+         position: relative;
+        @media(min-width:850px) {
+            position: absolute;
+            right: 25px;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #E8F6F4;
+            width: fit-content;
+            max-width: 650px;
+            padding: 50px 40px;
+        }
          h1 {
             font-size: 4rem;
             color: $dark-green-1;
@@ -135,7 +115,19 @@
             margin: 0 auto;
             margin-top: 5px;
             margin-bottom: 20px;
-        
+        }
+        .desktop-p {
+            display: none;
+            @media(min-width: 850px) {
+                display: initial;
+            }
+        }
+        .mobile-p {
+            font-size: 2rem;
+            font-weight: 400;
+            @media(min-width: 850px) {
+                display: none;
+            }
         }
         .main-cta {
             border-radius: 3px;
@@ -148,6 +140,10 @@
             background: linear-gradient(187deg, rgba(9,129,132,1) 0%, rgba(27,108,111,1) 100%);
             box-shadow: 0 3px 21px rgba(9,129,132,0.21);
             position: relative;
+            overflow: hidden;
+            @media(min-width: 850px) {
+            
+            }
              p {
                 font-size: 1.9rem;
                 font-weight: 500;
@@ -175,6 +171,17 @@
             .bg {
                 opacity: 0;
             }
+        }
+    }
+    .as-seen-on-tv {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        width: 150px;
+        display: none;
+        @media(min-width: 800px) {
+            display: initial;
+            display: none;
         }
     }
     // .hero-content {
@@ -513,13 +520,12 @@
 }
 .home-collections {
     margin-bottom: 0px;
+
     @media(min-width: 400px) and (max-width: 899px){
         margin-bottom: 30px;
         margin-top: 30px;
-        // padding: 0 30px;
     }
     @media(min-width: 899px) {
-        // padding: 0 15px;
         margin-top: 30px;
     }
     .heading {
@@ -897,6 +903,11 @@
     margin-top: 90px;
     display: flex;
     flex-direction: column;
+    h3 {
+        max-width: 600px;
+        padding: 0 15px;
+        margin: 0 auto;
+    }
     // .ot-intro {
     //     display: flex;
     //     flex-direction:column;
@@ -961,9 +972,10 @@
         }
         .section {
             width: 100%;
-            padding-right: 25px;
+            
             @media(min-width: 950px) {
               width: 40%;
+              padding-right: 25px;
             }
             .meet-sam-shann {
                 display: flex;
@@ -980,14 +992,17 @@
                     border-radius: 50%;
                     overflow: hidden;
                     position: relative;
-                    margin-right: 25px;
+                    
                     margin-bottom: 15px;
                     @media(min-width: 950px) {
-                        margin-bottom: 0;
+                        margin: 0;
+                        margin-right: 25px;
                     }
                 }   
                 div {
-                    width: calc(100% - 165px);
+                    @media(min-width: 950px) {
+                        width: calc(100% - 165px);
+                    }
                 }
                 .heading  {
                     font-size:2.4rem;
@@ -1014,6 +1029,8 @@
                     font-weight: 300;
                     color: $dark-grey;
                     line-height: 1.6;
+                    margin: 0 auto;
+                    max-width: 600px;
                 }
                 .signature {
                     width: 280px;
@@ -1853,7 +1870,7 @@
                     margin-top: 10px;
                 }
                 ul {
-                    margin-top: 10px;
+                    margin-top: 15px;
                    
                     @media(min-width: 395px) and (max-width: 525px) {
                         display: flex;
@@ -1981,6 +1998,12 @@
             border-radius: 6px;
             align-items: center;
             justify-content: center;
+            // padding: 0 15px;
+            width: 100%;
+            min-height:200px;
+            @media(min-width: 850px) {
+                pointer-events: none;
+            }
             .value-heading {
                 font-size: 3rem;
                 font-weight: 600;
@@ -1990,6 +2013,17 @@
             p{
                 font-size: 2.2rem;
                 text-align: center;
+                line-height: 1.2;
+                margin-top: 10px;
+                br {
+                    @media(min-width: 950px) {
+                        display: none;
+                    } 
+                }
+                .highlight-number {
+                    font-weight: 600;
+                    font-size: inherit;
+                }
             }
         }
     }

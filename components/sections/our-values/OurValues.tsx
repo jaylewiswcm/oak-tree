@@ -101,10 +101,10 @@ const OurValues = () => {
                     <p>No Selling. Helping. No Delays without communication. The best quality checks in the business. Made to fit.</p>
                 </div>
             </div>
-            <div className='value-item ready-to-talk'>
+            <a href='tel:0800 094 999' className='value-item ready-to-talk'>
                 <p className='value-heading'>Ready To Talk?</p>
-                <p>Call us on 0800 094 999</p>
-            </div>
+                <p>Call us on <br/><span className='highlight-number'>0800 094 999</span></p>
+            </a>
         </div>
     </div>
   )

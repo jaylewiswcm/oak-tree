@@ -31,6 +31,7 @@ const Header = () => {
                       height='16.15'
                     />
                 </div>
+                <div className='supporting-bhf'>
                 <p>Proudly supporting the</p>
                 <div className='bhf-logo'>
                   <Image
@@ -41,26 +42,7 @@ const Header = () => {
                       height='28'
                     />
                 </div>
-                {/* <div className='supporting-bhf'>
-                    <p>Proudly Supporting</p>
-                    <div className='bhf-logo'>
-                        <Image
-                            src='/bhf/bhf-logo.svg'
-                            alt='British Heart Foundation'
-                            layout='responsive'
-                            width='95.98'
-                            height='26.36'
-                        />
-                    </div>
                 </div>
-                <div className='mobile-phone-number'>
-                 <p>Call Us</p>
-               </div>
-                <div className='header-phone-number'>
-                   <p className='number-support'>Questions? Call us <b>free</b> today:</p>
-                   <p className='number'>0800 094 999</p>
-                </div> 
-                </div> */}
               </div>
             </div>
             <div className='header-inner main-header'>
@@ -68,18 +50,40 @@ const Header = () => {
                 <div className="header-logo">
                     <Link href="/">
                         <a className="logo">
-                        <Image 
-                            src='/logo/logo.svg'
-                            alt='Oak Tree Mobility'
-                            layout='responsive'
-                            width={215.42}
-                            height={44.89}
-                        />
+                          <div className='desktop-logo'>
+                            <Image 
+                                src='/logo/logo.svg'
+                                alt='Oak Tree Mobility'
+                                layout='responsive'
+                                width={215.42}
+                                height={44.89}
+                            />
+                          </div>
+                          <div className='mobile-logo'>
+                            <Image 
+                                src='/logo/logo-type.svg'
+                                alt='Oak Tree Mobility'
+                                layout='responsive'
+                                width={27.72}
+                                height={34.73}
+                            />
+                          </div>
                          </a>
                     </Link>
                 </div>
                 <Menu />
-                <div className='mobile-menu-btn'>
+                <div className='mobile-phone-btn mobile-header-btn'>
+                    <a href='tel:0800094999' className='icon-btn'>
+                        <Image
+                            src='/buttons/call.svg'
+                            alt='Telephone'
+                            width='40'
+                            height='30'
+                        />
+                        <p>Call Us</p>
+                    </a>
+                </div> 
+                <div className='mobile-menu-btn mobile-header-btn'>
                     <button className='icon-btn' onClick={() => toggleMobileMenu()}>
                         <Image
                             src='/buttons/menu-open.svg'

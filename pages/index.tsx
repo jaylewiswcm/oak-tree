@@ -81,15 +81,15 @@ closeUspOverlay = () => {
         <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
       </Head>
   <div className='home-intro'>
-    <div className='hero-image '>
-      <div className='con-reg'>
+    <div className='hero-image'></div>
+    <div className='con-reg'>
       <div className='hero-content'>
-         <h1>Life Is For Living</h1>
-         <p>Change is the one certainty in life. It's all part of life's rich experience. Over time your mobility changes too. What we once took for granted feels out of reach. This can be hard. As the UK's leading mobility specialist, we're here to help</p>
+        <h1>Life Is For Living</h1>
+        <p className='mobile-p'>Change is the one certainty in life. As the UK’s leading mobility specialist, we’re here to help</p>  
+        <p className='desktop-p'>Change is the one certainty in life. It's all part of life's rich experience. Over time your mobility changes too. What we once took for granted feels out of reach. This can be hard. As the UK's leading mobility specialist, we're here to help</p>
         <MainRequestButton />
       </div>
       </div>
-    </div>
     <div className='as-seen-on-tv'>
          <Image
             src='/icons/seen-on-tv.svg'

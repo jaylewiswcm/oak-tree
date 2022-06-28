@@ -62,7 +62,7 @@ const stagger = {
   return (
     <div className='occupational-therapist-wrapper'>
       {isOpen && <Modal classNames="" setShow={setOpenModal}><VideoCarousel videoId="l9adE0mWzUY" setShow={setOpenModal} show={isOpen}></VideoCarousel></Modal> }
-        <h3>Advised and approved by leading experts</h3>
+        <h3>Advised and Approved by Leading Experts</h3>
         {/* <div className='bg-dark-green-6'>
           <div className='occ-section-flex con-reg'>
             <div className='content'>
