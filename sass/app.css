@@ -3400,13 +3400,11 @@ body.mobile-navbar .mobile-navigation {
   background-color: #fff;
   width: 100%;
   max-width: 400px;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  max-height: calc(100vh - 150px);
+  height: 90vh;
   left: -100%;
   z-index: 999;
   padding-bottom: 15px;
+  overflow: scroll;
   -webkit-transition: 0.3s;
   transition: 0.3s;
   -webkit-box-shadow: 0 3px 21px rgba(37, 72, 76, 0.29);
@@ -3426,6 +3424,11 @@ body.mobile-navbar .mobile-navigation {
           justify-content: center;
   padding: 15px 15px;
   padding-left: 30px;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  z-index: 5;
 }
 
 .mobile-navigation .top-wrapper .logo-wrapper {
@@ -3435,13 +3438,27 @@ body.mobile-navbar .mobile-navigation {
 }
 
 .mobile-navigation .top-wrapper .mobile-menu-btn {
-  display: none;
   margin-left: auto;
 }
 
-.mobile-navigation .main-nav {
-  height: calc(100% - 69.58px);
-  overflow: scroll;
+.mobile-navigation .top-wrapper .mobile-menu-btn button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.mobile-navigation .top-wrapper .mobile-menu-btn button .icon {
+  width: 20px;
 }
 
 .mobile-navigation .main-nav button, .mobile-navigation .main-nav a {
@@ -3530,14 +3547,14 @@ body.mobile-navbar .mobile-navigation {
 }
 
 .mobile-navigation .button-wrapper {
-  padding: 25px;
-  height: 30%;
-  overflow: scroll;
-  display: none;
+  padding: 25px 0;
+  border-top: 1px #E3E3E3 solid;
+  margin: 0 25px;
+  margin-top: 15px;
 }
 
 .mobile-navigation .button-wrapper .phone-number {
-  margin-bottom: 15px;
+  margin-bottom: 25px;
 }
 
 .mobile-navigation .button-wrapper .phone-number p {

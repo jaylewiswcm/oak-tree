@@ -80,15 +80,17 @@ const MobileNavigation = ({isOpen, toggleMobileMenu} : ComponentProps) => {
                 />
             </div>      
             <div className='mobile-menu-btn'>
-                    <button className='icon-btn' onClick={() => toggleMobileMenu()}>
-                        <Image
-                            src='/buttons/menu-close.svg'
-                            alt='Open Menu'
-                            width='40'
-                            height='30'
-                        />
-                    </button>
-                </div> 
+                <button onClick={() => toggleMobileMenu()}>
+                    <div className='icon'>
+                                <Image
+                                    src='/buttons/menu-close.svg'
+                                    alt='Open Menu'
+                                    width='40'
+                                    height='40'
+                                />
+                    </div>
+                </button>
+            </div> 
         </div>
         <ul className='main-nav'>
             <li><Link href='/'><a onClick={() => toggleMobileMenu()}>Home</a></Link></li>
@@ -116,7 +118,7 @@ const MobileNavigation = ({isOpen, toggleMobileMenu} : ComponentProps) => {
         </div> 
  
     </div>
-    <div className={`menu-close ${isOpen ? '' : 'hide-mobile-navigation'}`}>
+    {/* <div className={`menu-close ${isOpen ? '' : 'hide-mobile-navigation'}`}>
             <button onClick={() => toggleMobileMenu()}>
                 <div className='icon'>
                             <Image
@@ -127,7 +129,7 @@ const MobileNavigation = ({isOpen, toggleMobileMenu} : ComponentProps) => {
                             />
                 </div>
             </button>
-        </div>
+        </div> */}
     </div>
   )
 }
