@@ -12,9 +12,11 @@ function App({ Component, pageProps, router }:AppProps) {
  
   if (router.pathname.startsWith('/request')) {
     return (
-      <OrphanLayout>   
-          <Component {...pageProps}></Component>
-      </OrphanLayout>
+      <AppWrapper>
+        <OrphanLayout>   
+            <Component {...pageProps}></Component>
+        </OrphanLayout>
+      </AppWrapper>
     )
   }
 

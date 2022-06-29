@@ -46,7 +46,7 @@ interface ComponentProps  {
       window.addEventListener("scroll", handleScroll);
       return () => {
         window.removeEventListener("scroll", handleScroll);
-      };
+      }; 
 
     }, [productPage, setHideClass, setOverlayClass, router]);
     

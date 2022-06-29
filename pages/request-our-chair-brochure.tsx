@@ -7,8 +7,8 @@ import OtFamily from '../components/sections/customers/OtFamily';
 import OrphanBrochureFormWrapper from '../components/forms/OrphanBrochureFormWrapper';
 import Testimonials from '../components/sections/Testimonials/Testimonials';
 
-
-const requestOurChairBrochure = () => {
+ 
+const RequestOurChairBrochure = () => {
     return (
         <div className="orphan-brochure-wrapper">
             <div className='usp-header'>
@@ -471,4 +471,4 @@ const requestOurChairBrochure = () => {
 } 
 
 
-export default requestOurChairBrochure; 
+export default RequestOurChairBrochure; 

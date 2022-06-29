@@ -1,6 +1,12 @@
 import React, { useState, useEffect } from 'react'
+// Context
+import { useAppContext } from '../../context/state'
+// Components
 import { BottomBar } from './ctaBar/BottomBar';
 import Header from './orphan/Header';
+// Form Components
+import Modal from '../modal/Modal';
+import PopupBrochureRequestForm from '../forms/PopupBrochureRequestForm';
 
 interface ComponentProps  {
     children: any
@@ -10,6 +16,8 @@ interface ComponentProps  {
  const OrphanLayout = ({ children }:ComponentProps) => {
     const [hideClass, setHideClass] = useState('bottom-bar hide-bar orphan-bottom-bar')
  
+    const { formModal, setFormModal} = useAppContext();
+
     useEffect(() => {
         window.addEventListener("scroll", handleScroll);
         return () => {
@@ -32,6 +40,8 @@ interface ComponentProps  {
             <Header /> 
             { children }
             <BottomBar className={hideClass} />
+            {formModal &&  <Modal classNames='form-modal' setShow={setFormModal}><PopupBrochureRequestForm setShow={setFormModal} /></Modal>}
+      
         </>
     )
 }
