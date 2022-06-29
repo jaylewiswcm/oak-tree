@@ -2122,7 +2122,7 @@ footer .email-signup-banner {
   background: #17494d;
   background: -webkit-gradient(linear, left bottom, left top, from(#17494d), to(#09595e));
   background: linear-gradient(0deg, #17494d 0%, #09595e 100%);
-  padding: 30px 15px;
+  padding: 40px 30px;
   overflow: hidden;
   position: relative;
 }
@@ -2133,23 +2133,13 @@ footer .email-signup-banner {
   }
 }
 
-@media (min-width: 910px) and (max-width: 1099px) {
+@media (min-width: 910px) {
   footer .email-signup-banner {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    padding: 20px 60px;
-  }
-}
-
-@media (min-width: 1100px) {
-  footer .email-signup-banner {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    padding: 20px 60px;
+    padding: 30px 60px;
   }
 }
 
@@ -2219,7 +2209,6 @@ footer .email-signup-banner .content-and-form .content p {
 }
 
 footer .email-signup-banner .content-and-form .content ul {
-  padding-left: 18px;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -2235,9 +2224,19 @@ footer .email-signup-banner .content-and-form .content ul {
 }
 
 footer .email-signup-banner .content-and-form .content ul li {
-  list-style-type: disc;
   color: #fff;
-  padding-bottom: 5px;
+  padding-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .email-signup-banner .content-and-form .content ul li .tick {
+  width: 18px;
+  margin-right: 10px;
 }
 
 footer .email-signup-banner .content-and-form .content ul li p {

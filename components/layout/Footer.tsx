@@ -18,11 +18,26 @@ const Footer = () => {
                     <div className='content-and-form'>
                         <div className='content'>
                             <h6>Sign up to the Oak Tree newsletter</h6>
-                            <p>We'll send you the latest edition of our magazine for absolutely FREE! It's packed with:</p>
+                            <p>We'll send you the latest edition of our magazine for absolutely <span className='yellow-3'>FREE</span>! It's packed with:</p>
                             <ul>
-                                <li><p>Fascinating articles</p></li>
-                                <li><p>Lifestyle and health tips</p></li>
-                                <li><p>And much more!</p></li>
+                                <li>
+                                    <span className='tick'>
+                                        <Image src='/icons/yellow-tick.svg' alt='Yellow Tick 1' layout='responsive' width='17.55' height='18.2' />
+                                    </span>
+                                    <p>Fascinating articles</p>
+                                </li>
+                                <li>
+                                    <span className='tick'>
+                                        <Image src='/icons/yellow-tick.svg' alt='Yellow Tick 2' layout='responsive' width='17.55' height='18.2' />
+                                    </span>
+                                    <p>Lifestyle and health tips</p>
+                                </li>
+                                <li>
+                                    <span className='tick'>
+                                        <Image src='/icons/yellow-tick.svg' alt='Yellow Tick 3' layout='responsive' width='17.55' height='18.2' />
+                                    </span>
+                                    <p>And much more!</p>
+                                </li>
                             </ul>                    
                         </div>
                         <div className='form-wrapper'>
