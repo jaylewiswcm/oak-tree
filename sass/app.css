@@ -2149,7 +2149,7 @@ footer .email-signup-banner {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    padding: 0px 60px;
+    padding: 20px 60px;
   }
 }
 
@@ -2190,13 +2190,13 @@ footer .email-signup-banner .content-and-form .content {
 
 footer .email-signup-banner .content-and-form .content h6 {
   font-family: "Euclid Circular A", "Helvetica", sans-serif;
-  font-size: 2.8rem;
+  font-size: 2.9rem;
   font-weight: 500;
   color: #fff;
   text-align: center;
   width: 100%;
   line-height: 1.2;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
 }
 
 @media (min-width: 600px) {
@@ -2220,7 +2220,18 @@ footer .email-signup-banner .content-and-form .content p {
 
 footer .email-signup-banner .content-and-form .content ul {
   padding-left: 18px;
-  margin-top: 10px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  margin-top: 15px;
+}
+
+@media (min-width: 900px) {
+  footer .email-signup-banner .content-and-form .content ul {
+    margin: 0;
+    margin-top: 15px;
+  }
 }
 
 footer .email-signup-banner .content-and-form .content ul li {
@@ -2232,6 +2243,7 @@ footer .email-signup-banner .content-and-form .content ul li {
 footer .email-signup-banner .content-and-form .content ul li p {
   font-size: 1.8rem;
   font-weight: 300;
+  text-align: left;
 }
 
 footer .email-signup-banner .content-and-form .form-wrapper {
@@ -2279,21 +2291,23 @@ footer .email-signup-banner .content-and-form .form-wrapper form .input-wrapper 
   font-size: 1.9rem;
   font-weight: 400;
   color: #fff;
-  width: 300px;
+  width: 100%;
+  max-width: 300px;
   border-radius: 5px;
   text-align: center;
   border-radius: 4px;
   height: 50px;
   -webkit-box-shadow: 0 0 19px rgba(0, 0, 0, 0.18);
           box-shadow: 0 0 19px rgba(0, 0, 0, 0.18);
-  margin-right: 15px;
   outline: none;
   border: 1px #188087 solid;
+  margin-right: 0;
 }
 
-@media (min-width: 910px) {
+@media (min-width: 900px) {
   footer .email-signup-banner .content-and-form .form-wrapper form .input-wrapper input[type=text] {
     text-align: left;
+    margin-right: 15px;
   }
 }
 
@@ -3371,17 +3385,12 @@ body.mobile-navbar .mobile-navigation {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 15px 15px;
-  border-bottom: 1px #E3E3E3 solid;
 }
 
 .mobile-navigation .top-wrapper .logo-wrapper {
-  width: 60%;
-}
-
-@media (min-width: 500px) {
-  .mobile-navigation .top-wrapper .logo-wrapper {
-    width: 190px;
-  }
+  width: 100%;
+  max-width: 190px;
+  margin-right: auto;
 }
 
 .mobile-navigation .top-wrapper .mobile-menu-btn {
@@ -3398,10 +3407,10 @@ body.mobile-navbar .mobile-navigation {
   width: 100%;
   border-radius: 0;
   text-align: left;
-  border-bottom: 1px #E3E3E3 solid;
   color: #17494D;
   font-weight: 500;
   cursor: pointer;
+  background-color: #A5E3E8;
 }
 
 @media (min-width: 500px) {

@@ -17,13 +17,13 @@ const Footer = () => {
                 <div className='email-signup-banner'>
                     <div className='content-and-form'>
                         <div className='content'>
-                            <h6>Sign up to our newsletter</h6>
-                            <p>Lorem ipsum dolor sit amet consetetur sadipscing elitr, sed diam</p>
-                            {/* <ul>
-                                <li><p>Lorem ipsum</p></li>
-                                <li><p>Dolor sit amet consetetur</p></li>
-                                <li><p>Sadipscing elitr, sed diam</p></li>
-                            </ul>                     */}
+                            <h6>Sign up to the Oak Tree newsletter</h6>
+                            <p>We'll send you the latest edition of our magazine for absolutely FREE! It's packed with:</p>
+                            <ul>
+                                <li><p>Fascinating articles</p></li>
+                                <li><p>Lifestyle and health tips</p></li>
+                                <li><p>And much more!</p></li>
+                            </ul>                    
                         </div>
                         <div className='form-wrapper'>
                             <form action="">
