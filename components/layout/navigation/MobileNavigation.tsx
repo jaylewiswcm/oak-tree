@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from 'react'
 import Link from 'next/link';
 import Image from 'next/image';
+// Context 
+import { useAppContext } from '../../../context/state';
 
 interface ComponentProps {
     isOpen : boolean
@@ -9,6 +11,8 @@ interface ComponentProps {
 
 const MobileNavigation = ({isOpen, toggleMobileMenu} : ComponentProps) => {
     const [subMenuOpen, setSubMenuOpen] = useState(999)
+
+    const { setFormModal } = useAppContext()
 
     useEffect(() => {
         if(isOpen === false) {
@@ -62,7 +66,9 @@ const MobileNavigation = ({isOpen, toggleMobileMenu} : ComponentProps) => {
     
     
   return (
-    <div className={isOpen === true ?  'mobile-navigation' : 'mobile-navigation hide-mobile-navigation'}>
+    <div className={`navigation-wrapper ${isOpen ? '' : 'hide-mobile-navigation'}`}>
+       <div className={`mobile-menu-bg ${isOpen ? '' : 'hide-mobile-navigation'}`} onClick={() => toggleMobileMenu()}></div>
+       <div className={isOpen ?  'mobile-navigation' : 'mobile-navigation hide-mobile-navigation'}>      
         <div className='top-wrapper'>
             <div className='logo-wrapper'>
                 <Image 
@@ -88,7 +94,7 @@ const MobileNavigation = ({isOpen, toggleMobileMenu} : ComponentProps) => {
             <li><Link href='/'><a onClick={() => toggleMobileMenu()}>Home</a></Link></li>
             { navigation.map((listItem, index) => 
                  <li className={subMenuOpen === index ? 'open-submenu' : ''} key={index}>
-                        <button onClick={() => openDropDownSubMenu(index)}>{listItem.subMenuHeader}<span className='arrow'><Image src='/vectors/down-arrow-black.svg' alt='Down Arrow' width='21' height='11'/></span></button>
+                        <button onClick={() => openDropDownSubMenu(index)}>{listItem.subMenuHeader}<span className='arrow'><Image src='/vectors/down-arrow-black.svg' alt='Down Arrow' layout='responsive' width='21' height='11'/></span></button>
                         <ul className='subNav'>
                             {listItem.submenu?.map(link => 
                                 <li key={link!.text}><Link href={link!.link}><a onClick={() => toggleMobileMenu()}>{link!.text}</a></Link></li>
@@ -104,10 +110,24 @@ const MobileNavigation = ({isOpen, toggleMobileMenu} : ComponentProps) => {
             <p>Questions? Call us free today:</p>
             <a href='tel:0800094999' className='number'>0800 094 999</a>
             </div>
-            <button className='bg-green'>
+            <button className='bg-green' onClick={() => setFormModal(true)}>
                 <p>Request a Free Brochure</p>
             </button>
         </div> 
+ 
+    </div>
+    <div className={`menu-close ${isOpen ? '' : 'hide-mobile-navigation'}`}>
+            <button onClick={() => toggleMobileMenu()}>
+                <div className='icon'>
+                            <Image
+                                src='/buttons/menu-close.svg'
+                                alt='Open Menu'
+                                width='40'
+                                height='40'
+                            />
+                </div>
+            </button>
+        </div>
     </div>
   )
 }

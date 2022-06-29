@@ -8,24 +8,58 @@ body.mobile-navbar {
         }
     }
 }
-.mobile-navigation {
+
+
+.mobile-menu-bg {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(24,128,135, 0.28);
+    position: absolute;
+    top:0;
+    left:0;
+    opacity: 1;
+    transition: 0.1s;
+}
+.mobile-menu-bg.hide-mobile-navigation {
+    top: -100vh;
+}
+
+// .mobile-menu-bg
+//     opacity: 0;
+// }
+
+
+.navigation-wrapper {
     position: fixed;
-    top: 0;
-    left: 0;
+    top:0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    transition: 0s;
+}
+.navigation-wrapper.hide-mobile-navigation{
+    visibility: hidden;
+}
+.mobile-navigation {
+    position: relative;
     background-color: $white;
     width: 100%;
-    max-width: 500px;
+    max-width: 400px;
+    height: calc(100vh - 102px);
     left: -100%;
     z-index: 999;
-    height: 100vh;
-    overflow: scroll;
-    transition: 0.2s;   
+    // height: 100vh;
   
+    transition: 0.3s;   
+    box-shadow: 0 3px 21px rgba(37,72,76,0.29);
+    border-radius: 0 0 22px 0;
     .top-wrapper {
         display: flex;
         align-items: center;
         justify-content: center;
         padding: 15px 15px;
+        padding-left:30px;
+        height:10%;
         .logo-wrapper {
             width: 100%;
             max-width: 190px;
@@ -38,6 +72,8 @@ body.mobile-navbar {
         }
     }
     .main-nav {
+        height:60%;
+        overflow: scroll;
         button,a {
             padding: 15px 25px;
             font-size: 1.8rem;
@@ -48,30 +84,37 @@ body.mobile-navbar {
             border-radius: 0;
             text-align: left;
             color: $dark-green-1;
+            color: $dark-grey;
             font-weight: 500;
             cursor: pointer;
-            background-color: $dark-green-5;
+            // background-color: $light-green-2;
+            transition: 0.2s background-color;
             @media(min-width: 500px){ 
              font-size: 2rem;
-             padding: 20px 25px;
+             padding: 15px 25px;
+             padding-left:30px;
             }
         }
         button {
             display: flex;
             flex-direction: row;
+            align-items: center;
             justify-content: space-between;
             .arrow {
                 transition: 0.2s;
+                width: 18px;
             }
         }
         .subNav {
-            height: 100%;
-            max-height: 0;
-            overflow: hidden;
+            height: 0px;
+            max-height: 0px;
+            transition:0.2s;
+            overflow: hidden;  
             li {
                 a {
-                    padding: 0;
-                    color: $black;
+                    font-size: 1.8rem;
+                    color: $dark-grey;
+                    padding: 0;           
                     font-weight: 400;
                 }
             }
@@ -79,15 +122,20 @@ body.mobile-navbar {
         .open-submenu {
             button {
                 border: none;
+                background-color: $light-green-2;
+                color: $dark-green-1;
                 .arrow {
                     transform: rotate(180deg);
                 }
             }
             .subNav {
-                max-height: 100%;
+                margin: 10px 0;
+                height: 100%;
+                max-height: none; 
                 li {
                     a {
-                        padding: 15px 25px;
+                        padding: 12px 20px;
+                        padding-left: 45px;
                         border: none;
                     }
                 }
@@ -96,11 +144,15 @@ body.mobile-navbar {
     }
     .button-wrapper {
         padding: 25px;
+        height:30%;
+        overflow: scroll;
         .phone-number {
             margin-bottom: 15px;
             p {
                 font-size: 1.8rem;
+                font-weight: 500;
                 margin-bottom: 3px;
+                color: $dark-grey;
             }
             .number {
                 font-size: 2.8rem;
@@ -111,18 +163,51 @@ body.mobile-navbar {
         button {
             width: 100%;
             max-width: 350px;
+            p {
+                font-size: 1.8rem;
+            }
         }
         button:hover {
             color: $white;
             p {
                 color: $white;
+           
             }
         }
     }
 }
-.hide-mobile-navigation {
-    left: -100%;
+.mobile-navigation.hide-mobile-navigation {
+    left: -100vw;
 }
+
+.menu-close {
+    width: 100%;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    bottom: 0px;
+    transition: 0.5s;
+    button {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        padding:0;
+        background-color: $white;
+        box-shadow: 0 0 21px rgba(37,72,76,0.29);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .icon {
+            width:20px;
+        }
+    }   
+}
+.menu-close.hide-mobile-navigation {
+    bottom: -100px;
+}
+
 
 // .breadcrumb-navigation {
 //     .breadcrumb {
@@ -417,7 +502,6 @@ body.mobile-navbar {
             }
             .arrow {
                 margin: auto 10px;
-
                 font-size: 12px;
                 line-height: 1;
                 color: $grey;
