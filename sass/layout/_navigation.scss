@@ -59,7 +59,7 @@ body.mobile-navbar {
         justify-content: center;
         padding: 15px 15px;
         padding-left:30px;
-        height:10%;
+    
         .logo-wrapper {
             width: 100%;
             max-width: 190px;
@@ -72,7 +72,7 @@ body.mobile-navbar {
         }
     }
     .main-nav {
-        height:60%;
+        height:calc(100% - 69.58px);
         overflow: scroll;
         button,a {
             padding: 15px 25px;
@@ -146,6 +146,7 @@ body.mobile-navbar {
         padding: 25px;
         height:30%;
         overflow: scroll;
+        display: none;
         .phone-number {
             margin-bottom: 15px;
             p {

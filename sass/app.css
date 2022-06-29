@@ -3415,7 +3415,6 @@ body.mobile-navbar .mobile-navigation {
           justify-content: center;
   padding: 15px 15px;
   padding-left: 30px;
-  height: 10%;
 }
 
 .mobile-navigation .top-wrapper .logo-wrapper {
@@ -3430,7 +3429,7 @@ body.mobile-navbar .mobile-navigation {
 }
 
 .mobile-navigation .main-nav {
-  height: 60%;
+  height: calc(100% - 69.58px);
   overflow: scroll;
 }
 
@@ -3523,6 +3522,7 @@ body.mobile-navbar .mobile-navigation {
   padding: 25px;
   height: 30%;
   overflow: scroll;
+  display: none;
 }
 
 .mobile-navigation .button-wrapper .phone-number {
