@@ -3400,9 +3400,13 @@ body.mobile-navbar .mobile-navigation {
   background-color: #fff;
   width: 100%;
   max-width: 400px;
-  height: calc(100vh - 102px);
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  max-height: calc(100vh - 150px);
   left: -100%;
   z-index: 999;
+  padding-bottom: 15px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
   -webkit-box-shadow: 0 3px 21px rgba(37, 72, 76, 0.29);
