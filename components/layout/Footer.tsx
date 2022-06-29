@@ -83,7 +83,7 @@ const Footer = () => {
                                 </div>
                                 <p className='youtube-red'>Youtube</p>   
                             </a>
-                            <a href='https://www.youtube.com/c/oaktreemobility' className='social-wrapper linkedin-blue' target='__blank' rel="noopener noreferrer">
+                            <a href='https://www.linkedin.com/company/oak-tree-mobility' className='social-wrapper linkedin-blue' target='__blank' rel="noopener noreferrer">
                                 <div className='icon'>
                                     <Image 
                                         src='/icons/socials/linkedin.svg' 

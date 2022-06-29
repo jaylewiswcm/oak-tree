@@ -3995,12 +3995,22 @@ body.mobile-navbar .mobile-navigation {
   }
 }
 
-.home-intro .hero-image .con-reg {
+.home-intro .con-reg {
   position: relative;
   height: 100%;
 }
 
-.home-intro .hero-content {
+@media (min-width: 850px) {
+  .home-intro .con-reg {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+
+.home-intro .con-reg .hero-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4017,7 +4027,7 @@ body.mobile-navbar .mobile-navigation {
 }
 
 @media (min-width: 850px) {
-  .home-intro .hero-content {
+  .home-intro .con-reg .hero-content {
     position: absolute;
     right: 25px;
     top: 50%;
@@ -4032,14 +4042,14 @@ body.mobile-navbar .mobile-navigation {
   }
 }
 
-.home-intro .hero-content h1 {
+.home-intro .con-reg .hero-content h1 {
   font-size: 4rem;
   color: #17494D;
   text-align: center;
   font-size: 4.8rem;
 }
 
-.home-intro .hero-content p {
+.home-intro .con-reg .hero-content p {
   font-size: 1.9rem;
   font-weight: 400;
   line-height: 1.5;
@@ -4050,28 +4060,28 @@ body.mobile-navbar .mobile-navigation {
   margin-bottom: 20px;
 }
 
-.home-intro .hero-content .desktop-p {
+.home-intro .con-reg .hero-content .desktop-p {
   display: none;
 }
 
 @media (min-width: 850px) {
-  .home-intro .hero-content .desktop-p {
+  .home-intro .con-reg .hero-content .desktop-p {
     display: initial;
   }
 }
 
-.home-intro .hero-content .mobile-p {
+.home-intro .con-reg .hero-content .mobile-p {
   font-size: 2rem;
   font-weight: 400;
 }
 
 @media (min-width: 850px) {
-  .home-intro .hero-content .mobile-p {
+  .home-intro .con-reg .hero-content .mobile-p {
     display: none;
   }
 }
 
-.home-intro .hero-content .main-cta {
+.home-intro .con-reg .hero-content .main-cta {
   border-radius: 3px;
   letter-spacing: 1;
   padding: 15px 40px;
@@ -4085,14 +4095,14 @@ body.mobile-navbar .mobile-navigation {
   overflow: hidden;
 }
 
-.home-intro .hero-content .main-cta p {
+.home-intro .con-reg .hero-content .main-cta p {
   font-size: 1.9rem;
   font-weight: 500;
   position: relative;
   margin: 0;
 }
 
-.home-intro .hero-content .main-cta .bg {
+.home-intro .con-reg .hero-content .main-cta .bg {
   position: absolute;
   top: 0;
   left: 0;
@@ -4105,11 +4115,11 @@ body.mobile-navbar .mobile-navigation {
   transition: 0.2s;
 }
 
-.home-intro .hero-content .main-cta:hover .bg {
+.home-intro .con-reg .hero-content .main-cta:hover .bg {
   opacity: 0.8;
 }
 
-.home-intro .hero-content .main-cta:active .bg {
+.home-intro .con-reg .hero-content .main-cta:active .bg {
   opacity: 0;
 }
 
