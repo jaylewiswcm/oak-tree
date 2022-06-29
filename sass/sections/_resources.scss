@@ -13,10 +13,9 @@
             justify-content: space-between;
         }
         .resource {
-            margin-top: 15px;
+            margin-top: 35px;
             @media(min-width: 700px) and (max-width: 999px){
                 width: calc(50% - 7.5px);
-     
                 &:last-of-type {
                     display: none;
                 }

@@ -10,10 +10,12 @@ import LandbotChat from '../../chatbot/LandbotChat';
 
 interface ComponentProps {
     className: string
-} 
+}  
 
 export const BottomBar = ({className}: ComponentProps) => {
   
+    const { setFormModal } = useAppContext()
+
   return (
     <div className={`bottom-bar ${className}`}>
         <div className='inner-bar'>
@@ -23,7 +25,7 @@ export const BottomBar = ({className}: ComponentProps) => {
                 <p className='number'>0800 094 999</p>
             </div>
             <div className='button-wrapper'>
-            <button className='main-cta'>
+            <button className='main-cta' onClick={() => setFormModal(true)}>
         <div className='hover-bg'></div>
         <span className='brochure-icon'>
             <Image 
@@ -38,53 +40,6 @@ export const BottomBar = ({className}: ComponentProps) => {
     </button>
             </div>
         </div> 
-        {/* {show &&  <Modal classNames='form-modal' setShow={setFormToShow}><PopupBrochureRequestForm setShow={setFormToShow} /></Modal>}
-        <button className='mobile-button' onClick={() => setFormToShow(true)}>
-                    <span className='icon-wrapper'>
-                        <Image 
-                            src='/icons/brochure/brochure-icon.svg'
-                            alt='Brochure'
-                            layout='responsive'
-                            width={84}
-                            height={70}
-                        />
-                    </span>
-                    <p>Request a Brochure</p>
-                </button>
-
-        
-        <div className='inner-wrapper con-reg'>            
-            <div className='phone-wrapper'>
-                <p>Questions? Call us free today:</p>
-                <Link href='tel:0800094999'><a className='number'>0800 094 999</a></Link>
-            </div>
-            <div className='brochure-cta'>
-                <button className='bottom-cta' onClick={() => setFormToShow(true)}>
-    
-                       <div className="brochure-section">
-                          <div className='brochure-image'>
-                            <Image 
-                              src='/brochures/chair-brochure.png'
-                              alt='Brochure'
-                              layout='responsive'
-                              width={1000}
-                              height={1412}
-                            />
-                          </div>
-                          <div className='brochure-open'>
-                          <Image 
-                              src='/brochures/chair-brochure-open.png'
-                              alt='Brochure'
-                              layout='responsive'
-                              width={1000}
-                              height={708}
-                            />
-                          </div>
-                        </div>
-                        <p>Request Your<br/> <span>Free</span> Brochure</p>
-                </button>
-            </div>
-        </div> */}
     </div>
   )
 }

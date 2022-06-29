@@ -17,9 +17,13 @@ const Footer = () => {
                 <div className='email-signup-banner'>
                     <div className='content-and-form'>
                         <div className='content'>
-                            <p>Sign up to our newsletter</p>
-                            <h6>For Exclusive Offers</h6>
-                    
+                            <h6>Sign up to our newsletter</h6>
+                            <p>Lorem ipsum dolor sit amet consetetur sadipscing elitr, sed diam</p>
+                            {/* <ul>
+                                <li><p>Lorem ipsum</p></li>
+                                <li><p>Dolor sit amet consetetur</p></li>
+                                <li><p>Sadipscing elitr, sed diam</p></li>
+                            </ul>                     */}
                         </div>
                         <div className='form-wrapper'>
                             <form action="">
@@ -30,12 +34,14 @@ const Footer = () => {
                             </form>
                         </div>
                     </div>
+
                     <div className='graphic'>
                             <Image
-                                src='/graphics/email-signup.svg'
+                                src='/images/email-newsletter/email-newsletter.png'
                                 alt='Email Newsletter Sign Up'
-                                width='367.59'
-                                height='257.78'
+                                layout='responsive'
+                                width='382'
+                                height='223'
  
                             />
                         </div>
@@ -59,6 +65,7 @@ const Footer = () => {
                 </div> 
             </div>
             <div className='social-container con-reg'>
+                <p className='heading'>Follow us on:</p> 
                 <div className='social-grid'>
                             <a href='https://www.facebook.com/OakTreeMobility/' className='social-wrapper facebook-blue' target='__blank' rel="noopener noreferrer">
                                 <div className='icon'>

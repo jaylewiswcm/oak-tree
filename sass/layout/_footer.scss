@@ -10,21 +10,28 @@ footer {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        background-color: $dark-green-1;
+        // background-color: $dark-green-1;
+        background: rgb(23,73,77);
+        background: linear-gradient(0deg, rgba(23,73,77,1) 0%, rgba(9,89,94,1) 100%);
         padding:30px 15px;
-        
+        overflow: hidden;
+        position: relative;
         @media(min-width: 401px) {
-            border-radius: 6px;
+            border-radius: 13px;
         }        
-        @media(min-width: 910px){ 
+        @media(min-width: 910px) and (max-width: 1099px){  
             flex-direction: row;
-            padding:30px 60px;
+            padding:20px 60px;
+        }
+        @media(min-width: 1100px ) {
+            flex-direction: row;
+            padding:0px 60px;
         }
         .content-and-form {
             display: flex;
             align-items: center;
             flex-direction: column;
-            margin-bottom: 60px;
+            margin-bottom: 10px;
 
             @media(min-width: 910px){ 
                 margin-right: auto;
@@ -38,50 +45,76 @@ footer {
                     text-align: left;
                 }
                 h6 {
-                    font-size: 3.1rem;
-                    letter-spacing:0.1rem;
+                    font-family: $fontText;
+                    font-size: 2.8rem;
+                    font-weight: 500;
                     color: $white;
                     text-align: center;
                     width: 100%;
                     line-height: 1.2;
                     margin-bottom:5px;
                     @media(min-width: 600px) {
-                        font-size: 4.3rem;
+                        font-size: 3.5rem;
+                    }
+                    @media(min-width: 900px) {
                         text-align: left;
                     }
                 }
                 p {
-                    font-size: 2.2rem;
-                    font-weight: 400;
+                    font-size: 2rem;
+                    font-weight: 300;
                     color: $white;
-                    @media(min-width: 400px) {
-                        font-size: 2.4rem;
-                        margin-bottom:2px;
+                    max-width: 480px;
+                    // @media(min-width: 400px) {
+                    //     font-size: 2.4rem;
+                    //     margin-bottom:2px;
+                    // }
+                }
+                ul {
+                    padding-left: 18px;
+                    margin-top: 10px;
+                    li {
+                        list-style-type: disc;
+                        color:  $white;
+                        padding-bottom: 5px;
+                        p {
+                            font-size: 1.8rem;
+                            font-weight: 300;
+                        }
                     }
                 }
             }
             .form-wrapper {
-                margin-top: 10px;
-            
+                margin-top: 20px;
                 @media(min-width:1250px) {
-           
                     margin-right: auto;
                 }
                 form {
                     .input-wrapper{
                         display: flex;
                         height: fit-content;
+                        align-items: center;
+                        justify-content: center;
                         flex-direction: column;
+                        @media(min-width: 900px) {
+                             flex-direction: row;
+                        }
                         input[type=text] {
-                            padding: 15px 20px;
-                            background-color: #2B676C;
+                            padding: 10px 20px;
+                            background-color: #188087;
                             border: none;
-                            font-size: 2rem;
+                            font-size: 1.9rem;
+                            font-weight: 400;
                             color: $white;
                             width: 300px;
                             border-radius: 5px;
                             text-align: center;
                             border-radius: 4px;
+                            height:50px;
+                            box-shadow: 0 0 19px rgba(0,0,0,0.18);
+                            margin-right: 15px;
+                            outline: none;
+                            border: 1px #188087 solid;;
                             @media(min-width: 910px) {
                                 // border-radius: 2px 0 0 2px;    
                                 text-align: left;
@@ -89,6 +122,9 @@ footer {
                         }
                         input[type=text]::placeholder {
                             color: $white;
+                        }
+                        input[type=text]:active, input[type=text]:focus {
+                            border: 1px $white solid;;
                         }
                         input[type=submit] {
                             background-color: $yellow-3;
@@ -102,6 +138,10 @@ footer {
                             padding: 15px 30px;
                             color: $dark-green-1;
                             border-radius: 5px;
+                            @media(min-width: 900px) {
+                                margin-top: 0;
+                            }
+            
                             @media(min-width: 910px) {
                                 margin-left: 0;
                             }
@@ -121,7 +161,10 @@ footer {
         }
         .graphic {
             margin: 0 auto;
-            
+            width: 80%;
+            @media(min-width: 900px) {
+                width: 500px;
+            }
         }
     }
     .footer-navigation {
@@ -349,6 +392,12 @@ footer {
         .heading {
             font-size: 2rem;
             font-weight: 500;
+            color: $dark-green-1;
+            margin-bottom:10px;
+            text-align: center;
+            @media(min-width: 600px) {
+                text-align: left;
+            }
         }
         .social-grid {
             display: flex;

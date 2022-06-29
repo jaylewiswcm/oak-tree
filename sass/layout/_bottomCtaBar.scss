@@ -189,25 +189,28 @@
         border-radius: 8px;
         display: flex;
         align-items: center;
-        // padding: 25px 50px;
         @media(min-width: 490px) {
-            padding: 25px 50px;
+            padding: 15px 50px;
+            padding: 15px;
         }
         @media(min-width: 800px) {
             background-color: $white;
+            // background-color: $dark-green-1;
             box-shadow: 0 0 21px rgba(0,0,0,0.19);
+            box-shadow: 0 0 21px rgba(23,73,77,0.50);
         }
         .phone-number {
             display: none;
             @media(min-width: 800px) {
                 display: initial;
+                padding-left: 50px;
             }
             p {
                 font-size: 1.6rem;
                 color: $dark-green-2;
             }
             .number {
-                font-size: 3.2rem;
+                font-size: 3.4rem;
                 font-weight:600;
                 color: $dark-green-1;
             }
