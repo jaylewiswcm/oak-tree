@@ -5969,9 +5969,9 @@ body.mobile-navbar .mobile-navigation {
   border-radius: 4px;
   -webkit-box-shadow: 0 3px 19px rgba(0, 0, 0, 0.18);
           box-shadow: 0 3px 19px rgba(0, 0, 0, 0.18);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 @media (min-width: 900px) {
