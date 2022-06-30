@@ -5,7 +5,7 @@ import Link from 'next/link';
 export const OfferBanners = () => {
   return (
     <div className='banners con-reg'>
-      <h3>Discover Our Latest Offers</h3>
+      <h3 className='heading'>Discover Our Latest Offers</h3>
       <div className='banners-flex'> 
     <Link href='/offers'>
       <a className='banner-vertical sale-banner'>

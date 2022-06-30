@@ -60,7 +60,7 @@ const deliveryAndInstallation = () => {
                 <div className='del-item'>
                     <div className='icon-wrapper'>
                         <Image 
-                            src='/icons/collection-usps/free-delivery.svg'
+                            src='/icons/delivery/icon-delivery.svg'
                             alt='Delivery Van Icon'
                             layout='responsive'
                             width='65'

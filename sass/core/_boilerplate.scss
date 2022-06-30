@@ -303,7 +303,7 @@ body {
         padding: 0 15px;
     }
     h1 {
-        font-size: 3.8rem;
+        font-size: 3.4rem;
         font-weight: 500;
         font-family: $fontText;
         color: $white;
@@ -316,16 +316,15 @@ body {
     button {
         padding: 0px;
         display: flex;
+        flex-direction: column-reverse;
         align-items: center;
         justify-content: center;
         width: fit-content;
         margin: 0 auto;
         margin-top: 15px;
-  
-        // @media(min-width: 420px) {
-        //     padding: 25px;
-  
-        // }
+        @media(min-width: 420px) {
+            flex-direction: row;
+        }
         .icon-wrapper {
             width: 50px;
             height: 50px;
@@ -337,12 +336,14 @@ body {
             padding: 0;
             padding-left:4px;
             padding-top: 2px;
-            margin-right: 15px;
+            margin-right: 0;
+            margin-top: 15px;
             position: relative;
             transition: 0.2s;
 
             @media(min-width: 420px) {
                 border: none;
+                margin-top: 0;
                 margin-right: 10px;
             }
             .hover-play {
@@ -375,7 +376,10 @@ body {
     .hero-button-bg {
         background-color: rgba(255,255,255,0.5);
         padding: 15px 30px;
-        border-radius: 50px;
+        border-radius: 6px;
+        @media(min-width: 420px) {
+            border-radius: 50px;
+        }
         p { 
             color: $black;
         }
@@ -401,18 +405,28 @@ body {
     flex-direction: column;
     h2 { 
         font-family: $fontText;
-        font-size: 3.2rem;
+        font-size: 3rem;
         font-weight:600;
         color: $dark-green-1;
         text-align: center;
+        margin-bottom: 15px;
+        @media(min-width: 400px) and (max-width: 949px) {
+            font-size: 3.2rem; 
+        }
+        @media(min-width:950px) {
+            font-size: 3.8rem;
+        }
     }
     p {
-        font-size: 1.9rem;
+        font-size: 1.8rem;
         text-align: center;
         max-width: 700px;
         margin: 0 auto;
         margin-top: 8px;
         line-height: 1.5;
+        @media(min-width: 400px) and (max-width: 949px) {
+            font-size: 1.9rem;
+        }
     }
     h2, p {
         text-align: left;

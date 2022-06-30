@@ -61,11 +61,11 @@ const Header = () => {
                           </div>
                           <div className='mobile-logo'>
                             <Image 
-                                src='/logo/logo-type.svg'
+                                src='/logo/logo-mobile.svg'
                                 alt='Oak Tree Mobility'
                                 layout='responsive'
-                                width={27.72}
-                                height={34.73}
+                                width={101.83}
+                                height={37.29}
                             />
                           </div>
                          </a>

@@ -19,4 +19,4 @@ export default function handler(req:any, res:any) {
     .then(function () {
       // always executed
     });
-  }
+  }  

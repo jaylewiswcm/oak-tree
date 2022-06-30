@@ -112,14 +112,21 @@
 }
 .returns-banner {
     background-color: $dark-green-6;
-    padding: 45px 30px;
+    padding: 45px 0px;
     text-align: center;
     margin-bottom: 50px;
+    @media(min-width: 480px) {
+        padding: 45px 30px;
+    }
     h4 {
         font-size: 3.2rem;
         font-weight: 600;
         font-family: $fontText;
         color: $dark-green-1;
+        text-align: left;
+        @media(min-width: 480px) {
+            text-align: center;
+        }
     }
     p {
         font-size: 1.9rem;
@@ -127,7 +134,11 @@
         line-height: 1.5;
         max-width: 700px;
         margin: 0 auto;
-        margin-top:10px;
+        margin-top:10px;    
+        text-align: left;
+        @media(min-width: 480px) {
+            text-align: center;
+        }
         a {
             color: $oaktree-green;
             text-decoration: underline;

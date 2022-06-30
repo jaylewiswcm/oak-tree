@@ -72,7 +72,7 @@ closeUspOverlay = () => {
 }
   render() {
     return (
-      <div >
+      <div className='index'>
       <NextSeo 
             title="Oak Tree Mobility | Your Comfort is Our Strength"
             description="Oak Tree Mobility is the UK's leading mobility specialist helping people live independently. Handmade by skilled craftsmen to order in the UK ..."

@@ -39,30 +39,40 @@
                 display: flex;
             }
             .subheading {
-                font-size: 1.7rem;
+                font-size: 1.5rem;
                 font-weight: 500;
                 color: $oaktree-green;
                 margin-top: 15px;
                 letter-spacing: 0.2px;
                 margin-bottom:2px;
+                @media(min-width: 500px ) {
+                    font-size: 1.7rem;
+                }
             }
             .heading {
-                font-size: 2.4rem;
+                font-size: 2.2rem;
                 font-weight: 500;
                 line-height: 1.4;
                 text-align: left;
                 margin: 0 0;
                 padding:0;
+                @media(min-width: 500px ) {
+                    font-size: 2.4rem;
+                }
             }
             .link {
                 font-size: 1.8rem;
                 font-weight: 500;
-                text-decoration: underline;
-                text-underline-offset: 3px;
-                text-decoration-thickness: 2px;
+                // text-decoration: underline;
+                // text-underline-offset: 5px;
+                // text-decoration-thickness: 2px;
                 margin-top: 15px;
-                color: $dark-green-1;
+                color: $oaktree-green;
                 cursor: pointer;
+                border:2px $oaktree-green solid;
+                padding:7px 25px;
+                border-radius: 3px;;
+                width: fit-content;
                 @media(min-width: 650px) {
                     margin-top: 25px;
                 }

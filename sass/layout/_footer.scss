@@ -221,14 +221,13 @@ footer {
                         margin: 0;
                         margin-right: 20px;
                     }
-                    .icon-wrapper.mobile {
+                    .mobile {
                         @media(min-width: 600px) {
                             display: none;
                         }
                     }
-                    .icon-wrapper.desktop {
+                    .desktop {
                         display: none;
-                        margin-right: 10px;
                         @media(min-width: 600px) {
                             display: block;
                         }
@@ -277,7 +276,10 @@ footer {
              
             }
             .ul-wrapper {
-                   margin: 0 15px;
+                   
+                   @media(min-width: 600px) {
+                    margin: 0 15px;
+                   }
                    &:nth-of-type(1) {
                     grid-column-start: 1;
                     grid-column-end: 3;
@@ -303,22 +305,25 @@ footer {
                     }
                     .arrow-wrapper {
                         transition: 0.3s;
+                        width: 15px;
                     }
                 ul {
-                    border-bottom: 1px $lighter-grey solid;
+                    // border-bottom: 1px $lighter-grey solid;
                     padding-left: 15px;
-                    
-                    max-height: 0;
-                    // transition: 0.3s max-height;
-                    transition: max-height 0.5s ease-in-out cubic-bezier(0, 1, 0, 1);;
+                    height: 0px;
+                    max-height: 0px;
+                    opacity: 0;
+                    transition:0.3s;
                     display: flex;
                     flex-direction: column;
                     overflow: hidden;
                     @media(min-width: 600px) {
                         border-bottom: none;
+                        height: 100%;
                         max-height: 100%;
-    
                         padding-left: 0;
+                        padding-bottom: 0;
+                        opacity: 1;
                     }
                     li {
                         padding: 10px 0;
@@ -347,9 +352,11 @@ footer {
             }
             .ul-wrapper.is-open {
                 ul {
-                    // height: 100%;
-                    max-height: 9999px;
-                    transition: max-height 1s ease-in-out;
+                    opacity: 1; 
+                    height: 100%;
+                    max-height: none; 
+                    transition: 0.3s;
+                    padding-bottom: 15px;
                 }
                 .arrow-wrapper {
                     transform: rotate(180deg);
@@ -365,10 +372,12 @@ footer {
                 padding: 25px 15px;
                 margin-bottom:0;
                 display: flex;
+                align-items: center;
                 justify-content: space-between;
                 @media(min-width: 600px) {
                     padding: 10px 15px;
                     padding-left: 0;
+                    align-items: unset;
                 }
                 .arrow-wrapper {
                     @media(min-width: 600px) {
@@ -423,7 +432,11 @@ footer {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                margin-right: 20px;
+                margin: 0 20px; 
+                @media(min-width: 600px) {
+                    marign-left: 0;
+                    margin-right: 20px;
+                }
                 .icon {
                     width: 50px;
                     height: 50px;
@@ -431,6 +444,18 @@ footer {
                     @media(min-width: 450px) {
                         width: 40px;
                         height: 40px;
+                    }
+                }
+                .mobile {
+                    margin-top: 15px;
+                    @media(min-width: 600px) {
+                        display: none;
+                    }
+                }
+                .desktop {
+                    display: none;
+                    @media(min-width: 600px) {
+                        display: block;
                     }
                 }
                 p {

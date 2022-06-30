@@ -28,7 +28,7 @@ const toggleOpen = () => {
 
   return (
     <div className={`ul-wrapper ${isOpen ? 'is-open' : ''}`}>
-        <div className='list-header' onClick={() => toggleOpen()}>{menuHeader}<span className='arrow-wrapper'><Image src='/vectors/down-arrow-black.svg' alt='open-arrow' width={18} height={11}/></span></div>
+        <div className='list-header' onClick={() => toggleOpen()}>{menuHeader}<span className='arrow-wrapper'><Image src='/vectors/down-arrow-black.svg' alt='open-arrow' layout='responsive' width={18} height={11}/></span></div>
         <ul>
             {menu.map((link,index) =>  <li className='list-link' key={index}><Link href={link.link}><a>{link.text}</a></Link></li>)}            
         </ul>

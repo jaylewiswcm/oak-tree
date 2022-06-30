@@ -83,9 +83,18 @@ const Footer = () => {
                 <p className='heading'>Follow us on:</p> 
                 <div className='social-grid'>
                             <a href='https://www.facebook.com/OakTreeMobility/' className='social-wrapper facebook-blue' target='__blank' rel="noopener noreferrer">
-                                <div className='icon'>
+                                <div className='icon desktop'>
                                     <Image 
                                         src='/icons/socials/facebook.svg' 
+                                        alt='Facebook' 
+                                        layout='responsive' 
+                                        width='50' 
+                                        height='50'
+                                    />
+                                </div>
+                                <div className='icon mobile'>
+                                    <Image 
+                                        src='/icons/socials/facebook-mobile.svg' 
                                         alt='Facebook' 
                                         layout='responsive' 
                                         width='50' 
@@ -95,9 +104,17 @@ const Footer = () => {
                                 <p className='facebook-blue'>Facebook</p> 
                             </a>
                             <a href='https://www.youtube.com/c/oaktreemobility' className='social-wrapper youtube-red' target='__blank' rel="noopener noreferrer">
-                                <div className='icon'>
+                                <div className='icon desktop'>
                                     <Image 
                                         src='/icons/socials/youtube.svg' 
+                                        alt='Youtube' 
+                                        layout='responsive' 
+                                        width='50' 
+                                        height='50'/>
+                                </div>
+                                <div className='icon mobile'>
+                                    <Image 
+                                        src='/icons/socials/youtube-mobile.svg' 
                                         alt='Youtube' 
                                         layout='responsive' 
                                         width='50' 
@@ -106,9 +123,14 @@ const Footer = () => {
                                 <p className='youtube-red'>Youtube</p>   
                             </a>
                             <a href='https://www.linkedin.com/company/oak-tree-mobility' className='social-wrapper linkedin-blue' target='__blank' rel="noopener noreferrer">
-                                <div className='icon'>
+                                <div className='icon desktop'>
                                     <Image 
                                         src='/icons/socials/linkedin.svg' 
+                                        alt='LinkedIn' layout='responsive' width='50' height='50'/>
+                                </div>
+                                <div className='icon mobile'>
+                                    <Image 
+                                        src='/icons/socials/linkedin-mobile.svg' 
                                         alt='LinkedIn' layout='responsive' width='50' height='50'/>
                                 </div>
                                 <p className='linkedin-blue'>LinkedIn</p>   
@@ -134,15 +156,15 @@ const menuConfig = [
     { menuHeader: 'About', menu: [
         {link: '/about', text: 'About Oak Tree Mobility' },
         { link: '/occupational-therapist', text: 'Our Occupational Therapist' },
-        { link: '/british-made', text: 'British Made' },
         { link: '/trade-in', text: 'Trade In' },
+        { link: '/british-made', text: 'British Made' },
+        { link: '/testimonials-and-reviews', text: 'Testimonials And Reviews' },
         { link: '/modern-slavery-statement', text: 'Modern Slavery Statement' }
     ]},
     {
         menuHeader: 'Customer Support', menu: [
             { link: '/delivery-and-installation', text: 'Delivery and Installation' },
             { link: '/vat-exempt-eligibility', text: 'VAT Exempt Eligibilty' },
-            { link: '/testimonials-and-reviews', text: 'Testimonials And Reviews' },
             { link: '/frequently-asked-questions', text: 'Frequently Asked Questions'}
         ]
     },

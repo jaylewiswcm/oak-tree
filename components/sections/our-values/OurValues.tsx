@@ -4,7 +4,7 @@ import Image from 'next/image';
 const OurValues = () => {
   return (
     <div className='our-values con-reg'>
-        <h6>Our Values</h6>
+        <h6 className='heading'>Our Values</h6>
         <div className='value-grid'>
             <div className='value-item'>
                 <div className='number'>

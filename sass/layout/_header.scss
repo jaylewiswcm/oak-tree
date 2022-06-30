@@ -27,7 +27,7 @@ header {
       }
       .trustpilot-logo {
         width: 190px;
-        margin-left: auto;
+        // margin-left: auto;
         padding:6px 0;
         @media(min-width: 460px) {
           margin-left: 0;
@@ -62,7 +62,10 @@ header {
       }
     }
     .mobile-logo {
-      width: 42px;
+      width:100px;
+      @media(min-width: 350px) {
+        width:120px;
+      }
       @media(min-width:440px) {
         display: none;
       }
@@ -100,7 +103,7 @@ header {
     }
     .logo {  
       margin-right: 20px;
-      width: 100%;
+      width: 100% 
       span{
         display: none;
       }
@@ -277,6 +280,10 @@ header {
                 font-weight: 400;
                 color: $dark-grey;
                 opacity: 0.8;
+                font-size: 1.4rem;
+                @media(min-width: 420px) {
+                  font-size: 1.6rem;
+                }
             }
         }
     }

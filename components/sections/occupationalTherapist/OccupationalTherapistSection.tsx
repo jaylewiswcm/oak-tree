@@ -62,7 +62,7 @@ const stagger = {
   return (
     <div className='occupational-therapist-wrapper'>
       {isOpen && <Modal classNames="" setShow={setOpenModal}><VideoCarousel videoId="l9adE0mWzUY" setShow={setOpenModal} show={isOpen}></VideoCarousel></Modal> }
-        <h3>Advised and Approved by Leading Experts</h3>
+        <h3 className='heading'>Advised and Approved by Leading Experts</h3>
         {/* <div className='bg-dark-green-6'>
           <div className='occ-section-flex con-reg'>
             <div className='content'>
@@ -223,7 +223,7 @@ const stagger = {
         </div>
         </div>
         <div className='health-benefits con-reg'>
-          <h5>Transformational Health Benefits</h5>
+          <h5 className='heading'>Transformational Health Benefits</h5>
           <div className='benefits-grid'>
             <div className='benefit'>
               <div className='icon-wrapper'>

@@ -1,5 +1,12 @@
 
-
+.index {
+    .heading {
+        font-size: 3rem!important;
+        @media(min-width: 420px) {
+            font-size: 3.6rem;
+        }
+    }
+}
 .mobile-usp-banner {
   
     @media(min-width: 600px) {
@@ -92,10 +99,14 @@
         .hero-content {
             display: flex;
             flex-direction: column;
-            align-items: center;
+       
             width: 100%;
-            padding: 30px 40px;
+            padding: 30px 0px;
             position: relative;
+            @media(min-width: 520px)and (min-width: 849px){
+                padding: 30px 40px;
+                align-items: center;
+            }
            @media(min-width:850px) {
                position: absolute;
                right: 25px;
@@ -105,22 +116,33 @@
                width: fit-content;
                max-width: 650px;
                padding: 50px 40px;
+               align-items: center;
            }
             h1 {
                font-size: 4rem;
                color: $dark-green-1;
-               text-align: center;
-               font-size: 4.8rem;
+                text-align: left;
+                line-height: 1.2;
+               @media(min-width: 520px) {
+                text-align: center;
+                font-size: 4.8rem;
+                line-height: 1.4;
+               }
            }
            p {
                font-size: 1.9rem;
                font-weight: 400;
                line-height: 1.5;
-               text-align: center;
+               text-align: left;
                max-width: 680px;
                margin: 0 auto;
                margin-top: 5px;
                margin-bottom: 20px;
+               color: $dark-grey;
+               @media(min-width: 520px) {
+                text-align: center;
+                // font-size: 4.8rem;
+               }
            }
            .desktop-p {
                display: none;
@@ -138,23 +160,30 @@
            .main-cta {
                border-radius: 3px;
                letter-spacing: 1;
-               // text-transform: uppercase;
-               padding: 15px 40px;
-               margin: 0 auto;
-               margin-top: 10px;
+               padding: 15px 20px;
+                margin-top: 10px;
                background: rgb(9,129,132);
                background: linear-gradient(187deg, rgba(9,129,132,1) 0%, rgba(27,108,111,1) 100%);
                box-shadow: 0 3px 21px rgba(9,129,132,0.21);
                position: relative;
                overflow: hidden;
-               @media(min-width: 850px) {
-               
-               }
+               text-align: center;
+               width: 100%;
+               @media(min-width: 520px) {
+                margin: 0 auto;
+                margin-top: 10px;
+                padding: 15px 40px;
+                width: fit-content;
+                }
                 p {
-                   font-size: 1.9rem;
+                    font-size: 1.6rem;
                    font-weight: 500;
                    position: relative;
                    margin: 0;
+                   text-align: center;
+                   @media(min-width: 370px) {
+                    font-size: 1.9rem;
+                   }
                 }
                 .bg {
                     position: absolute;
