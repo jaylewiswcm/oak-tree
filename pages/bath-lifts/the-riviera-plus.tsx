@@ -176,7 +176,7 @@ const TheRivieraPlus = () => {
                     </ul>
                 </div>               
               </div>
-              <div className='request-wrapper'>
+              <div className='request-wrapper bath-lift'>
                 <div className='con-reg'>
                     <div className='form-and-content'>
                     <div className='supporting-content'>

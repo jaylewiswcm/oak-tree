@@ -37,9 +37,7 @@ const ChairProduct = (props:any) => {
     const { title, handle, images, id } = props.product;
 
     const heroImage = images.edges[0].node;
-
-    console.log(props.product);
-
+    
     useEffect(() => {   
         if(props.product.length === 0) {
             router.push('/404')
