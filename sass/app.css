@@ -9149,10 +9149,17 @@ body.mobile-navbar .mobile-navigation {
 }
 
 .table-of-contents .toc .product-content .fabric-carousel .fabric .fabric-name {
-  font-size: 2rem;
-  font-weight: 500;
+  font-size: 2.2rem;
+  font-weight: 600;
   text-align: center;
   color: #17494D;
+}
+
+@media (min-width: 600px) {
+  .table-of-contents .toc .product-content .fabric-carousel .fabric .fabric-name {
+    font-size: 2rem;
+    font-weight: 500;
+  }
 }
 
 .table-of-contents .toc .product-content .fabric-carousel .fabric .composition {
@@ -12105,7 +12112,7 @@ body.mobile-navbar .mobile-navigation {
 }
 
 .tagline-banner .inner-wrapper .heading {
-  font-size: 3rem;
+  font-size: 3.2rem;
   color: #fff;
 }
 

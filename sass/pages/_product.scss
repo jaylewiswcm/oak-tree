@@ -1416,10 +1416,14 @@
                         overflow: hidden;
                     }
                     .fabric-name {
-                        font-size: 2rem;
-                        font-weight: 500;
+                        font-size: 2.2rem;
+                        font-weight: 600;
                         text-align: center;
                         color: $dark-green-1;
+                        @media(min-width: 600px) {
+                            font-size: 2rem;
+                            font-weight: 500;
+                        }
                     }
                     .composition {
                         font-size: 1.4rem;
