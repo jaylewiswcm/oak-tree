@@ -23,6 +23,7 @@
             transform: translate(-50%,-50%);
             border-radius: 4px;
             box-shadow: 0 3px 19px rgba(0,0,0,0.18);
+            display: flex;
             @media(min-width: 900px ) {
                 display: none;
             }

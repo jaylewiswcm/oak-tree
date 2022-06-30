@@ -30,7 +30,7 @@ const index = () => {
                         alt='Our Rise and Recline Chairs'
                         layout='fill'
                         objectFit='cover'
-                        objectPosition='center'
+                        objectPosition='left'
                         quality={100}
                         placeholder='blur'
                         priority
