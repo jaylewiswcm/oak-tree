@@ -140,15 +140,15 @@ closeUspOverlay = () => {
         <h2 className='heading'>Introducing Our Products</h2>
         <HomeCollections />
       </div>
-      <OfferBanners />
+      <OfferBanners orphan={false}/>
       <OccupationalTherapistSection />
       <Reviews orphan={false} />
       <Testimonials pageType='normal' />
       <OurValues />
       <FooterCollections />
-      <div className='over-13-years'>
+      <div className='years-in-business'>
         <Image 
-          src='/vectors/over-13-years.svg'
+          src='/vectors/years-in-business.svg'
           alt='Over 13 years in business'
           layout='responsive'
           width='216'

@@ -411,7 +411,7 @@ footer {
             border-top: 1px $lighter-grey solid;
         }
         .heading {
-            font-size: 2rem;
+            font-size: 2.3rem;
             font-weight: 500;
             color: $dark-green-1;
             margin-bottom:10px;
@@ -434,17 +434,20 @@ footer {
                 justify-content: center;
                 margin: 0 20px; 
                 @media(min-width: 600px) {
-                    marign-left: 0;
-                    margin-right: 20px;
+                    margin-left: 0;
+                    margin-right: 30px;
                 }
                 .icon {
                     width: 50px;
                     height: 50px;
-
+                    margin-right: 10px;
                     @media(min-width: 450px) {
-                        width: 40px;
-                        height: 40px;
+                        width:50px;
+                        height:50px;
                     }
+                }
+                .facebook-icon {
+                    margin-right:0;
                 }
                 .mobile {
                     margin-top: 15px;
@@ -459,13 +462,14 @@ footer {
                     }
                 }
                 p {
-                    font-size: 1.7rem;
+                    font-size: 1.8rem;
                     font-weight: 400;
                     color: $grey;
                     display: none;
-                    @media(min-width: 450px) {
+                    @media(min-width: 600px) {
                         display: block;
                     }
+                    
                 }
             }
         }

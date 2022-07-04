@@ -2,9 +2,14 @@ import React from 'react'
 import Image from 'next/image';
 import Link from 'next/link';
 
-export const OfferBanners = () => {
+interface ComponentProps {
+  orphan: boolean
+}
+
+export const OfferBanners = ({orphan} : ComponentProps) => {
+
   return (
-    <div className='banners con-reg'>
+    <div className={`banners ${orphan ? 'orphan-con-reg' : 'con-reg'}`}>
       <h3 className='heading'>Discover Our Latest Offers</h3>
       <div className='banners-flex'> 
     <Link href='/offers'>

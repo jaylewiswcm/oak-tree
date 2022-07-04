@@ -57,7 +57,7 @@ const Index = (props:any) => {
               <h2 className='heading'>The Perfect Nights Sleep</h2>
               <p className='sub-heading' id='collection-top-chair'>Our Beds are fully customisable and made-to-fit your measurements - we have curated a collection of beds that embed different styles suited for different living environments</p>  
                 <CollectionGrid products={products}/> 
-                <OfferBanners />
+                <OfferBanners orphan={false}/>
                 <HealthBenfits />
                 <Reviews orphan={false}/>                    
                 <Resources pageType='beds'/>

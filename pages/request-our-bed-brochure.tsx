@@ -481,13 +481,13 @@ import { OfferBanners } from '../components/sections/banners/OfferBanners';
 import Modal from '../components/modal/Modal';
 import VideoCarousel from '../components/modal/video/VideoCarousel';
 // Images
-import hero from '../public/images/products/bath-lifts/bath-lift-collection-hero.png';
+import hero from '../public/images/heros/bed-landing-hero.jpg';
 import bathlift1 from '../public/images/products/bath-lifts/the-riviera/bath-lift-1.png';
 import bathlift2 from '../public/images/products/bath-lifts/the-riviera/bath-lift-2.png';
 import bathlift3 from '../public/images/products/bath-lifts/the-riviera/bath-lift-3.png';
 import brochure from '../public/brochures/bath-lift-brochure.png';
  
-const RequestOurBathLiftBrochure = () => {
+const RequestOurBedBrochure = () => {
     const [isOpen, setIsOpen] = useState(false);
     return (
         
@@ -551,14 +551,14 @@ const RequestOurBathLiftBrochure = () => {
             <div className='hero orphan-con-reg'>
                 <Image 
                     src={hero}
-                    alt='Woman in bath'
+                    alt='Woman lying in bed'
                     layout='fill'
                     objectFit='cover'
                     objectPosition='left'
                 />
                 <div className='intro-box'>
                     <div className='inner-border'></div>
-                    <h1>Transform Your Life with an Oak Tree Mobility Bath Lift</h1>
+                    <h1>Transform Your Life with an Oak Tree Mobility Bed</h1>
                     <p>Get your new Summer 2022 brochure today!</p>
                 </div>
             </div>
@@ -637,8 +637,8 @@ const RequestOurBathLiftBrochure = () => {
                 </div>
                 <div className='image-wrapper orphan-con-reg'>
                    <Image 
-                    src={bathlift3}
-                    alt='Lady using bath lift'
+                    src='/images/landing-pages/lady-in-bed.jpg'
+                    alt='Lady lgin in her bed'
                     layout='fill'
                     objectFit='cover'
                     objectPosition='top'
@@ -647,13 +647,13 @@ const RequestOurBathLiftBrochure = () => {
             </div>
             <div className='quote bg-dark-green-1'>
                     <div className='inner-wrapper orphan-con-reg'>
-                        <p className='statement'>“I didn’t know a Bath Lift would help my mum so much… she can now enjoy a hot bath once again.”</p>
-                        <p className='author'>Andrew Masters</p>
-                        <p className='author'>Nottingham</p>
+                        <p className='statement'>“Received our new double bed last week and I have to say my wife and I haven’t slept this well in years.”</p>
+                        <p className='author'>Terry Stamper</p>
+                        <p className='author'>Birmingham</p>
                     </div>
             </div>
             <div className='brochure-usps orphan-con-reg orphan-padding'>
-                <h3>Our New Spring 2022 Brochure</h3>
+                <h3>Our New Summer 2022 Brochure</h3>
                 <div className='flex-row'>
                     <div className="usp-points">
                         <ul>
@@ -667,7 +667,7 @@ const RequestOurBathLiftBrochure = () => {
                                         height='54'
                                     />
                                 </div>
-                            <p>Learn all about how a Oak Tree bath lift can <span className='oaktree-green'>change your life</span></p>
+                            <p>Choose a style and size to suit you with our <span className='oaktree-green'>made-to-fit beds</span></p>
                             </li>
                             <li>
                                 <div className="num-wrapper">
@@ -679,7 +679,7 @@ const RequestOurBathLiftBrochure = () => {
                                         height='54'
                                     />
                                 </div>
-                            <p>Take your time to <span className='oaktree-green'>discover our unique Riviera bath lift</span> with full colour photos</p>
+                            <p><span className='oaktree-green'>Personalise your bed</span> with a range of mattresses and headboards</p>
                             </li>
                             <li>
                                 <div className="num-wrapper">
@@ -691,14 +691,14 @@ const RequestOurBathLiftBrochure = () => {
                                         height='54'
                                     />
                                 </div>
-                            <p>See all the <span className='oaktree-green'>options for installation and customisation</span> of your very own Oak Tree bath lift</p>
+                            <p>Discover more about our <span className='oaktree-green'>five-point adjustable base</span>  for the perfect position</p>
                             </li>
                         </ul>
                     </div>
                     <div className="brochure-wrapper">
                         <Image 
-                            src='/brochures/bath-lift-brochure.png'
-                            alt='Bath Lift Brochure'
+                            src='/brochures/chair-brochure.png'
+                            alt='Bed Brochure'
                             layout='responsive'
                             width={1000}
                             height={1412}
@@ -714,7 +714,7 @@ const RequestOurBathLiftBrochure = () => {
                 <Reviews orphan={true} />
             </div>
             <div className='orphan-reasons orphan-con-reg orphan-padding'>
-                <h5>5 Reasons to choose an Oak Tree Bath Lift</h5>
+                <h5>5 Reasons to choose an Oak Tree adjustable bed</h5>
                 <div className='reasons-grid'>
                     <div className='reason'>
                         <div className='content'>
@@ -733,14 +733,11 @@ const RequestOurBathLiftBrochure = () => {
                         </div>
                         <div className='image-wrapper'>
                             <Image 
-                                src='/images/landing-pages/reasons-chair/reason-1-bath-lift.jpg'
+                                src='/images/landing-pages/reasons-chair/reason-1-bed.jpg'
                                 alt='Reason 1 - British Made'
                                 layout='responsive'
                                 width='800'
                                 height='800'
-
-                                // objectFit='cover'
-                                // objectPosition='center'
                             />
                         </div>
                     </div>
@@ -756,8 +753,8 @@ const RequestOurBathLiftBrochure = () => {
                                     height='68'
                                 />
                             </div>
-                            <p className='reason-title'><span className='number'>2.</span> State-of-the-art belt</p>
-                            <p className='reason-content'>Gently lower yourself in and out of the bath for a truly relaxing experience.</p>
+                            <p className='reason-title'><span className='number'>2.</span> Five-point adjustable bed</p>
+                            <p className='reason-content'>Tired of fussing with pillows to get comfortable? Find your perfect sleeping position at the touch of a button.</p>
                         </div>
                         <div className='image-wrapper'>
                             <Image 
@@ -781,8 +778,8 @@ const RequestOurBathLiftBrochure = () => {
                                     height='68'
                                 />
                             </div>
-                            <p className='reason-title'><span className='number'>3.</span> Can be fitted to almost any bath</p>
-                            <p className='reason-content'>With no expensive renovations, our lifts can even be fitted to corner and stand-alone baths.</p>
+                            <p className='reason-title'><span className='number'>3.</span> Made to Fit</p>
+                            <p className='reason-content'>Our beds are made to fit your exact specifications, so they suit your size, material and comfort preferences perfectly</p>
                         </div>
                         <div className='image-wrapper'>
                             <Image 
@@ -806,7 +803,7 @@ const RequestOurBathLiftBrochure = () => {
                                 />
                             </div>
                             <p className='reason-title'><span className='number'>4.</span> Free Delivery</p>
-                            <p className='reason-content'>Free delivery & installation is included with all orders. A two person, white glove delivery service will set up your chair.</p>
+                            <p className='reason-content'>Free delivery & installation is included with all orders. A two person, white glove delivery service will set up your bed.</p>
                         </div>
                         <div className='image-wrapper'>
                             <Image 
@@ -862,7 +859,7 @@ const RequestOurBathLiftBrochure = () => {
                         height='389'
                     />
                 </div> */}
-
+                <OfferBanners orphan={true} />
                 <div className='occupational-therapist orphan-con-reg orphan-padding'>
                     <div className='image-wrapper'>
                         <Image
@@ -933,7 +930,7 @@ const RequestOurBathLiftBrochure = () => {
                     <h6>Occupational Therapists</h6>
                     <div className='ot-quote'>
                         <p className='quote-mark mark-left'>“</p>
-                        <p className='quote'>Bathing brings a world of benefits, from rest and relaxation to soothing away aches and pains. Yet for so many getting in and out can be a struggle that risks aggravating rather than alleviating pains. Oak Tree’s bath lift makes the whole experience easier on joints and muscles.</p> 
+                        <p className='quote'>If you have breathing problems, chest problems, or even back aches, just raising your upper body to a slight angle can allow you to get a much more comfortable night’s sleep. Being able to raise the top half of the body also enables us to get in and out of bed more easily.</p> 
                         <p className='quote-mark mark-right'>”</p>
                     </div>
                     <p className='author'>Samantha Shann</p>
@@ -996,4 +993,4 @@ const RequestOurBathLiftBrochure = () => {
 } 
 
 
-export default RequestOurBathLiftBrochure; 
+export default RequestOurBedBrochure; 

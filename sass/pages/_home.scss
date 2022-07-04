@@ -3,7 +3,7 @@
     .heading {
         font-size: 3rem!important;
         @media(min-width: 420px) {
-            font-size: 3.6rem;
+            font-size: 3.6rem!important;
         }
     }
 }
@@ -627,6 +627,7 @@
             .desc {
                 font-size: 1.7rem;
                 font-weight: 400;
+                color: $dark-grey;
                 padding: 10px 0;
                 line-height: 1.6;
             }
@@ -688,7 +689,10 @@
         font-size: 3.6rem;
         text-align: center;
         color: $dark-green-1;
-        margin-bottom: 40px;
+        margin-bottom: 30px;
+        @media(min-width:600px) {
+            margin-bottom: 30px;
+        } 
     }
     .banners-flex {
         display: flex;
@@ -1032,7 +1036,7 @@
                         width: calc(100% - 165px);
                     }
                 }
-                .heading  {
+                .title  {
                     font-size:2.4rem;
                     font-weight: 600;
                     color: $dark-green-1;
@@ -2018,41 +2022,79 @@
         .ready-to-talk {
             display: flex;
             flex-direction: column;
-            border: 3px $yellow-3 solid;
-            border-radius: 6px;
             align-items: center;
             justify-content: center;
-            // padding: 0 15px;
-            width: 100%;
-            min-height:200px;
+            text-align: center;
             @media(min-width: 850px) {
                 pointer-events: none;
             }
+            .icon {
+                margin: 0 auto;
+                margin-bottom: 20px;
+            }
             .value-heading {
-                font-size: 3rem;
-                font-weight: 600;
-                color: $dark-green-1;
-                margin-bottom: 0px;
-            }
-            p{
-                font-size: 2.2rem;
                 text-align: center;
-                line-height: 1.2;
-                margin-top: 10px;
-                br {
-                    @media(min-width: 950px) {
-                        display: none;
-                    } 
-                }
-                .highlight-number {
-                    font-weight: 600;
-                    font-size: inherit;
+                font-size: 2.4rem;
+                margin-bottom:0;
+                @media(min-width: 600px){
+                    font-size: 2.8rem;
                 }
             }
+            p {
+                font-size: 1.6rem;
+                text-align: center;
+                @media(min-width: 600px){
+                    font-size: 2rem;
+                }
+                br {
+                            @media(min-width: 950px) {
+                                display: none;
+                            } 
+                        }
+                .highlight-number {
+                    font-size: 1.8rem;
+                    font-weight: 600;
+                    @media(min-width: 600px){
+                        font-size: 2.1rem;
+                    }
+                    // font-size: inherit;
+                }
+            }
+            // display: flex;
+            // flex-direction: column;
+            // border: 3px $yellow-3 solid;
+            // border-radius: 6px;
+            // align-items: center;
+            // justify-content: center;
+            // // padding: 0 15px;
+            // width: 100%;
+            // min-height:200px;
+
+            // .value-heading {
+            //     font-size: 3rem;
+            //     font-weight: 600;
+            //     color: $dark-green-1;
+            //     margin-bottom: 0px;
+            // }
+            // p{
+            //     font-size: 2.2rem;
+            //     text-align: center;
+            //     line-height: 1.2;
+            //     margin-top: 10px;
+            //     br {
+            //         @media(min-width: 950px) {
+            //             display: none;
+            //         } 
+            //     }
+            //     .highlight-number {
+            //         font-weight: 600;
+            //         font-size: inherit;
+            //     }
+            // }
         }
     }
 }
-.over-13-years {
+.years-in-business {
     width: 200px;
 
     margin: 50px auto;

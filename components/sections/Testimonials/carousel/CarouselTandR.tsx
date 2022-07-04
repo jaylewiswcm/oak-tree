@@ -53,7 +53,7 @@ const CarouselTandR = ({setShow, setVideoId}: ComponentProps) => {
                         </div>
                         </div>
                         <div className='review'>
-                            <div className='qoute-mark mark-left'>
+                            <div className='quote-mark mark-left'>
                                 <Image 
                                     src='/vectors/quote-mark-left.svg'
                                     alt='Quote mark'
@@ -63,7 +63,7 @@ const CarouselTandR = ({setShow, setVideoId}: ComponentProps) => {
                                 />
                             </div>
                             <p className='quote'>{cx.quote}</p>
-                            <div className='qoute-mark mark-right'>
+                            <div className='quote-mark mark-right'>
                                 <Image 
                                     src='/vectors/quote-mark-right.svg'
                                     alt='Quote mark'

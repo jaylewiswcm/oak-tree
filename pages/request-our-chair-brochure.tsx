@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Image from 'next/image';
 // Components
 
@@ -6,14 +6,19 @@ import Reviews from '../components/sections/reviews/Reviews';
 import OtFamily from '../components/sections/customers/OtFamily';
 import OrphanBrochureFormWrapper from '../components/forms/OrphanBrochureFormWrapper';
 import Testimonials from '../components/sections/Testimonials/Testimonials';
-
+import { OfferBanners } from '../components/sections/banners/OfferBanners';
+import Modal from '../components/modal/Modal';
+import VideoCarousel from '../components/modal/video/VideoCarousel';
  
 const RequestOurChairBrochure = () => {
+    const [isOpen, setIsOpen] = useState(false);
     return (
+        
         <div className="orphan-brochure-wrapper">
+             {isOpen && <Modal classNames="" setShow={setIsOpen}><VideoCarousel videoId="l9adE0mWzUY" setShow={setIsOpen} show={isOpen}></VideoCarousel></Modal> }
             <div className='usp-header'>
                 <div className='inner-wrapper con-reg'>
-                <div className='usp-item'>
+                {/* <div className='usp-item'>
                     <div className='icon-wrapper'>
                         <Image 
                             src='/icons/landing-page/trustpilot.svg'
@@ -24,11 +29,11 @@ const RequestOurChairBrochure = () => {
                         />
                     </div>
                     <p>4.5 Star Rated</p>
-                </div>
+                </div> */}
                 <div className='usp-item'>
                     <div className='icon-wrapper'>
                         <Image 
-                            src='/icons/landing-page/british-made.svg'
+                            src='/icons/usps/icon-british-made-small.svg'
                             alt='British Made'
                             layout='responsive'
                             width={60}
@@ -40,7 +45,7 @@ const RequestOurChairBrochure = () => {
                 <div className='usp-item'>
                     <div className='icon-wrapper'>
                         <Image 
-                            src='/icons/landing-page/10-year-warranty.svg'
+                            src='/icons/usps/icon-warranty-small.svg'
                             alt='10 Year Warranty'
                             layout='responsive'
                             width={60}
@@ -52,7 +57,7 @@ const RequestOurChairBrochure = () => {
                 <div className='usp-item'>
                     <div className='icon-wrapper'>
                         <Image 
-                            src='/icons/landing-page/free-delivery.svg'
+                            src='/icons/usps/icon-free-delivery-small.svg'
                             alt='Free Delivery'
                             layout='responsive'
                             width={60}
@@ -64,7 +69,7 @@ const RequestOurChairBrochure = () => {
                 <div className='usp-item'>
                     <div className='icon-wrapper'>
                         <Image 
-                            src='/icons/landing-page/trade-in.svg'
+                            src='/icons/usps/icon-trade-in-small.svg'
                             alt='Trade In'
                             layout='responsive'
                             width={60}
@@ -75,6 +80,7 @@ const RequestOurChairBrochure = () => {
                 </div>
                 </div>
             </div>
+        <div className='con-reg orphan-wrapper'>
         <OrphanBrochureFormWrapper productType='chair'/>
         <div className='content'>
             <div className='hero orphan-con-reg'>
@@ -86,6 +92,7 @@ const RequestOurChairBrochure = () => {
                     objectPosition='left'
                 />
                 <div className='intro-box'>
+                    <div className='inner-border'></div>
                     <h1>Transform Your Life with an Oak Tree Mobility Chair</h1>
                     <p>Get your new Spring 2022 brochure today!</p>
                     {/* <div className='underline'></div> */}
@@ -187,32 +194,55 @@ const RequestOurChairBrochure = () => {
                     <div className="usp-points">
                         <ul>
                             <li>
-                            <div className="num-wrapper">1.</div>
+                                <div className="num-wrapper">
+                                    <Image 
+                                        src='/icons/numbers/1-big.svg'
+                                        alt='Number one'
+                                        layout='responsive'
+                                        width='62'
+                                        height='54'
+                                    />
+                                </div>
                             <p>Browse our luxury styles, with <span className='oaktree-green'>over 100 fabrics and leather</span></p>
                             </li>
                             <li>
-                            <div className="num-wrapper">2.</div>
+                                <div className="num-wrapper">
+                                    <Image 
+                                        src='/icons/numbers/2-big.svg'
+                                        alt='Number two'
+                                        layout='responsive'
+                                        width='62'
+                                        height='54'
+                                    />
+                                </div>
                             <p><span className='oaktree-green'>Personalise your chair</span> with superb accessories such as heat and massage</p>
                             </li>
                             <li>
-                            <div className="num-wrapper">3.</div>
+                                <div className="num-wrapper">
+                                    <Image 
+                                        src='/icons/numbers/3-big.svg'
+                                        alt='Number three'
+                                        layout='responsive'
+                                        width='62'
+                                        height='54'
+                                    />
+                                </div>
                             <p>Discover more about <span className='oaktree-green'>our clever motors</span> and how they can help you</p>
                             </li>
                         </ul>
                     </div>
                     <div className="brochure-wrapper">
                         <Image 
-                            src='/brochures/brochure-mockup.png'
+                            src='/brochures/chair-brochure.png'
                             alt='Chair Brochure'
                             layout='responsive'
-                            width={334}
-                            height={401}
+                            width={1000}
+                            height={1412}
                         />
                     </div>
                 </div>
             </div>
             <div className='testimonials orphan-con-reg orphan-padding'>
-                <h4>Hear what our customers have to say</h4>
                 <p className='subheading'>We believe in the power of individuality. We love that every Oak Tree customer has his or her own story to tell, and we build products to fit many different people. If you’d like to hear the stories of our customers, take a look at the testimonial videos.</p>
                 <Testimonials pageType='orphan'/>
             </div>
@@ -239,11 +269,14 @@ const RequestOurChairBrochure = () => {
                         </div>
                         <div className='image-wrapper'>
                             <Image 
-                                src='/images/landing-pages/reasons-chair/reason-1.png'
+                                src='/images/landing-pages/reasons-chair/reason-1.jpg'
                                 alt='Reason 1 - British Made'
-                                layout='fill'
-                                objectFit='cover'
-                                objectPosition='center'
+                                layout='responsive'
+                                width='800'
+                                height='800'
+
+                                // objectFit='cover'
+                                // objectPosition='center'
                             />
                         </div>
                     </div>
@@ -255,8 +288,8 @@ const RequestOurChairBrochure = () => {
                                     src='/icons/landing-page/leg-lift.svg'
                                     alt='British Made'
                                     layout='responsive'
-                                    width='106'
-                                    height='74'
+                                    width='68'
+                                    height='68'
                                 />
                             </div>
                             <p className='reason-title'><span className='number'>2.</span> Our Unique High Leg Lift</p>
@@ -264,11 +297,11 @@ const RequestOurChairBrochure = () => {
                         </div>
                         <div className='image-wrapper'>
                             <Image 
-                                src='/images/landing-pages/reasons-chair/reason-2.png'
+                                src='/images/landing-pages/reasons-chair/reason-2.jpg'
                                 alt='Reason 2 - Unique High Leg Lift'
-                                layout='fill'
-                                objectFit='cover'
-                                objectPosition='center'
+                                layout='responsive'
+                                width='800'
+                                height='800'
                             />
                         </div>
                     </div>
@@ -280,8 +313,8 @@ const RequestOurChairBrochure = () => {
                                     src='/icons/landing-page/made-to-fit.svg'
                                     alt='Made To Fit'
                                     layout='responsive'
-                                    width='106'
-                                    height='74'
+                                    width='68'
+                                    height='68'
                                 />
                             </div>
                             <p className='reason-title'><span className='number'>3.</span> Made To Fit</p>
@@ -289,11 +322,11 @@ const RequestOurChairBrochure = () => {
                         </div>
                         <div className='image-wrapper'>
                             <Image 
-                                src='/images/landing-pages/reasons-chair/reason-3.png'
+                                src='/images/landing-pages/reasons-chair/reason-3.jpg'
                                 alt='Reason 3 - Made To Fit'
-                                layout='fill'
-                                objectFit='cover'
-                                objectPosition='center'
+                                layout='responsive'
+                                width='800'
+                                height='800'
                             />
                         </div>
                     </div>
@@ -304,8 +337,8 @@ const RequestOurChairBrochure = () => {
                                     src='/icons/landing-page/free-delivery.svg'
                                     alt='Free Delivery'
                                     layout='responsive'
-                                    width='106'
-                                    height='74'
+                                    width='68'
+                                    height='68'
                                 />
                             </div>
                             <p className='reason-title'><span className='number'>4.</span> Free Delivery</p>
@@ -313,11 +346,11 @@ const RequestOurChairBrochure = () => {
                         </div>
                         <div className='image-wrapper'>
                             <Image 
-                                src='/images/landing-pages/reasons-chair/reason-4.png'
+                                src='/images/landing-pages/reasons-chair/reason-4.jpg'
                                 alt='Reason 4 - Free Delivery'
-                                layout='fill'
-                                objectFit='cover'
-                                objectPosition='center'
+                                layout='responsive'
+                                width='800'
+                                height='800'
                             />
                         </div>
                     </div>
@@ -328,8 +361,8 @@ const RequestOurChairBrochure = () => {
                                     src='/icons/landing-page/trade-in.svg'
                                     alt='£200 Trade in Offer'
                                     layout='responsive'
-                                      width='106'
-                                    height='74'
+                                    width='68'
+                                    height='68'
                                 />
                             </div>
                             <p className='reason-title'><span className='number'>5.</span> Save £200</p>
@@ -337,11 +370,11 @@ const RequestOurChairBrochure = () => {
                         </div>
                         <div className='image-wrapper'>
                             <Image 
-                                src='/images/landing-pages/reasons-chair/reason-5.png'
+                                src='/images/landing-pages/reasons-chair/reason-5.jpg'
                                 alt='Reason 5 - Save £200'
-                                layout='fill'
-                                objectFit='cover'
-                                objectPosition='center'
+                                layout='responsive'
+                                width='800'
+                                height='800'
                             />
                             <div className='bhf-overlay'>
                                 <Image 
@@ -355,14 +388,82 @@ const RequestOurChairBrochure = () => {
                     </div>
                 </div>
             </div>
-            <div className='sales-banner bg-red-2'>
-                <div className='orphan-con-reg'>
-                    <p className='subheading'>Limited Time Only</p>
-                    <h6>Half Price Sale</h6>
-                    <p>Get your FREE copy of our very latest brochure and enjoy our special offers…</p>
+            
+            {/* <div className='orphan-con-reg'>
+                    <Image
+                        src='/graphics/half-price-sale-horizontal.svg'
+                        alt='Half Price Sale'
+                        layout='responsive'
+                        width='750'
+                        height='389'
+                    />
+                </div> */}
+                <OfferBanners orphan={true} />
+                <div className='occupational-therapist orphan-con-reg orphan-padding'>
+                    <div className='image-wrapper'>
+                        <Image
+                            src='/occupational-therapist/sam-shann-circle.png'
+                            alt='Samantha Shann'
+                            layout='fill'
+                            objectFit='cover'
+                            objectPosition='center'
+                        />
+                    </div>
+                        <p className='title'>Meet Samantha Shann</p>
+                        <p className='sub-title'>Our Occupational Therapist</p>
+                        <p>All of our products are approved by Samantha Shann, occupational therapist and co-founder of UK Therapy Services Ltd. She fully tests and evaluates everything we offer, ensuring it satisfies the high standards of an independent health professional.</p>
+                        <button className='play-button' onClick={() => setIsOpen(true)}>
+                            <div className='icon'>
+                                <Image
+                                    src='/buttons/watch-play-btn.svg'
+                                    alt='Play button'
+                                    layout='responsive'
+                                    width='43'
+                                    height='30'
+                                />
+                            </div>
+                            <p>Watch our video</p>
+                        </button>
+                        <div className='logos-container'>
+          <div className='logo'>
+            <Image 
+              src='/occupational-therapist/logos/the-ot-service.png'
+              alt='The OT service'
+              
+              width='90'
+              height='54'
+            />
+          </div>
+          <div className='logo'>
+            <Image 
+              src='/occupational-therapist/logos/wfot.svg'
+              alt='World Federation of Occupational Therapists'
+              
+              width='83'
+              height='55'
+            />
+          </div>
+          <div className='logo'>
+            <Image 
+              src='/occupational-therapist/logos/hcpc.png'
+              alt='Health & Care Professions Council'
+              
+              width='140'
+              height='39'
+            />
+          </div>
+          <div className='logo'>
+            <Image 
+              src='/occupational-therapist/logos/rcot.png'
+              alt='Royal College of Occupational Therapists'
+              
+              width='120'
+              height='38'
+            />
+          </div>
+        </div>
                 </div>
-            </div>
-            <div className='occupational-therapist orphan-con-reg orphan-padding'>
+            {/* <div className='occupational-therapist orphan-con-reg orphan-padding'>
                 <div className='content'>
                     <p className='subheading'>Meet Samantha Shann</p>
                     <h6>Our Occupational Therapist</h6>
@@ -394,7 +495,7 @@ const RequestOurChairBrochure = () => {
                         objectPosition='top'
                     />
                 </div>
-            </div>
+            </div> */}
             <div className='occupational-therapist-quote bg-dark-green-1'>
                 <div className='orphan-con-reg'>
                     <p className='subheading'>Recommended and approved by our</p>
@@ -407,14 +508,14 @@ const RequestOurChairBrochure = () => {
                     <p className='author'>Samantha Shann</p>
                 </div>
             </div>
-            <div className='join-oak-tree orphan-con-reg orphan-padding'>
+            {/* <div className='join-oak-tree orphan-con-reg orphan-padding'>
                 <h6>Join The Oak Tree Family</h6>
                 <p className='subheading'>See how our customers transformed their lives with an Oak Tree rise and recline chair…</p>
                 <div className='cx-grid'>
                     <OtFamily productType='chair' />
                     <div className="carousel-pagination" id='ot-family-pagination'></div>
                 </div>
-            </div>
+            </div> */}
             <div className='our-partners orphan-con-reg'>
                 <p>Our Partners</p>
                 <div className='logo-grid'>
@@ -464,6 +565,7 @@ const RequestOurChairBrochure = () => {
                         />
                     </div>
                 </div>
+            </div>
             </div>
         </div>
         </div>

@@ -55,8 +55,8 @@ const Header = () => {
                                 src='/logo/logo.svg'
                                 alt='Oak Tree Mobility'
                                 layout='responsive'
-                                width={215.42}
-                                height={44.89}
+                                width={171}
+                                height={36}
                             />
                           </div>
                           <div className='mobile-logo'>

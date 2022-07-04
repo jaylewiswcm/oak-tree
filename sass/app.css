@@ -2805,7 +2805,7 @@ footer .social-container {
 }
 
 footer .social-container .heading {
-  font-size: 2rem;
+  font-size: 2.3rem;
   font-weight: 500;
   color: #17494D;
   margin-bottom: 10px;
@@ -2853,21 +2853,26 @@ footer .social-container .social-grid a {
 
 @media (min-width: 600px) {
   footer .social-container .social-grid a {
-    marign-left: 0;
-    margin-right: 20px;
+    margin-left: 0;
+    margin-right: 30px;
   }
 }
 
 footer .social-container .social-grid a .icon {
   width: 50px;
   height: 50px;
+  margin-right: 10px;
 }
 
 @media (min-width: 450px) {
   footer .social-container .social-grid a .icon {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
   }
+}
+
+footer .social-container .social-grid a .facebook-icon {
+  margin-right: 0;
 }
 
 footer .social-container .social-grid a .mobile {
@@ -2891,13 +2896,13 @@ footer .social-container .social-grid a .desktop {
 }
 
 footer .social-container .social-grid a p {
-  font-size: 1.7rem;
+  font-size: 1.8rem;
   font-weight: 400;
   color: #7F7F7F;
   display: none;
 }
 
-@media (min-width: 450px) {
+@media (min-width: 600px) {
   footer .social-container .social-grid a p {
     display: block;
   }
@@ -3064,7 +3069,7 @@ header .header-inner .con-reg {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 10px 25px;
+  padding: 20px 25px;
   height: 100%;
   max-width: 1500px;
 }
@@ -3150,15 +3155,9 @@ header .header-inner .header-logo, header .header-inner .header-cta {
   display: flex;
 }
 
-header .header-inner .logo {
-  margin-right: 20px;
-  width: 100% span;
-  width-display: none;
-}
-
 @media (min-width: 400px) {
   header .header-inner .logo {
-    width: 170px;
+    width: 210px;
   }
 }
 
@@ -3209,7 +3208,7 @@ header .header-inner .main-nav .main-ul li:last-of-type {
 }
 
 header .header-inner .main-nav .main-ul li a {
-  font-size: 1.7rem;
+  font-size: 1.8rem;
   font-weight: 500;
   letter-spacing: 0px;
   color: #09595E;
@@ -3289,18 +3288,18 @@ header .header-inner .header-phone-number {
 }
 
 header .header-inner .header-phone-number .number-support {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   color: #7F7F7F;
   text-align: right;
 }
 
 header .header-inner .header-phone-number .number {
-  font-size: 2.5rem;
+  font-size: 3.2rem;
   font-weight: 600;
   color: #17494D;
   text-align: right;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
 }
 
 header .header-inner .mobile-call-btn {
@@ -3341,7 +3340,7 @@ header .header-inner.orphan-header {
           align-items: center;
   padding: 10px 25px;
   height: 100%;
-  max-width: 1400px;
+  max-width: 1500px;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
@@ -4041,37 +4040,6 @@ body.mobile-navbar .mobile-navigation {
   pointer-events: none;
 }
 
-.orphan-bottom-bar {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background: none;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-}
-
-.orphan-bottom-bar .mobile-button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-@media (min-width: 1000px) {
-  .orphan-bottom-bar .mobile-button {
-    display: none;
-  }
-}
-
-.orphan-bottom-bar .inner-wrapper {
-  display: none !important;
-}
-
 .bottom-bar {
   position: fixed;
   bottom: 0;
@@ -4196,13 +4164,45 @@ body.mobile-navbar .mobile-navigation {
   bottom: -150px;
 }
 
+.bottom-bar.orphan-bottom-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media (min-width: 1000px) {
+  .bottom-bar.orphan-bottom-bar {
+    display: none;
+  }
+}
+
+.bottom-bar.orphan-bottom-bar .inner-bar {
+  background: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.bottom-bar.orphan-bottom-bar .inner-bar .phone-number {
+  display: none;
+}
+
+.bottom-bar.orphan-bottom-bar .inner-bar .button-wrapper {
+  margin: 0 auto;
+}
+
 .index .heading {
   font-size: 3rem !important;
 }
 
 @media (min-width: 420px) {
   .index .heading {
-    font-size: 3.6rem;
+    font-size: 3.6rem !important;
   }
 }
 
@@ -4708,6 +4708,7 @@ body.mobile-navbar .mobile-navigation {
 .home-collections .collections .collection-item .desc {
   font-size: 1.7rem;
   font-weight: 400;
+  color: #53565F;
   padding: 10px 0;
   line-height: 1.6;
 }
@@ -4781,7 +4782,13 @@ body.mobile-navbar .mobile-navigation {
   font-size: 3.6rem;
   text-align: center;
   color: #17494D;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
+}
+
+@media (min-width: 600px) {
+  .banners h3 {
+    margin-bottom: 30px;
+  }
 }
 
 .banners .banners-flex {
@@ -4958,7 +4965,7 @@ body.mobile-navbar .mobile-navigation {
   }
 }
 
-.occupational-therapist-wrapper .ot-intro .section .meet-sam-shann .heading {
+.occupational-therapist-wrapper .ot-intro .section .meet-sam-shann .title {
   font-size: 2.4rem;
   font-weight: 600;
   color: #17494D;
@@ -5816,16 +5823,13 @@ body.mobile-navbar .mobile-navigation {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  border: 3px #FEC51D solid;
-  border-radius: 6px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 100%;
-  min-height: 200px;
+  text-align: center;
 }
 
 @media (min-width: 850px) {
@@ -5834,18 +5838,32 @@ body.mobile-navbar .mobile-navigation {
   }
 }
 
+.our-values .value-grid .ready-to-talk .icon {
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
 .our-values .value-grid .ready-to-talk .value-heading {
-  font-size: 3rem;
-  font-weight: 600;
-  color: #17494D;
-  margin-bottom: 0px;
+  text-align: center;
+  font-size: 2.4rem;
+  margin-bottom: 0;
+}
+
+@media (min-width: 600px) {
+  .our-values .value-grid .ready-to-talk .value-heading {
+    font-size: 2.8rem;
+  }
 }
 
 .our-values .value-grid .ready-to-talk p {
-  font-size: 2.2rem;
+  font-size: 1.6rem;
   text-align: center;
-  line-height: 1.2;
-  margin-top: 10px;
+}
+
+@media (min-width: 600px) {
+  .our-values .value-grid .ready-to-talk p {
+    font-size: 2rem;
+  }
 }
 
 @media (min-width: 950px) {
@@ -5855,23 +5873,29 @@ body.mobile-navbar .mobile-navigation {
 }
 
 .our-values .value-grid .ready-to-talk p .highlight-number {
+  font-size: 1.8rem;
   font-weight: 600;
-  font-size: inherit;
 }
 
-.over-13-years {
+@media (min-width: 600px) {
+  .our-values .value-grid .ready-to-talk p .highlight-number {
+    font-size: 2.1rem;
+  }
+}
+
+.years-in-business {
   width: 200px;
   margin: 50px auto;
 }
 
 @media (min-width: 500px) {
-  .over-13-years {
+  .years-in-business {
     width: 250px;
   }
 }
 
 @media (min-width: 800px) {
-  .over-13-years {
+  .years-in-business {
     margin: 25px auto;
     margin-bottom: 60px;
   }
@@ -8877,6 +8901,7 @@ body.mobile-navbar .mobile-navigation {
   .table-of-contents .toc .product-content {
     height: 100%;
     max-height: 100%;
+    opacity: 1;
   }
 }
 
@@ -10594,10 +10619,11 @@ body.mobile-navbar .mobile-navigation {
 }
 
 .orphan-brochure-wrapper .usp-header .usp-item p {
-  margin-left: 5px;
+  margin-left: 0px;
   font-size: 1.8rem;
-  font-weight: 400;
+  font-weight: 500;
   text-align: center;
+  color: #53565F;
 }
 
 @media (min-width: 375px) {
@@ -10618,20 +10644,27 @@ body.mobile-navbar .mobile-navigation {
 
 @media (min-width: 400px) {
   .orphan-brochure-wrapper .usp-header .usp-item .icon-wrapper {
-    width: 60px;
+    width: 50px;
+    margin-right: 10px;
   }
 }
 
-@media (min-width: 1000px) {
-  .orphan-brochure-wrapper .orphan-con-reg {
-    max-width: 840px;
-    margin-left: auto;
-  }
+.orphan-brochure-wrapper .orphan-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 1680px;
+  padding: 0;
 }
 
 .orphan-brochure-wrapper .form {
   width: 40%;
-  max-width: 560px;
   height: 100vh;
   margin-right: auto;
   position: -webkit-sticky;
@@ -10730,13 +10763,12 @@ body.mobile-navbar .mobile-navigation {
   left: 8px;
   width: calc(100% - 16px);
   height: calc(100% - 16px);
-  border: 3px #17494D solid;
+  border: 2px #E3E3E3 solid;
   border-radius: 2px;
 }
 
 .orphan-brochure-wrapper .content .hero .intro-box h1 {
   font-size: 3rem;
-  font-weight: 700;
   font-family: "Sentient-Variable", serif;
   text-align: left;
   line-height: 1.4;
@@ -10746,19 +10778,13 @@ body.mobile-navbar .mobile-navigation {
 @media (min-width: 600px) {
   .orphan-brochure-wrapper .content .hero .intro-box h1 {
     text-align: center;
-    font-size: 3.8rem;
-  }
-}
-
-@media (min-width: 1000px) and (max-width: 1099px) {
-  .orphan-brochure-wrapper .content .hero .intro-box h1 {
-    font-size: 3.2rem;
+    font-size: 3.6rem;
   }
 }
 
 .orphan-brochure-wrapper .content .hero .intro-box p {
   font-size: 2.2rem;
-  font-weight: 400;
+  font-weight: 500;
   text-align: left;
   margin-top: 5px;
   color: #09595E;
@@ -10768,7 +10794,7 @@ body.mobile-navbar .mobile-navigation {
 @media (min-width: 600px) {
   .orphan-brochure-wrapper .content .hero .intro-box p {
     text-align: center;
-    font-size: 2.6rem;
+    font-size: 2.4rem;
     margin-top: 5px;
   }
 }
@@ -10812,7 +10838,7 @@ body.mobile-navbar .mobile-navigation {
 
 @media (min-width: 400px) {
   .orphan-brochure-wrapper .content .health-benefits h2 {
-    font-size: 3.6rem;
+    font-size: 3.9rem;
   }
 }
 
@@ -10892,14 +10918,15 @@ body.mobile-navbar .mobile-navigation {
 
 @media (min-width: 800px) {
   .orphan-brochure-wrapper .content .health-benefits .benefits-grid .health-item .icon-wrapper {
-    margin-right: 15px;
+    margin-right: 5px;
   }
 }
 
 .orphan-brochure-wrapper .content .health-benefits .benefits-grid .health-item p {
   font-size: 2rem;
-  font-weight: 400;
+  font-weight: 500;
   color: #212923;
+  color: #53565F;
   margin: 0;
   text-align: center;
   line-height: 1.6;
@@ -10907,7 +10934,7 @@ body.mobile-navbar .mobile-navigation {
 
 @media (min-width: 800px) {
   .orphan-brochure-wrapper .content .health-benefits .benefits-grid .health-item p {
-    font-size: 2.2rem;
+    font-size: 2rem;
     text-align: left;
   }
 }
@@ -11062,6 +11089,7 @@ body.mobile-navbar .mobile-navigation {
 
 .orphan-brochure-wrapper .content .brochure-usps {
   padding-top: 40px;
+  margin-bottom: 80px;
 }
 
 .orphan-brochure-wrapper .content .brochure-usps h3 {
@@ -11172,9 +11200,9 @@ body.mobile-navbar .mobile-navigation {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-align: unset;
-        -ms-flex-align: unset;
-            align-items: unset;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     -webkit-box-pack: unset;
         -ms-flex-pack: unset;
             justify-content: unset;
@@ -11182,48 +11210,43 @@ body.mobile-navbar .mobile-navigation {
 }
 
 .orphan-brochure-wrapper .content .brochure-usps .usp-points ul li .num-wrapper {
-  background-color: #EDF9FA;
   width: 50px;
-  height: 50px;
-  font-size: 2.2rem;
-  margin-bottom: 25px;
-  border-radius: 50px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  color: #009B72;
+  margin-bottom: 10px;
 }
 
-@media (min-width: 650px) {
+@media (min-width: 650px) and (max-width: 999px) {
   .orphan-brochure-wrapper .content .brochure-usps .usp-points ul li .num-wrapper {
-    font-size: 2rem;
-    width: 40px;
-    height: 40px;
+    margin-right: 15px;
     margin-bottom: 0;
-    margin-right: 20px;
-    margin-top: 5px;
+  }
+}
+
+@media (min-width: 1050px) {
+  .orphan-brochure-wrapper .content .brochure-usps .usp-points ul li .num-wrapper {
+    margin-right: 15px;
+    margin-bottom: 0;
   }
 }
 
 .orphan-brochure-wrapper .content .brochure-usps .usp-points ul li p {
   font-size: 2rem;
-  font-weight: 400;
-  line-height: 1.8;
+  font-weight: 500;
+  line-height: 1.4;
   text-align: center;
+  color: #53565F;
 }
 
-@media (min-width: 650px) {
+@media (min-width: 650px) and (max-width: 999px) {
   .orphan-brochure-wrapper .content .brochure-usps .usp-points ul li p {
-    font-size: 2rem;
     text-align: left;
-    line-height: 1.4;
-    width: calc(100% - 35px);
+    width: calc(100% - 65px);
+  }
+}
+
+@media (min-width: 1050px) {
+  .orphan-brochure-wrapper .content .brochure-usps .usp-points ul li p {
+    text-align: left;
+    width: calc(100% - 65px);
   }
 }
 
@@ -11253,13 +11276,13 @@ body.mobile-navbar .mobile-navigation {
 
 @media (min-width: 1050px) {
   .orphan-brochure-wrapper .content .brochure-usps .brochure-wrapper {
-    width: 45%;
+    width: 30%;
   }
 }
 
 .orphan-brochure-wrapper .content .testimonials {
-  padding-top: 50px;
-  padding-bottom: 0;
+  padding: 0 15px;
+  padding-right: 15px;
 }
 
 .orphan-brochure-wrapper .content .testimonials h4 {
@@ -11311,7 +11334,6 @@ body.mobile-navbar .mobile-navigation {
 
 .orphan-brochure-wrapper .content .orphan-reasons h5 {
   font-size: 3.3rem;
-  font-weight: 600;
   color: #17494D;
   text-align: center;
 }
@@ -11342,6 +11364,9 @@ body.mobile-navbar .mobile-navigation {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border-bottom: 1px #E3E3E3 solid;
 }
 
@@ -11351,11 +11376,19 @@ body.mobile-navbar .mobile-navigation {
   }
 }
 
+.orphan-brochure-wrapper .content .orphan-reasons .reasons-grid .reason:nth-of-type(odd) .content {
+  margin-right: 25px;
+}
+
 .orphan-brochure-wrapper .content .orphan-reasons .reasons-grid .reason:nth-of-type(even) {
   -webkit-box-orient: horizontal;
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
+}
+
+.orphan-brochure-wrapper .content .orphan-reasons .reasons-grid .reason:nth-of-type(even) .content {
+  margin-left: 25px;
 }
 
 .orphan-brochure-wrapper .content .orphan-reasons .reasons-grid .reason .content {
@@ -11387,12 +11420,11 @@ body.mobile-navbar .mobile-navigation {
 
 @media (min-width: 600px) {
   .orphan-brochure-wrapper .content .orphan-reasons .reasons-grid .reason .content .number {
-    color: #17494D;
+    color: #FDE7A4;
     font-size: 3.8rem;
     position: absolute;
     top: 0;
     right: 10px;
-    opacity: 0.2;
     font-size: 13rem;
     line-height: 0.7;
   }
@@ -11430,7 +11462,7 @@ body.mobile-navbar .mobile-navigation {
 
 @media (min-width: 600px) {
   .orphan-brochure-wrapper .content .orphan-reasons .reasons-grid .reason .content .reason-title {
-    font-size: 2.6rem;
+    font-size: 3.8rem;
     text-align: left;
   }
 }
@@ -11468,7 +11500,7 @@ body.mobile-navbar .mobile-navigation {
   line-height: 1.5;
   text-align: center;
   margin-top: 10px;
-  color: #4c5151;
+  color: #53565F;
 }
 
 @media (min-width: 600px) {
@@ -11496,63 +11528,38 @@ body.mobile-navbar .mobile-navigation {
   right: 0;
 }
 
-.orphan-brochure-wrapper .content .sales-banner {
-  color: #fff;
-  padding: 40px;
+.orphan-brochure-wrapper .content .banners {
+  padding: 0 25px;
 }
 
-.orphan-brochure-wrapper .content .sales-banner .subheading {
-  font-size: 2rem;
-  font-weight: 400;
-  text-align: left;
-  color: #fff;
-}
-
-.orphan-brochure-wrapper .content .sales-banner h6 {
-  font-size: 3rem;
-  font-weight: 600;
-  text-align: left;
-}
-
-@media (min-width: 600px) {
-  .orphan-brochure-wrapper .content .sales-banner h6 {
-    font-size: 6rem;
+@media (min-width: 1000px) and (max-width: 1200px) {
+  .orphan-brochure-wrapper .content .banners .banners-flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
-.orphan-brochure-wrapper .content .sales-banner p {
-  font-size: 2rem;
-  color: #fff;
+@media (min-width: 1000px) and (max-width: 1200px) {
+  .orphan-brochure-wrapper .content .banners .banners-flex .banner-vertical {
+    width: 100%;
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 1200px) {
+  .orphan-brochure-wrapper .content .banners .banners-flex .sale-banner {
+    margin-bottom: 25px;
+  }
+}
+
+@media (min-width: 1000px) and (max-width: 1200px) {
+  .orphan-brochure-wrapper .content .banners .banners-flex .trade-in-banner {
+    margin-top: 25px;
+  }
 }
 
 .orphan-brochure-wrapper .content .occupational-therapist {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 50px 25px;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: column-reverse;
-          flex-direction: column-reverse;
-}
-
-@media (min-width: 1100px) {
-  .orphan-brochure-wrapper .content .occupational-therapist {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-}
-
-@media (min-width: 1400px) {
-  .orphan-brochure-wrapper .content .occupational-therapist {
-    padding-left: 15px;
-  }
-}
-
-.orphan-brochure-wrapper .content .occupational-therapist .content {
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -11563,93 +11570,129 @@ body.mobile-navbar .mobile-navigation {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  text-align: center;
-}
-
-@media (min-width: 1100px) {
-  .orphan-brochure-wrapper .content .occupational-therapist .content {
-    width: 50%;
-    -webkit-box-align: unset;
-        -ms-flex-align: unset;
-            align-items: unset;
-    text-align: left;
-    padding-right: 15px;
-  }
-}
-
-.orphan-brochure-wrapper .content .occupational-therapist .content .subheading {
-  font-size: 2rem;
-  font-weight: 500;
-  color: #0086C5;
-  margin-bottom: 5px;
-}
-
-@media (min-width: 450px) {
-  .orphan-brochure-wrapper .content .occupational-therapist .content .subheading {
-    padding: 0;
-  }
-}
-
-.orphan-brochure-wrapper .content .occupational-therapist .content h6 {
-  font-size: 3.3rem;
-  font-weight: 600;
-  color: #17494D;
-}
-
-@media (min-width: 400px) {
-  .orphan-brochure-wrapper .content .occupational-therapist .content h6 {
-    font-size: 3.6rem;
-  }
-}
-
-.orphan-brochure-wrapper .content .occupational-therapist .content .mobile-image {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  margin: 25px auto;
-  display: initial;
-}
-
-@media (min-width: 1100px) {
-  .orphan-brochure-wrapper .content .occupational-therapist .content .mobile-image {
-    display: none;
-  }
-}
-
-.orphan-brochure-wrapper .content .occupational-therapist .content .content-p {
-  font-size: 2rem;
-  line-height: 1.4;
-  font-weight: 400;
-}
-
-@media (min-width: 400px) {
-  .orphan-brochure-wrapper .content .occupational-therapist .content .content-p {
-    font-size: 2.2rem;
-    line-height: 1.5;
-  }
-}
-
-@media (min-width: 1100px) {
-  .orphan-brochure-wrapper .content .occupational-therapist .content .content-p {
-    margin-top: 25px;
-    padding: 25px 0;
-  }
-}
-
-.orphan-brochure-wrapper .content .occupational-therapist .content .partnered-with {
-  margin-top: 40px;
-  margin-bottom: 10px;
-  font-size: 1.8rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .orphan-brochure-wrapper .content .occupational-therapist .image-wrapper {
-  display: none;
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px #17494D solid;
+  overflow: hidden;
 }
 
-@media (min-width: 1100px) {
-  .orphan-brochure-wrapper .content .occupational-therapist .image-wrapper {
-    width: 50%;
-    display: initial;
+.orphan-brochure-wrapper .content .occupational-therapist .title {
+  font-size: 2.4rem;
+  font-weight: 500;
+  color: #17494D;
+  text-align: center;
+  margin-top: 10px;
+  line-height: 1.3;
+}
+
+.orphan-brochure-wrapper .content .occupational-therapist .sub-title {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #53565F;
+  margin-top: 0;
+}
+
+.orphan-brochure-wrapper .content .occupational-therapist p {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #53565F;
+  line-height: 1.6;
+  text-align: center;
+  margin-top: 20px;
+  max-width: 750px;
+}
+
+@media (min-width: 1250px) {
+  .orphan-brochure-wrapper .content .occupational-therapist p {
+    font-size: 1.8rem;
+  }
+}
+
+.orphan-brochure-wrapper .content .occupational-therapist .play-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 25px;
+  cursor: pointer;
+}
+
+.orphan-brochure-wrapper .content .occupational-therapist .play-button .icon {
+  width: 40px;
+  margin-right: 15px;
+}
+
+.orphan-brochure-wrapper .content .occupational-therapist .play-button p {
+  color: #17494D;
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin: 0;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.orphan-brochure-wrapper .content .occupational-therapist .play-button:hover p {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+
+.orphan-brochure-wrapper .content .occupational-therapist .logos-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 4px;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+@media (min-width: 800px) {
+  .orphan-brochure-wrapper .content .occupational-therapist .logos-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-shadow: 0 0 21px rgba(0, 0, 0, 0.18);
+            box-shadow: 0 0 21px rgba(0, 0, 0, 0.18);
+    padding: 25px 60px;
+    margin-top: 40px;
+  }
+}
+
+.orphan-brochure-wrapper .content .occupational-therapist .logos-container .logo {
+  margin: 25px;
+}
+
+@media (min-width: 800px) {
+  .orphan-brochure-wrapper .content .occupational-therapist .logos-container .logo {
+    margin: auto 0;
   }
 }
 
@@ -11781,6 +11824,7 @@ body.mobile-navbar .mobile-navigation {
   font-family: "Sentient-Variable", serif;
   color: #FDE7A4;
   position: absolute;
+  width: 20px;
 }
 
 .orphan-brochure-wrapper .content .occupational-therapist-quote .ot-quote .mark-left {
@@ -12874,7 +12918,7 @@ body.mobile-navbar .mobile-navigation {
   }
 }
 
-.t-and-r-hero .testimonial-holder .testimonial .review .qoute-mark {
+.t-and-r-hero .testimonial-holder .testimonial .review .quote-mark {
   width: 30px;
   opacity: 0.4;
 }
@@ -15559,7 +15603,7 @@ body.mobile-navbar .mobile-navigation {
 }
 
 .carousel-pagination .swiper-pagination-bullet {
-  background-color: #A3D9B4;
+  background-color: #8EC4C7;
   opacity: 1;
   width: 10px;
   height: 10px;

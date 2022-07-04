@@ -83,7 +83,7 @@ const Footer = () => {
                 <p className='heading'>Follow us on:</p> 
                 <div className='social-grid'>
                             <a href='https://www.facebook.com/OakTreeMobility/' className='social-wrapper facebook-blue' target='__blank' rel="noopener noreferrer">
-                                <div className='icon desktop'>
+                                <div className='icon desktop facebook-icon'>
                                     <Image 
                                         src='/icons/socials/facebook.svg' 
                                         alt='Facebook' 

@@ -11,7 +11,7 @@ import logo from '../../../public/occupational-therapist/ukts-logo.png';
 import Modal from '../../modal/Modal';
 import { QuoteCarousel } from './QuoteCarousel';
 import VideoCarousel from '../../modal/video/VideoCarousel'; 
-import samShannVideo from '../../../public/occupational-therapist/sam-shann-video.png'
+import samShannVideo from '../../../public/occupational-therapist/sam-shann-video.jpg'
 
 const OccupationalTherapistSection = () => {
   const [isOpen, setOpenModal] = useState(false)
@@ -63,60 +63,6 @@ const stagger = {
     <div className='occupational-therapist-wrapper'>
       {isOpen && <Modal classNames="" setShow={setOpenModal}><VideoCarousel videoId="l9adE0mWzUY" setShow={setOpenModal} show={isOpen}></VideoCarousel></Modal> }
         <h3 className='heading'>Advised and Approved by Leading Experts</h3>
-        {/* <div className='bg-dark-green-6'>
-          <div className='occ-section-flex con-reg'>
-            <div className='content'>
-            <div className='sam-shann-image'>
-              <div className='image'>
-                    <Image
-                      src={desktopImage}
-                      alt='Samantha Shann'
-                      layout='responsive'
-                      width='900'
-                      height='580'
-                      quality={100}
-                    />
-                    </div>
-              </div>
-            
-            <p className='oc-intro'>All of our products are approved by Samantha Shann, occupational therapist. Samantha fully tests and evaluates everything we offer, ensuring it satisfies the high standards of an independent health professional.</p>
-            <div className='partner-logo'>
-              <p>In Partnership with</p>
-              <div className='logo'>
-                <Image 
-                  src='/occupational-therapist/ukts-logo.png'
-                  alt='UKTS Logo'
-                  width='186'
-                  height='30'
-                />
-              </div>
-            </div>
-          </div>
-          
-          <div className='advice-quotes'>
-              <QuoteCarousel />
-              <div className='advice-pagination'></div>
-          </div>
-          </div>
-        </div> */}
-{/* 
-        <div className='ot-intro con-reg'>
-          <div className='image-wrapper'> 
-            <Image
-              src={desktopImage}
-              alt='Samantha Shann'
-              layout='responsive'
-              width='800'
-              height='580'
-            />
-          </div>
-          <div className='content'>
-            <h4>Advised and Approved<br/>by Leading Experts</h4>
-            <p>All of our products are approved by <span className='name'>Samantha Shann</span>, occupational therapist. Samantha fully tests and evaluates everything we offer, ensuring it satisfies the high standards of an independent health professional.</p>
-          </div>
-        </div> */}
-
-
         <div className='ot-intro con-reg'>
             <div className='section'>
               <div className='meet-sam-shann'>
@@ -130,7 +76,7 @@ const stagger = {
                   />
                 </div>
                 <div>
-                  <p className='heading'>Meet Samantha Shann</p>
+                  <p className='title'>Meet Samantha Shann</p>
                   <p>Occupational Therapist</p>
                 </div>
               </div>
@@ -228,7 +174,7 @@ const stagger = {
             <div className='benefit'>
               <div className='icon-wrapper'>
                 <Image
-                  src='/icons/health/lighter/back-pain.svg'
+                  src='/icons/health/back-pain.svg'
                   alt='Relieves Back Pain'
                   width='68'
                   height='68'
@@ -260,7 +206,7 @@ const stagger = {
             <div className='benefit'>
               <div className='icon-wrapper'>
                 <Image
-                  src='/icons/health/lighter/hip-and-knees.svg'
+                  src='/icons/health/hip-and-knees.svg'
                   alt='Support Hip & Knee'
                   width='68'
                   height='68'
@@ -286,7 +232,7 @@ const stagger = {
             <div className='benefit'>
               <div className='icon-wrapper'>
                 <Image
-                  src='/icons/health/lighter/circulation.svg'
+                  src='/icons/health/circulation.svg'
                   alt='Improves Circulation'
                   width='68'
                   height='68'
@@ -318,7 +264,7 @@ const stagger = {
             <div className='benefit'>
               <div className='icon-wrapper'>
                 <Image
-                  src='/icons/health/lighter/sleep.svg'
+                  src='/icons/health/sleep.svg'
                   alt='Improves Sleep'
                   width='68'
                   height='68'
@@ -372,7 +318,7 @@ const stagger = {
             <div className='benefit'>
               <div className='icon-wrapper'>
                 <Image
-                  src='/icons/health/lighter/back-pain.svg'
+                  src='/icons/health/back-pain.svg'
                   alt='Relieves Back Pain'
                   width='68'
                   height='68'
@@ -384,7 +330,7 @@ const stagger = {
             <div className='benefit'>
               <div className='icon-wrapper'>
                 <Image
-                  src='/icons/health/lighter/hip-and-knees.svg'
+                  src='/icons/health/hip-and-knees.svg'
                   alt='Support Hip & Knee'
                   width='68'
                   height='68'
@@ -396,7 +342,7 @@ const stagger = {
             <div className='benefit'>
               <div className='icon-wrapper'>
                 <Image
-                  src='/icons/health/lighter/circulation.svg'
+                  src='/icons/health/circulation.svg'
                   alt='Improves Circulation'
                   width='68'
                   height='68'
@@ -408,7 +354,7 @@ const stagger = {
             <div className='benefit'>
               <div className='icon-wrapper'>
                 <Image
-                  src='/icons/health/lighter/sleep.svg'
+                  src='/icons/health/sleep.svg'
                   alt='Improves Sleep'
                   width='68'
                   height='68'
