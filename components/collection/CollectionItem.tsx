@@ -68,7 +68,7 @@ export const CollectionItem = ({product, setShow}: ComponentProps ) => {
    const productImage = images.edges[0].node;
 
     const availableSwatches = JSON.parse(productSwatches.value);
-    
+
    const myLoader = ({src, width, quality}:any) => {
         return `${src}?w=${width}&q=${quality || 75}`
   }
