@@ -649,7 +649,7 @@ const RequestOurBedBrochure = () => {
                     <div className='inner-wrapper orphan-con-reg'>
                         <p className='statement'>“Received our new double bed last week and I have to say my wife and I haven’t slept this well in years.”</p>
                         <p className='author'>Terry Stamper</p>
-                        <p className='author'>Birmingham</p>
+                        <p className='loc'>Birmingham</p>
                     </div>
             </div>
             <div className='brochure-usps orphan-con-reg orphan-padding'>
@@ -708,7 +708,7 @@ const RequestOurBedBrochure = () => {
             </div>
             <div className='testimonials orphan-con-reg orphan-padding'>
                 <p className='subheading'>We believe in the power of individuality. We love that every Oak Tree customer has his or her own story to tell, and we build products to fit many different people. If you’d like to hear the stories of our customers, take a look at the testimonial videos.</p>
-                <Testimonials pageType='orphan'/>
+                <Testimonials pageType='bed'/>
             </div>
             <div className='reviews-wrapper orphan-con-reg'>
                 <Reviews orphan={true} />
@@ -746,8 +746,8 @@ const RequestOurBedBrochure = () => {
                             
                             <div className="icon-wrapper">
                                 <Image 
-                                    src='/icons/landing-page/leg-lift.svg'
-                                    alt='British Made'
+                                    src='/icons/landing-page/5-point-adjustable.svg'
+                                    alt='5 point adjustable bed'
                                     layout='responsive'
                                     width='68'
                                     height='68'
@@ -758,7 +758,7 @@ const RequestOurBedBrochure = () => {
                         </div>
                         <div className='image-wrapper'>
                             <Image 
-                                src='/images/landing-pages/reasons-chair/reason-2.jpg'
+                                src='/images/landing-pages/reasons-chair/reason-2-bed.jpg'
                                 alt='Reason 2 - Unique High Leg Lift'
                                 layout='responsive'
                                 width='800'
@@ -783,7 +783,7 @@ const RequestOurBedBrochure = () => {
                         </div>
                         <div className='image-wrapper'>
                             <Image 
-                                src='/images/landing-pages/reasons-chair/reason-3.jpg'
+                                src='/images/landing-pages/reasons-chair/reason-3-bed.jpg'
                                 alt='Reason 3 - Made To Fit'
                                 layout='responsive'
                                 width='800'
@@ -831,7 +831,7 @@ const RequestOurBedBrochure = () => {
                         </div>
                         <div className='image-wrapper'>
                             <Image 
-                                src='/images/landing-pages/reasons-chair/reason-5.jpg'
+                                src='/images/landing-pages/reasons-chair/reason-5-bed.jpg'
                                 alt='Reason 5 - Save £200'
                                 layout='responsive'
                                 width='800'

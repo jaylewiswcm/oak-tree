@@ -195,7 +195,7 @@ export const InformationContainer = ({product, showForm }:ComponentProps) => {
     </>
     }
     <div className='cta-wrapper'>
-        <p>Find your perfect chair, Request your Free Brochure</p>
+        <p>Learn more about The { title } ...</p>
         <button className='main-cta' onClick={showForm}>Request a Free Brochure</button>
     </div>
 </div>

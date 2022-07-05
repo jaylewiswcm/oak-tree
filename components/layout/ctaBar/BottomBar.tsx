@@ -32,11 +32,11 @@ export const BottomBar = ({className}: ComponentProps) => {
                 src='/icons/brochure/brochure-icon-white.svg'
                 alt='Brochure Icon'
                 layout='responsive'
-                width='50'
-                height='50'
+                width='73'
+                height='59.82'
             />
         </span>
-        <p>Request a Free Brochure</p>
+        <p>Request Your <br/><em><strong>Free</strong></em> Brochure</p>
     </button>
             </div>
         </div> 

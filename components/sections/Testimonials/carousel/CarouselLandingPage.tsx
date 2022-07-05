@@ -16,9 +16,10 @@ import { TestimonialTile } from '../TestimonialTile';
 interface ComponentProps {
   setSelectedCx: any
   setShow: any
+  productType: string
 }
 
-const CarouselLandingPage = ({setSelectedCx, setShow}: ComponentProps) => {
+const CarouselLandingPage = ({setSelectedCx, setShow, productType}: ComponentProps) => {
   return (
     <Swiper
              slidesPerView={1}
@@ -43,15 +44,19 @@ const CarouselLandingPage = ({setSelectedCx, setShow}: ComponentProps) => {
              }}
              modules={[Pagination]}
              className="mySwiper"> 
-             {testimonials.slice(0,4).map((cx) => 
-                 <SwiperSlide key={cx.name}>
-                     <TestimonialTile 
-                        cx={cx}
-                        setSelectedCx={setSelectedCx}
-                        setShow={setShow}
-                     />
-                 </SwiperSlide>
-                 )}
+             {testimonials.map((cx) => 
+              <>  
+                {cx.product.name === productType && 
+                  <SwiperSlide key={cx.name}>
+                  <TestimonialTile 
+                    cx={cx}
+                    setSelectedCx={setSelectedCx}
+                    setShow={setShow}
+                  />
+              </SwiperSlide>
+              }
+              </>
+            )}
            </Swiper>
   )
 }

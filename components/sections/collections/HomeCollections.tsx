@@ -52,6 +52,10 @@ const HomeCollections = () => {
   }, [controls, inView]);
 
   return (
+
+    <div className='home-collections con-reg'>
+    <h2 className='heading'>Introducing Our Products</h2>
+
 <motion.div 
   variants={stagger} 
   className='collections'
@@ -72,7 +76,10 @@ const HomeCollections = () => {
                   priority
                 />
               </div>
-              <h3 className='collection-title'>Rise and Recline Chairs</h3>
+              <div className='title-wrapper'>
+                <p className='hover-go-to'>Go to {'>'} </p> 
+                <h3 className='collection-title'>Rise and Recline Chairs</h3>
+              </div>
               <p className='desc'>Luxurious and well made allowing comfort at the touch of a button.</p>
               <div className='acting-btn'>
                 <div className='hover-bg'></div>
@@ -96,7 +103,10 @@ const HomeCollections = () => {
                   priority
                 />
               </div>
-              <h3 className='collection-title'>Adjustable Beds</h3>
+              <div className='title-wrapper'>
+                <p className='hover-go-to'>Go to {'>'} </p> 
+                <h3 className='collection-title'>Adjustable Beds</h3>
+              </div>
               <p className='desc'>The ultimate in sophistication and comfort, offering a wide collection.</p>
               <div className='acting-btn'>
               <div className='hover-bg'></div>
@@ -120,7 +130,10 @@ const HomeCollections = () => {
                   priority
                 />
               </div>
-              <h3 className='collection-title'>Bath Lifts</h3>
+              <div className='title-wrapper'>
+                <p className='hover-go-to'>Go to {'>'} </p> 
+                <h3 className='collection-title'>Bath Lifts</h3>
+              </div>
               <p className='desc'>Rediscover the joys and health benefits of a nice warm bath with our bath lift.</p>
               <div className='acting-btn'>
                 <div className='hover-bg'></div>
@@ -131,6 +144,7 @@ const HomeCollections = () => {
           </Link>
           </motion.div>
         </motion.div>
+        </div>
   )
 }
 

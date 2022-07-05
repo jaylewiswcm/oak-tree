@@ -56,12 +56,19 @@ const stagger = {
       <p className='subheading'>Take Their Word For It</p>
       <h6 className='heading'>Our Customers Come First</h6>
         { pageType && pageType === 'normal' && <CarouselNormal setSelectedCx={setSelectedCx}  setShow={setShow} /> } 
-        { pageType === 'orphan' &&  <CarouselLandingPage setSelectedCx={setSelectedCx}  setShow={setShow}/> } 
-         {pageType === 'bath-lift' && testimonials.map(cx => 
+        {pageType === 'chair' &&   <CarouselLandingPage setSelectedCx={setSelectedCx}  setShow={setShow} productType={'The Oak Chair'}/>}
+        {pageType === 'bath-lift' && testimonials.map(cx => 
             <>
-              {cx.product.name === 'The Riviera Plus' && <TestimonialTile cx={cx} setSelectedCx={setSelectedCx} setShow={setShow}/>} 
+              {cx.product.name === 'Bath Lift' && <div className='single-testimonial'><TestimonialTile cx={cx} setSelectedCx={setSelectedCx} setShow={setShow}/></div>} 
             </>
           )}
+          {pageType === 'bed' && testimonials.map(cx => 
+            <>
+              {cx.product.name === 'Adjustable Bed' && <div className='single-testimonial'><TestimonialTile cx={cx} setSelectedCx={setSelectedCx} setShow={setShow}/></div>} 
+            </>
+          )}
+        {/* {pageType === 'bed' &&   <CarouselLandingPage setSelectedCx={setSelectedCx}  setShow={setShow} productType={'Adjustable Bed'}/>} */}
+
         <div className='carousel-pagination' id='testimonial-pagination'></div>
         {show &&  <Modal classNames='' setShow={setShow}><VideoCarousel  videoId={selectedCx.videoId} setShow={setShow} show={show}/></Modal>}
   </div>

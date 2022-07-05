@@ -607,6 +607,9 @@
         .collection-item {    
             display: flex;
             flex-direction: column;
+            transition: 0.2s;
+            padding-bottom: 15px;
+            overflow: hidden;
             .image-wrapper {
                 width: 100%;
                 height: 350px;
@@ -617,19 +620,48 @@
                         transition: 0.5s;
                     }
             }
+            .title-wrapper {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                padding-top: 18px;
+                height: fit-content;
+            }
             .collection-title {
                 font-size: 2.2rem;
                 font-weight: 600;
                 font-family: $fontText;
                 color: $dark-green-1;
-                margin-top:18px;
+                // margin-top:18px;
+                transition: 0.2s;
+                // transform: translateX(-58px);
+                @media(min-width: 1000px) {
+                    transform: translateX(-58px);
+                }
+
             }
+            .hover-go-to {
+                font-size: 1.8rem;
+                font-weight: 400;
+                font-family: $fontText;
+                color: $dark-green-3;
+                display: none;
+                @media(min-width: 1000px) {    
+                    display: initial;
+                    visibility: hidden;
+                    opacity: 0;
+                    transform: translateX(-100px);
+                    transition: 0.2s transform, 0.4s opacity;  
+                }
+            }
+   
             .desc {
                 font-size: 1.7rem;
                 font-weight: 400;
                 color: $dark-grey;
                 padding: 10px 0;
                 line-height: 1.6;
+                transition: 0.2s
             }
             .acting-btn {
                 margin-top: 10px;
@@ -661,20 +693,44 @@
                 }
             }
         }
-        .collection-item:hover { 
+        .collection-item:hover {
             .image-wrapper {
                 box-shadow: 0 0 21px rgba(11,74,76,0.2);
                 span {
                     transform: scale(1.1);
                 }
-                
             }
+            .title-wrapper {
+                .collection-title {
+                    @media(min-width: 1000px) {    
+                        transform: translateX(10px);
+                    }
+                }
+                .hover-go-to {
+        
+                    @media(min-width: 1000px) {    
+                        width: auto;
+                        max-width: none;
+                        visibility: visible;
+                        transform: translateX(0);
+                        opacity: 1;
+
+                    }
+                }
+            }
+            
             .acting-btn {
                 box-shadow: 0 0 19px rgba(0,155,114,0.40);
-                background-color:#09B47C;
+                // background-color:#09B47C;
                 .underline {
                     width:100%;
                 }
+            }
+           .acting-btn  {
+                background-color:#05AA74;
+            }
+           .acting-btn:hover {
+                background-color:#07C184;
             }
         }
     }

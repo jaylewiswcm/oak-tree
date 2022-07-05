@@ -136,10 +136,8 @@ closeUspOverlay = () => {
         </div>
       </div> */}
 
-      <div className='home-collections con-reg'>
-        <h2 className='heading'>Introducing Our Products</h2>
         <HomeCollections />
-      </div>
+
       <OfferBanners orphan={false}/>
       <OccupationalTherapistSection />
       <Reviews orphan={false} />

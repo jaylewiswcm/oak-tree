@@ -185,7 +185,7 @@ const RequestOurChairBrochure = () => {
                     <div className='inner-wrapper orphan-con-reg'>
                         <p className='statement'>“When my chair came, it was absolutely wonderful to sit in. For the first time for ages, I felt really comfortable.”</p>
                         <p className='author'>Mrs Atkins</p>
-                        <p className='author'>Bristol</p>
+                        <p className='loc'>Bristol</p>
                     </div>
             </div>
             <div className='brochure-usps orphan-con-reg orphan-padding'>
@@ -244,7 +244,7 @@ const RequestOurChairBrochure = () => {
             </div>
             <div className='testimonials orphan-con-reg orphan-padding'>
                 <p className='subheading'>We believe in the power of individuality. We love that every Oak Tree customer has his or her own story to tell, and we build products to fit many different people. If you’d like to hear the stories of our customers, take a look at the testimonial videos.</p>
-                <Testimonials pageType='orphan'/>
+                <Testimonials pageType='chair'/>
             </div>
             <div className='reviews-wrapper orphan-con-reg'>
                 <Reviews orphan={true} />

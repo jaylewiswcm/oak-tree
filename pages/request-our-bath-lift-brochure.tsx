@@ -481,9 +481,7 @@ import { OfferBanners } from '../components/sections/banners/OfferBanners';
 import Modal from '../components/modal/Modal';
 import VideoCarousel from '../components/modal/video/VideoCarousel';
 // Images
-import hero from '../public/images/products/bath-lifts/bath-lift-collection-hero.png';
-import bathlift1 from '../public/images/products/bath-lifts/the-riviera/bath-lift-1.png';
-import bathlift2 from '../public/images/products/bath-lifts/the-riviera/bath-lift-2.png';
+import hero from '../public/images/heros/bath-lift-landing-hero.jpg'
 import bathlift3 from '../public/images/products/bath-lifts/the-riviera/bath-lift-3.png';
 import brochure from '../public/brochures/bath-lift-brochure.png';
  
@@ -649,7 +647,7 @@ const RequestOurBathLiftBrochure = () => {
                     <div className='inner-wrapper orphan-con-reg'>
                         <p className='statement'>“I didn’t know a Bath Lift would help my mum so much… she can now enjoy a hot bath once again.”</p>
                         <p className='author'>Andrew Masters</p>
-                        <p className='author'>Nottingham</p>
+                        <p className='loc'>Nottingham</p>
                     </div>
             </div>
             <div className='brochure-usps orphan-con-reg orphan-padding'>
@@ -708,7 +706,7 @@ const RequestOurBathLiftBrochure = () => {
             </div>
             <div className='testimonials orphan-con-reg orphan-padding'>
                 <p className='subheading'>We believe in the power of individuality. We love that every Oak Tree customer has his or her own story to tell, and we build products to fit many different people. If you’d like to hear the stories of our customers, take a look at the testimonial videos.</p>
-                <Testimonials pageType='orphan'/>
+                <Testimonials pageType='bath-lift'/>
             </div>
             <div className='reviews-wrapper orphan-con-reg'>
                 <Reviews orphan={true} />
@@ -749,8 +747,8 @@ const RequestOurBathLiftBrochure = () => {
                             
                             <div className="icon-wrapper">
                                 <Image 
-                                    src='/icons/landing-page/leg-lift.svg'
-                                    alt='British Made'
+                                    src='/icons/landing-page/lift-belt.svg'
+                                    alt='Spinning cogs'
                                     layout='responsive'
                                     width='68'
                                     height='68'
@@ -761,7 +759,7 @@ const RequestOurBathLiftBrochure = () => {
                         </div>
                         <div className='image-wrapper'>
                             <Image 
-                                src='/images/landing-pages/reasons-chair/reason-2.jpg'
+                                src='/images/landing-pages/reasons-chair/reason-2-bath-lift.jpg'
                                 alt='Reason 2 - Unique High Leg Lift'
                                 layout='responsive'
                                 width='800'
@@ -774,8 +772,8 @@ const RequestOurBathLiftBrochure = () => {
                            
                             <div className="icon-wrapper">
                                 <Image 
-                                    src='/icons/landing-page/made-to-fit.svg'
-                                    alt='Made To Fit'
+                                    src='/icons/landing-page/fit-any-bath.svg'
+                                    alt='Tape Measure'
                                     layout='responsive'
                                     width='68'
                                     height='68'
@@ -786,7 +784,7 @@ const RequestOurBathLiftBrochure = () => {
                         </div>
                         <div className='image-wrapper'>
                             <Image 
-                                src='/images/landing-pages/reasons-chair/reason-3.jpg'
+                                src='/images/landing-pages/reasons-chair/reason-3-bath-lift.jpg'
                                 alt='Reason 3 - Made To Fit'
                                 layout='responsive'
                                 width='800'
