@@ -187,7 +187,6 @@ const index = () => {
                 <OurProcess />
                 <Resources pageType='bathlifts'/>
           </div>
-          <FooterCollections />
         </div>
     )
 }

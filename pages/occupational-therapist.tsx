@@ -10,7 +10,7 @@ import heroImage from '../public/occupational-therapist/sam-shann-hero.png'
 import samShann1 from '../public/occupational-therapist/sam-shann-3.png'
 import samShann2 from '../public/occupational-therapist/sam-shann-4.png'
 import samShannCircle from '../public/occupational-therapist/sam-shann-circle-2.png'
-import samShannVideo from '../public/occupational-therapist/sam-shann-video.png'
+import samShannVideo from '../public/occupational-therapist/sam-shann-video.jpg'
 import samShannVideoMobile from '../public/occupational-therapist/sam-shann-video-mobile.png'
 import Resources from '../components/sections/resources/Resources';
 

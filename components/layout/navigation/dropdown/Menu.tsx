@@ -68,8 +68,8 @@ const menuConfig = [
       menuName: 'Rise and Recline Chairs',
       options: [
               { title: "The Oak", desc: "A Touch of Elegance", icon : "/images/products/chairs/oak/oak-cutout-leg-lift.png", url: '/chairs/the-oak' },
-              { title: "The Maple", desc:"Stylish and Modern", icon : "/images/products/chairs/maple/maple-cutout.png", url: '/chairs/the-maple' },
               { title: "The Cedar", desc:"Distinguished and Charming", icon : "/images/products/chairs/cedar/cedar-cutout.png", url: '/chairs/the-cedar' },
+              { title: "The Maple", desc:"Stylish and Modern", icon : "/images/products/chairs/maple/maple-cutout.png", url: '/chairs/the-maple' },
               { title: "The Rowan", desc:"Sleek and Sumptous", icon : "/images/products/chairs/rowan/rowan-cutout.png", url: '/chairs/the-rowan' },
               { title: "The Tulip", desc:"Truly Superior Comfort", icon : "/images/products/chairs/tulip/tulip-cutout.png", url: '/chairs/the-tulip' },
               { title: "All Chairs", desc:"View our whole collection of chairs", icon : "all", url: '/chairs' },
@@ -89,12 +89,13 @@ const menuConfig = [
     menu1: {
       menuName: 'Adjustable Beds',
       options: [
+          { title: "The Lilac", desc:"Innovation and stylish", icon : "/images/products/beds/lilac/lilac-product.jpeg", url: '/adjustable-beds/the-lilac' },
+          { title: "The Birch", desc:"Modern Technology and British Style", icon : "/images/products/beds/birch/birch-product.jpeg", url: '/adjustable-beds/the-birch' },
+          
               { title: "The Poplar", desc:"Innovative Comfort and Great Design", icon : "/images/products/beds/poplar/poplar-product.jpeg", url: '/adjustable-beds/the-poplar' },
-              { title: "The Lilac", desc:"Innovation and stylish", icon : "/images/products/beds/lilac/lilac-product.jpeg", url: '/adjustable-beds/the-lilac' },
-              { title: "The Hazel", desc:"An Elegant and Refined Bed", icon : "/images/products/beds/hazel/hazel-product.jpeg", url: '/adjustable-beds/the-hazel' },
-              { title: "The Hesper", desc:"Eye Catching With Style", icon : "/images/products/beds/hesper/hesper-product.jpeg", url: '/adjustable-beds/the-hesper' },
               { title: "The Oysterwood", desc:"A Versatile Bed With Plenty of Style", icon : "/images/products/beds/oysterwood/oysterwood-product.jpeg", url: '/adjustable-beds/the-oysterwood' },
-              { title: "The Birch", desc:"Modern Technology and British Style", icon : "/images/products/beds/birch/birch-product.jpeg", url: '/adjustable-beds/the-birch' },
+              { title: "The Hesper", desc:"Eye Catching With Style", icon : "/images/products/beds/hesper/hesper-product.jpeg", url: '/adjustable-beds/the-hesper' },
+              { title: "The Hazel", desc:"An Elegant and Refined Bed", icon : "/images/products/beds/hazel/hazel-product.jpeg", url: '/adjustable-beds/the-hazel' },
               { title: "All Beds", desc:"View our whole collection of beds", icon : "all", url: '/adjustable-beds' },
             ],
     },
