@@ -7024,7 +7024,7 @@ body.mobile-navbar .mobile-navigation {
 
 .product-collections .health-benefits ul li p {
   font-size: 1.9rem;
-  color: #7F7F7F;
+  color: #53565F;
 }
 
 .our-process {
@@ -7337,7 +7337,7 @@ body.mobile-navbar .mobile-navigation {
 .product-testimonial .inner-wrapper .customer-details .location {
   font-size: 1.8rem;
   font-weight: 500;
-  color: #0086C5;
+  color: #009B72;
   margin-top: 0px;
 }
 
@@ -10679,6 +10679,542 @@ body.mobile-navbar .mobile-navigation {
   font-weight: 400;
   color: #7F7F7F;
   margin-top: 2px;
+}
+
+.bath-lift-container .heading {
+  font-size: 3.6rem;
+  text-align: left;
+  padding: 0;
+}
+
+@media (min-width: 500px) {
+  .bath-lift-container .heading {
+    text-align: center;
+  }
+}
+
+@media (min-width: 750px) {
+  .bath-lift-container .heading {
+    font-size: 4rem;
+  }
+}
+
+.bath-lift-container .subheading {
+  font-size: 1.7rem;
+  font-weight: 400;
+  color: #53565F;
+  max-width: 910px;
+  line-height: 1.4;
+  margin: 0 auto;
+  margin-top: 5px;
+  text-align: left;
+}
+
+@media (min-width: 500px) {
+  .bath-lift-container .subheading {
+    text-align: center;
+  }
+}
+
+@media (min-width: 750px) {
+  .bath-lift-container .subheading {
+    font-size: 1.9rem;
+  }
+}
+
+.bath-lift-container .images-and-content {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 30px;
+  position: relative;
+}
+
+@media (min-width: 850px) {
+  .bath-lift-container .images-and-content {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-top: 50px;
+  }
+}
+
+.bath-lift-container .images-and-content .image-grid {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+@media (min-width: 850px) {
+  .bath-lift-container .images-and-content .image-grid {
+    width: 60%;
+    gap: 20px;
+  }
+}
+
+.bath-lift-container .images-and-content .image-grid .video-wrapper {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 3;
+  width: 100%;
+  position: relative;
+  cursor: pointer;
+}
+
+.bath-lift-container .images-and-content .image-grid .video-wrapper .play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: 0.3s ease-in;
+  transition: 0.3s ease-in;
+  cursor: pointer;
+}
+
+.bath-lift-container .images-and-content .image-grid .video-wrapper .play-btn .icon {
+  width: 65%;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+.bath-lift-container .images-and-content .image-grid .video-wrapper:hover .play-btn {
+  -webkit-transform: translate(-50%, -50%) scale(1.1);
+          transform: translate(-50%, -50%) scale(1.1);
+}
+
+.bath-lift-container .images-and-content .image-grid .image-wrapper {
+  width: 100%;
+}
+
+.bath-lift-container .images-and-content .image-grid .image-wrapper:last-of-type {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.bath-lift-container .images-and-content .content {
+  width: 100%;
+  padding-top: 50px;
+}
+
+@media (min-width: 850px) {
+  .bath-lift-container .images-and-content .content {
+    width: 40%;
+    padding-top: 0;
+    padding-left: 30px;
+  }
+}
+
+.bath-lift-container .images-and-content .content .inner-wrapper {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 20px;
+}
+
+.bath-lift-container .images-and-content .content h3 {
+  font-size: 3.2rem;
+  font-weight: 600;
+  font-family: "Euclid Circular A", "Helvetica", sans-serif;
+  color: #17494D;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 850px) {
+  .bath-lift-container .images-and-content .content h3 br {
+    display: none;
+  }
+}
+
+.bath-lift-container .images-and-content .content p {
+  font-size: 1.9rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #53565F;
+}
+
+.bath-lift-container .images-and-content .content ul {
+  margin-top: 25px;
+}
+
+.bath-lift-container .images-and-content .content ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px 0;
+}
+
+.bath-lift-container .images-and-content .content ul li .icon {
+  width: 20px;
+  margin-right: 10px;
+}
+
+.bath-lift-container .images-and-content .content ul li p {
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #53565F;
+  line-height: 1.2;
+}
+
+.bath-lift-container .features {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0;
+  margin-top: 30px;
+  padding-bottom: 50px;
+}
+
+.bath-lift-container .features .feature {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 25px;
+}
+
+@media (min-width: 550px) {
+  .bath-lift-container .features .feature {
+    margin-bottom: 50px;
+  }
+}
+
+@media (min-width: 850px) {
+  .bath-lift-container .features .feature {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    margin-bottom: 50px;
+  }
+  .bath-lift-container .features .feature:nth-of-type(2) {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+}
+
+.bath-lift-container .features .feature:last-of-type {
+  margin-bottom: 0;
+}
+
+.bath-lift-container .features .image-wrapper {
+  width: 100%;
+  max-width: 600px;
+}
+
+@media (min-width: 850px) {
+  .bath-lift-container .features .image-wrapper {
+    width: 50%;
+  }
+}
+
+.bath-lift-container .features .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  max-width: 600px;
+  padding-top: 25px;
+}
+
+@media (min-width: 850px) and (max-width: 1049px) {
+  .bath-lift-container .features .content {
+    width: 50%;
+    padding: 0 30px;
+  }
+}
+
+@media (min-width: 1050px) {
+  .bath-lift-container .features .content {
+    width: 50%;
+    padding: 0 50px;
+  }
+}
+
+.bath-lift-container .features .content h3 {
+  font-size: 3rem;
+  font-weight: 600;
+  font-family: "Euclid Circular A", "Helvetica", sans-serif;
+  color: #17494D;
+  margin-bottom: 5px;
+}
+
+@media (min-width: 500px) and (max-width: 850px) {
+  .bath-lift-container .features .content h3 {
+    font-size: 3.3rem;
+  }
+}
+
+@media (min-width: 950px) {
+  .bath-lift-container .features .content h3 {
+    font-size: 3.6rem;
+    margin-bottom: 15px;
+  }
+}
+
+.bath-lift-container .features .content p {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: #53565F;
+  line-height: 1.6;
+}
+
+@media (min-width: 500px) and (max-width: 850px) {
+  .bath-lift-container .features .content p {
+    font-size: 1.8em;
+    line-height: 1.7;
+  }
+}
+
+@media (min-width: 950px) {
+  .bath-lift-container .features .content p {
+    font-size: 1.8rem;
+    line-height: 1.7;
+  }
+}
+
+.bath-lift-container .how-it-works .step-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[1];
+      grid-template-columns: repeat(1, 1fr);
+  gap: 20px;
+  margin-top: 25px;
+}
+
+@media (min-width: 750px) {
+  .bath-lift-container .how-it-works .step-grid {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.bath-lift-container .how-it-works .step-grid .step {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.bath-lift-container .how-it-works .step-grid .step .image-wrapper {
+  border: 5px #17494D solid;
+  width: 100%;
+  position: relative;
+}
+
+.bath-lift-container .how-it-works .step-grid .step .image-wrapper .number {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: #E0AD16;
+  background-color: #FFF3CE;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: none;
+}
+
+.bath-lift-container .how-it-works .step-grid .step .content {
+  padding: 15px 0;
+  padding-bottom: 25px;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  border-radius: 0 0 4px 4px;
+}
+
+@media (min-width: 550px) {
+  .bath-lift-container .how-it-works .step-grid .step .content {
+    background-color: #EDF9FA;
+    padding: 15px 25px;
+    padding-bottom: 35px;
+  }
+}
+
+.bath-lift-container .how-it-works .step-grid .step .step-title {
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: #17494D;
+  padding: 15px 0;
+  padding-bottom: 8px;
+  text-align: left;
+}
+
+@media (min-width: 1000px) {
+  .bath-lift-container .how-it-works .step-grid .step .step-title {
+    text-align: center;
+  }
+}
+
+.bath-lift-container .how-it-works .step-grid .step .number {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  font-size: 3rem;
+  font-weight: 600;
+  color: #E0AD16;
+  background-color: #FFF3CE;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 15px;
+}
+
+@media (min-width: 1000px) {
+  .bath-lift-container .how-it-works .step-grid .step .number {
+    margin: 0 auto;
+    margin-top: 15px;
+  }
+}
+
+.bath-lift-container .how-it-works .step-grid .step p {
+  font-size: 1.7rem;
+  font-weight: 400;
+  line-height: 1.4;
+  color: #53565F;
+  padding: 15px 0;
+  padding-top: 0px;
+  text-align: left;
+}
+
+@media (min-width: 1000px) {
+  .bath-lift-container .how-it-works .step-grid .step p {
+    text-align: center;
+  }
+}
+
+.full-width-blue {
+  width: 100%;
+  background-color: #F6F8FF;
+  margin: 50px auto;
+  margin-bottom: 50px;
+}
+
+.full-width-blue .health-benefits {
+  padding: 50px 25px;
+}
+
+.full-width-blue .health-benefits h5 {
+  font-size: 3.4rem;
+  color: #17494D;
+}
+
+@media (min-width: 500px) {
+  .full-width-blue .health-benefits h5 {
+    text-align: center;
+  }
+}
+
+.full-width-blue .health-benefits .subheading {
+  font-size: 2.2rem;
+  color: #60898D;
+  margin-top: 5px;
+  text-align: left;
+}
+
+@media (min-width: 500px) {
+  .full-width-blue .health-benefits .subheading {
+    text-align: center;
+  }
+}
+
+.full-width-blue .health-benefits ul {
+  display: -ms-grid;
+  display: grid;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  gap: 0 30px;
+  margin-right: auto;
+  margin-top: 25px;
+  -ms-grid-columns: (1fr)[1];
+      grid-template-columns: repeat(1, 1fr);
+}
+
+@media (min-width: 500px) and (max-width: 769px) {
+  .full-width-blue .health-benefits ul {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    margin: 0 auto;
+    margin-top: 25px;
+  }
+}
+
+@media (min-width: 770px) {
+  .full-width-blue .health-benefits ul {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    margin: 0 auto;
+    margin-top: 25px;
+  }
 }
 
 .orphan-brochure-wrapper {

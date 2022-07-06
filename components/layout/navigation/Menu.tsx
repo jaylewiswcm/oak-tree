@@ -14,7 +14,6 @@ export const Menu = () => {
             {menuConfig.map((item, index) => <MenuItem item={item} setMenuType={setMenuType} menuType={menuType} key={index} setHover={setHover} isHover={isHover} setVisible={setVisible}/> )}
             <DropDown type={menuType} keyId={isHover} toggleVisibility={setVisible} isVisible={isVisible} setVisible={setVisible} setHover={setHover}/>
         </ul>
-       
     </nav>
   )
 }
@@ -53,7 +52,7 @@ const menuConfig = [
         id: 5,
         menuName: 'Bath Lifts',
         menuType:'bath-lifts',
-        expand: true,
+        expand: false,
         url: '/bath-lifts'
     },
     {

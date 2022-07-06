@@ -58,11 +58,13 @@ const MobileNavigation = ({isOpen, toggleMobileMenu} : ComponentProps) => {
             {link: '/adjustable-beds/the-oysterwood', text: 'The Oysterwood' },
          ,
         ]},
-        { subMenuHeader: 'Bath Lifts', submenu: [
-            {link: '/bath-lifts', text: 'Oak Tree Bath Lifts' },
-            {link: '/bath-lifts/the-riviera-plus', text: 'The Riviera Plus' },  
-        ]},
+
       ];
+
+    //   { subMenuHeader: 'Bath Lifts', submenu: [
+    //     {link: '/bath-lifts', text: 'Oak Tree Bath Lifts' },
+    //     {link: '/bath-lifts/the-riviera-plus', text: 'The Riviera Plus' },  
+    // ]},
     
     
   return (
@@ -104,6 +106,7 @@ const MobileNavigation = ({isOpen, toggleMobileMenu} : ComponentProps) => {
                         </ul>
                  </li>
             )}
+            <li><Link href='/bath-lifts'><a onClick={() => toggleMobileMenu()}>Bath Lifts</a></Link></li>
             <li><Link href='/express-delivery'><a onClick={() => toggleMobileMenu()}>Express</a></Link></li>
         </ul>
 

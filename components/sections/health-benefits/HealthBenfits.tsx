@@ -1,157 +1,113 @@
 import React from 'react'
 import Image from 'next/image';
 
-export const HealthBenfits = () => {
+interface ComponentProps { 
+  product : string
+}
+
+export const HealthBenfits = ({product}: ComponentProps) => {
   return (
     <div className='health-benefits'>
     <h5>Improve Your Quality Of Life</h5>
-    <p className='subheading'>Oak Tree Chairs are beneficial if you suffer from:</p>
+    <p className='subheading'>Oak Tree {product} are beneficial if you suffer from:</p>
     <ul>
-      <li>
-        <div className="icon">
-          <Image 
-            src='/vectors/yellow-tick.svg'
-            alt='Tick'
-            layout='responsive'
-            width='30'
-            height='30'
-          />
-        </div>
-        <p>Arthritis</p>
-      </li>
-      <li>
-        <div className="icon">
-          <Image 
-            src='/vectors/yellow-tick.svg'
-            alt='Tick'
-            layout='responsive'
-            width='30'
-            height='30'
-          />
-        </div>
-        <p>Back problems</p>
-      </li>
-      <li>
-        <div className="icon">
-          <Image 
-            src='/vectors/yellow-tick.svg'
-            alt='Tick'
-            layout='responsive'
-            width='30'
-            height='30'
-          />
-        </div>
-        <p>Circulatory issues</p>
-      </li>
-      <li>
-        <div className="icon">
-          <Image 
-            src='/vectors/yellow-tick.svg'
-            alt='Tick'
-            layout='responsive'
-            width='30'
-            height='30'
-          />
-        </div>
-        <p>COPD</p>
-      </li>
-      <li>
-        <div className="icon">
-          <Image 
-            src='/vectors/yellow-tick.svg'
-            alt='Tick'
-            layout='responsive'
-            width='30'
-            height='30'
-          />
-        </div>
-        <p>Heart disease</p>
-      </li>
-      <li>
-        <div className="icon">
-          <Image 
-            src='/vectors/yellow-tick.svg'
-            alt='Tick'
-            layout='responsive'
-            width='30'
-            height='30'
-          />
-        </div>
-        <p>Hip replacement</p>
-      </li>
-      <li>
-        <div className="icon">
-          <Image 
-            src='/vectors/yellow-tick.svg'
-            alt='Tick'
-            layout='responsive'
-            width='30'
-            height='30'
-          />
-        </div>
-        <p>Knee replacement</p>
-      </li>
-      <li>
-        <div className="icon">
-          <Image 
-            src='/vectors/yellow-tick.svg'
-            alt='Tick'
-            layout='responsive'
-            width='30'
-            height='30'
-          />
-        </div>
-        <p>Multiple Sclerosis</p>
-      </li>
-      <li>
-        <div className="icon">
-          <Image 
-            src='/vectors/yellow-tick.svg'
-            alt='Tick'
-            layout='responsive'
-            width='30'
-            height='30'
-          />
-        </div>
-        <p>Oedema</p>
-      </li>
-      <li>
-        <div className="icon">
-          <Image 
-            src='/vectors/yellow-tick.svg'
-            alt='Tick'
-            layout='responsive'
-            width='30'
-            height='30'
-          />
-        </div>
-        <p>Osteoporosis</p>
-      </li>
-      <li>
-        <div className="icon">
-          <Image 
-            src='/vectors/yellow-tick.svg'
-            alt='Tick'
-            layout='responsive'
-            width='30'
-            height='30'
-          />
-        </div>
-        <p>Parkinson’s Disease</p>
-      </li>
-      <li>
-        <div className="icon">
-          <Image 
-            src='/vectors/yellow-tick.svg'
-            alt='Tick'
-            layout='responsive'
-            width='30'
-            height='30'
-          />
-        </div>
-        <p>Stroke</p>
-      </li>
+      { product === 'Bath Lifts' ? bathLiftBenefits.map((usp:any,index:number) => 
+           <li key={index}>
+            <div className="icon">
+              <Image 
+                src='/vectors/yellow-tick.svg'
+                alt='Tick'
+                layout='responsive'
+                width='30'
+                height='30'
+              />
+            </div>
+            <p>{usp.name}</p>
+         </li>
+      ) :
+      benefits.map((usp:any,index:number) => 
+           <li key={index}>
+            <div className="icon">
+              <Image 
+                src='/vectors/yellow-tick.svg'
+                alt='Tick'
+                layout='responsive'
+                width='30'
+                height='30'
+              />
+            </div>
+            <p>{usp.name}</p>
+         </li>
+      )}
     </ul>
   </div>
   )
 }
+
+const bathLiftBenefits = [
+  {
+    "name": "Back problems"
+  },
+  {
+    "name": "Circulatory issues"
+  },
+  {
+    "name": "Hip replacement"
+  },
+  {
+    "name": "Multiple Sclerosis"
+  },
+  {
+    "name": "Oedema"
+  },
+  {
+    "name": "Sciatica"
+  },
+  {
+    "name": "Knee replacement"
+  },
+  {
+    "name": "Stroke"
+  },
+  {
+    "name": "Joint pain"
+  },
+]
+const benefits = [
+  {
+    "name": "Arthritis"
+  },
+  {
+    "name": "Back problems"
+  },
+  {
+    "name": "Circulatory issues"
+  },
+  {
+    "name": "COPD"
+  },
+  {
+    "name": "Heart disease"
+  },
+  {
+    "name": "Hip replacement"
+  },
+  {
+    "name": "Knee replacement"
+  },
+  {
+    "name": "Multiple Sclerosis"
+  },
+  {
+    "name": "Oedema"
+  },
+  {
+    "name": "Osteoporosis"
+  },
+  {
+    "name": "Parkinson’s Disease"
+  },
+  {
+    "name": "Stroke"
+  }
+]

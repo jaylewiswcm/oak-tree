@@ -58,7 +58,7 @@ const Index = (props:any) => {
               <p className='sub-heading'>Our Chairs are fully customisable and made-to-fit your measurements - we have curated a collection of chairs that embed different styles suited for different living environments</p>
                 <CollectionGrid products={products}/>
                 <OfferBanners orphan={false}/>
-                <HealthBenfits />
+                <HealthBenfits product='Chairs'/>
                 <Reviews orphan={false}/>
                 <Resources pageType='chairs' />
           </div>
