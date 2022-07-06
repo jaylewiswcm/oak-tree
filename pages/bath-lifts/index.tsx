@@ -486,7 +486,7 @@ const index = () => {
                               </div>
                               <div className='content'>
                               <div className="number">4.</div>
-                              <p className='step-title'>Raise Yourself Out of the Bath</p>
+                              <p className='step-title'>Raise yourself out of the bath</p>
                               <p>After you’ve finished bathing, simply press the up button and be safely returned to the top of your bath.</p>
                             </div>
                             </div>
