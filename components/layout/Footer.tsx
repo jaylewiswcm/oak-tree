@@ -177,7 +177,6 @@ const menuConfig = [
         {link: '/price-guide-bed', text: 'Price Guide Beds' },
     ]},
     { menuHeader: 'Bath Lifts', menu: [
-        {link: '/bath-lifts', text: 'Oak Tree Bath Lifts' },
-        {link: '/bath-lifts/the-riviera-plus', text: 'The Riviera Plus' },
+        {link: '/bath-lifts', text: 'Oak Tree Bath Lift' },
     ]},
   ];

@@ -288,7 +288,7 @@ const index = () => {
               </div>  
               <div className='bath-lift-container con-reg'> 
                 <h2 className='heading'>Enjoy a Bath Like You Used To</h2>
-                <p className='subheading'>Do you miss relaxing in a nice warm bath? An Oak Tree electric powered bath lift gently lowers you in and out of the bath, helping you enjoy a relaxing and therapeutic soak again. Say goodbye to fussy plastic seats, expensive renovations or baths with doors… With the Riviera, you’ll enjoy bathing just like you used to.</p>
+                <p className='sub-heading'>Do you miss relaxing in a nice warm bath? An Oak Tree electric powered bath lift gently lowers you in and out of the bath, helping you enjoy a relaxing and therapeutic soak again. Say goodbye to fussy plastic seats, expensive renovations or baths with doors… With the Riviera, you’ll enjoy bathing just like you used to.</p>
                 <div className='images-and-content'>
                   <div className='image-grid'>
                     <div className='video-wrapper'>

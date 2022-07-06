@@ -4799,7 +4799,7 @@ body.mobile-navbar .mobile-navigation {
   font-size: 1.8rem;
   font-weight: 400;
   font-family: "Euclid Circular A", "Helvetica", sans-serif;
-  color: #60898D;
+  color: #E0AD16;
   display: none;
 }
 
@@ -5682,7 +5682,7 @@ body.mobile-navbar .mobile-navigation {
   color: #17494D;
   text-align: center;
   line-height: 1.3;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .occupational-therapist-wrapper .health-benefits h5 br {
@@ -5697,6 +5697,7 @@ body.mobile-navbar .mobile-navigation {
 
 .occupational-therapist-wrapper .health-benefits .benefits-grid {
   margin: 80px auto;
+  margin-top: 50px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[1];
@@ -5734,6 +5735,7 @@ body.mobile-navbar .mobile-navigation {
 @media (min-width: 1050px) {
   .occupational-therapist-wrapper .health-benefits .benefits-grid {
     margin: 60px auto;
+    margin-top: 40px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -5859,7 +5861,7 @@ body.mobile-navbar .mobile-navigation {
   -ms-grid-columns: (1fr)[1];
       grid-template-columns: repeat(1, 1fr);
   gap: 30px;
-  margin-top: 50px;
+  margin-top: 30px;
   margin-bottom: 50px;
 }
 
@@ -6164,7 +6166,7 @@ body.mobile-navbar .mobile-navigation {
 
 @media (min-width: 1000px) {
   .product-collections .heading {
-    font-size: 4.6rem;
+    font-size: 4.4rem;
     margin-bottom: 0px;
   }
 }
@@ -6176,7 +6178,7 @@ body.mobile-navbar .mobile-navigation {
   margin-top: 5px;
   margin-bottom: 5px;
   text-align: center;
-  color: #09595E;
+  color: #53565F;
   margin-bottom: 35px;
   max-width: 950px;
   padding: 0 15px;
@@ -6184,7 +6186,7 @@ body.mobile-navbar .mobile-navigation {
 
 @media (min-width: 1000px) {
   .product-collections .sub-heading {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
 }
 
@@ -10683,42 +10685,35 @@ body.mobile-navbar .mobile-navigation {
 
 .bath-lift-container .heading {
   font-size: 3.6rem;
-  text-align: left;
-  padding: 0;
+  text-align: center;
+  margin-bottom: 5px;
+  color: #17494D;
+  padding: 0 15px;
 }
 
-@media (min-width: 500px) {
+@media (min-width: 1000px) {
   .bath-lift-container .heading {
-    text-align: center;
+    font-size: 4.4rem;
+    margin-bottom: 0px;
   }
 }
 
-@media (min-width: 750px) {
-  .bath-lift-container .heading {
-    font-size: 4rem;
-  }
-}
-
-.bath-lift-container .subheading {
-  font-size: 1.7rem;
+.bath-lift-container .sub-heading {
+  font-size: 1.8rem;
   font-weight: 400;
-  color: #53565F;
-  max-width: 910px;
-  line-height: 1.4;
   margin: 0 auto;
   margin-top: 5px;
-  text-align: left;
+  margin-bottom: 5px;
+  text-align: center;
+  color: #53565F;
+  margin-bottom: 35px;
+  max-width: 950px;
+  padding: 0 15px;
 }
 
-@media (min-width: 500px) {
-  .bath-lift-container .subheading {
-    text-align: center;
-  }
-}
-
-@media (min-width: 750px) {
-  .bath-lift-container .subheading {
-    font-size: 1.9rem;
+@media (min-width: 1000px) {
+  .bath-lift-container .sub-heading {
+    font-size: 2rem;
   }
 }
 
@@ -11087,7 +11082,7 @@ body.mobile-navbar .mobile-navigation {
 
 @media (min-width: 550px) {
   .bath-lift-container .how-it-works .step-grid .step .content {
-    background-color: #EDF9FA;
+    background-color: #F8F8F8;
     padding: 15px 25px;
     padding-bottom: 35px;
   }
@@ -16211,7 +16206,7 @@ body.mobile-navbar .mobile-navigation {
 }
 
 .testimonials .swiper {
-  padding-top: 35px;
+  padding-top: 30px;
   margin-top: 0px;
 }
 
