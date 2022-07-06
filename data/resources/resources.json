@@ -62,14 +62,7 @@
 
         "type" : "bathlifts",
         "resources" : [  
-    {
-        "heading" : "The Oak Tree Vision",
-        "subheading" : "Your Comfort is our strength",
-        "contentSrc": "",
-        "placeholder": "/images/resources/oak-tree-vision-bath-lift.png",
-        "video": false,
-        "url": "/about"
-    },
+  
     {
         "heading" : "How We Make Your Bath lift",
         "subheading" : "British Made",
@@ -77,6 +70,14 @@
         "placeholder": "/images/resources/british-made-bath-lift.png",
         "video": true,
         "url" : ""
+    },
+    {
+        "heading" : "VAT Exemption Eligibilty",
+        "subheading" : "Are you eligible?",
+        "contentSrc": "",
+        "placeholder": "/images/resources/vat-exempt.png",
+        "video": false,
+        "url" : "/vat-exempt-eligibility"
     },
     {
         "heading" : "Frequently Asked Questions",
