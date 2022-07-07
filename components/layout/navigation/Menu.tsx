@@ -39,7 +39,7 @@ const menuConfig = [
         menuName: 'Chairs',
         menuType:'chairs',
         expand: true,
-        url: '/chairs'
+        url: '/rise-and-recline-chairs'
     },
     {
         id: 4,

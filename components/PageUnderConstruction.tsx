@@ -13,7 +13,7 @@ export const PageUnderConstruction = ({pageTitle}:ComponentProps) => {
         <ul>
             <li><Link href="/"><a>Home</a></Link></li>
             <li><Link href="/request-our-chair-brochure"><a>Request a Brochure</a></Link></li>
-            <li><Link href="/chairs"><a>Chair Collection</a></Link></li>
+            <li><Link href="/rise-and-recline-chairs"><a>Chair Collection</a></Link></li>
         </ul>
     </div>
   )

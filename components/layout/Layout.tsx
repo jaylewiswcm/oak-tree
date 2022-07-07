@@ -30,7 +30,7 @@ interface ComponentProps  {
       const handleScroll = () => {
         const position = window.pageYOffset;
         
-        if(router.pathname.includes('/chairs/') || router.pathname.includes('/beds/')) {
+        if(router.pathname.includes('/rise-and-recline-chairs/') || router.pathname.includes('/beds/')) {
           setHideClass("hide-bar") 
         } else {
             if(position < 500) {

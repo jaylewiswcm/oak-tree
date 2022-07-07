@@ -63,7 +63,7 @@ const HomeCollections = () => {
  >
   
 <motion.div variants={fadeInUp} className='col-link-wrapper'>
-    <Link href='/chairs'>
+    <Link href='/rise-and-recline-chairs'>
             <a className='collection-item'> 
               <div className='image-wrapper'>
                 <Image 

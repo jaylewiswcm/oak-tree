@@ -46,6 +46,10 @@ const Index = (props:any) => {
                     />
                 </div>
                 <div className='hero-inner con-reg'>
+                <div className='intro-box'>
+                      <p>Oak Tree</p>
+                      <h1>Adjustable Beds</h1>
+                </div>
                 <button className='mobile-cta main-cta' onClick={() => setFormModal(true)}>
                   <p>Request a Free Brochure</p>
                 </button>

@@ -99,7 +99,7 @@ const BritishMade = () => {
                 <div className='con-reg'>
                     <h4>Do you love British Manufacturing?</h4>
                     <p>If you are like us and think British products and manufacturing are worth celebrating, we would love to show you our incredible chairs and settees.</p>
-                    <Link href='/chairs'><a>View our chair collections</a></Link>
+                    <Link href='/rise-and-recline-chairs'><a>View our chair collections</a></Link>
                 </div>
             </div>
             <Resources pageType='british-made'/>

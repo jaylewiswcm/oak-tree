@@ -3826,7 +3826,7 @@ body.mobile-navbar .mobile-navigation {
 .dd-menu .menu-inner .menus .menu-title {
   font-size: 1.6rem;
   font-weight: 500;
-  color: #60898D;
+  color: #188087;
   letter-spacing: 0.2px;
   padding: 0 15px;
   margin-bottom: 5px;
@@ -3878,7 +3878,7 @@ body.mobile-navbar .mobile-navigation {
 .dd-menu .menu-inner .menus ul li a .link-content .link-desc {
   font-size: 1.6rem;
   font-weight: 300;
-  color: #60898D;
+  color: #188087;
   white-space: nowrap;
   margin-top: 3px;
 }
@@ -6151,6 +6151,50 @@ body.mobile-navbar .mobile-navigation {
   letter-spacing: 0;
 }
 
+.col-hero .hero-inner .intro-box {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 40px 60px;
+  z-index: 5;
+}
+
+@media (min-width: 900px) {
+  .col-hero .hero-inner .intro-box {
+    left: 0;
+    -webkit-transform: none;
+            transform: none;
+  }
+}
+
+.col-hero .hero-inner .intro-box h1 {
+  font-size: 4.5rem;
+  color: #17494D;
+  line-height: 1.1;
+}
+
+@media (min-width: 900px) {
+  .col-hero .hero-inner .intro-box h1 {
+    font-size: 5.5rem;
+  }
+}
+
+.col-hero .hero-inner .intro-box p {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #188087;
+  margin-bottom: 5px;
+}
+
+@media (min-width: 900px) {
+  .col-hero .hero-inner .intro-box p {
+    font-size: 2.2rem;
+  }
+}
+
 .product-collections .col-hero .hero-image {
   position: relative;
   height: 100%;
@@ -6683,6 +6727,7 @@ body.mobile-navbar .mobile-navigation {
 .product-collections .collections-grid .collection-item:hover {
   -webkit-box-shadow: 0 0 21px rgba(0, 0, 0, 0.1);
           box-shadow: 0 0 21px rgba(0, 0, 0, 0.1);
+  border: 1px #188087 solid;
 }
 
 .product-collections .collections-grid .collection-item:hover .desc-list li .icon-colour {
@@ -6958,7 +7003,7 @@ body.mobile-navbar .mobile-navigation {
 
 .product-collections .health-benefits .subheading {
   font-size: 2.2rem;
-  color: #60898D;
+  color: #188087;
   margin-top: 5px;
 }
 
@@ -7339,7 +7384,7 @@ body.mobile-navbar .mobile-navigation {
 .product-testimonial .inner-wrapper .customer-details .location {
   font-size: 1.8rem;
   font-weight: 500;
-  color: #009B72;
+  color: #188087;
   margin-top: 0px;
 }
 
@@ -7367,7 +7412,7 @@ body.mobile-navbar .mobile-navigation {
 .product-testimonial .inner-wrapper .customer-details a {
   margin-top: 30px;
   font-size: 1.8rem;
-  color: #009B72;
+  color: #188087;
   text-decoration: underline;
   text-underline-offset: 3px;
   text-decoration-thickness: 2px;
@@ -7397,6 +7442,7 @@ body.mobile-navbar .mobile-navigation {
   width: calc(100% - 30px);
   margin: 0 auto;
   height: calc(100vh - 334px);
+  max-height: 350px;
   position: relative;
 }
 
@@ -7898,7 +7944,7 @@ body.mobile-navbar .mobile-navigation {
 .product-details .product-info .info-container .top p {
   font-size: 2rem;
   font-weight: 400;
-  color: #60898D;
+  color: #188087;
 }
 
 .product-details .product-info .info-container .british-made-icon {
@@ -11034,7 +11080,6 @@ body.mobile-navbar .mobile-navigation {
 }
 
 .bath-lift-container .how-it-works .step-grid .step .image-wrapper {
-  border: 5px #17494D solid;
   width: 100%;
   position: relative;
 }
@@ -11059,7 +11104,6 @@ body.mobile-navbar .mobile-navigation {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  display: none;
 }
 
 .bath-lift-container .how-it-works .step-grid .step .content {
@@ -11082,18 +11126,18 @@ body.mobile-navbar .mobile-navigation {
 
 @media (min-width: 550px) {
   .bath-lift-container .how-it-works .step-grid .step .content {
-    background-color: #F8F8F8;
-    padding: 15px 25px;
+    padding: 15px 0;
     padding-bottom: 35px;
   }
 }
 
 .bath-lift-container .how-it-works .step-grid .step .step-title {
-  font-size: 2.8rem;
+  font-size: 3rem;
   font-weight: 600;
   color: #17494D;
   padding: 15px 0;
   padding-bottom: 8px;
+  margin-bottom: 10px;
   text-align: left;
 }
 
@@ -11120,6 +11164,7 @@ body.mobile-navbar .mobile-navigation {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  display: none;
   margin-top: 15px;
 }
 
@@ -11170,7 +11215,7 @@ body.mobile-navbar .mobile-navigation {
 
 .full-width-blue .health-benefits .subheading {
   font-size: 2.2rem;
-  color: #60898D;
+  color: #188087;
   margin-top: 5px;
   text-align: left;
 }

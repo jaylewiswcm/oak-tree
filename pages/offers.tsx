@@ -30,7 +30,7 @@ const Offers = () => {
                     <div className='content'>
                         <h2><span className='red-2'>Half Price</span> Sale On Chairs</h2>
                         <p>Here at Oak Tree Mobility, we are all about bringing you an amazing value. Our Half Price Sale offer is so good you’ll hardly believe it: If you buy a chair or settee, we will give you any second item half price!</p>
-                        <Link href='/chairs'><a>View Chair Collections</a></Link>
+                        <Link href='/rise-and-recline-chairs'><a>View Chair Collections</a></Link>
                     </div>
                 </div>
                 <div className='offer'>
@@ -47,7 +47,7 @@ const Offers = () => {
                     <div className='content'>
                         <h2><span className='red-2'>Half Price</span> Sale On Beds</h2>
                         <p>Here at Oak Tree Mobility, we are all about bringing you an amazing value. Our Half Price Sale offer is so good you’ll hardly believe it: If you buy a bed, we will give you any second item half price!</p>
-                        <Link href='/chairs'><a>View Bed Collections</a></Link>
+                        <Link href='/rise-and-recline-chairs'><a>View Bed Collections</a></Link>
                     </div>
                 </div>
             </div>

@@ -95,7 +95,7 @@ export const QuoteCarousel = () => {
        
         <div className='quote-text'>
         <p className='quote-p'>Too much standing or sitting can lead to poor circulation. A high Leg Lift raises the ankles above the level of your heart which helps the blood back to the heart, meaning your heart is not having to work as hard</p>
-        <p className='quote-author'><span className='line'></span>Samantha Shann on our <Link href='/chairs'><a>chairs</a></Link></p>
+        <p className='quote-author'><span className='line'></span>Samantha Shann on our <Link href='/rise-and-recline-chairs'><a>chairs</a></Link></p>
         </div>
         </SwiperSlide>
         <SwiperSlide className='quote'>

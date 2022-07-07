@@ -67,12 +67,12 @@ const menuConfig = [
     menu1: {
       menuName: 'Rise and Recline Chairs',
       options: [
-              { title: "The Oak", desc: "A Touch of Elegance", icon : "/images/products/chairs/oak/oak-cutout-leg-lift.png", url: '/chairs/the-oak' },
-              { title: "The Cedar", desc:"Distinguished and Charming", icon : "/images/products/chairs/cedar/cedar-cutout.png", url: '/chairs/the-cedar' },
-              { title: "The Maple", desc:"Stylish and Modern", icon : "/images/products/chairs/maple/maple-cutout.png", url: '/chairs/the-maple' },
-              { title: "The Rowan", desc:"Sleek and Sumptous", icon : "/images/products/chairs/rowan/rowan-cutout.png", url: '/chairs/the-rowan' },
-              { title: "The Tulip", desc:"Truly Superior Comfort", icon : "/images/products/chairs/tulip/tulip-cutout.png", url: '/chairs/the-tulip' },
-              { title: "All Chairs", desc:"View our whole collection of chairs", icon : "all", url: '/chairs' },
+              { title: "The Oak", desc: "A Touch of Elegance", icon : "/images/products/chairs/oak/oak-cutout-leg-lift.png", url: '/rise-and-recline-chairs/the-oak' },
+              { title: "The Cedar", desc:"Distinguished and Charming", icon : "/images/products/chairs/cedar/cedar-cutout.png", url: '/rise-and-recline-chairs/the-cedar' },
+              { title: "The Maple", desc:"Stylish and Modern", icon : "/images/products/chairs/maple/maple-cutout.png", url: '/rise-and-recline-chairs/the-maple' },
+              { title: "The Rowan", desc:"Sleek and Sumptous", icon : "/images/products/chairs/rowan/rowan-cutout.png", url: '/rise-and-recline-chairs/the-rowan' },
+              { title: "The Tulip", desc:"Truly Superior Comfort", icon : "/images/products/chairs/tulip/tulip-cutout.png", url: '/rise-and-recline-chairs/the-tulip' },
+              { title: "All Chairs", desc:"View our whole collection of chairs", icon : "all", url: '/rise-and-recline-chairs' },
             ],
     },
     menu2: {
@@ -102,7 +102,7 @@ const menuConfig = [
     menu2: {
       menuName: 'Helpful Advice',
       options: [
-        { title: "Bed Price Guide", desc: "Understand our Bed prices", icon : "", url: '/price-guide-bed' },
+        { title: "Bed Price Guide", desc: "Understand our bed prices", icon : "", url: '/price-guide-bed' },
         { title: "Delivery and Installation", desc: "Learn how we deliver to you", icon : "", url: '/delivery-and-installation' },
         { title: "VAT Exempt Eligibility", desc: "See if you’re eligible for VAT exemption", icon : "", url: '/vat-exempt-eligibility' }
       ],

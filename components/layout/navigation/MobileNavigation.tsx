@@ -42,12 +42,12 @@ const MobileNavigation = ({isOpen, toggleMobileMenu} : ComponentProps) => {
             { link: '/frequently-asked-questions', text: 'Frequently Asked Questions' },
         ]},
         { subMenuHeader: 'Chairs', submenu: [
-            {link: '/chairs', text: 'All Chairs' },
-            {link: '/chairs/the-oak', text: 'The Oak' },
-            {link: '/chairs/the-maple', text: 'The Maple' },
-            {link: '/chairs/the-cedar', text: 'The Cedar' },
-            {link: '/chairs/the-rowan', text: 'The Rowan' },
-            {link: '/chairs/the-tulip', text: 'The Tulip' },
+            {link: '/rise-and-recline-chairs', text: 'All Chairs' },
+            {link: '/rise-and-recline-chairs/the-oak', text: 'The Oak' },
+            {link: '/rise-and-recline-chairs/the-maple', text: 'The Maple' },
+            {link: '/rise-and-recline-chairs/the-cedar', text: 'The Cedar' },
+            {link: '/rise-and-recline-chairs/the-rowan', text: 'The Rowan' },
+            {link: '/rise-and-recline-chairs/the-tulip', text: 'The Tulip' },
         ]},
         { subMenuHeader: 'Beds', submenu: [
             {link: '/adjustable-beds', text: 'All Beds' },

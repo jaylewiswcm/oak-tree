@@ -228,16 +228,21 @@ const index = () => {
                         alt='Our Rise and Recline Chairs'
                         layout='fill'
                         objectFit='cover'
-                        objectPosition='left'
+                        objectPosition='left '
                         quality={100}
                         placeholder='blur'
                         priority
                     />
+                   
                 </div>
                 <div className='hero-inner con-reg'>
                 <button className='mobile-cta main-cta'>
                   <p>Request a Free Brochure</p>
                 </button>
+                <div className='intro-box'>
+                      <p>Oak Tree</p>
+                      <h1>Bath Lifts</h1>
+                </div>
                 <div className='hero-form'>
                     <div className='form-top'>
                         <h2>Request Your <span className='yellow-3'>Free</span> Brochure</h2>

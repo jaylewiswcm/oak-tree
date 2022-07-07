@@ -169,7 +169,7 @@ const menuConfig = [
         ]
     },
     { menuHeader: 'Chairs', menu: [
-        {link: '/chairs', text: 'Riser Recliner Chairs' },
+        {link: '/rise-and-recline-chairs', text: 'Riser Recliner Chairs' },
         {link: '/price-guide-chair', text: 'Price Guide Chairs' },
     ]},
     { menuHeader: 'Beds', menu: [

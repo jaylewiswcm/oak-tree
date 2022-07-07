@@ -104,7 +104,7 @@ const RecommendedProducts = ({products, productHandle, productType}:ComponentPro
             </Link>
         )}
 {/* 
-        <Link href="/chairs/the-oak">
+        <Link href="/rise-and-recline-chairs/the-oak">
         <a  className='product'>
         <div className='image-wrapper'>
             <Image
@@ -124,7 +124,7 @@ const RecommendedProducts = ({products, productHandle, productType}:ComponentPro
             </div>
         </a>
         </Link>
-        <Link href="/chairs/the-oak">
+        <Link href="/rise-and-recline-chairs/the-oak">
         <a className='product'>
             <div className='image-wrapper'>
             <Image

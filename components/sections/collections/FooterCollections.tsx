@@ -11,7 +11,7 @@ const FooterCollections = () => {
     <div className='footer-collections con-reg'>
     <h6>Our Collections</h6>
     <div className='collections-grid'>
-      <Link href='/chairs'><a className='collection-item'>
+      <Link href='/rise-and-recline-chairs'><a className='collection-item'>
         <Image 
           src={chairCollection}
           alt='Rise and Recline Chairs'

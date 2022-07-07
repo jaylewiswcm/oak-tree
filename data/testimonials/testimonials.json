@@ -1,66 +1,67 @@
-[{
-    "name" : "Mr Andrews",
-    "location": "Solihul",
-    "product": {
-        "name": "The Oak Chair",
-        "url": "/chairs/the-oak",
-        "imageSrc" : "/images/products/chairs/oak/oak-collection.png"
+[
+    {
+        "name": "Mr Andrews",
+        "location": "Solihul",
+        "product": {
+            "name": "The Oak Chair",
+            "url": "/rise-and-recline-chairs/the-oak",
+            "imageSrc": "/images/products/chairs/oak/oak-collection.png"
+        },
+        "thumbnail": "/images/testimonials/mr-andrews-tile.png",
+        "videoId": "DYHM9trlcBo",
+        "desc": "Mr Andrew’s rise and recline chair has helped him to sit and stand with ease again.",
+        "quote": "The main benefit I think is the “made-to-measure” aspect of this piece of furniture, which absolutely fits my body at every point."
     },
-    "thumbnail" : "/images/testimonials/mr-andrews-tile.png",
-    "videoId" : "DYHM9trlcBo",
-    "desc": "Mr Andrew’s rise and recline chair has helped him to sit and stand with ease again.",
-    "quote": "The main benefit I think is the “made-to-measure” aspect of this piece of furniture, which absolutely fits my body at every point."
-},
-{
-        "name" : "Mrs Kirk",
+    {
+        "name": "Mrs Kirk",
         "location": "London",
         "product": {
             "name": "Adjustable Bed",
             "url": "/adjustable-beds",
-            "imageSrc" : "/images/products/chairs/oak/oak-collection.png"
+            "imageSrc": "/images/products/chairs/oak/oak-collection.png"
         },
-        "thumbnail" : "/images/testimonials/mrs-kirk-tile.png",
-        "videoId" : "i0HgOhqUnlI",
-        "desc" : "Mrs Atkins enjoys knitting in her rise and recline chair, which has also helped her sleep better at night.",
+        "thumbnail": "/images/testimonials/mrs-kirk-tile.png",
+        "videoId": "i0HgOhqUnlI",
+        "desc": "Mrs Atkins enjoys knitting in her rise and recline chair, which has also helped her sleep better at night.",
         "quote": "When my chair came, it was absolutely wonderful to sit in. For the first time for ages, I felt really comfortable."
     },
-{
-    "name" : "Mr Parks",
-    "location": "Cornwall",
-    "product": {
-        "name": "Bath Lift",
-        "url": "/bath-lifts/the-riviera-plus",
-        "imageSrc" : "/images/products/bath-lifts/the-riviera/the-riviera-collection.png"
+    {
+        "name": "Mr Parks",
+        "location": "Cornwall",
+        "product": {
+            "name": "Bath Lift",
+            "url": "/bath-lifts/the-riviera-plus",
+            "imageSrc": "/images/products/bath-lifts/the-riviera/the-riviera-collection.png"
+        },
+        "thumbnail": "/images/testimonials/mr-parks-tile.png",
+        "videoId": "YpIhtPvr76M",
+        "desc": "After suffering a mini stroke which affected his balance, Richard Parks hadn't had a bath in years.",
+        "quote": "From the moment I got the bath lift I was very happy with the ease of use, allowing me to easily move in and out of the bath at my leisure."
     },
-    "thumbnail" : "/images/testimonials/mr-parks-tile.png",
-    "videoId" : "YpIhtPvr76M",
-    "desc": "After suffering a mini stroke which affected his balance, Richard Parks hadn't had a bath in years.",
-    "quote": "From the moment I got the bath lift I was very happy with the ease of use, allowing me to easily move in and out of the bath at my leisure."
-},
-{
-    "name" : "Mr Groger",
-    "location": "London",
-    "product": {
-        "name": "The Oak Chair",
-        "url": "/chairs/the-oak",
-        "imageSrc" :"/images/products/chairs/oak/oak-collection.png"
+    {
+        "name": "Mr Groger",
+        "location": "London",
+        "product": {
+            "name": "The Oak Chair",
+            "url": "/rise-and-recline-chairs/the-oak",
+            "imageSrc": "/images/products/chairs/oak/oak-collection.png"
+        },
+        "thumbnail": "/images/testimonials/mr-groger-tile.png",
+        "videoId": "EMtZchM25AU",
+        "desc": "Mr Groger uses his Oak Tree rise and recline chair to help relieve pain in his legs.",
+        "quote": "I think Oak Tree deserves a medal! There’s something about them that you don’t get from other firms."
     },
-    "thumbnail" : "/images/testimonials/mr-groger-tile.png",
-    "videoId" : "EMtZchM25AU",
-    "desc" : "Mr Groger uses his Oak Tree rise and recline chair to help relieve pain in his legs.",
-    "quote": "I think Oak Tree deserves a medal! There’s something about them that you don’t get from other firms."
-},
-{
-    "name" : "Mrs Atkins",
-    "location": "Herefordshire",
-    "product": {
-        "name": "The Oak Chair",
-        "url": "/chairs/the-oak",
-        "imageSrc" : "/images/products/chairs/oak/oak-collection.png"
-    },
-    "thumbnail" : "/images/testimonials/mrs-atkins-tile.png",
-    "videoId" : "-gVfWLxoJNM",
-    "desc" : "Mrs Atkins enjoys knitting in her rise and recline chair, which has also helped her sleep better at night.",
-    "quote": "When my chair came, it was absolutely wonderful to sit in. For the first time for ages, I felt really comfortable."
-}
+    {
+        "name": "Mrs Atkins",
+        "location": "Herefordshire",
+        "product": {
+            "name": "The Oak Chair",
+            "url": "/rise-and-recline-chairs/the-oak",
+            "imageSrc": "/images/products/chairs/oak/oak-collection.png"
+        },
+        "thumbnail": "/images/testimonials/mrs-atkins-tile.png",
+        "videoId": "-gVfWLxoJNM",
+        "desc": "Mrs Atkins enjoys knitting in her rise and recline chair, which has also helped her sleep better at night.",
+        "quote": "When my chair came, it was absolutely wonderful to sit in. For the first time for ages, I felt really comfortable."
+    }
 ]

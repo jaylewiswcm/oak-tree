@@ -213,7 +213,7 @@ const PriceGuideChair = () => {
                         />
                     </div>
                 </button>
-                <Link href='/chairs'>
+                <Link href='/rise-and-recline-chairs'>
                     <a className='cta'>
                         <div className='image-wrapper'>
                             <Image 
