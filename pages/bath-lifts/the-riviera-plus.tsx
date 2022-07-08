@@ -36,7 +36,7 @@ const TheRivieraPlus = () => {
                  <p className='desc'>Our Riviera Plus offers the best way to enjoy the therapeutic benefits of a hot bath again</p>
                 <div className='button-wrapper'>
                     <button className='blue-cta'  onClick={() => setFormModal(true)}>
-                        <p className='mobile-text'>Request a Brochure</p>
+                        <p className='mobile-text'>Request Your Brochure</p>
                         <p className='desktop-text'>Request Your Free Brochure</p>
                     </button>
                 </div>

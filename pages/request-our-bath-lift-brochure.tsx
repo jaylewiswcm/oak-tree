@@ -544,7 +544,7 @@ const RequestOurBathLiftBrochure = () => {
                 </div>
             </div>
         <div className='con-reg orphan-wrapper'>
-        <OrphanBrochureFormWrapper productType='chair'/>
+        <OrphanBrochureFormWrapper productType='chair' product='Bath Lift'/>
         <div className='content'>
             <div className='hero orphan-con-reg'>
                 <Image 

@@ -81,7 +81,7 @@ const RequestOurChairBrochure = () => {
                 </div>
             </div>
         <div className='con-reg orphan-wrapper'>
-        <OrphanBrochureFormWrapper productType='chair'/>
+        <OrphanBrochureFormWrapper productType='chair' product='R & R'/>
         <div className='content'>
             <div className='hero orphan-con-reg'>
                 <Image 

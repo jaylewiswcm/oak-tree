@@ -27,7 +27,7 @@ export const TelInput = ({error, id, value, onChange,htmlFor,required ,placehold
     <p className='error-p'>{error}</p>
       <input 
          id={id}
-         name="tel"
+         name="phone"
          autoComplete="tel"
          type="tel"
          placeholder={placeholder}

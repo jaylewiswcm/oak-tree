@@ -1,5 +1,6 @@
 import React from 'react'
 import Image from 'next/image';
+import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
 // Components
 import CollectionForm from '../brochure/CollectionForm';
 
@@ -53,7 +54,17 @@ export const CollectionFormWrapper = ({productType}: ComponentProps) => {
     </div>
     </div>
     </div>
+    <GoogleReCaptchaProvider
+      reCaptchaKey="6LeJqdAgAAAAAOE-C-IGC0F7Tiao-LwvLdi-dC0X"
+      scriptProps={{
+        async: false,
+        defer: false,
+        appendTo: "head",
+        nonce: undefined,
+      }}
+    >
     <CollectionForm productType={productType}/>
+    </GoogleReCaptchaProvider>
     </>
   )
 }

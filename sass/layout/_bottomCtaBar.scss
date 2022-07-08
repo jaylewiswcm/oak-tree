@@ -17,6 +17,7 @@
         @media(min-width: 490px) {
             padding: 15px 50px;
             padding: 15px;
+            height:100px;
         }
         @media(min-width: 800px) {
             background-color: $white;
@@ -29,17 +30,16 @@
         }
         .phone-number {
             display: none;
-            @media(min-width: 800px) and (max-width: 1090px) {
+            @media(min-width: 800px)  {
                 display: initial; 
                 padding-left: 70px;
-                
             }
-            @media(min-width: 1100px) {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                padding-left: 70px;
-            }
+            // @media(min-width: 1100px) {
+            //     display: flex;
+            //     align-items: center;
+            //     justify-content: center;
+            //     padding-left: 70px;
+            // }
             p {
                 font-size: 1.6rem;
                 color: $dark-green-2;
@@ -53,7 +53,7 @@
                 color: $dark-green-1;
                 
                 @media(min-width: 1100px) {
-                    margin-left: 10px;
+                    // margin-left: 10px;
                     font-size: 3.6rem;
                 }
             }

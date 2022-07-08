@@ -10,9 +10,19 @@ const Offers = () => {
                 title="Offers | Oak Tree Mobility"
                 description="Offers. Find out more."
             />
-            <div className='bg-red-2 offers-hero-banner'>
+            <div className='offers-hero-banner'>
                 <div className='con-reg'>
-                    <h1 className='heading'>Our Offers</h1>
+                    <div className='banner'>
+                        <Image
+                            src='/graphics/our-offers-banner.svg'
+                            alt='Our offers'
+                            layout='fill'
+                            objectFit='cover'
+                            objectPosition='center'
+                            quality={100}
+                        />
+                    </div>
+                    {/* <h1 className='heading'>Our Offers</h1> */}
                 </div>
             </div>
             <div className='offers-section con-reg'>
@@ -28,7 +38,7 @@ const Offers = () => {
                         />
                     </div>
                     <div className='content'>
-                        <h2><span className='red-2'>Half Price</span> Sale On Chairs</h2>
+                        <h2><span>Half Price</span><br/> Sale On Chairs</h2>
                         <p>Here at Oak Tree Mobility, we are all about bringing you an amazing value. Our Half Price Sale offer is so good you’ll hardly believe it: If you buy a chair or settee, we will give you any second item half price!</p>
                         <Link href='/rise-and-recline-chairs'><a>View Chair Collections</a></Link>
                     </div>
@@ -45,7 +55,7 @@ const Offers = () => {
                         />
                     </div>
                     <div className='content'>
-                        <h2><span className='red-2'>Half Price</span> Sale On Beds</h2>
+                        <h2><span>Half Price</span><br/> Sale On Beds</h2>
                         <p>Here at Oak Tree Mobility, we are all about bringing you an amazing value. Our Half Price Sale offer is so good you’ll hardly believe it: If you buy a bed, we will give you any second item half price!</p>
                         <Link href='/rise-and-recline-chairs'><a>View Bed Collections</a></Link>
                     </div>
@@ -57,7 +67,7 @@ const Offers = () => {
                     <h3>Want to see all our offers in one place?</h3>
                     <p>Request a free brochure to see new collections, best offers and useful help & advice.</p>
                     <button className='main-cta'>
-                        <p>Request a Brochure</p>   
+                        <p>Request Your Free Brochure</p>   
                     </button>
                 </div>
                 

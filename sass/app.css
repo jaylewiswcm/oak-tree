@@ -443,6 +443,32 @@ body.freeze {
   margin-left: 0;
 }
 
+.generic-form .address-input-wrapper {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 1290px) {
+  .generic-form .address-input-wrapper {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+.generic-form .address-input-wrapper .input-wrapper {
+  width: 100%;
+}
+
+@media (min-width: 1290px) {
+  .generic-form .address-input-wrapper .input-wrapper {
+    width: calc(50% - 10px);
+  }
+}
+
 .generic-form .input-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -478,11 +504,11 @@ body.freeze {
 
 .generic-form .input-wrapper input[type=text], .generic-form .input-wrapper input[type=tel], .generic-form .input-wrapper input[type=email], .generic-form .input-wrapper select {
   border: 1px #b1b4b6 solid;
-  padding: 15px;
+  padding: 12px 15px;
   font-size: 1.6rem;
   font-weight: 400;
   font-family: "Euclid Circular A", "Helvetica", sans-serif;
-  border-radius: 6px;
+  border-radius: 3px;
   outline-style: none;
 }
 
@@ -503,9 +529,6 @@ body.freeze {
   margin-bottom: -5px;
   margin-top: 8px;
   display: none;
-  position: absolute;
-  bottom: -24px;
-  right: 5px;
 }
 
 .generic-form .input-wrapper .green-tick {
@@ -743,13 +766,20 @@ body.freeze {
 }
 
 .orphan-form .input-wrapper {
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 
 .orphan-form .input-wrapper .error-p {
   margin-bottom: 0;
   right: unset;
   left: 0;
+}
+
+.orphan-form .action-wrapper {
+  max-width: 400px;
+  margin: 0;
+  margin-top: 20px;
+  margin-left: auto;
 }
 
 .collection-form {
@@ -1258,7 +1288,7 @@ body.freeze {
 
 @media (min-width: 1100px) {
   .LandbotLivechat, .kAfRMA, .jLUvWe {
-    bottom: -4px !important;
+    bottom: 5px !important;
   }
 }
 
@@ -4078,6 +4108,7 @@ body.mobile-navbar .mobile-navigation {
   .bottom-bar .inner-bar {
     padding: 15px 50px;
     padding: 15px;
+    height: 100px;
   }
 }
 
@@ -4101,24 +4132,9 @@ body.mobile-navbar .mobile-navigation {
   display: none;
 }
 
-@media (min-width: 800px) and (max-width: 1090px) {
+@media (min-width: 800px) {
   .bottom-bar .inner-bar .phone-number {
     display: initial;
-    padding-left: 70px;
-  }
-}
-
-@media (min-width: 1100px) {
-  .bottom-bar .inner-bar .phone-number {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
     padding-left: 70px;
   }
 }
@@ -4142,7 +4158,6 @@ body.mobile-navbar .mobile-navigation {
 
 @media (min-width: 1100px) {
   .bottom-bar .inner-bar .phone-number .number {
-    margin-left: 10px;
     font-size: 3.6rem;
   }
 }
@@ -6171,27 +6186,31 @@ body.mobile-navbar .mobile-navigation {
 }
 
 .col-hero .hero-inner .intro-box h1 {
-  font-size: 4.5rem;
+  font-size: 4rem;
   color: #17494D;
   line-height: 1.1;
+  text-align: center;
 }
 
 @media (min-width: 900px) {
   .col-hero .hero-inner .intro-box h1 {
-    font-size: 5.5rem;
+    font-size: 5rem;
+    text-align: left;
   }
 }
 
 .col-hero .hero-inner .intro-box p {
-  font-size: 1.8rem;
+  font-size: 1.9rem;
   font-weight: 500;
   color: #188087;
   margin-bottom: 5px;
+  text-align: center;
 }
 
 @media (min-width: 900px) {
   .col-hero .hero-inner .intro-box p {
     font-size: 2.2rem;
+    text-align: left;
   }
 }
 
@@ -15353,6 +15372,17 @@ body.mobile-navbar .mobile-navigation {
           justify-content: center;
 }
 
+.offers-hero-banner .con-reg {
+  width: 100%;
+  height: 100%;
+}
+
+.offers-hero-banner .banner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
 .offers-hero-banner .heading {
   font-weight: 500;
   color: #fff;
@@ -15433,10 +15463,15 @@ body.mobile-navbar .mobile-navigation {
 }
 
 .offers-section .offer .content h2 {
-  font-size: 3.2rem;
+  font-size: 4rem;
   font-weight: 600;
   font-family: "Euclid Circular A", "Helvetica", sans-serif;
   color: #17494D;
+  text-align: left;
+}
+
+.offers-section .offer .content h2 span {
+  color: #EF0C2D;
 }
 
 .offers-section .offer .content p {
@@ -15444,6 +15479,8 @@ body.mobile-navbar .mobile-navigation {
   font-weight: 400;
   line-height: 1.6;
   margin-top: 15px;
+  text-align: left;
+  color: #53565F;
 }
 
 .offers-section .offer .content a {
@@ -15462,13 +15499,13 @@ body.mobile-navbar .mobile-navigation {
 
 @media (min-width: 900px) {
   .offers-section .offer .content a {
-    margin: 0 auto;
+    margin-right: auto;
     margin-top: 25px;
   }
 }
 
 .request-brochure-banner {
-  background-color: #E3E3E3;
+  background-color: #EDF9FA;
   padding: 50px 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -15511,21 +15548,23 @@ body.mobile-navbar .mobile-navigation {
 
 .request-brochure-banner .content h3 {
   font-family: "Euclid Circular A", "Helvetica", sans-serif;
-  font-size: 3rem;
+  font-size: 4rem;
   font-weight: 600;
   color: #17494D;
 }
 
 .request-brochure-banner .content p {
   font-size: 1.8rem;
-  font-weight: 300;
+  font-weight: 400;
   margin-top: 10px;
   line-height: 1.6;
+  color: #53565F;
+  max-width: 400px;
 }
 
 .request-brochure-banner .content button {
   border-radius: 2px;
-  margin-top: 15px;
+  margin-top: 20px;
   padding: 12px 30px;
 }
 

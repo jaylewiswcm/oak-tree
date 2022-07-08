@@ -4,9 +4,10 @@ import OrphanBrochureForm from './brochure/OrphanBrochureForm';
 
 interface ComponentProps {
   productType : string
+  product: string
 }
 
-const OrphanBrochureFormWrapper = ({productType}: ComponentProps) => {
+const OrphanBrochureFormWrapper = ({productType, product}: ComponentProps) => {
   return (
     <div className='form'>
     <div className='form-title'>
@@ -55,7 +56,7 @@ const OrphanBrochureFormWrapper = ({productType}: ComponentProps) => {
         </div>
       </div>
     </div>
-    <OrphanBrochureForm />
+    <OrphanBrochureForm productType={product}/>
   
     </div>
 </div>

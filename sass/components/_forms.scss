@@ -44,6 +44,18 @@
                 }
             }
         }
+        .address-input-wrapper {
+            flex-direction: column;
+            @media(min-width:1290px) {
+                flex-direction: row;
+            }
+            .input-wrapper {
+                width:100%;
+                @media(min-width:1290px) {
+                    width: calc(50% - 10px);
+                }
+            }
+        }
         .input-wrapper {
             display: flex;
             flex-direction: column-reverse;
@@ -70,11 +82,11 @@
            }
             input[type=text], input[type=tel], input[type=email], select {
                 border: 1px $light-grey solid;
-                padding: 15px;
+                padding: 12px 15px;
                 font-size: 1.6rem;
                 font-weight: 400;
                 font-family: $fontText;
-                border-radius: 6px;
+                border-radius: 3px;
                 outline-style: none;
 
             }
@@ -92,9 +104,9 @@
                 margin-bottom:-5px;
                 margin-top: 8px;
                 display: none;
-                position: absolute;
-                bottom: -24px;
-                right:5px;
+                // position: absolute;
+                // bottom: -24px;
+                // right:5px;
             }  
             .green-tick {
                 width: 17px;
@@ -281,13 +293,20 @@
         padding: 0
     }
     .orphan-form {
+        // padding-bottom: 80px;
         .input-wrapper {
-            margin-bottom: 30px;
+            margin-bottom: 15px;
             .error-p {
                 margin-bottom: 0;
                 right: unset;
                 left: 0;
             }
+        }
+        .action-wrapper{ 
+            max-width: 400px;
+            margin: 0;
+            margin-top: 20px;
+            margin-left: auto;
         }
     }
     .collection-form {
