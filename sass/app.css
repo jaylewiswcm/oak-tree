@@ -4172,7 +4172,7 @@ body.mobile-navbar .mobile-navigation {
     position: absolute;
     right: 50px;
     bottom: 0;
-    height: 100px;
+    height: 120px;
   }
 }
 
@@ -4202,7 +4202,7 @@ body.mobile-navbar .mobile-navigation {
 
 @media (min-width: 800px) {
   .bottom-bar .inner-bar .button-wrapper .main-cta {
-    padding: 0 30px;
+    padding: 0 40px;
   }
 }
 
