@@ -715,7 +715,7 @@
                 flex-direction: column;
                 align-items: center;
                 // margin-top: 15px;
-                
+     
                 .name-wrapper {
                     display: flex;
                     flex-direction: column;
@@ -735,6 +735,12 @@
                     padding: 15px 0;
                     border-bottom: 1px $lighter-grey solid;
                     margin-bottom: 10px;
+                    .product-type {
+                        font-size: 1.8rem;
+                        font-weight: 500;
+                        color: $dark-green-1;
+                        width: 100%;
+                    }
                     .subheading {
                         margin-right: auto;
                     } 
@@ -1105,6 +1111,26 @@
                     transform: rotate(180deg);
                 }
             }
+        }
+    }
+
+    .col-support-copy {
+        padding-top: 50px;
+        padding-bottom: 50px;
+        h2 {
+            font-size:4.4rem;
+            color: $dark-green-1;
+            text-align: center;
+            margin-bottom:5px;
+        }
+        p {
+            font-size: 1.8rem;
+            font-weight: 400;
+            text-align: center;
+            line-height: 1.5;
+            color: $dark-grey;
+            max-width: 963px;
+            margin: 0 auto;
         }
     }
 

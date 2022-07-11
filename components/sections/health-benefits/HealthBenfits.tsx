@@ -9,7 +9,7 @@ export const HealthBenfits = ({product}: ComponentProps) => {
   return (
     <div className='health-benefits'>
     <h5>Improve Your Quality Of Life</h5>
-    <p className='subheading'>Oak Tree {product} are beneficial if you suffer from:</p>
+    <p className='subheading'>Oak Tree's {product} are beneficial if you suffer from:</p>
     <ul>
       { product === 'Bath Lifts' ? bathLiftBenefits.map((usp:any,index:number) => 
            <li key={index}>

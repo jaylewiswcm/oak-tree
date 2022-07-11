@@ -1,7 +1,7 @@
 import React from 'react'
 import { NextSeo } from 'next-seo'
 // Components
-import {FAQs} from '../components/faq/FAQs';
+import { FAQsWrapper } from '../components/faq/FAQsWrapper'
 
 const FrequentlyAskedQuestions = () => {
   return (
@@ -19,17 +19,17 @@ const FrequentlyAskedQuestions = () => {
             </div>
         </div>
 
-        <div className='faq-content con-reg'>
+        {/* <div className='faq-content con-reg'>
             <div className='side-panel'>
                 <h3>Support</h3>
                 <h4>FAQs</h4>
                 <p>At Oak Tree Mobility our passion is to provide a service as high quality as our products, so your experience with us is second to none. We have a dedicated experienced team available to answer all of your questions and queries at any time.</p>
             </div>
             <div className='faqs'>
-                <FAQs />
+                <FAQs type='faqs'/>
             </div>
-        </div>
-
+        </div> */}
+        <FAQsWrapper type='faqs' title='Support' copy='At Oak Tree Mobility our passion is to provide a service as high quality as our products, so your experience with us is second to none. We have a dedicated experienced team available to answer all of your questions and queries at any time.'/>
     </>
   )
 }

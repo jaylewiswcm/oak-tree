@@ -107,6 +107,7 @@ export const CollectionItem = ({product, setShow}: ComponentProps ) => {
             <div className='col-details'>
             <div className='col-name-wrapper'>
                 <div className='title-and-swatches'>
+                <p className='product-type'>{productType.value}</p>
                     <div className='swatches'>
                         {  availableSwatches && availableSwatches.map((swatch:any, index:any) => 
                             <div className='swatch' key={index}><div className='inner'><Image src={swatch.src} alt={swatch.alt} layout='fill' objectFit='cover' objectPosition='center' quality="100" /></div></div> 
