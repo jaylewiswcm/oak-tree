@@ -81,7 +81,7 @@ const RecommendedProducts = ({products, productHandle, productType}:ComponentPro
 
     <div className='product-grid'>
         { recommendedProducts.slice(0, 3).map((product:ProductNode, index:number) => 
-            <Link href={`/${productType === 'chair' ? 'chairs' : 'adjustable-beds'}/the-${product.node.handle}`} key={index}>
+            <Link href={`/${productType === 'chair' ? 'rise-and-recline-chairs' : 'adjustable-beds'}/the-${product.node.handle}`} key={index}>
             <a className='product'>
                 <div className='image-wrapper'>
                     <Image

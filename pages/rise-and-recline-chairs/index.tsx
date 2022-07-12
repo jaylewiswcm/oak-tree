@@ -67,9 +67,27 @@ const Index = (props:any) => {
               <h1 className='heading' >Rise and Recline Chairs</h1>
               <p className='sub-heading'>Our Chairs are fully customisable and made-to-fit your measurements - we have curated a collection of chairs that embed different styles suited for different living environments</p>
                 <CollectionGrid products={products}/>
-                <div className='col-support-copy con-reg'>
-                  <h2>Why a rise and recline chair?</h2>
-                  <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+                <div className='col-support-copy'>
+                  <div className='con-reg'>
+                  <h2>Why a Rise and Recline Chair?</h2>
+                  <div className='flex-col-3'>
+                                <div className='item'>
+                                    <div className='icon'></div>
+                                    <p className='reason-title'>Lorem ipsum dolor</p>
+                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
+                                </div>
+                                <div className='item'>
+                                    <div className='icon'></div>
+                                    <p className='reason-title'>Lorem ipsum dolor</p>
+                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
+                                </div>
+                                <div className='item'>
+                                    <div className='icon'></div>
+                                    <p className='reason-title'>Lorem ipsum dolor</p>
+                                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor</p>
+                                </div>
+                              </div>
+                        </div>  
                 </div>
                 <OfferBanners orphan={false}/>
                 <HealthBenfits product='Rise and Recline Chairs'/>
@@ -99,6 +117,219 @@ const Index = (props:any) => {
                               <p>One of the most important choices you will make when buying your chair is its size. During your home consultation, you can try out one of our chairs and see how it feels. Then we will take your exact measurements and help you choose a chair that will fit you perfectly and offer supreme comfort.</p>
                           </div>
                 </div>
+
+                <div className='motor-container'>
+            <div className='content con-reg'>
+                {/* <p className='subheading oaktree-green'>Step Three</p> */}
+                <h5 className='heading'>Precision Engineering</h5>
+                <p className='desc'>We offer a number of motors, each of which suits a particular requirement. If you like to sleep on a chair that reclines.</p>
+                <div className='comp-table'>
+                  <div className='motor'>
+                    <p className='motor-name'>Dual Motor</p>
+                    <ul>
+                      <li>
+                        <div className="tick">
+                          <Image 
+                            src='/vectors/comp-tick.svg'
+                            alt='Tick'
+                            layout='responsive'
+                            width='14'
+                            height='11'
+                          />
+                        </div>
+                        <p>Can operate footrest and back independently</p>
+                      </li>
+                      <li>
+                        <div className="tick">
+                          <Image 
+                            src='/vectors/comp-tick.svg'
+                            alt='Tick'
+                            layout='responsive'
+                            width='14'
+                            height='11'
+                          />
+                        </div>
+                        <p>Back can be dropped down to almost flat position</p>
+                      </li>
+                      <li>
+                        <div className="tick">
+                          <Image 
+                            src='/vectors/comp-tick.svg'
+                            alt='Tick'
+                            layout='responsive'
+                            width='14'
+                            height='11'
+                          />
+                        </div>
+                        <p>Allows a complete upright back when footrest moves</p>
+                      </li>
+                      <li className="not-included">
+                        <div className="tick">
+                          <Image 
+                            src='/vectors/comp-cross.svg'
+                            alt='Tick'
+                            layout='responsive'
+                            width='10'
+                            height='10'
+                          />
+                        </div>
+                        <p>Additional back support especially in lumbar region</p>
+                      </li>
+                      <li className="not-included">
+                        <div className="tick">
+                          <Image 
+                            src='/vectors/comp-cross.svg'
+                            alt='Tick'
+                            layout='responsive'
+                            width='10'
+                            height='10'
+                          />
+                        </div>
+                        <p>Natural bend in the knee joint</p>
+                      </li>
+                    </ul>
+
+                  </div>
+                  <div className='motor'>
+                    <p className='motor-name'>Unique High Leg Lift</p>
+                    <ul>
+                      <li>
+                        <div className="tick">
+                          <Image 
+                            src='/vectors/comp-tick.svg'
+                            alt='Tick'
+                            layout='responsive'
+                            width='14'
+                            height='11'
+                          />
+                        </div>
+                        <p>Elevates feet 6” above hips</p>
+                      </li>
+                      <li>
+                        <div className="tick">
+                          <Image 
+                            src='/vectors/comp-tick.svg'
+                            alt='Tick'
+                            layout='responsive'
+                            width='14'
+                            height='11'
+                          />
+                        </div>
+                        <p>Back and footrest works together in tilt in space action meaning no pressure on joints</p>
+                      </li>
+                      <li>
+                        <div className="tick">
+                          <Image 
+                            src='/vectors/comp-tick.svg'
+                            alt='Tick'
+                            layout='responsive'
+                            width='14'
+                            height='11'
+                          />
+                        </div>
+                        <p>Natural bend in the knee joint</p>
+                      </li>
+                      <li className="not-included">
+                        <div className="tick">
+                          <Image 
+                            src='/vectors/comp-cross.svg'
+                            alt='Tick'
+                            layout='responsive'
+                            width='10'
+                            height='10'
+                          />
+                        </div>
+                        <p>Additional back support especially in lumbar region</p>
+                      </li>
+                      <li className="not-included">
+                        <div className="tick">
+                          <Image 
+                            src='/vectors/comp-cross.svg'
+                            alt='Tick'
+                            layout='responsive'
+                            width='10'
+                            height='10'
+                          />
+                        </div>
+                        <p>Extra Motor to allow the backrest to move independently</p>
+                      </li>
+                    </ul>
+
+                  </div>
+                  <div className='motor stand-out'>
+                  <div className='most-popular'>Most Popular</div>
+                  <div className='stand-out-bg'></div>
+                    <div className='flex-row'>
+                      <p className='motor-name'>Unique High Leg Lift PLUS</p>
+                    </div>
+                    <ul>
+                      <li>
+                        <div className="tick">
+                          <Image 
+                            src='/vectors/comp-tick-yellow.svg'
+                            alt='Tick'
+                            layout='responsive'
+                            width='14'
+                            height='11'
+                          />
+                        </div>
+                        <p>Elevates feet 6” above hips</p>
+                      </li>
+                      <li>
+                        <div className="tick">
+                          <Image 
+                            src='/vectors/comp-tick-yellow.svg'
+                            alt='Tick'
+                            layout='responsive'
+                            width='14'
+                            height='11'
+                          />
+                        </div>
+                        <p>Back and footrest works together in tilt in space action meaning no pressure on joints</p>
+                      </li>
+                      <li>
+                        <div className="tick">
+                          <Image 
+                            src='/vectors/comp-tick-yellow.svg'
+                            alt='Tick'
+                            layout='responsive'
+                            width='14'
+                            height='11'
+                          />
+                        </div>
+                        <p>Natural bend in the knee joint</p>
+                      </li>
+                      <li>
+                        <div className="tick">
+                          <Image 
+                            src='/vectors/comp-tick-yellow.svg'
+                            alt='Tick'
+                            layout='responsive'
+                            width='14'
+                            height='11'
+                          />
+                        </div>
+                        <p>Extra Motor to allow the backrest to move independently</p>
+                      </li>
+                      <li>
+                        <div className="tick">
+                          <Image 
+                            src='/vectors/comp-tick-yellow.svg'
+                            alt='Tick'
+                            layout='responsive'
+                            width='14'
+                            height='11'
+                          />
+                        </div>
+                        <p>This Extra feature can be used when footrest raised or not</p>
+                      </li>
+    
+                    </ul>
+
+                  </div>
+                </div>
+            </div>
+            </div>
 
                 <div className='col-content con-reg'>
                       <h2 className='heading'>Make Your Chair Your Own</h2>
