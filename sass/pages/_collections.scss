@@ -735,11 +735,24 @@
                     padding: 15px 0;
                     border-bottom: 1px $lighter-grey solid;
                     margin-bottom: 10px;
+                    flex-direction: column-reverse;
+                    @media(min-width: 500px) and (max-width: 699px) {
+                        flex-direction: row;
+                    }
+        
+                    @media(min-width: 1000px) {
+                     flex-direction: row;       
+                    }
                     .product-type {
-                        font-size: 1.8rem;
+                        font-size: 1.6rem;
                         font-weight: 500;
-                        color: $dark-green-1;
-                        width: 100%;
+                        color: $dark-green-3;                       ;
+                        
+                        background-color: $light-green-2;
+                        padding: 10px 20px;
+                        border-radius: 25px;
+                        white-space: nowrap; 
+                
                     }
                     .subheading {
                         margin-right: auto;
@@ -753,15 +766,19 @@
                     justify-content: flex-start;
                     width: 100%;
                     display: flex;
-                
-                    // @media(min-width: 480px) and (max-width: 599px) {
-                    //     display: flex;
-                    // }
-                    // @media(min-width: 600px ) and (max-width: 899px){
-                    //     display: none;
-                    // }
-                    @media(min-width: 480px) {
+                    align-items: center;
+                    justify-content: center;
+                    margin-bottom:10px;
+                    @media(min-width: 500px) and (max-width: 699px) {
                         justify-content: flex-end;
+                        margin-bottom:0px;
+                    }
+                    @media(min-width: 1000px) {
+                        align-items: center;
+                        justify-content: center;
+                        margin-bottom:10px;
+                        justify-content: flex-end; 
+                        margin-bottom:0px;
                     }
                     button {
                         padding: 0;
@@ -862,7 +879,7 @@
                     p {
                         font-size: 1.8rem;
                         font-weight: 400;
-                        color: $grey;
+                        color: $dark-grey;
                         width: calc(100% - 50px);
                     }
                 }

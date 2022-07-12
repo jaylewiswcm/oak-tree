@@ -1302,7 +1302,7 @@ body.freeze {
 }
 
 .usp-overlay .close-button .cross {
-  width: 50%;
+  width: 45%;
 }
 
 .usp-overlay:hover .close-button {
@@ -4223,6 +4223,7 @@ body.mobile-navbar .mobile-navigation {
 @media (min-width: 1100px) {
   .bottom-bar .inner-bar .phone-number .number {
     font-size: 3.6rem;
+    letter-spacing: 1px;
   }
 }
 
@@ -6587,13 +6588,38 @@ body.mobile-navbar .mobile-navigation {
   padding: 15px 0;
   border-bottom: 1px #E3E3E3 solid;
   margin-bottom: 10px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+
+@media (min-width: 500px) and (max-width: 699px) {
+  .product-collections .collections-grid .collection-item .col-name-wrapper .title-and-swatches {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+@media (min-width: 1000px) {
+  .product-collections .collections-grid .collection-item .col-name-wrapper .title-and-swatches {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
 }
 
 .product-collections .collections-grid .collection-item .col-name-wrapper .title-and-swatches .product-type {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   font-weight: 500;
-  color: #17494D;
-  width: 100%;
+  color: #188087;
+  background-color: #E5FCFF;
+  padding: 10px 20px;
+  border-radius: 25px;
+  white-space: nowrap;
 }
 
 .product-collections .collections-grid .collection-item .col-name-wrapper .title-and-swatches .subheading {
@@ -6612,13 +6638,35 @@ body.mobile-navbar .mobile-navigation {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 10px;
 }
 
-@media (min-width: 480px) {
+@media (min-width: 500px) and (max-width: 699px) {
   .product-collections .collections-grid .collection-item .col-name-wrapper .swatches {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
+    margin-bottom: 0px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .product-collections .collections-grid .collection-item .col-name-wrapper .swatches {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 10px;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    margin-bottom: 0px;
   }
 }
 
@@ -6740,7 +6788,7 @@ body.mobile-navbar .mobile-navigation {
 .product-collections .collections-grid .collection-item .desc-list li p {
   font-size: 1.8rem;
   font-weight: 400;
-  color: #7F7F7F;
+  color: #53565F;
   width: calc(100% - 50px);
 }
 

@@ -14,7 +14,7 @@ import { CollectionFormWrapper } from '../../components/forms/wrappers/Collectio
 import { OfferBanners } from '../../components/sections/banners/OfferBanners';
 import { HealthBenfits } from '../../components/sections/health-benefits/HealthBenfits';
 // images 
-import heroImage from '../../public/images/heros/bed-collection-hero.jpg';
+import heroImage from '../../public/images/heros/bed-collection-hero.webp';
 
 const Index = (props:any) => {
 

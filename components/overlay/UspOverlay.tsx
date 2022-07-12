@@ -88,8 +88,8 @@ export const UspOverlay = ({hideOverlay, className}:ComponentProps) => {
                             src='/buttons/red-exit-cross.svg'
                             alt='British Made'
                             layout='responsive'
-                            width='176'
-                            height='140'
+                            width='9'
+                            height='9'
                         />
                     </div>
                 </div>

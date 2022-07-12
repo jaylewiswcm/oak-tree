@@ -16,12 +16,11 @@ import { CollectionGrid } from '../../components/collection/CollectionGrid';
 import { OfferBanners } from '../../components/sections/banners/OfferBanners';
 import { HealthBenfits } from '../../components/sections/health-benefits/HealthBenfits';
 // images 
-import heroImage from '../../public/images/heros/chair-collection-hero.jpg'
+import heroImage from '../../public/images/heros/chair-collection-hero.webp'
 import { FAQsWrapper } from '../../components/faq/FAQsWrapper';
 import { Accessories } from '../../components/sections/accessories/Accessories';
 import { AccessoryCarousel } from '../../components/sections/accessories/AccessoryCarousel';
 // images
-import chairCollection from '../../public/images/collections/collection-chairs.png'
 import bedCollection from '../../public/images/collections/collection-beds.png'
 import bathLiftCollection from '../../public/images/collections/collection-bathlifts.png'
 
