@@ -1117,9 +1117,12 @@
     .col-support-copy {
         padding-top: 50px;
         padding-bottom: 50px;
+        background-color: $dark-green-1;
+        border-radius: 3px;
+        margin: 50px auto;
         h2 {
             font-size:4.4rem;
-            color: $dark-green-1;
+            color: $yellow-3;
             text-align: center;
             margin-bottom:5px;
         }
@@ -1128,7 +1131,7 @@
             font-weight: 400;
             text-align: center;
             line-height: 1.5;
-            color: $dark-grey;
+            color: $white;
             max-width: 963px;
             margin: 0 auto;
         }
@@ -1137,8 +1140,7 @@
     .health-benefits {
         padding: 50px 25px;
         padding-top: 75px;
-        h5 {
-          
+        h2 {
             font-size: 3.4rem;
             color: $dark-green-1;
             @media(min-width: 500px) {
@@ -1191,6 +1193,145 @@
             }
         }
     }
+
+    .col-content{
+        display: flex;
+        flex-direction: column;
+        margin: 50px auto; 
+        
+        .accessories-grid {
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
+            gap: 5px 15px;
+            margin-top: 25px;
+            margin-top: 50px;
+            @media(min-width: 550px) {
+                grid-template-columns: repeat(2,1fr);
+            }
+            @media(min-width: 650px) {
+                gap: 5px 30px; 
+            }
+            @media(min-width: 700px) {
+                gap: 30px;
+            }
+            @media(min-width: 950px) {
+                grid-template-columns: repeat(3,1fr);
+            }
+        }
+        .accessory-carousel {
+            margin-top: 25px;
+            position: relative;
+            .swiper-slide {
+                max-width: 300px;
+            }
+        }
+    
+        .accessory-wrapper {
+            width:100%;
+            max-width: 300px;
+
+            .image-wrapper {
+                width: 100%;
+                border-radius:0px;
+                overflow: hidden;
+            }
+            .flex-row {
+                padding: 15px 0;
+                align-items: center; 
+                flex-direction: row;
+                margin-top:0;    
+                .icon-wrapper {
+                    width: 30px;
+                }
+                p {
+                    font-size: 2rem;
+                    font-weight: 600;
+                    margin-left: 10px;
+                    color: $dark-green-1;
+                }
+            }
+            .desc {
+                margin-top: 0px;
+                overflow: hidden;
+                transition: 0.2s;
+                display: flex;
+                margin: 0;
+                display: none;
+                visibility: hidden;
+                p {
+                    text-align: center;
+                    font-size: 1.6rem;
+                    display: none;
+                    color: $dark-grey;
+                    @media(min-width: 600px) {
+                     text-align: left;
+                    }
+                    @media(min-width: 700px) {
+                        display: initial;
+                    }
+                }
+            }
+        }
+    }
+    .col-content.row-2 {
+        margin-bottom: 25px;
+            display: flex;
+            flex-direction: column;
+            @media(min-width: 950px) {
+                flex-direction: row;
+            }
+            .image-wrapper {
+                width: 100%;
+                height: 400px;
+                margin: 0 auto;
+                // @media(min-width: 600px) and (max-width: 949px){
+                //     width: 100%;
+                //     height: 400px;
+                //     margin: 0;
+                // }
+                @media(min-width: 950px){
+                    width: 50%;
+                    height: auto;
+                }
+            }
+        .content  {
+                width: 100%;
+                align-items: center;
+                text-align: left;
+        
+                margin: 40px auto;
+                padding:0;
+                @media(min-width: 950px) {
+                    padding: 0;
+                    padding-left: 60px;
+                    width: 50%;
+                }
+                .icon-wrapper {
+                    width: 150px;
+                    margin-right: auto;
+                } 
+                h2 {
+                    font-size: 3rem;
+                    font-weight: 600;
+                    font-family: $fontText;
+                    line-height: 1.3;
+                    color: $dark-green-1;
+                    margin-bottom: 15px;
+                    @media(min-width: 750px) {
+                        font-size: 3.4rem;
+                    }
+                }
+         
+                p {
+                    max-width: 650px;
+                    font-size: 1.8rem;
+                    line-height: 1.8;
+                     margin-right: auto;
+                }
+        }
+    }
+
+
 }
 
 .our-process {
@@ -1414,4 +1555,45 @@
             }
         }
     } 
+}
+
+.collection-other-products {
+    margin-top: 25px;
+    h3 {
+        color: $dark-green-1;
+        font-weight: 700;
+    }
+    .collections-grid {
+        display:flex;
+        flex-direction: row;
+        margin-top: 15px;
+        .collection-item  {
+            width: 50%;
+            height: 300px;
+            position: relative;
+            cursor: pointer;
+            .overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                padding: 25px;
+                width: 100%;
+                height: 100%;;
+                background-color: rgba(0,0,0,0.30);
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                p {
+                    font-size: 2.1rem;
+                    font-weight: 400;
+                    color: $white;
+                    text-shadow: 0px 1px 10px rgba(0, 0, 0, 0.6)
+                }
+                .col-name {
+                    font-size: 3.2rem;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
 }

@@ -328,6 +328,16 @@
                     grid-column-end: 3;
                 }
             }
+            .content {
+                grid-column-start: 1;
+                grid-column-end: 3;
+                padding: 25px 0;
+                // h2 {
+                //     font-size: 3.2rem;
+                //     color: $dark-green-1;
+                //     margin-bottom: 5px;
+                // }
+            }
         }
         .bed-image-grid {
             margin-top: 30px;
@@ -336,6 +346,7 @@
                 margin-top:15px;
             }
         }
+
     }
  
     .product-info {
@@ -1380,34 +1391,6 @@
                 position: relative;
                 // width: 80%;
                 display: flex;
-                .carousel-button {
-                    position: absolute;
-                    top: 50%;
-                    transform: translateY(-80px);
-                    width: 50px;
-                    height: 80px;
-                    background-color:rgba(255,255,255,0.6);
-                    z-index: 5;
-                    border-radius: 0;
-                    padding:0;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    transition: 0.2s;
-                    .arrow {
-                        width:20px;
-                        width: 90%;
-                    }
-                }
-                .prev-btn {
-                    left: 0;
-                    .arrow {
-                        transform: rotate(180deg);   
-                    }
-                }
-                .next-btn {
-                    right: 0;   
-                }
                 .fabric {
                     display: flex;
                     flex-direction: column;
@@ -1448,13 +1431,7 @@
                     }
                 }  
             }
-            .fabric-carousel:hover {
-                @media(min-width: 650px ) {
-                    .carousel-button {
-                        background-color: $white;
-                    }
-                }
-            }
+
             &.size-section {
                 @media(min-width: 600px) and (max-width: 949px) {
                     margin: 0 auto;

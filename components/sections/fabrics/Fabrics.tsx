@@ -10,6 +10,7 @@ import chairFabrics from '../../../data/fabrics/chair_fabrics.json';
 import bedFabrics from '../../../data/fabrics/bed_fabrics.json';
 // Components
 import {Fabric} from './Fabric';
+import { CarouselArrow } from '../../buttons/CarouselArrow';
 
 interface ComponentProps {
     product: string
@@ -17,31 +18,8 @@ interface ComponentProps {
 
 export const Fabrics = ({ product } : ComponentProps) => {
   return (
-    <div className='fabric-carousel'>
-                                {/* <div className='button-wrapper'>
-                                    <button className='fabric-prev carousel-button'>
-                                        <span className='arrow-wrapper'>
-                                            <Image
-                                                src='/buttons/arrow-prev-white.svg'
-                                                alt='Previous Fabric'
-                                                layout='responsive'
-                                                width={16}
-                                                height={21}
-                                            />
-                                        </span>
-                                    </button>                     
-                                </div> */}
-                                    <button className='fabric-prev carousel-button prev-btn'>
-                                        <div className='arrow'>
-                                            <Image
-                                                src='/buttons/carousel-arrow.svg'
-                                                alt='Previous Fabric'
-                                                layout='responsive'
-                                                width={15.73}
-                                                height={9.06}
-                                            />
-                                        </div>
-                                    </button>      
+    <>
+                
                             <Swiper
                                 slidesPerView={1}
                                 spaceBetween={20}
@@ -49,8 +27,8 @@ export const Fabrics = ({ product } : ComponentProps) => {
                                 // initialSlide={1}
                                 speed={200}
                                 navigation={{
-                                    prevEl: '.fabric-prev',
-                                    nextEl: '.fabric-next',
+                                    prevEl: '#fabric-prev',
+                                    nextEl: '#fabric-next',
                                 }}
                                 breakpoints={{
                                     900: {
@@ -64,10 +42,10 @@ export const Fabrics = ({ product } : ComponentProps) => {
                                     }
                                 }}    
                                 modules={[Navigation]}
-                                className="carousel"
+                                className="carousel fabric-carousel con-reg"
                                 loop={true}
                                 >
-                                    
+                                    <CarouselArrow type='prev' btnId='fabric-prev'/>
                                 { product === 'chair' ? chairFabrics.map((fabric, index) => 
                                         <SwiperSlide key={index}>
                                             <Fabric fabric={fabric}/> 
@@ -79,19 +57,9 @@ export const Fabrics = ({ product } : ComponentProps) => {
                                         </SwiperSlide>
                                         ) 
                                 } 
-                              
+                               <CarouselArrow type='next' btnId='fabric-next'/>
                                 </Swiper>
-                                <button className='fabric-next carousel-button next-btn'>
-                                        <div className='arrow'>
-                                            <Image
-                                                src='/buttons/carousel-arrow.svg'
-                                                alt='Next Fabric'
-                                                layout='responsive'
-                                                width={15.73}
-                                                height={9.06}
-                                            />
-                                        </div>
-                                    </button>    
-                            </div>
+                               
+                            </>
   )
 }

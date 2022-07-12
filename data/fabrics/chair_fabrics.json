@@ -1,7 +1,7 @@
 [
     {
         "name": "Floral Champagne",
-        "src": "/images/fabric/chairs/coniston-floral-champagne.jpeg",
+        "src": "/images/fabric/chairs/coniston-floral-champagne.webp",
         "alt": "Fabric Coniston Floral Champagne",
         "type": "Fabric",
         "composition": "40% Acrylic, 40% Polyester, 20% Viscose",
@@ -9,7 +9,7 @@
     },
     {
         "name": "Floral Oyster",
-        "src": "/images/fabric/chairs/coniston-floral-oyster.jpeg",
+        "src": "/images/fabric/chairs/coniston-floral-oyster.webp",
         "alt": "Fabric Coniston Floral Oyster",
         "type": "Fabric",
         "composition": "40% Acrylic, 40% Polyester, 20% Viscose",
@@ -17,7 +17,7 @@
     },
     {
         "name": "Floral Blue",
-        "src": "/images/fabric/chairs/coniston-floral-blue.jpeg",
+        "src": "/images/fabric/chairs/coniston-floral-blue.webp",
         "alt": "Fabric Coniston Floral Blue",
         "type": "Fabric",
         "composition": "40% Acrylic, 40% Polyester, 20% Viscose",
@@ -25,7 +25,7 @@
     },
     {
         "name": "Floral Nutmeg",
-        "src": "/images/fabric/chairs/coniston-floral-nutmeg.jpeg",
+        "src": "/images/fabric/chairs/coniston-floral-nutmeg.webp",
         "alt": "Fabric Coniston Floral Nutmeg",
         "type": "Fabric",
         "composition": "40% Acrylic, 40% Polyester, 20% Viscose",
@@ -33,7 +33,7 @@
     },
     {
         "name": "Floral Rafia",
-        "src": "/images/fabric/chairs/coniston-floral-rafia.jpeg",
+        "src": "/images/fabric/chairs/coniston-floral-rafia.webp",
         "alt": "Fabric Coniston Floral Rafia",
         "type": "Fabric",
         "composition": "40% Acrylic, 40% Polyester, 20% Viscose",
@@ -41,7 +41,7 @@
     },
     {
         "name": "Floral Wine",
-        "src": "/images/fabric/chairs/coniston-floral-wine.jpeg",
+        "src": "/images/fabric/chairs/coniston-floral-wine.webp",
         "alt": "Fabric Coniston Floral Wine",
         "type": "Fabric",
         "composition": "40% Acrylic, 40% Polyester, 20% Viscose",
@@ -49,7 +49,7 @@
     },
     {
         "name": "Floral Terracotta",
-        "src": "/images/fabric/chairs/coniston-floral-terracotta.jpeg",
+        "src": "/images/fabric/chairs/coniston-floral-terracotta.webp",
         "alt": "Fabric Coniston Floral Terracotta",
         "type": "Fabric",
         "composition": "40% Acrylic, 40% Polyester, 20% Viscose",
@@ -57,7 +57,7 @@
     },
     {
         "name": "Floral Green",
-        "src": "/images/fabric/chairs/coniston-floral-green.jpeg",
+        "src": "/images/fabric/chairs/coniston-floral-green.webp",
         "alt": "Fabric Coniston Floral Green",
         "type": "Fabric",
         "composition": "40% Acrylic, 40% Polyester, 20% Viscose",
@@ -65,7 +65,7 @@
     },
     {
         "name": "Fleur Green",
-        "src": "/images/fabric/chairs/coniston-fleur-green.jpeg",
+        "src": "/images/fabric/chairs/coniston-fleur-green.webp",
         "alt": "Fabric Coniston Fluer Green",
         "type": "Fabric",
         "composition": "40% Acrylic, 40% Polyester, 20% Viscose",
@@ -73,7 +73,7 @@
     },
     {
         "name": "Fleur Champagne",
-        "src": "/images/fabric/chairs/coniston-fleur-champagne.jpeg",
+        "src": "/images/fabric/chairs/coniston-fleur-champagne.webp",
         "alt": "Fabric Coniston Fluer Champagne",
         "type": "Fabric",
         "composition": "40% Acrylic, 40% Polyester, 20% Viscose",
@@ -81,7 +81,7 @@
     },
     {
         "name": "Fleur Oyster",
-        "src": "/images/fabric/chairs/coniston-fleur-oyster.jpeg",
+        "src": "/images/fabric/chairs/coniston-fleur-oyster.webp",
         "alt": "Fabric Coniston Fluer Oyster",
         "type": "Fabric",
         "composition": "40% Acrylic, 40% Polyester, 20% Viscose",
@@ -89,7 +89,7 @@
     },
     {
         "name": "Fleur Blue",
-        "src": "/images/fabric/chairs/coniston-fleur-blue.jpeg",
+        "src": "/images/fabric/chairs/coniston-fleur-blue.webp",
         "alt": "Fabric Coniston Fluer Blue",
         "type": "Fabric",
         "composition": "40% Acrylic, 40% Polyester, 20% Viscose",
@@ -97,7 +97,7 @@
     },
     {
         "name": "Plain Champagne",
-        "src": "/images/fabric/chairs/coniston-plain-champagne.jpeg",
+        "src": "/images/fabric/chairs/coniston-plain-champagne.webp",
         "alt": "Fabric Coniston Plain Champagne",
         "type": "Fabric",
         "composition": "40% Acrylic, 40% Polyester, 20% Viscose",
@@ -105,7 +105,7 @@
     },
     {
         "name": "Patchwork Oyster",
-        "src": "/images/fabric/chairs/coniston-patchwork-oyster.jpeg",
+        "src": "/images/fabric/chairs/coniston-patchwork-oyster.webp",
         "alt": "Fabric Coniston Patchwork Oyster",
         "type": "Fabric",
         "composition": "40% Acrylic, 40% Polyester, 20% Viscose",
@@ -113,7 +113,7 @@
     },
     {
         "name": "Portobello Leaf Green",
-        "src": "/images/fabric/chairs/portobello-leaf-green.jpeg",
+        "src": "/images/fabric/chairs/portobello-leaf-green.webp",
         "alt": "Fabric Portobello Leaf Green",
         "type": "Fabric",
         "composition": "49% Acrylic, 39% Polyester, 12% Viscose",
@@ -121,7 +121,7 @@
     },
     {
         "name": "Portobello Boucle Cream",
-        "src": "/images/fabric/chairs/portobello-boucle-cream.jpeg",
+        "src": "/images/fabric/chairs/portobello-boucle-cream.webp",
         "alt": "Fabric Portobello Boucle cream",
         "type": "Fabric",
         "composition": "49% Acrylic, 39% Polyester, 12% Viscose",
@@ -129,7 +129,7 @@
     },
     {
         "name": "Portobello Boucle Navy",
-        "src": "/images/fabric/chairs/portobello-boucle-navy.jpeg",
+        "src": "/images/fabric/chairs/portobello-boucle-navy.webp",
         "alt": "Fabric Portobello Boucle Navy",
         "type": "Fabric",
         "composition": "49% Acrylic, 39% Polyester, 12% Viscose",
@@ -137,7 +137,7 @@
     },
     {
         "name": "Portobello Boucle Cocoa",
-        "src": "/images/fabric/chairs/portobello-boucle-cocoa.jpeg",
+        "src": "/images/fabric/chairs/portobello-boucle-cocoa.webp",
         "alt": "Fabric Portobello Boucle Cocoa",
         "type": "Fabric",
         "composition": "49% Acrylic, 39% Polyester, 12% Viscose",
@@ -145,7 +145,7 @@
     },
     {
         "name": "Portobello Boucle Claret",
-        "src": "/images/fabric/chairs/portobello-boucle-claret.jpeg",
+        "src": "/images/fabric/chairs/portobello-boucle-claret.webp",
         "alt": "Fabric Portobello Boucle Claret",
         "type": "Fabric",
         "composition": "49% Acrylic, 39% Polyester, 12% Viscose",
@@ -153,7 +153,7 @@
     },
     {
         "name": "Portobello Boucle Rose",
-        "src": "/images/fabric/chairs/portobello-boucle-rose.jpeg",
+        "src": "/images/fabric/chairs/portobello-boucle-rose.webp",
         "alt": "Fabric Portobello Boucle Rose",
         "type": "Fabric",
         "composition": "49% Acrylic, 39% Polyester, 12% Viscose",
@@ -161,7 +161,7 @@
     },
     {
         "name": "Portobello Boucle Natural",
-        "src": "/images/fabric/chairs/portobello-boucle-natural.jpeg",
+        "src": "/images/fabric/chairs/portobello-boucle-natural.webp",
         "alt": "Fabric Portobello Boucle Natural",
         "type": "Fabric",
         "composition": "49% Acrylic, 39% Polyester, 12% Viscose",
@@ -169,7 +169,7 @@
     },
     {
         "name": "Plain Grey",
-        "src": "/images/fabric/chairs/cromwell-plain-grey.jpeg",
+        "src": "/images/fabric/chairs/cromwell-plain-grey.webp",
         "alt": "Fabric Cromwell Plain Grey",
         "type": "Fabric",
         "composition": "55% Acrylic, 40% Polyester, 5% Viscose",
@@ -177,7 +177,7 @@
     },
     {
         "name": "Plain Silver",
-        "src": "/images/fabric/chairs/cromwell-plain-silver.jpeg",
+        "src": "/images/fabric/chairs/cromwell-plain-silver.webp",
         "alt": "Fabric Cromwell Plain Silver",
         "type": "Fabric",
         "composition": "55% Acrylic, 40% Polyester, 5% Viscose",

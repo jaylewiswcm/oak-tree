@@ -18,17 +18,6 @@ const FrequentlyAskedQuestions = () => {
                 <p>Everything you need to know about Oak Tree Mobility</p>
             </div>
         </div>
-
-        {/* <div className='faq-content con-reg'>
-            <div className='side-panel'>
-                <h3>Support</h3>
-                <h4>FAQs</h4>
-                <p>At Oak Tree Mobility our passion is to provide a service as high quality as our products, so your experience with us is second to none. We have a dedicated experienced team available to answer all of your questions and queries at any time.</p>
-            </div>
-            <div className='faqs'>
-                <FAQs type='faqs'/>
-            </div>
-        </div> */}
         <FAQsWrapper type='faqs' title='Support' copy='At Oak Tree Mobility our passion is to provide a service as high quality as our products, so your experience with us is second to none. We have a dedicated experienced team available to answer all of your questions and queries at any time.'/>
     </>
   )

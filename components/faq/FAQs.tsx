@@ -58,7 +58,7 @@ export const FAQs = ({type}: ComponentProps) => {
       if(index > 1) {
         return;
       }
-      // Create questsion structed data schema
+      // Create question structed data schema
       const faqStructuredData =  {
           "@type": "Question",
           name: faq.question,
@@ -67,11 +67,9 @@ export const FAQs = ({type}: ComponentProps) => {
             text: `<p>${faq.answer}</p>`
           }
         }
-
         schemaArray.push(faqStructuredData);
-        
     })
-
+    // Add object to component state to reference with jsx 
     setFaqSchema({
       "@context": "https://schema.org",
       "@type": "FAQPage",
@@ -83,14 +81,14 @@ export const FAQs = ({type}: ComponentProps) => {
         <script type="application/ld+json">
           {JSON.stringify(faqSchema)}
         </script>
-    <div className='faq-table'>
-      {type === 'faqs' && faqs.map((item:any, index: number) => 
-            <Accordion question={item.question} answer={item.answer} key={index}/>
-        )}
-      {type === 'chairs' && chairs.map((item:any, index: number) => 
-            <Accordion question={item.question} answer={item.answer} key={index}/>
-        )}
-    </div>
+      <div className='faq-table'>
+        {type === 'faqs' && faqs.map((item:any, index: number) => 
+              <Accordion question={item.question} answer={item.answer} key={index}/>
+          )}
+        {type === 'chairs' && chairs.map((item:any, index: number) => 
+              <Accordion question={item.question} answer={item.answer} key={index}/>
+          )}
+      </div>
   </>
   )
 }

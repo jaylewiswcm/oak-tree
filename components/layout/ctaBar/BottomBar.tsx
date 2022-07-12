@@ -18,7 +18,9 @@ export const BottomBar = ({className}: ComponentProps) => {
 
   return (
     <div className={`bottom-bar ${className}`}>
+        
         <div className='inner-bar'>
+        <div className='con-reg'>
             <LandbotChat />
             <div className='phone-number'>
                 <p>Questions? Call us free today:</p>
@@ -40,6 +42,7 @@ export const BottomBar = ({className}: ComponentProps) => {
     </button>
             </div>
         </div> 
+    </div>
     </div>
   )
 }

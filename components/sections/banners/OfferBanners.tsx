@@ -10,7 +10,7 @@ export const OfferBanners = ({orphan} : ComponentProps) => {
 
   return (
     <div className={`banners ${orphan ? 'orphan-con-reg' : 'con-reg'}`}>
-      <h3 className='heading'>Discover Our Latest Offers</h3>
+      <h2 className='heading'>Discover Our Latest Offers</h2>
       <div className='banners-flex'> 
     <Link href='/offers'>
       <a className='banner-vertical sale-banner'>

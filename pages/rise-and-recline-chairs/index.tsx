@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Image from 'next/image';
 import { NextSeo } from 'next-seo';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 // Shopify 
 import { getProductsInCollection } from "../../lib/shopify"
 // Context 
@@ -14,10 +15,15 @@ import { CollectionFormWrapper } from '../../components/forms/wrappers/Collectio
 import { CollectionGrid } from '../../components/collection/CollectionGrid';
 import { OfferBanners } from '../../components/sections/banners/OfferBanners';
 import { HealthBenfits } from '../../components/sections/health-benefits/HealthBenfits';
-import { FAQs } from '../../components/faq/FAQs';
 // images 
 import heroImage from '../../public/images/heros/chair-collection-hero.jpg'
 import { FAQsWrapper } from '../../components/faq/FAQsWrapper';
+import { Accessories } from '../../components/sections/accessories/Accessories';
+import { AccessoryCarousel } from '../../components/sections/accessories/AccessoryCarousel';
+// images
+import chairCollection from '../../public/images/collections/collection-chairs.png'
+import bedCollection from '../../public/images/collections/collection-beds.png'
+import bathLiftCollection from '../../public/images/collections/collection-bathlifts.png'
 
 const Index = (props:any) => {
 
@@ -27,12 +33,14 @@ const Index = (props:any) => {
     if(products.length === 0 ) {
       return <div>Error</div>
     }
+    
     return (
         <motion.div exit={{opacity:0}} >
             <NextSeo  
                 title="Rise and Recline Chairs | Oak Tree Mobility"
-                description="Here at Oak Tree Mobility we offer a two-man white-glove delivery and installation service included in the price of all our chairs and beds. Find out more."
+                description="All Oak Tree Mobility rise and recline chairs are custom built made to fit you, ensuring comfort like you've never felt before. Take a look at our chairs"
             />
+            
           <div className='product-collections'>
               <div className='col-hero'>
                 <div className='hero-image'>
@@ -48,10 +56,6 @@ const Index = (props:any) => {
                     />
                 </div>
                 <div className='hero-inner con-reg'>
-                {/* <div className='intro-box'>
-                      <p>Oak Tree</p>
-                      <h1>Rise and <br/>Recline Chairs</h1>
-                </div> */}
                 <button className='mobile-cta main-cta' onClick={() => setFormModal(true)}>
                   <p>Request a Free Brochure</p>
                 </button>
@@ -70,7 +74,76 @@ const Index = (props:any) => {
                 <OfferBanners orphan={false}/>
                 <HealthBenfits product='Rise and Recline Chairs'/>
                 <FAQsWrapper type='chairs' title='Rise and Recline Chairs' copy='At Oak Tree Mobility our passion is to provide a service as high quality as our products, so your experience with us is second to none. We have a dedicated experienced team available to answer all of your questions and queries at any time.' />
-                <Reviews orphan={false}/>
+                <Reviews orphan={false}/> 
+                <div className='col-content row-2 con-reg'>
+                          <div className="image-wrapper">
+                            <Image 
+                              src='/images/lifestyle/rep-and-chair.png'
+                              alt='Rep and chair'
+                              layout='fill'
+                              objectFit='cover'
+                              objectPosition='center'
+                            />
+                          </div>
+                          <div className='content'>
+                            <div className='icon-wrapper'>
+                              <Image
+                                src='/icons/collection-process/customisation.svg'
+                                alt='Made To Measure'
+                                layout='responsive'
+                                width='136'
+                                height='114'
+                              />
+                            </div>
+                              <h2>Our Rise and Recline Chairs can be Made to Measure</h2>
+                              <p>One of the most important choices you will make when buying your chair is its size. During your home consultation, you can try out one of our chairs and see how it feels. Then we will take your exact measurements and help you choose a chair that will fit you perfectly and offer supreme comfort.</p>
+                          </div>
+                </div>
+
+                <div className='col-content con-reg'>
+                      <h2 className='heading'>Make Your Chair Your Own</h2>
+                      {/* <Accessories type='chair' /> */}
+                      <AccessoryCarousel type='chair' />
+              </div>
+
+              <div className='collection-other-products con-reg'>
+                <h3>Explore Our Other Products</h3>
+
+                <div className='collections-grid'>
+                  <Link href='/adjustable-beds'><a className='collection-item'>
+                    <Image 
+                      src={bedCollection}
+                      alt='Adjustable Beds'
+                      layout='fill'
+                      objectFit='cover'
+                      objectPosition='left'
+                      placeholder='blur'
+                      quality={100}
+                    />
+                    <div className='overlay'>
+                
+                      <p className='col-name'>Adjustable Beds</p>
+                      <p>Take a look at our adjustable beds</p>
+                    </div>
+                    </a></Link>
+                  <Link href='/bath-lifts'><a className='collection-item'>
+                    <Image 
+                      src={bathLiftCollection}
+                      alt='Bath Lifts'
+                      layout='fill'
+                      objectFit='cover'
+                      objectPosition='center'
+                      placeholder='blur'
+                      quality={100}
+                    />
+                    <div className='overlay'>
+                      <p className='col-name'>Bath Lifts</p>
+                      <p>Take a look at our bath lifts</p>
+                    </div>
+                    </a></Link>
+                </div>
+              </div>
+
                 <Resources pageType='chairs' />
           </div>
           {/* <FooterCollections /> */}

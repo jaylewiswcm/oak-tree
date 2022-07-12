@@ -27,8 +27,8 @@ export const Accessory = ({item, slideChange}:ComponentProps) => {
                             src={image}
                             alt={name}
                             layout='responsive'
-                            width={349}
-                            height={174}
+                            width={780}
+                            height={460}
                         />
                     </div>
                     <div className='flex-row'>

@@ -103,7 +103,7 @@ const ChairProduct = (props:any) => {
             </div>
             <div className='product-details con-reg' id='product-information'>
                 <div className='product-content'>
-                    <h3 className='heading'>{props.product.productTitle.value}</h3>
+                    <h2 className='heading'>{props.product.productTitle.value}</h2>
                     <p className='desc'>{props.product.productParagraph.value}</p>
                     <div className='product-images chair-image-grid'>
                         <div className='image-wrapper'>
@@ -112,8 +112,8 @@ const ChairProduct = (props:any) => {
                                 src={props.product.chairLegLiftImage.value}
                                 alt={`${props.product.title} 1`}
                                 layout='responsive'
-                                width={1369}
-                                height={1500}
+                                width={534}
+                                height={600}
                                 quality={100}
                             />
                         </div>
@@ -123,10 +123,14 @@ const ChairProduct = (props:any) => {
                                 src={props.product.chairRisingImage.value}
                                 alt={`${props.product.title} 2`}
                                 layout='responsive'
-                                width={1369}
-                                height={1500}
+                                width={534}
+                                height={600}
                                 quality={100}
                             />
+                        </div>
+                        <div className='content'>
+                        <h2 className='heading'>Matching Rise and Recline Sofa</h2>
+                        <p className='desc'>{props.product.productParagraph.value}</p>
                         </div>
                         <div className='image-wrapper'>
                             <Image 
@@ -134,12 +138,13 @@ const ChairProduct = (props:any) => {
                                 src={props.product.chairLifestyleImage.value}
                                 alt={`${props.product.title} 3`}
                                 layout='responsive'
-                                width={1500}
-                                height={1006}
+                                width={900}
+                                height={604}
                                 quality={100}
                             />
                         </div>
                     </div>
+         
                 </div>
                     <InformationContainer product={props.product} productType='chair' showForm={() => setFormModal(true)}/>
             </div>
@@ -147,7 +152,6 @@ const ChairProduct = (props:any) => {
             <OurProcess />
             <TOC reference={tocRef} type='chair' sectionOneRef={sectionOne} sectionTwoRef={sectionTwo} sectionThreeRef={sectionThree} sectionFourRef={sectionFour}/>
             <div className='table-of-contents' ref={tocRef}>
-   
                 <MaterialChair isOpen={isOpen} openAccordian={() => openAccordian('material')} reference={sectionOne}/>
                 <SizeChair isOpen={isOpen} openAccordian={() => openAccordian('size')} reference={sectionTwo}/>
                 <MotorChair isOpen={isOpen} openAccordian={() => openAccordian('motor')} reference={sectionThree}/>

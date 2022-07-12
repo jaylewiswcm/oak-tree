@@ -21,8 +21,8 @@ export const Fabric = ({fabric}: ComponentProps) => {
                 src={src}
                 alt={alt}
                 layout='responsive'
-                width={100}
-                height={100}
+                width={600}
+                height={450}
             />
         </div>
         <p className='fabric-name'>{name}</p>

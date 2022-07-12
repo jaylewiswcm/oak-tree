@@ -8,7 +8,7 @@ interface ComponentProps {
 export const HealthBenfits = ({product}: ComponentProps) => {
   return (
     <div className='health-benefits'>
-    <h5>Improve Your Quality Of Life</h5>
+    <h2>Improve Your Quality Of Life</h2>
     <p className='subheading'>Oak Tree's {product} are beneficial if you suffer from:</p>
     <ul>
       { product === 'Bath Lifts' ? bathLiftBenefits.map((usp:any,index:number) => 

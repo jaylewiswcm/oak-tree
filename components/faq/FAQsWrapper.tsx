@@ -13,7 +13,7 @@ export const FAQsWrapper = ({title, copy, type}: ComponentProps) => {
     <div className='faq-content con-reg'>
         <div className='side-panel'>
             <h3>{title}</h3>
-            <h4>FAQs</h4>
+            <h2>FAQs</h2>
             <p>{copy}</p>
         </div>
         <div className='faqs'>
