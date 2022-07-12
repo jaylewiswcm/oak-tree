@@ -15,14 +15,13 @@ import { CollectionFormWrapper } from '../../components/forms/wrappers/Collectio
 import { CollectionGrid } from '../../components/collection/CollectionGrid';
 import { OfferBanners } from '../../components/sections/banners/OfferBanners';
 import { HealthBenfits } from '../../components/sections/health-benefits/HealthBenfits';
+import { RecommendedCollections } from '../../components/sections/recommendedProducts/RecommendedCollections';
 // images 
 import heroImage from '../../public/images/heros/chair-collection-hero.webp'
 import { FAQsWrapper } from '../../components/faq/FAQsWrapper';
 import { Accessories } from '../../components/sections/accessories/Accessories';
 import { AccessoryCarousel } from '../../components/sections/accessories/AccessoryCarousel';
-// images
-import bedCollection from '../../public/images/collections/collection-beds.png'
-import bathLiftCollection from '../../public/images/collections/collection-bathlifts.png'
+
 
 const Index = (props:any) => {
 
@@ -336,43 +335,8 @@ const Index = (props:any) => {
                       <AccessoryCarousel type='chair' />
               </div>
 
-              <div className='collection-other-products con-reg'>
-                <h3>Explore Our Other Products</h3>
 
-                <div className='collections-grid'>
-                  <Link href='/adjustable-beds'><a className='collection-item'>
-                    <Image 
-                      src={bedCollection}
-                      alt='Adjustable Beds'
-                      layout='fill'
-                      objectFit='cover'
-                      objectPosition='left'
-                      placeholder='blur'
-                      quality={100}
-                    />
-                    <div className='overlay'>
-                
-                      <p className='col-name'>Adjustable Beds</p>
-                      <p>Take a look at our adjustable beds</p>
-                    </div>
-                    </a></Link>
-                  <Link href='/bath-lifts'><a className='collection-item'>
-                    <Image 
-                      src={bathLiftCollection}
-                      alt='Bath Lifts'
-                      layout='fill'
-                      objectFit='cover'
-                      objectPosition='center'
-                      placeholder='blur'
-                      quality={100}
-                    />
-                    <div className='overlay'>
-                      <p className='col-name'>Bath Lifts</p>
-                      <p>Take a look at our bath lifts</p>
-                    </div>
-                    </a></Link>
-                </div>
-              </div>
+              <RecommendedCollections collection='chairs'/>
 
                 <Resources pageType='chairs' />
           </div>
