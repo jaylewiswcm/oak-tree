@@ -735,7 +735,7 @@
                     padding: 15px 0;
                     border-bottom: 1px $lighter-grey solid;
                     margin-bottom: 10px;
-                    flex-direction: column-reverse;
+                    flex-direction: column;
                     @media(min-width: 500px) and (max-width: 699px) {
                         flex-direction: row;
                     }
@@ -752,7 +752,14 @@
                         padding: 10px 20px;
                         border-radius: 25px;
                         white-space: nowrap; 
-                
+                        margin-bottom: 10px;
+                        @media(min-width: 500px) and (max-width: 699px) {
+                            margin-bottom:0px;
+                        }
+                        @media(min-width: 1000px) {
+                            margin-bottom:0px;
+                        }
+                 
                     }
                     .subheading {
                         margin-right: auto;
@@ -768,7 +775,7 @@
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    margin-bottom:10px;
+                
                     @media(min-width: 500px) and (max-width: 699px) {
                         justify-content: flex-end;
                         margin-bottom:0px;
@@ -776,7 +783,7 @@
                     @media(min-width: 1000px) {
                         align-items: center;
                         justify-content: center;
-                        margin-bottom:10px;
+
                         justify-content: flex-end; 
                         margin-bottom:0px;
                     }

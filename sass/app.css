@@ -689,42 +689,6 @@ body.freeze {
   opacity: 1;
 }
 
-.generic-form .action-wrapper {
-  padding-top: 15px;
-  padding-bottom: 25px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.generic-form .action-wrapper input[type=submit] {
-  border: none;
-  background-color: #009B72;
-  color: #fff;
-  padding: 20px 40px;
-  font-size: 1.8rem;
-  font-weight: 500;
-  border-radius: 5px;
-  width: 100%;
-  margin-left: auto;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
-}
-
-.generic-form .action-wrapper input[type=submit]:hover {
-  -webkit-box-shadow: 0 0 24px rgba(75, 176, 107, 0.56);
-          box-shadow: 0 0 24px rgba(75, 176, 107, 0.56);
-  -webkit-transform: translateY(-2px);
-          transform: translateY(-2px);
-}
-
-.generic-form .action-wrapper input[type=submit]:active {
-  background-color: #D5F0DD;
-  color: #009B72;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-}
-
 .generic-form .form-button-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -795,6 +759,57 @@ body.freeze {
   color: #009B72;
   font-size: 1.6rem;
   font-weight: 400;
+}
+
+.action-wrapper {
+  padding-top: 15px;
+  padding-bottom: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.action-wrapper input[type=submit], .action-wrapper button {
+  border: none;
+  background-color: #009B72;
+  color: #fff;
+  padding: 20px 40px;
+  font-size: 1.8rem;
+  font-weight: 500;
+  border-radius: 5px;
+  width: 100%;
+  margin-left: auto;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.action-wrapper input[type=submit]:hover, .action-wrapper button:hover {
+  -webkit-box-shadow: 0 0 24px rgba(75, 176, 107, 0.56);
+          box-shadow: 0 0 24px rgba(75, 176, 107, 0.56);
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+}
+
+.action-wrapper input[type=submit]:active, .action-wrapper button:hover {
+  background-color: #D5F0DD;
+  color: #009B72;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.action-wrapper.acting-button {
+  padding: 0 25px;
+}
+
+.action-wrapper.acting-button button {
+  max-width: 300px;
+  padding: 20px 20px;
+  border: 2px #009B72 solid;
+}
+
+.action-wrapper.acting-button button:hover {
+  -webkit-box-shadow: 0 0 24px rgba(75, 176, 107, 0.9);
+          box-shadow: 0 0 24px rgba(75, 176, 107, 0.9);
 }
 
 .generic-form::-webkit-scrollbar {
@@ -6589,9 +6604,9 @@ body.mobile-navbar .mobile-navigation {
   border-bottom: 1px #E3E3E3 solid;
   margin-bottom: 10px;
   -webkit-box-orient: vertical;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: column-reverse;
-          flex-direction: column-reverse;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 @media (min-width: 500px) and (max-width: 699px) {
@@ -6620,6 +6635,19 @@ body.mobile-navbar .mobile-navigation {
   padding: 10px 20px;
   border-radius: 25px;
   white-space: nowrap;
+  margin-bottom: 10px;
+}
+
+@media (min-width: 500px) and (max-width: 699px) {
+  .product-collections .collections-grid .collection-item .col-name-wrapper .title-and-swatches .product-type {
+    margin-bottom: 0px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .product-collections .collections-grid .collection-item .col-name-wrapper .title-and-swatches .product-type {
+    margin-bottom: 0px;
+  }
 }
 
 .product-collections .collections-grid .collection-item .col-name-wrapper .title-and-swatches .subheading {
@@ -6642,7 +6670,6 @@ body.mobile-navbar .mobile-navigation {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-bottom: 10px;
 }
 
 @media (min-width: 500px) and (max-width: 699px) {
@@ -6662,7 +6689,6 @@ body.mobile-navbar .mobile-navigation {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin-bottom: 10px;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
@@ -8715,7 +8741,7 @@ body.mobile-navbar .mobile-navigation {
 }
 
 .product-details .product-info .info-container .info-section .swatch-grid .swatch .inner-swatch {
-  width: 90%;
+  width: 100%;
   border-radius: 50%;
   overflow: hidden;
   position: absolute;

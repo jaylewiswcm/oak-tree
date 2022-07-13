@@ -190,33 +190,7 @@
                 opacity: 1;
             }
         }
-        .action-wrapper {
-            padding-top: 15px;
-            padding-bottom: 25px;
-            display: flex;
-            input[type=submit] {
-                border: none;
-                background-color: $oaktree-green;
-                color: $white;
-                padding: 20px 40px;
-                font-size: 1.8rem;
-                font-weight: 500;
-                border-radius: 5px;
-                width: 100%;
-                // box-shadow: 0 0 24px rgba(75, 176, 107, 0.56);
-                margin-left: auto;
-                transition: 0.2s;
-            }
-            input[type=submit]:hover {
-                box-shadow: 0 0 24px rgba(75, 176, 107, 0.56);
-                transform: translateY(-2px);
-            }
-            input[type=submit]:active {
-                background-color: $green-5;
-                color: $oaktree-green;
-                box-shadow: none;
-            }
-        }
+
         .form-button-wrapper {
             display: flex;
             justify-content: space-between;
@@ -271,6 +245,45 @@
                 font-size: 1.6rem;
                 font-weight: 400;
             }   
+        }
+    }
+    .action-wrapper {
+        padding-top: 15px;
+        padding-bottom: 25px;
+        display: flex;
+        input[type=submit], button {
+            border: none;
+            background-color: $oaktree-green;
+            color: $white;
+            padding: 20px 40px;
+            font-size: 1.8rem;
+            font-weight: 500;
+            border-radius: 5px;
+            width: 100%;
+            // box-shadow: 0 0 24px rgba(75, 176, 107, 0.56);
+            margin-left: auto;
+            transition: 0.2s;
+        }
+        input[type=submit]:hover, button:hover {
+            box-shadow: 0 0 24px rgba(75, 176, 107, 0.56);
+            transform: translateY(-2px);
+        }
+        input[type=submit]:active, button:hover {
+            background-color: $green-5;
+            color: $oaktree-green;
+            box-shadow: none;
+        }
+    }
+
+    .action-wrapper.acting-button {
+        padding: 0 25px;
+        button {
+            max-width: 300px;
+            padding: 20px 20px;
+            border: 2px $oaktree-green solid;
+        }
+        button:hover {
+            box-shadow: 0 0 24px rgba(75, 176, 107, 0.9);
         }
     }
     .generic-form::-webkit-scrollbar {

@@ -106,8 +106,8 @@ export const InformationContainer = ({product, showForm }:ComponentProps) => {
                         src={fabric.src}
                         alt={fabric.name}
                         layout='responsive'
-                        width='60'
-                        height='60'
+                        width='600'
+                        height='450'
                     />
                 </div>
             </div>

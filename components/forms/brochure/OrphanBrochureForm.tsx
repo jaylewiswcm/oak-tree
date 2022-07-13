@@ -186,8 +186,9 @@
 //   }
 // }
 
-import React, { useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import Router from 'next/router';
+import { useRouter } from 'next/router'
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 // Components
 import {TextInput} from '../inputs/TextInput';
@@ -196,10 +197,13 @@ import {TelInput} from '../inputs/TelInput';
 import { PostCodeInput } from '../inputs/PostCodeInput';
 
 interface ComponentProps {
-    productType: string
+    productType: string 
 }
 
+type FormStatus = boolean | null
+
 const OrphanBrochureForm = ({productType}: ComponentProps) => {
+    const [formStatus, setFormStatus] = useState<FormStatus>(null);
     const [formData, setFormData] = useState({
         product_interest: productType,
         first_name: "",
@@ -228,6 +232,23 @@ const OrphanBrochureForm = ({productType}: ComponentProps) => {
            phoneError: "",
             emailError: "",
     })
+
+    const router = useRouter()
+    
+    const FormSubmitBtn = useRef<HTMLInputElement | null>(null)
+
+    useEffect(() => {
+        formBehaviorHandler();
+    },[])
+
+    const formBehaviorHandler = ()  => {
+
+        const query = router.query.form_success?.toString()
+        const status = query ? JSON.parse(query) : null
+
+        setFormStatus(status)
+        console.log(formStatus);
+      }
 
     const onChange = (event: any) => {
         // Camelcase input name to relate name to state
@@ -294,8 +315,6 @@ const OrphanBrochureForm = ({productType}: ComponentProps) => {
             setErrors({ ...errors, emailError: ''})
 
         }
-        console.log(formData.email)
-        console.log(emailError)
 
         if(first_nameError || last_nameError || postcodeError || address_oneError || phoneError || emailError ) {
             setErrors({ ...errors, first_nameError, last_nameError, postcodeError, address_oneError, phoneError, emailError})
@@ -307,8 +326,8 @@ const OrphanBrochureForm = ({productType}: ComponentProps) => {
     
     const { executeRecaptcha } = useGoogleReCaptcha();
     
-    const onSubmit = (e:React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault();
+    const onSubmit = () => {
+        // e.preventDefault();
         const isValid:boolean = validate();
         if(isValid) {
             console.log(formData);    
@@ -317,22 +336,10 @@ const OrphanBrochureForm = ({productType}: ComponentProps) => {
                 return;
             }
             executeRecaptcha("OakTreeFormRequests").then((gReCaptchaToken) => {
-                console.log(gReCaptchaToken, "response Google reCaptcha server");
+                // console.log(gReCaptchaToken, "response Google reCaptcha server");
                 submitEnquiryForm(gReCaptchaToken);
             });
 
-            // fetch(`http://e.oaktreemobility.co.uk/l/349991/2022-06-29/j57vr`, {
-            //     method: "POST",
-            //     headers: {
-            //       "Content-Type": "application/x-www-form-urlencoded",
-            //     },
-            //     body: JSON.stringify({formData}), 
-            //   })
-            //     .then((response) => response.json())
-            //     .then((data) => {
-            //       console.log(data);     
-            //   });
-            
             // clear form
             setFormData(formData);
             // Send user to thank you page 
@@ -356,86 +363,106 @@ const OrphanBrochureForm = ({productType}: ComponentProps) => {
           .then((res) => res.json())
           .then((res) => {
             console.log(res, "response from backend")
+            if(res.status === 'success') {
+                if(FormSubmitBtn.current){
+                    FormSubmitBtn.current.click()
+                    console.log(FormSubmitBtn.current)
+                }
+            }   
           });
-      };
-      
+      };    
 
     return (
-        <form onSubmit={(e) => onSubmit(e)} className='generic-form orphan-form'>
-            <div className='tight-form-wrapper'>
-            <TextInput 
-                    error={errors.first_nameError}
-                    id="first_name"
-                    name="first_name"
-                    autoComplete="given-name"
-                    placeholder='Enter first name'
-                    value={formData.first_name} 
-                    onChange={(e:any) => onChange(e)} 
-                    htmlFor="first_name"
-                    label='First name'
-                    required={true}
-                />
+        <>
+            <form className='generic-form orphan-form' action='http://go.pardot.com/l/349991/2022-06-29/j57vr' method='POST'>
+                <div className='tight-form-wrapper'>
                 <TextInput 
-                    error={errors.last_nameError}
-                    id="last_name"
-                    name="last_name"
-                    autoComplete="family-name"
-                    placeholder='Enter last name'
-                    value={formData.last_name} 
-                    onChange={(e:any) => onChange(e)} 
-                    htmlFor="last_name"
-                    label='Last name'
-                    required={true}
-                />
-                </div>
-                <div className='tight-form-wrapper address-input-wrapper'>
-                    <PostCodeInput 
-                            error={errors.postcodeError}
-                            id="postcode"
-                            name='postcode'
-                            autoComplete="home postal-code"
-                            placeholder='Enter post code'
-                            value={formData.postcode} 
-                            onChange={(e:any) => onChange(e)} 
-                            htmlFor="postcode"
-                            label='Postal Code'
-                            required={true}
-                        />
-                    <TextInput 
-                        error={errors.address_oneError}
-                        id="address_one"
-                        name="address_one"
-                        autoComplete="home address-line1"
-                        placeholder='Enter first line of address'
-                        value={formData.address_one} 
+                        error={errors.first_nameError}
+                        id="first_name"
+                        name="first_name"
+                        autoComplete="given-name"
+                        placeholder='Enter first name'
+                        value={formData.first_name} 
                         onChange={(e:any) => onChange(e)} 
-                        htmlFor="address_one"
-                        label='Street Address'
+                        htmlFor="first_name"
+                        label='First name'
                         required={true}
                     />
-                </div>
-                <TelInput 
-                    error={errors.phoneError}
-                    id="phone"
-                    placeholder='Enter phone number'
-                    value={formData.phone} 
-                    onChange={(e:any) => onChange(e)} 
-                    htmlFor="phone"
-                    required={true}
-                />
-                <EmailInput 
-                    error={errors.emailError}
-                    id="email"
-                    placeholder='Enter email address'
-                    value={formData.email} 
-                    onChange={(e:any) => onChange(e)} 
-                    htmlFor="email"
-                    required={true}
-                />
-    <div className='form-section action-wrapper'>
-        <input type="submit" value='Request Your Free Brochure' />
-    </div>
-</form>
+                    <TextInput 
+                        error={errors.last_nameError}
+                        id="last_name"
+                        name="last_name"
+                        autoComplete="family-name"
+                        placeholder='Enter last name'
+                        value={formData.last_name} 
+                        onChange={(e:any) => onChange(e)} 
+                        htmlFor="last_name"
+                        label='Last name'
+                        required={true}
+                    />
+                    </div>
+                    <div className='tight-form-wrapper address-input-wrapper'>
+                        <PostCodeInput 
+                                error={errors.postcodeError}
+                                id="postcode"
+                                name='postcode'
+                                autoComplete="home postal-code"
+                                placeholder='Enter post code'
+                                value={formData.postcode} 
+                                onChange={(e:any) => onChange(e)} 
+                                htmlFor="postcode"
+                                label='Postal Code'
+                                required={true}
+                            />
+                        <TextInput 
+                            error={errors.address_oneError}
+                            id="address_one"
+                            name="address_one"
+                            autoComplete="home address-line1"
+                            placeholder='Enter first line of address'
+                            value={formData.address_one} 
+                            onChange={(e:any) => onChange(e)} 
+                            htmlFor="address_one"
+                            label='Street Address'
+                            required={true}
+                        />
+                    </div>
+                    <TelInput 
+                        error={errors.phoneError}
+                        id="phone"
+                        placeholder='Enter phone number'
+                        value={formData.phone} 
+                        onChange={(e:any) => onChange(e)} 
+                        htmlFor="phone"
+                        required={true}
+                    />
+                    <EmailInput 
+                        error={errors.emailError}
+                        id="email"
+                        placeholder='Enter email address'
+                        value={formData.email} 
+                        onChange={(e:any) => onChange(e)} 
+                        htmlFor="email"
+                        required={true}
+                    />
+                    <div className='hidden_fields' style={{visibility: 'hidden', display: 'none'}}>
+                        <input type="text" id='product_interest' name='product_interest' value='Test' onChange={(e:any) => onChange(e)} />
+                        <input type="text" id='lead_source' name='lead_source' value='Test' onChange={(e:any) => onChange(e)}/>
+                        <input type="text" id='ad_campaign' name='ad_campaign' value='Test' onChange={(e:any) => onChange(e)}/>
+                        <input type="text" id='gclid' name='gclid' value='Test' onChange={(e:any) => onChange(e)}/>
+                        <input type="text" id='request_type' name='request_type' value='Test' onChange={(e:any) => onChange(e)}/>
+                        <input type="text" id='newsletter_opt_in' name='newsletter_opt_in' value='Test' onChange={(e:any) => onChange(e)}/>
+                        <input type="text" id='third_party_opt_out' name='third_party_opt_out' value='Test' onChange={(e:any) => onChange(e)}/>
+                        {/* <input type="text" id='exit_intent_pardot' name='exit_intent_pardot' value='Test' onChange={(e:any) => onChange(e)}/> */}
+                    </div>
+            <div className='form-section action-wrapper' style={{display: 'none'}}>
+                <input type="submit" value='Request Your Free Brochure' ref={FormSubmitBtn} />
+            </div>
+        </form>
+        <div className='action-wrapper acting-button'>
+            <button onClick={() => onSubmit()}>Request Your Free Button</button>
+        </div>
+    </>
     )
   }
 

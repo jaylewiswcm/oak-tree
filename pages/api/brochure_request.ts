@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { json } from 'stream/consumers';
 
 const handler = (req:any, res:any) => {
 
@@ -20,67 +21,7 @@ const handler = (req:any, res:any) => {
               "Response from Google reCaptcha verification API"
             );
             if (reCaptchaRes?.score > 0.5) {
-              // Save data to the database from here
-
-              // console.log(req.body.formData);
-
-              // axios({
-              //   method: 'post',
-              //   url: 'http://e.oaktreemobility.co.uk/l/349991/2022-06-29/j57vr',
-              //   headers:{
-              //     'Content-Type': 'application/x-www-form-urlencoded'
-              //   },
-              //   data: req.body.formData
-              // })
-              // .then(function (response) {
-              //   console.log(response);
-              // })
-              // .catch(function (error) {
-              //   console.log(error);
-              // });
-   
-
-              const formData = req.body.formData;
-              // fetch(`https://e.oaktreemobility.co.uk/l/349991/2022-06-29/j57vr`, {
-              //   method: "POST",
-              //   body: `
-              //     "product_interest": "",
-              //     "first_name": "",
-              //     "last_name": "",
-              //     "postcode": "",
-              //     "address_one": "",
-              //     "phone":"",
-              //     "email": "",
-          
-              //     "title": "",
-              //     "lead_source": "",
-              //     "ad_campaign": "",
-              //     "gclid":"",
-              //     "request_type": "",
-              //     "newsletter_opt_in": "",
-              //     "third_party_opt_out": "",
-              //     "exit_intent_pardot": ""
-              //     `, 
-              // })
-              //   .then((response) => response.json())
-              //   .then((data) => {
-              //     console.log(data); 
-              //     console.log('Success Sending Data') 
-              //     res.status(200).json({
-              //       status: "success",
-              //       message: data,
-              //     });   
-              //     return data;
-              // });
-
-              axios.post('https://e.oaktreemobility.co.uk/l/349991/2022-06-29/j57vr', formData)
-              .then(function (response) {
-                console.log(response);
-              })
-              .catch(function (error) {
-                console.log(error);
-              });
-            
+              // Send success so we can submit form
               res.status(200).json({
                 status: "success",
                 message: "Enquiry submitted successfully",
@@ -105,3 +46,6 @@ const handler = (req:any, res:any) => {
   };
   
   export default handler;
+
+
+  
