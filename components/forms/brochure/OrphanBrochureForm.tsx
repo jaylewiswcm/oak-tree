@@ -374,7 +374,7 @@ const OrphanBrochureForm = ({productType}: ComponentProps) => {
 
     return (
         <>
-            <form className='generic-form orphan-form' action='http://go.pardot.com/l/349991/2022-06-29/j57vr' method='POST'>
+            <form className='generic-form orphan-form' action='https://go.pardot.com/l/349991/2022-06-29/j57vr' method='POST'>
                 <div className='tight-form-wrapper'>
                 <TextInput 
                         error={errors.first_nameError}
