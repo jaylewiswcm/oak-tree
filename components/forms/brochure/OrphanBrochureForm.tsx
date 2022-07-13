@@ -2,17 +2,22 @@ import React, { useEffect, useState, useRef } from 'react'
 import Image from 'next/image';
 import { useRouter } from 'next/router'
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
+import { getCookie } from 'cookies-next';
 // Components
 import {TextInput} from '../inputs/TextInput';
 import {EmailInput} from '../inputs/EmailInput';
 import {TelInput} from '../inputs/TelInput';
 import { PostCodeInput } from '../inputs/PostCodeInput';
+// Context
+import { useAppContext } from '../../../context/state';
 
 interface ComponentProps {
     productType: string 
 }
 
 const OrphanBrochureForm = ({productType}: ComponentProps) => {
+    const { adCookies } = useAppContext()
+
     const [formStatus, setFormStatus] = useState<string | null>(null);
     const [formData, setFormData] = useState({
         product_interest: productType,
@@ -22,7 +27,6 @@ const OrphanBrochureForm = ({productType}: ComponentProps) => {
         address_one: "",
         phone:"",
         email: "",
-
         title: "",
         lead_source: "",
         ad_campaign: "",
@@ -48,8 +52,11 @@ const OrphanBrochureForm = ({productType}: ComponentProps) => {
     const router = useRouter()
 
     useEffect(() => {
-        formBehaviorHandler();
-    },[router]) 
+        formBehaviorHandler();   
+        console.log(adCookies)
+        setFormData({...formData, "lead_source": adCookies.lead_source, "ad_campaign" : adCookies.ad_campaign, "gclid": adCookies.gclid })
+             
+    },[router,adCookies]) 
 
         // Due to pardot restrictions we have to handle form with their payload within the params
         const formBehaviorHandler = ()  => {
@@ -252,14 +259,14 @@ const OrphanBrochureForm = ({productType}: ComponentProps) => {
                         required={true}
                     />
                     <div className='hidden_fields' style={{visibility: 'hidden', display: 'none'}}>
-                        <input type="text" id='product_interest' name='product_interest' value='Test' onChange={(e:any) => onChange(e)} />
-                        <input type="text" id='lead_source' name='lead_source' value='Test' onChange={(e:any) => onChange(e)}/>
-                        <input type="text" id='ad_campaign' name='ad_campaign' value='Test' onChange={(e:any) => onChange(e)}/>
-                        <input type="text" id='gclid' name='gclid' value='Test' onChange={(e:any) => onChange(e)}/>
-                        <input type="text" id='request_type' name='request_type' value='Test' onChange={(e:any) => onChange(e)}/>
-                        <input type="text" id='newsletter_opt_in' name='newsletter_opt_in' value='Test' onChange={(e:any) => onChange(e)}/>
-                        <input type="text" id='third_party_opt_out' name='third_party_opt_out' value='Test' onChange={(e:any) => onChange(e)}/>
-                        {/* <input type="text" id='exit_intent_pardot' name='exit_intent_pardot' value='Test' onChange={(e:any) => onChange(e)}/> */}
+                        <input type="text" id='product_interest' name='product_interest' value={formData.product_interest} onChange={(e:any) => onChange(e)} />
+                        <input type="text" id='lead_source' name='lead_source' value={formData.lead_source} onChange={(e:any) => onChange(e)}/>
+                        <input type="text" id='ad_campaign' name='ad_campaign' value={formData.ad_campaign} onChange={(e:any) => onChange(e)}/>
+                        <input type="text" id='gclid' name='gclid' value={formData.gclid} onChange={(e:any) => onChange(e)}/>
+                        <input type="text" id='request_type' name='request_type' value='Brochure' onChange={(e:any) => onChange(e)}/>
+                        <input type="text" id='newsletter_opt_in' name='newsletter_opt_in' value='FALSE' onChange={(e:any) => onChange(e)}/>
+                        <input type="text" id='third_party_opt_out' name='third_party_opt_out' value='FALSE' onChange={(e:any) => onChange(e)}/>
+                        <input type="text" id='exit_intent_pardot' name='exit_intent_pardot' value='FALSE' onChange={(e:any) => onChange(e)}/>
                     </div> 
             <div className='form-section action-wrapper' style={{display: 'none'}}>
                 <input type="submit" value='Request Your Free Brochure' ref={FormSubmitBtn} />

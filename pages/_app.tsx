@@ -8,6 +8,7 @@ import { AppWrapper } from '../context/state'
 import Layout from '../components/layout/Layout';
 import OrphanLayout from '../components/layout/OrphanLayout'
 import Head from 'next/head';
+import { SetCookies, GetCookies } from '../utils/cookies';
 
 function App({ Component, pageProps, router }:AppProps) {
  
@@ -26,6 +27,8 @@ function App({ Component, pageProps, router }:AppProps) {
         <OrphanLayout>   
             <Component {...pageProps}></Component>
         </OrphanLayout>
+        <SetCookies/>
+        <GetCookies />
       </AppWrapper>
       </GoogleReCaptchaProvider>
     )
@@ -40,6 +43,8 @@ function App({ Component, pageProps, router }:AppProps) {
         <Layout>
             <Component {...pageProps}></Component>
         </Layout>
+        <SetCookies/>
+        <GetCookies />
       </AppWrapper>
   )
 }
