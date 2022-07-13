@@ -7,6 +7,7 @@ import Header from './orphan/Header';
 // Form Components
 import Modal from '../modal/Modal';
 import PopupBrochureRequestForm from '../forms/PopupBrochureRequestForm';
+import { FormSubmissionErrorPopup } from '../forms/error/FormSubmissionErrorPopup';
 
 interface ComponentProps  {
     children: any
@@ -41,7 +42,7 @@ interface ComponentProps  {
             { children }
             <BottomBar className={hideClass} />
             {formModal &&  <Modal classNames='form-modal' setShow={setFormModal}><PopupBrochureRequestForm setShow={setFormModal} /></Modal>}
-      
+            <FormSubmissionErrorPopup />
         </>
     )
 }

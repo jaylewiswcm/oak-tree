@@ -1,193 +1,4 @@
-// import React, { Component } from 'react'
-// import Router from 'next/router';
-// // Components
-// import {TextInput} from '../inputs/TextInput';
-// import {EmailInput} from '../inputs/EmailInput';
-// import {TelInput} from '../inputs/TelInput';
-// import { PostCodeInput } from '../inputs/PostCodeInput';
-
-// const initialState = {
-//     first_name: "",
-//     lname: "",
-//     postalCode: "",
-//     address_one: "",
-//    phone:"",
-//     email: "",
-//     first_nameError: "",
-//     lnameError: "",
-//     postalCodeError:"",
-//     address_oneError: "",
-//     telError: "",
-//     emailError: "",  
-// }
-
-// export default class OrphanBrochureForm extends Component {
-//     state = initialState;
-
-//     onChange = (event: any) => {
-//         // Camelcase input name to relate name to state
-//         const name = event.target.name.replace(/-([a-z])/g, (g:any) => { return g[1].toUpperCase()});
-
-//         this.setState({
-//             [name] : event.target.value
-//         })
-    
-//         const state:any = this.state;
-
-//         const errorName:string = name + "Error";  
-      
-//         if(state[errorName] !== '') {
-//             console.log(state[errorName]);
-//             this.validate();
-//             // this.setState({ [errorName] : '' })
-//         }
- 
-//     }
-
-//     validate = () => {
-//         let first_nameError= ""; 
-//         let lnameError= ""; 
-//         let postalCodeError= "";
-//         let address_oneError= "";
-//         let telError= "";
-//         let emailError= "";
-
-//         if(!this.state.first_name) {
-//             first_nameError = 'Enter your first name'
-//         }
-//         if(!this.state.lname) {
-//             lnameError = 'Enter your last name'
-//         }
-//         if(!this.state.postalCode) {
-//             postalCodeError = 'Enter your postal code'
-//         } else if(this.state.postalCode.length < 6 || this.state.postalCode.length > 8) {
-//             postalCodeError = 'Enter a valid UK post code'
-//         }
-//         if(!this.state.streetAddress) {
-//             streetAddressError = 'Enter your street address'
-//         }
- 
-//         if(!this.state.tel) {
-//             telError = 'Enter your phone number'
-//         } else if(this.state.tel.length < 9) {
-//             telError = 'Your phone number looks to short'
-//         } else if(this.state.tel.length > 11) {
-//             telError = 'Your phone number looks to long'
-//         }
-
-//         if(!this.state.email) {
-//             emailError = 'Enter your last name'
-//         }
-//         if(!this.state.email.includes('@') ) {
-//             emailError = 'Enter a valid email address'
-//         }
-
-//         if(first_nameError || lnameError || postalCodeError || streetAddressError || telError || emailError) {
-//             this.setState({first_nameError, lnameError, postalCodeError, streetAddressError, telError, emailError})
-//             return false;
-//         } 
-
-//         return true;
-//     }
-
-//     onSubmit = (e:React.FormEvent<HTMLFormElement>) => {
-//         e.preventDefault();
-//         const isValid:boolean = this.validate();
-//         if(isValid) {
-//             console.log(this.state);    
-//             // clear form
-//             this.setState(initialState);
-//             // Send user to thank you page 
-//             Router.push('/thank-you-for-your-brochure-request')
-//         }
-      
-//     }
-
-//   render() {
-//     return (
-//         <form onSubmit={(e) => this.onSubmit(e)} className='generic-form orphan-form'>
-//             <div className='tight-form-wrapper'>
-//             <TextInput 
-//                     error={this.state.first_nameError}
-//                     id="first_name"
-//                     name="first_name"
-//                     autoComplete="family-name"
-//                     placeholder=''
-//                     value={this.state.first_name} 
-//                     onChange={(e:any) => this.onChange(e)} 
-//                     htmlFor="first_name"
-//                     label='First name'
-//                     required={true}
-//                 />
-//                            <TextInput 
-//                     error={this.state.lnameError}
-//                     id="lname"
-//                     name="lname"
-//                     autoComplete="family-name"
-//                     placeholder=''
-//                     value={this.state.lname} 
-//                     onChange={(e:any) => this.onChange(e)} 
-//                     htmlFor="lname"
-//                     label='Last name'
-//                     required={true}
-//                 />
-//                 </div>
-//                 <div className='tight-form-wrapper'>
-//             <PostCodeInput 
-//                         error={this.state.postalCodeError}
-//                         id="postal-code"
-//                         name='postal-code'
-//                         autoComplete="home postal-code"
-//                         placeholder=''
-//                         value={this.state.postalCode} 
-//                         onChange={(e:any) => this.onChange(e)} 
-//                         htmlFor="postal-code"
-//                         label='Postal Code'
-//                         required={true}
-//                     />
-//                 <TextInput 
-//                     error={this.state.streetAddressError}
-//                     id="address_one"
-//                     name="address_one"
-//                     autoComplete="home address-line1"
-//                     placeholder=''
-//                     value={this.state.streetAddress} 
-//                     onChange={(e:any) => this.onChange(e)} 
-//                     htmlFor="address_one"
-//                     label='Street Address'
-//                     required={true}
-//                 />
-//                 </div>
-//             {/* <div className='tight-form-wrapper'>
-//                 </div> */}
-//                 <TelInput 
-//                     error={this.state.telError}
-//                     id="tel"
-//                     placeholder=''
-//                     value={this.state.tel} 
-//                     onChange={(e:any) => this.onChange(e)} 
-//                     htmlFor="tel"
-//                     required={true}
-//                 />
-//                 <EmailInput 
-//                     error={this.state.emailError}
-//                     id="email"
-//                     placeholder=''
-//                     value={this.state.email} 
-//                     onChange={(e:any) => this.onChange(e)} 
-//                     htmlFor="email"
-//                     required={true}
-//                 />
-//     <div className='form-section action-wrapper'>
-//         <input type="submit" value='Request Your Free Brochure' />
-//     </div>
-// </form>
-//     )
-//   }
-// }
-
 import React, { useEffect, useState, useRef } from 'react'
-import Router from 'next/router';
 import Image from 'next/image';
 import { useRouter } from 'next/router'
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
@@ -201,11 +12,8 @@ interface ComponentProps {
     productType: string 
 }
 
-type FormStatus = string | boolean | null
-
 const OrphanBrochureForm = ({productType}: ComponentProps) => {
-    const [formStatus, setFormStatus] = useState<FormStatus>(null);
-    
+    const [formStatus, setFormStatus] = useState<string | null>(null);
     const [formData, setFormData] = useState({
         product_interest: productType,
         first_name: "",
@@ -234,36 +42,23 @@ const OrphanBrochureForm = ({productType}: ComponentProps) => {
            phoneError: "",
             emailError: "",
     })
-
-    const router = useRouter()
-    
+    // Ref for hidden submit btn
     const FormSubmitBtn = useRef<HTMLInputElement | null>(null)
+    // Init router
+    const router = useRouter()
 
     useEffect(() => {
-        console.log(router.query.form_success)
         formBehaviorHandler();
     },[router]) 
 
-    const formBehaviorHandler = ()  => {
-        const query = JSON.stringify(router.query.form_success)
-        
-        const status = query ? JSON.parse(query) : null
-
-        setFormStatus(status)
-      }
-
-      const RemoveFormSuccessFromRouterQuery = () => { 
-            let params: any = ''
-   
-            for (const [key, value] of Object.entries(router.query)) {                
-                if(key !== 'form_success') {
-                    params = params + `${key}=${value}&`
-                }
-            }
-
-            router.push(`${router.route}?${params}`)
-      }
-
+        // Due to pardot restrictions we have to handle form with their payload within the params
+        const formBehaviorHandler = ()  => {
+            // Return value of 'form_success' param
+            const query = JSON.stringify(router.query.form_success)
+            const status = query ? JSON.parse(query) : null
+            // Set state with the status of the form submissionn
+            setFormStatus(status)
+          }
 
     const onChange = (event: any) => {
         // Camelcase input name to relate name to state
@@ -280,6 +75,7 @@ const OrphanBrochureForm = ({productType}: ComponentProps) => {
         if(state[errorName] !== '') {
             validate();
         }
+ 
     }
 
     const validate = () => {
@@ -473,22 +269,7 @@ const OrphanBrochureForm = ({productType}: ComponentProps) => {
             <button onClick={() => onSubmit()}>Request Your Free Button</button>
         </div>
 
-        { formStatus &&
-            <div className='form-error-pop-up'>
-                <div className='icon'>
-                    <Image
-                        src='/icons/forms/attention.svg'
-                        alt='Attention'
-                        layout='responsive'
-                        width='90'
-                        height='90'
-                    />
-                </div>
-                <p className='attention'>Attention</p>
-                <p>Sorry your brochure request has not been accepted. There has been an error with your form submission, please try again.</p>
-                <button onClick={() => RemoveFormSuccessFromRouterQuery()}>Close message</button>
-            </div>
-            }
+       
     </>
     )
   }

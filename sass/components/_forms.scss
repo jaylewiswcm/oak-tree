@@ -527,15 +527,16 @@
     .form-error-pop-up {
         position: fixed;
         top:50%;
-        left: 50;
+        left: 50%;
         transform: translate(-50%, -50%);
         background-color: $white;
         border-radius: 6px;
         border: 2px $red-2 solid;
-        box-shadow: 0 0 16px rgba(0,0,0,.18);
+        box-shadow: 0 0 16px rgba(0,0,0,.25);
         padding: 50px;
         display: flex;
         flex-direction: column;
+        z-index: 999;
         .icon {
             width: 80px;
             margin: 0 auto;
