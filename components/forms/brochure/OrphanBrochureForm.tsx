@@ -188,6 +188,7 @@
 
 import React, { useEffect, useState, useRef } from 'react'
 import Router from 'next/router';
+import Image from 'next/image';
 import { useRouter } from 'next/router'
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 // Components
@@ -200,10 +201,11 @@ interface ComponentProps {
     productType: string 
 }
 
-type FormStatus = boolean | null
+type FormStatus = string | boolean | null
 
 const OrphanBrochureForm = ({productType}: ComponentProps) => {
     const [formStatus, setFormStatus] = useState<FormStatus>(null);
+    
     const [formData, setFormData] = useState({
         product_interest: productType,
         first_name: "",
@@ -238,17 +240,30 @@ const OrphanBrochureForm = ({productType}: ComponentProps) => {
     const FormSubmitBtn = useRef<HTMLInputElement | null>(null)
 
     useEffect(() => {
+        console.log(router.query.form_success)
         formBehaviorHandler();
-    },[])
+    },[router]) 
 
     const formBehaviorHandler = ()  => {
-
-        const query = router.query.form_success?.toString()
+        const query = JSON.stringify(router.query.form_success)
+        
         const status = query ? JSON.parse(query) : null
 
         setFormStatus(status)
-        console.log(formStatus);
       }
+
+      const RemoveFormSuccessFromRouterQuery = () => { 
+            let params: any = ''
+   
+            for (const [key, value] of Object.entries(router.query)) {                
+                if(key !== 'form_success') {
+                    params = params + `${key}=${value}&`
+                }
+            }
+
+            router.push(`${router.route}?${params}`)
+      }
+
 
     const onChange = (event: any) => {
         // Camelcase input name to relate name to state
@@ -262,14 +277,9 @@ const OrphanBrochureForm = ({productType}: ComponentProps) => {
 
         const errorName:string = name + "Error";  
 
-        // console.log(`${errorName} : ${state[errorName]}`);
-
         if(state[errorName] !== '') {
-
-            
             validate();
         }
- 
     }
 
     const validate = () => {
@@ -454,7 +464,7 @@ const OrphanBrochureForm = ({productType}: ComponentProps) => {
                         <input type="text" id='newsletter_opt_in' name='newsletter_opt_in' value='Test' onChange={(e:any) => onChange(e)}/>
                         <input type="text" id='third_party_opt_out' name='third_party_opt_out' value='Test' onChange={(e:any) => onChange(e)}/>
                         {/* <input type="text" id='exit_intent_pardot' name='exit_intent_pardot' value='Test' onChange={(e:any) => onChange(e)}/> */}
-                    </div>
+                    </div> 
             <div className='form-section action-wrapper' style={{display: 'none'}}>
                 <input type="submit" value='Request Your Free Brochure' ref={FormSubmitBtn} />
             </div>
@@ -462,6 +472,23 @@ const OrphanBrochureForm = ({productType}: ComponentProps) => {
         <div className='action-wrapper acting-button'>
             <button onClick={() => onSubmit()}>Request Your Free Button</button>
         </div>
+
+        { formStatus &&
+            <div className='form-error-pop-up'>
+                <div className='icon'>
+                    <Image
+                        src='/icons/forms/attention.svg'
+                        alt='Attention'
+                        layout='responsive'
+                        width='90'
+                        height='90'
+                    />
+                </div>
+                <p className='attention'>Attention</p>
+                <p>Sorry your brochure request has not been accepted. There has been an error with your form submission, please try again.</p>
+                <button onClick={() => RemoveFormSuccessFromRouterQuery()}>Close message</button>
+            </div>
+            }
     </>
     )
   }
