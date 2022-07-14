@@ -5,6 +5,7 @@ export const AppContext = createContext();
 export const AppWrapper = ({ children }) => {
     const [productPage, setProductPage] = useState(false);
     const [formModal, setFormModal]  = useState(false)
+    const [isExitIntent, setIsExitIntent]  = useState(false)
     const [adCookies, assignAdCookies]  = useState({
         "lead_source": "",
         "ad_campaign": "",
@@ -17,7 +18,9 @@ export const AppWrapper = ({ children }) => {
         setFormModal,
         setProductPage,
         assignAdCookies,
-        adCookies
+        adCookies,
+        setIsExitIntent,
+        isExitIntent
     }
 
 return (

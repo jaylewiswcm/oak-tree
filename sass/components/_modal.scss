@@ -26,6 +26,11 @@ body.freeze {
     align-items: center;
     justify-content: center;
     z-index: 99998;
+    opacity: 0;
+    transition: 0.2s,  opacity 0.4s;;
+    // transform: translateY(60%) scale(0);
+    // transition: transform 0.3s cubic-bezier(0.4, 0.0, 0.2, 1), opacity 0.4s;
+    visibility: hidden;
     .modal-bg-btn {
         position: absolute;
         top:0;
@@ -53,6 +58,8 @@ body.freeze {
         border-radius: 6px;
         width: 90%;
         height: 90vh; 
+        transform: translateY(60%) scale(0);
+        transition: transform 0.3s cubic-bezier(0.4, 0.0, 0.2, 1), opacity 0.4s;
         @media(min-width: 800px) {
             width: 500px;
             height: 650px;
@@ -68,12 +75,19 @@ body.freeze {
             }
         }
     }
+  
 }
 .modal.show-modal {
     overflow: hidden;
     display: flex;
 }
-
+.modal.visible {
+    opacity: 1;
+    visibility: visible;
+    .form-modal {
+        transform: translateY(0) scale(1);
+    }
+}
 .video-carousel:hover {
     .close-modal {
         opacity: 1;

@@ -4,16 +4,21 @@ interface ComponentProps {
     classNames: string
     children: any
     setShow: any
+    visible: boolean
 }
 
-const Modal = ({children, classNames, setShow}: ComponentProps) => {
+const Modal = ({children, classNames, setShow, visible}: ComponentProps) => {
     useEffect(() => {
-            const dd = document.body;
-            dd.classList.add('freeze');
-            return () => dd.classList.remove('freeze');                
+      console.log(visible)
+      if(visible) {
+        const dd = document.body;
+        dd.classList.add('freeze');
+        return () => dd.classList.remove('freeze');    
+      } 
+      // return () => setShow(false)       
     })
   return (
-    <div className='modal show-modal' >
+    <div className={`modal show-modal ${visible ? 'visible' : ''}`} >
       <div className='modal-bg-btn' onClick={() => setShow(false)}></div>
         <div className={`modal-inner ${classNames}`}>
         { children }

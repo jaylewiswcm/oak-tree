@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 // Utils
 import { client } from "../../utils/shopify/shopify-client";
-
 // Components 
 import { CollectionItem } from './CollectionItem';
 import Modal from '../modal/Modal'
@@ -55,7 +54,7 @@ export const CollectionGrid = ({ products }: ComponentProps) => {
       {products.map((product:any, index:number) => 
         <CollectionItem product={product} key={index} setShow={setShow} />
       )}
-      { modalShow && <Modal classNames='' setShow={setShow} ><FabricSelection setShow={setShow} /></Modal>}
+      {/* <Modal classNames='' visible={modalShow} setShow={setShow} ><FabricSelection setShow={setShow} /></Modal> */}
     </div>
     </>
   )

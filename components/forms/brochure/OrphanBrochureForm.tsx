@@ -1,8 +1,6 @@
 import React, { useEffect, useState, useRef } from 'react'
-import Image from 'next/image';
 import { useRouter } from 'next/router'
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
-import { getCookie } from 'cookies-next';
 // Components
 import {TextInput} from '../inputs/TextInput';
 import {EmailInput} from '../inputs/EmailInput';
@@ -10,24 +8,23 @@ import {TelInput} from '../inputs/TelInput';
 import { PostCodeInput } from '../inputs/PostCodeInput';
 // Context
 import { useAppContext } from '../../../context/state';
+import { TitleSelection } from '../inputs/TitleSelection';
 
 interface ComponentProps {
     productType: string 
 }
 
 const OrphanBrochureForm = ({productType}: ComponentProps) => {
-    const { adCookies } = useAppContext()
-
-    const [formStatus, setFormStatus] = useState<string | null>(null);
+    const { adCookies } = useAppContext();
     const [formData, setFormData] = useState({
         product_interest: productType,
+        title: "",
         first_name: "",
         last_name: "",
         postcode: "",
         address_one: "",
         phone:"",
         email: "",
-        title: "",
         lead_source: "",
         ad_campaign: "",
         gclid: "",
@@ -38,12 +35,12 @@ const OrphanBrochureForm = ({productType}: ComponentProps) => {
     })
 
     const [errors, setErrors] = useState({
-        product_interestErrors: "",
+            titleError:"",
             first_nameError: "",
             last_nameError: "",
             postcodeError:"",
             address_oneError: "",
-           phoneError: "",
+            phoneError: "",
             emailError: "",
     })
     // Ref for hidden submit btn
@@ -52,20 +49,9 @@ const OrphanBrochureForm = ({productType}: ComponentProps) => {
     const router = useRouter()
 
     useEffect(() => {
-        formBehaviorHandler();   
-        console.log(adCookies)
-        setFormData({...formData, "lead_source": adCookies.lead_source, "ad_campaign" : adCookies.ad_campaign, "gclid": adCookies.gclid })
-             
+        // Assign the ad data stored in the cookies to the correct state
+        setFormData({...formData, "lead_source": adCookies.lead_source, "ad_campaign" : adCookies.ad_campaign, "gclid": adCookies.gclid })             
     },[router,adCookies]) 
-
-        // Due to pardot restrictions we have to handle form with their payload within the params
-        const formBehaviorHandler = ()  => {
-            // Return value of 'form_success' param
-            const query = JSON.stringify(router.query.form_success)
-            const status = query ? JSON.parse(query) : null
-            // Set state with the status of the form submissionn
-            setFormStatus(status)
-          }
 
     const onChange = (event: any) => {
         // Camelcase input name to relate name to state
@@ -86,6 +72,7 @@ const OrphanBrochureForm = ({productType}: ComponentProps) => {
     }
 
     const validate = () => {
+        let titleError = ""; 
         let first_nameError = ""; 
         let last_nameError = ""; 
         let postcodeError = "";
@@ -93,6 +80,9 @@ const OrphanBrochureForm = ({productType}: ComponentProps) => {
         let phoneError = "";
         let emailError = "";
 
+        if(!formData.title) {
+            titleError = 'Choose your title'
+        }
         if(!formData.first_name) {
             first_nameError = 'Enter your first name'
         }
@@ -117,20 +107,17 @@ const OrphanBrochureForm = ({productType}: ComponentProps) => {
         }
 
         if(!formData.email) {
-            // console.log(`Email not entered: ${formData.email}`)
             emailError = 'Enter your email address'
         }
 
         if(!formData.email.includes('@') ) {
-            // console.log(`Email not valid: ${formData.email}`)
             emailError = 'Enter a valid email address'
         } else {
             setErrors({ ...errors, emailError: ''})
-
         }
 
-        if(first_nameError || last_nameError || postcodeError || address_oneError || phoneError || emailError ) {
-            setErrors({ ...errors, first_nameError, last_nameError, postcodeError, address_oneError, phoneError, emailError})
+        if(titleError || first_nameError || last_nameError || postcodeError || address_oneError || phoneError || emailError ) {
+            setErrors({ ...errors, titleError, first_nameError, last_nameError, postcodeError, address_oneError, phoneError, emailError})
             return false;
         } 
 
@@ -140,10 +127,8 @@ const OrphanBrochureForm = ({productType}: ComponentProps) => {
     const { executeRecaptcha } = useGoogleReCaptcha();
     
     const onSubmit = () => {
-        // e.preventDefault();
         const isValid:boolean = validate();
-        if(isValid) {
-            console.log(formData);    
+        if(isValid) {  
             if (!executeRecaptcha) {
                 console.log("Execute recaptcha not yet available");
                 return;
@@ -151,12 +136,10 @@ const OrphanBrochureForm = ({productType}: ComponentProps) => {
             executeRecaptcha("OakTreeFormRequests").then((gReCaptchaToken) => {
                 // console.log(gReCaptchaToken, "response Google reCaptcha server");
                 submitEnquiryForm(gReCaptchaToken);
+                // Clear form
+                setFormData(formData);
             });
-
-            // clear form
-            setFormData(formData);
-            // Send user to thank you page 
-            // Router.push('/thank-you-for-your-brochure-request')
+     
         }
     }
 
@@ -179,7 +162,6 @@ const OrphanBrochureForm = ({productType}: ComponentProps) => {
             if(res.status === 'success') {
                 if(FormSubmitBtn.current){
                     FormSubmitBtn.current.click()
-                    console.log(FormSubmitBtn.current)
                 }
             }   
           });
@@ -188,7 +170,20 @@ const OrphanBrochureForm = ({productType}: ComponentProps) => {
     return (
         <>
             <form className='generic-form orphan-form' action='https://go.pardot.com/l/349991/2022-06-29/j57vr' method='POST'>
+            <TitleSelection 
+                        error={errors.titleError}
+                        id="title"
+                        name="title"
+                        autoComplete="title"
+                        placeholder=''
+                        value={formData.title} 
+                        onChange={(e:any) => onChange(e)} 
+                        htmlFor="title"
+                        label='First name'
+                        required={true}
+                    />
                 <div className='tight-form-wrapper'>
+                
                 <TextInput 
                         error={errors.first_nameError}
                         id="first_name"
@@ -224,7 +219,7 @@ const OrphanBrochureForm = ({productType}: ComponentProps) => {
                                 value={formData.postcode} 
                                 onChange={(e:any) => onChange(e)} 
                                 htmlFor="postcode"
-                                label='Postal Code'
+                                label='Post Code'
                                 required={true}
                             />
                         <TextInput 
@@ -259,13 +254,21 @@ const OrphanBrochureForm = ({productType}: ComponentProps) => {
                         required={true}
                     />
                     <div className='hidden_fields' style={{visibility: 'hidden', display: 'none'}}>
+                        <label htmlFor='product_interest'></label>
                         <input type="text" id='product_interest' name='product_interest' value={formData.product_interest} onChange={(e:any) => onChange(e)} />
+                        <label htmlFor='lead_source'></label>
                         <input type="text" id='lead_source' name='lead_source' value={formData.lead_source} onChange={(e:any) => onChange(e)}/>
+                        <label htmlFor='ad_campaign'></label>
                         <input type="text" id='ad_campaign' name='ad_campaign' value={formData.ad_campaign} onChange={(e:any) => onChange(e)}/>
+                        <label htmlFor='gclid'></label>
                         <input type="text" id='gclid' name='gclid' value={formData.gclid} onChange={(e:any) => onChange(e)}/>
+                        <label htmlFor='request_type'></label>
                         <input type="text" id='request_type' name='request_type' value='Brochure' onChange={(e:any) => onChange(e)}/>
+                        <label htmlFor='newsletter_opt_in'></label>
                         <input type="text" id='newsletter_opt_in' name='newsletter_opt_in' value='FALSE' onChange={(e:any) => onChange(e)}/>
+                        <label htmlFor='newsletter_opt_in'></label>
                         <input type="text" id='third_party_opt_out' name='third_party_opt_out' value='FALSE' onChange={(e:any) => onChange(e)}/>
+                        <label htmlFor='exit_intent_pardot'></label>
                         <input type="text" id='exit_intent_pardot' name='exit_intent_pardot' value='FALSE' onChange={(e:any) => onChange(e)}/>
                     </div> 
             <div className='form-section action-wrapper' style={{display: 'none'}}>

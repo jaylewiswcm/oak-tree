@@ -44,7 +44,7 @@ const Footer = () => {
                             <form action="">
                                 <div className="input-wrapper">
                                     <input type="text" placeholder='Enter Email Address'/>
-                                    <input type="submit" value='Subscribe'/>
+                                    <input type="submit" value='Subscribe'id='subscribe-to-email'/>
                                 </div>
                             </form>
                         </div>

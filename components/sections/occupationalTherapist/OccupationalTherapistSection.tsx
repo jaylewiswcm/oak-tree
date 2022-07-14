@@ -61,7 +61,7 @@ const stagger = {
 
   return (
     <div className='occupational-therapist-wrapper'>
-      {isOpen && <Modal classNames="" setShow={setOpenModal}><VideoCarousel videoId="l9adE0mWzUY" setShow={setOpenModal} show={isOpen}></VideoCarousel></Modal> }
+     <Modal classNames="" visible={isOpen} setShow={setOpenModal}><VideoCarousel videoId="l9adE0mWzUY" setShow={setOpenModal} show={isOpen}></VideoCarousel></Modal>
         <h3 className='heading'>Advised and Approved by Leading Experts</h3>
         <div className='ot-intro con-reg'>
             <div className='section'>

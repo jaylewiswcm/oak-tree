@@ -7,7 +7,6 @@ export const  FormSubmissionErrorPopup = () => {
     const router = useRouter();
     
     useEffect(() => {
-        console.log(router.query)
         if(router.query.form_success === 'false') {
             setVisible(true)
         } else {

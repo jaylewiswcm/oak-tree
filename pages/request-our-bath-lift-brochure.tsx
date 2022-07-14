@@ -490,7 +490,7 @@ const RequestOurBathLiftBrochure = () => {
     return (
         
         <div className="orphan-brochure-wrapper">
-             {isOpen && <Modal classNames="" setShow={setIsOpen}><VideoCarousel videoId="l9adE0mWzUY" setShow={setIsOpen} show={isOpen}></VideoCarousel></Modal> }
+            <Modal classNames="" visible={isOpen} setShow={setIsOpen}><VideoCarousel videoId="l9adE0mWzUY" setShow={setIsOpen} show={isOpen}></VideoCarousel></Modal>
             <div className='usp-header'>
                 <div className='inner-wrapper con-reg'>
                 <div className='usp-item'>

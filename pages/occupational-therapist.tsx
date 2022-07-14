@@ -22,7 +22,7 @@ const OccupationalTherapist = () => {
                 title="Meet Our Occupational Therapist | Oak Tree Mobility"
                 description="All Oak Tree Mobility products are approved by Samantha Shann, occupational therapist and co-founder of UK Therapy Services. Find out more today."
             />
-              {modal && <Modal  classNames='' setShow={setVideoModal}><VideoCarousel videoId='3z6umq1myj' show={modal} setShow={setVideoModal}></VideoCarousel></Modal>}
+              {modal && <Modal  classNames='' visible={modal} setShow={setVideoModal}><VideoCarousel videoId='3z6umq1myj' show={modal} setShow={setVideoModal}></VideoCarousel></Modal>}
               <div className='about-hero occ-video con-reg'>
                     <div className='image-wrapper desktop-image'>
                             <Image

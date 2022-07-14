@@ -41,7 +41,7 @@ interface ComponentProps  {
             <Header /> 
             { children }
             <BottomBar className={hideClass} />
-            {formModal &&  <Modal classNames='form-modal' setShow={setFormModal}><PopupBrochureRequestForm setShow={setFormModal} /></Modal>}
+            <Modal classNames='form-modal' visible={formModal} setShow={setFormModal}><PopupBrochureRequestForm setShow={setFormModal} /></Modal>
             <FormSubmissionErrorPopup />
         </>
     )

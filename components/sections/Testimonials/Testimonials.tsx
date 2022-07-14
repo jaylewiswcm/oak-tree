@@ -70,7 +70,7 @@ const stagger = {
         {/* {pageType === 'bed' &&   <CarouselLandingPage setSelectedCx={setSelectedCx}  setShow={setShow} productType={'Adjustable Bed'}/>} */}
 
         <div className='carousel-pagination' id='testimonial-pagination'></div>
-        {show &&  <Modal classNames='' setShow={setShow}><VideoCarousel  videoId={selectedCx.videoId} setShow={setShow} show={show}/></Modal>}
+        <Modal classNames='' visible={show} setShow={setShow}><VideoCarousel  videoId={selectedCx.videoId} setShow={setShow} show={show}/></Modal>
   </div>
   )
 }

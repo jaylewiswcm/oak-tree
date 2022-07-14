@@ -18,7 +18,7 @@ const About = () => {
                 title="About Us | Oak Tree Mobility"
                 description="Here at Oak Tree Mobility we specialise in a range of handmade mobility furniture and equipment to help improve your independence. Find out more today"
             />
-            {modal && <Modal  classNames='' setShow={setVideoModal}><VideoCarousel videoId='h8awxkhxyh' show={modal} setShow={setVideoModal}></VideoCarousel></Modal>}
+            {modal && <Modal  classNames='' visible={modal} setShow={setVideoModal}><VideoCarousel videoId='h8awxkhxyh' show={modal} setShow={setVideoModal}></VideoCarousel></Modal>}
             <div className='con-reg about-hero'>
                 <div className='image-wrapper desktop-image'>
                     <Image 

@@ -28,7 +28,7 @@ export const TextInput = ({error, id, name, autoComplete, placeholder, value, on
   
   return (
                   <div className={`input-wrapper ${error !== '' ? 'errors' : ''} ${success}`}>
-                    <p className='error-p'>{error}</p>
+                    { error && error !== 'error' && <p className='error-p'>{error}</p> }
                     <input type="text" id={id} name={name} autoComplete={autoComplete} placeholder={placeholder} value={value} onChange={onChange}  />
                     <label htmlFor={htmlFor}>{label} <span className={required ? 'required' : 'hide'}>*</span></label>
                     <div className='green-tick'>

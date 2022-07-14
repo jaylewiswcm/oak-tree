@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useRouter }  from 'next/router';
+import { setCookie, getCookie } from 'cookies-next';
 // Context
 import { useAppContext } from '../../context/state'
 // Layout Components
@@ -26,8 +27,14 @@ interface ComponentProps  {
 
    const { productPage, formModal, setFormModal} = useAppContext();
     const router = useRouter()
+    useEffect(() => {  
+      if (!getCookie('exitIntentShown')) {
+        setTimeout(() => {
+            window.addEventListener('mouseout', exitIntentEvent);
+        }, 10_000);
+      }
+  
 
-    useEffect(() => {   
       const handleScroll = () => {
         const position = window.pageYOffset;
         
@@ -51,6 +58,21 @@ interface ComponentProps  {
 
     }, [productPage, setHideClass, setOverlayClass, router]);
     
+    const exitIntentEvent = (e:any) => {
+      const shouldShowExitIntent = 
+          e.relatedTarget === null &&
+          e.clientY < 10;
+  
+      if (shouldShowExitIntent) {
+          window.removeEventListener('mouseout', exitIntentEvent);
+          
+          setFormModal(true);
+          
+          setCookie('exitIntentShown', true)
+      }
+  };
+
+
     return (
         <>
           <div className='main'>
@@ -59,7 +81,7 @@ interface ComponentProps  {
               { children }
               <BottomBar className={hideClass}/>
               {overlay && <UspOverlay className={overlayClass} hideOverlay={hideOverlay} />}
-              {formModal &&  <Modal classNames='form-modal' setShow={setFormModal}><PopupBrochureRequestForm setShow={setFormModal} /></Modal>}
+              <Modal classNames='form-modal' visible={formModal} setShow={setFormModal}><PopupBrochureRequestForm setShow={setFormModal} /></Modal>
               <FormSubmissionErrorPopup />
               <Footer />
           </div>

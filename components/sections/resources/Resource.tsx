@@ -27,7 +27,7 @@ export const Resource = ({resource}:ComponentProps) => {
           <p className='subheading'>{subheading}</p>
           <p className='heading'>{heading}</p>
           <p className='link' onClick={() => setPopUpVideo(true)}>Watch Video</p> 
-          {popUpVideo &&  <Modal classNames='' setShow={setPopUpVideo}><VideoCarousel  videoId={contentSrc} setShow={setPopUpVideo} show={popUpVideo}/> </Modal>}
+          <Modal classNames='' visible={popUpVideo} setShow={setPopUpVideo}><VideoCarousel  videoId={contentSrc} setShow={setPopUpVideo} show={popUpVideo}/> </Modal>
        </div>
       )
     } else {

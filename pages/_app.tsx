@@ -1,3 +1,4 @@
+import React, { useEffect } from 'react';
 import '../sass/app.css';
 import type { AppProps } from 'next/app'
 import { AnimatePresence } from 'framer-motion';
@@ -11,7 +12,7 @@ import Head from 'next/head';
 import { SetCookies, GetCookies } from '../utils/cookies';
 
 function App({ Component, pageProps, router }:AppProps) {
- 
+  
   if (router.pathname.startsWith('/request')) {
     return (
       <GoogleReCaptchaProvider

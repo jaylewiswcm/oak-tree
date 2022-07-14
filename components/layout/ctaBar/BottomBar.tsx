@@ -18,7 +18,6 @@ export const BottomBar = ({className}: ComponentProps) => {
 
   return (
     <div className={`bottom-bar ${className}`}>
-        
         <div className='inner-bar'>
         <div className='con-reg'>
             <LandbotChat />
@@ -28,18 +27,18 @@ export const BottomBar = ({className}: ComponentProps) => {
             </div>
             <div className='button-wrapper'>
             <button className='main-cta' onClick={() => setFormModal(true)}>
-        <div className='hover-bg'></div>
-        <span className='brochure-icon'>
-            <Image 
-                src='/icons/brochure/brochure-icon-white.svg'
-                alt='Brochure Icon'
-                layout='responsive'
-                width='73'
-                height='59.82'
-            />
-        </span>
-        <p>Request Your <br/><em><strong>Free</strong></em> Brochure</p>
-    </button>
+                <div className='hover-bg'></div>
+                <span className='brochure-icon'>
+                    <Image 
+                        src='/icons/brochure/brochure-icon-white.svg'
+                        alt='Brochure Icon'
+                        layout='responsive'
+                        width='73'
+                        height='59.82'
+                    />
+                </span>
+                <p>Request Your <br/><em><strong>Free</strong></em> Brochure</p>
+            </button>
             </div>
         </div> 
     </div>

@@ -25,7 +25,7 @@ const TestimonialsAndReviews = () => {
                 title="Testimonials and reviews| Oak Tree Mobility"
                 description="Take a look at the 2,000+ independent online reviews for Oak Tree Mobility. We have a customer satisfaction rate of more than 98%. Find out why"
             />
-            {show && <Modal classNames='' setShow={setShow}><VideoCarousel videoId={videoId} show={show} setShow={setShow}></VideoCarousel></Modal>}
+            <Modal classNames='' visible={show} setShow={setShow}><VideoCarousel videoId={videoId} show={show} setShow={setShow}></VideoCarousel></Modal>
             <div className='con-reg t-and-r-hero'>
                 <div className='hero-content'>
                     <p className='subheading'>Rated Excellent on Trustpilot</p>

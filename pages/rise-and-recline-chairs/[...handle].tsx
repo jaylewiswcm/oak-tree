@@ -18,6 +18,7 @@ import { InformationContainer } from '../../components/product/InformationContai
 // Form
 import ProductForm from '../../components/forms/homeVisit/ProductForm';
 import OurProcess from '../../components/sections/process/OurProcess';
+import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
 
 
 const ChairProduct = (props:any) => {
@@ -214,7 +215,17 @@ const ChairProduct = (props:any) => {
                         </ul>
                     </div>
                     <div className='form-wrapper'>
+                    <GoogleReCaptchaProvider
+                        reCaptchaKey="6LeJqdAgAAAAAOE-C-IGC0F7Tiao-LwvLdi-dC0X"
+                        scriptProps={{
+                            async: false,
+                            defer: false,
+                            appendTo: "head",
+                            nonce: undefined,
+                        }}
+                        >
                         <ProductForm productName={`The ${title}`}/> 
+                        </GoogleReCaptchaProvider>
                    </div>
                 </div>
                 </div>

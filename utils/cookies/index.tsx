@@ -42,9 +42,9 @@ export function GetCookies() {
 
     useEffect(() => {
         assignAdCookies({
-            'lead_source' : getCookie('ref'),
-            'ad_campaign' : getCookie('campaign'),
-            'gclid' : getCookie('gclid'),
+            'lead_source' : getCookie('ref') ? getCookie('ref') : '' ,
+            'ad_campaign' : getCookie('campaign') ? getCookie('campaign') : '',
+            'gclid' : getCookie('gclid') ? getCookie('gclid') : '',
         })
     }, [router]);
 

@@ -17,7 +17,7 @@ const BritishMade = () => {
                 title="British Made | Oak Tree Mobility"
                 description="Here at Oak Tree Mobility all our products are designed and manufacture here in Great Britain. Find out more."
             />
-            {modal && <Modal  classNames='' setShow={setVideoModal}><VideoCarousel videoId='u9-WpUGw0NM' show={modal} setShow={setVideoModal}></VideoCarousel></Modal>}
+           <Modal  classNames='' visible={modal} setShow={setVideoModal}><VideoCarousel videoId='u9-WpUGw0NM' show={modal} setShow={setVideoModal}></VideoCarousel></Modal>
             <div className='con-reg about-hero'>
                 <div className='image-wrapper desktop-image'>
                     <Image 

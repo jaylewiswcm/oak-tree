@@ -6,6 +6,7 @@ import { useAppContext } from '../../context/state'
 // Components 
 import BathLiftStages from '../../components/sections/stages/BathLiftStages';
 import ProductForm from '../../components/forms/homeVisit/ProductForm';
+import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
 
 const TheRivieraPlus = () => {
     const { setFormModal } = useAppContext();
@@ -233,7 +234,17 @@ const TheRivieraPlus = () => {
                         </ul>
                     </div>
                     <div className='form-wrapper'>
-                        <ProductForm productName={`The Riviera`}/> 
+                    <GoogleReCaptchaProvider
+                        reCaptchaKey="6LeJqdAgAAAAAOE-C-IGC0F7Tiao-LwvLdi-dC0X"
+                        scriptProps={{
+                            async: false,
+                            defer: false,
+                            appendTo: "head",
+                            nonce: undefined,
+                        }}
+                        >
+                        <ProductForm productName={`The Riviera`}/>
+                        </GoogleReCaptchaProvider> 
                    </div>
                 </div>
                 </div>
