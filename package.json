@@ -1,10 +1,10 @@
 {
   "name": "oaktree",
   "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+  "scripts": { 
+      "dev": "node server.js",
+      "build": "next build",
+      "start": "NODE_ENV=production node server.js",
     "lint": "next lint",
     "ngrok": "ngrok http 3000"
   },

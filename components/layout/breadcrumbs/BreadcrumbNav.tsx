@@ -39,7 +39,7 @@ export default function BreadcrumbNav() {
     useEffect(() => {
         generateBreadcrumbs();
     
-    },[])
+    },[router])
 
     if(router.asPath === '/'){ 
         return null;
@@ -62,7 +62,9 @@ export default function BreadcrumbNav() {
         const text = subpath;
         return { href, text, url: `https://oak-tree.vercel.app${href}` }; 
       })
-      createStructeredDataSchema([{ href: "/", text: "Home", url: "https://oak-tree.vercel.app/"}, ...crumblist]);
+      if(router.asPath !== '/') {
+        createStructeredDataSchema([{ href: "/", text: "Home", url: "https://oak-tree.vercel.app/"}, ...crumblist]);
+      }
       setCrumbs([{ href: "/", text: "Home", url: "https://oak-tree.vercel.app/"}, ...crumblist]); 
     }
 
