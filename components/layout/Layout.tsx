@@ -31,7 +31,7 @@ interface ComponentProps  {
       if (!getCookie('exitIntentShown')) {
         setTimeout(() => {
             window.addEventListener('mouseout', exitIntentEvent);
-        }, 10_000);
+        }, 3_000);
       }
   
 
@@ -76,14 +76,15 @@ interface ComponentProps  {
     return (
         <>
           <div className='main'>
-              <Header />
+              <Header/> 
               <BreadcrumbNav />
               { children }
               <BottomBar className={hideClass}/>
-              {overlay && <UspOverlay className={overlayClass} hideOverlay={hideOverlay} />}
+              
               <Modal classNames='form-modal' visible={formModal} setShow={setFormModal}><PopupBrochureRequestForm setShow={setFormModal} /></Modal>
               <FormSubmissionErrorPopup />
               <Footer />
+              {!getCookie('UspOverlayHidden')  && overlay && <UspOverlay className={overlayClass} hideOverlay={hideOverlay} />}
           </div>
         </>
     )

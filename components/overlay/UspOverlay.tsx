@@ -1,11 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
-import { Swiper, SwiperSlide } from "swiper/react";
-// Components 
-import {BritishMade} from './BritishMade';
-import {TradeIn} from './TradeIn';
-import {FreeDelivery} from './FreeDelivery';
-import {Warranty} from './Warranty';
+import { setCookie } from 'cookies-next';
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/effect-flip";
@@ -20,31 +15,14 @@ interface ComponentProps {
 }
 
 export const UspOverlay = ({hideOverlay, className}:ComponentProps) => {
+
+    const closeOverlayAndSetCookie = () => {
+      setCookie('UspOverlayHidden', true,{ maxAge: 60 * 60 * 24 });    
+      hideOverlay(false);
+    }
+
   return (
     <div className={`usp-overlay ${className}`}>
-           {/* <Swiper
-                effect={"flip"}
-                flipEffect={{
-                    slideShadows:false
-                }}
-                grabCursor={true}
-                modules={[EffectFlip, Autoplay]}
-                autoplay={{ delay: 5000,}}
-                className="usp-overlay-swiper"
-            >
-                <SwiperSlide>
-                    <BritishMade />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <TradeIn />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <FreeDelivery />
-                </SwiperSlide>
-                <SwiperSlide>
-                    <Warranty />
-                </SwiperSlide>
-            </Swiper> */}
             <div className='usp'>
                 <div className='icon-wrapper'>
                     <Image 
@@ -81,7 +59,7 @@ export const UspOverlay = ({hideOverlay, className}:ComponentProps) => {
                 </div>
                 <p>Five Star<br/>Satisfaction</p>
             </div>
-            <div className='close-button' onClick={() => hideOverlay(false)}>
+            <div className='close-button' onClick={() => closeOverlayAndSetCookie()}>
                 <div className='inner-button'>
                     <div className='cross'>
                         <Image

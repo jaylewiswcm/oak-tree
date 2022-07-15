@@ -4,7 +4,7 @@
         padding-top:15px;
         overflow-y: auto;
         overflow:auto;
-        height: calc(100vh - 100px);
+        // height: calc(100vh - 100px);
         position: relative;
         .form-section {
             margin-bottom: 15px;
@@ -485,7 +485,6 @@
     }
     .generic-form {
         overflow:unset;
-        height: 100%;
     }
 }
 .orphan-form-and-usps-wrapper::-webkit-scrollbar {

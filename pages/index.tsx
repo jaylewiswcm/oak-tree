@@ -1,10 +1,8 @@
-import React, { useContext }  from 'react';
-import type { NextPage } from 'next'
+import React from 'react';
 import Head from 'next/head'
 import Image from 'next/image'
-import Link from 'next/link'
+import { getCookie } from 'cookies-next';
 import { NextSeo } from 'next-seo';
-import { motion } from 'framer-motion';
 // Context
 import { useAppContext } from '../context/state'
 // Component
@@ -67,8 +65,8 @@ class Home extends React.Component<MyProps, MyState> {
     }
   }
 
-closeUspOverlay = () => {
-  this.setState({uspOverlay : 'overlay-hide'})
+closeUspOverlay = () => {  
+  this.setState({uspOverlay : 'overlay-hide'}) 
 }
   render() {
     return (
@@ -80,64 +78,27 @@ closeUspOverlay = () => {
       <Head>
         <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
       </Head>
-  <div className='home-intro'>
-    <div className='hero-image'></div>
-    <div className='con-reg'>
-      <div className='hero-content'>
-        <h1>Life Is For Living</h1>
-        <p className='mobile-p'>Change is the one certainty in life. As the UK’s leading mobility specialist, we’re here to help</p>  
-        <p className='desktop-p'>Change is the one certainty in life. It's all part of life's rich experience. Over time your mobility changes too. What we once took for granted feels out of reach. This can be hard. As the UK's leading mobility specialist, we're here to help</p>
-        <MainRequestButton />
-      </div>
-      </div>
-    <div className='as-seen-on-tv'>
-         <Image
-            src='/icons/seen-on-tv.svg'
-            alt='As seen on tv'
-            layout='responsive'
-            width='150'
-            height='100'
-         />
-    </div>
-    {/* <div className='hero-content'>
-         <h1>Life Is For Living</h1>
-         <p>Change is the one certainty in life. It's all part of life's rich experience. Over time your mobility changes too. What we once took for granted feels out of reach. This can be hard. As the UK's leading mobility specialist, we're here to help</p>
-        <MainRequestButton />
-    </div> */}
-  </div>
-      {/* <div className='home-intro hide'>
-        <div className='intro-content'>
-          <div className='hero-bg'>
-            <Image 
-              src={homeHeroGraphic}
-              alt='Home Hero'
-              layout='fill'
-              objectFit='cover'
-              objectPosition='left'
-              placeholder='blur'        
+      <div className='home-intro'>
+        <div className='hero-image'></div>
+        <div className='con-reg'>
+          <div className='hero-content'>
+            <h1>Life Is For Living</h1>
+            <p className='mobile-p'>Change is the one certainty in life. As the UK’s leading mobility specialist, we’re here to help</p>  
+            <p className='desktop-p'>Change is the one certainty in life. It's all part of life's rich experience. Over time your mobility changes too. What we once took for granted feels out of reach. This can be hard. As the UK's leading mobility specialist, we're here to help</p>
+            <MainRequestButton />
+          </div>
+          </div>
+        <div className='as-seen-on-tv'>
+            <Image
+                src='/icons/seen-on-tv.svg'
+                alt='As seen on tv'
+                layout='responsive'
+                width='150'
+                height='100'
             />
-          </div>
-          <div className='title-wrapper'>
-            <h1>Britian's Leading Mobility Specialists</h1>
-            <p className='subheading'>At Oak Tree, we make beautiful products that help people live independently.</p>
-          </div>
         </div>
-        <div className='intro-image'>
-          <video height="100%" autoPlay loop muted>
-            <source src="videos/advert-hero.mp4"
-            type="video/mp4"/>
-          </video>
-          <span className='mobile-image'>
-            <span className='as-seen-on-tv'>
-              <Image src='/icons/as-seen-on-tv/as-seen-on-tv.svg' alt='as seen on tv' layout='responsive' width={110} height={73}/> 
-            </span>
-            <Image src='/images/heros/home-mobile-hero.png' alt='Oak Tree Advert' layout='responsive' width={1262} height={751}/>
-          </span>
-        </div>
-      </div> */}
-
-        <HomeCollections />
-
+      </div>
+      <HomeCollections />
       <OfferBanners orphan={false}/>
       <OccupationalTherapistSection />
       <Reviews orphan={false} />

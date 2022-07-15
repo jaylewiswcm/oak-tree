@@ -6,8 +6,7 @@ import Logo from '../../assets/Logo';
 
 const Header = () => {
     return (
-        <header>
-
+        <header className='orphan-header'>
             <div className='top-header'>
               <div className='con-reg'>
                 <p>We're rated excellent on</p>

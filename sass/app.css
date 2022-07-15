@@ -163,6 +163,10 @@ a.button {
   right: 0;
 }
 
+.swiper {
+  z-index: 0;
+}
+
 body.freeze {
   overflow: hidden;
 }
@@ -451,7 +455,6 @@ body.freeze {
   padding-top: 15px;
   overflow-y: auto;
   overflow: auto;
-  height: calc(100vh - 100px);
   position: relative;
 }
 
@@ -1044,7 +1047,6 @@ body.freeze {
 
 .orphan-form-and-usps-wrapper .generic-form {
   overflow: unset;
-  height: 100%;
 }
 
 .orphan-form-and-usps-wrapper::-webkit-scrollbar {
@@ -12038,6 +12040,10 @@ body.mobile-navbar .mobile-navigation {
   }
 }
 
+.orphan-header .con-reg {
+  max-width: 1680px !important;
+}
+
 .orphan-brochure-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -12162,12 +12168,12 @@ body.mobile-navbar .mobile-navigation {
 
 .orphan-brochure-wrapper .form {
   width: 40%;
+  max-width: 500px;
   height: 100vh;
   margin-right: auto;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  z-index: 999;
   -webkit-box-shadow: -5px 3px 21px rgba(23, 73, 77, 0.17);
           box-shadow: -5px 3px 21px rgba(23, 73, 77, 0.17);
   display: none;
@@ -12201,6 +12207,10 @@ body.mobile-navbar .mobile-navigation {
   text-align: left;
 }
 
+.orphan-brochure-wrapper .form input, .orphan-brochure-wrapper .form select {
+  background-color: #F5F5F5;
+}
+
 .orphan-brochure-wrapper .content {
   width: 100%;
 }
@@ -12208,6 +12218,12 @@ body.mobile-navbar .mobile-navigation {
 @media (min-width: 1000px) {
   .orphan-brochure-wrapper .content {
     width: 60%;
+  }
+}
+
+@media (min-width: 1300px) {
+  .orphan-brochure-wrapper .content {
+    width: calc(100% - 500px);
   }
 }
 
@@ -17054,6 +17070,7 @@ body.mobile-navbar .mobile-navigation {
 .testimonials .swiper {
   padding-top: 30px;
   margin-top: 0px;
+  z-index: 0;
 }
 
 .testimonials .testimonial-tile {

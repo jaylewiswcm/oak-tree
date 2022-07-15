@@ -1,3 +1,8 @@
+.orphan-header {
+    .con-reg {
+        max-width: 1680px!important;
+    }
+}
 .orphan-brochure-wrapper {
     display: flex;
     flex-direction: row-reverse;
@@ -54,13 +59,6 @@
             }
         }
     }
-    .orphan-con-reg { 
-        // @media(min-width: 1000px) {
-        //     max-width: 840px;
-        //     margin-left: auto
-        // }
-    }
-
     .orphan-wrapper{ 
         display: flex;
         flex-direction: row-reverse;
@@ -68,15 +66,15 @@
         max-width: 1680px;
         padding:0;
     }
- 
+
     .form {
         width: 40%;
-        // max-width: 560px; 
+        max-width: 500px; 
         height: 100vh;
         margin-right: auto;
         position: sticky;
         top:0;
-        z-index:999;
+        // z-index:999;
         box-shadow: -5px 3px 21px rgba(23,73,77,0.17);
         
         display: none;
@@ -101,12 +99,20 @@
                 text-align: left;
             }
         }
+        input, select {
+            background-color: #F5F5F5;
+        }
     }
     .content {
         width: 100%;
         @media(min-width: 1000px) {
             width: 60%;
+            // width: calc(100% - 550px)
         }
+        @media(min-width: 1300px) {
+            width: calc(100% - 500px)
+        }
+
         .orphan-padding {
             padding: 0 25px;
             @media(min-width: 1400px) {
