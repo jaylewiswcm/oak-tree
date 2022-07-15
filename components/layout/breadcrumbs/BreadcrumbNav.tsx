@@ -22,7 +22,8 @@ export default function BreadcrumbNav() {
   const [crumbSchema, setCrumbSchema] = useState<StructeredData>()
   const [crumbs, setCrumbs] = useState([{
     'text': 'home',
-    'href': '/'
+    'href': '/',
+    'url': 'https://oak-tree.vercel.app/'
   }]);
     // Gives us ability to load the current route details
     const router = useRouter();
@@ -52,9 +53,9 @@ export default function BreadcrumbNav() {
         const href = "/" + asPathNestedRoutes.slice(0, idx + 1).join("/");
         // The title will just be the route string for now
         const text = subpath;
-        return { href, text }; 
+        return { href, text, url: `https://oak-tree.vercel.app${href}` }; 
       })
-      setCrumbs([{ href: "/", text: "Home" }, ...crumblist]); 
+      setCrumbs([{ href: "/", text: "Home", url: "https://oak-tree.vercel.app/"}, ...crumblist]); 
     }
 
     const createStructeredDataSchema  = () => {
@@ -126,18 +127,3 @@ export default function BreadcrumbNav() {
         </>
     )
   }
-
-// // Each individual "crumb" in the breadcrumbs list
-// function Crumb({ text, href, last=false }:any) {
-//   // The last crumb is rendered as normal text since we are already on the page
-//   if (last) {
-//     return <Typography color="text.primary">{text}</Typography>
-//   }
-
-//   // All other crumbs will be rendered as links that can be visited 
-//   return (
-//     <Link underline="hover" color="inherit" href={href}>
-//       {text}
-//     </Link>
-//   );
-// }

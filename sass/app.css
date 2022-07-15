@@ -8819,15 +8819,16 @@ body.mobile-navbar .mobile-navigation {
   margin-right: 10px;
 }
 
-.product-details .product-info .info-container .info-section .swatch-grid .swatch .inner-swatch {
+.product-details .product-info .info-container .info-section .swatch-grid .swatch .inner-swatch-wrapper {
   width: 100%;
+  height: 100%;
   border-radius: 50%;
   overflow: hidden;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  border: 2px #fff solid;
+}
+
+.product-details .product-info .info-container .info-section .swatch-grid .swatch .inner-swatch {
+  width: 150%;
 }
 
 .product-details .product-info .info-container .info-section .swatch-grid .plus-more {

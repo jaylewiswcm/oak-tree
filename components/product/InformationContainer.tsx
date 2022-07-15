@@ -101,14 +101,16 @@ export const InformationContainer = ({product, showForm }:ComponentProps) => {
     <div className='swatch-grid'>
         { chair_fabrics.slice(0,6).map((fabric, index) => 
             <div className='swatch' key={index}>
-                <div className='inner-swatch'>
-                    <Image 
-                        src={fabric.src}
-                        alt={fabric.name}
-                        layout='responsive'
-                        width='600'
-                        height='450'
-                    />
+                <div className="inner-swatch-wrapper">
+                    <div className='inner-swatch'>
+                        <Image 
+                            src={fabric.src}
+                            alt={fabric.name}
+                            layout='responsive'
+                            width='600'
+                            height='450'
+                        />
+                    </div>
                 </div>
             </div>
         ) }
@@ -156,7 +158,6 @@ export const InformationContainer = ({product, showForm }:ComponentProps) => {
                     </div>
                 </div>
             ) }
-            <p className='plus-more'>+ 32 more</p>
         </div>
         
     </div>
