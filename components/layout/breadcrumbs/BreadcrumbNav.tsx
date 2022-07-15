@@ -68,7 +68,7 @@ export default function BreadcrumbNav() {
           "@type": "ListItem",
           "position": index + 1,
           "name": crumb.text,
-          "item": crumb.href
+          "item": crumb.url
         }
         itemListElement.push(structure);
       })
