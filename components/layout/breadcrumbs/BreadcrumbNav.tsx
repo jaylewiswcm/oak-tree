@@ -17,6 +17,12 @@ type CrumbSchema = {
   item: string
 }
 
+type Crumb = {
+  text: string
+  href: string
+  url: string
+}
+
 
 export default function BreadcrumbNav() {
   const [crumbSchema, setCrumbSchema] = useState<StructeredData>()
@@ -28,15 +34,16 @@ export default function BreadcrumbNav() {
     // Gives us ability to load the current route details
     const router = useRouter();
 
+
+
     useEffect(() => {
         generateBreadcrumbs();
-        createStructeredDataSchema()
+    
     },[])
 
     if(router.asPath === '/'){ 
         return null;
-    }
-    
+    } 
 
     function generateBreadcrumbs() {
       // Remove any query parameters, as those aren't included in breadcrumbs
@@ -55,15 +62,15 @@ export default function BreadcrumbNav() {
         const text = subpath;
         return { href, text, url: `https://oak-tree.vercel.app${href}` }; 
       })
+      createStructeredDataSchema([{ href: "/", text: "Home", url: "https://oak-tree.vercel.app/"}, ...crumblist]);
       setCrumbs([{ href: "/", text: "Home", url: "https://oak-tree.vercel.app/"}, ...crumblist]); 
     }
 
-    const createStructeredDataSchema  = () => {
-
+    const createStructeredDataSchema  = (crumbArray:Crumb[]) => {
      
       let itemListElement:CrumbSchema[] = [];
-        
-      crumbs.map((crumb, index) => {
+      
+      crumbArray.map((crumb, index) => {
         const structure = {
           "@type": "ListItem",
           "position": index + 1,
