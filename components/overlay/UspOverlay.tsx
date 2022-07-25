@@ -17,7 +17,7 @@ interface ComponentProps {
 export const UspOverlay = ({hideOverlay, className}:ComponentProps) => {
 
     const closeOverlayAndSetCookie = () => {
-      setCookie('UspOverlayHidden', true,{ maxAge: 60 * 60 * 24 });    
+      setCookie('UspOverlayHidden', true );    
       hideOverlay(false);
     }
 

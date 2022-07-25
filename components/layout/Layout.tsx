@@ -28,7 +28,7 @@ interface ComponentProps  {
    const { productPage, formModal, setFormModal} = useAppContext();
     const router = useRouter()
     useEffect(() => {  
-      if (!getCookie('exitIntentShown')) {
+      if (!getCookie('exitIntent')) {
         setTimeout(() => {
             window.addEventListener('mouseout', exitIntentEvent);
         }, 3_000);
@@ -68,7 +68,7 @@ interface ComponentProps  {
           
           setFormModal(true);
           
-          setCookie('exitIntentShown', true)
+          setCookie('exitIntent', true)
       }
   };
 
