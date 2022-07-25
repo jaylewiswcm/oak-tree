@@ -1409,33 +1409,17 @@ body.freeze {
 }
 
 .LandbotLivechat, .kAfRMA, .jLUvWe {
-  bottom: 115px !important;
-  right: unset !important;
+  bottom: 125px !important;
   left: 0px !important;
   -webkit-box-shadow: none;
           box-shadow: none;
   z-index: 101;
-  display: none;
-}
-
-@media (min-width: 610px) {
-  .LandbotLivechat, .kAfRMA, .jLUvWe {
-    right: unset !important;
-    left: 26px !important;
-    display: initial;
-  }
-}
-
-@media (min-width: 800px) and (max-width: 1090px) {
-  .LandbotLivechat, .kAfRMA, .jLUvWe {
-    bottom: 0px !important;
-  }
-}
-
-@media (min-width: 1100px) {
-  .LandbotLivechat, .kAfRMA, .jLUvWe {
-    bottom: 5px !important;
-  }
+  max-width: 1250px;
+  width: 100vw !important;
+  height: 120px !important;
+  margin: 0 auto;
+  padding-right: 30px;
+  height: 100%;
 }
 
 .kKkmhx {
@@ -4286,7 +4270,6 @@ body.mobile-navbar .mobile-navigation {
 @media (min-width: 800px) and (max-width: 1349px) {
   .bottom-bar .inner-bar .phone-number {
     display: initial;
-    padding-left: 50px;
   }
 }
 

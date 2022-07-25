@@ -11,7 +11,7 @@ function setupLandbot() {
 
 export default function LandbotChat() {
   return (
-    <div className='chatbot'>
+    <div className=''>
       {/* <Head>
         <script type='text/javascript' src='https://static.landbot.io/landbot-3/landbot-3.0.0.js'  onLoad={setupLandbot}/>
       </Head> */}

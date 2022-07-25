@@ -9,13 +9,11 @@ interface ComponentProps {
 
 const Modal = ({children, classNames, setShow, visible}: ComponentProps) => {
     useEffect(() => {
-      console.log(visible)
       if(visible) {
         const dd = document.body;
         dd.classList.add('freeze');
         return () => dd.classList.remove('freeze');    
-      } 
-      // return () => setShow(false)       
+      }    
     })
   return (
     <div className={`modal show-modal ${visible ? 'visible' : ''}`} >
