@@ -24,13 +24,13 @@ const staticPaths = fs
 
 export default async function handler(req:any, res:any) {
 
-  const products = await getAllProducts() // some remote API call maybe!
+  // const products = await getAllProducts() // some remote API call maybe!
 
-  const dynamicPaths = products.map( (product: any) => {
+  // const dynamicPaths = products.map( (product: any) => {
     
-    return `${BASE_URL}/product/${product.id}`
+  //   return `${BASE_URL}/product/${product.id}`
     
-  })
+  // })
 
 
   res.statusCode = 200
@@ -40,7 +40,7 @@ export default async function handler(req:any, res:any) {
     res.setHeader('Cache-control', 'stale-while-revalidate, s-maxage=3600')
     
     // Combine all paths
-    const allPaths = [...staticPaths, ...dynamicPaths];
+    const allPaths = [...staticPaths];
 
     // generate sitemap here
     const xml = `<?xml version="1.0" encoding="UTF-8"?>
