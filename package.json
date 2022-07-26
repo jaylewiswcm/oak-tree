@@ -1,10 +1,11 @@
 {
   "name": "oaktree",
   "private": true,
-  "scripts": { 
-      "dev": "node server.js",
-      "build": "next build",
-      "start": "NODE_ENV=production node server.js",
+  "scripts": {
+    "dev": "node server.js",
+    "build": "next build",
+    "postbuild": "node ./scripts/generate-sitemap.mjs",
+    "start": "NODE_ENV=production node server.js",
     "lint": "next lint",
     "ngrok": "ngrok http 3000"
   },
@@ -25,6 +26,7 @@
     "mui": "^0.0.1",
     "next": "12.0.7",
     "next-seo": "^4.28.1",
+    "prettier": "^2.7.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-google-recaptcha-v3": "^1.9.8",
@@ -50,6 +52,7 @@
     "@types/shopify-buy": "^2.10.10",
     "eslint": "7",
     "eslint-config-next": "12.0.3",
+    "globby": "^13.1.2",
     "ngrok": "^4.3.1",
     "typescript": "4.4.4"
   }
