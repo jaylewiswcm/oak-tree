@@ -1,4 +1,37 @@
-export default function handler(req:any, res:any) {
+
+import * as fs from 'fs'
+import {getAllProducts} from '../../lib/shopify';
+
+const BASE_URL = 'https://dev.oaktreemobility.co.uk/';
+
+// Gett all static paths
+const staticPaths = fs
+    .readdirSync("pages")
+    .filter((staticPage) => {
+      return ![
+        "api",
+        "_app.js",
+        "_document.js",
+        "404.js",
+        "sitemap.xml.js",
+      ].includes(staticPage);
+    })
+    .map((staticPagePath) => {
+      return `${BASE_URL}/${staticPagePath}`;
+    });
+
+
+
+export default async function handler(req:any, res:any) {
+
+  const products = await getAllProducts() // some remote API call maybe!
+
+  const dynamicPaths = products.map( (product: any) => {
+    
+    return `${BASE_URL}/product/${product.id}`
+    
+  })
+
 
   res.statusCode = 200
   res.setHeader('Content-Type', 'text/xml')
@@ -6,14 +39,26 @@ export default function handler(req:any, res:any) {
     // Instructing the Vercel edge to cache the file
     res.setHeader('Cache-control', 'stale-while-revalidate, s-maxage=3600')
     
+    // Combine all paths
+    const allPaths = [...staticPaths, ...dynamicPaths];
+
     // generate sitemap here
     const xml = `<?xml version="1.0" encoding="UTF-8"?>
-    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"> 
-    <url>
-      <loc>http://www.example.com/foo.html</loc>
-      <lastmod>2021-01-01</lastmod>
-    </url>
-    </urlset>`
+    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+      ${allPaths
+        .map((url) => {
+          return `
+            <url>
+              <loc>${url}</loc>
+              <lastmod>${new Date().toISOString()}</lastmod>
+              <changefreq>monthly</changefreq>
+              <priority>1.0</priority>
+            </url>
+          `;
+        })
+        .join("")}
+    </urlset>
+`;
 
   res.end(xml)
 }
