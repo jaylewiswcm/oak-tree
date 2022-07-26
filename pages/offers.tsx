@@ -38,7 +38,7 @@ const Offers = () => {
                         />
                     </div>
                     <div className='content'>
-                        <h2><span>Half Price</span><br/> Sale On Chairs</h2>
+                        <h1><span>Half Price</span><br/> Sale On Chairs</h1>
                         <p>Here at Oak Tree Mobility, we are all about bringing you an amazing value. Our Half Price Sale offer is so good you’ll hardly believe it: If you buy a chair or settee, we will give you any second item half price!</p>
                         <Link href='/rise-and-recline-chairs'><a>View Chair Collections</a></Link>
                     </div>

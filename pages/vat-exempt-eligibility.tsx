@@ -8,8 +8,8 @@ const VatExemptEligibility = () => {
   return (
     <>
        <NextSeo  
-                title="£200 Trade In | Oak Tree Mobility"
-                description="£200 Trade In. Find out more."
+                title="VAT Exempt Eligibility | Oak Tree Mobility"
+                description="If you are disabled or have a long term illness, you may not have to pay VAT on products designed / adapted for your personal or domestic use. Find out more."
             />
         {/* <div className='bg-dark-green-1 wave-banner'>
             <div className='con-reg'>

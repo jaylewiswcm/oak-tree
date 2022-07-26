@@ -69,7 +69,7 @@ const ChairProduct = (props:any) => {
     return (
         <>
              <NextSeo  
-                title="The Oak Rise and Recline Chair| Oak Tree Mobility"
+                title={`The ${title} Rise and Recline Chair| Oak Tree Mobility`}
                 description="Choose a stylish & comfortable rise and recline chair & settee from our Oak Collection, representing the very best of classic British design."
             />
         <div className='product-wrapper'>

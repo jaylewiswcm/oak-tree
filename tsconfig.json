@@ -13,8 +13,8 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "incremental": true
+    "incremental": true,
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "context/state.ts", "utils/shopify/shopify-client.ts", "lib/shopify.js", "components/chatbot/LandbotChat.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "context/state.ts", "utils/shopify/shopify-client.ts", "lib/shopify.js", "components/chatbot/LandbotChat.jsx", "utils/sitemap/dynamicpath.js"],
   "exclude": ["node_modules"]
 }
